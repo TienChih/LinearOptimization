@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Title</title>
+  <title>Initial Examples</title>
 
   <p> Here we begin with some initial examples motivating the sort of problems we will study. </p>
 
@@ -96,5 +96,86 @@
       </p>
     </statement>
   </task>
+
+  <definition xml:id="def-canonicalproblems">
+    <statement>
+      <p>
+        The <em>Canonical Maximazation Linear Programming Problem</em> is the problem:
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \leq  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \leq  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+        Where <m>a_{i,j}, b_j, c_i, d\in \mathbb{R}</m>
+      </p>
+
+      <p>
+        The <em>Canonical Minimization Linear Programming Problem</em> is the problem:
+        <md>
+          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+        Where <m>a_{i,j}, b_j, c_i, d\in \mathbb{R}</m>
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-objectivefunction">
+    <statement>
+      <p>
+        <m>f,g</m> above are called <em>objective functions</em>.
+      </p>
+    </statement>
+  </definition>
+  <definition xml:id="def-feasiblesolution">
+    <statement>
+      <p>
+        Any point <m>\mathbf{x} = (cx_1, x_2, \ldots, x_n)</m> satisfying either of the above set of inequalities are called <em>feasible solutions</em>.
+      </p>
+    </statement>
+  </definition>
+  <definition xml:id="def-optimialsolution">
+    <statement>
+      <p>
+        Any feasible solution <m>\mathbf{x}</m> which maximizes (minimizes) the objective function is called an  <em>optimal solution</em>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity xml:id="activity-change">
+    <task>
+      <p>
+        Given the canonical minimization problem:
+        <md>
+          <mrow>\textbf{Minimize: }g(x_1, x_2) = 5x_1-3x_2\amp </mrow>
+          <mrow>\amp </mrow>
+          <mrow>\textbf{Subject to: }  4x_1 + x_2 \amp \geq  10</mrow>
+          <mrow> 3x_1 + 12x_2 \amp \geq  12</mrow>
+          <mrow> x_1, x_2, \amp \geq  0</mrow>
+        </md>
+        How might we convert this to a canonical maximization problem?
+
+      </p>
+      <hint>
+        <p>
+          <interactive desmos="jstub24bcd" width="100%" aspect="4:3" />
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How might we in general convert a minimization problem to a maximization problem?
+        </p>
+      </statement>
+    </task>
+  </activity>
 
 </section>
