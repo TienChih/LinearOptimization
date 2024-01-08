@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Polyhedral Convextiy</title>
+
+  <p> In this section, we establish the geometric notions which underlie our work. </p>
+
+  <activity xml:id="activity-planes">
+    <introduction>
+      <p>
+        In <m>\mathbb{R}^3</m>, describe geometrically what the following represent.
+
+      </p>
+      <hint>
+        <p>
+          <interactive math3d="qIqaW1n7p" width="100%"  />
+        </p>
+        <p>
+          <url href="https://www.math3d.org/F5HLWe9tj" visual="https://www.math3d.org/F5HLWe9tj">https://www.math3d.org/F5HLWe9tj</url>
+        </p>
+      </hint>
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+         <m>2x-y+3z=4</m>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+         <m>2x-y+3z=0</m>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+         <m>2x-y+3z=-4</m>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+         <m>2x-y+3z\leq 3</m>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+         <m>2x-y+3z\geq -1</m>
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+  <activity xml:id="activity-segment">
+    <introduction>
+      <statement>
+        <p>
+          Let <m>P=(-3,1), Q=(2,-5)</m>.  Let <m>X=t\cdot P+(1-t)\cdot Q</m> for some <m>0\leq t\leq </m>
+        </p>
+      </statement>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What is <m>X</m> if <m>t=0.2</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is <m>X</m> if <m>t=0.5</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is <m>X</m> if <m>t=0</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is <m>X</m> if <m>t=1</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Describe the set of points <m>\{t\cdot P+(1-t)\cdot Q : t\in [0,1]\}</m>.
+        </p>
+        <hint>
+          <p>
+            <interactive desmos="vjasplzomy"  />
+          </p>
+        </hint>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>P=(2,1,0), Q=(0, -3, 1)</m> Describe the set of points <m>\{t\cdot P+(1-t)\cdot Q : t\in [0,1]\}</m>.
+        </p>
+        <hint>
+          <p>
+            <interactive math3d="CTPmgI6jF" width="100%"  />
+          </p>
+          <p>
+            <url href="https://www.math3d.org/CTPmgI6jF" visual="https://www.math3d.org/CTPmgI6jF">https://www.math3d.org/CTPmgI6jF</url>
+          </p>
+        </hint>
+      </statement>
+    </task>
+
+  </activity>
+
+  <definition xml:id="def-segment">
+    <statement>
+      <p>
+        Given <m>\mathbf{P}, \mathbf{Q}\in \mathbb{R}^n</m>, we call the set <m>\{t\cdot \mathbf{P}+(1-t)\cdot \mathbf{Q} : t\in [0,1]\}</m> the
+        <em>line segment</em> between <m>\mathbf{P}</m> and <m>\mathbf{Q}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-convex">
+    <statement>
+      <p>
+        Let <m>S\subseteq \mathbf{R}^n</m>, we say that <m>S</m> is <em>convex</em> if given any <m>\mathbf{P}, \mathbf{Q}\in S</m>,
+        <m>S</m> also contains the line segment between <m>\mathbf{P}, \mathbf{Q}</m>.
+      </p>
+    </statement>
+  </definition>
+  
+  <activity>
+    <introduction>
+      <p>
+        For each of the following subsets of <m>R^2</m>, sketch the region, decide if it is convex or not.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <m>\{(x,y): 2x+3y\leq 4\}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\{(x,y): y=2\text{ and }x&lt; 4 \}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\{(r,\theta): 0\leq r \leq 1, \theta\in [0, \pi/4]\}</m> (in polar coordinates).
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\{(r,\theta): 0\leq r \leq 1, \theta\in [\pi/4, 2\pi]\}</m> (in polar coordinates).
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\mathbb{R}^2</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <m>\emptyset</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+
+  <activity>
+    <introduction>
+      <statement>
+        <p>
+          Let <m>S\subseteq \mathbb{R}^n</m> be defined by <m>S:=\{\mathbf{x}\in \mathbb{R}^n: a_1x_1+a_2x_2+\cdots a_nx_n\leq b\}</m> for some 
+          <m>a_i, b\in \mathbb{R}</m> (ie <m>S</m> is a half-space of <m>\mathbb{R}^n</m>).
+        </p>
+      </statement>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Let <m>f(\mathbf{x}):\mathbb{R}^n\to \mathbb{R},  (x_1, x_2, \ldots, x_n)\mapsto a_1x_1+a_2x_2+\cdots a_nx_n</m>.  Explain why 
+          <m>f(c\mathbf{x})=cf(\mathbf{x})</m> for any <m>c\in \mathbb{R}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that for any <m>\mathbf{x}=(x_1, x_2, \ldots, x_n), \mathbf{y} = (y_1, y_2, \ldots, y_n)</m>, that <m>f(\mathbf{x}+\mathbf{y}) = f(\mathbf{x})+f(\mathbf{y})</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\mathbf{x}, \mathbf{y}\in S</m>, that is, there are <m>k_x, k_y</m> such that <m>f(\mathbf{x})=a_1x_1+a_2x_2+\cdots a_nx_n = k_x, f(\mathbf{y})= a_1y_1+a_2y_2+\cdots a_ny_n =k_y</m>
+          and <m>k_x, k_y\leq b</m>.  Show that <m>f(t\mathbf{x}+(1-t)\mathbf{y})\leq \max(k_x, k_y)</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that <m>f(t\mathbf{x}+(1-t)\mathbf{y})\leq b</m>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Conclude that <m>S</m> is convex.
+        </p>
+      </statement>
+    </task>
+    
+  </activity>
+
+  <activity>
+    <introduction>
+      <statement>
+        <p>
+          Let <m>S_1, S_2</m> be convex sets.
+        </p>
+      </statement>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Show that <m>S_1\cap S_2</m> is convex.  Hint: Let <m>P, Q\in S_1\cap S_2</m>.  Why is the line segment between them contained in <m>S_1</m>?  <m>S_2</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Sketch an induction argument to show that if <m>S_i</m> is convex, <m>\bigcap_{i=1}^n S_i</m> is convex.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find convex sets <m>S_1, S_2</m> so that <m>S_1\cup S_2</m> is convex.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <task>
+      <p>
+        Explain why the feasible region of a canonical linear programming problem is convex.
+      </p>
+    </task>
+  </activity>
+  
+
+</section>

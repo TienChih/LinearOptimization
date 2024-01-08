@@ -8,6 +8,7 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-initialexamples.ptx" />
+  <xi:include href="sec-initialexamples.ptx" />
+  <xi:include href="sec-polyhedralconvex.ptx" />
 
 </chapter>

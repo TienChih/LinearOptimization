@@ -12,7 +12,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-geometric.ptx" />
+    <xi:include href="geometric/ch-chapter-geometric.ptx" />
 
 
     <!-- Include backmatter -->

@@ -165,7 +165,7 @@
       </p>
       <hint>
         <p>
-          <interactive desmos="jstub24bcd" width="100%" aspect="4:3" />
+          <interactive desmos="jstub24bcd" width="100%" />
         </p>
       </hint>
     </task>
