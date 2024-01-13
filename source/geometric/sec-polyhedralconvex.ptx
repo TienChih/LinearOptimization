@@ -508,7 +508,7 @@
         <p>
           In <m>\mathbb{R}^n</m> How many <m>n-1</m> dimensional hyperplanes are needed to intersect to obtain a point?
         </p>
-        <ol style="A">
+        <ol marker="A." cols="2">
           <li>
             <p>
               <m>3</m>
@@ -538,7 +538,7 @@
           Suppose a canonical linear programming problem in <m>\mathbb{R}^n</m> is bounded by the usual <m>n</m> hyperplanes corresponding to <m>x_i\geq 0</m>
           as well as <m>k</m> additional hyperplanes.  How many potential points of intersection could there be?
         </p>
-        <ol style="A">
+        <ol marker="A." cols="2">
           <li>
             <p>
               <m>n</m>
