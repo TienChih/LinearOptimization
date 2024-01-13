@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-section-initial" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Initial Examples</title>
 
   <p> Here we begin with some initial examples motivating the sort of problems we will study. </p>
@@ -61,7 +61,7 @@
 
   </activity>
 
-  <activity>
+  <activity xml:id="activity-examplediet">
     <introduction>
       <p>
         Suppose Carlos planning a meal is shopping for a meal.  Mini bell peppers are $1.00 (simplified) a pound, Chicken is $1.25 a pound and Spaghetti wuth sauce is $0.80 a cup.

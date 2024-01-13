@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-section-convexity" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Polyhedral Convextiy</title>
 
   <p> In this section, we establish the geometric notions which underlie our work. </p>
@@ -274,7 +274,7 @@
     <task>
       <statement>
         <p>
-          Find convex sets <m>S_1, S_2</m> so that <m>S_1\cup S_2</m> is convex.
+          Find convex sets <m>S_1, S_2</m> so that <m>S_1\cup S_2</m> is not convex.
         </p>
       </statement>
     </task>
@@ -283,10 +283,302 @@
   <activity>
     <task>
       <p>
-        Explain why the feasible region of a canonical linear programming problem is convex.
+        Prove why the feasible region of a canonical linear programming problem is convex.
       </p>
     </task>
   </activity>
+
+  <definition xml:id="def-norm">
+    <statement>
+      <p>
+        Given <m>\mathbf{x}</m> in we define the <em>norm</em> of <m>\mathbf{x}</m> to be <me>\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+\cdots x_n^2}.</me>
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-ball">
+    <statement>
+      <p>
+        Given <m>\mathbf{x}</m> in we define the <em>closed ball</em> of radius <m>r</m> centered at <m>\mathbf{x}</m> to be <me>\bar{B}(\mathbf{x}, r):=\{\mathbf{y}:\|\mathbf{x}-\mathbf{y}\|\leq r\}.</me>
+      </p>
+      <p>
+        The <em>open ball</em> centered at <m>\mathbf{x}</m> with radius <m>r</m> is similarly defined.  What do you think it is?
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <statement>
+      <p>
+        Describe <m>\bar{B}(\mathbf{0}, r)</m> for <m>\mathbb{R}, \mathbb{R}^2, \mathbb{R}^3</m>.
+      </p>
+    </statement>
+  </activity>
+
+  <definition xml:id="def-bounded">
+    <statement>
+      <p>
+        A set <m>S</m> is bounded if there is a <m>r\geq 0</m> such that  <m>S\subseteq \bar{B}(\mathbf{0}, r)</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <statement>
+      <p>
+        Which of the activities <xref ref="activity-exampleart"/>,  <xref ref="activity-examplediet"/> are bounded?
+      </p>
+    </statement>
+  </activity>
+
+  <activity xml:id="activity-ball">
+    <introduction>
+      <p>
+        Let <m>S\subseteq \mathbb{R}^2</m> be the feasible region of of a canonical maximization linear programming problem, let <m>f(x_1, x_2) = 2x_2+3x_2</m> be the objective function.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Consider the point <m>(1,1)</m>, which direction would increase the value of <m>f</m> the most?  The least?  Keep <m>f</m> the same?
+        </p>
+        <p>
+          (Recall the properties of the the dot product)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let  <m>\mathbf{x}\in S</m> such that there is a <m>r > 0</m> so that <m>B(\mathbf{x}, r)\subseteq S</m>.  Explain why <m>\mathbf{x}</m> cannot be a maximizer of <m>f</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          On the other hand, suppose <m>\mathbf{x}^*\in S</m> <em>IS</em> a maximizer of <m>f</m>, what must be true about <m>\mathbf{x}^*</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider the canonical maximization linear programming problem:
+        </p>
+        <p>
+          Maximzie <m>f(x,y)=3x+2y</m>  subject to:
+          <md>
+            <mrow> x+y\amp \leq 8</mrow>
+            <mrow> 2x+y\amp \leq 10</mrow>
+            <mrow> x, y\amp \geq 0.</mrow>
+          </md>
+        </p>
+        <p>
+          How do the statements you've made above apply here?  Where IS <m>f</m> maximized?  Is it consistent with what you said before?
+        </p>
+        <hint>
+          <p>
+            <interactive desmos="st3epptoqk" width="100%"  />
+          </p>
+        </hint>
+        
+      </statement>
+    </task>
+  </activity>
+
+  <definition xml:id="def-extremepoint">
+    <statement>
+      <p>
+        Let <m>S\subseteq \mathbb{R}^n</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <em>extreme point</em> of <m>S</m> if there are no 
+        <m>\mathbf{x}, \mathbf{y}\in S</m> so that <m>\mathbf{e}\in \{t\cdot \mathbf{x}+(1-t)\cdot \mathbf{y} : t\in [0,1]\}</m>.
+      </p>
+      <p>
+        In other words, <m>\mathbf{e}</m> does not lie on any non-trivial line segment contained in <m>S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        For each of the following convex sets, find it's extreme points (if any).
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          The feasible region of the problem in <xref ref="activity-ball"/>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\{(x,y):\|(x,y)\|\leq 1\}\subseteq \mathbb{R}^2</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\{(x,y):y\geq 0\}\subseteq \mathbb{R}^2</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <theorem xml:id="thm-boundedextreme">
+    <statement>
+      <p>
+        If <m>S</m> is the feasible region of a canonical  problem and is bounded, then <m>S</m> contains an optimal solution which is an extreme point of <m>S</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem xml:id="thm-unboundedextreme">
+    <statement>
+      <p>
+        If <m>S</m> is the feasible region of a canonical  problem and is unbounded: 
+      </p>
+      <ol>
+        <li>
+          <p>
+            If the problem is a maximization problem and if there is a <m>M</m> so that <m>f(s)\leq M</m> for all <m>s\in S</m>, then <m>S</m> contains an optimal solution which is an extreme point of <m>S</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If the problem is a minimization problem and if there is a <m>M</m> so that <m>g(s)\geq M</m> for all <m>s\in S</m>, then <m>S</m> contains an optimal solution which is an extreme point of <m>S</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </theorem>
+
+  <activity>
+    <task>
+      <statement>
+        <p>
+          Let <m>f(x,y)=x+y</m> be the objective function for a canonical maximization problem.  Find a set of constraints so that the feasible region is bounded and that there is a maximal solution that is not a corner point.  Why doesn't this contradict <xref ref="thm-boundedextreme"/>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\mathbf{x}_1, \mathbf{x}_2 \in S</m> be optimal solutions of a canonical linear programming problem, giving optimal solution
+          <m>f(\mathbf{x}_1) = f^* =f(\mathbf{x}_2)</m>. Show that for any <m>t\in [0,1]</m>, <m>f(t\mathbf{x}_1+(1-t)\mathbf{x}_2)=f^*</m> and that
+          <m>t\mathbf{x}_1+(1-t)\mathbf{x}_2\in S</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>f(x,y)=x</m> be the objective function for a canonical maximization problem.  Find a set of constraints so that the feasible region is unbounded but there is a maximal solution.  Why doesn't this contradict <xref ref="thm-unboundedextreme"/>?
+        </p>
+      </statement>
+    </task>
+    
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        So, we see that the hunt for optimal solutions boils down to a hunt for extreme points.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          In <m>\mathbb{R}^2</m> How many lines are needed to intersect to obtain a point?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          In <m>\mathbb{R}^3</m> How many planes are needed to intersect to obtain a point?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          In <m>\mathbb{R}^n</m> How many <m>n-1</m> dimensional hyperplanes are needed to intersect to obtain a point?
+        </p>
+        <ol style="A">
+          <li>
+            <p>
+              <m>3</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n-1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>n+1</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose a canonical linear programming problem in <m>\mathbb{R}^n</m> is bounded by the usual <m>n</m> hyperplanes corresponding to <m>x_i\geq 0</m>
+          as well as <m>k</m> additional hyperplanes.  How many potential points of intersection could there be?
+        </p>
+        <ol style="A">
+          <li>
+            <p>
+              <m>n</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>{n\choose k}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>{n+k\choose k}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>{k\choose n}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>{n+k\choose n}</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          So for a canonical linear programming problem in <m>\mathbb{R}^{10}</m> bounded by an additional 15 hyperplanes, how many potential extreme points are there?
+        </p>
+      </statement>
+    </task>
+  </activity>
+  
+
+
+
   
 
 </section>
