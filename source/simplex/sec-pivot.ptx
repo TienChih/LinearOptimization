@@ -143,10 +143,10 @@
         as 
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n  \amp =  b_1-t_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp =  b_2-t_2</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n  -b_1\amp =  -t_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n-b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n  \amp =  b_m-t_3</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -b_m \amp =  -t_m</mrow>
           <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
         </md>
         Which may be recorded by the <em>Tucker Tableau</em>:
@@ -173,7 +173,7 @@
         Note that this tableau <q>corresponds</q> to the point where <m>x_1, x_2, \ldots, x_n=0</m>.  We will further explore what this means in a bit.  
         But for now, if <m>x_1, x_2, \ldots, x_n=0</m>, then:
         <md>
-          <mrow>a_{1,1}0 + a_{1,2}0 +\cdots a_{1,n}-b_1  \amp =  -t_1</mrow>
+          <mrow>a_{1,1}0 + a_{1,2}0 +\cdots a_{1,n}0-b_1  \amp =  -t_1</mrow>
           <mrow> a_{2,1}0 + a_{2,2}0 +\cdots a_{2,n}0 -b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}0 + a_{m,2}0 +\cdots a_{m,n}0-b_m  \amp =  -t_3</mrow>
@@ -256,7 +256,7 @@
     <task>
       <statement>
         <p>
-          Recall that this tableau corresponds to the point <m>x_1, x_2=0</m>.  If we slightly increase <m>x_1, x_2</m>, do we increase f?
+          Recall that this tableau corresponds to the point <m>x_1, x_2=0</m>.  If we slightly increase <m>x_1, x_2</m>, do we increase <m>f</m>?
         </p>
       </statement>
     </task>
@@ -338,6 +338,19 @@
           If I increase <m>t_C</m> from 0, do I increase <m>f</m>?  What about <m>t_B</m>?
         </p>
       </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Consider the plot of the feasible region for this problem.  What exactly, geometrically, did we end up doing here?
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <interactive desmos="nnshibjndv"/>
+        </p>
+      </hint>
     </task>
 
 
