@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-pivot" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Canonical Programs and the Simplex Pivot</title>
+
+  <p> We begin the process of establishing an algorithm. </p>
+
+  <activity xml:id="activity-maxslack">
+    <introduction>
+      <p>
+        Consider the canonical maximization problem:
+
+      </p>
+      <p>
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \leq  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \leq  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+      </p>
+      <p>
+        Note that we may rewrite this as a system of equalities by introducing the <em>slack variables</em> <m>t_i</m>.
+      </p>
+
+      <md>
+        <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+        <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
+        <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
+        <mrow> \vdots \amp   \vdots</mrow>
+        <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n +t_m \amp =  b_m</mrow>
+        <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+      </md>
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What must be true about the slack variables <m>t_i</m>?
+        </p>
+        <ol style="A">
+          <li>
+            <p>
+              <m>t_i\leq 0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>t_i\geq 0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sum_{i=1}^m t_i=0</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What is the largest value <m>t_i</m> could obtain?
+        </p>
+        <ol style="A">
+          <li>
+            <p>
+              <m>b_i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c_i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_i</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>t_i</m> is unbounded.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+
+  </activity>
+
+  <observation>
+    <statement>
+      <p>
+        Similarly the canonical minimization problem:
+      </p>
+      <p>
+        <md>
+          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+        Where <m>a_{i,j}, b_j, c_i, d\in \mathbb{R}</m>
+      </p>
+      <p>
+        May be rewritten as:
+      </p>
+      <p>
+        <md>
+          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -s_m \amp \geq  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+      </p>
+    </statement>
+  </observation>
+
+  <p>
+    As usual, we focus on maximization for now.
+  </p>
+
+  <definition xml:id="def-tuckertableau">
+    <statement>
+      <p>
+        We can rewrite
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n +t_m \amp =  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+        as 
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n  \amp =  b_1-t_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp =  b_2-t_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n  \amp =  b_m-t_3</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+        Which may be recorded by the <em>Tucker Tableau</em>:
+        <me>
+         \begin{array}{|cccc|c|c}
+         x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+         \hline
+         a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -t_1 \\
+         a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -t_2 \\
+         \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+         a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -t_m \\
+         \hline
+         c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
+         \hline
+         \end{array} 
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <observation>
+    <statement>
+      <p>
+        Note that this tableau <q>corresponds</q> to the point where <m>x_1, x_2, \ldots, x_n=0</m>.  We will further explore what this means in a bit.  
+        But for now, if <m>x_1, x_2, \ldots, x_n=0</m>, then:
+        <md>
+          <mrow>a_{1,1}0 + a_{1,2}0 +\cdots a_{1,n}-b_1  \amp =  -t_1</mrow>
+          <mrow> a_{2,1}0 + a_{2,2}0 +\cdots a_{2,n}0 -b_2\amp =  -t_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}0 + a_{m,2}0 +\cdots a_{m,n}0-b_m  \amp =  -t_3</mrow>
+          <mrow> c_10 + c_20 +\cdots c_3-d  \amp =  f</mrow>
+        </md>
+      </p>
+    </statement>
+  </observation>
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the region in <m>\mathbb{R}^2</m> bound by <m>3x+5y\leq 8</m> and <m>2x+y\leq 3</m>.  Let <m>3x+5y-8=-t_1</m> and <m>2x+y-3=-t_2</m>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          If <m>t_1=0</m>, what points in <m>\mathbb{R}^2</m> satisfy <m>3x+5y-8=-t_1</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If <m>t_2=0</m>, what points in <m>\mathbb{R}^2</m> satisfy <m>2x+y-3=-t_2</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What points in <m>\mathbb{R}^2</m> satisfy both <m>t_1=0, t_2=0</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What points in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=3</m>?
+        </p>
+      </statement>
+    </task>
+    <hint>
+      <interactive desmos="eawi5elsrl"  />
+    </hint>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.
+      </p>
+      <p>
+        Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.
+      </p>
+      <p>
+        The company has 20 units of ingredient A, 30 units of B and 25 units of C.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Set up the canonical maximization problem corresponding to the above and record it in the following tableau:
+          <me>
+            \begin{array}{|cc|c|c}
+            x_1 \amp x_2  \amp -1\\
+            \hline
+             \amp  \amp \amp   -t_A \\
+             \amp  \amp \amp   -t_B \\
+             \amp  \amp \amp   -t_C \\
+            \hline
+             \amp   \amp 0 \amp   = f \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Recall that this tableau corresponds to the point <m>x_1, x_2=0</m>.  If we slightly increase <m>x_1, x_2</m>, do we increase f?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let's increase <m>x_1</m>.  Take the row corresponding to <m>t_C</m> and solve for <m>x_1</m> in terms of <m>x_2, t_C</m>.
+        </p>
+      </statement>
+      <statement>
+        <p>
+          For each equality corresponding to the rows <m>T_A, T_B, f</m> replace <m>x_1</m> with the value you found ealier and rewrite the left hand sides.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Record this new system in the following tableau:
+          <me>
+            \begin{array}{|cc|c|c}
+            t_C \amp x_2  \amp -1\\
+            \hline
+             \amp  \amp \amp   -t_A \\
+             \amp  \amp \amp   -t_B \\
+             \amp  \amp \amp   -x_1 \\
+            \hline
+             \amp   \amp 0 \amp   = f \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Recall that this new tableau corresponds to <m>t_C, x_2=0</m>, what point is this?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If we increase <m>t_C</m> from 0, do we increase <m>f</m>?  What about increasing <m>x_2</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let's increase <m>x_2</m>.  Take the row corrresponding to <m>t_B</m> and repeat Tasks 3 and 4 to obtain a tableau of the form:
+          <me>
+            \begin{array}{|cc|c|c}
+            t_C \amp t_B  \amp -1\\
+            \hline
+             \amp  \amp \amp   -t_A \\
+             \amp  \amp \amp   -x_2 \\
+             \amp  \amp \amp   -x_1 \\
+            \hline
+             \amp   \amp 0 \amp   = f \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What point does this new tableau correspond to?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If I increase <m>t_C</m> from 0, do I increase <m>f</m>?  What about <m>t_B</m>?
+        </p>
+      </statement>
+    </task>
+
+
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the tableau:
+        <me>
+          \begin{array}{|cc|c|c}
+          x_1 \amp x_2 \amp  -1\\
+          \hline
+          a_{11} \amp a_{12}  \amp b_1 \amp  -t_1 \\
+          a_{21} \amp a_{22} \amp  b_2 \amp   -t_2 \\
+          \hline
+          c_1 \amp  c_2 \amp  d  \amp = f \\
+          \hline
+          \end{array} 
+         </me>
+         along with the corresponding system of equations.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Solve for <m>x_1</m> in terms of <m>t_1, x_2</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          In each of the other two equalities, replace <m>x_1</m> with the expression we found above and simplify.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Record this new system in the following tableau:
+          <me>
+            \begin{array}{|cc|c|c}
+            t_1 \amp x_2 \amp  -1\\
+            \hline
+            a_{11} \amp a_{12}  \amp b_1 \amp  -x_1 \\
+            a_{21} \amp a_{22} \amp  b_2 \amp   -t_2 \\
+            \hline
+            c_1 \amp  c_2 \amp  d  \amp = f \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+</section>
