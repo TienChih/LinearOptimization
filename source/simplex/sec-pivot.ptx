@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-pivot" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-pivot" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Canonical Programs and the Simplex Pivot</title>
 
   <p> We begin the process of establishing an algorithm. </p>
@@ -25,14 +25,18 @@
         Note that we may rewrite this as a system of equalities by introducing the <em>slack variables</em> <m>t_i</m>.
       </p>
 
-      <md>
-        <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
-        <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
-        <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
-        <mrow> \vdots \amp   \vdots</mrow>
-        <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n +t_m \amp =  b_m</mrow>
-        <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
-      </md>
+      <p>
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n +t_m \amp =  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+        
+      </p>
+      
       
     </introduction>
     <task>
@@ -164,6 +168,9 @@
          \end{array} 
         </me>
       </p>
+      <p>
+        The variables at the top are called the <em>basic variables</em> and the variables on the side are the <em>slack variables</em>.
+      </p>
     </statement>
   </definition>
 
@@ -222,7 +229,7 @@
     </hint>
   </activity>
 
-  <activity>
+  <activity xml:id="activity-widget">
     <introduction>
       <p>
         Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.
@@ -246,7 +253,7 @@
              \amp  \amp \amp   -t_B \\
              \amp  \amp \amp   -t_C \\
             \hline
-             \amp   \amp 0 \amp   = f \\
+             \amp   \amp  \amp   = f \\
             \hline
             \end{array} 
            </me>
@@ -285,7 +292,7 @@
              \amp  \amp \amp   -t_B \\
              \amp  \amp \amp   -x_1 \\
             \hline
-             \amp   \amp 0 \amp   = f \\
+             \amp   \amp  \amp   = f \\
             \hline
             \end{array} 
            </me>
@@ -318,7 +325,7 @@
              \amp  \amp \amp   -x_2 \\
              \amp  \amp \amp   -x_1 \\
             \hline
-             \amp   \amp 0 \amp   = f \\
+             \amp   \amp  \amp   = f \\
             \hline
             \end{array} 
            </me>
@@ -396,16 +403,180 @@
             \begin{array}{|cc|c|c}
             t_1 \amp x_2 \amp  -1\\
             \hline
-            a_{11} \amp a_{12}  \amp b_1 \amp  -x_1 \\
-            a_{21} \amp a_{22} \amp  b_2 \amp   -t_2 \\
+             \amp  \amp  \amp  -x_1 \\
+             \amp  \amp   \amp   -t_2 \\
             \hline
-            c_1 \amp  c_2 \amp  d  \amp = f \\
+             \amp   \amp    \amp = f \\
             \hline
             \end{array} 
            </me>
         </p>
       </statement>
     </task>
+  </activity>
+
+  <definition xml:id="def-pivot">
+    <statement>
+      <p>
+        The following is the algorithm for a <em>pivot transformation</em>:
+
+      </p>
+      <ol>
+        <li>
+          <p>
+            Pick a non-zero entry <m>p</m> in the tableau but not in the objective row or constraint column.
+          </p>
+        </li>
+        <li>
+          <p>
+            Transpose the basic and slack variables corresponding to the position of <m>p</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace <m>p</m> by <m>1/p</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace each entry <m>q</m> in the same row as <m>p</m> (but not <m>p</m>) with <m>q/p</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace each entry <m>r</m> in the same column as <m>p</m> (but not <m>p</m>) with <m>-r/p</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Each entry <m>s</m> not in the same row or column as <m>p</m> but in the same column as <m>q</m> (which is in the same row as <m>p</m>) and in the same row as <m>r</m> (which is in the same column as <m>p</m>)
+            is replaced with <m>\frac{ps-qr}{p}</m>.
+          </p>
+        </li>
+
+      </ol>
+    </statement>
+  </definition>
+
+  <activity xml:id="activity-pivotexample">
+    <introduction>
+      <statement>
+        <p>
+          Consider the problem: maximize <m>f(x,y)=5x-y</m> subject to:
+          <md>
+            <mrow>-7x+2y \amp \leq 0</mrow>
+            <mrow>-x+2y \amp \leq 30</mrow>
+            <mrow>-x-2y \amp \leq 0</mrow>
+            <mrow>-3x-y \amp \leq 20</mrow>
+          </md>
+          which we may encode as:
+          <me>
+            \begin{array}{|cc|c|c}
+            x_1 \amp x_2 \amp  -1\\
+            \hline
+            7 \amp 2 \amp 0 \amp  -t_1 \\
+            1 \amp 2 \amp 30  \amp   -t_2 \\
+            1 \amp -2 \amp 0  \amp   -t_3 \\
+            3 \amp -1 \amp 20  \amp   -t_4 \\
+            \hline
+            5 \amp  -1 \amp  0  \amp = f \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry with <m>*</m>:
+          <me>
+            \begin{array}{|cc|c|c}
+            
+            \hline
+            7 \amp 2 \amp 0 \amp  \\
+            1 \amp 2 \amp 30  \amp    \\
+            1^* \amp -2 \amp 0  \amp    \\
+            3 \amp -1 \amp 20  \amp   \\
+            \hline
+            5 \amp  -1 \amp 0   \amp  \\
+            \hline
+            \end{array} 
+           </me>
+           (Keep track of the basic and slack variables.)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry with <m>*</m>:
+          <me>
+            \begin{array}{|cc|c|c}
+            
+            \hline
+            ? \amp ? \amp ? \amp  \\
+            ? \amp ? \amp ?  \amp    \\
+             ? \amp ?  \amp  ? \amp    \\
+             ? \amp ?^* \amp  ? \amp   \\
+            \hline
+            ? \amp ?  \amp ?   \amp  \\
+            \hline
+            \end{array} 
+           </me>
+           (Keep track of the basic and slack variables.)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry with <m>*</m>:
+          <me>
+            \begin{array}{|cc|c|c}
+            
+            \hline
+             ? \amp ? \amp ? \amp  \\
+             ? \amp ?^* \amp  ? \amp    \\
+             ? \amp ? \amp  ? \amp    \\
+            ? \amp ? \amp ?  \amp   \\
+            \hline
+            ? \amp ?  \amp  ?  \amp  \\
+            \hline
+            \end{array} 
+           </me>
+           (Keep track of the basic and slack variables.)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Look at your basic variables.  Which two lines are we currently sitting on?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How do we know we now have an optimal solution based only on the tableau?
+        </p>
+      </statement>
+    </task>
+    
+    <task>
+      <statement>
+        <p>
+          
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <interactive desmos="uxspyigm2m"/>
+        </p>
+      </hint>
+    </task>
+
   </activity>
 
 </section>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-simplexmax" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Simplex Algorithm for Canonical Maximization</title>
+
+
+  <activity xml:id="activity-tableaufeasible">
+    <task>
+      <p>
+        Consider the following  tableau:
+        <me>
+          \begin{array}{|cccc|c|c}          
+          x_1 \amp t_3 \amp t_1 \amp x_4 \amp -1 \amp \\
+          \hline
+           2 \amp 4 \amp 6 \amp 5 \amp 3 \amp x_4\\
+           -3 \amp 0 \amp \frac{2}{3} \amp -2 \amp -1 \amp x_2\\
+           \frac{17}{4} \amp -1 \amp 4 \amp \frac{2}{3} \amp -2 \amp t_3\\
+          \hline
+          5 \amp -1 \amp 0 \amp 3 \amp -244 \amp f\\
+          \hline
+          \end{array} 
+         </me>
+      </p>
+      <p>
+        Note that each <m>x_1, t_3, t_1, x_4=0</m> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?
+      </p>
+      
+    </task>
+    <task>
+      <statement>
+        <p>
+          Come up with a if and only if condition for a Tucker Tableau to correspond to a feasible solution
+        </p>
+      </statement>
+        
+    </task>
+
+  </activity>
+
+  <activity xml:id="activity-tableaubounded">
+    <introduction>
+      <p>
+        Consider the following  tableau:
+        <me>
+          \begin{array}{|cccc|c|c}          
+          x_3 \amp t_3 \amp x_2 \amp t_1 \amp -1 \amp \\
+          \hline
+          -4 \amp 25 \amp -3 \amp 2 \amp 18 \amp t_2\\
+          -1  \amp 2 \amp 2  \amp -1\amp  22 \amp x_1\\
+          -2 \amp 0 \amp -1 \amp -1 \amp 10 \amp x_4\\
+          \hline
+          2  \amp 0 \amp -1 \amp 1 \amp -156 \amp f\\
+          \hline
+          \end{array} 
+         </me>
+      </p>
+      <p>
+        Note that each <m>x_3, t_3, x_2, t_1=0</m> for this tableau.  
+      </p>
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Why is this tableau feasible?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Which of the following <m>x_3, t_3, t_1, x_2</m> could we increase from zero to increase our objective function value?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Ifweincrease <m>t_2</m> to 5, are all our inequalities satisfied?  What about 10? 100?
+        </p>
+      </statement>
+    </task>  
+
+    <task>
+      <statement>
+        <p>
+          If we increase <m>x_3</m> to 5, are all our inequalities satisfied?  What about 10? 100?
+        </p>
+      </statement>
+    </task>  
+
+    <task>
+      <statement>
+        <p>
+          What is the largest value we could increase <m>t_2</m> while satisfying our 3 inequalities?  What about <m>x_3</m>?
+        </p>
+      </statement>
+    </task>  
+
+    <task>
+      <statement>
+        <p>
+          Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Consider the following  tableau:
+          <me>
+            \begin{array}{|cc|c|c}            
+            x_1 \amp x_2 \amp -1 \amp \\  
+            \hline
+            -2 \amp 1 \amp 12 \amp t_1\\
+             -3  \amp 4 \amp  10 \amp t_2\\
+            \hline
+             -4 \amp 1 \amp 0 \amp f\\
+            \hline
+            \end{array} 
+           </me>
+           Our previous discussion leads us to believe that <m>x_1</m> may be increased as much as we please, and our two inequalities will remain satisfied.  Yet consider a sketch of the region and function:
+
+        </p>
+        <p>
+          <interactive desmos="de0i0gneqr"/>
+        </p>
+        <p>
+          It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the canonical max problem corresponding to:
+        <me>
+          \begin{array}{|cc|c|c}            
+          x_1 \amp x_2 \amp -1 \amp \\  
+          \hline
+          1 \amp 4 \amp 26 \amp t_1\\
+           2  \amp 3 \amp  22 \amp t_2\\
+           4  \amp 1 \amp  22 \amp t_2\\ 
+          \hline
+           8 \amp 7 \amp 0 \amp f\\
+          \hline
+          \end{array} 
+         </me>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Let's say we wanted to increase <m>x_2</m> from 0.  What is the largest we could increase <m>x_2</m> to while satisfying all 3 inequalities?
+        </p>
+        
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider a sketch of our feasible region:
+          <interactive desmos="oda5mzgqs1"/>
+        </p>
+        <p>
+          We could choose to pivot <m>x_2</m> (<m>y</m> in the sketch) with either <m>t_1, t_2, t_3</m>.  Only one of these would result in a feasible solution.  Looking graphically, which is it?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What's the connection between the two above tasks?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+</section>
