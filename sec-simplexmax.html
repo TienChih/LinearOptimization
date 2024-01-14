@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Simplex Algorithm</title>
+<title>The Simplex Algorithm for Canonical Maximization</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-section-convexity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linear-optimization.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-pivot.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -123,26 +123,114 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-convexity.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter active">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-chapter-simplex"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">The Simplex Algorithm</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simplexmax"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">The Simplex Algorithm for Canonical Maximization</span>
 </h2>
-<section class="introduction" id="ch-chapter-simplex-2"><div class="para" id="ch-chapter-simplex-2-1">Text before the first section.</div></section><nav class="summary-links"><ul>
-<li><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></li>
-<li><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></li>
-<li><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></li>
-</ul></nav></section></div>
+<article class="activity project-like" id="activity-tableaufeasible"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="activity-tableaufeasible-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="activity-tableaufeasible-1-1">
+<div class="para">Consider the following  tableau:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cccc|c|c}          
+x_1 \amp t_3 \amp t_1 \amp x_4 \amp -1 \amp \\
+\hline
+2 \amp 4 \amp 6 \amp 5 \amp 3 \amp x_4\\
+-3 \amp 0 \amp \frac{2}{3} \amp -2 \amp -1 \amp x_2\\
+\frac{17}{4} \amp -1 \amp 4 \amp \frac{2}{3} \amp -2 \amp t_3\\
+\hline
+5 \amp -1 \amp 0 \amp 3 \amp -244 \amp f\\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+</div>
+<div class="para" id="activity-tableaufeasible-1-2">Note that each <span class="process-math">\(x_1, t_3, t_1, x_4=0\)</span> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?</div></article><article class="task exercise-like" id="activity-tableaufeasible-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-tableaufeasible-2-1-1">Come up with a if and only if condition for a Tucker Tableau to correspond to a feasible solution</div></article></article><article class="activity project-like" id="activity-tableaubounded"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="activity-tableaubounded-1">
+<div class="para logical" id="activity-tableaubounded-1-1">
+<div class="para">Consider the following  tableau:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cccc|c|c}          
+x_3 \amp t_3 \amp x_2 \amp t_1 \amp -1 \amp \\
+\hline
+-4 \amp 25 \amp -3 \amp 2 \amp 18 \amp t_2\\
+-1  \amp 2 \amp 2  \amp -1\amp  22 \amp x_1\\
+-2 \amp 0 \amp -1 \amp -1 \amp 10 \amp x_4\\
+\hline
+2  \amp 0 \amp -1 \amp 1 \amp -156 \amp f\\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+</div> <div class="para" id="activity-tableaubounded-1-2">Note that each <span class="process-math">\(x_3, t_3, x_2, t_1=0\)</span> for this tableau.</div>
+</div>
+<article class="task exercise-like" id="activity-tableaubounded-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-tableaubounded-2-1-1">Why is this tableau feasible?</div></article><article class="task exercise-like" id="activity-tableaubounded-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-tableaubounded-3-1-1">Which of the following <span class="process-math">\(x_3, t_3, t_1, x_2\)</span> could we increase from zero to increase our objective function value?</div></article><article class="task exercise-like" id="activity-tableaubounded-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-tableaubounded-4-1-1">Ifweincrease <span class="process-math">\(t_2\)</span> to 5, are all our inequalities satisfied?  What about 10? 100?</div></article><article class="task exercise-like" id="activity-tableaubounded-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-tableaubounded-5-1-1">If we increase <span class="process-math">\(x_3\)</span> to 5, are all our inequalities satisfied?  What about 10? 100?</div></article><article class="task exercise-like" id="activity-tableaubounded-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-tableaubounded-6-1-1">What is the largest value we could increase <span class="process-math">\(t_2\)</span> while satisfying our 3 inequalities?  What about <span class="process-math">\(x_3\text{?}\)</span>
+</div></article><article class="task exercise-like" id="activity-tableaubounded-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-tableaubounded-7-1-1">Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.</div></article><article class="task exercise-like" id="activity-tableaubounded-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para logical" id="activity-tableaubounded-8-1-1">
+<div class="para">Consider the following  tableau:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cc|c|c}            
+x_1 \amp x_2 \amp -1 \amp \\  
+\hline
+-2 \amp 1 \amp 12 \amp t_1\\
+-3  \amp 4 \amp  10 \amp t_2\\
+\hline
+-4 \amp 1 \amp 0 \amp f\\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+<div class="para">Our previous discussion leads us to believe that <span class="process-math">\(x_1\)</span> may be increased as much as we please, and our two inequalities will remain satisfied.  Yet consider a sketch of the region and function:</div>
+</div> <div class="para" id="activity-tableaubounded-8-1-2"><iframe src="https://www.desmos.com/calculator/de0i0gneqr" id="activity-tableaubounded-8-1-2-1" width="600" height="600"></iframe></div> <div class="para" id="activity-tableaubounded-8-1-3">It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?</div></article></article><article class="activity project-like" id="sec-simplexmax-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-simplexmax-4-1"><div class="para logical" id="sec-simplexmax-4-1-1">
+<div class="para">Consider the canonical max problem corresponding to:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cc|c|c}            
+x_1 \amp x_2 \amp -1 \amp \\  
+\hline
+1 \amp 4 \amp 26 \amp t_1\\
+2  \amp 3 \amp  22 \amp t_2\\
+4  \amp 1 \amp  22 \amp t_2\\ 
+\hline
+8 \amp 7 \amp 0 \amp f\\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="sec-simplexmax-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-simplexmax-4-2-1-1">Let’s say we wanted to increase <span class="process-math">\(x_2\)</span> from 0.  What is the largest we could increase <span class="process-math">\(x_2\)</span> to while satisfying all 3 inequalities?</div></article><article class="task exercise-like" id="sec-simplexmax-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-simplexmax-4-3-1-1">Consider a sketch of our feasible region: <iframe src="https://www.desmos.com/calculator/oda5mzgqs1" id="sec-simplexmax-4-3-1-1-1" width="600" height="600"></iframe>
+</div> <div class="para" id="sec-simplexmax-4-3-1-2">We could choose to pivot <span class="process-math">\(x_2\)</span> (<span class="process-math">\(y\)</span> in the sketch) with either <span class="process-math">\(t_1, t_2, t_3\text{.}\)</span>  Only one of these would result in a feasible solution.  Looking graphically, which is it?</div></article><article class="task exercise-like" id="sec-simplexmax-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-simplexmax-4-4-1-1">What’s the connection between the two above tasks?</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-section-convexity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-pivot.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

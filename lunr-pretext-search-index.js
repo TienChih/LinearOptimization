@@ -271,27 +271,27 @@ var ptx_lunr_docs = [
   "body": "  So, we see that the hunt for optimal solutions boils down to a hunt for extreme points.    In How many lines are needed to intersect to obtain a point?    In How many planes are needed to intersect to obtain a point?    In How many dimensional hyperplanes are needed to intersect to obtain a point?                          Suppose a canonical linear programming problem in is bounded by the usual hyperplanes corresponding to as well as additional hyperplanes. How many potential points of intersection could there be?                               So for a canonical linear programming problem in bounded by an additional 15 hyperplanes, how many potential extreme points are there?   "
 },
 {
-  "id": "sec-section-pivot",
+  "id": "sec-pivot",
   "level": "1",
-  "url": "sec-section-pivot.html",
+  "url": "sec-pivot.html",
   "type": "Section",
   "number": "2.1",
   "title": "Canonical Programs and the Simplex Pivot",
-  "body": " Canonical Programs and the Simplex Pivot  We begin the process of establishing an algorithm.    Consider the canonical maximization problem:     Note that we may rewrite this as a system of equalities by introducing the slack variables  .     What must be true about the slack variables ?                     What is the largest value could obtain?                    is unbounded.        Similarly the canonical minimization problem:   Where   May be rewritten as:       As usual, we focus on maximization for now.    We can rewrite as Which may be recorded by the Tucker Tableau :       Note that this tableau corresponds to the point where . We will further explore what this means in a bit. But for now, if , then:       Consider the region in bound by and . Let and     If , what points in satisfy ?    If , what points in satisfy ?    What points in satisfy both ?    What points in satisfy both ?         Suppose a company produces two types of widgets. Widget 1 sells for $200 and Widget 2 sells for $150.  Each widget takes ingredients A, B and C. Widget 1 needs 1 unit of A, 2 units of B and 2 units of C. Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.  The company has 20 units of ingredient A, 30 units of B and 25 units of C.    Set up the canonical maximization problem corresponding to the above and record it in the following tableau:     Recall that this tableau corresponds to the point . If we slightly increase , do we increase ?    Let's increase . Take the row corresponding to and solve for in terms of .   For each equality corresponding to the rows replace with the value you found ealier and rewrite the left hand sides.    Record this new system in the following tableau:     Recall that this new tableau corresponds to , what point is this?    If we increase from 0, do we increase ? What about increasing ?    Let's increase . Take the row corrresponding to and repeat Tasks (c) and (d) to obtain a tableau of the form:     What point does this new tableau correspond to?    If I increase from 0, do I increase ? What about ?    Consider the plot of the feasible region for this problem. What exactly, geometrically, did we end up doing here?          Consider the tableau: along with the corresponding system of equations.    Solve for in terms of .    In each of the other two equalities, replace with the expression we found above and simplify.    Record this new system in the following tableau:     "
+  "body": " Canonical Programs and the Simplex Pivot  We begin the process of establishing an algorithm.    Consider the canonical maximization problem:     Note that we may rewrite this as a system of equalities by introducing the slack variables  .       What must be true about the slack variables ?                     What is the largest value could obtain?                    is unbounded.        Similarly the canonical minimization problem:   Where   May be rewritten as:       As usual, we focus on maximization for now.    We can rewrite as Which may be recorded by the Tucker Tableau :   The variables at the top are called the basic variables and the variables on the side are the slack variables .      Note that this tableau corresponds to the point where . We will further explore what this means in a bit. But for now, if , then:       Consider the region in bound by and . Let and     If , what points in satisfy ?    If , what points in satisfy ?    What points in satisfy both ?    What points in satisfy both ?         Suppose a company produces two types of widgets. Widget 1 sells for $200 and Widget 2 sells for $150.  Each widget takes ingredients A, B and C. Widget 1 needs 1 unit of A, 2 units of B and 2 units of C. Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.  The company has 20 units of ingredient A, 30 units of B and 25 units of C.    Set up the canonical maximization problem corresponding to the above and record it in the following tableau:     Recall that this tableau corresponds to the point . If we slightly increase , do we increase ?    Let's increase . Take the row corresponding to and solve for in terms of .   For each equality corresponding to the rows replace with the value you found ealier and rewrite the left hand sides.    Record this new system in the following tableau:     Recall that this new tableau corresponds to , what point is this?    If we increase from 0, do we increase ? What about increasing ?    Let's increase . Take the row corrresponding to and repeat Tasks (c) and (d) to obtain a tableau of the form:     What point does this new tableau correspond to?    If I increase from 0, do I increase ? What about ?    Consider the plot of the feasible region for this problem. What exactly, geometrically, did we end up doing here?          Consider the tableau: along with the corresponding system of equations.    Solve for in terms of .    In each of the other two equalities, replace with the expression we found above and simplify.    Record this new system in the following tableau:       The following is the algorithm for a pivot transformation :    Pick a non-zero entry in the tableau but not in the objective row or constraint column.    Transpose the basic and slack variables corresponding to the position of .    Replace by .    Replace each entry in the same row as (but not ) with .    Replace each entry in the same column as (but not ) with .    Each entry not in the same row or column as but in the same column as (which is in the same row as ) and in the same row as (which is in the same column as ) is replaced with .         Consider the problem: maximize subject to: which we may encode as:      Pivot on the entry with : (Keep track of the basic and slack variables.)    Pivot on the entry with : (Keep track of the basic and slack variables.)    Pivot on the entry with : (Keep track of the basic and slack variables.)    Look at your basic variables. Which two lines are we currently sitting on?    How do we know we now have an optimal solution based only on the tableau?            "
 },
 {
   "id": "activity-maxslack",
   "level": "2",
-  "url": "sec-section-pivot.html#activity-maxslack",
+  "url": "sec-pivot.html#activity-maxslack",
   "type": "Activity",
   "number": "2.1.1",
   "title": "",
-  "body": "  Consider the canonical maximization problem:     Note that we may rewrite this as a system of equalities by introducing the slack variables  .     What must be true about the slack variables ?                     What is the largest value could obtain?                    is unbounded.     "
+  "body": "  Consider the canonical maximization problem:     Note that we may rewrite this as a system of equalities by introducing the slack variables  .       What must be true about the slack variables ?                     What is the largest value could obtain?                    is unbounded.     "
 },
 {
-  "id": "sec-section-pivot-4",
+  "id": "sec-pivot-4",
   "level": "2",
-  "url": "sec-section-pivot.html#sec-section-pivot-4",
+  "url": "sec-pivot.html#sec-pivot-4",
   "type": "Observation",
   "number": "2.1.1",
   "title": "",
@@ -300,47 +300,119 @@ var ptx_lunr_docs = [
 {
   "id": "def-tuckertableau",
   "level": "2",
-  "url": "sec-section-pivot.html#def-tuckertableau",
+  "url": "sec-pivot.html#def-tuckertableau",
   "type": "Definition",
   "number": "2.1.2",
   "title": "",
-  "body": "  We can rewrite as Which may be recorded by the Tucker Tableau :    "
+  "body": "  We can rewrite as Which may be recorded by the Tucker Tableau :   The variables at the top are called the basic variables and the variables on the side are the slack variables .   "
 },
 {
-  "id": "sec-section-pivot-7",
+  "id": "sec-pivot-7",
   "level": "2",
-  "url": "sec-section-pivot.html#sec-section-pivot-7",
+  "url": "sec-pivot.html#sec-pivot-7",
   "type": "Observation",
   "number": "2.1.3",
   "title": "",
   "body": "  Note that this tableau corresponds to the point where . We will further explore what this means in a bit. But for now, if , then:    "
 },
 {
-  "id": "sec-section-pivot-8",
+  "id": "sec-pivot-8",
   "level": "2",
-  "url": "sec-section-pivot.html#sec-section-pivot-8",
+  "url": "sec-pivot.html#sec-pivot-8",
   "type": "Activity",
   "number": "2.1.2",
   "title": "",
   "body": "  Consider the region in bound by and . Let and     If , what points in satisfy ?    If , what points in satisfy ?    What points in satisfy both ?    What points in satisfy both ?      "
 },
 {
-  "id": "sec-section-pivot-9",
+  "id": "activity-widget",
   "level": "2",
-  "url": "sec-section-pivot.html#sec-section-pivot-9",
+  "url": "sec-pivot.html#activity-widget",
   "type": "Activity",
   "number": "2.1.3",
   "title": "",
   "body": "  Suppose a company produces two types of widgets. Widget 1 sells for $200 and Widget 2 sells for $150.  Each widget takes ingredients A, B and C. Widget 1 needs 1 unit of A, 2 units of B and 2 units of C. Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.  The company has 20 units of ingredient A, 30 units of B and 25 units of C.    Set up the canonical maximization problem corresponding to the above and record it in the following tableau:     Recall that this tableau corresponds to the point . If we slightly increase , do we increase ?    Let's increase . Take the row corresponding to and solve for in terms of .   For each equality corresponding to the rows replace with the value you found ealier and rewrite the left hand sides.    Record this new system in the following tableau:     Recall that this new tableau corresponds to , what point is this?    If we increase from 0, do we increase ? What about increasing ?    Let's increase . Take the row corrresponding to and repeat Tasks (c) and (d) to obtain a tableau of the form:     What point does this new tableau correspond to?    If I increase from 0, do I increase ? What about ?    Consider the plot of the feasible region for this problem. What exactly, geometrically, did we end up doing here?       "
 },
 {
-  "id": "sec-section-pivot-10",
+  "id": "sec-pivot-10",
   "level": "2",
-  "url": "sec-section-pivot.html#sec-section-pivot-10",
+  "url": "sec-pivot.html#sec-pivot-10",
   "type": "Activity",
   "number": "2.1.4",
   "title": "",
   "body": "  Consider the tableau: along with the corresponding system of equations.    Solve for in terms of .    In each of the other two equalities, replace with the expression we found above and simplify.    Record this new system in the following tableau:    "
+},
+{
+  "id": "def-pivot",
+  "level": "2",
+  "url": "sec-pivot.html#def-pivot",
+  "type": "Definition",
+  "number": "2.1.4",
+  "title": "",
+  "body": "  The following is the algorithm for a pivot transformation :    Pick a non-zero entry in the tableau but not in the objective row or constraint column.    Transpose the basic and slack variables corresponding to the position of .    Replace by .    Replace each entry in the same row as (but not ) with .    Replace each entry in the same column as (but not ) with .    Each entry not in the same row or column as but in the same column as (which is in the same row as ) and in the same row as (which is in the same column as ) is replaced with .     "
+},
+{
+  "id": "activity-pivotexample",
+  "level": "2",
+  "url": "sec-pivot.html#activity-pivotexample",
+  "type": "Activity",
+  "number": "2.1.5",
+  "title": "",
+  "body": "   Consider the problem: maximize subject to: which we may encode as:      Pivot on the entry with : (Keep track of the basic and slack variables.)    Pivot on the entry with : (Keep track of the basic and slack variables.)    Pivot on the entry with : (Keep track of the basic and slack variables.)    Look at your basic variables. Which two lines are we currently sitting on?    How do we know we now have an optimal solution based only on the tableau?           "
+},
+{
+  "id": "sec-curious",
+  "level": "1",
+  "url": "sec-curious.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "A Curious Situation",
+  "body": " A Curious Situation    Suppose a company produces two types of widgets. Widget 1 sells for $200 and Widget 2 sells for $150.  Each widget takes ingredients A, B and C. Widget 1 needs 1 unit of A, 2 units of B and 2 units of C. Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.  The company has 20 units of ingredient A, 30 units of B and 25 units of C.  Now, the company wants to assign values to the three ingredients. The values for each should be enough so that in a disaster, the potential revenue is recovered, ie: Of course, the values shouldn't be negative, so .  But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize .  We can convert this into a max problem to solve, but we can also record it in the following tableau:     Pivot on the entry with the :     Pivot on the entry with the :     Compare this solution and tableau to the final solution in . What do you notice?          "
+},
+{
+  "id": "activity-insurance",
+  "level": "2",
+  "url": "sec-curious.html#activity-insurance",
+  "type": "Activity",
+  "number": "2.2.1",
+  "title": "",
+  "body": "  Suppose a company produces two types of widgets. Widget 1 sells for $200 and Widget 2 sells for $150.  Each widget takes ingredients A, B and C. Widget 1 needs 1 unit of A, 2 units of B and 2 units of C. Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.  The company has 20 units of ingredient A, 30 units of B and 25 units of C.  Now, the company wants to assign values to the three ingredients. The values for each should be enough so that in a disaster, the potential revenue is recovered, ie: Of course, the values shouldn't be negative, so .  But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize .  We can convert this into a max problem to solve, but we can also record it in the following tableau:     Pivot on the entry with the :     Pivot on the entry with the :     Compare this solution and tableau to the final solution in . What do you notice?       "
+},
+{
+  "id": "sec-simplexmax",
+  "level": "1",
+  "url": "sec-simplexmax.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "The Simplex Algorithm for Canonical Maximization",
+  "body": " The Simplex Algorithm for Canonical Maximization   Consider the following tableau:  Note that each for this tableau. Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero). Are they all satisfied?   Come up with a if and only if condition for a Tucker Tableau to correspond to a feasible solution      Consider the following tableau:   Note that each for this tableau.    Why is this tableau feasible?    Which of the following could we increase from zero to increase our objective function value?    Ifweincrease to 5, are all our inequalities satisfied? What about 10? 100?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    What is the largest value we could increase while satisfying our 3 inequalities? What about ?    Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.    Consider the following tableau: Our previous discussion leads us to believe that may be increased as much as we please, and our two inequalities will remain satisfied. Yet consider a sketch of the region and function:     It turns out this system still achieves a maximum solution. Why does this not contradict our previous work?      Consider the canonical max problem corresponding to:     Let's say we wanted to increase from 0. What is the largest we could increase to while satisfying all 3 inequalities?    Consider a sketch of our feasible region:   We could choose to pivot ( in the sketch) with either . Only one of these would result in a feasible solution. Looking graphically, which is it?    What's the connection between the two above tasks?    "
+},
+{
+  "id": "activity-tableaufeasible",
+  "level": "2",
+  "url": "sec-simplexmax.html#activity-tableaufeasible",
+  "type": "Activity",
+  "number": "2.3.1",
+  "title": "",
+  "body": " Consider the following tableau:  Note that each for this tableau. Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero). Are they all satisfied?   Come up with a if and only if condition for a Tucker Tableau to correspond to a feasible solution   "
+},
+{
+  "id": "activity-tableaubounded",
+  "level": "2",
+  "url": "sec-simplexmax.html#activity-tableaubounded",
+  "type": "Activity",
+  "number": "2.3.2",
+  "title": "",
+  "body": "  Consider the following tableau:   Note that each for this tableau.    Why is this tableau feasible?    Which of the following could we increase from zero to increase our objective function value?    Ifweincrease to 5, are all our inequalities satisfied? What about 10? 100?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    What is the largest value we could increase while satisfying our 3 inequalities? What about ?    Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.    Consider the following tableau: Our previous discussion leads us to believe that may be increased as much as we please, and our two inequalities will remain satisfied. Yet consider a sketch of the region and function:     It turns out this system still achieves a maximum solution. Why does this not contradict our previous work?   "
+},
+{
+  "id": "sec-simplexmax-4",
+  "level": "2",
+  "url": "sec-simplexmax.html#sec-simplexmax-4",
+  "type": "Activity",
+  "number": "2.3.3",
+  "title": "",
+  "body": "  Consider the canonical max problem corresponding to:     Let's say we wanted to increase from 0. What is the largest we could increase to while satisfying all 3 inequalities?    Consider a sketch of our feasible region:   We could choose to pivot ( in the sketch) with either . Only one of these would result in a feasible solution. Looking graphically, which is it?    What's the connection between the two above tasks?   "
 },
 {
   "id": "backmatter-2",

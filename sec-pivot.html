@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter-simplex.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter-simplex.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-curious.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -125,14 +125,18 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
-<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-section-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li></ul>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-section-pivot"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-pivot"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Canonical Programs and the Simplex Pivot</span>
 </h2>
-<div class="para" id="sec-section-pivot-2">We begin the process of establishing an algorithm.</div>
+<div class="para" id="sec-pivot-2">We begin the process of establishing an algorithm.</div>
 <article class="activity project-like" id="activity-maxslack"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
 </h3>
@@ -147,8 +151,7 @@ a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \leq  b_m\\
 x_1, x_2, \ldots, x_n\amp \geq  0
 \end{align*}
 </div></div> <div class="para" id="activity-maxslack-1-3">Note that we may rewrite this as a system of equalities by introducing the <em class="emphasis">slack variables</em> <span class="process-math">\(t_i\text{.}\)</span>
-</div>
-<div class="displaymath process-math" id="activity-maxslack-1-4">
+</div> <div class="para logical" id="activity-maxslack-1-4"><div class="displaymath process-math" id="activity-maxslack-1-4-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1\\
@@ -157,7 +160,7 @@ a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2\\
 a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n +t_m \amp =  b_m\\
 x_1, x_2, \ldots, x_n\amp \geq  0
 \end{align*}
-</div>
+</div></div>
 </div>
 <article class="task exercise-like" id="activity-maxslack-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-maxslack-2-1-1">What must be true about the slack variables <span class="process-math">\(t_i\text{?}\)</span>
@@ -172,11 +175,11 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 <li id="activity-maxslack-3-1-2-3"><div class="para" id="activity-maxslack-3-1-2-3-1"><span class="process-math">\(\displaystyle x_i\)</span></div></li>
 <li id="activity-maxslack-3-1-2-4"><div class="para" id="activity-maxslack-3-1-2-4-1">
 <span class="process-math">\(t_i\)</span> is unbounded.</div></li>
-</ol></article></article><article class="observation remark-like" id="sec-section-pivot-4"><h3 class="heading">
+</ol></article></article><article class="observation remark-like" id="sec-pivot-4"><h3 class="heading">
 <span class="type">Observation</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-section-pivot-4-1-1">Similarly the canonical minimization problem:</div> <div class="para logical" id="sec-section-pivot-4-1-2">
-<div class="displaymath process-math" id="sec-section-pivot-4-1-2-1">
+<div class="para" id="sec-pivot-4-1-1">Similarly the canonical minimization problem:</div> <div class="para logical" id="sec-pivot-4-1-2">
+<div class="displaymath process-math" id="sec-pivot-4-1-2-1">
 \begin{align*}
 \textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1\\
@@ -188,7 +191,7 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 </div>
 <div class="para">Where <span class="process-math">\(a_{i,j}, b_j, c_i, d\in \mathbb{R}\)</span>
 </div>
-</div> <div class="para" id="sec-section-pivot-4-1-3">May be rewritten as:</div> <div class="para logical" id="sec-section-pivot-4-1-4"><div class="displaymath process-math" id="sec-section-pivot-4-1-4-1">
+</div> <div class="para" id="sec-pivot-4-1-3">May be rewritten as:</div> <div class="para logical" id="sec-pivot-4-1-4"><div class="displaymath process-math" id="sec-pivot-4-1-4-1">
 \begin{align*}
 \textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1\\
@@ -197,7 +200,7 @@ a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2\\
 a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -s_m \amp \geq  b_m\\
 x_1, x_2, \ldots, x_n\amp \geq  0
 \end{align*}
-</div></div></article><div class="para" id="sec-section-pivot-5">As usual, we focus on maximization for now.</div>
+</div></div></article><div class="para" id="sec-pivot-5">As usual, we focus on maximization for now.</div>
 <article class="definition definition-like" id="def-tuckertableau"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
 </h3>
@@ -240,12 +243,12 @@ c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
 \end{array} 
 \end{equation*}
 </div>
-</div> <div class="para" id="def-tuckertableau-1-2">The variables at the top are called the <em class="emphasis">basic variables</em> and the variables on the side are the <em class="emphasis">slack variables</em>.</div></article><article class="observation remark-like" id="sec-section-pivot-7"><h3 class="heading">
+</div> <div class="para" id="def-tuckertableau-1-2">The variables at the top are called the <em class="emphasis">basic variables</em> and the variables on the side are the <em class="emphasis">slack variables</em>.</div></article><article class="observation remark-like" id="sec-pivot-7"><h3 class="heading">
 <span class="type">Observation</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-section-pivot-7-1-1">
+<div class="para logical" id="sec-pivot-7-1-1">
 <div class="para">Note that this tableau “corresponds” to the point where <span class="process-math">\(x_1, x_2, \ldots, x_n=0\text{.}\)</span>  We will further explore what this means in a bit. But for now, if <span class="process-math">\(x_1, x_2, \ldots, x_n=0\text{,}\)</span> then:</div>
-<div class="displaymath process-math" id="sec-section-pivot-7-1-1-4">
+<div class="displaymath process-math" id="sec-pivot-7-1-1-4">
 \begin{align*}
 a_{1,1}0 + a_{1,2}0 +\cdots a_{1,n}0-b_1  \amp =  -t_1\\
 a_{2,1}0 + a_{2,2}0 +\cdots a_{2,n}0 -b_2\amp =  -t_2\\
@@ -254,27 +257,27 @@ a_{m,1}0 + a_{m,2}0 +\cdots a_{m,n}0-b_m  \amp =  -t_3\\
 c_10 + c_20 +\cdots c_3-d  \amp =  f
 \end{align*}
 </div>
-</div></article><article class="activity project-like" id="sec-section-pivot-8"><h3 class="heading">
+</div></article><article class="activity project-like" id="sec-pivot-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-section-pivot-8-1"><div class="para" id="sec-section-pivot-8-1-1">Consider the region in <span class="process-math">\(\mathbb{R}^2\)</span> bound by <span class="process-math">\(3x+5y\leq 8\)</span> and <span class="process-math">\(2x+y\leq 3\text{.}\)</span>  Let <span class="process-math">\(3x+5y-8=-t_1\)</span> and <span class="process-math">\(2x+y-3=-t_2\)</span>
+<div class="introduction" id="sec-pivot-8-1"><div class="para" id="sec-pivot-8-1-1">Consider the region in <span class="process-math">\(\mathbb{R}^2\)</span> bound by <span class="process-math">\(3x+5y\leq 8\)</span> and <span class="process-math">\(2x+y\leq 3\text{.}\)</span>  Let <span class="process-math">\(3x+5y-8=-t_1\)</span> and <span class="process-math">\(2x+y-3=-t_2\)</span>
 </div></div>
-<article class="task exercise-like" id="sec-section-pivot-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-section-pivot-8-2-1-1">If <span class="process-math">\(t_1=0\text{,}\)</span> what points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy <span class="process-math">\(3x+5y-8=-t_1\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-section-pivot-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-section-pivot-8-3-1-1">If <span class="process-math">\(t_2=0\text{,}\)</span> what points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy <span class="process-math">\(2x+y-3=-t_2\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-section-pivot-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-section-pivot-8-4-1-1">What points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy both <span class="process-math">\(t_1=0, t_2=0\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-section-pivot-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-section-pivot-8-5-1-1">What points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy both <span class="process-math">\(t_1=8, t_2=3\text{?}\)</span>
-</div></article></article><article class="activity project-like" id="sec-section-pivot-9"><h3 class="heading">
+<article class="task exercise-like" id="sec-pivot-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-pivot-8-2-1-1">If <span class="process-math">\(t_1=0\text{,}\)</span> what points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy <span class="process-math">\(3x+5y-8=-t_1\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-pivot-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-pivot-8-3-1-1">If <span class="process-math">\(t_2=0\text{,}\)</span> what points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy <span class="process-math">\(2x+y-3=-t_2\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-pivot-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-pivot-8-4-1-1">What points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy both <span class="process-math">\(t_1=0, t_2=0\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-pivot-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-pivot-8-5-1-1">What points in <span class="process-math">\(\mathbb{R}^2\)</span> satisfy both <span class="process-math">\(t_1=8, t_2=3\text{?}\)</span>
+</div></article></article><article class="activity project-like" id="activity-widget"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-section-pivot-9-1">
-<div class="para" id="sec-section-pivot-9-1-1">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div> <div class="para" id="sec-section-pivot-9-1-2">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div> <div class="para" id="sec-section-pivot-9-1-3">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div>
+<div class="introduction" id="activity-widget-1">
+<div class="para" id="activity-widget-1-1">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div> <div class="para" id="activity-widget-1-2">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div> <div class="para" id="activity-widget-1-3">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div>
 </div>
-<article class="task exercise-like" id="sec-section-pivot-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="sec-section-pivot-9-2-1-1">
+<article class="task exercise-like" id="activity-widget-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="activity-widget-2-1-1">
 <div class="para">Set up the canonical maximization problem corresponding to the above and record it in the following tableau:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -290,13 +293,13 @@ x_1 \amp x_2  \amp -1\\
 \end{array} 
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="sec-section-pivot-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-section-pivot-9-3-1-1">Recall that this tableau corresponds to the point <span class="process-math">\(x_1, x_2=0\text{.}\)</span>  If we slightly increase <span class="process-math">\(x_1, x_2\text{,}\)</span> do we increase <span class="process-math">\(f\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-section-pivot-9-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-section-pivot-9-4-1-1">Let’s increase <span class="process-math">\(x_1\text{.}\)</span>  Take the row corresponding to <span class="process-math">\(t_C\)</span> and solve for <span class="process-math">\(x_1\)</span> in terms of <span class="process-math">\(x_2, t_C\text{.}\)</span>
+</div></article><article class="task exercise-like" id="activity-widget-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-widget-3-1-1">Recall that this tableau corresponds to the point <span class="process-math">\(x_1, x_2=0\text{.}\)</span>  If we slightly increase <span class="process-math">\(x_1, x_2\text{,}\)</span> do we increase <span class="process-math">\(f\text{?}\)</span>
+</div></article><article class="task exercise-like" id="activity-widget-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-widget-4-1-1">Let’s increase <span class="process-math">\(x_1\text{.}\)</span>  Take the row corresponding to <span class="process-math">\(t_C\)</span> and solve for <span class="process-math">\(x_1\)</span> in terms of <span class="process-math">\(x_2, t_C\text{.}\)</span>
 </div>
-<div class="para" id="sec-section-pivot-9-4-2-1">For each equality corresponding to the rows <span class="process-math">\(t_A, t_B, f\)</span> replace <span class="process-math">\(x_1\)</span> with the value you found ealier and rewrite the left hand sides.</div></article><article class="task exercise-like" id="sec-section-pivot-9-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para logical" id="sec-section-pivot-9-5-1-1">
+<div class="para" id="activity-widget-4-2-1">For each equality corresponding to the rows <span class="process-math">\(t_A, t_B, f\)</span> replace <span class="process-math">\(x_1\)</span> with the value you found ealier and rewrite the left hand sides.</div></article><article class="task exercise-like" id="activity-widget-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="activity-widget-5-1-1">
 <div class="para">Record this new system in the following tableau:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -312,11 +315,11 @@ t_C \amp x_2  \amp -1\\
 \end{array} 
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="sec-section-pivot-9-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-section-pivot-9-6-1-1">Recall that this new tableau corresponds to <span class="process-math">\(t_C, x_2=0\text{,}\)</span> what point is this?</div></article><article class="task exercise-like" id="sec-section-pivot-9-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="sec-section-pivot-9-7-1-1">If we increase <span class="process-math">\(t_C\)</span> from 0, do we increase <span class="process-math">\(f\text{?}\)</span>  What about increasing <span class="process-math">\(x_2\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-section-pivot-9-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para logical" id="sec-section-pivot-9-8-1-1">
+</div></article><article class="task exercise-like" id="activity-widget-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-widget-6-1-1">Recall that this new tableau corresponds to <span class="process-math">\(t_C, x_2=0\text{,}\)</span> what point is this?</div></article><article class="task exercise-like" id="activity-widget-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-widget-7-1-1">If we increase <span class="process-math">\(t_C\)</span> from 0, do we increase <span class="process-math">\(f\text{?}\)</span>  What about increasing <span class="process-math">\(x_2\text{?}\)</span>
+</div></article><article class="task exercise-like" id="activity-widget-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para logical" id="activity-widget-8-1-1">
 <div class="para">Let’s increase <span class="process-math">\(x_2\text{.}\)</span>  Take the row corrresponding to <span class="process-math">\(t_B\)</span> and repeat Tasks (c) and (d) to obtain a tableau of the form:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -332,15 +335,15 @@ t_C \amp t_B  \amp -1\\
 \end{array} 
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="sec-section-pivot-9-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="sec-section-pivot-9-9-1-1">What point does this new tableau correspond to?</div></article><article class="task exercise-like" id="sec-section-pivot-9-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="sec-section-pivot-9-10-1-1">If I increase <span class="process-math">\(t_C\)</span> from 0, do I increase <span class="process-math">\(f\text{?}\)</span>  What about <span class="process-math">\(t_B\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-section-pivot-9-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="sec-section-pivot-9-11-1-1">Consider the plot of the feasible region for this problem.  What exactly, geometrically, did we end up doing here?</div>
-<div class="solutions"><details id="sec-section-pivot-9-11-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="sec-section-pivot-9-11-2-1"><iframe src="https://www.desmos.com/calculator/nnshibjndv" id="sec-section-pivot-9-11-2-1-1" width="600" height="600"></iframe></div></div></details></div></article></article><article class="activity project-like" id="sec-section-pivot-10"><h3 class="heading">
+</div></article><article class="task exercise-like" id="activity-widget-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="activity-widget-9-1-1">What point does this new tableau correspond to?</div></article><article class="task exercise-like" id="activity-widget-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="activity-widget-10-1-1">If I increase <span class="process-math">\(t_C\)</span> from 0, do I increase <span class="process-math">\(f\text{?}\)</span>  What about <span class="process-math">\(t_B\text{?}\)</span>
+</div></article><article class="task exercise-like" id="activity-widget-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para" id="activity-widget-11-1-1">Consider the plot of the feasible region for this problem.  What exactly, geometrically, did we end up doing here?</div>
+<div class="solutions"><details id="activity-widget-11-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="activity-widget-11-2-1"><iframe src="https://www.desmos.com/calculator/nnshibjndv" id="activity-widget-11-2-1-1" width="600" height="600"></iframe></div></div></details></div></article></article><article class="activity project-like" id="sec-pivot-10"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-section-pivot-10-1"><div class="para logical" id="sec-section-pivot-10-1-1">
+<div class="introduction" id="sec-pivot-10-1"><div class="para logical" id="sec-pivot-10-1-1">
 <div class="para">Consider the tableau:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -357,11 +360,11 @@ c_1 \amp  c_2 \amp  d  \amp = f \\
 </div>
 <div class="para">along with the corresponding system of equations.</div>
 </div></div>
-<article class="task exercise-like" id="sec-section-pivot-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-section-pivot-10-2-1-1">Solve for <span class="process-math">\(x_1\)</span> in terms of <span class="process-math">\(t_1, x_2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-section-pivot-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-section-pivot-10-3-1-1">In each of the other two equalities, replace <span class="process-math">\(x_1\)</span> with the expression we found above and simplify.</div></article><article class="task exercise-like" id="sec-section-pivot-10-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para logical" id="sec-section-pivot-10-4-1-1">
+<article class="task exercise-like" id="sec-pivot-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-pivot-10-2-1-1">Solve for <span class="process-math">\(x_1\)</span> in terms of <span class="process-math">\(t_1, x_2\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-pivot-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-pivot-10-3-1-1">In each of the other two equalities, replace <span class="process-math">\(x_1\)</span> with the expression we found above and simplify.</div></article><article class="task exercise-like" id="sec-pivot-10-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="sec-pivot-10-4-1-1">
 <div class="para">Record this new system in the following tableau:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -451,7 +454,7 @@ x_1 \amp x_2 \amp  -1\\
 ? \amp ? \amp ? \amp  \\
 ? \amp ? \amp ?  \amp    \\
 ? \amp ?  \amp  ? \amp    \\
-? \amp ? \amp  ?^* \amp   \\
+? \amp ?^* \amp  ? \amp   \\
 \hline
 ? \amp ?  \amp ?   \amp  \\
 \hline
@@ -480,11 +483,11 @@ x_1 \amp x_2 \amp  -1\\
 <div class="para">(Keep track of the basic and slack variables.)</div>
 </div></article><article class="task exercise-like" id="activity-pivotexample-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-pivotexample-5-1-1">Look at your basic variables.  Which two lines are we currently sitting on?</div></article><article class="task exercise-like" id="activity-pivotexample-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-pivotexample-6-1-1">How do we know we now have an optimal solution?</div></article><article class="task exercise-like" id="activity-pivotexample-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-pivotexample-6-1-1">How do we know we now have an optimal solution based only on the tableau?</div></article><article class="task exercise-like" id="activity-pivotexample-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-pivotexample-7-1-1"></div>
 <div class="solutions"><details id="activity-pivotexample-7-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="activity-pivotexample-7-2-1"><iframe src="https://www.desmos.com/calculator/uxspyigm2m" id="activity-pivotexample-7-2-1-1" width="600" height="600"></iframe></div></div></details></div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="ch-chapter-simplex.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-chapter-simplex.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-curious.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
