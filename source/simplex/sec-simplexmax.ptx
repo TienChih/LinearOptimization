@@ -180,6 +180,74 @@
         </p>
       </statement>
     </task>
+    <task>
+      <statement>
+        <p>
+          Based on the observations above, what should be the pivot entry for the following tableau?
+
+          <me>
+            \begin{array}{|cc|c|c}            
+            x_1 \amp x_2 \amp -1 \amp \\  
+            \hline
+            1 \amp 4 \amp 26 \amp t_1\\
+             2  \amp 3 \amp  22 \amp t_2\\
+             4  \amp 1 \amp  22 \amp t_2\\ 
+            \hline
+             8 \amp 7 \amp 0 \amp f\\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        For each of the following tableaus, determine what if any of the following are true:
+        <ul>
+          <li>
+            <p>
+              The tableau corresponds to a feasible solution.
+            </p>
+          </li>
+          <li>
+            <p>
+              The tableau corresponds to an optimal solution.
+            </p>
+          </li>
+          <li>
+            <p>
+              The tableau tells us the feasible region is unbounded.
+            </p>
+          </li>
+          <li>
+            <p>
+              The tableau tells us the objective function is unbounded.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|cc|c|c}            
+            x_1 \amp x_2 \amp -1 \amp \\  
+            \hline
+            1 \amp 4 \amp 26 \amp t_1\\
+             2  \amp 3 \amp  22 \amp t_2\\
+             4  \amp 1 \amp  22 \amp t_2\\ 
+            \hline
+             8 \amp 7 \amp 0 \amp f\\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
   </activity>
 
 </section>

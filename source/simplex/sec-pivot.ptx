@@ -169,7 +169,7 @@
         </me>
       </p>
       <p>
-        The variables at the top are called the <em>basic variables</em> and the variables on the side are the <em>slack variables</em>.
+        The variables at the top are called the <em>decision variables</em> or <em>independent variables</em>, the variables on the side are the <em>slack variables</em> or <em>basic variables</em>.
       </p>
     </statement>
   </definition>
@@ -429,7 +429,7 @@
         </li>
         <li>
           <p>
-            Transpose the basic and slack variables corresponding to the position of <m>p</m>.
+            Transpose the decision and slack variables corresponding to the position of <m>p</m>.
           </p>
         </li>
         <li>
@@ -503,7 +503,7 @@
             \hline
             \end{array} 
            </me>
-           (Keep track of the basic and slack variables.)
+           (Keep track of the decision and slack variables.)
         </p>
       </statement>
     </task>
@@ -524,7 +524,7 @@
             \hline
             \end{array} 
            </me>
-           (Keep track of the basic and slack variables.)
+           (Keep track of the decision and slack variables.)
         </p>
       </statement>
     </task>
@@ -545,14 +545,14 @@
             \hline
             \end{array} 
            </me>
-           (Keep track of the basic and slack variables.)
+           (Keep track of the decision and slack variables.)
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Look at your basic variables.  Which two lines are we currently sitting on?
+          Look at your decision variables.  Which two lines are we currently sitting on?
         </p>
       </statement>
     </task>
