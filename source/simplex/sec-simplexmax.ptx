@@ -29,8 +29,51 @@
     <task>
       <statement>
         <p>
-          Come up with a if and only if condition for a Tucker Tableau to correspond to a feasible solution
+          Which of the following is an if and only if condition for a Tucker Tableau to correspond to a feasible solution?
         </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              Some of the <m>c_i\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              All of the <m>c_i\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Some of the <m>c_i\geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              All of the <m>c_i\geq 0</m>.
+            </p>
+          </li>
+  
+          <li>
+            <p>
+              Some of the <m>b_j\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              All of the <m>b_j\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Some of the <m>b_j\geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              All of the <m>b_j\geq 0</m>.
+            </p>
+          </li>
+        </ol>
       </statement>
         
     </task>
@@ -78,7 +121,7 @@
     <task>
       <statement>
         <p>
-          Ifweincrease <m>t_2</m> to 5, are all our inequalities satisfied?  What about 10? 100?
+          If we increase <m>t_2</m> to 5, are all our inequalities satisfied?  What about 10? 100?
         </p>
       </statement>
     </task>  
@@ -102,8 +145,37 @@
     <task>
       <statement>
         <p>
-          Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
+          Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.
         </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              All of the <m>a_{ij}\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column.
+            </p>
+          </li>
+          <li>
+            <p>
+              All of the <m>c_i\leq 0</m>.
+            </p>
+          </li>
+  
+          <li>
+            <p>
+              All of the <m>b_j\leq 0</m>.
+            </p>
+          </li>
+          
+        </ol>
       </statement>
     </task>
 
@@ -131,6 +203,42 @@
         <p>
           It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?
         </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              All of the <m>a_{ij}\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i>0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i \lt 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_i>0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_i\lt 0</m>.
+            </p>
+          </li>
+          
+        </ol>
       </statement>
     </task>
 
@@ -183,17 +291,72 @@
     <task>
       <statement>
         <p>
+          For a canonical linear program encoded by a Tucker tableau:
+          <me>
+            \begin{array}{|cccc|c|c}
+            x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+            \hline
+            a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -t_1 \\
+            a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -t_2 \\
+            \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+            a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -t_m \\
+            \hline
+            c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
+            \hline
+            \end{array} 
+           </me>
+           if we pivot in column <m>i</m>, which row <m>j</m> should we choose?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              Any row <m>j</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Any <m>j</m> as long as <m>a_{ij}>0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The row <m>j</m> where <m>\frac{b_j}{a_{ij}}</m> is minimized.
+            </p>
+          </li>
+          <li>
+            <p>
+              The row <m>j</m> where <m>\frac{c_i}{a_{ij}}</m> is minimized.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The row <m>j</m> where <m>\frac{b_j}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The row <m>j</m> where <m>\frac{c_i}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
+            </p>
+          </li>
+          
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
           Based on the observations above, what should be the pivot entry for the following tableau?
 
           <me>
             \begin{array}{|cc|c|c}            
             x_1 \amp x_2 \amp -1 \amp \\  
             \hline
-            1 \amp 4 \amp 26 \amp t_1\\
-             2  \amp 3 \amp  22 \amp t_2\\
-             4  \amp 1 \amp  22 \amp t_2\\ 
+            3 \amp 4 \amp 10 \amp t_1\\
+             -4  \amp 3 \amp  8 \amp t_2\\
+             2  \amp 1 \amp  5 \amp t_3\\ 
             \hline
-             8 \amp 7 \amp 0 \amp f\\
+             3 \amp -2 \amp 0 \amp f\\
             \hline
             \end{array} 
            </me>
@@ -228,23 +391,132 @@
             </p>
           </li>
         </ul>
+        If a tableau is feasible but not optimal, determine the legit pivot points
       </p>
     </introduction>
     <task>
       <statement>
         <p>
           <me>
-            \begin{array}{|cc|c|c}            
-            x_1 \amp x_2 \amp -1 \amp \\  
+            \begin{array}{|ccc|c|}            
             \hline
-            1 \amp 4 \amp 26 \amp t_1\\
-             2  \amp 3 \amp  22 \amp t_2\\
-             4  \amp 1 \amp  22 \amp t_2\\ 
+            1 \amp 1 \amp 4 \amp 4  \\
+            2 \amp 2  \amp 3 \amp  -1  \\
+            1 \amp 4  \amp 1 \amp  3  \\ 
             \hline
-             8 \amp 7 \amp 0 \amp f\\
+            1 \amp -2 \amp 2  \amp -5 \\
             \hline
             \end{array} 
            </me>
+        </p>
+      </statement>
+
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|ccc|c|}            
+            \hline
+            -3 \amp 1 \amp 0 \amp 5  \\
+            5 \amp -3  \amp 8 \amp  4  \\
+            2 \amp 4  \amp 2 \amp  2  \\ 
+            \hline
+            -2 \amp 3 \amp 0  \amp 2 \\
+            \hline
+            \end{array} 
+          </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|ccc|c|}            
+            \hline
+            3 \amp 4 \amp -1 \amp 2  \\
+            6 \amp -3  \amp 2 \amp  1  \\
+            4 \amp -2  \amp 0 \amp  3  \\ 
+            \hline
+            -4 \amp -2 \amp 0  \amp 17 \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|ccc|c|}            
+            \hline
+            -4 \amp 3 \amp -2 \amp 2  \\
+            0 \amp -1  \amp 4 \amp  0  \\
+            -1 \amp 4  \amp 0 \amp  5  \\ 
+            \hline
+            -2 \amp 3 \amp 2  \amp -34  \\
+            \hline
+            \end{array} 
+          </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|ccc|c|}            
+            \hline
+            1 \amp -1 \amp 0 \amp -2  \\
+            -1 \amp -3  \amp 8 \amp  4  \\
+            3 \amp 4  \amp 2 \amp  2  \\ 
+            \hline
+            -2 \amp -3 \amp -5  \amp 9  \\
+            \hline
+            \end{array} 
+          </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|ccc|c|}            
+            \hline
+            3 \amp -2 \amp 6 \amp 3  \\
+            4 \amp -3  \amp -3 \amp  0  \\
+            -1 \amp 2  \amp 5 \amp  1  \\ 
+            \hline
+            -1 \amp -4 \amp -2  \amp 54  \\
+            \hline
+            \end{array} 
+          </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|ccc|c|}            
+            \hline
+            0 \amp 1 \amp 0 \amp 4  \\
+            2 \amp 2  \amp 8 \amp  6  \\
+            2 \amp 0  \amp 3 \amp  3  \\ 
+            \hline
+            5 \amp 3 \amp -4  \amp -23  \\
+            \hline
+            \end{array} 
+          </me>
         </p>
       </statement>
     </task>

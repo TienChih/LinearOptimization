@@ -364,6 +364,57 @@
   </activity>
 
   <activity>
+    <statement>
+      <p>
+        Based on <xref ref="activity-widget"/>, what is a criteria to determine if a feasible tableau corresponds to an optimal solution?
+      </p>
+      <ol marker="A." cols="2">
+        <li>
+          <p>
+            Some of the <m>c_i\leq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            All of the <m>c_i\leq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Some of the <m>c_i\geq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            All of the <m>c_i\geq 0</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Some of the <m>b_j\leq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            All of the <m>b_j\leq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Some of the <m>b_j\geq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            All of the <m>b_j\geq 0</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <activity>
     <introduction>
       <p>
         Consider the tableau:

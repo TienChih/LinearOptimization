@@ -460,7 +460,17 @@
     <task>
       <statement>
         <p>
-          Let <m>f(x,y)=x+y</m> be the objective function for a canonical maximization problem.  Find a set of constraints so that the feasible region is bounded and that there is a maximal solution that is not a corner point.  Why doesn't this contradict <xref ref="thm-boundedextreme"/>?
+          Let <m>f(x,y)=x+y</m> be the objective function for a canonical maximization problem, subject to:
+          <md>
+            <mrow>x+4y \amp\leq 26 </mrow>
+            <mrow>2x+2y \amp\leq 16 </mrow>
+            <mrow>4x+y \amp\leq 24 </mrow>
+            <mrow>x, y \amp\geq 0 </mrow>
+          </md>
+          
+          <interactive desmos="rotodvysxj"/>
+          
+          Find  a maximal solution that is not a corner point.  Why doesn't this contradict <xref ref="thm-boundedextreme"/>?
         </p>
       </statement>
     </task>
