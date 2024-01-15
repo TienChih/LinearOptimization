@@ -78,7 +78,7 @@ window.MathJax = {
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
@@ -106,7 +106,21 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -158,7 +172,24 @@ x_1 \amp t_3 \amp t_1 \amp x_4 \amp -1 \amp \\
 </div>
 </div>
 <div class="para" id="activity-tableaufeasible-1-2">Note that each <span class="process-math">\(x_1, t_3, t_1, x_4=0\)</span> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?</div></article><article class="task exercise-like" id="activity-tableaufeasible-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-tableaufeasible-2-1-1">Come up with a if and only if condition for a Tucker Tableau to correspond to a feasible solution</div></article></article><article class="activity project-like" id="activity-tableaubounded"><h3 class="heading">
+<div class="para" id="activity-tableaufeasible-2-1-1">Which of the following is an if and only if condition for a Tucker Tableau to correspond to a feasible solution?</div> <ol class="upper-alpha cols2">
+<li id="activity-tableaufeasible-2-1-2-1"><div class="para" id="activity-tableaufeasible-2-1-2-1-1">Some of the <span class="process-math">\(c_i\leq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaufeasible-2-1-2-2"><div class="para" id="activity-tableaufeasible-2-1-2-2-1">All of the <span class="process-math">\(c_i\leq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaufeasible-2-1-2-3"><div class="para" id="activity-tableaufeasible-2-1-2-3-1">Some of the <span class="process-math">\(c_i\geq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaufeasible-2-1-2-4"><div class="para" id="activity-tableaufeasible-2-1-2-4-1">All of the <span class="process-math">\(c_i\geq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaufeasible-2-1-2-5"><div class="para" id="activity-tableaufeasible-2-1-2-5-1">Some of the <span class="process-math">\(b_j\leq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaufeasible-2-1-2-6"><div class="para" id="activity-tableaufeasible-2-1-2-6-1">All of the <span class="process-math">\(b_j\leq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaufeasible-2-1-2-7"><div class="para" id="activity-tableaufeasible-2-1-2-7-1">Some of the <span class="process-math">\(b_j\geq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaufeasible-2-1-2-8"><div class="para" id="activity-tableaufeasible-2-1-2-8-1">All of the <span class="process-math">\(b_j\geq 0\text{.}\)</span>
+</div></li>
+</ol></article></article><article class="activity project-like" id="activity-tableaubounded"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-tableaubounded-1">
@@ -183,11 +214,20 @@ x_3 \amp t_3 \amp x_2 \amp t_1 \amp -1 \amp \\
 <article class="task exercise-like" id="activity-tableaubounded-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-tableaubounded-2-1-1">Why is this tableau feasible?</div></article><article class="task exercise-like" id="activity-tableaubounded-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-tableaubounded-3-1-1">Which of the following <span class="process-math">\(x_3, t_3, t_1, x_2\)</span> could we increase from zero to increase our objective function value?</div></article><article class="task exercise-like" id="activity-tableaubounded-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-tableaubounded-4-1-1">Ifweincrease <span class="process-math">\(t_2\)</span> to 5, are all our inequalities satisfied?  What about 10? 100?</div></article><article class="task exercise-like" id="activity-tableaubounded-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-tableaubounded-4-1-1">If we increase <span class="process-math">\(t_2\)</span> to 5, are all our inequalities satisfied?  What about 10? 100?</div></article><article class="task exercise-like" id="activity-tableaubounded-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-tableaubounded-5-1-1">If we increase <span class="process-math">\(x_3\)</span> to 5, are all our inequalities satisfied?  What about 10? 100?</div></article><article class="task exercise-like" id="activity-tableaubounded-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-tableaubounded-6-1-1">What is the largest value we could increase <span class="process-math">\(t_2\)</span> while satisfying our 3 inequalities?  What about <span class="process-math">\(x_3\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-tableaubounded-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-tableaubounded-7-1-1">Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.</div></article><article class="task exercise-like" id="activity-tableaubounded-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="activity-tableaubounded-7-1-1">Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.</div> <ol class="upper-alpha cols2">
+<li id="activity-tableaubounded-7-1-2-1"><div class="para" id="activity-tableaubounded-7-1-2-1-1">All of the <span class="process-math">\(a_{ij}\leq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaubounded-7-1-2-2"><div class="para" id="activity-tableaubounded-7-1-2-2-1">There is a row <span class="process-math">\(j\)</span> so that all of the <span class="process-math">\(a_{ij}\leq 0\)</span> in that row.</div></li>
+<li id="activity-tableaubounded-7-1-2-3"><div class="para" id="activity-tableaubounded-7-1-2-3-1">There is a column <span class="process-math">\(i\)</span> so that all of the <span class="process-math">\(a_{ij}\leq 0\)</span> in that column.</div></li>
+<li id="activity-tableaubounded-7-1-2-4"><div class="para" id="activity-tableaubounded-7-1-2-4-1">All of the <span class="process-math">\(c_i\leq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaubounded-7-1-2-5"><div class="para" id="activity-tableaubounded-7-1-2-5-1">All of the <span class="process-math">\(b_j\leq 0\text{.}\)</span>
+</div></li>
+</ol></article><article class="task exercise-like" id="activity-tableaubounded-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para logical" id="activity-tableaubounded-8-1-1">
 <div class="para">Consider the following  tableau:</div>
 <div class="displaymath process-math">
@@ -204,7 +244,19 @@ x_1 \amp x_2 \amp -1 \amp \\
 \end{equation*}
 </div>
 <div class="para">Our previous discussion leads us to believe that <span class="process-math">\(x_1\)</span> may be increased as much as we please, and our two inequalities will remain satisfied.  Yet consider a sketch of the region and function:</div>
-</div> <div class="para" id="activity-tableaubounded-8-1-2"><iframe src="https://www.desmos.com/calculator/de0i0gneqr" id="activity-tableaubounded-8-1-2-1" width="600" height="600"></iframe></div> <div class="para" id="activity-tableaubounded-8-1-3">It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?</div></article></article><article class="activity project-like" id="sec-simplexmax-4"><h3 class="heading">
+</div> <div class="para" id="activity-tableaubounded-8-1-2"><iframe src="https://www.desmos.com/calculator/de0i0gneqr" id="activity-tableaubounded-8-1-2-1" width="600" height="600"></iframe></div> <div class="para" id="activity-tableaubounded-8-1-3">It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?</div></article><article class="task exercise-like" id="activity-tableaubounded-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="activity-tableaubounded-9-1-1">Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.</div> <ol class="upper-alpha cols2">
+<li id="activity-tableaubounded-9-1-2-1"><div class="para" id="activity-tableaubounded-9-1-2-1-1">All of the <span class="process-math">\(a_{ij}\leq 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaubounded-9-1-2-2"><div class="para" id="activity-tableaubounded-9-1-2-2-1">There is a row <span class="process-math">\(j\)</span> so that all of the <span class="process-math">\(a_{ij}\leq 0\)</span> in that row and <span class="process-math">\(b_i&gt;0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaubounded-9-1-2-3"><div class="para" id="activity-tableaubounded-9-1-2-3-1">There is a row <span class="process-math">\(j\)</span> so that all of the <span class="process-math">\(a_{ij}\leq 0\)</span> in that row and <span class="process-math">\(b_i \lt 0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaubounded-9-1-2-4"><div class="para" id="activity-tableaubounded-9-1-2-4-1">There is a column <span class="process-math">\(i\)</span> so that all of the <span class="process-math">\(a_{ij}\leq 0\)</span> in that column and <span class="process-math">\(c_i&gt;0\text{.}\)</span>
+</div></li>
+<li id="activity-tableaubounded-9-1-2-5"><div class="para" id="activity-tableaubounded-9-1-2-5-1">There is a column <span class="process-math">\(i\)</span> so that all of the <span class="process-math">\(a_{ij}\leq 0\)</span> in that column and <span class="process-math">\(c_i\lt 0\text{.}\)</span>
+</div></li>
+</ol></article></article><article class="activity project-like" id="sec-simplexmax-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-simplexmax-4-1"><div class="para logical" id="sec-simplexmax-4-1-1">
@@ -228,7 +280,158 @@ x_1 \amp x_2 \amp -1 \amp \\
 <div class="para" id="sec-simplexmax-4-2-1-1">Let’s say we wanted to increase <span class="process-math">\(x_2\)</span> from 0.  What is the largest we could increase <span class="process-math">\(x_2\)</span> to while satisfying all 3 inequalities?</div></article><article class="task exercise-like" id="sec-simplexmax-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-simplexmax-4-3-1-1">Consider a sketch of our feasible region: <iframe src="https://www.desmos.com/calculator/oda5mzgqs1" id="sec-simplexmax-4-3-1-1-1" width="600" height="600"></iframe>
 </div> <div class="para" id="sec-simplexmax-4-3-1-2">We could choose to pivot <span class="process-math">\(x_2\)</span> (<span class="process-math">\(y\)</span> in the sketch) with either <span class="process-math">\(t_1, t_2, t_3\text{.}\)</span>  Only one of these would result in a feasible solution.  Looking graphically, which is it?</div></article><article class="task exercise-like" id="sec-simplexmax-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-simplexmax-4-4-1-1">What’s the connection between the two above tasks?</div></article></article></section></div>
+<div class="para" id="sec-simplexmax-4-4-1-1">What’s the connection between the two above tasks?</div></article><article class="task exercise-like" id="sec-simplexmax-4-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="sec-simplexmax-4-5-1-1">
+<div class="para">For a canonical linear program encoded by a Tucker tableau:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cccc|c|c}
+x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+\hline
+a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -t_1 \\
+a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -t_2 \\
+\vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -t_m \\
+\hline
+c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+<div class="para">if we pivot in column <span class="process-math">\(i\text{,}\)</span> which row <span class="process-math">\(j\)</span> should we choose?</div>
+</div> <ol class="upper-alpha cols2">
+<li id="sec-simplexmax-4-5-1-2-1"><div class="para" id="sec-simplexmax-4-5-1-2-1-1">Any row <span class="process-math">\(j\text{.}\)</span>
+</div></li>
+<li id="sec-simplexmax-4-5-1-2-2"><div class="para" id="sec-simplexmax-4-5-1-2-2-1">Any <span class="process-math">\(j\)</span> as long as <span class="process-math">\(a_{ij}&gt;0\text{.}\)</span>
+</div></li>
+<li id="sec-simplexmax-4-5-1-2-3"><div class="para" id="sec-simplexmax-4-5-1-2-3-1">The row <span class="process-math">\(j\)</span> where <span class="process-math">\(\frac{b_j}{a_{ij}}\)</span> is minimized.</div></li>
+<li id="sec-simplexmax-4-5-1-2-4"><div class="para" id="sec-simplexmax-4-5-1-2-4-1">The row <span class="process-math">\(j\)</span> where <span class="process-math">\(\frac{c_i}{a_{ij}}\)</span> is minimized.</div></li>
+<li id="sec-simplexmax-4-5-1-2-5"><div class="para" id="sec-simplexmax-4-5-1-2-5-1">The row <span class="process-math">\(j\)</span> where <span class="process-math">\(\frac{b_j}{a_{ij}}\)</span> is minimized of of the rows where <span class="process-math">\(a_{ij}&gt;0\text{.}\)</span>
+</div></li>
+<li id="sec-simplexmax-4-5-1-2-6"><div class="para" id="sec-simplexmax-4-5-1-2-6-1">The row <span class="process-math">\(j\)</span> where <span class="process-math">\(\frac{c_i}{a_{ij}}\)</span> is minimized of of the rows where <span class="process-math">\(a_{ij}&gt;0\text{.}\)</span>
+</div></li>
+</ol></article><article class="task exercise-like" id="sec-simplexmax-4-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="sec-simplexmax-4-6-1-1">
+<div class="para">Based on the observations above, what should be the pivot entry for the following tableau?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cc|c|c}            
+x_1 \amp x_2 \amp -1 \amp \\  
+\hline
+3 \amp 4 \amp 10 \amp t_1\\
+-4  \amp 3 \amp  8 \amp t_2\\
+2  \amp 1 \amp  5 \amp t_3\\ 
+\hline
+3 \amp -2 \amp 0 \amp f\\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+</div></article></article><article class="activity project-like" id="sec-simplexmax-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-simplexmax-5-1"><div class="para logical" id="sec-simplexmax-5-1-1">
+<div class="para">For each of the following tableaus, determine what if any of the following are true:</div>
+<ul class="disc">
+<li id="sec-simplexmax-5-1-1-1-1"><div class="para" id="sec-simplexmax-5-1-1-1-1-1">The tableau corresponds to a feasible solution.</div></li>
+<li id="sec-simplexmax-5-1-1-1-2"><div class="para" id="sec-simplexmax-5-1-1-1-2-1">The tableau corresponds to an optimal solution.</div></li>
+<li id="sec-simplexmax-5-1-1-1-3"><div class="para" id="sec-simplexmax-5-1-1-1-3-1">The tableau tells us the feasible region is unbounded.</div></li>
+<li id="sec-simplexmax-5-1-1-1-4"><div class="para" id="sec-simplexmax-5-1-1-1-4-1">The tableau tells us the objective function is unbounded.</div></li>
+</ul>
+<div class="para">If a tableau is feasible but not optimal, determine the legit pivot points</div>
+</div></div>
+<article class="task exercise-like" id="sec-simplexmax-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-simplexmax-5-2-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|ccc|c|}            
+\hline
+1 \amp 1 \amp 4 \amp 4  \\
+2 \amp 2  \amp 3 \amp  -1  \\
+1 \amp 4  \amp 1 \amp  3  \\ 
+\hline
+1 \amp -2 \amp 2  \amp -5 \\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-simplexmax-5-3-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|ccc|c|}            
+\hline
+-3 \amp 1 \amp 0 \amp 5  \\
+5 \amp -3  \amp 8 \amp  4  \\
+2 \amp 4  \amp 2 \amp  2  \\ 
+\hline
+-2 \amp 3 \amp 0  \amp 2 \\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-5-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="sec-simplexmax-5-4-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|ccc|c|}            
+\hline
+3 \amp 4 \amp -1 \amp 2  \\
+6 \amp -3  \amp 2 \amp  1  \\
+4 \amp -2  \amp 0 \amp  3  \\ 
+\hline
+-4 \amp -2 \amp 0  \amp 17 \\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-5-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="sec-simplexmax-5-5-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|ccc|c|}            
+\hline
+-4 \amp 3 \amp -2 \amp 2  \\
+0 \amp -1  \amp 4 \amp  0  \\
+-1 \amp 4  \amp 0 \amp  5  \\ 
+\hline
+-2 \amp 3 \amp 2  \amp -34  \\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-5-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="sec-simplexmax-5-6-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|ccc|c|}            
+\hline
+1 \amp -1 \amp 0 \amp -2  \\
+-1 \amp -3  \amp 8 \amp  4  \\
+3 \amp 4  \amp 2 \amp  2  \\ 
+\hline
+-2 \amp -3 \amp -5  \amp 9  \\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-5-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para logical" id="sec-simplexmax-5-7-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|ccc|c|}            
+\hline
+3 \amp -2 \amp 6 \amp 3  \\
+4 \amp -3  \amp -3 \amp  0  \\
+-1 \amp 2  \amp 5 \amp  1  \\ 
+\hline
+-1 \amp -4 \amp -2  \amp 54  \\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-5-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para logical" id="sec-simplexmax-5-8-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|ccc|c|}            
+\hline
+0 \amp 1 \amp 0 \amp 4  \\
+2 \amp 2  \amp 8 \amp  6  \\
+2 \amp 0  \amp 3 \amp  3  \\ 
+\hline
+5 \amp 3 \amp -4  \amp -23  \\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
