@@ -91,7 +91,7 @@
       <statement>
         <p>
           Explain why for any constant <m>c</m> and <m>1\leq j\leq n</m>
-
+ 
           <me>\det \left(\begin{array}{cccc}
             a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n}  \\
             a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}  \\
