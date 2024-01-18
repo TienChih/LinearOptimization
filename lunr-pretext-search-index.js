@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "A review of random things",
-  "body": " A review of random things    Let   What is ?     "
+  "body": " A review of random things    Let   What is ?      Consider the augemnted matrix     What given a fixed , what should be for the system of equations encoded by to have a unique solution?    What does this mean geometrically?    If the rows of are independent, and , then what is the dimension of the solution space of ?       Consider the square matrix      Explain why for any constant and  geometrically, meaning no cofactor expansion (eww).    Explain why for any constant and  geometrically.    Explain why for any constant and  geometrically.      Some resource for linear algebra define the determinant algebraiacally, then prove that it has these special geometric properties. In many ways this is a natural approach to introduce the subject to student whose background is primarily algebraic. However, in my opinion, this is backwards. It makes far more sense to approach the determinant geometrically first, there is a property of transformations we want to measure, we call this quantity the determinant, it happens to have cool algebraic properties.  Speaking of       Michael Atiyah (1929 - 2019), mathematician and Field's medalist (1966), once said Algebra is the offer made by the devil to the mathematician. The devil says: I will give you this powerful machine, it will answer any question you like. All you need to do is give me your soul: give up geometry and you will have this marvelous machine.    What do you suppose Dr. Atiyah meant by this quote? How might it have impacted your mathematical journey or education?    "
 },
 {
   "id": "activity-null",
@@ -26,6 +26,42 @@ var ptx_lunr_docs = [
   "number": "1.1.1",
   "title": "",
   "body": "  Let   What is ?   "
+},
+{
+  "id": "activity-solspace",
+  "level": "2",
+  "url": "sec-intro.html#activity-solspace",
+  "type": "Activity",
+  "number": "1.1.2",
+  "title": "",
+  "body": "  Consider the augemnted matrix     What given a fixed , what should be for the system of equations encoded by to have a unique solution?    What does this mean geometrically?    If the rows of are independent, and , then what is the dimension of the solution space of ?   "
+},
+{
+  "id": "sec-intro-4",
+  "level": "2",
+  "url": "sec-intro.html#sec-intro-4",
+  "type": "Activity",
+  "number": "1.1.3",
+  "title": "",
+  "body": "   Consider the square matrix      Explain why for any constant and  geometrically, meaning no cofactor expansion (eww).    Explain why for any constant and  geometrically.    Explain why for any constant and  geometrically.   "
+},
+{
+  "id": "sec-intro-5",
+  "level": "2",
+  "url": "sec-intro.html#sec-intro-5",
+  "type": "Observation",
+  "number": "1.1.1",
+  "title": "",
+  "body": "  Some resource for linear algebra define the determinant algebraiacally, then prove that it has these special geometric properties. In many ways this is a natural approach to introduce the subject to student whose background is primarily algebraic. However, in my opinion, this is backwards. It makes far more sense to approach the determinant geometrically first, there is a property of transformations we want to measure, we call this quantity the determinant, it happens to have cool algebraic properties.  Speaking of    "
+},
+{
+  "id": "sec-intro-6",
+  "level": "2",
+  "url": "sec-intro.html#sec-intro-6",
+  "type": "Activity",
+  "number": "1.1.4",
+  "title": "",
+  "body": "  Michael Atiyah (1929 - 2019), mathematician and Field's medalist (1966), once said Algebra is the offer made by the devil to the mathematician. The devil says: I will give you this powerful machine, it will answer any question you like. All you need to do is give me your soul: give up geometry and you will have this marvelous machine.    What do you suppose Dr. Atiyah meant by this quote? How might it have impacted your mathematical journey or education?   "
 },
 {
   "id": "sec-section-initial",
