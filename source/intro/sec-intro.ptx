@@ -81,7 +81,7 @@
             a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n}  \\
             a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}  \\
             \vdots &amp; \vdots &amp;  \ddots &amp; \vdots  \\
-            a_{n1}+a_{j1} &amp; a_{n2}+a_{j2} &amp;  \cdots &amp; a_{nn} +a_{jn}  \\
+            a_{n1}+ca_{j1} &amp; a_{n2}+ca_{j2} &amp;  \cdots &amp; a_{nn} +ca_{jn}  \\
             \end{array}\right)</me>
             geometrically, meaning no cofactor expansion (eww).
         </p>

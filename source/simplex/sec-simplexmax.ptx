@@ -522,4 +522,22 @@
     </task>
   </activity>
 
+  <p>
+    With all this, we finally may define our <em>simplex algorithm</em>.
+  </p>
+
+  <definition xml:id="def-simplexcanonmax">
+    <statement>
+      <ol>
+          <li>Ensure that each <m>b_j\geq 0</m>, that is that the solution is feasible. </li>
+          <li>IF every <m>c_i\leq 0</m>: STOP the current solution is optimal.  </li>
+          <li>PICK a column <m>i</m> such that <m>c_i > 0</m>.  </li>
+          <li>IF each <m>a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 </m>: STOP the objective function is unbounded. </li>
+          <li>Find a row <m>j</m>  that minimizes <m>\left\{ b_j/a_{ij}: b_j > 0 \right\}</m>.</li>
+          <li>PIVOT on <m>a_{ij}</m>. </li>
+          <li>GOTO 1.</li>
+      </ol>
+    </statement>
+  </definition>
+
 </section>
