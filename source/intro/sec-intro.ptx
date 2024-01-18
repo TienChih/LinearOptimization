@@ -18,7 +18,7 @@
     
   </activity>
 
-  <!--<activity xml:id="activity-solspace">
+  <activity xml:id="activity-solspace">
     <introduction>
       <p>
         Consider the augemnted matrix <me>M=\left(\begin{array}{cccc|c}
@@ -152,7 +152,7 @@
         What do you suppose Dr. Atiyah meant by this quote?  How might it have impacted your mathematical journey or education?
       </p>
     </statement>
-  </activity>-->
+  </activity>
 
   
 
