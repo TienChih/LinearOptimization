@@ -75,7 +75,7 @@
     <task>
       <statement>
         <p>
-          Explain why for any constant <m>c</m> and <m>>1\leq j\leq n-1</m>
+          Explain why for any constant <m>c</m> and <m>1\leq j\leq n-1</m>
 
           <me>\det(A)=\det \left(\begin{array}{cccc}
             a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n}  \\
