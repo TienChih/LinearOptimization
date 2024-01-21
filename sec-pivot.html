@@ -162,7 +162,7 @@ true);
 <div class="introduction" id="activity-maxslack-1">
 <div class="para" id="activity-maxslack-1-1">Consider the canonical maximization problem:</div> <div class="para logical" id="activity-maxslack-1-2"><div class="displaymath process-math" id="activity-maxslack-1-2-1">
 \begin{align*}
-\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
+\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1\\
 a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \leq  b_2\\
 \vdots \amp   \vdots\\
@@ -172,7 +172,7 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 </div></div> <div class="para" id="activity-maxslack-1-3">Note that we may rewrite this as a system of equalities by introducing the <em class="emphasis">slack variables</em> <span class="process-math">\(t_i\text{.}\)</span>
 </div> <div class="para logical" id="activity-maxslack-1-4"><div class="displaymath process-math" id="activity-maxslack-1-4-1">
 \begin{align*}
-\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
+\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1\\
 a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2\\
 \vdots \amp   \vdots\\
@@ -200,7 +200,7 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 <div class="para" id="sec-pivot-4-1-1">Similarly the canonical minimization problem:</div> <div class="para logical" id="sec-pivot-4-1-2">
 <div class="displaymath process-math" id="sec-pivot-4-1-2-1">
 \begin{align*}
-\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
+\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1\\
 a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2\\
 \vdots \amp   \vdots\\
@@ -208,11 +208,11 @@ a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m\\
 x_1, x_2, \ldots, x_n\amp \geq  0
 \end{align*}
 </div>
-<div class="para">Where <span class="process-math">\(a_{i,j}, b_j, c_i, d\in \mathbb{R}\)</span>
+<div class="para">Where <span class="process-math">\(a_{i,j}, b_i, c_j, d\in \mathbb{R}\)</span>
 </div>
 </div> <div class="para" id="sec-pivot-4-1-3">May be rewritten as:</div> <div class="para logical" id="sec-pivot-4-1-4"><div class="displaymath process-math" id="sec-pivot-4-1-4-1">
 \begin{align*}
-\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
+\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1\\
 a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2\\
 \vdots \amp   \vdots\\
@@ -227,7 +227,7 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 <div class="para">We can rewrite</div>
 <div class="displaymath process-math" id="def-tuckertableau-1-1-1">
 \begin{align*}
-\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
+\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1\\
 a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2\\
 \vdots \amp   \vdots\\
@@ -238,7 +238,7 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 <div class="para">as</div>
 <div class="displaymath process-math" id="def-tuckertableau-1-1-2">
 \begin{align*}
-\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d\\
+\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
 \textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n  -b_1\amp =  -t_1\\
 a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n-b_2\amp =  -t_2\\
 \vdots \amp   \vdots\\
@@ -363,21 +363,21 @@ t_C \amp t_B  \amp -1\\
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-pivot-10-1-1">Based on <a href="" class="xref" data-knowl="./knowl/xref/activity-widget.html" title="Activity 3.1.3">Activity 3.1.3</a>, what is a criteria to determine if a feasible tableau corresponds to an optimal solution?</div> <ol class="upper-alpha cols2">
-<li id="sec-pivot-10-1-2-1"><div class="para" id="sec-pivot-10-1-2-1-1">Some of the <span class="process-math">\(c_i\leq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-1"><div class="para" id="sec-pivot-10-1-2-1-1">Some of the <span class="process-math">\(c_j\leq 0\text{.}\)</span>
 </div></li>
-<li id="sec-pivot-10-1-2-2"><div class="para" id="sec-pivot-10-1-2-2-1">All of the <span class="process-math">\(c_i\leq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-2"><div class="para" id="sec-pivot-10-1-2-2-1">All of the <span class="process-math">\(c_j\leq 0\text{.}\)</span>
 </div></li>
-<li id="sec-pivot-10-1-2-3"><div class="para" id="sec-pivot-10-1-2-3-1">Some of the <span class="process-math">\(c_i\geq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-3"><div class="para" id="sec-pivot-10-1-2-3-1">Some of the <span class="process-math">\(c_j\geq 0\text{.}\)</span>
 </div></li>
-<li id="sec-pivot-10-1-2-4"><div class="para" id="sec-pivot-10-1-2-4-1">All of the <span class="process-math">\(c_i\geq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-4"><div class="para" id="sec-pivot-10-1-2-4-1">All of the <span class="process-math">\(c_j\geq 0\text{.}\)</span>
 </div></li>
-<li id="sec-pivot-10-1-2-5"><div class="para" id="sec-pivot-10-1-2-5-1">Some of the <span class="process-math">\(b_j\leq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-5"><div class="para" id="sec-pivot-10-1-2-5-1">Some of the <span class="process-math">\(b_i\leq 0\text{.}\)</span>
 </div></li>
-<li id="sec-pivot-10-1-2-6"><div class="para" id="sec-pivot-10-1-2-6-1">All of the <span class="process-math">\(b_j\leq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-6"><div class="para" id="sec-pivot-10-1-2-6-1">All of the <span class="process-math">\(b_i\leq 0\text{.}\)</span>
 </div></li>
-<li id="sec-pivot-10-1-2-7"><div class="para" id="sec-pivot-10-1-2-7-1">Some of the <span class="process-math">\(b_j\geq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-7"><div class="para" id="sec-pivot-10-1-2-7-1">Some of the <span class="process-math">\(b_i\geq 0\text{.}\)</span>
 </div></li>
-<li id="sec-pivot-10-1-2-8"><div class="para" id="sec-pivot-10-1-2-8-1">All of the <span class="process-math">\(b_j\geq 0\text{.}\)</span>
+<li id="sec-pivot-10-1-2-8"><div class="para" id="sec-pivot-10-1-2-8-1">All of the <span class="process-math">\(b_i\geq 0\text{.}\)</span>
 </div></li>
 </ol></article><article class="activity project-like" id="sec-pivot-11"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
