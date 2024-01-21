@@ -372,7 +372,7 @@
         <ul>
           <li>
             <p>
-              The tableau corresponds to a feasible solution.
+              The tableau corresponds to an infeasible solution.
             </p>
           </li>
           <li>
@@ -529,6 +529,9 @@
 
   <definition xml:id="def-simplexcanonmaxbf">
     <statement>
+      <p>
+        The Simplex Algorithm for Maximum Basic Feasible Tableaus
+      </p>
       <ol>
           <li>Ensure that each <m>b_i\geq 0</m>, that is that the solution is feasible. </li>
           <li>IF every <m>c_j\leq 0</m>: STOP the current solution is optimal.  </li>
@@ -791,6 +794,9 @@
 
   <definition xml:id="def-simplexmax">
     <statement>
+      <p>
+        The Simplex Algorithm for Maximum Tableaus
+      </p>
       <ol>
         <li>IF each <m>b_i\geq 0</m>, GOTO 8. </li>
         <li>PICK the largest <m>i</m> such that <m>b_i\lt 0</m>.  </li>
@@ -804,6 +810,48 @@
     </ol>
     </statement>
   </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        Apply <xref ref="def-simplexcanonmax" /> to the following tableau:
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|cc|c|}          
+            \hline
+             -1 \amp -2 \amp -3\\
+             1 \amp 1 \amp 2\\
+            \hline
+            2 \amp  -4 \amp 0\\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|cc|c|}          
+            \hline
+             -3 \amp -2 \amp -6\\
+             3 \amp 5 \amp 20\\
+             2 \amp 0 \amp 4\\
+            \hline
+            3 \amp  4 \amp 0\\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+  </activity>
 
   
 
