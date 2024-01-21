@@ -34,43 +34,43 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              Some of the <m>c_i\leq 0</m>.
+              Some of the <m>c_j\leq 0</m>.
             </p>
           </li>
           <li>
             <p>
-              All of the <m>c_i\leq 0</m>.
+              All of the <m>c_j\leq 0</m>.
             </p>
           </li>
           <li>
             <p>
-              Some of the <m>c_i\geq 0</m>.
+              Some of the <m>c_j\geq 0</m>.
             </p>
           </li>
           <li>
             <p>
-              All of the <m>c_i\geq 0</m>.
+              All of the <m>c_j\geq 0</m>.
             </p>
           </li>
   
           <li>
             <p>
-              Some of the <m>b_j\leq 0</m>.
+              Some of the <m>b_i\leq 0</m>.
             </p>
           </li>
           <li>
             <p>
-              All of the <m>b_j\leq 0</m>.
+              All of the <m>b_i\leq 0</m>.
             </p>
           </li>
           <li>
             <p>
-              Some of the <m>b_j\geq 0</m>.
+              Some of the <m>b_i\geq 0</m>.
             </p>
           </li>
           <li>
             <p>
-              All of the <m>b_j\geq 0</m>.
+              All of the <m>b_i\geq 0</m>.
             </p>
           </li>
         </ol>
@@ -165,13 +165,13 @@
           </li>
           <li>
             <p>
-              All of the <m>c_i\leq 0</m>.
+              All of the <m>c_j\leq 0</m>.
             </p>
           </li>
   
           <li>
             <p>
-              All of the <m>b_j\leq 0</m>.
+              All of the <m>b_i\leq 0</m>.
             </p>
           </li>
           
@@ -229,12 +229,12 @@
           </li>
           <li>
             <p>
-              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_i>0</m>.
+              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j>0</m>.
             </p>
           </li>
           <li>
             <p>
-              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_i\lt 0</m>.
+              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j\lt 0</m>.
             </p>
           </li>
           
@@ -305,38 +305,38 @@
             \hline
             \end{array} 
            </me>
-           if we pivot in column <m>i</m>, which row <m>j</m> should we choose?
+           if we pivot in column <m>j</m>, which row <m>i</m> should we choose?
         </p>
         <ol marker="A." cols="2">
           <li>
             <p>
-              Any row <m>j</m>.
+              Any row <m>i</m>.
             </p>
           </li>
           <li>
             <p>
-              Any <m>j</m> as long as <m>a_{ij}>0</m>.
+              Any <m>i</m> as long as <m>a_{ij}>0</m>.
             </p>
           </li>
           <li>
             <p>
-              The row <m>j</m> where <m>\frac{b_j}{a_{ij}}</m> is minimized.
+              The row <m>i</m> where <m>\frac{b_i}{a_{ij}}</m> is minimized.
             </p>
           </li>
           <li>
             <p>
-              The row <m>j</m> where <m>\frac{c_i}{a_{ij}}</m> is minimized.
+              The row <m>i</m> where <m>\frac{c_j}{a_{ij}}</m> is minimized.
             </p>
           </li>
 
           <li>
             <p>
-              The row <m>j</m> where <m>\frac{b_j}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
+              The row <m>i</m> where <m>\frac{b_i}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
             </p>
           </li>
           <li>
             <p>
-              The row <m>j</m> where <m>\frac{c_i}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
+              The row <m>i</m> where <m>\frac{c_j}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
             </p>
           </li>
           
@@ -527,14 +527,14 @@
       Feasible Tableaus</em>.
   </p>
 
-  <definition xml:id="def-simplexcanonmax">
+  <definition xml:id="def-simplexcanonmaxbf">
     <statement>
       <ol>
-          <li>Ensure that each <m>b_j\geq 0</m>, that is that the solution is feasible. </li>
-          <li>IF every <m>c_i\leq 0</m>: STOP the current solution is optimal.  </li>
-          <li>PICK a column <m>i</m> such that <m>c_i > 0</m>.  </li>
+          <li>Ensure that each <m>b_i\geq 0</m>, that is that the solution is feasible. </li>
+          <li>IF every <m>c_j\leq 0</m>: STOP the current solution is optimal.  </li>
+          <li>PICK a column <m>j</m> such that <m>c_j > 0</m>.  </li>
           <li>IF each <m>a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 </m>: STOP the objective function is unbounded. </li>
-          <li>Find a row <m>j</m>  that minimizes <m>\left\{ b_j/a_{ij}: b_j > 0 \right\}</m>.</li>
+          <li>PICK a row <m>i</m>  that minimizes <m>\left\{ b_i/a_{ij}: b_i > 0 \right\}</m>.</li>
           <li>PIVOT on <m>a_{ij}</m>. </li>
           <li>GOTO 1.</li>
       </ol>
@@ -545,7 +545,7 @@
     <introduction>
       <statement>
         <p>
-          Apply <xref ref="def-simplexcanonmax"/> to the following tableaus.
+          Apply <xref ref="def-simplexcanonmaxbf"/> to the following tableaus.
         </p>
       </statement>
     </introduction>
@@ -611,8 +611,8 @@
             x_1 \amp x_2 \amp x_3 \amp x_4 \amp -1 \amp \\
             \hline
              1 \amp 1 \amp 1 \amp 0 \amp 1 \amp -t_1\\
-             0 \amp 1 \amp 1 \amp 0 \amp 3\amp -t_2\\
-             -1 \amp 0 \amp -1 \amp 1 \amp 3\amp -t_2\\
+             0 \amp 1 \amp 1 \amp 0 \amp 4\amp -t_2\\
+             -1 \amp 0 \amp -1 \amp 1 \amp 1\amp -t_3\\
             \hline
             -1 \amp -1 \amp 1 \amp 1 \amp 0 \amp f\\
             \hline
@@ -624,4 +624,188 @@
 
   </activity>
 
+  <activity>
+    <introduction>
+      <p>
+        For each of the following tableaus correspond to a problem where the origin is not a feasible solution.
+        Determine geometrically which of these have an optimal solution.  Then answer the follow-up questions.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|cc|c|c}          
+            x_1 \amp x_2 \amp -1 \amp \\
+            \hline
+             -2 \amp -1 \amp -1 \amp -t_1\\
+             1 \amp 5 \amp 15\amp -t_2\\
+             2 \amp 3 \amp 18 \amp -t_2\\
+            \hline
+            5 \amp 9 \amp 0 \amp f\\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <me>
+            \begin{array}{|cc|c|c}          
+            x_1 \amp x_2 \amp -1 \amp \\
+            \hline
+             -2 \amp 3 \amp 1 \amp -t_1\\
+             2 \amp -6 \amp -5\amp -t_2\\
+             5 \amp 1 \amp 7 \amp -t_2\\
+            \hline
+            3 \amp  5 \amp 0 \amp f\\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          If <m>b_{i^*}\lt 0</m>, what should be true about <m>a_{ij^*}</m> so that <m>b_{i^*}</m> is positive afterwards?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider the inequality <m>2x_1-3x_2-4x_3\lt -5</m>.  Is there a solution which satisfies this where <m>x_i\geq 0</m>?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Consider the inequality <m>5x_1+x_2+2x_3\lt -10</m>.  Is there a solution which satisfies this where <m>x_i\geq 0</m>?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        We now want to concoct a scheme to turn all the <m>b_i</m> non-negative, if possible.
+
+      </p>
+      <p>
+        Consider the tableau: 
+
+        <me>
+          \begin{array}{|ccc|c|}          
+          \hline
+           a_{11} \amp a_{12} \amp a_{13} \amp b_1\\
+           a_{21} \amp a_{22} \amp a_{23} \amp b_2\\
+           a_{31} \amp a_{32} \amp a_{33} \amp b_3\\
+           a_{41} \amp a_{42} \amp a_{43} \amp b_4\\
+          \hline
+          c_1 \amp  c_2 \amp c_3 \amp 0\\
+          \hline
+          \end{array} 
+         </me>
+         Suppose that <m>b_2\lt 0, b_3, b_4>0</m>. We want to turn <m>b_2</m> positive while making sure <m>b_3, b_4</m> stay positive.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Suppose each <m>a_{2j}\geq 0</m>, what can we say about the associated problem?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let's then say <m>a_{22}\lt 0</m>.  If we pivot on <m>a_{22}</m> do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let's then say <m>a_{32} >  0</m>.  If we pivot on <m>a_{32}</m>  do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let's then say <m>a_{42} \lt  0</m>.  If we pivot on <m>a_{42}</m>  do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Who should we pivot on?
+        </p>
+        <ol marker="A." >
+          <li>
+            <p>
+              Any <m>a_{2k}, k\geq 2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              All of the <m>a_{2k}, k\geq 2</m> such that <m>b_k/a_{2k}</m> is minimized.
+            </p>
+          </li>
+          <li>
+            <p>
+              All of the <m>a_{2k}, k\geq 2</m> such that if <m>k>2</m> then <m>a_{2k}>0</m> and <m>b_k/a_{2k}</m> is minimized.
+            </p>
+          </li> 
+          
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Note that we have no idea if <m>b_1</m> is positive or negative before we started, much less after.  Why don't we care?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>With this, we may define our algorithm for potentiall non-feasible tableau</p>
+
+  <definition xml:id="def-simplexmax">
+    <statement>
+      <ol>
+        <li>IF each <m>b_i\geq 0</m>, GOTO 8. </li>
+        <li>PICK the largest <m>i</m> such that <m>b_i\lt 0</m>.  </li>
+        <li>IF  <m>a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 </m>: STOP the problem in infeasible. </li>
+        <li>PICK a column <m>j</m>  such that <m>a_{ij} \lt 0</m> .</li>
+        <li>PICK a row <m>p\geq i</m> so that <m>\displaystyle \min_{k>i}\left(\{b_i/a_{ij}\} \cup \{b_k/a_{kj}:a_{kj}>0\} \right)=b_p/a_{pj}</m>.</li>
+        <li>PIVOT on <m>a_{pj}</m>. </li>
+        <li>GOTO 1.</li>
+        <li>APPLY <xref ref="def-simplexcanonmaxbf"/> .</li>
+
+    </ol>
+    </statement>
+  </definition>
+
+  
+
 </section>
+

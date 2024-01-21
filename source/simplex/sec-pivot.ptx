@@ -13,7 +13,7 @@
       </p>
       <p>
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
@@ -27,7 +27,7 @@
 
       <p>
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
@@ -103,21 +103,21 @@
       </p>
       <p>
         <md>
-          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
           <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
         </md>
-        Where <m>a_{i,j}, b_j, c_i, d\in \mathbb{R}</m>
+        Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>
       </p>
       <p>
         May be rewritten as:
       </p>
       <p>
         <md>
-          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
@@ -137,7 +137,7 @@
       <p>
         We can rewrite
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
@@ -146,7 +146,7 @@
         </md>
         as 
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n  -b_1\amp =  -t_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n-b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
@@ -371,43 +371,43 @@
       <ol marker="A." cols="2">
         <li>
           <p>
-            Some of the <m>c_i\leq 0</m>.
+            Some of the <m>c_j\leq 0</m>.
           </p>
         </li>
         <li>
           <p>
-            All of the <m>c_i\leq 0</m>.
+            All of the <m>c_j\leq 0</m>.
           </p>
         </li>
         <li>
           <p>
-            Some of the <m>c_i\geq 0</m>.
+            Some of the <m>c_j\geq 0</m>.
           </p>
         </li>
         <li>
           <p>
-            All of the <m>c_i\geq 0</m>.
+            All of the <m>c_j\geq 0</m>.
           </p>
         </li>
 
         <li>
           <p>
-            Some of the <m>b_j\leq 0</m>.
+            Some of the <m>b_i\leq 0</m>.
           </p>
         </li>
         <li>
           <p>
-            All of the <m>b_j\leq 0</m>.
+            All of the <m>b_i\leq 0</m>.
           </p>
         </li>
         <li>
           <p>
-            Some of the <m>b_j\geq 0</m>.
+            Some of the <m>b_i\geq 0</m>.
           </p>
         </li>
         <li>
           <p>
-            All of the <m>b_j\geq 0</m>.
+            All of the <m>b_i\geq 0</m>.
           </p>
         </li>
       </ol>
