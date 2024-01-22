@@ -120,7 +120,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-simplexmin.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -148,6 +148,8 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Curious Situation</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycling</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -291,14 +293,14 @@ x_1 \amp x_2 \amp -1 \amp \\
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cccc|c|c}
-x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+x_1 \amp x_2 \amp \cdots \amp x_m \amp -1\\
 \hline
-a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -t_1 \\
-a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -t_2 \\
+a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
+a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
 \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -t_m \\
+a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
 \hline
-c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
+c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
 \hline
 \end{array} 
 \end{equation*}
@@ -338,7 +340,7 @@ x_1 \amp x_2 \amp -1 \amp \\
 <div class="introduction" id="sec-simplexmax-5-1"><div class="para logical" id="sec-simplexmax-5-1-1">
 <div class="para">For each of the following tableaus, determine what if any of the following are true:</div>
 <ul class="disc">
-<li id="sec-simplexmax-5-1-1-1-1"><div class="para" id="sec-simplexmax-5-1-1-1-1-1">The tableau corresponds to a feasible solution.</div></li>
+<li id="sec-simplexmax-5-1-1-1-1"><div class="para" id="sec-simplexmax-5-1-1-1-1-1">The tableau corresponds to an infeasible solution.</div></li>
 <li id="sec-simplexmax-5-1-1-1-2"><div class="para" id="sec-simplexmax-5-1-1-1-2-1">The tableau corresponds to an optimal solution.</div></li>
 <li id="sec-simplexmax-5-1-1-1-3"><div class="para" id="sec-simplexmax-5-1-1-1-3-1">The tableau tells us the feasible region is unbounded.</div></li>
 <li id="sec-simplexmax-5-1-1-1-4"><div class="para" id="sec-simplexmax-5-1-1-1-4-1">The tableau tells us the objective function is unbounded.</div></li>
@@ -440,23 +442,45 @@ x_1 \amp x_2 \amp -1 \amp \\
 <article class="definition definition-like" id="def-simplexcanonmaxbf"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h3>
-<ol class="decimal">
-<li id="def-simplexcanonmaxbf-1-1-1"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-1-1">Ensure that each <span class="process-math">\(b_i\geq 0\text{,}\)</span> that is that the solution is feasible.</div></li>
-<li id="def-simplexcanonmaxbf-1-1-2"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-1-2">IF every <span class="process-math">\(c_j\leq 0\text{:}\)</span> STOP the current solution is optimal.</div></li>
-<li id="def-simplexcanonmaxbf-1-1-3"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-1-3">PICK a column <span class="process-math">\(j\)</span> such that <span class="process-math">\(c_j &gt; 0\text{.}\)</span>
+<div class="para" id="def-simplexcanonmaxbf-1-1">The Simplex Algorithm for Maximum Basic Feasible Tableaus</div> <ol class="decimal">
+<li id="def-simplexcanonmaxbf-1-2-1"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-2-1">Ensure that each <span class="process-math">\(b_i\geq 0\text{,}\)</span> that is that the solution is feasible.</div></li>
+<li id="def-simplexcanonmaxbf-1-2-2"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-2-2">IF every <span class="process-math">\(c_j\leq 0\text{:}\)</span> STOP the current solution is optimal.</div></li>
+<li id="def-simplexcanonmaxbf-1-2-3"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-2-3">PICK a column <span class="process-math">\(j\)</span> such that <span class="process-math">\(c_j &gt; 0\text{.}\)</span>
 </div></li>
-<li id="def-simplexcanonmaxbf-1-1-4"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-1-4">IF each <span class="process-math">\(a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 \text{:}\)</span> STOP the objective function is unbounded.</div></li>
-<li id="def-simplexcanonmaxbf-1-1-5"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-1-5">PICK a row <span class="process-math">\(i\)</span>  that minimizes <span class="process-math">\(\left\{ b_i/a_{ij}: b_i &gt; 0 \right\}\text{.}\)</span>
+<li id="def-simplexcanonmaxbf-1-2-4"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-2-4">IF each <span class="process-math">\(a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 \text{:}\)</span> STOP the objective function is unbounded.</div></li>
+<li id="def-simplexcanonmaxbf-1-2-5"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-2-5">PICK a row <span class="process-math">\(i\)</span>  that minimizes <span class="process-math">\(\left\{ b_i/a_{ij}: a_{ij} &gt; 0 \right\}\text{.}\)</span>
 </div></li>
-<li id="def-simplexcanonmaxbf-1-1-6"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-1-6">PIVOT on <span class="process-math">\(a_{ij}\text{.}\)</span>
+<li id="def-simplexcanonmaxbf-1-2-6"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-2-6">PIVOT on <span class="process-math">\(a_{ij}\text{.}\)</span>
 </div></li>
-<li id="def-simplexcanonmaxbf-1-1-7"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-1-7">GOTO 1.</div></li>
+<li id="def-simplexcanonmaxbf-1-2-7"><div class="para" id="p-derived-def-simplexcanonmaxbf-1-2-7">GOTO 1.</div></li>
 </ol></article><article class="activity project-like" id="sec-simplexmax-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-simplexmax-8-1"><div class="para" id="sec-simplexmax-8-1-1-1">Apply <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a> to the following tableaus.</div></div>
-<article class="task exercise-like" id="sec-simplexmax-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="sec-simplexmax-8-2-1-1"><div class="displaymath process-math">
+<div class="para logical" id="sec-simplexmax-8-1-1">
+<div class="para">Recall the canonical tableau</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-simplexcanonmaxbf.html">
+\begin{equation*}
+\begin{array}{|cccc|c|c}
+x_1 \amp x_2 \amp \cdots \amp x_m \amp -1\\
+\hline
+a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
+a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
+\vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
+\hline
+c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+<div class="para">Suppose that after pivoting on <span class="process-math">\(a_{ij}\)</span> according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a> we had that <span class="process-math">\(d\to d'\text{.}\)</span>  Show that <span class="process-math">\(d'\leq d\)</span>
+</div>
+</div></article><article class="activity project-like" id="sec-simplexmax-9"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-simplexmax-9-1"><div class="para" id="sec-simplexmax-9-1-1-1">Apply <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a> to the following tableaus.</div></div>
+<article class="task exercise-like" id="sec-simplexmax-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-simplexmax-9-2-1-1"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cc|c|c}          
 x_1 \amp x_2 \amp -1 \amp \\
@@ -468,8 +492,8 @@ x_1 \amp x_2 \amp -1 \amp \\
 \hline
 \end{array} 
 \end{equation*}
-</div></div></article><article class="task exercise-like" id="sec-simplexmax-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="sec-simplexmax-8-3-1-1"><div class="displaymath process-math">
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-simplexmax-9-3-1-1"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cc|c|c}          
 x_1 \amp x_2 \amp -1 \amp \\
@@ -481,8 +505,8 @@ x_1 \amp x_2 \amp -1 \amp \\
 \hline
 \end{array} 
 \end{equation*}
-</div></div></article><article class="task exercise-like" id="sec-simplexmax-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para logical" id="sec-simplexmax-8-4-1-1"><div class="displaymath process-math">
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-9-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="sec-simplexmax-9-4-1-1"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cc|c|c}          
 x_1 \amp x_2 \amp -1 \amp \\
@@ -494,8 +518,8 @@ x_1 \amp x_2 \amp -1 \amp \\
 \hline
 \end{array} 
 \end{equation*}
-</div></div></article><article class="task exercise-like" id="sec-simplexmax-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para logical" id="sec-simplexmax-8-5-1-1"><div class="displaymath process-math">
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-9-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="sec-simplexmax-9-5-1-1"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cccc|c|c}          
 x_1 \amp x_2 \amp x_3 \amp x_4 \amp -1 \amp \\
@@ -508,12 +532,12 @@ x_1 \amp x_2 \amp x_3 \amp x_4 \amp -1 \amp \\
 \hline
 \end{array} 
 \end{equation*}
-</div></div></article></article><article class="activity project-like" id="sec-simplexmax-9"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
+</div></div></article></article><article class="activity project-like" id="sec-simplexmax-10"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-simplexmax-9-1"><div class="para" id="sec-simplexmax-9-1-1">For each of the following tableaus correspond to a problem where the origin is not a feasible solution. Determine geometrically which of these have an optimal solution.  Then answer the follow-up questions.</div></div>
-<article class="task exercise-like" id="sec-simplexmax-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="sec-simplexmax-9-2-1-1"><div class="displaymath process-math">
+<div class="introduction" id="sec-simplexmax-10-1"><div class="para" id="sec-simplexmax-10-1-1">For each of the following tableaus correspond to a problem where the origin is not a feasible solution. Determine geometrically which of these have an optimal solution.  Then answer the follow-up questions.</div></div>
+<article class="task exercise-like" id="sec-simplexmax-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-simplexmax-10-2-1-1"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cc|c|c}          
 x_1 \amp x_2 \amp -1 \amp \\
@@ -526,8 +550,8 @@ x_1 \amp x_2 \amp -1 \amp \\
 \hline
 \end{array} 
 \end{equation*}
-</div></div></article><article class="task exercise-like" id="sec-simplexmax-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="sec-simplexmax-9-3-1-1"><div class="displaymath process-math">
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-simplexmax-10-3-1-1"><div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cc|c|c}          
 x_1 \amp x_2 \amp -1 \amp \\
@@ -540,17 +564,17 @@ x_1 \amp x_2 \amp -1 \amp \\
 \hline
 \end{array} 
 \end{equation*}
-</div></div></article><article class="task exercise-like" id="sec-simplexmax-9-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-simplexmax-9-4-1-1">For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?</div></article><article class="task exercise-like" id="sec-simplexmax-9-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-simplexmax-9-5-1-1">If <span class="process-math">\(b_{i^*}\lt 0\text{,}\)</span> what should be true about <span class="process-math">\(a_{ij^*}\)</span> so that <span class="process-math">\(b_{i^*}\)</span> is positive afterwards?</div></article><article class="task exercise-like" id="sec-simplexmax-9-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-simplexmax-9-6-1-1">Consider the inequality <span class="process-math">\(2x_1-3x_2-4x_3\lt -5\text{.}\)</span>  Is there a solution which satisfies this where <span class="process-math">\(x_i\geq 0\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-simplexmax-9-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="sec-simplexmax-9-7-1-1">Consider the inequality <span class="process-math">\(5x_1+x_2+2x_3\lt -10\text{.}\)</span>  Is there a solution which satisfies this where <span class="process-math">\(x_i\geq 0\text{?}\)</span>
-</div></article></article><article class="activity project-like" id="sec-simplexmax-10"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-10-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-simplexmax-10-4-1-1">For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?</div></article><article class="task exercise-like" id="sec-simplexmax-10-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-simplexmax-10-5-1-1">If <span class="process-math">\(b_{i^*}\lt 0\text{,}\)</span> what should be true about <span class="process-math">\(a_{ij^*}\)</span> so that <span class="process-math">\(b_{i^*}\)</span> is positive afterwards?</div></article><article class="task exercise-like" id="sec-simplexmax-10-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-simplexmax-10-6-1-1">Consider the inequality <span class="process-math">\(2x_1-3x_2-4x_3\lt -5\text{.}\)</span>  Is there a solution which satisfies this where <span class="process-math">\(x_i\geq 0\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-simplexmax-10-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-simplexmax-10-7-1-1">Consider the inequality <span class="process-math">\(5x_1+x_2+2x_3\lt -10\text{.}\)</span>  Is there a solution which satisfies this where <span class="process-math">\(x_i\geq 0\text{?}\)</span>
+</div></article></article><article class="activity project-like" id="sec-simplexmax-11"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-simplexmax-10-1">
-<div class="para" id="sec-simplexmax-10-1-1">We now want to concoct a scheme to turn all the <span class="process-math">\(b_i\)</span> non-negative, if possible.</div> <div class="para logical" id="sec-simplexmax-10-1-2">
+<div class="introduction" id="sec-simplexmax-11-1">
+<div class="para" id="sec-simplexmax-11-1-1">We now want to concoct a scheme to turn all the <span class="process-math">\(b_i\)</span> non-negative, if possible.</div> <div class="para logical" id="sec-simplexmax-11-1-2">
 <div class="para">Consider the tableau:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -569,36 +593,65 @@ c_1 \amp  c_2 \amp c_3 \amp 0\\
 <div class="para">Suppose that <span class="process-math">\(b_2\lt 0, b_3, b_4&gt;0\text{.}\)</span> We want to turn <span class="process-math">\(b_2\)</span> positive while making sure <span class="process-math">\(b_3, b_4\)</span> stay positive.</div>
 </div>
 </div>
-<article class="task exercise-like" id="sec-simplexmax-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-simplexmax-10-2-1-1">Suppose each <span class="process-math">\(a_{2j}\geq 0\text{,}\)</span> what can we say about the associated problem?</div></article><article class="task exercise-like" id="sec-simplexmax-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-simplexmax-10-3-1-1">Let’s then say <span class="process-math">\(a_{22}\lt 0\text{.}\)</span>  If we pivot on <span class="process-math">\(a_{22}\)</span> do  <span class="process-math">\(b_2, b_3, b_4\)</span> increase or decrease?  Are any now guaranteed to be positive or negative?</div></article><article class="task exercise-like" id="sec-simplexmax-10-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-simplexmax-10-4-1-1">Let’s then say <span class="process-math">\(a_{32} &gt;  0\text{.}\)</span>  If we pivot on <span class="process-math">\(a_{32}\)</span>  do  <span class="process-math">\(b_2, b_3, b_4\)</span> increase or decrease?  Are any now guaranteed to be positive or negative?</div></article><article class="task exercise-like" id="sec-simplexmax-10-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-simplexmax-10-5-1-1">Let’s then say <span class="process-math">\(a_{42} \lt  0\text{.}\)</span>  If we pivot on <span class="process-math">\(a_{42}\)</span>  do  <span class="process-math">\(b_2, b_3, b_4\)</span> increase or decrease?  Are any now guaranteed to be positive or negative?</div></article><article class="task exercise-like" id="sec-simplexmax-10-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-simplexmax-10-6-1-1">Who should we pivot on?</div> <ol class="upper-alpha">
-<li id="sec-simplexmax-10-6-1-2-1"><div class="para" id="sec-simplexmax-10-6-1-2-1-1">Any <span class="process-math">\(a_{2k}, k\geq 2\text{.}\)</span>
+<article class="task exercise-like" id="sec-simplexmax-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-simplexmax-11-2-1-1">Suppose each <span class="process-math">\(a_{2j}\geq 0\text{,}\)</span> what can we say about the associated problem?</div></article><article class="task exercise-like" id="sec-simplexmax-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-simplexmax-11-3-1-1">Let’s then say <span class="process-math">\(a_{22}\lt 0\text{.}\)</span>  If we pivot on <span class="process-math">\(a_{22}\)</span> do  <span class="process-math">\(b_2, b_3, b_4\)</span> increase or decrease?  Are any now guaranteed to be positive or negative?</div></article><article class="task exercise-like" id="sec-simplexmax-11-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-simplexmax-11-4-1-1">Let’s then say <span class="process-math">\(a_{32} &gt;  0\text{.}\)</span>  If we pivot on <span class="process-math">\(a_{32}\)</span>  do  <span class="process-math">\(b_2, b_3, b_4\)</span> increase or decrease?  Are any now guaranteed to be positive or negative?</div></article><article class="task exercise-like" id="sec-simplexmax-11-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-simplexmax-11-5-1-1">Let’s then say <span class="process-math">\(a_{42} \lt  0\text{.}\)</span>  If we pivot on <span class="process-math">\(a_{42}\)</span>  do  <span class="process-math">\(b_2, b_3, b_4\)</span> increase or decrease?  Are any now guaranteed to be positive or negative?</div></article><article class="task exercise-like" id="sec-simplexmax-11-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-simplexmax-11-6-1-1">Who should we pivot on?</div> <ol class="upper-alpha">
+<li id="sec-simplexmax-11-6-1-2-1"><div class="para" id="sec-simplexmax-11-6-1-2-1-1">Any <span class="process-math">\(a_{2k}, k\geq 2\text{.}\)</span>
 </div></li>
-<li id="sec-simplexmax-10-6-1-2-2"><div class="para" id="sec-simplexmax-10-6-1-2-2-1">All of the <span class="process-math">\(a_{2k}, k\geq 2\)</span> such that <span class="process-math">\(b_k/a_{2k}\)</span> is minimized.</div></li>
-<li id="sec-simplexmax-10-6-1-2-3"><div class="para" id="sec-simplexmax-10-6-1-2-3-1">All of the <span class="process-math">\(a_{2k}, k\geq 2\)</span> such that if <span class="process-math">\(k&gt;2\)</span> then <span class="process-math">\(a_{2k}&gt;0\)</span> and <span class="process-math">\(b_k/a_{2k}\)</span> is minimized.</div></li>
-</ol></article><article class="task exercise-like" id="sec-simplexmax-10-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="sec-simplexmax-10-7-1-1">Note that we have no idea if <span class="process-math">\(b_1\)</span> is positive or negative before we started, much less after.  Why don’t we care?</div></article></article><div class="para" id="sec-simplexmax-11">With this, we may define our algorithm for potentiall non-feasible tableau</div>
+<li id="sec-simplexmax-11-6-1-2-2"><div class="para" id="sec-simplexmax-11-6-1-2-2-1">All of the <span class="process-math">\(a_{2k}, k\geq 2\)</span> such that <span class="process-math">\(b_k/a_{2k}\)</span> is minimized.</div></li>
+<li id="sec-simplexmax-11-6-1-2-3"><div class="para" id="sec-simplexmax-11-6-1-2-3-1">All of the <span class="process-math">\(a_{2k}, k\geq 2\)</span> such that if <span class="process-math">\(k&gt;2\)</span> then <span class="process-math">\(a_{2k}&gt;0\)</span> and <span class="process-math">\(b_k/a_{2k}\)</span> is minimized.</div></li>
+</ol></article><article class="task exercise-like" id="sec-simplexmax-11-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-simplexmax-11-7-1-1">Note that we have no idea if <span class="process-math">\(b_1\)</span> is positive or negative before we started, much less after.  Why don’t we care?</div></article></article><div class="para" id="sec-simplexmax-12">With this, we may define our algorithm for potentiall non-feasible tableau</div>
 <article class="definition definition-like" id="def-simplexmax"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h3>
-<ol class="decimal">
-<li id="def-simplexmax-1-1-1"><div class="para" id="p-derived-def-simplexmax-1-1-1">IF each <span class="process-math">\(b_i\geq 0\text{,}\)</span> GOTO 8.</div></li>
-<li id="def-simplexmax-1-1-2"><div class="para" id="p-derived-def-simplexmax-1-1-2">PICK the largest <span class="process-math">\(i\)</span> such that <span class="process-math">\(b_i\lt 0\text{.}\)</span>
+<div class="para" id="def-simplexmax-1-1">The Simplex Algorithm for Maximum Tableaus</div> <ol class="decimal">
+<li id="def-simplexmax-1-2-1"><div class="para" id="p-derived-def-simplexmax-1-2-1">IF each <span class="process-math">\(b_i\geq 0\text{,}\)</span> GOTO 8.</div></li>
+<li id="def-simplexmax-1-2-2"><div class="para" id="p-derived-def-simplexmax-1-2-2">PICK the largest <span class="process-math">\(i\)</span> such that <span class="process-math">\(b_i\lt 0\text{.}\)</span>
 </div></li>
-<li id="def-simplexmax-1-1-3"><div class="para" id="p-derived-def-simplexmax-1-1-3">IF  <span class="process-math">\(a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 \text{:}\)</span> STOP the problem in infeasible.</div></li>
-<li id="def-simplexmax-1-1-4"><div class="para" id="p-derived-def-simplexmax-1-1-4">PICK a column <span class="process-math">\(j\)</span>  such that <span class="process-math">\(a_{ij} \lt 0\)</span> .</div></li>
-<li id="def-simplexmax-1-1-5"><div class="para" id="p-derived-def-simplexmax-1-1-5">PICK a row <span class="process-math">\(p\geq i\)</span> so that <span class="process-math">\(\displaystyle \min_{k&gt;i}\left(\{b_i/a_{ij}\} \cup \{b_k/a_{kj}:a_{kj}&gt;0\} \right)=b_p/a_{pj}\text{.}\)</span>
+<li id="def-simplexmax-1-2-3"><div class="para" id="p-derived-def-simplexmax-1-2-3">IF  <span class="process-math">\(a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 \text{:}\)</span> STOP the problem in infeasible.</div></li>
+<li id="def-simplexmax-1-2-4"><div class="para" id="p-derived-def-simplexmax-1-2-4">PICK a column <span class="process-math">\(j\)</span>  such that <span class="process-math">\(a_{ij} \lt 0\)</span> .</div></li>
+<li id="def-simplexmax-1-2-5"><div class="para" id="p-derived-def-simplexmax-1-2-5">PICK a row <span class="process-math">\(p\geq i\)</span> so that <span class="process-math">\(\displaystyle \min_{k&gt;i}\left(\{b_i/a_{ij}\} \cup \{b_k/a_{kj}:a_{kj}&gt;0\} \right)=b_p/a_{pj}\text{.}\)</span>
 </div></li>
-<li id="def-simplexmax-1-1-6"><div class="para" id="p-derived-def-simplexmax-1-1-6">PIVOT on <span class="process-math">\(a_{pj}\text{.}\)</span>
+<li id="def-simplexmax-1-2-6"><div class="para" id="p-derived-def-simplexmax-1-2-6">PIVOT on <span class="process-math">\(a_{pj}\text{.}\)</span>
 </div></li>
-<li id="def-simplexmax-1-1-7"><div class="para" id="p-derived-def-simplexmax-1-1-7">GOTO 1.</div></li>
-<li id="def-simplexmax-1-1-8"><div class="para" id="p-derived-def-simplexmax-1-1-8">APPLY <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a> .</div></li>
-</ol></article></section></div>
+<li id="def-simplexmax-1-2-7"><div class="para" id="p-derived-def-simplexmax-1-2-7">GOTO 1.</div></li>
+<li id="def-simplexmax-1-2-8"><div class="para" id="p-derived-def-simplexmax-1-2-8">APPLY <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a> .</div></li>
+</ol></article><article class="activity project-like" id="sec-simplexmax-14"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-simplexmax-14-1"><div class="para" id="sec-simplexmax-14-1-1">Apply <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" title="Definition 3.3.2">Definition 3.3.2</a> to the following tableau:</div></div>
+<article class="task exercise-like" id="sec-simplexmax-14-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-simplexmax-14-2-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cc|c|}          
+\hline
+-1 \amp -2 \amp -3\\
+1 \amp 1 \amp 2\\
+\hline
+2 \amp  -4 \amp 0\\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article><article class="task exercise-like" id="sec-simplexmax-14-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-simplexmax-14-3-1-1"><div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cc|c|}          
+\hline
+-3 \amp -2 \amp -6\\
+3 \amp 5 \amp 20\\
+2 \amp 0 \amp 4\\
+\hline
+3 \amp  4 \amp 0\\
+\hline
+\end{array} 
+\end{equation*}
+</div></div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simplexmin.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

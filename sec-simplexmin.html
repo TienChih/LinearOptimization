@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Simplex Algorithm</title>
+<title>The Simplex Algorithm for Canonical Minimization</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -120,7 +120,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-section-convexity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linear-optimization.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-pivot.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-cycling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -142,30 +142,102 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-convexity.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter active">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">3</span> <span class="title">The Simplex Algorithm</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Curious Situation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycling</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-simplex"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">The Simplex Algorithm</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simplexmin"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">The Simplex Algorithm for Canonical Minimization</span>
 </h2>
-<section class="introduction" id="ch-simplex-2"><div class="para" id="ch-simplex-2-1">Text before the first section.</div></section><nav class="summary-links"><ul>
-<li><a href="sec-pivot.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></li>
-<li><a href="sec-curious.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Curious Situation</span></a></li>
-<li><a href="sec-simplexmax.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></li>
-<li><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></li>
-<li><a href="sec-cycling.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycling</span></a></li>
-</ul></nav></section></div>
+<article class="definition definition-like" id="def-negativetranspose"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-negativetranspose-1-1">Recall that the canonical minimization problem:</div> <div class="para logical" id="def-negativetranspose-1-2">
+<div class="displaymath process-math" id="def-negativetranspose-1-2-1">
+\begin{align*}
+\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
+\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1\\
+a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2\\
+\vdots \amp   \vdots\\
+a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m\\
+x_1, x_2, \ldots, x_n\amp \geq  0
+\end{align*}
+</div>
+<div class="para">Where <span class="process-math">\(a_{i,j}, b_i, c_j, d\in \mathbb{R}\)</span>
+</div>
+</div> <div class="para logical" id="def-negativetranspose-1-3">
+<div class="para">may be recorded in the following tableau:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|cccc|c|}
+\hline
+x_1\amp a_{11} \amp a_{12} \amp \cdots \amp a_{1m} \amp c_1 \\
+x_2\amp a_{21} \amp a_{22} \amp \cdots \amp a_{2m} \amp c_2 \\
+\vdots \amp \vdots \amp \vdots \amp   \ddots \amp \vdots \amp \vdots \\
+x_n\amp a_{n1} \amp a_{n2} \amp \cdots \amp a_{nm} \amp c_n \\
+\hline
+-1 \amp b_1  \amp b_2 \amp \cdots \amp b_m \amp   d \\
+\hline
+\amp t_1 \amp t_2 \amp \cdots \amp t_m \amp g
+\end{array} 
+\end{equation*}
+</div>
+</div> <div class="para logical" id="def-negativetranspose-1-4">
+<div class="para">The <em class="emphasis">negative transpose</em> of this tableau is:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cccc|c|c}
+x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+\hline
+-a_{11} \amp -a_{21}\amp \cdots \amp -a_{n1}\amp -b_1 \amp -t_1 \\
+-a_{12} \amp -a_{22}\amp \cdots \amp -a_{n2}\amp -b_2 \amp -t_2 \\
+\vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+-a_{1m} \amp -a_{2m}\amp \cdots \amp -a_{nm}\amp -b_m \amp -t_m \\
+\hline
+-c_1 \amp -c_2\amp \cdots \amp -c_n \amp -d \amp   = -g \\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="sec-simplexmin-3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-simplexmin-3-1-1">Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.</div></article><div class="para" id="sec-simplexmin-4">This allows us to define a minimization algorithm.</div>
+<article class="definition definition-like" id="def-simplexmin"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-simplexmin-1-1">The Simplex Algorithm for Minimization Tableaus</div> <ol class="decimal">
+<li id="def-simplexmin-1-2-1"><div class="para" id="p-derived-def-simplexmin-1-2-1">TAKE the Negative Transpose.</div></li>
+<li id="def-simplexmin-1-2-2"><div class="para" id="p-derived-def-simplexmin-1-2-2">APPLY <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" title="Definition 3.3.2">Definition 3.3.2</a> .</div></li>
+</ol></article><article class="activity project-like" id="sec-simplexmin-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-simplexmin-6-1-1">
+<div class="para">Apply <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmin.html" title="Definition 3.4.2">Definition 3.4.2</a> to the following minimization tableau:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-simplexmin.html">
+\begin{equation*}
+\begin{array}{c|cc|c|}
+\hline
+x_1\amp 20 \amp 25 \amp 300 \\
+x_2 \amp 40 \amp 20\amp   500 \\
+\hline
+-1 \amp 1000  \amp 800 \amp   0 \\
+\hline
+\amp t_1 \amp t_2 \amp   g
+\end{array} 
+\end{equation*}
+</div>
+</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-section-convexity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-pivot.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-cycling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

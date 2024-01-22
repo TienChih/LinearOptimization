@@ -448,7 +448,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "The Simplex Algorithm for Canonical Maximization",
-  "body": " The Simplex Algorithm for Canonical Maximization   Consider the following tableau:  Note that each for this tableau. Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero). Are they all satisfied?   Which of the following is an if and only if condition for a Tucker Tableau to correspond to a feasible solution?    Some of the .    All of the .    Some of the .    All of the .    Some of the .    All of the .    Some of the .    All of the .        Consider the following tableau:   Note that each for this tableau.    Why is this tableau feasible?    Which of the following could we increase from zero to increase our objective function value?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    What is the largest value we could increase while satisfying our 3 inequalities? What about ?    Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.    All of the .    There is a row so that all of the in that row.    There is a column so that all of the in that column.    All of the .    All of the .      Consider the following tableau: Our previous discussion leads us to believe that may be increased as much as we please, and our two inequalities will remain satisfied. Yet consider a sketch of the region and function:     It turns out this system still achieves a maximum solution. Why does this not contradict our previous work?    Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.    All of the .    There is a row so that all of the in that row and .    There is a row so that all of the in that row and .    There is a column so that all of the in that column and .    There is a column so that all of the in that column and .        Consider the canonical max problem corresponding to:     Let's say we wanted to increase from 0. What is the largest we could increase to while satisfying all 3 inequalities?    Consider a sketch of our feasible region:   We could choose to pivot ( in the sketch) with either . Only one of these would result in a feasible solution. Looking graphically, which is it?    What's the connection between the two above tasks?    For a canonical linear program encoded by a Tucker tableau: if we pivot in column , which row should we choose?    Any row .    Any as long as .    The row where is minimized.    The row where is minimized.    The row where is minimized of of the rows where .    The row where is minimized of of the rows where .      Based on the observations above, what should be the pivot entry for the following tableau?       For each of the following tableaus, determine what if any of the following are true:   The tableau corresponds to a feasible solution.    The tableau corresponds to an optimal solution.    The tableau tells us the feasible region is unbounded.    The tableau tells us the objective function is unbounded.   If a tableau is feasible but not optimal, determine the legit pivot points                                       With all this, we finally may define our Simplex Algorithm for Maximum Basic Feasible Tableaus .     Ensure that each , that is that the solution is feasible.  IF every : STOP the current solution is optimal.  PICK a column such that .  IF each : STOP the objective function is unbounded.  PICK a row that minimizes .  PIVOT on .  GOTO 1.        Apply to the following tableaus.                           For each of the following tableaus correspond to a problem where the origin is not a feasible solution. Determine geometrically which of these have an optimal solution. Then answer the follow-up questions.              For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?    If , what should be true about so that is positive afterwards?    Consider the inequality . Is there a solution which satisfies this where ?    Consider the inequality . Is there a solution which satisfies this where ?      We now want to concoct a scheme to turn all the non-negative, if possible.  Consider the tableau: Suppose that . We want to turn positive while making sure stay positive.    Suppose each , what can we say about the associated problem?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Who should we pivot on?    Any .    All of the such that is minimized.    All of the such that if then and is minimized.      Note that we have no idea if is positive or negative before we started, much less after. Why don't we care?    With this, we may define our algorithm for potentiall non-feasible tableau     IF each , GOTO 8.  PICK the largest such that .  IF : STOP the problem in infeasible.  PICK a column such that .  PICK a row so that .  PIVOT on .  GOTO 1.  APPLY .     "
+  "body": " The Simplex Algorithm for Canonical Maximization   Consider the following tableau:  Note that each for this tableau. Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero). Are they all satisfied?   Which of the following is an if and only if condition for a Tucker Tableau to correspond to a feasible solution?    Some of the .    All of the .    Some of the .    All of the .    Some of the .    All of the .    Some of the .    All of the .        Consider the following tableau:   Note that each for this tableau.    Why is this tableau feasible?    Which of the following could we increase from zero to increase our objective function value?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    What is the largest value we could increase while satisfying our 3 inequalities? What about ?    Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.    All of the .    There is a row so that all of the in that row.    There is a column so that all of the in that column.    All of the .    All of the .      Consider the following tableau: Our previous discussion leads us to believe that may be increased as much as we please, and our two inequalities will remain satisfied. Yet consider a sketch of the region and function:     It turns out this system still achieves a maximum solution. Why does this not contradict our previous work?    Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.    All of the .    There is a row so that all of the in that row and .    There is a row so that all of the in that row and .    There is a column so that all of the in that column and .    There is a column so that all of the in that column and .        Consider the canonical max problem corresponding to:     Let's say we wanted to increase from 0. What is the largest we could increase to while satisfying all 3 inequalities?    Consider a sketch of our feasible region:   We could choose to pivot ( in the sketch) with either . Only one of these would result in a feasible solution. Looking graphically, which is it?    What's the connection between the two above tasks?    For a canonical linear program encoded by a Tucker tableau: if we pivot in column , which row should we choose?    Any row .    Any as long as .    The row where is minimized.    The row where is minimized.    The row where is minimized of of the rows where .    The row where is minimized of of the rows where .      Based on the observations above, what should be the pivot entry for the following tableau?       For each of the following tableaus, determine what if any of the following are true:   The tableau corresponds to an infeasible solution.    The tableau corresponds to an optimal solution.    The tableau tells us the feasible region is unbounded.    The tableau tells us the objective function is unbounded.   If a tableau is feasible but not optimal, determine the legit pivot points                                       With all this, we finally may define our Simplex Algorithm for Maximum Basic Feasible Tableaus .    The Simplex Algorithm for Maximum Basic Feasible Tableaus   Ensure that each , that is that the solution is feasible.  IF every : STOP the current solution is optimal.  PICK a column such that .  IF each : STOP the objective function is unbounded.  PICK a row that minimizes .  PIVOT on .  GOTO 1.       Recall the canonical tableau Suppose that after pivoting on according to we had that . Show that        Apply to the following tableaus.                           For each of the following tableaus correspond to a problem where the origin is not a feasible solution. Determine geometrically which of these have an optimal solution. Then answer the follow-up questions.              For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?    If , what should be true about so that is positive afterwards?    Consider the inequality . Is there a solution which satisfies this where ?    Consider the inequality . Is there a solution which satisfies this where ?      We now want to concoct a scheme to turn all the non-negative, if possible.  Consider the tableau: Suppose that . We want to turn positive while making sure stay positive.    Suppose each , what can we say about the associated problem?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Who should we pivot on?    Any .    All of the such that is minimized.    All of the such that if then and is minimized.      Note that we have no idea if is positive or negative before we started, much less after. Why don't we care?    With this, we may define our algorithm for potentiall non-feasible tableau    The Simplex Algorithm for Maximum Tableaus   IF each , GOTO 8.  PICK the largest such that .  IF : STOP the problem in infeasible.  PICK a column such that .  PICK a row so that .  PIVOT on .  GOTO 1.  APPLY .       Apply to the following tableau:              "
 },
 {
   "id": "activity-tableaufeasible",
@@ -484,7 +484,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "3.3.4",
   "title": "",
-  "body": "  For each of the following tableaus, determine what if any of the following are true:   The tableau corresponds to a feasible solution.    The tableau corresponds to an optimal solution.    The tableau tells us the feasible region is unbounded.    The tableau tells us the objective function is unbounded.   If a tableau is feasible but not optimal, determine the legit pivot points                                      "
+  "body": "  For each of the following tableaus, determine what if any of the following are true:   The tableau corresponds to an infeasible solution.    The tableau corresponds to an optimal solution.    The tableau tells us the feasible region is unbounded.    The tableau tells us the objective function is unbounded.   If a tableau is feasible but not optimal, determine the legit pivot points                                      "
 },
 {
   "id": "def-simplexcanonmaxbf",
@@ -493,7 +493,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "3.3.1",
   "title": "",
-  "body": "   Ensure that each , that is that the solution is feasible.  IF every : STOP the current solution is optimal.  PICK a column such that .  IF each : STOP the objective function is unbounded.  PICK a row that minimizes .  PIVOT on .  GOTO 1.    "
+  "body": "  The Simplex Algorithm for Maximum Basic Feasible Tableaus   Ensure that each , that is that the solution is feasible.  IF every : STOP the current solution is optimal.  PICK a column such that .  IF each : STOP the objective function is unbounded.  PICK a row that minimizes .  PIVOT on .  GOTO 1.    "
 },
 {
   "id": "sec-simplexmax-8",
@@ -502,7 +502,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "3.3.5",
   "title": "",
-  "body": "   Apply to the following tableaus.                        "
+  "body": "  Recall the canonical tableau Suppose that after pivoting on according to we had that . Show that    "
 },
 {
   "id": "sec-simplexmax-9",
@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "3.3.6",
   "title": "",
-  "body": "  For each of the following tableaus correspond to a problem where the origin is not a feasible solution. Determine geometrically which of these have an optimal solution. Then answer the follow-up questions.              For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?    If , what should be true about so that is positive afterwards?    Consider the inequality . Is there a solution which satisfies this where ?    Consider the inequality . Is there a solution which satisfies this where ?   "
+  "body": "   Apply to the following tableaus.                        "
 },
 {
   "id": "sec-simplexmax-10",
@@ -519,6 +519,15 @@ var ptx_lunr_docs = [
   "url": "sec-simplexmax.html#sec-simplexmax-10",
   "type": "Activity",
   "number": "3.3.7",
+  "title": "",
+  "body": "  For each of the following tableaus correspond to a problem where the origin is not a feasible solution. Determine geometrically which of these have an optimal solution. Then answer the follow-up questions.              For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?    If , what should be true about so that is positive afterwards?    Consider the inequality . Is there a solution which satisfies this where ?    Consider the inequality . Is there a solution which satisfies this where ?   "
+},
+{
+  "id": "sec-simplexmax-11",
+  "level": "2",
+  "url": "sec-simplexmax.html#sec-simplexmax-11",
+  "type": "Activity",
+  "number": "3.3.8",
   "title": "",
   "body": "  We now want to concoct a scheme to turn all the non-negative, if possible.  Consider the tableau: Suppose that . We want to turn positive while making sure stay positive.    Suppose each , what can we say about the associated problem?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Let's then say . If we pivot on do increase or decrease? Are any now guaranteed to be positive or negative?    Who should we pivot on?    Any .    All of the such that is minimized.    All of the such that if then and is minimized.      Note that we have no idea if is positive or negative before we started, much less after. Why don't we care?   "
 },
@@ -529,7 +538,124 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "3.3.2",
   "title": "",
-  "body": "   IF each , GOTO 8.  PICK the largest such that .  IF : STOP the problem in infeasible.  PICK a column such that .  PICK a row so that .  PIVOT on .  GOTO 1.  APPLY .    "
+  "body": "  The Simplex Algorithm for Maximum Tableaus   IF each , GOTO 8.  PICK the largest such that .  IF : STOP the problem in infeasible.  PICK a column such that .  PICK a row so that .  PIVOT on .  GOTO 1.  APPLY .    "
+},
+{
+  "id": "sec-simplexmax-14",
+  "level": "2",
+  "url": "sec-simplexmax.html#sec-simplexmax-14",
+  "type": "Activity",
+  "number": "3.3.9",
+  "title": "",
+  "body": "  Apply to the following tableau:             "
+},
+{
+  "id": "sec-simplexmin",
+  "level": "1",
+  "url": "sec-simplexmin.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "The Simplex Algorithm for Canonical Minimization",
+  "body": " The Simplex Algorithm for Canonical Minimization    Recall that the canonical minimization problem:   Where   may be recorded in the following tableau:   The negative transpose of this tableau is:       Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.    This allows us to define a minimization algorithm.    The Simplex Algorithm for Minimization Tableaus   TAKE the Negative Transpose.  APPLY .       Apply to the following minimization tableau:     "
+},
+{
+  "id": "def-negativetranspose",
+  "level": "2",
+  "url": "sec-simplexmin.html#def-negativetranspose",
+  "type": "Definition",
+  "number": "3.4.1",
+  "title": "",
+  "body": "  Recall that the canonical minimization problem:   Where   may be recorded in the following tableau:   The negative transpose of this tableau is:    "
+},
+{
+  "id": "sec-simplexmin-3",
+  "level": "2",
+  "url": "sec-simplexmin.html#sec-simplexmin-3",
+  "type": "Activity",
+  "number": "3.4.1",
+  "title": "",
+  "body": "  Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.   "
+},
+{
+  "id": "def-simplexmin",
+  "level": "2",
+  "url": "sec-simplexmin.html#def-simplexmin",
+  "type": "Definition",
+  "number": "3.4.2",
+  "title": "",
+  "body": "  The Simplex Algorithm for Minimization Tableaus   TAKE the Negative Transpose.  APPLY .    "
+},
+{
+  "id": "sec-simplexmin-6",
+  "level": "2",
+  "url": "sec-simplexmin.html#sec-simplexmin-6",
+  "type": "Activity",
+  "number": "3.4.2",
+  "title": "",
+  "body": "  Apply to the following minimization tableau:    "
+},
+{
+  "id": "sec-cycling",
+  "level": "1",
+  "url": "sec-cycling.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Cycling",
+  "body": " Cycling    Consider the following canonical maximization tableau:     Perform the following sequence of pivots, ensure each time that it is a valid pivot according to , and keep track of the variables.            Compare your final tableau to the initial tableau. Are there any similarities?      Consider canonical linear programming problem: Maximzie , subject to     Consider a sequence of pivots swapping ,  , . In each of these cases, what is the point of intersection?          If a series of pivots in accordance to allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena Cycling .      If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a degenerate pivot.    Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate. Fortunately, there is a solution to this issue.   Bland's Anticycling Rules   List all variables, independent and dependent in the initial tableau. Then consider the following rules:    Whenever there is more than one possible choice for a pivot row according to : select the row corresponding to the variable closest to the front of the initial list.    Whenever there is more than one possible choice for a pivot column according to : select the column corresponding to the variable closest to the front of the initial list.    Then the Simplex Algorthm will not cycle.     For the sake of notation, we denote the initial tableau: and order the variables in the associated way. Suppose we follow Bland's rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) . We call a variable  fickle if is in one, but not all of the bases. That is, it leaves a basis, and reenters it later during the cycle.  Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if is fickle, for each basic solution during the cycle.  Since the number of variables is finite, the set of fickle variables is also finite, and let denote the fickle variable with largest subscript. Suppose that (why must such a exist?). Denote the entering variable from with . Note that must also be fickle (why?) and so .  We call the dictionary for a basis the system of equations corresponding to that basis. So the dictionary for is which we can write as: Note that since the above pivot was valud, we must have that and since the pivot was degenerate, we have .  Now, because we have cycling, we must have that reenters the basis at some point Note that for this pivot to be valid, we have that . If we let denote the dictionary before re-enters the basis, we have: So note that the solution space to the system of equations for both these dictionaries are the same. So we have a solution for (not neccessarily feasible ie non-negativity may fail) that must also be a solution to :   So we have where for . So via algebra:   The above equation holds true no matter what is. Thus: Note that , NOT is entering the basis. If is already in the basis, . Otherwise, , otherwise would have entered by Bland's Anticyling rules. We've also shown . Thus which is only possible if there is some such that   From this, we know that . So , but , so is fickle. Since is the largest index of a fickle variable, . Note that is not entering from , so . Thus .  But is fickle, so in . But then, we would have picked , not to leave. which is a contradiction.   "
+},
+{
+  "id": "sec-cycling-2",
+  "level": "2",
+  "url": "sec-cycling.html#sec-cycling-2",
+  "type": "Activity",
+  "number": "3.5.1",
+  "title": "",
+  "body": "  Consider the following canonical maximization tableau:     Perform the following sequence of pivots, ensure each time that it is a valid pivot according to , and keep track of the variables.            Compare your final tableau to the initial tableau. Are there any similarities?   "
+},
+{
+  "id": "sec-cycling-3",
+  "level": "2",
+  "url": "sec-cycling.html#sec-cycling-3",
+  "type": "Activity",
+  "number": "3.5.2",
+  "title": "",
+  "body": "  Consider canonical linear programming problem: Maximzie , subject to     Consider a sequence of pivots swapping ,  , . In each of these cases, what is the point of intersection?       "
+},
+{
+  "id": "def-Cycling",
+  "level": "2",
+  "url": "sec-cycling.html#def-Cycling",
+  "type": "Definition",
+  "number": "3.5.1",
+  "title": "",
+  "body": "  If a series of pivots in accordance to allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena Cycling .   "
+},
+{
+  "id": "def-degenerate",
+  "level": "2",
+  "url": "sec-cycling.html#def-degenerate",
+  "type": "Definition",
+  "number": "3.5.2",
+  "title": "",
+  "body": "  If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a degenerate pivot.   "
+},
+{
+  "id": "thm-BlandAnticycling",
+  "level": "2",
+  "url": "sec-cycling.html#thm-BlandAnticycling",
+  "type": "Theorem",
+  "number": "3.5.3",
+  "title": "Bland’s Anticycling Rules.",
+  "body": " Bland's Anticycling Rules   List all variables, independent and dependent in the initial tableau. Then consider the following rules:    Whenever there is more than one possible choice for a pivot row according to : select the row corresponding to the variable closest to the front of the initial list.    Whenever there is more than one possible choice for a pivot column according to : select the column corresponding to the variable closest to the front of the initial list.    Then the Simplex Algorthm will not cycle.   "
+},
+{
+  "id": "sec-cycling-8",
+  "level": "2",
+  "url": "sec-cycling.html#sec-cycling-8",
+  "type": "Proof",
+  "number": "3.5.1",
+  "title": "",
+  "body": " For the sake of notation, we denote the initial tableau: and order the variables in the associated way. Suppose we follow Bland's rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) . We call a variable  fickle if is in one, but not all of the bases. That is, it leaves a basis, and reenters it later during the cycle.  Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if is fickle, for each basic solution during the cycle.  Since the number of variables is finite, the set of fickle variables is also finite, and let denote the fickle variable with largest subscript. Suppose that (why must such a exist?). Denote the entering variable from with . Note that must also be fickle (why?) and so .  We call the dictionary for a basis the system of equations corresponding to that basis. So the dictionary for is which we can write as: Note that since the above pivot was valud, we must have that and since the pivot was degenerate, we have .  Now, because we have cycling, we must have that reenters the basis at some point Note that for this pivot to be valid, we have that . If we let denote the dictionary before re-enters the basis, we have: So note that the solution space to the system of equations for both these dictionaries are the same. So we have a solution for (not neccessarily feasible ie non-negativity may fail) that must also be a solution to :   So we have where for . So via algebra:   The above equation holds true no matter what is. Thus: Note that , NOT is entering the basis. If is already in the basis, . Otherwise, , otherwise would have entered by Bland's Anticyling rules. We've also shown . Thus which is only possible if there is some such that   From this, we know that . So , but , so is fickle. Since is the largest index of a fickle variable, . Note that is not entering from , so . Thus .  But is fickle, so in . But then, we would have picked , not to leave. which is a contradiction.  "
 },
 {
   "id": "backmatter-2",
