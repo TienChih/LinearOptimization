@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-simplexmin" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Simplex Algorithm for Canonical Minimization</title>
+
+
+  
+
+  <definition xml:id="def-negativetranspose">
+    <statement>
+      <p>
+        Recall that the canonical minimization problem: 
+      </p>
+      <p>
+        <md>
+          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+        </md>
+        Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>
+      </p>
+      <p>  
+        may be recorded in the following tableau:
+        <me>
+          \begin{array}{c|cccc|c|}
+          \hline
+           x_1\amp a_{11} \amp a_{12} \amp \cdots \amp a_{1m} \amp c_1 \\
+           x_2\amp a_{21} \amp a_{22} \amp \cdots \amp a_{2m} \amp c_2 \\
+           \vdots \amp \vdots \amp \vdots \amp   \ddots \amp \vdots \amp \vdots \\
+          x_n\amp a_{n1} \amp a_{n2} \amp \cdots \amp a_{nm} \amp c_n \\
+          \hline
+           -1 \amp b_1  \amp b_2 \amp \cdots \amp b_m \amp   d \\
+          \hline
+          \amp t_1 \amp t_2 \amp \cdots \amp t_m \amp g
+          \end{array} 
+         </me>
+      </p>
+      <p>
+        The <em>negative transpose</em> of this tableau is:
+        <me>
+          \begin{array}{|cccc|c|c}
+          x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+          \hline
+          -a_{11} \amp -a_{21}\amp \cdots \amp -a_{n1}\amp -b_1 \amp -t_1 \\
+          -a_{12} \amp -a_{22}\amp \cdots \amp -a_{n2}\amp -b_2 \amp -t_2 \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+          -a_{1m} \amp -a_{2m}\amp \cdots \amp -a_{nm}\amp -b_m \amp -t_m \\
+          \hline
+          -c_1 \amp -c_2\amp \cdots \amp -c_n \amp -d \amp   = -g \\
+          \hline
+          \end{array} 
+         </me>
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <statement>
+      <p>
+        Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.
+      </p>
+    </statement>
+  </activity>
+
+  <p>This allows us to define a minimization algorithm.</p>
+
+  <definition xml:id="def-simplexmin">
+    <statement>
+      <p>
+        The Simplex Algorithm for Minimization Tableaus
+      </p>
+      <ol>
+        <li>TAKE the Negative Transpose. </li>
+        <li>APPLY <xref ref="def-simplexmax"/> .</li>
+
+    </ol>
+    </statement>
+  </definition>
+
+  <activity>
+    <statement>
+      <p>
+        Apply <xref ref="def-simplexmin"/> to the following minimization tableau:
+        <me>
+          \begin{array}{c|cc|c|}
+          \hline
+           x_1\amp 20 \amp 25 \amp 300 \\
+           x_2 \amp 40 \amp 20\amp   500 \\
+          \hline
+           -1 \amp 1000  \amp 800 \amp   0 \\
+          \hline
+          \amp t_1 \amp t_2 \amp   g
+          \end{array} 
+         </me>
+      </p>
+    </statement>
+  </activity>
+
+
+
+  
+
+</section>

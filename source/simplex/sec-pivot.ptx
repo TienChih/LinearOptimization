@@ -13,12 +13,12 @@
       </p>
       <p>
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \leq  b_2</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \leq  b_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
       </p>
       <p>
@@ -27,12 +27,12 @@
 
       <p>
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n +t_m \amp =  b_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m +t_n \amp =  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
         
       </p>
@@ -121,7 +121,7 @@
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -s_m \amp \geq  b_m</mrow>
+          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -s_m \amp =  b_m</mrow>
           <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
         </md>
       </p>
@@ -177,14 +177,14 @@
   <observation>
     <statement>
       <p>
-        Note that this tableau <q>corresponds</q> to the point where <m>x_1, x_2, \ldots, x_n=0</m>.  We will further explore what this means in a bit.  
-        But for now, if <m>x_1, x_2, \ldots, x_n=0</m>, then:
+        Note that this tableau <q>corresponds</q> to the point where <m>x_1, x_2, \ldots, x_m=0</m>.  We will further explore what this means in a bit.  
+        But for now, if <m>x_1, x_2, \ldots, x_m =0</m>, then:
         <md>
-          <mrow>a_{1,1}0 + a_{1,2}0 +\cdots a_{1,n}0-b_1  \amp =  -t_1</mrow>
-          <mrow> a_{2,1}0 + a_{2,2}0 +\cdots a_{2,n}0 -b_2\amp =  -t_2</mrow>
+          <mrow>a_{1,1}0 + a_{1,2}0 +\cdots a_{1,m}0-b_1  \amp =  -t_1</mrow>
+          <mrow> a_{2,1}0 + a_{2,2}0 +\cdots a_{2,m}0 -b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}0 + a_{m,2}0 +\cdots a_{m,n}0-b_m  \amp =  -t_3</mrow>
-          <mrow> c_10 + c_20 +\cdots c_3-d  \amp =  f</mrow>
+          <mrow> a_{n,1}0 + a_{n,2}0 +\cdots a_{n,m}0-b_n  \amp =  -t_n</mrow>
+          <mrow> c_10 + c_20 +\cdots c_m0-d  \amp =  f</mrow>
         </md>
       </p>
     </statement>

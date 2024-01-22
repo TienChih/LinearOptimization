@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-cycling" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Cycling</title>
+
+
+  
+
+  
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the following canonical maximization tableau:
+        <me>
+          \begin{array}{|cccc|c|c}
+           x_1\amp x_2 \amp x_3 \amp x_4 \amp -1 \amp  \\
+           \hline
+           -12.5 \amp -2 \amp 12.5 \amp 1\amp 0\amp  -t_1 \\
+           1\amp  0.24 \amp -2 \amp -0.24 \amp 0\amp  -t_2 \\
+          \hline
+           4 \amp 1.92 \amp -16 \amp -0.96  \amp 1 \amp   f \\
+          \hline
+          \end{array} 
+         </me>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <xref ref="def-simplexcanonmaxbf"/>, and keep track of the variables.
+        </p>
+        <p>
+          <me>
+            \begin{array}{|cccc|c|}
+             \hline
+             -12.5 \amp -2 \amp 12.5 \amp 1\amp 0 \\
+             1^*\amp  0.24 \amp -2 \amp -0.24 \amp 0 \\
+            \hline
+            4 \amp 1.92 \amp -16 \amp -0.96 \amp 0  \\
+            \hline
+            \end{array} 
+           </me>
+  
+           <me>
+            \begin{array}{|cccc|c|}
+             \hline
+             ? \amp ?^* \amp ? \amp ? \amp ? \\
+             ?\amp  ? \amp ? \amp ? \amp ? \\
+            \hline
+             ? \amp ? \amp ? \amp ?  \amp ?  \\
+            \hline
+            \end{array} 
+           </me>
+  
+           <me>
+            \begin{array}{|cccc|c|}
+             \hline
+             ? \amp ? \amp ? \amp ? \amp ? \\
+             ?\amp  ? \amp ?^* \amp ? \amp ? \\
+            \hline
+             ? \amp ? \amp ? \amp ?  \amp ?  \\
+            \hline
+            \end{array} 
+           </me>
+  
+           <me>
+            \begin{array}{|cccc|c|}
+             \hline
+             ? \amp ? \amp ? \amp ?^* \amp ? \\
+             ?\amp  ? \amp ? \amp ? \amp ? \\
+            \hline
+             ? \amp ? \amp ? \amp ?  \amp ?  \\
+            \hline
+            \end{array} 
+           </me>
+  
+           <me>
+            \begin{array}{|cccc|c|}
+             \hline
+             ? \amp ? \amp ? \amp ? \amp ? \\
+             ?^* \amp  ? \amp ? \amp ? \amp ? \\
+            \hline
+             ? \amp ? \amp ? \amp ?  \amp ?  \\
+            \hline
+            \end{array} 
+           </me>
+  
+           <me>
+            \begin{array}{|cccc|c|}
+             \hline
+             ? \amp ?^* \amp ? \amp ? \amp ? \\
+             ? \amp  ? \amp ? \amp ? \amp ? \\
+            \hline
+             ? \amp ? \amp ? \amp ?  \amp ?  \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+        
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Compare your final tableau to the initial tableau.  Are there any similarities?
+        </p>
+      </statement>
+    </task>
+      
+  </activity>
+
+
+  <activity>
+    <introduction>
+      <p>
+        Consider canonical linear programming problem: Maximzie <m>f(x,y)=x+y</m>, subject to
+        <md>
+          <mrow>-2x +y \amp\leq0 </mrow>
+          <mrow>x -2y \amp\leq0 </mrow>
+          <mrow> x +y \amp\leq4 </mrow>
+          <mrow>x,y \amp\geq0 </mrow>
+        </md>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Consider a sequence of pivots swapping <m>(x, t_2)</m>, <m>(y, t_1)</m> <m>(t_1, y)</m>, <m>(t_2, x)</m>.  In each of these cases, what is the point of intersection?
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <interactive desmos="v6ryem5bpp"/>
+        </p>
+      </hint>
+    </task>
+  </activity>
+
+  <definition xml:id="def-Cycling">
+    <statement>
+      <p>
+        If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em>Cycling</em>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-degenerate">
+    <statement>
+      <p>
+        If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <em>degenerate</em> pivot.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate.  Fortunately, there is a solution to this issue.
+  </p>
+
+  <theorem xml:id="thm-BlandAnticycling">
+    <title>Bland's Anticycling Rules</title>
+    
+    
+    <statement>
+      <p>
+        List all variables, independent and dependent in the initial tableau.  Then consider the following rules:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Whenever there is more than one possible choice for a pivot row according to <xref ref="def-simplexcanonmaxbf"/>:  select the row corresponding to the variable closest to the front of the initial list.
+          </p>
+        </li>
+        <li>
+          <p>
+            Whenever there is more than one possible choice for a pivot column according to <xref ref="def-simplexcanonmaxbf"/>:  select the column corresponding to the variable closest to the front of the initial list.
+          </p>
+        </li>
+      </ol>
+      <p>
+        Then the Simplex Algorthm will not cycle.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      For the sake of notation, we denote the initial tableau:
+      <me>
+        \begin{array}{|cccc|c|c}
+        x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+        \hline
+        a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -x_{n+1} \\
+        a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -x_{n+2} \\
+        \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+        a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -x_{n+m} \\
+        \hline
+        c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
+        \hline
+        \end{array} 
+       </me>
+       and order the variables in the associated way.  Suppose we follow Bland's rules and still have cycling.
+       That is, there is a sequence of pivots and bases (set of basic variables) <m>B_1\to B_2\to \cdots B_\ell \to B_1</m>.
+       We call a variable <m>x_j</m> <em>fickle</em> if <m>x_j</m> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.
+
+    </p>
+    <p>
+      Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?).
+        So if <m>x_j</m> is fickle, <m>x_j=0</m> for each basic solution during the cycle.
+    </p>
+    <p>
+      Since the number of variables is finite, the set of fickle variables is also finite, and let <m>x_t</m> 
+      denote the fickle variable with largest subscript.  Suppose that <m>x_t \in B_i, x_t\not\in B_{i+1}</m> (why must such a <m>B_i</m> exist?).
+      Denote the entering variable from <m>B_i\to B_{i+1}</m> with <m>x_s</m>.
+      <me>
+        \begin{array}{|ccc|c|c}
+         \cdots \amp x_s \amp \cdots \amp  -1\amp \\
+        \hline
+       \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \vdots \amp a_{ts} \amp \vdots \amp 0 \amp x_t \\
+        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \hline
+        \cdots \amp c_s \amp \cdots \amp d \amp =f \\
+        \hline
+        \end{array} 
+        \to
+        \begin{array}{|ccc|c|c}
+         \cdots \amp x_t \amp \cdots \amp  -1\amp \\
+        \hline
+       \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \vdots \amp ? \amp \vdots \amp  0 \amp x_s \\
+        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \hline
+        \cdots \amp ?\amp \cdots \amp d \amp =f \\
+        \hline
+        \end{array} 
+       </me>
+       Note that <m>x_s</m> must also be fickle (why?) and so <m>s\lt t</m>.
+    </p>
+    <p>
+      We call the <em>dictionary</em> for a basis the system of equations corresponding to that basis.  So the dictionary for <m>B_i</m> is <m>D_i</m>
+      which we can write as:
+      
+
+      <md>
+        <mrow>x_k \amp = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_i.</mrow>
+        <mrow>f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d</mrow>
+      </md>
+
+      Note that since the above pivot was valud, we must have that <m>c_s>0, a_{ts}>0</m> 
+      and since the pivot was degenerate, we have <m>b_t=0</m>.
+    </p>
+
+    <p>
+      Now, because we have cycling, we must have that <m>x_t</m> reenters the basis at some point
+      <me>
+        \begin{array}{|ccc|c|c}
+         \cdots \amp x_t \amp \cdots \amp  -1\amp \\
+        \hline
+       \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \vdots \amp ? \amp \vdots \amp  0 \amp x_? \\
+        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \hline
+        \cdots \amp c_t^*\amp \cdots \amp d \amp =f \\
+        \hline
+        \end{array} 
+        \to
+        \begin{array}{|ccc|c|c}
+         \cdots \amp x_? \amp \cdots \amp  -1\amp \\
+        \hline
+       \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \vdots \amp ? \amp \vdots \amp  0 \amp x_t \\
+        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \hline
+        \cdots \amp ?\amp \cdots \amp d \amp =f \\
+        \hline
+        \end{array} 
+      </me>
+      Note that for this pivot to be valid, we have that <m>c_t^*>0</m>.
+      If we let <m>D_\ell</m> denote the dictionary before <m>x_t</m> re-enters the basis, we have:
+      <me>
+        f = \displaystyle\sum_{x_j\not\in B_\ell} c_{j}^*x_j -d
+      </me>
+      So note that the solution space to the system of equations for both these dictionaries are the same.  So we have a solution for <m>D_i</m> (not neccessarily feasible ie non-negativity may fail) that must also be a solution to <m>D_\ell</m>:
+      <md>
+        <mrow>x_s \amp = Z </mrow>
+        <mrow>x_j \amp = 0\text{ for }x_j\not\in B_i, x_j\neq x_s </mrow>
+        <mrow>x_k \amp = b_k-a_{ks}Z \text{ for }x_k\in B_i</mrow>
+        <mrow>f \amp = c_sZ-d </mrow>
+      </md>  
+    </p>
+    <p>
+      So we have <me>c_sZ-d =f =c_s^*Z-d+\displaystyle\sum_{x_k\in B_i} c_{k}^*(b_k-a_{ks}Z)</me>
+      where <m>c_k^*=0</m> for <m>x_k\in B_\ell</m>.  So via algebra:
+      <me>\left( c_s-c_s^*  + \displaystyle\sum_{x_k\in B_i} c_{k}^*a_{ks} \right)Z = \displaystyle\sum_{x_k\in B_i} c_{k}^*b_k</me>
+    </p>
+    <p>
+      The above equation holds true no matter what <m>Z</m> is.  Thus:
+      <me>c_s-c_s^*  + \displaystyle\sum_{x_k\in B_i} c_{k}^*a_{ks}=0.</me>
+      Note that <m>x_t</m>, NOT <m>x_s</m> is entering the basis.  If <m>x_s</m> is already in the basis, <m>c_s^*=0</m>.  Otherwise, <m>c_s^*\leq0</m>, otherwise <m>s</m> would have entered by Bland's Anticyling rules.
+      We've also shown <m>c_s>0</m>.  Thus <me>\displaystyle\sum_{x_k\in B_i} c_{k}^*a_{ks} \lt 0 </me> which
+      is only possible if there is some <m>x_r\in B_i</m> such that <me>c_r^*a_{rs}\lt 0.</me>
+    </p>
+    <p>
+      From this, we know that <m>c_r^*\neq 0</m>.  So <m>x_r\not\in B_\ell</m>, but <m>x_r\in B_i</m>, so <m>x_r</m> is fickle.  Since <m>t</m> is the 
+      largest index of a fickle variable, <m>r\lt t</m>.  Note that <m>x_r</m> is not entering from <m>B_\ell</m>, so <m>c_r^*\leq 0</m>.  Thus <m>a_{rs}>0</m>.
+    </p>
+    <p>
+      But <m>x_r</m> is fickle, so <m>b_r=0</m> in <m>D_i</m>.  But then, we would have picked <m>x_r</m>, not <m>x_t</m> to leave.
+      <me>
+        \begin{array}{|ccc|c|c}
+         \cdots \amp x_s \amp \cdots \amp  -1\amp \\
+        \hline
+       \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \vdots \amp a_{ts} \amp \vdots \amp 0 \amp x_t \\
+        \vdots \amp a_{rs} \amp \vdots \amp 0 \amp x_r \\
+        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
+        \hline
+        \cdots \amp c_s \amp \cdots \amp d \amp =f \\
+        \hline
+        \end{array} 
+      </me>
+      which is a contradiction.
+    </p>
+  </proof>
+  
+
+
+
+  
+
+</section>

@@ -294,14 +294,14 @@
           For a canonical linear program encoded by a Tucker tableau:
           <me>
             \begin{array}{|cccc|c|c}
-            x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
+            x_1 \amp x_2 \amp \cdots \amp x_m \amp -1\\
             \hline
-            a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -t_1 \\
-            a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -t_2 \\
+            a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
+            a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
             \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-            a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -t_m \\
+            a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
             \hline
-            c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
+            c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
             \hline
             \end{array} 
            </me>
@@ -537,12 +537,35 @@
           <li>IF every <m>c_j\leq 0</m>: STOP the current solution is optimal.  </li>
           <li>PICK a column <m>j</m> such that <m>c_j > 0</m>.  </li>
           <li>IF each <m>a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 </m>: STOP the objective function is unbounded. </li>
-          <li>PICK a row <m>i</m>  that minimizes <m>\left\{ b_i/a_{ij}: b_i > 0 \right\}</m>.</li>
+          <li>PICK a row <m>i</m>  that minimizes <m>\left\{ b_i/a_{ij}: a_{ij} > 0 \right\}</m>.</li>
           <li>PIVOT on <m>a_{ij}</m>. </li>
           <li>GOTO 1.</li>
       </ol>
     </statement>
   </definition>
+  
+  <activity>
+    <statement>
+
+      <p>
+        Recall the canonical tableau
+        <me>
+          \begin{array}{|cccc|c|c}
+          x_1 \amp x_2 \amp \cdots \amp x_m \amp -1\\
+          \hline
+          a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
+          a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
+          a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
+          \hline
+          c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
+          \hline
+          \end{array} 
+         </me>
+        Suppose that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m> 
+      </p>
+    </statement>
+  </activity>
 
   <activity>
     <introduction>
@@ -814,7 +837,7 @@
   <activity>
     <introduction>
       <p>
-        Apply <xref ref="def-simplexcanonmax" /> to the following tableau:
+        Apply <xref ref="def-simplexmax" /> to the following tableau:
       </p>
     </introduction>
     <task>
