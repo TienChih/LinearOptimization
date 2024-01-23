@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-simplexsage" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Using Sage</title>
+
+
+  
+
+  <exploration >
+    <statement>
+      <p>
+        Suppose we wanted to solve the following maximization problem by hand:
+        <me>
+          \begin{array}{|cccc|c|c}
+           x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
+           \hline
+           1 \amp  0 \amp 1 \amp 2 \amp 3 \amp -t_1 \\
+           -1 \amp  1 \amp 1 \amp 0 \amp 4 \amp -t_2 \\
+           1 \amp  1 \amp 0 \amp 1 \amp 2 \amp -t_3 \\
+          \hline
+           1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
+          \hline
+          \end{array} 
+         </me>
+         How annoying would this be?
+      </p>
+      <ol marker="A." cols="2">
+        <li>
+          <p>
+            Very.
+          </p>
+        </li>
+        <li>
+          <p>
+            Extraordinarily
+          </p>
+        </li>
+        <li>
+          <p>
+            Horrifically
+          </p>
+        </li>
+        <li>
+          <p>
+            I have nothing to do for the next 20 minutes anyway.  Hope I don't forget a minus sign!
+          </p>
+        </li>
+      </ol>
+
+
+    </statement>
+
+
+  </exploration>
+
+  <p>
+    Given that we have a developed an algorithm, guaranteed to terminate,
+    using only arithmetic in it's steps, it seems reasonable to think this can be done
+    via a computer.
+  </p>
+
+
+  <activity xml:id="activity-initialsage">
+    <introduction>
+      <p>
+        Let's start simple, suppose we want to solve:
+        <me>
+          \begin{array}{|cc|c|c}
+          x_1 \amp x_2 \amp  -1\\
+          \hline
+          2 \amp -1 \amp 5 \amp  -t_1 \\
+          -2 \amp 1 \amp 2  \amp   -t_2 \\
+          3 \amp 2 \amp 12  \amp   -t_3 \\
+          \hline
+          5 \amp  4 \amp  0  \amp = f \\
+          \hline
+          \end{array} 
+         </me> 
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          We can enter the above problem into sage via:
+          <sage>
+          <input>
+            %display typeset
+            A = ([2, 1], [-2, 1], [3, 2])
+            b = (5, 2, 12)
+            c = (5,4)
+            P = InteractiveLPProblemStandardForm(A, b, c, )
+            P
+          </input>         
+          </sage>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We can plot the feasible region and objective level curves, since this is a 2d problem:
+          <sage>
+            <input>
+              P.plot()
+            </input>         
+            </sage>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We could also encode this problem into a dictionary.
+          <sage>
+            <input>
+              D = P.initial_dictionary()
+              D
+            </input>
+          </sage>
+          We will understand that <m>t_1=x_3, t_2=x_4, t_3=x_5</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If we want to pivot from <m>x_4</m> to <m>x_2</m>
+          we can write that as:
+          <sage>
+            <input>
+              D.enter("x2")
+              D.leave("x4")
+              D
+            </input>
+          </sage>
+          Then we can update the dictionary:
+          <sage>
+            <input>
+              D.update()
+              D
+            </input>
+          </sage>
+          We should read this as:
+
+          <me>
+            \begin{array}{|cc|c|c}
+            x_1 \amp x_4 \amp  -1\\
+            \hline
+            4 \amp -1 \amp 3 \amp  -x_3 \\
+            -2 \amp 1 \amp 2  \amp   -x_2 \\
+            7 \amp -2 \amp 8  \amp   -x_5 \\
+            \hline
+            13 \amp  -4 \amp  0  \amp = f \\
+            \hline
+            \end{array} 
+           </me> 
+
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What pivot should we do next?  Encode it below:
+          <sage>
+            <input>
+              D.enter("FIX_ME")
+              D.leave("FIX_ME2")
+              D.update()
+              D
+            </input>
+          </sage>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We can check at any point if we have an optimal solution.
+          <sage>
+            <input>
+              D.is_optimal()
+            </input>
+          </sage>
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        So if we want to solve:
+        <me>
+          \begin{array}{|cccc|c|c}
+           x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
+           \hline
+           1 \amp  0 \amp 1 \amp 2 \amp 3 \amp -t_1 \\
+           -1 \amp  1 \amp 1 \amp 0 \amp 4 \amp -t_2 \\
+           1 \amp  1 \amp 0 \amp 1 \amp 2 \amp -t_3 \\
+          \hline
+           1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
+          \hline
+          \end{array} 
+         </me>
+         We can encode this in:
+         <sage>
+          <input>
+            %display typeset
+            A = ([1, 0, 1, 2], [-1, 1, 1, 0], [1, 1, 0, 1])
+            b = (3, 4, 2)
+            c = (1, 3, 2, 1)
+            P = InteractiveLPProblemStandardForm(A, b, c,)
+            P
+          </input>         
+          </sage>
+          
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          We now encode the above problem in a dictionary.
+          <sage>
+            <input>
+              %display typeset
+              D = P.initial_dictionary()
+              D
+            </input>         
+            </sage>
+            
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We can see who can enter:
+          <sage>
+            <input>
+              D.possible_entering()
+            </input>
+          </sage> 
+          If we say, pick <m>x_2</m> to enter, see who can legitimately leave:
+          <sage>
+            <input>
+              D.enter("x2")
+              D.possible_leaving()
+            </input>
+          </sage>   
+          Then select one to leave
+          <sage>
+            <input>
+              D.leave(FIXME)
+              D.update()
+              D
+            </input>
+          </sage>   
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          From here, pick another legitimate pivot and perform it:
+          <sage>
+            <input>
+              D.enter("FIX_ME")
+              D.leave("FIX_ME2")
+              D.update()
+              D
+            </input>
+          </sage>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          This still seems like a it would be annoying.  Why don't we revisit the original problem
+          <sage>
+            <input>
+              %display typeset
+              P
+            </input>
+          </sage>
+          and then just run the simplex algorithm:
+          <sage>
+            <input>
+              %display typeset
+              P.run_simplex_method()
+            </input>
+          </sage>
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+
+  <activity>
+    <introduction>
+      <p>
+        Remember that cycling example <xref ref="activity-cyclingexample"/>?
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Encode the problem into sage:
+          <sage>
+            <input>
+              %display typeset
+              A = (FIX_ME)
+              b = (FIX_ME)
+              c = (FIX_ME)
+              P = InteractiveLPProblemStandardForm(A, b, c, )
+              P
+            </input>         
+            </sage>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Now let's run the simplex algorithm to see what the deal is:
+          <sage>
+            <input>
+              %display typeset
+              P.run_simplex_method()
+            </input>
+          </sage>
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <!--<activity>
+    <introduction>
+      <p>
+        Look at the problem from <xref ref="activity-initialsage"/>.  
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Add a constraint so the problem is still feasible, but the origin is not.
+          <sage>
+            <input>
+              %display typeset
+              A = ([2, 1], [-2, 1], [3, 2], FIX_ME)
+              b = (5, 2, 12, FIX_ME)
+              c = (5,4)
+              P = InteractiveLPProblemStandardForm(A, b, c, )
+              P
+            </input>         
+            </sage>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Run the simplex method to see how it deals with the infeasible initial tableau:
+          <sage>
+            <input>
+              %display typeset
+              P.run_simplex_method()
+            </input>
+          </sage>
+        </p>
+      </statement>
+    </task>
+    
+  </activity>-->
+</section>

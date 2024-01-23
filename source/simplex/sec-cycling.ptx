@@ -8,7 +8,7 @@
 
   
 
-  <activity>
+  <activity xml:id="activity-cyclingexample"> 
     <introduction>
       <p>
         Consider the following canonical maximization tableau:
@@ -248,7 +248,7 @@
         <mrow>f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d</mrow>
       </md>
 
-      Note that since the above pivot was valud, we must have that <m>c_s>0, a_{ts}>0</m> 
+      Note that since the above pivot was valid, we must have that <m>c_s>0, a_{ts}>0</m> 
       and since the pivot was degenerate, we have <m>b_t=0</m>.
     </p>
 
@@ -324,6 +324,15 @@
       which is a contradiction.
     </p>
   </proof>
+
+  <activity>
+    <statement>
+      <p>
+        If we follow <xref ref="thm-BlandAnticycling"/> then no basis is visited twice during the Simplex
+        Algorithm.  Note that <m>f</m> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?
+      </p>
+    </statement>
+  </activity>
   
 
 

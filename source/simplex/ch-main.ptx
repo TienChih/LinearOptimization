@@ -12,6 +12,7 @@
   <xi:include href="sec-curious.ptx" />
   <xi:include href="sec-simplexmax.ptx" />
   <xi:include href="sec-simplexmin.ptx" /> 
-  <xi:include href="sec-cycling.ptx" /> 
+  <xi:include href="sec-cycling.ptx" />
+  <xi:include href="sec-simplexsage.ptx" /> 
 
 </chapter>
