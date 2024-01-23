@@ -218,7 +218,7 @@
          \cdots \amp x_s \amp \cdots \amp  -1\amp \\
         \hline
        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-        \vdots \amp a_{ts} \amp \vdots \amp 0 \amp x_t \\
+        \vdots \amp a_{ts} \amp \vdots \amp 0 \amp -x_t \\
         \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
         \hline
         \cdots \amp c_s \amp \cdots \amp d \amp =f \\
@@ -229,7 +229,7 @@
          \cdots \amp x_t \amp \cdots \amp  -1\amp \\
         \hline
        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-        \vdots \amp ? \amp \vdots \amp  0 \amp x_s \\
+        \vdots \amp ? \amp \vdots \amp  0 \amp -x_s \\
         \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
         \hline
         \cdots \amp ?\amp \cdots \amp d \amp =f \\
@@ -259,7 +259,7 @@
          \cdots \amp x_t \amp \cdots \amp  -1\amp \\
         \hline
        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-        \vdots \amp ? \amp \vdots \amp  0 \amp x_? \\
+        \vdots \amp ? \amp \vdots \amp  0 \amp -x_? \\
         \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
         \hline
         \cdots \amp c_t^*\amp \cdots \amp d \amp =f \\
@@ -270,7 +270,7 @@
          \cdots \amp x_? \amp \cdots \amp  -1\amp \\
         \hline
        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-        \vdots \amp ? \amp \vdots \amp  0 \amp x_t \\
+        \vdots \amp ? \amp \vdots \amp  0 \amp -x_t \\
         \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
         \hline
         \cdots \amp ?\amp \cdots \amp d \amp =f \\
@@ -313,8 +313,8 @@
          \cdots \amp x_s \amp \cdots \amp  -1\amp \\
         \hline
        \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-        \vdots \amp a_{ts} \amp \vdots \amp 0 \amp x_t \\
-        \vdots \amp a_{rs} \amp \vdots \amp 0 \amp x_r \\
+        \vdots \amp a_{ts} \amp \vdots \amp 0 \amp -x_t \\
+        \vdots \amp a_{rs} \amp \vdots \amp 0 \amp -x_r \\
         \cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
         \hline
         \cdots \amp c_s \amp \cdots \amp d \amp =f \\
