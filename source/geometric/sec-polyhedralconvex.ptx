@@ -67,7 +67,7 @@
     <introduction>
       <statement>
         <p>
-          Let <m>P=(-3,1), Q=(2,-5)</m>.  Let <m>X=t\cdot P+(1-t)\cdot Q</m> for some <m>0\leq t\leq </m>
+          Let <m>P=(-3,1), Q=(2,-5)</m>.  Let <m>X=t\cdot P+(1-t)\cdot Q</m> for some <m>0\leq t\leq 1</m>
         </p>
       </statement>
     </introduction>
@@ -150,7 +150,7 @@
   <activity>
     <introduction>
       <p>
-        For each of the following subsets of <m>R^2</m>, sketch the region, decide if it is convex or not.
+        For each of the following subsets of <m>\mathbb{R}^2</m>, sketch the region, decide if it is convex or not.
       </p>
     </introduction>
     <task>

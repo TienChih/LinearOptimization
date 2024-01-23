@@ -64,7 +64,7 @@
   <activity xml:id="activity-examplediet">
     <introduction>
       <p>
-        Suppose Carlos planning a meal is shopping for a meal.  Mini bell peppers are $1.00 (simplified) a pound, Chicken is $1.25 a pound and Spaghetti wuth sauce is $0.80 a cup.
+        Suppose Carlos planning a meal is shopping for a meal.  Mini bell peppers are $1.00 (simplified) a pound, Chicken is $1.25 a pound and Spaghetti with sauce is $0.80 a cup.
       </p>
       <p>
         A pound of Bell Peppers has 500 units of vitamin A, 30 calories and 10 units of calcium.   A pound of Chicken has 75 units of vitamin A, 280 calories and 22 units of calcium.  A cup of Spaghetti with sauce has 2000 units of Vitamin A, 240 Calories and 52 units of Calcium.
