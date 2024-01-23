@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>A Curious Situation</title>
+<title>Using Sage</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,7 +86,19 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -137,7 +149,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-pivot.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-simplexmax.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-cycling.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -163,92 +175,182 @@ true);
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">3</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Curious Situation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Curious Situation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Using Sage</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-curious"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">A Curious Situation</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simplexsage"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.6</span><span class="space"> </span><span class="title">Using Sage</span>
 </h2>
-<article class="activity project-like" id="activity-insurance"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+<article class="exploration project-like" id="sec-simplexsage-2"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.6.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-insurance-1">
-<div class="para" id="activity-insurance-1-1">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div> <div class="para" id="activity-insurance-1-2">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div> <div class="para" id="activity-insurance-1-3">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div> <div class="para logical" id="activity-insurance-1-4">
-<div class="para">Now, the company wants to assign values <span class="process-math">\(y_A, y_B, y_C\)</span> to the three ingredients.  The values for each should be enough so that in a disaster, the potential revenue is recovered, ie:</div>
-<div class="displaymath process-math" id="activity-insurance-1-4-2">
-\begin{align*}
-y_A +2y_B+2y_C \amp \geq 200 \\
-2y_A +2y_B+y_C \amp \geq 150 
-\end{align*}
-</div>
-<div class="para">Of course, the values shouldn’t be negative, so <span class="process-math">\(y_A, y_B, y_C\geq 0\text{.}\)</span>
-</div>
-</div> <div class="para" id="activity-insurance-1-5">But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize <span class="process-math">\(g(y_A, y_B, y_C)=20y_A+30y_B+25y_C\text{.}\)</span>
-</div> <div class="para logical" id="activity-insurance-1-6">
-<div class="para">We can convert this into a max problem to solve, but we can also record it in the following tableau:</div>
+<div class="para logical" id="sec-simplexsage-2-1-1">
+<div class="para">Suppose we wanted to solve the following maximization problem by hand:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{array}{c|cc|c|}
+\begin{array}{|cccc|c|c}
+x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
 \hline
-y_A\amp 1 \amp 2 \amp 20 \\
-y_B \amp 2 \amp 2\amp   30 \\
-y_C \amp 2 \amp 1\amp   25 \\
+1 \amp  0 \amp 1 \amp 2 \amp 3 \amp -t_1 \\
+-1 \amp  1 \amp 1 \amp 0 \amp 4 \amp -t_2 \\
+1 \amp  1 \amp 0 \amp 1 \amp 2 \amp -t_3 \\
 \hline
--1 \amp 200  \amp 150 \amp   0 \\
+1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
 \hline
-\amp s_1 \amp s_2 \amp   g
 \end{array} 
 \end{equation*}
 </div>
-</div>
-</div>
-<article class="task exercise-like" id="activity-insurance-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="activity-insurance-2-1-1">
-<div class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span>
-</div>
+<div class="para">How annoying would this be?</div>
+</div> <ol class="upper-alpha cols2">
+<li id="sec-simplexsage-2-1-2-1"><div class="para" id="sec-simplexsage-2-1-2-1-1">Very.</div></li>
+<li id="sec-simplexsage-2-1-2-2"><div class="para" id="sec-simplexsage-2-1-2-2-1">Extraordinarily</div></li>
+<li id="sec-simplexsage-2-1-2-3"><div class="para" id="sec-simplexsage-2-1-2-3-1">Horrifically</div></li>
+<li id="sec-simplexsage-2-1-2-4"><div class="para" id="sec-simplexsage-2-1-2-4-1">I have nothing to do for the next 20 minutes anyway.  Hope I don’t forget a minus sign!</div></li>
+</ol></article><div class="para" id="sec-simplexsage-3">Given that we have a developed an algorithm, guaranteed to terminate, using only arithmetic in it’s steps, it seems reasonable to think this can be done via a computer.</div>
+<article class="activity project-like" id="activity-initialsage"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="activity-initialsage-1"><div class="para logical" id="activity-initialsage-1-1">
+<div class="para">Let’s start simple, suppose we want to solve:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{array}{c|cc|c|}
+\begin{array}{|cc|c|c}
+x_1 \amp x_2 \amp  -1\\
 \hline
-y_A\amp 1 \amp 2 \amp 20 \\
-y_B \amp 2 \amp 2\amp   30 \\
-y_C \amp 2^* \amp 1\amp   25 \\
+2 \amp -1 \amp 5 \amp  -t_1 \\
+-2 \amp 1 \amp 2  \amp   -t_2 \\
+3 \amp 2 \amp 12  \amp   -t_3 \\
 \hline
--1 \amp 200  \amp 150 \amp   0 \\
+5 \amp  4 \amp  0  \amp = f \\
 \hline
-\amp s_1 \amp s_2 \amp   g
 \end{array} 
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="activity-insurance-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="activity-insurance-3-1-1">
-<div class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span>
-</div>
+</div></div>
+<article class="task exercise-like" id="activity-initialsage-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-initialsage-2-1-1">We can enter the above problem into sage via: <pre id="activity-initialsage-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+A = ([2, 1], [-2, 1], [3, 2])
+b = (5, 2, 12)
+c = (5,4)
+P = InteractiveLPProblemStandardForm(A, b, c, )
+P
+</script></pre>
+</div></article><article class="task exercise-like" id="activity-initialsage-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-initialsage-3-1-1">We can plot the feasible region and objective level curves, since this is a 2d problem: <pre id="activity-initialsage-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P.plot()
+</script></pre>
+</div></article><article class="task exercise-like" id="activity-initialsage-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-initialsage-4-1-1">We could also encode this problem into a dictionary. <pre id="activity-initialsage-4-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D = P.initial_dictionary()
+D
+</script></pre> We will understand that <span class="process-math">\(t_1=x_3, t_2=x_4, t_3=x_5\text{.}\)</span>
+</div></article><article class="task exercise-like" id="activity-initialsage-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="activity-initialsage-5-1-1">
+<div class="para">If we want to pivot from <span class="process-math">\(x_4\)</span> to <span class="process-math">\(x_2\)</span> we can write that as: <pre id="activity-initialsage-5-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("x2")
+D.leave("x4")
+D
+</script></pre> Then we can update the dictionary: <pre id="activity-initialsage-5-1-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.update()
+D
+</script></pre> We should read this as:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\begin{array}{c|cc|c|}
+\begin{array}{|cc|c|c}
+x_1 \amp x_4 \amp  -1\\
 \hline
-y_A\amp ? \amp ? \amp ? \\
-y_B \amp ? \amp ?^* \amp ? \\
-s_1 \amp ? \amp ? \amp   ? \\
+4 \amp -1 \amp 3 \amp  -x_3 \\
+-2 \amp 1 \amp 2  \amp   -x_2 \\
+7 \amp -2 \amp 8  \amp   -x_5 \\
 \hline
--1 \amp ?  \amp ? \amp   ? \\
+13 \amp  -4 \amp  0  \amp = f \\
 \hline
-\amp y_C \amp s_2 \amp   g
 \end{array} 
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="activity-insurance-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-insurance-4-1-1">Compare this solution and tableau to the final solution in <a href="" class="xref" data-knowl="./knowl/xref/activity-widget.html" title="Activity 3.1.3">Activity 3.1.3</a>. What do you notice?</div>
-<div class="solutions"><details id="activity-insurance-4-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="activity-insurance-4-2-1"><a class="external" href="https://www.math3d.org/9TcqmTqyp" target="_blank"><code class="code-inline tex2jax_ignore">https://www.math3d.org/9TcqmTqyp</code></a></div></div></details></div></article></article><div class="para" id="sec-curious-3"></div></section></div>
+</div></article><article class="task exercise-like" id="activity-initialsage-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-initialsage-6-1-1">What pivot should we do next?  Encode it below: <pre id="activity-initialsage-6-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("FIX_ME")
+D.leave("FIX_ME2")
+D.update()
+D
+</script></pre>
+</div></article><article class="task exercise-like" id="activity-initialsage-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-initialsage-7-1-1">We can check at any point if we have an optimal solution. <pre id="activity-initialsage-7-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.is_optimal()
+</script></pre>
+</div></article></article><article class="activity project-like" id="sec-simplexsage-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-simplexsage-5-1"><div class="para logical" id="sec-simplexsage-5-1-1">
+<div class="para">So if we want to solve:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{|cccc|c|c}
+x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
+\hline
+1 \amp  0 \amp 1 \amp 2 \amp 3 \amp -t_1 \\
+-1 \amp  1 \amp 1 \amp 0 \amp 4 \amp -t_2 \\
+1 \amp  1 \amp 0 \amp 1 \amp 2 \amp -t_3 \\
+\hline
+1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
+\hline
+\end{array} 
+\end{equation*}
+</div>
+<div class="para">We can encode this in: <pre id="sec-simplexsage-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+A = ([1, 0, 1, 2], [-1, 1, 1, 0], [1, 1, 0, 1])
+b = (3, 4, 2)
+c = (1, 3, 2, 1)
+P = InteractiveLPProblemStandardForm(A, b, c,)
+P
+</script></pre>
+</div>
+</div></div>
+<article class="task exercise-like" id="sec-simplexsage-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-simplexsage-5-2-1-1">We now encode the above problem in a dictionary. <pre id="sec-simplexsage-5-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+D = P.initial_dictionary()
+D
+</script></pre>
+</div></article><article class="task exercise-like" id="sec-simplexsage-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-simplexsage-5-3-1-1">We can see who can enter: <pre id="sec-simplexsage-5-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.possible_entering()
+</script></pre> If we say, pick <span class="process-math">\(x_2\)</span> to enter, see who can legitimately leave: <pre id="sec-simplexsage-5-3-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("x2")
+D.possible_leaving()
+</script></pre> Then select one to leave <pre id="sec-simplexsage-5-3-1-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.leave(FIXME)
+D.update()
+D
+</script></pre>
+</div></article><article class="task exercise-like" id="sec-simplexsage-5-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-simplexsage-5-4-1-1">From here, pick another legitimate pivot and perform it: <pre id="sec-simplexsage-5-4-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("FIX_ME")
+D.leave("FIX_ME2")
+D.update()
+D
+</script></pre>
+</div></article><article class="task exercise-like" id="sec-simplexsage-5-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-simplexsage-5-5-1-1">This still seems like a it would be annoying.  Why don’t we revisit the original problem <pre id="sec-simplexsage-5-5-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+P
+</script></pre> and then just run the simplex algorithm: <pre id="sec-simplexsage-5-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+P.run_simplex_method()
+</script></pre>
+</div></article></article><article class="activity project-like" id="sec-simplexsage-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.4</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-simplexsage-6-1"><div class="para" id="sec-simplexsage-6-1-1">Remember that cycling example <a href="" class="xref" data-knowl="./knowl/xref/activity-cyclingexample.html" title="Activity 3.5.1">Activity 3.5.1</a>?</div></div>
+<article class="task exercise-like" id="sec-simplexsage-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-simplexsage-6-2-1-1">Encode the problem into sage: <pre id="sec-simplexsage-6-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+A = (FIX_ME)
+b = (FIX_ME)
+c = (FIX_ME)
+P = InteractiveLPProblemStandardForm(A, b, c, )
+P
+</script></pre>
+</div></article><article class="task exercise-like" id="sec-simplexsage-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-simplexsage-6-3-1-1">Now let’s run the simplex algorithm to see what the deal is: <pre id="sec-simplexsage-6-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+P.run_simplex_method()
+</script></pre>
+</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-pivot.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simplexmax.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-cycling.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

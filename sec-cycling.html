@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear Optimization">
 <meta property="book:author" content="Tien Chih">
-<script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -41,7 +41,24 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
   "chtml": {
     "scale": 0.98,
@@ -120,7 +137,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-simplexmin.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-simplexmin.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-simplexsage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \DeclareMathOperator{\dim}{dim} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -150,6 +167,7 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Using Sage</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -157,10 +175,10 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cycling"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Cycling</span>
 </h2>
-<article class="activity project-like" id="sec-cycling-2"><h3 class="heading">
+<article class="activity project-like" id="activity-cyclingexample"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-cycling-2-1"><div class="para logical" id="sec-cycling-2-1-1">
+<div class="introduction" id="activity-cyclingexample-1"><div class="para logical" id="activity-cyclingexample-1-1">
 <div class="para">Consider the following canonical maximization tableau:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -176,8 +194,8 @@ x_1\amp x_2 \amp x_3 \amp x_4 \amp -1 \amp  \\
 \end{equation*}
 </div>
 </div></div>
-<article class="task exercise-like" id="sec-cycling-2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-cycling-2-2-1-1">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>, and keep track of the variables.</div> <div class="para logical" id="sec-cycling-2-2-1-2">
+<article class="task exercise-like" id="activity-cyclingexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-cyclingexample-2-1-1">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>, and keep track of the variables.</div> <div class="para logical" id="activity-cyclingexample-2-1-2">
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cccc|c|}
@@ -250,8 +268,8 @@ x_1\amp x_2 \amp x_3 \amp x_4 \amp -1 \amp  \\
 \end{array} 
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="sec-cycling-2-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-cycling-2-3-1-1">Compare your final tableau to the initial tableau.  Are there any similarities?</div></article></article><article class="activity project-like" id="sec-cycling-3"><h3 class="heading">
+</div></article><article class="task exercise-like" id="activity-cyclingexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-cyclingexample-3-1-1">Compare your final tableau to the initial tableau.  Are there any similarities?</div></article></article><article class="activity project-like" id="sec-cycling-3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-cycling-3-1"><div class="para logical" id="sec-cycling-3-1-1">
@@ -336,7 +354,7 @@ x_k \amp = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_
 f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d
 \end{align*}
 </div>
-<div class="para">Note that since the above pivot was valud, we must have that <span class="process-math">\(c_s&gt;0, a_{ts}&gt;0\)</span> and since the pivot was degenerate, we have <span class="process-math">\(b_t=0\text{.}\)</span>
+<div class="para">Note that since the above pivot was valid, we must have that <span class="process-math">\(c_s&gt;0, a_{ts}&gt;0\)</span> and since the pivot was degenerate, we have <span class="process-math">\(b_t=0\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="sec-cycling-8-5">
 <div class="para">Now, because we have cycling, we must have that <span class="process-math">\(x_t\)</span> reenters the basis at some point</div>
@@ -432,9 +450,12 @@ c_r^*a_{rs}\lt 0.
 \end{equation*}
 </div>
 <div class="para">which is a contradiction.</div>
-</div></article></details></section></div>
+</div></article></details><article class="activity project-like" id="sec-cycling-9"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-cycling-9-1-1">If we follow <a href="" class="xref" data-knowl="./knowl/xref/thm-BlandAnticycling.html" title="Theorem 3.5.3: Bland’s Anticycling Rules">Theorem 3.5.3</a> then no basis is visited twice during the Simplex Algorithm.  Note that <span class="process-math">\(f\)</span> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-simplexmin.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-simplexmin.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simplexsage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

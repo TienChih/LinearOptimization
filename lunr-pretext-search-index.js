@@ -601,12 +601,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.5",
   "title": "Cycling",
-  "body": " Cycling    Consider the following canonical maximization tableau:     Perform the following sequence of pivots, ensure each time that it is a valid pivot according to , and keep track of the variables.            Compare your final tableau to the initial tableau. Are there any similarities?      Consider canonical linear programming problem: Maximzie , subject to     Consider a sequence of pivots swapping ,  , . In each of these cases, what is the point of intersection?          If a series of pivots in accordance to allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena Cycling .      If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a degenerate pivot.    Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate. Fortunately, there is a solution to this issue.   Bland's Anticycling Rules   List all variables, independent and dependent in the initial tableau. Then consider the following rules:    Whenever there is more than one possible choice for a pivot row according to : select the row corresponding to the variable closest to the front of the initial list.    Whenever there is more than one possible choice for a pivot column according to : select the column corresponding to the variable closest to the front of the initial list.    Then the Simplex Algorthm will not cycle.     For the sake of notation, we denote the initial tableau: and order the variables in the associated way. Suppose we follow Bland's rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) . We call a variable  fickle if is in one, but not all of the bases. That is, it leaves a basis, and reenters it later during the cycle.  Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if is fickle, for each basic solution during the cycle.  Since the number of variables is finite, the set of fickle variables is also finite, and let denote the fickle variable with largest subscript. Suppose that (why must such a exist?). Denote the entering variable from with . Note that must also be fickle (why?) and so .  We call the dictionary for a basis the system of equations corresponding to that basis. So the dictionary for is which we can write as: Note that since the above pivot was valud, we must have that and since the pivot was degenerate, we have .  Now, because we have cycling, we must have that reenters the basis at some point Note that for this pivot to be valid, we have that . If we let denote the dictionary before re-enters the basis, we have: So note that the solution space to the system of equations for both these dictionaries are the same. So we have a solution for (not neccessarily feasible ie non-negativity may fail) that must also be a solution to :   So we have where for . So via algebra:   The above equation holds true no matter what is. Thus: Note that , NOT is entering the basis. If is already in the basis, . Otherwise, , otherwise would have entered by Bland's Anticyling rules. We've also shown . Thus which is only possible if there is some such that   From this, we know that . So , but , so is fickle. Since is the largest index of a fickle variable, . Note that is not entering from , so . Thus .  But is fickle, so in . But then, we would have picked , not to leave. which is a contradiction.   "
+  "body": " Cycling    Consider the following canonical maximization tableau:     Perform the following sequence of pivots, ensure each time that it is a valid pivot according to , and keep track of the variables.            Compare your final tableau to the initial tableau. Are there any similarities?      Consider canonical linear programming problem: Maximzie , subject to     Consider a sequence of pivots swapping ,  , . In each of these cases, what is the point of intersection?          If a series of pivots in accordance to allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena Cycling .      If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a degenerate pivot.    Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate. Fortunately, there is a solution to this issue.   Bland's Anticycling Rules   List all variables, independent and dependent in the initial tableau. Then consider the following rules:    Whenever there is more than one possible choice for a pivot row according to : select the row corresponding to the variable closest to the front of the initial list.    Whenever there is more than one possible choice for a pivot column according to : select the column corresponding to the variable closest to the front of the initial list.    Then the Simplex Algorthm will not cycle.     For the sake of notation, we denote the initial tableau: and order the variables in the associated way. Suppose we follow Bland's rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) . We call a variable  fickle if is in one, but not all of the bases. That is, it leaves a basis, and reenters it later during the cycle.  Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if is fickle, for each basic solution during the cycle.  Since the number of variables is finite, the set of fickle variables is also finite, and let denote the fickle variable with largest subscript. Suppose that (why must such a exist?). Denote the entering variable from with . Note that must also be fickle (why?) and so .  We call the dictionary for a basis the system of equations corresponding to that basis. So the dictionary for is which we can write as: Note that since the above pivot was valid, we must have that and since the pivot was degenerate, we have .  Now, because we have cycling, we must have that reenters the basis at some point Note that for this pivot to be valid, we have that . If we let denote the dictionary before re-enters the basis, we have: So note that the solution space to the system of equations for both these dictionaries are the same. So we have a solution for (not neccessarily feasible ie non-negativity may fail) that must also be a solution to :   So we have where for . So via algebra:   The above equation holds true no matter what is. Thus: Note that , NOT is entering the basis. If is already in the basis, . Otherwise, , otherwise would have entered by Bland's Anticyling rules. We've also shown . Thus which is only possible if there is some such that   From this, we know that . So , but , so is fickle. Since is the largest index of a fickle variable, . Note that is not entering from , so . Thus .  But is fickle, so in . But then, we would have picked , not to leave. which is a contradiction.     If we follow then no basis is visited twice during the Simplex Algorithm. Note that is non-decreasing with each pivot. Must the Simplex Algorithm terminate? Why?    "
 },
 {
-  "id": "sec-cycling-2",
+  "id": "activity-cyclingexample",
   "level": "2",
-  "url": "sec-cycling.html#sec-cycling-2",
+  "url": "sec-cycling.html#activity-cyclingexample",
   "type": "Activity",
   "number": "3.5.1",
   "title": "",
@@ -655,7 +655,61 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "3.5.1",
   "title": "",
-  "body": " For the sake of notation, we denote the initial tableau: and order the variables in the associated way. Suppose we follow Bland's rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) . We call a variable  fickle if is in one, but not all of the bases. That is, it leaves a basis, and reenters it later during the cycle.  Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if is fickle, for each basic solution during the cycle.  Since the number of variables is finite, the set of fickle variables is also finite, and let denote the fickle variable with largest subscript. Suppose that (why must such a exist?). Denote the entering variable from with . Note that must also be fickle (why?) and so .  We call the dictionary for a basis the system of equations corresponding to that basis. So the dictionary for is which we can write as: Note that since the above pivot was valud, we must have that and since the pivot was degenerate, we have .  Now, because we have cycling, we must have that reenters the basis at some point Note that for this pivot to be valid, we have that . If we let denote the dictionary before re-enters the basis, we have: So note that the solution space to the system of equations for both these dictionaries are the same. So we have a solution for (not neccessarily feasible ie non-negativity may fail) that must also be a solution to :   So we have where for . So via algebra:   The above equation holds true no matter what is. Thus: Note that , NOT is entering the basis. If is already in the basis, . Otherwise, , otherwise would have entered by Bland's Anticyling rules. We've also shown . Thus which is only possible if there is some such that   From this, we know that . So , but , so is fickle. Since is the largest index of a fickle variable, . Note that is not entering from , so . Thus .  But is fickle, so in . But then, we would have picked , not to leave. which is a contradiction.  "
+  "body": " For the sake of notation, we denote the initial tableau: and order the variables in the associated way. Suppose we follow Bland's rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) . We call a variable  fickle if is in one, but not all of the bases. That is, it leaves a basis, and reenters it later during the cycle.  Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if is fickle, for each basic solution during the cycle.  Since the number of variables is finite, the set of fickle variables is also finite, and let denote the fickle variable with largest subscript. Suppose that (why must such a exist?). Denote the entering variable from with . Note that must also be fickle (why?) and so .  We call the dictionary for a basis the system of equations corresponding to that basis. So the dictionary for is which we can write as: Note that since the above pivot was valid, we must have that and since the pivot was degenerate, we have .  Now, because we have cycling, we must have that reenters the basis at some point Note that for this pivot to be valid, we have that . If we let denote the dictionary before re-enters the basis, we have: So note that the solution space to the system of equations for both these dictionaries are the same. So we have a solution for (not neccessarily feasible ie non-negativity may fail) that must also be a solution to :   So we have where for . So via algebra:   The above equation holds true no matter what is. Thus: Note that , NOT is entering the basis. If is already in the basis, . Otherwise, , otherwise would have entered by Bland's Anticyling rules. We've also shown . Thus which is only possible if there is some such that   From this, we know that . So , but , so is fickle. Since is the largest index of a fickle variable, . Note that is not entering from , so . Thus .  But is fickle, so in . But then, we would have picked , not to leave. which is a contradiction.  "
+},
+{
+  "id": "sec-cycling-9",
+  "level": "2",
+  "url": "sec-cycling.html#sec-cycling-9",
+  "type": "Activity",
+  "number": "3.5.3",
+  "title": "",
+  "body": "  If we follow then no basis is visited twice during the Simplex Algorithm. Note that is non-decreasing with each pivot. Must the Simplex Algorithm terminate? Why?   "
+},
+{
+  "id": "sec-simplexsage",
+  "level": "1",
+  "url": "sec-simplexsage.html",
+  "type": "Section",
+  "number": "3.6",
+  "title": "Using Sage",
+  "body": " Using Sage    Suppose we wanted to solve the following maximization problem by hand: How annoying would this be?    Very.    Extraordinarily    Horrifically    I have nothing to do for the next 20 minutes anyway. Hope I don't forget a minus sign!      Given that we have a developed an algorithm, guaranteed to terminate, using only arithmetic in it's steps, it seems reasonable to think this can be done via a computer.    Let's start simple, suppose we want to solve:     We can enter the above problem into sage via:     We can plot the feasible region and objective level curves, since this is a 2d problem:     We could also encode this problem into a dictionary. We will understand that .    If we want to pivot from to we can write that as: Then we can update the dictionary: We should read this as:     What pivot should we do next? Encode it below:     We can check at any point if we have an optimal solution.       So if we want to solve: We can encode this in:     We now encode the above problem in a dictionary.     We can see who can enter: If we say, pick to enter, see who can legitimately leave: Then select one to leave     From here, pick another legitimate pivot and perform it:     This still seems like a it would be annoying. Why don't we revisit the original problem and then just run the simplex algorithm:       Remember that cycling example ?    Encode the problem into sage:     Now let's run the simplex algorithm to see what the deal is:      "
+},
+{
+  "id": "sec-simplexsage-2",
+  "level": "2",
+  "url": "sec-simplexsage.html#sec-simplexsage-2",
+  "type": "Exploration",
+  "number": "3.6.1",
+  "title": "",
+  "body": "  Suppose we wanted to solve the following maximization problem by hand: How annoying would this be?    Very.    Extraordinarily    Horrifically    I have nothing to do for the next 20 minutes anyway. Hope I don't forget a minus sign!     "
+},
+{
+  "id": "activity-initialsage",
+  "level": "2",
+  "url": "sec-simplexsage.html#activity-initialsage",
+  "type": "Activity",
+  "number": "3.6.2",
+  "title": "",
+  "body": "  Let's start simple, suppose we want to solve:     We can enter the above problem into sage via:     We can plot the feasible region and objective level curves, since this is a 2d problem:     We could also encode this problem into a dictionary. We will understand that .    If we want to pivot from to we can write that as: Then we can update the dictionary: We should read this as:     What pivot should we do next? Encode it below:     We can check at any point if we have an optimal solution.    "
+},
+{
+  "id": "sec-simplexsage-5",
+  "level": "2",
+  "url": "sec-simplexsage.html#sec-simplexsage-5",
+  "type": "Activity",
+  "number": "3.6.3",
+  "title": "",
+  "body": "  So if we want to solve: We can encode this in:     We now encode the above problem in a dictionary.     We can see who can enter: If we say, pick to enter, see who can legitimately leave: Then select one to leave     From here, pick another legitimate pivot and perform it:     This still seems like a it would be annoying. Why don't we revisit the original problem and then just run the simplex algorithm:    "
+},
+{
+  "id": "sec-simplexsage-6",
+  "level": "2",
+  "url": "sec-simplexsage.html#sec-simplexsage-6",
+  "type": "Activity",
+  "number": "3.6.4",
+  "title": "",
+  "body": "  Remember that cycling example ?    Encode the problem into sage:     Now let's run the simplex algorithm to see what the deal is:    "
 },
 {
   "id": "backmatter-2",
