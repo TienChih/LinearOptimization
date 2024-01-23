@@ -235,7 +235,7 @@ x_1 \amp x_2 \amp  -1\\
 </div></div>
 <article class="task exercise-like" id="activity-initialsage-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-initialsage-2-1-1">We can enter the above problem into sage via: <pre id="activity-initialsage-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
-A = ([2, 1], [-2, 1], [3, 2])
+A = ([2, -1], [-2, 1], [3, 2])
 b = (5, 2, 12)
 c = (5,4)
 P = InteractiveLPProblemStandardForm(A, b, c, )
@@ -261,11 +261,11 @@ D
 \begin{array}{|cc|c|c}
 x_1 \amp x_4 \amp  -1\\
 \hline
-4 \amp -1 \amp 3 \amp  -x_3 \\
+0 \amp 1 \amp 7 \amp  -x_3 \\
 -2 \amp 1 \amp 2  \amp   -x_2 \\
 7 \amp -2 \amp 8  \amp   -x_5 \\
 \hline
-13 \amp  -4 \amp  0  \amp = f \\
+13 \amp  -4 \amp  -8  \amp = f \\
 \hline
 \end{array} 
 \end{equation*}
