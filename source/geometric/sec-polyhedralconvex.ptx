@@ -13,7 +13,7 @@
       </p>
       <hint>
         <p>
-          <interactive math3d="F5HLWe9tj" width="100%"  />
+          <interactive iframe="https://www.math3d.org/F5HLWe9tj" width="100%" aspect="1:1"/>
         </p>
         <p>
           <url href="https://www.math3d.org/F5HLWe9tj" visual="https://www.math3d.org/F5HLWe9tj">https://www.math3d.org/F5HLWe9tj</url>
@@ -288,6 +288,34 @@
     </task>
   </activity>
 
+  <example>
+    <statement>
+      <p>
+        The feasible region for <xref ref="activity-exampleart"/> is:
+        
+      </p>
+      <hint>
+        <p>
+          <interactive desmos="dvljeqhmhe" width="100%" aspect="1:1"/>
+        </p>
+      </hint>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        The feasible region for <xref ref="activity-examplediet"/> is:
+        
+      </p>
+      <hint>
+        <p>
+          <interactive iframe="https://www.desmos.com/3d/2a07795f6e" width="100%" aspect="1:1"/>
+        </p>
+      </hint>
+    </statement>
+  </example>
+
   <definition xml:id="def-norm">
     <statement>
       <p>
@@ -379,7 +407,7 @@
         </p>
         <hint>
           <p>
-            <interactive desmos="st3epptoqk" width="100%"  />
+            <interactive desmos="st3epptoqk" width="100%" aspect="1:1"  />
           </p>
         </hint>
         
@@ -387,7 +415,7 @@
     </task>
   </activity>
 
-  <definition xml:id="def-extremepoint">
+  <definition xml:id="def-extremepoint"> 
     <statement>
       <p>
         Let <m>S\subseteq \mathbb{R}^n</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <em>extreme point</em> of <m>S</m> if there are no 
@@ -468,7 +496,7 @@
             <mrow>x, y \amp\geq 0 </mrow>
           </md>
           
-          <interactive desmos="rotodvysxj"/>
+          <interactive desmos="rotodvysxj" width="100%" aspect="1:1"/>
           
           Find  a maximal solution that is not a corner point.  Why doesn't this contradict <xref ref="thm-boundedextreme"/>?
         </p>
