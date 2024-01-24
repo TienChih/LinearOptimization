@@ -15,9 +15,7 @@
         <p>
           <interactive iframe="https://www.math3d.org/F5HLWe9tj" width="100%" aspect="1:1"/>
         </p>
-        <p>
-          <url href="https://www.math3d.org/F5HLWe9tj" visual="https://www.math3d.org/F5HLWe9tj">https://www.math3d.org/F5HLWe9tj</url>
-        </p>
+        
       </hint>
       
     </introduction>
@@ -118,11 +116,9 @@
         </p>
         <hint>
           <p>
-            <interactive math3d="CTPmgI6jF" width="100%"  />
+            <interactive iframe="https://www.desmos.com/3d/cee41aa90f" width="100%"  />
           </p>
-          <p>
-            <url href="https://www.math3d.org/CTPmgI6jF" visual="https://www.math3d.org/CTPmgI6jF">https://www.math3d.org/CTPmgI6jF</url>
-          </p>
+          
         </hint>
       </statement>
     </task>
