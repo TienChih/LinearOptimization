@@ -142,7 +142,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Polyhedral Convextiy",
-  "body": " Polyhedral Convextiy  In this section, we establish the geometric notions which underlie our work.    In , describe geometrically what the following represent.       https:\/\/www.math3d.org\/F5HLWe9tj                                  Let . Let for some      What is if ?    What is if ?    What is if ?    What is if ?    Describe the set of points .         Let Describe the set of points .       https:\/\/www.math3d.org\/CTPmgI6jF        Given , we call the set the line segment between and .      Let , we say that is convex if given any , also contains the line segment between .      For each of the following subsets of , sketch the region, decide if it is convex or not.     .     .     (in polar coordinates).     (in polar coordinates).     .     .       Let be defined by for some (ie is a half-space of ).     Let . Explain why for any .    Show that for any , that .    Let , that is, there are such that and . Show that .    Show that     Conclude that is convex.       Let be convex sets.     Show that is convex. Hint: Let . Why is the line segment between them contained in ? ?    Sketch an induction argument to show that if is convex, is convex.    Find convex sets so that is not convex.     Prove why the feasible region of a canonical linear programming problem is convex.     Given in we define the norm of to be       Given in we define the closed ball of radius centered at to be   The open ball centered at with radius is similarly defined. What do you think it is?      Describe for .      A set is bounded if there is a such that .      Which of the activities , are bounded?      Let be the feasible region of of a canonical maximization linear programming problem, let be the objective function.    Consider the point , which direction would increase the value of the most? The least? Keep the same?  (Recall the properties of the the dot product)    Let such that there is a so that . Explain why cannot be a maximizer of .    On the other hand, suppose  IS a maximizer of , what must be true about ?    Consider the canonical maximization linear programming problem:  Maximzie subject to:   How do the statements you've made above apply here? Where IS maximized? Is it consistent with what you said before?           Let be a convex set. We say is an extreme point of if there are no so that .  In other words, does not lie on any non-trivial line segment contained in .      For each of the following convex sets, find it's extreme points (if any).    The feasible region of the problem in .     .     .      If is the feasible region of a canonical problem and is bounded, then contains an optimal solution which is an extreme point of .      If is the feasible region of a canonical problem and is unbounded:    If the problem is a maximization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .    If the problem is a minimization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .        Let be the objective function for a canonical maximization problem, subject to:  Find a maximal solution that is not a corner point. Why doesn't this contradict ?    Let be optimal solutions of a canonical linear programming problem, giving optimal solution . Show that for any , and that .    Let be the objective function for a canonical maximization problem. Find a set of constraints so that the feasible region is unbounded but there is a maximal solution. Why doesn't this contradict ?      So, we see that the hunt for optimal solutions boils down to a hunt for extreme points.    In How many lines are needed to intersect to obtain a point?    In How many planes are needed to intersect to obtain a point?    In How many dimensional hyperplanes are needed to intersect to obtain a point?                          Suppose a canonical linear programming problem in is bounded by the usual hyperplanes corresponding to as well as additional hyperplanes. How many potential points of intersection could there be?                               So for a canonical linear programming problem in bounded by an additional 15 hyperplanes, how many potential extreme points are there?    "
+  "body": " Polyhedral Convextiy  In this section, we establish the geometric notions which underlie our work.    In , describe geometrically what the following represent.       https:\/\/www.math3d.org\/F5HLWe9tj                                  Let . Let for some      What is if ?    What is if ?    What is if ?    What is if ?    Describe the set of points .         Let Describe the set of points .       https:\/\/www.math3d.org\/CTPmgI6jF        Given , we call the set the line segment between and .      Let , we say that is convex if given any , also contains the line segment between .      For each of the following subsets of , sketch the region, decide if it is convex or not.     .     .     (in polar coordinates).     (in polar coordinates).     .     .       Let be defined by for some (ie is a half-space of ).     Let . Explain why for any .    Show that for any , that .    Let , that is, there are such that and . Show that .    Show that     Conclude that is convex.       Let be convex sets.     Show that is convex. Hint: Let . Why is the line segment between them contained in ? ?    Sketch an induction argument to show that if is convex, is convex.    Find convex sets so that is not convex.     Prove why the feasible region of a canonical linear programming problem is convex.     The feasible region for is:           The feasible region for is:           Given in we define the norm of to be       Given in we define the closed ball of radius centered at to be   The open ball centered at with radius is similarly defined. What do you think it is?      Describe for .      A set is bounded if there is a such that .      Which of the activities , are bounded?      Let be the feasible region of of a canonical maximization linear programming problem, let be the objective function.    Consider the point , which direction would increase the value of the most? The least? Keep the same?  (Recall the properties of the the dot product)    Let such that there is a so that . Explain why cannot be a maximizer of .    On the other hand, suppose  IS a maximizer of , what must be true about ?    Consider the canonical maximization linear programming problem:  Maximzie subject to:   How do the statements you've made above apply here? Where IS maximized? Is it consistent with what you said before?           Let be a convex set. We say is an extreme point of if there are no so that .  In other words, does not lie on any non-trivial line segment contained in .      For each of the following convex sets, find it's extreme points (if any).    The feasible region of the problem in .     .     .      If is the feasible region of a canonical problem and is bounded, then contains an optimal solution which is an extreme point of .      If is the feasible region of a canonical problem and is unbounded:    If the problem is a maximization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .    If the problem is a minimization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .        Let be the objective function for a canonical maximization problem, subject to:  Find a maximal solution that is not a corner point. Why doesn't this contradict ?    Let be optimal solutions of a canonical linear programming problem, giving optimal solution . Show that for any , and that .    Let be the objective function for a canonical maximization problem. Find a set of constraints so that the feasible region is unbounded but there is a maximal solution. Why doesn't this contradict ?      So, we see that the hunt for optimal solutions boils down to a hunt for extreme points.    In How many lines are needed to intersect to obtain a point?    In How many planes are needed to intersect to obtain a point?    In How many dimensional hyperplanes are needed to intersect to obtain a point?                          Suppose a canonical linear programming problem in is bounded by the usual hyperplanes corresponding to as well as additional hyperplanes. How many potential points of intersection could there be?                               So for a canonical linear programming problem in bounded by an additional 15 hyperplanes, how many potential extreme points are there?    "
 },
 {
   "id": "activity-planes",
@@ -217,11 +217,29 @@ var ptx_lunr_docs = [
   "body": " Prove why the feasible region of a canonical linear programming problem is convex.  "
 },
 {
+  "id": "sec-section-convexity-11",
+  "level": "2",
+  "url": "sec-section-convexity.html#sec-section-convexity-11",
+  "type": "Example",
+  "number": "2.2.3",
+  "title": "",
+  "body": "  The feasible region for is:        "
+},
+{
+  "id": "sec-section-convexity-12",
+  "level": "2",
+  "url": "sec-section-convexity.html#sec-section-convexity-12",
+  "type": "Example",
+  "number": "2.2.4",
+  "title": "",
+  "body": "  The feasible region for is:        "
+},
+{
   "id": "def-norm",
   "level": "2",
   "url": "sec-section-convexity.html#def-norm",
   "type": "Definition",
-  "number": "2.2.3",
+  "number": "2.2.5",
   "title": "",
   "body": "  Given in we define the norm of to be    "
 },
@@ -230,14 +248,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-convexity.html#def-ball",
   "type": "Definition",
-  "number": "2.2.4",
+  "number": "2.2.6",
   "title": "",
   "body": "  Given in we define the closed ball of radius centered at to be   The open ball centered at with radius is similarly defined. What do you think it is?   "
 },
 {
-  "id": "sec-section-convexity-13",
+  "id": "sec-section-convexity-15",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-13",
+  "url": "sec-section-convexity.html#sec-section-convexity-15",
   "type": "Activity",
   "number": "2.2.7",
   "title": "",
@@ -248,14 +266,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-convexity.html#def-bounded",
   "type": "Definition",
-  "number": "2.2.5",
+  "number": "2.2.7",
   "title": "",
   "body": "  A set is bounded if there is a such that .   "
 },
 {
-  "id": "sec-section-convexity-15",
+  "id": "sec-section-convexity-17",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-15",
+  "url": "sec-section-convexity.html#sec-section-convexity-17",
   "type": "Activity",
   "number": "2.2.8",
   "title": "",
@@ -275,14 +293,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-convexity.html#def-extremepoint",
   "type": "Definition",
-  "number": "2.2.6",
+  "number": "2.2.8",
   "title": "",
   "body": "  Let be a convex set. We say is an extreme point of if there are no so that .  In other words, does not lie on any non-trivial line segment contained in .   "
 },
 {
-  "id": "sec-section-convexity-18",
+  "id": "sec-section-convexity-20",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-18",
+  "url": "sec-section-convexity.html#sec-section-convexity-20",
   "type": "Activity",
   "number": "2.2.10",
   "title": "",
@@ -293,7 +311,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-convexity.html#thm-boundedextreme",
   "type": "Theorem",
-  "number": "2.2.7",
+  "number": "2.2.9",
   "title": "",
   "body": "  If is the feasible region of a canonical problem and is bounded, then contains an optimal solution which is an extreme point of .   "
 },
@@ -302,23 +320,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-convexity.html#thm-unboundedextreme",
   "type": "Theorem",
-  "number": "2.2.8",
+  "number": "2.2.10",
   "title": "",
   "body": "  If is the feasible region of a canonical problem and is unbounded:    If the problem is a maximization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .    If the problem is a minimization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .     "
 },
 {
-  "id": "sec-section-convexity-21",
+  "id": "sec-section-convexity-23",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-21",
+  "url": "sec-section-convexity.html#sec-section-convexity-23",
   "type": "Activity",
   "number": "2.2.11",
   "title": "",
   "body": "  Let be the objective function for a canonical maximization problem, subject to:  Find a maximal solution that is not a corner point. Why doesn't this contradict ?    Let be optimal solutions of a canonical linear programming problem, giving optimal solution . Show that for any , and that .    Let be the objective function for a canonical maximization problem. Find a set of constraints so that the feasible region is unbounded but there is a maximal solution. Why doesn't this contradict ?   "
 },
 {
-  "id": "sec-section-convexity-22",
+  "id": "sec-section-convexity-24",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-22",
+  "url": "sec-section-convexity.html#sec-section-convexity-24",
   "type": "Activity",
   "number": "2.2.12",
   "title": "",
