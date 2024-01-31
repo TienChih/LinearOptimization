@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-unconstrained" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Unconstrained Variables</title>
+
+
+  
+
+  
+
+  <activity xml:id="unconstrained-example">
+    <introduction>
+      <p>
+        Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.
+      </p>
+      <p>
+        Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.
+      </p>
+      <p>
+        The company has 20 units of ingredient A, 30 units of B and 25 units of C.
+      </p>
+      <p>
+        Now, the company wants to assign values <m>y_A, y_B, y_C</m> to the three ingredients.  The values for each should be enough so that in a disaster, the potential revenue is recovered, ie:
+        <md>
+          <mrow>y_A +2y_B+2y_C \amp \geq 200 </mrow>
+          <mrow>2y_A +2y_B+y_C \amp \geq 150 </mrow>
+        </md>
+        Of course, the values shouldn't be negative, so <m>y_A, y_B, y_C\geq 0</m>.
+      </p>
+      <p>
+        But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize <m>g(y_A, y_B, y_C)=20y_A+30y_B+25y_C</m>.
+      </p>
+      <p>
+        We can convert this into a max problem to solve, but we can also record it in the following tableau:
+        <me>
+          \begin{array}{c|cc|c|}
+          \hline
+           y_A\amp 1 \amp 2 \amp 20 \\
+           y_B \amp 2 \amp 2\amp   30 \\
+           y_C \amp 2 \amp 1\amp   25 \\
+          \hline
+           -1 \amp 200  \amp 150 \amp   0 \\
+          \hline
+          \amp s_1 \amp s_2 \amp   g
+          \end{array} 
+         </me>
+      </p>
+
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry with the <m>*</m>:
+          <me>
+            \begin{array}{c|cc|c|}
+            \hline
+             y_A\amp 1 \amp 2 \amp 20 \\
+             y_B \amp 2 \amp 2\amp   30 \\
+             y_C \amp 2^* \amp 1\amp   25 \\
+            \hline
+             -1 \amp 200  \amp 150 \amp   0 \\
+            \hline
+            \amp s_1 \amp s_2 \amp   g
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry with the <m>*</m>:
+          <me>
+            \begin{array}{c|cc|c|}
+            \hline
+             y_A\amp ? \amp ? \amp ? \\
+             y_B \amp ? \amp ?^* \amp ? \\
+             s_1 \amp ? \amp ? \amp   ? \\
+            \hline
+             -1 \amp ?  \amp ? \amp   ? \\
+            \hline
+            \amp y_C \amp s_2 \amp   g
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Compare this solution and tableau to the final solution in <xref ref="activity-widget"/>. What do you notice?
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <url href="https://www.math3d.org/9TcqmTqyp" />
+        </p>
+      </hint>
+    </task>
+
+
+  </activity>
+
+  <p>
+    
+  </p>
+
+</section>
