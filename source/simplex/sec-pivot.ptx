@@ -515,7 +515,7 @@
         <p>
           Consider the problem: maximize <m>f(x,y)=5x-y</m> subject to:
           <md>
-            <mrow>-7x+2y \amp \leq 0</mrow>
+            <mrow>-7x+y \amp \leq 0</mrow>
             <mrow>-x+2y \amp \leq 30</mrow>
             <mrow>-x-2y \amp \leq 0</mrow>
             <mrow>-3x-y \amp \leq 20</mrow>
@@ -525,7 +525,7 @@
             \begin{array}{|cc|c|c}
             x_1 \amp x_2 \amp  -1\\
             \hline
-            7 \amp 2 \amp 0 \amp  -t_1 \\
+            -7 \amp 1 \amp 0 \amp  -t_1 \\
             1 \amp 2 \amp 30  \amp   -t_2 \\
             1 \amp -2 \amp 0  \amp   -t_3 \\
             3 \amp -1 \amp 20  \amp   -t_4 \\
@@ -545,7 +545,7 @@
             \begin{array}{|cc|c|c}
             
             \hline
-            7 \amp 2 \amp 0 \amp  \\
+            -7 \amp 1 \amp 0 \amp  \\
             1 \amp 2 \amp 30  \amp    \\
             1^* \amp -2 \amp 0  \amp    \\
             3 \amp -1 \amp 20  \amp   \\
