@@ -4,7 +4,75 @@
   <title>Unconstrained Variables</title>
 
 
-  
+  <activity xml:id="unconstrained-geometry">
+    <introduction>
+      <p>
+        Suppose we wanted to solve the linear program:
+
+          <md>
+            <mrow>\textbf{Maximize: }  f(\mathbf{x})= 3x+2y  \amp   </mrow>
+            <mrow>\textbf{Subject to: }  4x+5y\amp  \leq  23</mrow>
+            <mrow> 2x +y\amp \leq  7</mrow>
+            <mrow> x -y\amp \leq  5</mrow>
+          </md>
+
+         
+      </p>    
+
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What are some differences between this linear program and previous examples of linear programs?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          We can record the program as follows:
+          <me>
+            \begin{array}{|cc|c|c}
+            x \amp y \amp -1 \amp \\
+            \hline
+             4\amp 5 \amp 23 \amp -t_1 \\
+             2 \amp 1 \amp 7 \amp -t_2 \\
+             1 \amp -1 \amp 5 \amp -t_2 \\
+            \hline
+             3 \amp 2  \amp 0 \amp   f \\
+            \hline
+            \end{array} 
+           </me>
+           What point are we currently on?
+           
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Suppose we pivot on the entry with the <m>*</m>:
+          <me>
+            \begin{array}{|cc|c|c}
+            x \amp y \amp -1 \amp \\
+            \hline
+             4\amp 5 \amp 23 \amp -t_1 \\
+             2^* \amp 1 \amp 7 \amp -t_2 \\
+             1 \amp -1 \amp 5 \amp -t_2 \\
+            \hline
+             3 \amp 2  \amp 0 \amp   f \\
+            \hline
+            \end{array} 
+           </me>
+           To obtain:
+           
+        </p>
+      </statement>
+    </task>
+
+  </activity>
 
   
 
@@ -21,20 +89,8 @@
 
          
       </p>
-
-      
-
-      
-      
-
     </introduction>
-    <task>
-      <statement>
-        <p>
-          What are some differences between this linear program and previous examples of linear programs?
-        </p>
-      </statement>
-    </task>
+    
     <task>
       <statement>
         <p>
