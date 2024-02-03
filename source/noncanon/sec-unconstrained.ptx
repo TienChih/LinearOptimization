@@ -31,14 +31,14 @@
     <task>
       <statement>
         <p>
-          We can record the program as follows:
+          We can record the program with the following tableau, we denote the variables which can be negative with a bar (because I can't get circles too work.):
           <me>
             \begin{array}{|cc|c|c}
-            x \amp y \amp -1 \amp \\
+            \bar{x} \amp \bar{y} \amp -1 \amp \\
             \hline
              4\amp 5 \amp 23 \amp -t_1 \\
              2 \amp 1 \amp 7 \amp -t_2 \\
-             1 \amp -1 \amp 5 \amp -t_2 \\
+             1 \amp -1 \amp 5 \amp -t_3 \\
             \hline
              3 \amp 2  \amp 0 \amp   f \\
             \hline
@@ -56,23 +56,101 @@
           Suppose we pivot on the entry with the <m>*</m>:
           <me>
             \begin{array}{|cc|c|c}
-            x \amp y \amp -1 \amp \\
+            \bar{x} \amp \bar{y} \amp -1 \amp \\
             \hline
              4\amp 5 \amp 23 \amp -t_1 \\
              2^* \amp 1 \amp 7 \amp -t_2 \\
-             1 \amp -1 \amp 5 \amp -t_2 \\
+             1 \amp -1 \amp 5 \amp -t_3 \\
             \hline
              3 \amp 2  \amp 0 \amp   f \\
             \hline
             \end{array} 
            </me>
-           To obtain:
+           What point are we on now?  (You do not need to fill in the tableau.)
            
         </p>
       </statement>
     </task>
 
+    
+
+    <task>
+      <statement>
+        <p>
+          Suppose we pivot on the entry with the <m>*</m>:
+          <me>
+            \begin{array}{|cc|c|c}
+            t_2 \amp \bar{y} \amp -1 \amp \\
+            \hline
+             ? \amp ? \amp ? \amp -t_1 \\
+             ? \amp ? \amp ? \amp -\bar{x} \\
+             ? \amp ?^* \amp ? \amp -t_3 \\
+            \hline
+             ? \amp ?  \amp ? \amp   f \\
+            \hline
+            \end{array} 
+           </me>
+           What point are we on now?
+           
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Consider the plot of the feasible region.  What did our two pivots do?
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <interactive desmos="ccrvzcejs3"/>
+        </p>
+      </hint>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Which of the following do you believe is true?
+        </p>
+        <ol marker="A." cols="1">
+          <li>
+            <p>
+              Following the rules of pivoting through the simplex algorithm, we should be able to return to the origin.
+            </p>
+          </li>
+          <li>
+            <p>
+              It is possible to perform pivots that don't neccesarily follow the rules of the simplex algorithm, to return to the origin, and this is sensible as we are just traversing corner points.
+            </p>
+          </li>
+          <li>
+            <p>
+              It is technically possible to perform pivots that don't neccesarily follow the rules of the simplex algorithmand this is <em>not</em> sensible.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          List all the hyperplanes that bound the feasible region.
+        </p>
+      </statement>
+    </task>
+
   </activity>
+
+  <definition xml:id="def-unconstrained">
+    <statement>
+      <p>
+        In a linear program, a variable which can be potentially negative is called an <em>unconstrained</em> variable.
+      </p>
+    </statement>
+  </definition>
 
   
 
@@ -115,7 +193,7 @@
     <task>
       <statement>
         <p>
-          We denote the variables which can be negative with a bar (because I can't get circles too work.):
+          
           <me>
             \begin{array}{|cc|c|c}
             \bar{x} \amp \bar{y} \amp -1 \amp \\
@@ -166,7 +244,7 @@
       <statement>
         <p>
           Consider the row with the <m>\bar{x}</m>, and recall that <m>\bar{x}</m> is allowed to be negative.
-          Consider only this row and the non-negativity constrainta of <m>t_i</m>.  Which of the following is <m>t_1</m> allowed to be?
+          Consider only this row and the non-negativity constraints of <m>t_i</m>.  Which of the following is <m>t_1</m> allowed to be?
         </p>
         <ol marker="A." cols="3">
           <li>
@@ -383,12 +461,55 @@
 
   </activity>
 
-  <definition xml:id="def-unconstrained">
+  <observation>
     <statement>
       <p>
-        In a linear program, a variable which can be potentially negative is called an <em>unconstrained</em> variable.
+        With unconstrained variables, we proceed as follows.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Remove all unconstrained slack variables and delete the corresponding rows.
+          </p>
+        </li>
+        <li>
+          <p>
+            If there are no unconstrained decision variables: END.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pivot an unconstrained decision variable with a slack variable.
+          </p>
+        </li>
+        <li>
+          <p>
+            GOTO 1
+          </p>
+        </li>
+        
+      </ol>
+      <p>
+        What is left should be a maximization tableau with no unconstrained variable.  One should take a moment to ponder: It may well be that
+        the resulting tableau is infeasible.  Why is this either not possible, or possible but ok?
       </p>
     </statement>
-  </definition>
+  </observation>
+
+  <activity>
+    <statement>
+      <p>
+        Solve the linear program:
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+3y  \amp   </mrow>
+          <mrow>\textbf{Subject to: }  x+2y\amp  \leq  10</mrow>
+          <mrow> 2x +y\amp \leq  15</mrow>
+          <mrow> x\amp \geq  0</mrow>
+        </md>
+      </p>
+    </statement>
+  </activity>
+
+  
 
 </section>
