@@ -9,6 +9,7 @@
 
   <!-- include sections -->
   <xi:include href="sec-unconstrained.ptx" />
+  <xi:include href="sec-superconstrained.ptx" />
   
 
 </chapter>
