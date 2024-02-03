@@ -51,6 +51,16 @@
     <task>
       <statement>
         <p>
+          Consider the inequality <m>3x+2y-z\leq 8</m> captured by the equality
+          <m>3x+2y-z - 8=-t_4</m>.  What value must <m>t_4</m> so that <m>3x+2y-z\leq 8</m> 
+          is always an equality?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
           Note that this progam may be encoded in the tableau:
 
           <me>
@@ -60,12 +70,22 @@
              2\amp 0 \amp 3 \amp2\amp -t_1 \\
              4 \amp -1 \amp 0 \amp 1\amp -t_2 \\
              0 \amp 5 \amp -2 \amp 5\amp -t_3 \\
+             3 \amp 2^* \amp -1 \amp 8\amp 0 \\
             \hline
-             1 \amp 1  \amp 1 \amp   f \\
+             1 \amp 1  \amp 1 \amp 0\amp   f \\
             \hline
             \end{array} 
            </me>
+           Without comuting the tableau, what point are we on if we pivot on the entry with a *?
+           Is it feasible?
+        </p>
+      </statement>
+    </task>
 
+    <task>
+      <statement>
+        <p>
+          As we traverse corner points on the way to an optimal solution, should we ever leave this plane?
         </p>
       </statement>
     </task>
