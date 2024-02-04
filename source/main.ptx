@@ -6,7 +6,7 @@
 
   <book xml:id="linear-optimization">
     <title>Linear Optimization</title>
-    <subtitle>Course Notes</subtitle>
+    <subtitle>A Geomtric Inquiry Course</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
