@@ -736,7 +736,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Unconstrained Variables",
-  "body": " Unconstrained Variables    Suppose we wanted to solve the linear program:     What are some differences between this linear program and previous examples of linear programs?    We can record the program as follows: What point are we currently on?    Suppose we pivot on the entry with the : To obtain:      Suppose we wanted to solve the linear program:     We can record the program as follows: Out of , which are non-negative?    We denote the variables which can be negative with a bar (because I can't get circles too work.): Perform a pivot on the given entry.    Consider the resulting tableau: What point are we on?    Why is this point NOT optimal?    Consider the row with the , and recall that is allowed to be negative. Consider only this row and the non-negativity constrainta of . Which of the following is allowed to be?     .     .     .    For each choice of that is valid, with , what would be?    Which of the following bits of information does this row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it: Pivot on the extrey with the     Why is the resulting tableau NOT infeasible?    Which of the following bits of information does the row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it:   Why is this tableau optimal?    What are ?    Consider the plot of the feasible region. If we started at the origin, what did we do in each step?           In a linear program, a variable which can be potentially negative is called an unconstrained variable.    "
+  "body": " Unconstrained Variables    Suppose we wanted to solve the linear program:     What are some differences between this linear program and previous examples of linear programs?    We can record the program with the following tableau, we denote the variables which can be negative with a bar (because I can't get circles too work.): What point are we currently on?    Suppose we pivot on the entry with the : What point are we on now? (You do not need to fill in the tableau.)    Suppose we pivot on the entry with the : What point are we on now?    Consider the plot of the feasible region. What did our two pivots do?        Which of the following do you believe is true?    Following the rules of pivoting through the simplex algorithm, we should be able to return to the origin.    It is possible to perform pivots that don't neccesarily follow the rules of the simplex algorithm, to return to the origin, and this is sensible as we are just traversing corner points.    It is technically possible to perform pivots that don't neccesarily follow the rules of the simplex algorithmand this is not sensible.      List all the hyperplanes that bound the feasible region.      In a linear program, a variable which can be potentially negative is called an unconstrained variable.      Suppose we wanted to solve the linear program:     We can record the program as follows: Out of , which are non-negative?     Perform a pivot on the given entry.    Consider the resulting tableau: What point are we on?    Why is this point NOT optimal?    Consider the row with the , and recall that is allowed to be negative. Consider only this row and the non-negativity constraints of . Which of the following is allowed to be?     .     .     .    For each choice of that is valid, with , what would be?    Which of the following bits of information does this row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it: Pivot on the extrey with the     Why is the resulting tableau NOT infeasible?    Which of the following bits of information does the row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it:   Why is this tableau optimal?    What are ?    Consider the plot of the feasible region. If we started at the origin, what did we do in each step?           With unconstrained variables, we proceed as follows.    Remove all unconstrained slack variables and delete the corresponding rows.    If there are no unconstrained decision variables: END.    Pivot an unconstrained decision variable with a slack variable.    GOTO 1    What is left should be a maximization tableau with no unconstrained variable. One should take a moment to ponder: It may well be that the resulting tableau is infeasible. Why is this either not possible, or possible but ok?      Solve the linear program:     "
 },
 {
   "id": "unconstrained-geometry",
@@ -745,16 +745,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "4.1.1",
   "title": "",
-  "body": "  Suppose we wanted to solve the linear program:     What are some differences between this linear program and previous examples of linear programs?    We can record the program as follows: What point are we currently on?    Suppose we pivot on the entry with the : To obtain:   "
-},
-{
-  "id": "unconstrained-example",
-  "level": "2",
-  "url": "sec-unconstrained.html#unconstrained-example",
-  "type": "Activity",
-  "number": "4.1.2",
-  "title": "",
-  "body": "  Suppose we wanted to solve the linear program:     We can record the program as follows: Out of , which are non-negative?    We denote the variables which can be negative with a bar (because I can't get circles too work.): Perform a pivot on the given entry.    Consider the resulting tableau: What point are we on?    Why is this point NOT optimal?    Consider the row with the , and recall that is allowed to be negative. Consider only this row and the non-negativity constrainta of . Which of the following is allowed to be?     .     .     .    For each choice of that is valid, with , what would be?    Which of the following bits of information does this row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it: Pivot on the extrey with the     Why is the resulting tableau NOT infeasible?    Which of the following bits of information does the row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it:   Why is this tableau optimal?    What are ?    Consider the plot of the feasible region. If we started at the origin, what did we do in each step?        "
+  "body": "  Suppose we wanted to solve the linear program:     What are some differences between this linear program and previous examples of linear programs?    We can record the program with the following tableau, we denote the variables which can be negative with a bar (because I can't get circles too work.): What point are we currently on?    Suppose we pivot on the entry with the : What point are we on now? (You do not need to fill in the tableau.)    Suppose we pivot on the entry with the : What point are we on now?    Consider the plot of the feasible region. What did our two pivots do?        Which of the following do you believe is true?    Following the rules of pivoting through the simplex algorithm, we should be able to return to the origin.    It is possible to perform pivots that don't neccesarily follow the rules of the simplex algorithm, to return to the origin, and this is sensible as we are just traversing corner points.    It is technically possible to perform pivots that don't neccesarily follow the rules of the simplex algorithmand this is not sensible.      List all the hyperplanes that bound the feasible region.   "
 },
 {
   "id": "def-unconstrained",
@@ -764,6 +755,96 @@ var ptx_lunr_docs = [
   "number": "4.1.1",
   "title": "",
   "body": "  In a linear program, a variable which can be potentially negative is called an unconstrained variable.   "
+},
+{
+  "id": "unconstrained-example",
+  "level": "2",
+  "url": "sec-unconstrained.html#unconstrained-example",
+  "type": "Activity",
+  "number": "4.1.2",
+  "title": "",
+  "body": "  Suppose we wanted to solve the linear program:     We can record the program as follows: Out of , which are non-negative?     Perform a pivot on the given entry.    Consider the resulting tableau: What point are we on?    Why is this point NOT optimal?    Consider the row with the , and recall that is allowed to be negative. Consider only this row and the non-negativity constraints of . Which of the following is allowed to be?     .     .     .    For each choice of that is valid, with , what would be?    Which of the following bits of information does this row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it: Pivot on the extrey with the     Why is the resulting tableau NOT infeasible?    Which of the following bits of information does the row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it:   Why is this tableau optimal?    What are ?    Consider the plot of the feasible region. If we started at the origin, what did we do in each step?        "
+},
+{
+  "id": "sec-unconstrained-5",
+  "level": "2",
+  "url": "sec-unconstrained.html#sec-unconstrained-5",
+  "type": "Observation",
+  "number": "4.1.2",
+  "title": "",
+  "body": "  With unconstrained variables, we proceed as follows.    Remove all unconstrained slack variables and delete the corresponding rows.    If there are no unconstrained decision variables: END.    Pivot an unconstrained decision variable with a slack variable.    GOTO 1    What is left should be a maximization tableau with no unconstrained variable. One should take a moment to ponder: It may well be that the resulting tableau is infeasible. Why is this either not possible, or possible but ok?   "
+},
+{
+  "id": "sec-unconstrained-6",
+  "level": "2",
+  "url": "sec-unconstrained.html#sec-unconstrained-6",
+  "type": "Activity",
+  "number": "4.1.3",
+  "title": "",
+  "body": "  Solve the linear program:    "
+},
+{
+  "id": "sec-unconstrained",
+  "level": "1",
+  "url": "sec-unconstrained.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Super Constrained Variables",
+  "body": " Super Constrained Variables    Suppose we wanted to solve the linear program:     Plot the feasible region, what dimension is it?         Suppose we added in the constraint Plot the feasible region, what dimension is it?         Consider the inequality captured by the equality . What value must so that is always an equality? Call this value ?.    Note that this progam may be encoded in the tableau: Without comuting the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?    As we traverse corner points on the way to an optimal solution, would we ever leave the plane ?    After the last pivot, our tableau has the form: Ignoring the specific values of the entries of this tableau, using the value for ? computed earlier, rewrite each of the above equations in terms of . What information did the ? column provide?      An equality constraint can be written as: and thus recorded in a tableau as: If we pivot on the entry, we obtain: Then depending on your perspective, we can either delete the 0 column because it does not contribute information algebraically, or because it is redundant geometrically, and we restrict ourselves to a dimensional solution space. Either way, removing this column gives us:        Solve the linear program:        Consider the linear program:     Record this program in a tableau with an equality constraint.     Pivot on the entry with .     Pivot on the entry with . Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.    Delete the 0 column and solve the remaining system.           Solve the linear program:            Solve the linear program:          "
+},
+{
+  "id": "super-constrained-geometry",
+  "level": "2",
+  "url": "sec-unconstrained.html#super-constrained-geometry",
+  "type": "Activity",
+  "number": "4.2.1",
+  "title": "",
+  "body": "  Suppose we wanted to solve the linear program:     Plot the feasible region, what dimension is it?         Suppose we added in the constraint Plot the feasible region, what dimension is it?         Consider the inequality captured by the equality . What value must so that is always an equality? Call this value ?.    Note that this progam may be encoded in the tableau: Without comuting the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?    As we traverse corner points on the way to an optimal solution, would we ever leave the plane ?    After the last pivot, our tableau has the form: Ignoring the specific values of the entries of this tableau, using the value for ? computed earlier, rewrite each of the above equations in terms of . What information did the ? column provide?   "
+},
+{
+  "id": "sec-unconstrained-3",
+  "level": "2",
+  "url": "sec-unconstrained.html#sec-unconstrained-3",
+  "type": "Observation",
+  "number": "4.2.1",
+  "title": "",
+  "body": "  An equality constraint can be written as: and thus recorded in a tableau as: If we pivot on the entry, we obtain: Then depending on your perspective, we can either delete the 0 column because it does not contribute information algebraically, or because it is redundant geometrically, and we restrict ourselves to a dimensional solution space. Either way, removing this column gives us:    "
+},
+{
+  "id": "sec-unconstrained-4",
+  "level": "2",
+  "url": "sec-unconstrained.html#sec-unconstrained-4",
+  "type": "Activity",
+  "number": "4.2.2",
+  "title": "",
+  "body": "   Solve the linear program:     "
+},
+{
+  "id": "sec-unconstrained-5",
+  "level": "2",
+  "url": "sec-unconstrained.html#sec-unconstrained-5",
+  "type": "Activity",
+  "number": "4.2.3",
+  "title": "",
+  "body": "  Consider the linear program:     Record this program in a tableau with an equality constraint.     Pivot on the entry with .     Pivot on the entry with . Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.    Delete the 0 column and solve the remaining system.        "
+},
+{
+  "id": "sec-unconstrained-6",
+  "level": "2",
+  "url": "sec-unconstrained.html#sec-unconstrained-6",
+  "type": "Activity",
+  "number": "4.2.4",
+  "title": "",
+  "body": "  Solve the linear program:         "
+},
+{
+  "id": "sec-unconstrained-7",
+  "level": "2",
+  "url": "sec-unconstrained.html#sec-unconstrained-7",
+  "type": "Activity",
+  "number": "4.2.5",
+  "title": "",
+  "body": "  Solve the linear program:         "
 },
 {
   "id": "backmatter-2",
