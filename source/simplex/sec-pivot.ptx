@@ -137,33 +137,33 @@
       <p>
         We can rewrite
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n + t_1 \amp =  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n+t_2\amp =  b_2</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_n+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n +t_m \amp =  b_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n +t_m \amp =  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
         as 
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n  -b_1\amp =  -t_1</mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m  -b_1\amp =  -t_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n-b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -b_m \amp =  -t_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n, t_1, \ldots, t_m\amp \geq  0</mrow>
+          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n -b_n \amp =  -t_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0</mrow>
         </md>
         Which may be recorded by the <em>Tucker Tableau</em>:
         <me>
          \begin{array}{|cccc|c|c}
          x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
          \hline
-         a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -t_1 \\
-         a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -t_2 \\
+         a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
+         a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-         a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -t_m \\
+         a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
          \hline
-         c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
+         c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
          \hline
          \end{array} 
         </me>

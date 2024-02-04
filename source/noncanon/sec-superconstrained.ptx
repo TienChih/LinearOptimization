@@ -14,6 +14,7 @@
             <mrow>\textbf{Subject to: }  2x+3z\amp  \leq  2</mrow>
             <mrow> 4x-y\amp \leq  1</mrow>
             <mrow> 5y-2z\amp \leq  5</mrow>
+            <mrow> x, y, z\amp \geq  0</mrow>
           </md>
 
          
@@ -27,7 +28,7 @@
         </p>
         <hint>
           <p>
-            <interactive iframe="https://www.desmos.com/3d/4dedcf94c4" width="100%"  />
+            <interactive iframe="https://www.desmos.com/3d/463e6bec28" width="100%"  />
           </p>
           
         </hint>
@@ -41,7 +42,7 @@
         </p>
         <hint>
           <p>
-            <interactive iframe="https://www.desmos.com/3d/0e28e6c57b" width="100%"  />
+            <interactive iframe="https://www.desmos.com/3d/a56a9ca6e5" width="100%"  />
           </p>
           
         </hint>
@@ -53,7 +54,7 @@
         <p>
           Consider the inequality <m>3x+2y-z\leq 8</m> captured by the equality
           <m>3x+2y-z - 8=-t_4</m>.  What value must <m>t_4</m> so that <m>3x+2y-z\leq 8</m> 
-          is always an equality?
+          is always an equality?  Call this value ?.
         </p>
       </statement>
     </task>
@@ -70,7 +71,7 @@
              2\amp 0 \amp 3 \amp2\amp -t_1 \\
              4 \amp -1 \amp 0 \amp 1\amp -t_2 \\
              0 \amp 5 \amp -2 \amp 5\amp -t_3 \\
-             3 \amp 2^* \amp -1 \amp 8\amp 0 \\
+             3 \amp 2^* \amp -1 \amp 8\amp ? \\
             \hline
              1 \amp 1  \amp 1 \amp 0\amp   f \\
             \hline
@@ -85,363 +86,100 @@
     <task>
       <statement>
         <p>
-          As we traverse corner points on the way to an optimal solution, should we ever leave this plane?
+          As we traverse corner points on the way to an optimal solution, would we ever leave the plane <m>3x+2y-z=8</m>?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          After the last pivot, our tableau has the form:
+          <me>
+            \begin{array}{|ccc|c|c}
+            x \amp ? \amp z \amp -1 \amp \\
+            \hline
+             a_{11}\amp a_{12} \amp a_{13} \amp b_1 \amp -t_1 \\
+             a_{21} \amp a_{22} \amp a_{23} \amp b_2\amp -t_2 \\
+             a_{31} \amp a_{32} \amp a_{33} \amp b_3\amp -t_3 \\
+             a_{41} \amp a_{42} \amp a_{43} \amp b_4\amp y \\
+            \hline
+             c_1 \amp c_2  \amp c_3 \amp d\amp   f \\
+            \hline
+            \end{array} 
+           </me>
+           Ignoring the specific values of the entries of this tableau, using 
+           the value for ? computed earlier, rewrite each of the above equations in terms of <m>x, z</m>.  
+           What information did the ? column provide?
+
+
         </p>
       </statement>
     </task>
 
     
-
-  </activity>
-
-  <definition xml:id="def-unconstrained">
-    <statement>
-      <p>
-        In a linear program, a variable which can be potentially negative is called an <em>unconstrained</em> variable.
-      </p>
-    </statement>
-  </definition>
-
-  
-
-  <activity xml:id="unconstrained-example">
-    <introduction>
-      <p>
-        Suppose we wanted to solve the linear program:
-
-          <md>
-            <mrow>\textbf{Maximize: }  f(\mathbf{x})= 5x+4y  \amp   </mrow>
-            <mrow>\textbf{Subject to: }  2x+3y\amp  \leq  26</mrow>
-            <mrow> -2x -10 y\amp \leq  2</mrow>
-          </md>
-
-         
-      </p>
-    </introduction>
-    
-    <task>
-      <statement>
-        <p>
-          We can record the program as follows:
-          <me>
-            \begin{array}{|cc|c|c}
-            x \amp y \amp -1 \amp \\
-            \hline
-             2\amp 3 \amp 26 \amp -t_1 \\
-             -2 \amp -10 \amp 2 \amp -t_2 \\
-            \hline
-             5 \amp 4  \amp 0 \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           Out of <m>x_y, y, t_1, t_2</m>, which are non-negative?
-           
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          
-          <me>
-            \begin{array}{|cc|c|c}
-            \bar{x} \amp \bar{y} \amp -1 \amp \\
-            \hline
-             2^*\amp 3 \amp 26 \amp -t_1 \\
-             -2 \amp -10 \amp 2 \amp -t_2 \\
-            \hline
-             5 \amp 4  \amp 0 \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           Perform a pivot on the given entry.
-           
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Consider the resulting tableau:
-          <me>
-            \begin{array}{|cc|c|c}
-            t_2 \amp \bar{y} \amp -1 \amp \\
-            \hline
-             ?\amp ? \amp ? \amp -\bar{x} \\
-             ? \amp ? \amp ? \amp -t_2 \\
-            \hline
-             ? \amp ?  \amp ? \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           What point are we on?
-           
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Why is this point <em>NOT</em> optimal?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Consider the row with the <m>\bar{x}</m>, and recall that <m>\bar{x}</m> is allowed to be negative.
-          Consider only this row and the non-negativity constraints of <m>t_i</m>.  Which of the following is <m>t_1</m> allowed to be?
-        </p>
-        <ol marker="A." cols="3">
-          <li>
-            <p>
-              <m>t_1=0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>t_1=10</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>t_1=100</m>.
-            </p>
-          </li>
-          
-        </ol>
-        <p>
-          For each choice of <m>t_1</m> that is valid, with <m>y=0</m>,  what would <m>x</m> be?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Which of the following bits of information does this row communicate to us? (There could be more than one.)
-        </p>
-        <ol marker="A." cols="2">
-          <li>
-            <p>
-              There is a lower bound for <m>t_1</m> which is greater than 0.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is an upper bound for <m>t_1</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              There is a lower bound for <m>t_2</m> which is greater than 0.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is an upper bound for <m>t_2</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              There is a lower bound for <m>x</m> which is greater than 0.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is an upper bound for <m>x</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              There is a lower bound for <m>y</m> which is greater than 0.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is an upper bound for <m>y</m>.
-            </p>
-          </li>
-
-        
-
-          <li>
-            <p>
-              That <m>x = 1  -\frac{1}{2}t_1-\frac{3}{2}y</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              That <m>t_2 = 28  -t_1+7y</m>.
-            </p>
-          </li>
-          
-        </ol>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          After recording this piece of information, we may as well delete this row, since we have what we need from it:
-          <me>
-            \begin{array}{|cc|c|c}
-            t_1 \amp \bar{y} \amp -1 \amp \\
-            \hline
-             ? \amp ? \amp ?^* \amp -t_2 \\
-            \hline
-             ? \amp ?  \amp ? \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           Pivot on the extrey with the <m>*</m>
-           
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Why is the resulting tableau <em>NOT</em> infeasible?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Which of the following bits of information does the <m>\bar{y}</m> row communicate to us? (There could be more than one.)
-        </p>
-        <ol marker="A." cols="2">
-          <li>
-            <p>
-              There is a lower bound for <m>t_1</m> which is greater than 0.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is an upper bound for <m>t_1</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              There is a lower bound for <m>t_2</m> which is greater than 0.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is an upper bound for <m>t_2</m>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              There is a lower bound for <m>y</m> which is greater than 0.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is an upper bound for <m>y</m>.
-            </p>
-          </li>
-
-         
-          <li>
-            <p>
-              That <m>y = \frac{1}{y}t_1+\frac{1}{7}t_2-4</m>.
-            </p>
-          </li>
-          
-        </ol>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          After recording this piece of information, we may as well delete this row, since we have what we need from it:
-          <me>
-            \begin{array}{|cc|c|c}
-            t_1 \amp t_2 \amp -1 \amp \\
-            \hline
-            \hline
-             ? \amp ?  \amp ? \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           
-        </p>
-        <p>
-          Why is this tableau optimal?  
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          What are <m>t_1, t_2, x, y, f</m>?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Consider the plot of the feasible region.  If we started at the origin, what did we do in each step?
-        </p>
-        <hint>
-          <p>
-            <interactive desmos="v3vlvihi35"/>
-          </p>
-        </hint>
-      </statement>
-    </task>
-
 
   </activity>
 
   <observation>
     <statement>
       <p>
-        With unconstrained variables, we proceed as follows.
-      </p>
-      <ol>
-        <li>
-          <p>
-            Remove all unconstrained slack variables and delete the corresponding rows.
-          </p>
-        </li>
-        <li>
-          <p>
-            If there are no unconstrained decision variables: END.
-          </p>
-        </li>
-        <li>
-          <p>
-            Pivot an unconstrained decision variable with a slack variable.
-          </p>
-        </li>
-        <li>
-          <p>
-            GOTO 1
-          </p>
-        </li>
-        
-      </ol>
-      <p>
-        What is left should be a maximization tableau with no unconstrained variable.  One should take a moment to ponder: It may well be that
-        the resulting tableau is infeasible.  Why is this either not possible, or possible but ok?
+        An equality constraint can be written as: 
+        <me>a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0</me>
+        and thus recorded in a tableau as:
+
+        <me>
+          \begin{array}{|cccccc|c|c}
+          x_1 \amp x_2 \amp \cdots \amp x_j\amp \cdots \amp x_m \amp -1\\
+          \hline
+          a_{11} \amp a_{12}\amp \cdots \amp a_{1j}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
+          a_{21} \amp a_{22}\amp \cdots \amp a_{2j}\amp \cdots\amp a_{2m}\amp b_2 \amp -t_2 \\
+          \vdots \amp \vdots \amp \vdots \amp \vdots\amp \vdots \amp \vdots\amp \vdots \amp\vdots \\
+          a_{i1} \amp a_{i2}\amp \cdots \amp a_{ij}^*\amp \cdots \amp a_{im}\amp b_i \amp 0 \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \cdots \amp \vdots\amp \vdots \amp\vdots \\
+          a_{n1} \amp a_{n2}\amp \cdots \amp a_{nj}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
+          \hline
+          c_1 \amp c_2\amp \cdots \amp c_j \amp \cdots \amp c_m \amp d \amp   = f \\
+          \hline
+          \end{array} 
+         </me>
+
+         If we pivot on the <m>a_{ij}^*</m> entry, we obtain:
+
+         <me>
+          \begin{array}{|cccccc|c|c}
+          x_1 \amp x_2 \amp \cdots \amp 0\amp \cdots \amp x_m \amp -1\\
+          \hline
+          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp -t_1 \\
+          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp -t_2 \\
+          \vdots \amp \vdots \amp \vdots \amp \vdots\amp \vdots \amp \vdots\amp \vdots \amp\vdots \\
+          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp x_j \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \cdots \amp \vdots\amp \vdots \amp\vdots \\
+          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp -t_n \\
+          \hline
+          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp   = f \\
+          \hline
+          \end{array} 
+         </me>
+         Then depending on your perspective, we can either delete the 0 column because it does not contribute 
+         information algebraically, or because it is redundant geometrically, and we restrict ourselves to a 
+         <m>m-1</m> dimensional solution space.  Either way, removing this column gives us:
+
+         <me>
+          \begin{array}{|cccc|c|c}
+          x_1 \amp x_2 \amp \cdots \amp  x_m \amp -1\\
+          \hline
+          ? \amp ? \amp \cdots  \amp ?\amp ? \amp -t_1 \\
+          ? \amp ? \amp \cdots  \amp ?\amp ? \amp -t_2 \\
+          \vdots \amp \vdots \amp  \vdots \amp \vdots\amp \vdots \amp\vdots \\
+          ? \amp ? \amp \cdots \amp ?\amp ? \amp x_j \\
+          \vdots \amp \vdots \amp \ddots  \amp \vdots\amp \vdots \amp\vdots \\
+          ? \amp ? \amp \cdots \amp ?\amp ? \amp -t_n \\
+          \hline
+          ? \amp ? \amp \cdots \amp ?\amp ? \amp   = f \\
+          \hline
+          \end{array} 
+         </me>
       </p>
     </statement>
   </observation>
@@ -449,15 +187,148 @@
   <activity>
     <statement>
       <p>
-        Solve the linear program:
-        <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+3y  \amp   </mrow>
-          <mrow>\textbf{Subject to: }  x+2y\amp  \leq  10</mrow>
-          <mrow> 2x +y\amp \leq  15</mrow>
-          <mrow> x\amp \geq  0</mrow>
-        </md>
+        <p>
+          Solve the linear program:
+  
+            <md>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  \amp   </mrow>
+              <mrow>\textbf{Subject to: }  x+2y+3z\amp  \leq  6</mrow>
+              <mrow> 4x-7y\amp \leq  28</mrow>
+              <mrow> x, y, z\amp \geq  0</mrow>
+            </md>
+  
+           
+        </p>  
       </p>
     </statement>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+          Consider the linear program:
+  
+            <md>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x})= 2x+y-2z  \amp   </mrow>
+              <mrow>\textbf{Subject to: }  x+y+z\amp  \leq  1</mrow>
+              <mrow> y+4z\amp =  2</mrow>
+              <mrow> x, y, z\amp \geq  0</mrow>
+            </md>
+  
+           
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Record this program in a tableau with an equality constraint.
+          <me>
+            \begin{array}{|ccc|c|c}
+            x \amp y \amp z   \amp -1\\
+            \hline
+            ? \amp ? \amp  ?\amp ? \amp -t_1 \\
+            ? \amp ? \amp  ?\amp ? \amp 0 \\
+            \hline
+            ? \amp ? \amp ?\amp ? \amp   = f \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry with <m>*</m>.
+          <me>
+            \begin{array}{|ccc|c|c}
+            x \amp y \amp z   \amp -1\\
+            \hline
+            ? \amp ? \amp  ?\amp ? \amp -t_1 \\
+            ? \amp ?^* \amp  ?\amp ? \amp 0 \\
+            \hline
+            ? \amp ? \amp ?\amp ? \amp   = f \\
+            \hline
+            \end{array} 
+           </me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry with <m>*</m>.
+          <me>
+            \begin{array}{|ccc|c|c}
+            x \amp 0 \amp z   \amp -1\\
+            \hline
+            ? \amp ? \amp  ?\amp ? \amp -t_1 \\
+            ? \amp ? \amp  ?\amp ? \amp y \\
+            \hline
+            ? \amp ? \amp ?\amp ? \amp   = f \\
+            \hline
+            \end{array} 
+           </me>
+           Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Delete the 0 column and solve the remaining system.
+        </p>
+      </statement>
+    </task>
+    <hint>
+      <p>
+        <interactive iframe="https://www.desmos.com/3d/65160bc478" width="100%"  />
+      </p>
+    </hint>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+          Solve the linear program:
+  
+            <md>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  \amp   </mrow>
+              <mrow>\textbf{Subject to: }  x+2y+3z\amp  \leq  6</mrow>
+              <mrow> 4x-7y\amp \leq  28</mrow>
+              <mrow> x, y, z\amp \geq  0</mrow>
+            </md>
+  
+           
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <interactive iframe="https://www.desmos.com/3d/e3583379f9" width="100%"  />
+      </p>
+    </hint>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+          Solve the linear program:
+  
+            <md>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+2y+z  \amp   </mrow>
+              <mrow>\textbf{Subject to: }  x+y+z\amp  =  6</mrow>
+              <mrow> x+y\amp \leq  1</mrow>
+              <mrow> x,  z\amp \geq  0</mrow>
+            </md>
+  
+           
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <interactive iframe="https://www.desmos.com/3d/5f2d4cf2e1" width="100%"  />
+      </p>
+    </hint>
   </activity>
 
   
