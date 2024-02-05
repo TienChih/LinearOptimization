@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-unconstrained" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-constrained" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Super Constrained Variables</title>
 
 
@@ -64,20 +64,127 @@
         <p>
           Note that this progam may be encoded in the tableau:
 
-          <me>
-            \begin{array}{|ccc|c|c}
-            x \amp y\amp z \amp -1 \amp \\
-            \hline
-             2\amp 0 \amp 3 \amp2\amp -t_1 \\
-             4 \amp -1 \amp 0 \amp 1\amp -t_2 \\
-             0 \amp 5 \amp -2 \amp 5\amp -t_3 \\
-             3 \amp 2^* \amp -1 \amp 8\amp ? \\
-            \hline
-             1 \amp 1  \amp 1 \amp 0\amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           Without comuting the tableau, what point are we on if we pivot on the entry with a *?
+          
+            <tabular halign="center">
+              <row>
+                <cell>
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>x</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>y</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>z</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell>
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                </cell>
+                <cell>
+                  <m>0</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell right="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>5</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>2^*</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              
+            </tabular>
+        </p>
+        <p>
+           Without computing the tableau, what point are we on if we pivot on the entry with a *?
            Is it feasible?
         </p>
       </statement>
@@ -95,19 +202,126 @@
       <statement>
         <p>
           After the last pivot, our tableau has the form:
-          <me>
-            \begin{array}{|ccc|c|c}
-            x \amp ? \amp z \amp -1 \amp \\
-            \hline
-             a_{11}\amp a_{12} \amp a_{13} \amp b_1 \amp -t_1 \\
-             a_{21} \amp a_{22} \amp a_{23} \amp b_2\amp -t_2 \\
-             a_{31} \amp a_{32} \amp a_{33} \amp b_3\amp -t_3 \\
-             a_{41} \amp a_{42} \amp a_{43} \amp b_4\amp y \\
-            \hline
-             c_1 \amp c_2  \amp c_3 \amp d\amp   f \\
-            \hline
-            \end{array} 
-           </me>
+         
+           <tabular halign="center">
+            <row>
+              <cell>
+                
+              </cell>
+              <cell bottom="medium">
+                <m>x</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>z</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{13}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{23}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              </cell>
+              <cell>
+                <m>a_{31}</m>
+              </cell>
+              <cell>
+                <m>a_{32}</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{33}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a_{41}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{42}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{43}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{44}</m>
+              </cell>
+              <cell halign="left">
+                <m>=-y</m>
+              </cell>
+            </row>
+            <row>
+              <cell right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+            
+          </tabular>
+          </p>
+          <p>
            Ignoring the specific values of the entries of this tableau, using 
            the value for ? computed earlier, rewrite each of the above equations in terms of <m>x, z</m>.  
            What information did the ? column provide?
@@ -128,58 +342,645 @@
         <me>a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0</me>
         and thus recorded in a tableau as:
 
-        <me>
-          \begin{array}{|cccccc|c|c}
-          x_1 \amp x_2 \amp \cdots \amp x_j\amp \cdots \amp x_m \amp -1\\
-          \hline
-          a_{11} \amp a_{12}\amp \cdots \amp a_{1j}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
-          a_{21} \amp a_{22}\amp \cdots \amp a_{2j}\amp \cdots\amp a_{2m}\amp b_2 \amp -t_2 \\
-          \vdots \amp \vdots \amp \vdots \amp \vdots\amp \vdots \amp \vdots\amp \vdots \amp\vdots \\
-          a_{i1} \amp a_{i2}\amp \cdots \amp a_{ij}^*\amp \cdots \amp a_{im}\amp b_i \amp 0 \\
-          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \cdots \amp \vdots\amp \vdots \amp\vdots \\
-          a_{n1} \amp a_{n2}\amp \cdots \amp a_{nj}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
-          \hline
-          c_1 \amp c_2\amp \cdots \amp c_j \amp \cdots \amp c_m \amp d \amp   = f \\
-          \hline
-          \end{array} 
-         </me>
+        
+         <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{1j}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{2j}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{i1}</m>
+            </cell>
+            <cell>
+              <m>a_{i2}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{ij}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{im}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_i</m>
+            </cell>
+            <cell halign="left">
+              <m>=-0</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{nj}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+        </p>
 
+        <p>
          If we pivot on the <m>a_{ij}^*</m> entry, we obtain:
 
-         <me>
-          \begin{array}{|cccccc|c|c}
-          x_1 \amp x_2 \amp \cdots \amp 0\amp \cdots \amp x_m \amp -1\\
-          \hline
-          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp -t_1 \\
-          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp -t_2 \\
-          \vdots \amp \vdots \amp \vdots \amp \vdots\amp \vdots \amp \vdots\amp \vdots \amp\vdots \\
-          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp x_j \\
-          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \cdots \amp \vdots\amp \vdots \amp\vdots \\
-          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp -t_n \\
-          \hline
-          ? \amp ? \amp \cdots \amp ?\amp \cdots \amp ?\amp ? \amp   = f \\
-          \hline
-          \end{array} 
-         </me>
+         <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{1j}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{2j}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{i1}</m>
+            </cell>
+            <cell>
+              <m>a_{i2}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{ij}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{im}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_i</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_j</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{nj}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+
+      <p>
+          
          Then depending on your perspective, we can either delete the 0 column because it does not contribute 
          information algebraically, or because it is redundant geometrically, and we restrict ourselves to a 
          <m>m-1</m> dimensional solution space.  Either way, removing this column gives us:
-
-         <me>
-          \begin{array}{|cccc|c|c}
-          x_1 \amp x_2 \amp \cdots \amp  x_m \amp -1\\
-          \hline
-          ? \amp ? \amp \cdots  \amp ?\amp ? \amp -t_1 \\
-          ? \amp ? \amp \cdots  \amp ?\amp ? \amp -t_2 \\
-          \vdots \amp \vdots \amp  \vdots \amp \vdots\amp \vdots \amp\vdots \\
-          ? \amp ? \amp \cdots \amp ?\amp ? \amp x_j \\
-          \vdots \amp \vdots \amp \ddots  \amp \vdots\amp \vdots \amp\vdots \\
-          ? \amp ? \amp \cdots \amp ?\amp ? \amp -t_n \\
-          \hline
-          ? \amp ? \amp \cdots \amp ?\amp ? \amp   = f \\
-          \hline
-          \end{array} 
-         </me>
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{i1}</m>
+            </cell>
+            <cell>
+              <m>a_{i2}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{im}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_i</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_i</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
       </p>
     </statement>
   </observation>
@@ -222,17 +1023,85 @@
       <statement>
         <p>
           Record this program in a tableau with an equality constraint.
-          <me>
-            \begin{array}{|ccc|c|c}
-            x \amp y \amp z   \amp -1\\
-            \hline
-            ? \amp ? \amp  ?\amp ? \amp -t_1 \\
-            ? \amp ? \amp  ?\amp ? \amp 0 \\
-            \hline
-            ? \amp ? \amp ?\amp ? \amp   = f \\
-            \hline
-            \end{array} 
-           </me>
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x</m>
+              </cell>
+              <cell bottom="medium">
+                <m>y</m>
+              </cell>
+              <cell bottom="medium">
+                <m>z</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{13}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a_{21}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{22}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{23}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>d</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -240,35 +1109,171 @@
       <statement>
         <p>
           Pivot on the entry with <m>*</m>.
-          <me>
-            \begin{array}{|ccc|c|c}
-            x \amp y \amp z   \amp -1\\
-            \hline
-            ? \amp ? \amp  ?\amp ? \amp -t_1 \\
-            ? \amp ?^* \amp  ?\amp ? \amp 0 \\
-            \hline
-            ? \amp ? \amp ?\amp ? \amp   = f \\
-            \hline
-            \end{array} 
-           </me>
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x</m>
+              </cell>
+              <cell bottom="medium">
+                <m>y</m>
+              </cell>
+              <cell bottom="medium">
+                <m>z</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{13}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a_{21}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{22}^*</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{23}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>d</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Pivot on the entry with <m>*</m>.
-          <me>
-            \begin{array}{|ccc|c|c}
-            x \amp 0 \amp z   \amp -1\\
-            \hline
-            ? \amp ? \amp  ?\amp ? \amp -t_1 \\
-            ? \amp ? \amp  ?\amp ? \amp y \\
-            \hline
-            ? \amp ? \amp ?\amp ? \amp   = f \\
-            \hline
-            \end{array} 
-           </me>
+          We obtained a tableau of the form:
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>z</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{13}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a_{21}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{22}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{23}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-y</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>d</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          
            Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.
         </p>
       </statement>
@@ -326,7 +1331,7 @@
     </statement>
     <hint>
       <p>
-        <interactive iframe="https://www.desmos.com/3d/5f2d4cf2e1" width="100%"  />
+        <interactive iframe="https://www.desmos.com/3d/f0d14070c0" width="100%"  />
       </p>
     </hint>
   </activity>
