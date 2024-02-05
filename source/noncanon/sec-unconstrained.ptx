@@ -32,18 +32,92 @@
       <statement>
         <p>
           We can record the program with the following tableau, we denote the variables which can be negative with a bar (because I can't get circles too work.):
-          <me>
-            \begin{array}{|cc|c|c}
-            \bar{x} \amp \bar{y} \amp -1 \amp \\
-            \hline
-             4\amp 5 \amp 23 \amp -t_1 \\
-             2 \amp 1 \amp 7 \amp -t_2 \\
-             1 \amp -1 \amp 5 \amp -t_3 \\
-            \hline
-             3 \amp 2  \amp 0 \amp   f \\
-            \hline
-            \end{array} 
-           </me>
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{x}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{y}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> 4</m>
+              </cell>
+              <cell right="medium">
+                <m>5 </m>
+              </cell>
+              <cell right="medium">
+                <m> 23</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>2 </m>
+              </cell>
+              <cell right="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium">
+                <m>7 </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> -1 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 5 </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>3 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>   
            What point are we currently on?
            
         </p>
@@ -53,21 +127,91 @@
     <task>
       <statement>
         <p>
-          Suppose we pivot on the entry with the <m>*</m>:
-          <me>
-            \begin{array}{|cc|c|c}
-            \bar{x} \amp \bar{y} \amp -1 \amp \\
-            \hline
-             4\amp 5 \amp 23 \amp -t_1 \\
-             2^* \amp 1 \amp 7 \amp -t_2 \\
-             1 \amp -1 \amp 5 \amp -t_3 \\
-            \hline
-             3 \amp 2  \amp 0 \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           What point are we on now?  (You do not need to fill in the tableau.)
+          Suppose we pivot on the entry with the <m>*</m> What point are we on now?  (You do not need to fill in the tableau.)
            
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{x}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{y}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> 4</m>
+              </cell>
+              <cell right="medium">
+                <m>5 </m>
+              </cell>
+              <cell right="medium">
+                <m> 23</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>2^* </m>
+              </cell>
+              <cell right="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium">
+                <m>7 </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> -1 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 5 </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>3 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -77,21 +221,91 @@
     <task>
       <statement>
         <p>
-          Suppose we pivot on the entry with the <m>*</m>:
-          <me>
-            \begin{array}{|cc|c|c}
-            t_2 \amp \bar{y} \amp -1 \amp \\
-            \hline
-             ? \amp ? \amp ? \amp -t_1 \\
-             ? \amp ? \amp ? \amp -\bar{x} \\
-             ? \amp ?^* \amp ? \amp -t_3 \\
-            \hline
-             ? \amp ?  \amp ? \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           What point are we on now?
+          Suppose we pivot on the entry with the <m>*</m>.  What point are we on now?
            
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{y}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m>? </m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>? </m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m>? </m>
+              </cell>
+              <cell halign="left">
+                <m>=-\bar{x}</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?^* </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ? </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -187,6 +401,74 @@
            Out of <m>x_y, y, t_1, t_2</m>, which are non-negative?
            
         </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m> x </m>
+              </cell>
+              <cell bottom="medium">
+                <m>y </m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> 2</m>
+              </cell>
+              <cell right="medium">
+                <m>3 </m>
+              </cell>
+              <cell right="medium">
+                <m> 26</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> -2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> -10 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 2 </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>5 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>4 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
       </statement>
     </task>
 
@@ -194,19 +476,77 @@
       <statement>
         <p>
           
-          <me>
-            \begin{array}{|cc|c|c}
-            \bar{x} \amp \bar{y} \amp -1 \amp \\
-            \hline
-             2^*\amp 3 \amp 26 \amp -t_1 \\
-             -2 \amp -10 \amp 2 \amp -t_2 \\
-            \hline
-             5 \amp 4  \amp 0 \amp   f \\
-            \hline
-            \end{array} 
-           </me>
+         
            Perform a pivot on the given entry.
            
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m> \bar{x} </m>
+              </cell>
+              <cell bottom="medium">
+                <m> \bar{y} </m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> 2^*</m>
+              </cell>
+              <cell right="medium">
+                <m>3 </m>
+              </cell>
+              <cell right="medium">
+                <m> 26</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> -2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> -10 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 2 </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>5 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>4 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -215,17 +555,78 @@
       <statement>
         <p>
           Consider the resulting tableau:
-          <me>
-            \begin{array}{|cc|c|c}
-            t_2 \amp \bar{y} \amp -1 \amp \\
-            \hline
-             ?\amp ? \amp ? \amp -\bar{x} \\
-             ? \amp ? \amp ? \amp -t_2 \\
-            \hline
-             ? \amp ?  \amp ? \amp   f \\
-            \hline
-            \end{array} 
-           </me>
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m> t_2 </m>
+              </cell>
+              <cell bottom="medium">
+                <m> \bar{y} </m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m> ? </m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-\bar{x}</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ? </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+
+        <p>
            What point are we on?
            
         </p>
@@ -342,18 +743,65 @@
       <statement>
         <p>
           After recording this piece of information, we may as well delete this row, since we have what we need from it:
-          <me>
-            \begin{array}{|cc|c|c}
-            t_1 \amp \bar{y} \amp -1 \amp \\
-            \hline
-             ? \amp ? \amp ?^* \amp -t_2 \\
-            \hline
-             ? \amp ?  \amp ? \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           Pivot on the extrey with the <m>*</m>
+          
            
+           
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m> t_1 </m>
+              </cell>
+              <cell bottom="medium">
+                <m> \bar{y} </m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?^* </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ? </m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Pivot on the entry with the <m>*</m>
         </p>
       </statement>
     </task>
@@ -420,16 +868,46 @@
       <statement>
         <p>
           After recording this piece of information, we may as well delete this row, since we have what we need from it:
-          <me>
-            \begin{array}{|cc|c|c}
-            t_1 \amp t_2 \amp -1 \amp \\
-            \hline
-            \hline
-             ? \amp ?  \amp ? \amp   f \\
-            \hline
-            \end{array} 
-           </me>
+          
            
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m> t_1 </m>
+              </cell>
+              <cell bottom="medium">
+                <m> t_2 </m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ? </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ? </m>
+              </cell>
+              <cell halign="left">
+                <m>=-f</m>
+              </cell>
+            </row>
+            
+          </tabular>
         </p>
         <p>
           Why is this tableau optimal?  
