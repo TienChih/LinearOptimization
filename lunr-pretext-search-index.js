@@ -784,63 +784,63 @@ var ptx_lunr_docs = [
   "body": "  Solve the linear program:    "
 },
 {
-  "id": "sec-unconstrained",
+  "id": "sec-constrained",
   "level": "1",
-  "url": "sec-unconstrained.html",
+  "url": "sec-constrained.html",
   "type": "Section",
   "number": "4.2",
   "title": "Super Constrained Variables",
-  "body": " Super Constrained Variables    Suppose we wanted to solve the linear program:     Plot the feasible region, what dimension is it?         Suppose we added in the constraint Plot the feasible region, what dimension is it?         Consider the inequality captured by the equality . What value must so that is always an equality? Call this value ?.    Note that this progam may be encoded in the tableau: Without comuting the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?    As we traverse corner points on the way to an optimal solution, would we ever leave the plane ?    After the last pivot, our tableau has the form: Ignoring the specific values of the entries of this tableau, using the value for ? computed earlier, rewrite each of the above equations in terms of . What information did the ? column provide?      An equality constraint can be written as: and thus recorded in a tableau as: If we pivot on the entry, we obtain: Then depending on your perspective, we can either delete the 0 column because it does not contribute information algebraically, or because it is redundant geometrically, and we restrict ourselves to a dimensional solution space. Either way, removing this column gives us:        Solve the linear program:        Consider the linear program:     Record this program in a tableau with an equality constraint.     Pivot on the entry with .     Pivot on the entry with . Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.    Delete the 0 column and solve the remaining system.           Solve the linear program:            Solve the linear program:          "
+  "body": " Super Constrained Variables    Suppose we wanted to solve the linear program:     Plot the feasible region, what dimension is it?         Suppose we added in the constraint Plot the feasible region, what dimension is it?         Consider the inequality captured by the equality . What value must so that is always an equality? Call this value ?.    Note that this progam may be encoded in the tableau:                                                                                                                     Without computing the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?    As we traverse corner points on the way to an optimal solution, would we ever leave the plane ?    After the last pivot, our tableau has the form:                                                                                                                     Ignoring the specific values of the entries of this tableau, using the value for ? computed earlier, rewrite each of the above equations in terms of . What information did the ? column provide?      An equality constraint can be written as: and thus recorded in a tableau as:                                                                                                                                                                                                                                  If we pivot on the entry, we obtain:                                                                                                                                                                                                                                  Then depending on your perspective, we can either delete the 0 column because it does not contribute information algebraically, or because it is redundant geometrically, and we restrict ourselves to a dimensional solution space. Either way, removing this column gives us:                                                                                                                                                                                         Solve the linear program:        Consider the linear program:     Record this program in a tableau with an equality constraint.                                                                                  Pivot on the entry with .                                                                                  We obtained a tableau of the form:                                                                              Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.    Delete the 0 column and solve the remaining system.           Solve the linear program:            Solve the linear program:          "
 },
 {
   "id": "super-constrained-geometry",
   "level": "2",
-  "url": "sec-unconstrained.html#super-constrained-geometry",
+  "url": "sec-constrained.html#super-constrained-geometry",
   "type": "Activity",
   "number": "4.2.1",
   "title": "",
-  "body": "  Suppose we wanted to solve the linear program:     Plot the feasible region, what dimension is it?         Suppose we added in the constraint Plot the feasible region, what dimension is it?         Consider the inequality captured by the equality . What value must so that is always an equality? Call this value ?.    Note that this progam may be encoded in the tableau: Without comuting the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?    As we traverse corner points on the way to an optimal solution, would we ever leave the plane ?    After the last pivot, our tableau has the form: Ignoring the specific values of the entries of this tableau, using the value for ? computed earlier, rewrite each of the above equations in terms of . What information did the ? column provide?   "
+  "body": "  Suppose we wanted to solve the linear program:     Plot the feasible region, what dimension is it?         Suppose we added in the constraint Plot the feasible region, what dimension is it?         Consider the inequality captured by the equality . What value must so that is always an equality? Call this value ?.    Note that this progam may be encoded in the tableau:                                                                                                                     Without computing the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?    As we traverse corner points on the way to an optimal solution, would we ever leave the plane ?    After the last pivot, our tableau has the form:                                                                                                                     Ignoring the specific values of the entries of this tableau, using the value for ? computed earlier, rewrite each of the above equations in terms of . What information did the ? column provide?   "
 },
 {
-  "id": "sec-unconstrained-3",
+  "id": "sec-constrained-3",
   "level": "2",
-  "url": "sec-unconstrained.html#sec-unconstrained-3",
+  "url": "sec-constrained.html#sec-constrained-3",
   "type": "Observation",
   "number": "4.2.1",
   "title": "",
-  "body": "  An equality constraint can be written as: and thus recorded in a tableau as: If we pivot on the entry, we obtain: Then depending on your perspective, we can either delete the 0 column because it does not contribute information algebraically, or because it is redundant geometrically, and we restrict ourselves to a dimensional solution space. Either way, removing this column gives us:    "
+  "body": "  An equality constraint can be written as: and thus recorded in a tableau as:                                                                                                                                                                                                                                  If we pivot on the entry, we obtain:                                                                                                                                                                                                                                  Then depending on your perspective, we can either delete the 0 column because it does not contribute information algebraically, or because it is redundant geometrically, and we restrict ourselves to a dimensional solution space. Either way, removing this column gives us:                                                                                                                                                                                     "
 },
 {
-  "id": "sec-unconstrained-4",
+  "id": "sec-constrained-4",
   "level": "2",
-  "url": "sec-unconstrained.html#sec-unconstrained-4",
+  "url": "sec-constrained.html#sec-constrained-4",
   "type": "Activity",
   "number": "4.2.2",
   "title": "",
   "body": "   Solve the linear program:     "
 },
 {
-  "id": "sec-unconstrained-5",
+  "id": "sec-constrained-5",
   "level": "2",
-  "url": "sec-unconstrained.html#sec-unconstrained-5",
+  "url": "sec-constrained.html#sec-constrained-5",
   "type": "Activity",
   "number": "4.2.3",
   "title": "",
-  "body": "  Consider the linear program:     Record this program in a tableau with an equality constraint.     Pivot on the entry with .     Pivot on the entry with . Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.    Delete the 0 column and solve the remaining system.        "
+  "body": "  Consider the linear program:     Record this program in a tableau with an equality constraint.                                                                                  Pivot on the entry with .                                                                                  We obtained a tableau of the form:                                                                              Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.    Delete the 0 column and solve the remaining system.        "
 },
 {
-  "id": "sec-unconstrained-6",
+  "id": "sec-constrained-6",
   "level": "2",
-  "url": "sec-unconstrained.html#sec-unconstrained-6",
+  "url": "sec-constrained.html#sec-constrained-6",
   "type": "Activity",
   "number": "4.2.4",
   "title": "",
   "body": "  Solve the linear program:         "
 },
 {
-  "id": "sec-unconstrained-7",
+  "id": "sec-constrained-7",
   "level": "2",
-  "url": "sec-unconstrained.html#sec-unconstrained-7",
+  "url": "sec-constrained.html#sec-constrained-7",
   "type": "Activity",
   "number": "4.2.5",
   "title": "",
