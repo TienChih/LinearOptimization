@@ -387,18 +387,8 @@
       <statement>
         <p>
           We can record the program as follows:
-          <me>
-            \begin{array}{|cc|c|c}
-            x \amp y \amp -1 \amp \\
-            \hline
-             2\amp 3 \amp 26 \amp -t_1 \\
-             -2 \amp -10 \amp 2 \amp -t_2 \\
-            \hline
-             5 \amp 4  \amp 0 \amp   f \\
-            \hline
-            \end{array} 
-           </me>
-           Out of <m>x_y, y, t_1, t_2</m>, which are non-negative?
+          
+           
            
         </p>
         <p>
@@ -468,6 +458,9 @@
               </cell>
             </row>
           </tabular>
+        </p>
+        <p>
+          Out of <m>x_y, y, t_1, t_2</m>, which are non-negative?
         </p>
       </statement>
     </task>
