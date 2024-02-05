@@ -274,22 +274,62 @@ x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0
 \end{align*}
 </div>
 <div class="para">Which may be recorded by the <em class="emphasis">Tucker Tableau</em>:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|c}
-x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
-\hline
-a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
-a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
-\vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
-\hline
-c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-</div> <div class="para" id="def-tuckertableau-1-2">The variables at the top are called the <em class="emphasis">decision variables</em> or <em class="emphasis">independent variables</em>, the variables on the side are the <em class="emphasis">slack variables</em> or <em class="emphasis">basic variables</em>.</div></article><article class="observation remark-like" id="sec-pivot-7"><h3 class="heading">
+</div> <div class="para" id="def-tuckertableau-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_n\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_n\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="def-tuckertableau-1-3">The variables at the top are called the <em class="emphasis">decision variables</em> or <em class="emphasis">independent variables</em>, the variables on the side are the <em class="emphasis">slack variables</em> or <em class="emphasis">basic variables</em>.</div></article><article class="observation remark-like" id="sec-pivot-7"><h3 class="heading">
 <span class="type">Observation</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="sec-pivot-7-1-1">
@@ -323,65 +363,125 @@ c_10 + c_20 +\cdots c_m0-d  \amp =  f
 <div class="para" id="activity-widget-1-1">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div> <div class="para" id="activity-widget-1-2">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div> <div class="para" id="activity-widget-1-3">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div>
 </div>
 <article class="task exercise-like" id="activity-widget-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="activity-widget-2-1-1">
-<div class="para">Set up the canonical maximization problem corresponding to the above and record it in the following tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-x_1 \amp x_2  \amp -1\\
-\hline
-\amp  \amp \amp   -t_A \\
-\amp  \amp \amp   -t_B \\
-\amp  \amp \amp   -t_C \\
-\hline
-\amp   \amp  \amp   = f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-</div></article><article class="task exercise-like" id="activity-widget-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-widget-2-1-1">Set up the canonical maximization problem corresponding to the above and record it in the following tableau:</div> <div class="para" id="activity-widget-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_A\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_B\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_C\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="activity-widget-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-widget-3-1-1">Recall that this tableau corresponds to the point <span class="process-math">\(x_1, x_2=0\text{.}\)</span>  If we slightly increase <span class="process-math">\(x_1, x_2\text{,}\)</span> do we increase <span class="process-math">\(f\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-widget-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="activity-widget-4-1-1">Let’s increase <span class="process-math">\(x_1\text{.}\)</span>  Take the row corresponding to <span class="process-math">\(t_C\)</span> and solve for <span class="process-math">\(x_1\)</span> in terms of <span class="process-math">\(x_2, t_C\text{.}\)</span>
 </div>
 <div class="para" id="activity-widget-4-2-1">For each equality corresponding to the rows <span class="process-math">\(t_A, t_B, f\)</span> replace <span class="process-math">\(x_1\)</span> with the value you found ealier and rewrite the left hand sides.</div></article><article class="task exercise-like" id="activity-widget-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para logical" id="activity-widget-5-1-1">
-<div class="para">Record this new system in the following tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-t_C \amp x_2  \amp -1\\
-\hline
-\amp  \amp \amp   -t_A \\
-\amp  \amp \amp   -t_B \\
-\amp  \amp \amp   -x_1 \\
-\hline
-\amp   \amp  \amp   = f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-</div></article><article class="task exercise-like" id="activity-widget-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-widget-5-1-1">Record this new system in the following tableau:</div> <div class="para" id="activity-widget-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_C\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_A\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_B\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="activity-widget-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-widget-6-1-1">Recall that this new tableau corresponds to <span class="process-math">\(t_C, x_2=0\text{,}\)</span> what point is this?</div></article><article class="task exercise-like" id="activity-widget-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-widget-7-1-1">If we increase <span class="process-math">\(t_C\)</span> from 0, do we increase <span class="process-math">\(f\text{?}\)</span>  What about increasing <span class="process-math">\(x_2\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-widget-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para logical" id="activity-widget-8-1-1">
-<div class="para">Let’s increase <span class="process-math">\(x_2\text{.}\)</span>  Take the row corrresponding to <span class="process-math">\(t_B\)</span> and repeat Tasks (c) and (d) to obtain a tableau of the form:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-t_C \amp t_B  \amp -1\\
-\hline
-\amp  \amp \amp   -t_A \\
-\amp  \amp \amp   -x_2 \\
-\amp  \amp \amp   -x_1 \\
-\hline
-\amp   \amp  \amp   = f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-</div></article><article class="task exercise-like" id="activity-widget-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="activity-widget-8-1-1">Let’s increase <span class="process-math">\(x_2\text{.}\)</span>  Take the row corrresponding to <span class="process-math">\(t_B\)</span> and repeat Tasks (c) and (d) to obtain a tableau of the form:</div> <div class="para" id="activity-widget-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_C\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_B\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_A\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="activity-widget-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="activity-widget-9-1-1">What point does this new tableau correspond to?</div></article><article class="task exercise-like" id="activity-widget-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
 <div class="para" id="activity-widget-10-1-1">If I increase <span class="process-math">\(t_C\)</span> from 0, do I increase <span class="process-math">\(f\text{?}\)</span>  What about <span class="process-math">\(t_B\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-widget-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
@@ -409,43 +509,72 @@ t_C \amp t_B  \amp -1\\
 </ol></article><article class="activity project-like" id="sec-pivot-11"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-pivot-11-1"><div class="para logical" id="sec-pivot-11-1-1">
-<div class="para">Consider the tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-x_1 \amp x_2 \amp  -1\\
-\hline
-a_{11} \amp a_{12}  \amp b_1 \amp  -t_1 \\
-a_{21} \amp a_{22} \amp  b_2 \amp   -t_2 \\
-\hline
-c_1 \amp  c_2 \amp  d  \amp = f \\
-\hline
-\end{array} 
-\end{equation*}
+<div class="introduction" id="sec-pivot-11-1">
+<div class="para" id="sec-pivot-11-1-1">Consider the tableau:</div> <div class="para" id="sec-pivot-11-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para" id="sec-pivot-11-1-3">along with the corresponding system of equations.</div>
 </div>
-<div class="para">along with the corresponding system of equations.</div>
-</div></div>
 <article class="task exercise-like" id="sec-pivot-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-pivot-11-2-1-1">Solve for <span class="process-math">\(x_1\)</span> in terms of <span class="process-math">\(t_1, x_2\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-pivot-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-pivot-11-3-1-1">In each of the other two equalities, replace <span class="process-math">\(x_1\)</span> with the expression we found above and simplify.</div></article><article class="task exercise-like" id="sec-pivot-11-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para logical" id="sec-pivot-11-4-1-1">
-<div class="para">Record this new system in the following tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-t_1 \amp x_2 \amp  -1\\
-\hline
-\amp  \amp  \amp  -x_1 \\
-\amp  \amp   \amp   -t_2 \\
-\hline
-\amp   \amp    \amp = f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-</div></article></article><article class="definition definition-like" id="def-pivot"><h3 class="heading">
+<div class="para" id="sec-pivot-11-4-1-1">Record this new system in the following tableau:</div> <div class="para" id="sec-pivot-11-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article></article><article class="definition definition-like" id="def-pivot"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-pivot-1-1">The following is the algorithm for a <em class="emphasis">pivot transformation</em>:</div> <ol class="decimal">
@@ -463,7 +592,8 @@ t_1 \amp x_2 \amp  -1\\
 </ol></article><article class="activity project-like" id="activity-pivotexample"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-pivotexample-1"><div class="para logical" id="activity-pivotexample-1-1-1">
+<div class="introduction" id="activity-pivotexample-1">
+<div class="para logical" id="activity-pivotexample-1-1-1">
 <div class="para">Consider the problem: maximize <span class="process-math">\(f(x,y)=5x-y\)</span> subject to:</div>
 <div class="displaymath process-math" id="activity-pivotexample-1-1-1-2">
 \begin{align*}
@@ -474,45 +604,98 @@ t_1 \amp x_2 \amp  -1\\
 \end{align*}
 </div>
 <div class="para">which we may encode as:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-x_1 \amp x_2 \amp  -1\\
-\hline
--7 \amp 1 \amp 0 \amp  -t_1 \\
-1 \amp 2 \amp 30  \amp   -t_2 \\
-1 \amp -2 \amp 0  \amp   -t_3 \\
-3 \amp -1 \amp 20  \amp   -t_4 \\
-\hline
-5 \amp  -1 \amp  0  \amp = f \\
-\hline
-\end{array} 
-\end{equation*}
+</div> <div class="para" id="activity-pivotexample-1-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-7  \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(30 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_4\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(5 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div>
 </div>
-</div></div>
 <article class="task exercise-like" id="activity-pivotexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="activity-pivotexample-2-1-1">
-<div class="para">Pivot on the entry with <span class="process-math">\(*\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-\hline
--7 \amp 1 \amp 0 \amp  \\
-1 \amp 2 \amp 30  \amp    \\
-1^* \amp -2 \amp 0  \amp    \\
-3 \amp -1 \amp 20  \amp   \\
-\hline
-5 \amp  -1 \amp 0   \amp  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">(Keep track of the decision and slack variables.)</div>
-</div></article><article class="task exercise-like" id="activity-pivotexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-pivotexample-2-1-1">Pivot on the entry with <span class="process-math">\(*\)</span> (Keep track of the decision and slack variables.)</div> <div class="para" id="activity-pivotexample-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-7  \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(30 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1^* \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_4\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(5 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="activity-pivotexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical" id="activity-pivotexample-3-1-1">
-<div class="para">Pivot on the entry with <span class="process-math">\(*\text{:}\)</span>
-</div>
+<div class="para">Pivot on the entry with <span class="process-math">\(*\)</span> (Keep track of the decision and slack variables.)</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{|cc|c|c}
@@ -527,27 +710,94 @@ x_1 \amp x_2 \amp  -1\\
 \end{array} 
 \end{equation*}
 </div>
-<div class="para">(Keep track of the decision and slack variables.)</div>
-</div></article><article class="task exercise-like" id="activity-pivotexample-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para logical" id="activity-pivotexample-4-1-1">
-<div class="para">Pivot on the entry with <span class="process-math">\(*\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-\hline
-? \amp ? \amp ? \amp  \\
-? \amp ?^* \amp  ? \amp    \\
-? \amp ? \amp  ? \amp    \\
-? \amp ? \amp ?  \amp   \\
-\hline
-? \amp ?  \amp  ?  \amp  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">(Keep track of the decision and slack variables.)</div>
-</div></article><article class="task exercise-like" id="activity-pivotexample-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+</div> <div class="para" id="activity-pivotexample-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?  \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?^* \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="activity-pivotexample-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-pivotexample-4-1-1">Pivot on the entry with <span class="process-math">\(*\)</span> (Keep track of the decision and slack variables.)</div> <div class="para" id="activity-pivotexample-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?  \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?^* \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="activity-pivotexample-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-pivotexample-5-1-1">Look at your decision variables.  Which two lines are we currently sitting on?</div></article><article class="task exercise-like" id="activity-pivotexample-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-pivotexample-6-1-1">How do we know we now have an optimal solution based only on the tableau?</div></article><article class="task exercise-like" id="activity-pivotexample-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-pivotexample-7-1-1"></div>
