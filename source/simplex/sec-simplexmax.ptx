@@ -8,18 +8,120 @@
     <task>
       <p>
         Consider the following  tableau:
-        <me>
-          \begin{array}{|cccc|c|c}          
-          x_1 \amp t_3 \amp t_1 \amp x_4 \amp -1 \amp \\
-          \hline
-           2 \amp 4 \amp 6 \amp 5 \amp 3 \amp -x_4\\
-           -3 \amp 0 \amp \frac{2}{3} \amp -2 \amp -1 \amp -x_2\\
-           \frac{17}{4} \amp -1 \amp 4 \amp \frac{2}{3} \amp -2 \amp -t_3\\
-          \hline
-          5 \amp -1 \amp 0 \amp 3 \amp -244 \amp f\\
-          \hline
-          \end{array} 
-         </me>
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_4</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_4</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>-3</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>\frac{2}{3}</m>
+            </cell>
+            <cell right="medium">
+              <m>-2</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>\frac{17}{4}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>\frac{2}{3}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_3</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>5</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-244</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
       </p>
       <p>
         Note that each <m>x_1, t_3, t_1, x_4=0</m> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?
@@ -84,18 +186,120 @@
     <introduction>
       <p>
         Consider the following  tableau:
-        <me>
-          \begin{array}{|cccc|c|c}          
-          x_3 \amp t_3 \amp x_2 \amp t_1 \amp -1 \amp \\
-          \hline
-          -4 \amp 25 \amp -3 \amp 2 \amp 18 \amp -t_2\\
-          -1  \amp 2 \amp 2  \amp -1\amp  22 \amp -x_1\\
-          -2 \amp 0 \amp -1 \amp -1 \amp 10 \amp -x_4\\
-          \hline
-          2  \amp 0 \amp -1 \amp 1 \amp -156 \amp f\\
-          \hline
-          \end{array} 
-         </me>
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>-4</m>
+            </cell>
+            <cell>
+              <m>25</m>
+            </cell>
+            <cell>
+              <m>-3</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>18</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>-1</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>22</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>-2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>10</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_4</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-156</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
       </p>
       <p>
         Note that each <m>x_3, t_3, x_2, t_1=0</m> for this tableau.  
@@ -183,18 +387,76 @@
       <statement>
         <p>
           Consider the following  tableau:
-          <me>
-            \begin{array}{|cc|c|c}            
-            x_1 \amp x_2 \amp -1 \amp \\  
-            \hline
-            -2 \amp 1 \amp 12 \amp -t_1\\
-             -3  \amp 4 \amp  10 \amp -t_2\\
-            \hline
-             -4 \amp 1 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
-           Our previous discussion leads us to believe that <m>x_1</m> may be increased as much as we please, and our two inequalities will remain satisfied.  Yet consider a sketch of the region and function:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>12</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>10</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Our previous discussion leads us to believe that <m>x_1</m> may be increased as much as we please, and our two inequalities will remain satisfied.  Yet consider a sketch of the region and function:
 
         </p>
         <p>
@@ -248,18 +510,90 @@
     <introduction>
       <p>
         Consider the canonical max problem corresponding to:
-        <me>
-          \begin{array}{|cc|c|c}            
-          x_1 \amp x_2 \amp -1 \amp \\  
-          \hline
-          1 \amp 4 \amp 26 \amp -t_1\\
-           2  \amp 3 \amp  22 \amp -t_2\\
-           4  \amp 1 \amp  22 \amp -t_2\\ 
-          \hline
-           8 \amp 7 \amp 0 \amp f\\
-          \hline
-          \end{array} 
-         </me>
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>26</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>22</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>-4</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>22</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_3</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>8</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>7</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
       </p>
     </introduction>
     <task>
@@ -292,20 +626,145 @@
       <statement>
         <p>
           For a canonical linear program encoded by a Tucker tableau:
-          <me>
-            \begin{array}{|cccc|c|c}
-            x_1 \amp x_2 \amp \cdots \amp x_m \amp -1\\
-            \hline
-            a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
-            a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
-            \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-            a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
-            \hline
-            c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
-            \hline
-            \end{array} 
-           </me>
-           if we pivot in column <m>j</m>, which row <m>i</m> should we choose?
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_m</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1m}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2m}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>b_n</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_m</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>d</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+            If we pivot in column <m>j</m>, which row <m>i</m> should we choose?
         </p>
         <ol marker="A." cols="2">
           <li>
@@ -348,18 +807,90 @@
         <p>
           Based on the observations above, what should be the pivot entry for the following tableau?
 
-          <me>
-            \begin{array}{|cc|c|c}            
-            x_1 \amp x_2 \amp -1 \amp \\  
-            \hline
-            3 \amp 4 \amp 10 \amp -t_1\\
-             -4  \amp 3 \amp  8 \amp -t_2\\
-             2  \amp 1 \amp  5 \amp -t_3\\ 
-            \hline
-             3 \amp -2 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
+         
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>10</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-4</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>8</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -549,19 +1080,143 @@
 
       <p>
         Recall the canonical tableau
-        <me>
-          \begin{array}{|cccc|c|c}
-          x_1 \amp x_2 \amp \cdots \amp x_m \amp -1\\
-          \hline
-          a_{11} \amp a_{12}\amp \cdots \amp a_{1m}\amp b_1 \amp -t_1 \\
-          a_{21} \amp a_{22}\amp \cdots \amp a_{2m}\amp b_2 \amp -t_2 \\
-          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-          a_{n1} \amp a_{n2}\amp \cdots \amp a_{nm}\amp b_n \amp -t_n \\
-          \hline
-          c_1 \amp c_2\amp \cdots \amp c_m \amp d \amp   = f \\
-          \hline
-          \end{array} 
-         </me>
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
         Suppose that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m> 
       </p>
     </statement>
@@ -578,72 +1233,268 @@
     <task>
       <statement>
         <p>
-          <me>
-            \begin{array}{|cc|c|c}          
-            x_1 \amp x_2 \amp -1 \amp \\
-            \hline
-             2 \amp 1 \amp 8 \amp -t_1\\
-             1 \amp 2 \amp 10\amp -t_2\\
-            \hline
-            30 \amp 50 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>8</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>10</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>30</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>50</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|cc|c|c}          
-            x_1 \amp x_2 \amp -1 \amp \\
-            \hline
-             -1 \amp 1 \amp 1 \amp -t_1\\
-             1 \amp -1 \amp 3\amp -t_2\\
-            \hline
-            1 \amp 2 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
-    <task>
-      <statement>
-        <p>
-          <me>
-            \begin{array}{|cc|c|c}          
-            x_1 \amp x_2 \amp -1 \amp \\
-            \hline
-             -1 \amp 1 \amp 1 \amp -t_1\\
-             1 \amp -1 \amp 3\amp -t_2\\
-            \hline
-            -5 \amp 2 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
-        </p>
-      </statement>
-    </task>
+    
 
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|cccc|c|c}          
-            x_1 \amp x_2 \amp x_3 \amp x_4 \amp -1 \amp \\
-            \hline
-             1 \amp 1 \amp 1 \amp 0 \amp 1 \amp -t_1\\
-             0 \amp 1 \amp 1 \amp 0 \amp 4\amp -t_2\\
-             -1 \amp 0 \amp -1 \amp 1 \amp 1\amp -t_3\\
-            \hline
-            -1 \amp -1 \amp 1 \amp 1 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -660,38 +1511,179 @@
 
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|cc|c|c}          
-            x_1 \amp x_2 \amp -1 \amp \\
-            \hline
-             -2 \amp -1 \amp -1 \amp -t_1\\
-             1 \amp 5 \amp 15\amp -t_2\\
-             2 \amp 3 \amp 18 \amp -t_2\\
-            \hline
-            5 \amp 9 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                <m>15</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>18</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
     <task>
       <statement>
+        
+
         <p>
-          <me>
-            \begin{array}{|cc|c|c}          
-            x_1 \amp x_2 \amp -1 \amp \\
-            \hline
-             -2 \amp 3 \amp 1 \amp -t_1\\
-             2 \amp -6 \amp -5\amp -t_2\\
-             5 \amp 1 \amp 7 \amp -t_2\\
-            \hline
-            3 \amp  5 \amp 0 \amp f\\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>-6</m>
+              </cell>
+              <cell right="medium">
+                <m>-5</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>7</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -713,7 +1705,7 @@
     <task>
       <statement>
         <p>
-          Consider the inequality <m>2x_1-3x_2-4x_3\lt -5</m>.  Is there a solution which satisfies this where <m>x_i\geq 0</m>?
+          Consider the inequality <m>2x_1-3x_2-4x_3\leq -5</m>.  Is there a solution which satisfies this where each <m>x_i\geq 0</m>?
         </p>
       </statement>
     </task>
@@ -721,7 +1713,7 @@
     <task>
       <statement>
         <p>
-          Consider the inequality <m>5x_1+x_2+2x_3\lt -10</m>.  Is there a solution which satisfies this where <m>x_i\geq 0</m>?
+          Consider the inequality <m>5x_1+x_2+2x_3\leq -10</m>.  Is there a solution which satisfies this where each <m>x_i\geq 0</m>?
         </p>
       </statement>
     </task>

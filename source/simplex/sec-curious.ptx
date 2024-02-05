@@ -30,37 +30,178 @@
       </p>
       <p>
         We can convert this into a max problem to solve, but we can also record it in the following tableau:
-        <me>
-          \begin{array}{c|cc|c|}
-          \hline
-           y_A\amp 1 \amp 2 \amp 20 \\
-           y_B \amp 2 \amp 2\amp   30 \\
-           y_C \amp 2 \amp 1\amp   25 \\
-          \hline
-           -1 \amp 200  \amp 150 \amp   0 \\
-          \hline
-          \amp s_1 \amp s_2 \amp   g
-          \end{array} 
-         </me>
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell halign="left" bottom="medium">
+            </cell>
+            <cell halign="left" bottom="medium">
+            </cell>
+            <cell halign="left" bottom="medium">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_A</m>
+            </cell>
+            <cell>
+              <m>1</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>20</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_B</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>30</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_C</m>
+            </cell>
+            <cell bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>25</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>200</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>150</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell>
+              <m>=s_1</m>
+            </cell>
+            <cell>
+              <m>=s_2</m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+          </row>
+        </tabular>
       </p>
 
     </introduction>
     <task>
       <statement>
+       
         <p>
-          Pivot on the entry with the <m>*</m>:
-          <me>
-            \begin{array}{c|cc|c|}
-            \hline
-             y_A\amp 1 \amp 2 \amp 20 \\
-             y_B \amp 2 \amp 2\amp   30 \\
-             y_C \amp 2^* \amp 1\amp   25 \\
-            \hline
-             -1 \amp 200  \amp 150 \amp   0 \\
-            \hline
-            \amp s_1 \amp s_2 \amp   g
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell halign="left" bottom="medium">
+              </cell>
+              <cell halign="left" bottom="medium">
+              </cell>
+              <cell halign="left" bottom="medium">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_A</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>20</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_B</m>
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>30</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_C</m>
+              </cell>
+              <cell bottom="medium">
+                <m>2^*</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>25</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>200</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>150</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -68,18 +209,91 @@
       <statement>
         <p>
           Pivot on the entry with the <m>*</m>:
-          <me>
-            \begin{array}{c|cc|c|}
-            \hline
-             y_A\amp ? \amp ? \amp ? \\
-             y_B \amp ? \amp ?^* \amp ? \\
-             s_1 \amp ? \amp ? \amp   ? \\
-            \hline
-             -1 \amp ?  \amp ? \amp   ? \\
-            \hline
-            \amp y_C \amp s_2 \amp   g
-            \end{array} 
-           </me>
+          
+        </p>
+
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell halign="left" bottom="medium">
+              </cell>
+              <cell halign="left" bottom="medium">
+              </cell>
+              <cell halign="left" bottom="medium">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_A</m>
+              </cell>
+              <cell>
+                <m>?</m>
+              </cell>
+              <cell right="medium">
+                <m>?</m>
+              </cell>
+              <cell right="medium">
+                <m>?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_B</m>
+              </cell>
+              <cell>
+                <m>?</m>
+              </cell>
+              <cell right="medium">
+                <m>?^*</m>
+              </cell>
+              <cell right="medium">
+                <m>?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>s_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                -1
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell>
+                <m>=y_C</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
