@@ -131,7 +131,7 @@
     <task>
       <statement>
         <p>
-          Which of the following is an if and only if condition for a Tucker Tableau to correspond to a feasible solution?
+          Which of the following is sufficient condition for a Tucker Tableau to correspond to a feasible solution?
         </p>
         <ol marker="A." cols="2">
           <li>
@@ -471,7 +471,7 @@
     <task>
       <statement>
         <p>
-          Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
+          Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
         </p>
         <ol marker="A." cols="2">
           <li>
@@ -565,13 +565,13 @@
             <cell halign="left" right="medium">
             </cell>
             <cell bottom="medium">
-              <m>-4</m>
+              <m>4</m>
             </cell>
             <cell right="medium" bottom="medium">
               <m>1</m>
             </cell>
             <cell right="medium" bottom="medium">
-              <m>22</m>
+              <m>24</m>
             </cell>
             <cell halign="left">
               <m>=-t_3</m>
