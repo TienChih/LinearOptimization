@@ -325,7 +325,7 @@
     <task>
       <statement>
         <p>
-          If we increase <m>t_2</m> to 5, are all our inequalities satisfied?  What about 10? 100?
+          If we increase <m>t_1</m> to 5, are all our inequalities satisfied?  What about 10? 100?
         </p>
       </statement>
     </task>  
@@ -341,7 +341,7 @@
     <task>
       <statement>
         <p>
-          What is the largest value we could increase <m>t_2</m> while satisfying our 3 inequalities?  What about <m>x_3</m>?
+          What is the largest value we could increase <m>t_1</m> while satisfying our 3 inequalities?  What about <m>x_3</m>?
         </p>
       </statement>
     </task>  
