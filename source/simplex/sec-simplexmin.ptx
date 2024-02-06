@@ -20,39 +20,287 @@
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
           <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
         </md>
-        Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>
+        Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>.
       </p>
       <p>  
-        may be recorded in the following tableau:
-        <me>
-          \begin{array}{c|cccc|c|}
-          \hline
-           x_1\amp a_{11} \amp a_{12} \amp \cdots \amp a_{1m} \amp c_1 \\
-           x_2\amp a_{21} \amp a_{22} \amp \cdots \amp a_{2m} \amp c_2 \\
-           \vdots \amp \vdots \amp \vdots \amp   \ddots \amp \vdots \amp \vdots \\
-          x_n\amp a_{n1} \amp a_{n2} \amp \cdots \amp a_{nm} \amp c_n \\
-          \hline
-           -1 \amp b_1  \amp b_2 \amp \cdots \amp b_m \amp   d \\
-          \hline
-          \amp t_1 \amp t_2 \amp \cdots \amp t_m \amp g
-          \end{array} 
-         </me>
+        This problem may be recorded in the following tableau:
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>x_1</m>
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>c_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>x_2</m>
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>c_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>x_n</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>b_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>b_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              <m>=t_1</m>
+            </cell>
+            <cell>
+              <m>=t_2</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>=t_m</m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+          </row>
+        </tabular>
       </p>
       <p>
         The <em>negative transpose</em> of this tableau is:
-        <me>
-          \begin{array}{|cccc|c|c}
-          x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
-          \hline
-          -a_{11} \amp -a_{21}\amp \cdots \amp -a_{n1}\amp -b_1 \amp -t_1 \\
-          -a_{12} \amp -a_{22}\amp \cdots \amp -a_{n2}\amp -b_2 \amp -t_2 \\
-          \vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-          -a_{1m} \amp -a_{2m}\amp \cdots \amp -a_{nm}\amp -b_m \amp -t_m \\
-          \hline
-          -c_1 \amp -c_2\amp \cdots \amp -c_n \amp -d \amp   = -g \\
-          \hline
-          \end{array} 
-         </me>
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_n</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>-a_{11}</m>
+            </cell>
+            <cell>
+              <m>-a_{21}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>-a_{n1}</m>
+            </cell>
+            <cell right="medium">
+              <m>-b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>-a_{12}</m>
+            </cell>
+            <cell>
+              <m>-a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>-a_{n2}</m>
+            </cell>
+            <cell right="medium">
+              <m>-b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>-a_{1m}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-a_{2m}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>-c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-d</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
       </p>
     </statement>
   </definition>
@@ -84,17 +332,86 @@
     <statement>
       <p>
         Apply <xref ref="def-simplexmin"/> to the following minimization tableau:
-        <me>
-          \begin{array}{c|cc|c|}
-          \hline
-           x_1\amp 20 \amp 25 \amp 300 \\
-           x_2 \amp 40 \amp 20\amp   500 \\
-          \hline
-           -1 \amp 1000  \amp 800 \amp   0 \\
-          \hline
-          \amp t_1 \amp t_2 \amp   g
-          \end{array} 
-         </me>
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>x_1</m>
+            </cell>
+            <cell>
+              <m>20</m>
+            </cell>
+            <cell right="medium">
+              <m>25</m>
+            </cell>
+            <cell right="medium">
+              <m>300</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>40</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>20</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>500</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>1000</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>800</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              <m>=t_1</m>
+            </cell>
+            <cell>
+              <m>=t_2</m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
       </p>
     </statement>
   </activity>
