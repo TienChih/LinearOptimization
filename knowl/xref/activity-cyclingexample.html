@@ -14,96 +14,271 @@
 <article class="activity project-like"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
 </h3>
-<div class="introduction"><div class="para logical">
-<div class="para">Consider the following canonical maximization tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|c}
-x_1\amp x_2 \amp x_3 \amp x_4 \amp -1 \amp  \\
-\hline
--12.5 \amp -2 \amp 12.5 \amp 1\amp 0\amp  -t_1 \\
-1\amp  0.24 \amp -2 \amp -0.24 \amp 0\amp  -t_2 \\
-\hline
-4 \amp 1.92 \amp -16 \amp -0.96  \amp 1 \amp   f \\
-\hline
-\end{array} 
-\end{equation*}
+<div class="introduction">
+<div class="para">Consider the following canonical maximization tableau:</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-12.5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(12.5\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0.24\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.24\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1.92\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-16\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.96\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div>
 </div>
-</div></div>
 <article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>, and keep track of the variables.</div> <div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
--12.5 \amp -2 \amp 12.5 \amp 1\amp 0 \\
-1^*\amp  0.24 \amp -2 \amp -0.24 \amp 0 \\
-\hline
-4 \amp 1.92 \amp -16 \amp -0.96 \amp 0  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ?^* \amp ? \amp ? \amp ? \\
-?\amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ? \amp ? \amp ? \amp ? \\
-?\amp  ? \amp ?^* \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ? \amp ? \amp ?^* \amp ? \\
-?\amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ? \amp ? \amp ? \amp ? \\
-?^* \amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ?^* \amp ? \amp ? \amp ? \\
-? \amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
+<div class="para">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>, and keep track of the variables.</div> <div class="para">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-12.5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(12.5\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1^*\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0.24\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.24\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1.92\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-16\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.96\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
 </div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para">Compare your final tableau to the initial tableau.  Are there any similarities?</div></article></article><span class="incontext"><a class="internal" href="sec-cycling.html#activity-cyclingexample">in-context</a></span>
 </body>

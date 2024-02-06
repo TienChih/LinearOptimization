@@ -185,96 +185,271 @@ true);
 <article class="activity project-like" id="activity-cyclingexample"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-cyclingexample-1"><div class="para logical" id="activity-cyclingexample-1-1">
-<div class="para">Consider the following canonical maximization tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|c}
-x_1\amp x_2 \amp x_3 \amp x_4 \amp -1 \amp  \\
-\hline
--12.5 \amp -2 \amp 12.5 \amp 1\amp 0\amp  -t_1 \\
-1\amp  0.24 \amp -2 \amp -0.24 \amp 0\amp  -t_2 \\
-\hline
-4 \amp 1.92 \amp -16 \amp -0.96  \amp 1 \amp   f \\
-\hline
-\end{array} 
-\end{equation*}
+<div class="introduction" id="activity-cyclingexample-1">
+<div class="para" id="activity-cyclingexample-1-1">Consider the following canonical maximization tableau:</div> <div class="para" id="activity-cyclingexample-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-12.5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(12.5\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0.24\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.24\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1.92\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-16\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.96\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div>
 </div>
-</div></div>
 <article class="task exercise-like" id="activity-cyclingexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-cyclingexample-2-1-1">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>, and keep track of the variables.</div> <div class="para logical" id="activity-cyclingexample-2-1-2">
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
--12.5 \amp -2 \amp 12.5 \amp 1\amp 0 \\
-1^*\amp  0.24 \amp -2 \amp -0.24 \amp 0 \\
-\hline
-4 \amp 1.92 \amp -16 \amp -0.96 \amp 0  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ?^* \amp ? \amp ? \amp ? \\
-?\amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ? \amp ? \amp ? \amp ? \\
-?\amp  ? \amp ?^* \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ? \amp ? \amp ?^* \amp ? \\
-?\amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ? \amp ? \amp ? \amp ? \\
-?^* \amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|}
-\hline
-? \amp ?^* \amp ? \amp ? \amp ? \\
-? \amp  ? \amp ? \amp ? \amp ? \\
-\hline
-? \amp ? \amp ? \amp ?  \amp ?  \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
+<div class="para" id="activity-cyclingexample-2-1-1">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>, and keep track of the variables.</div> <div class="para" id="activity-cyclingexample-2-1-2">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-12.5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(12.5\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1^*\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0.24\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.24\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1.92\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-16\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.96\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
 </div></article><article class="task exercise-like" id="activity-cyclingexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-cyclingexample-3-1-1">Compare your final tableau to the initial tableau.  Are there any similarities?</div></article></article><article class="activity project-like" id="sec-cycling-3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.2</span><span class="period">.</span>
@@ -305,54 +480,147 @@ x,y \amp\geq0
 <div class="para" id="thm-BlandAnticycling-2-1">List all variables, independent and dependent in the initial tableau.  Then consider the following rules:</div> <ol class="decimal">
 <li id="thm-BlandAnticycling-2-2-1"><div class="para" id="thm-BlandAnticycling-2-2-1-1">Whenever there is more than one possible choice for a pivot row according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>:  select the row corresponding to the variable closest to the front of the initial list.</div></li>
 <li id="thm-BlandAnticycling-2-2-2"><div class="para" id="thm-BlandAnticycling-2-2-2-1">Whenever there is more than one possible choice for a pivot column according to <a href="" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" title="Definition 3.3.1">Definition 3.3.1</a>:  select the column corresponding to the variable closest to the front of the initial list.</div></li>
-</ol> <div class="para" id="thm-BlandAnticycling-2-3">Then the Simplex Algorthm will not cycle.</div></article><details id="sec-cycling-8" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="sec-cycling-8-1">
-<div class="para">For the sake of notation, we denote the initial tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|c}
-x_1 \amp x_2 \amp \cdots \amp x_n \amp -1\\
-\hline
-a_{11} \amp a_{12}\amp \cdots \amp a_{1n}\amp b_1 \amp -x_{n+1} \\
-a_{21} \amp a_{22}\amp \cdots \amp a_{2n}\amp b_2 \amp -x_{n+2} \\
-\vdots \amp \vdots \amp \ddots \amp \vdots\amp \vdots \amp\vdots \\
-a_{m1} \amp a_{m2}\amp \cdots \amp a_{mn}\amp b_m \amp -x_{n+m} \\
-\hline
-c_1 \amp c_2\amp \cdots \amp c_n \amp d \amp   = f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">and order the variables in the associated way.  Suppose we follow Bland’s rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) <span class="process-math">\(B_1\to B_2\to \cdots B_\ell \to B_1\text{.}\)</span> We call a variable <span class="process-math">\(x_j\)</span> <em class="emphasis">fickle</em> if <span class="process-math">\(x_j\)</span> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.</div>
-</div> <div class="para" id="sec-cycling-8-2">Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if <span class="process-math">\(x_j\)</span> is fickle, <span class="process-math">\(x_j=0\)</span> for each basic solution during the cycle.</div> <div class="para logical" id="sec-cycling-8-3">
-<div class="para">Since the number of variables is finite, the set of fickle variables is also finite, and let <span class="process-math">\(x_t\)</span> denote the fickle variable with largest subscript.  Suppose that <span class="process-math">\(x_t \in B_i, x_t\not\in B_{i+1}\)</span> (why must such a <span class="process-math">\(B_i\)</span> exist?). Denote the entering variable from <span class="process-math">\(B_i\to B_{i+1}\)</span> with <span class="process-math">\(x_s\text{.}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|ccc|c|c}
-\cdots \amp x_s \amp \cdots \amp  -1\amp \\
-\hline
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\vdots \amp a_{ts} \amp \vdots \amp 0 \amp -x_t \\
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\hline
-\cdots \amp c_s \amp \cdots \amp d \amp =f \\
-\hline
-\end{array} 
-\to
-\begin{array}{|ccc|c|c}
-\cdots \amp x_t \amp \cdots \amp  -1\amp \\
-\hline
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\vdots \amp ? \amp \vdots \amp  0 \amp -x_s \\
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\hline
-\cdots \amp ?\amp \cdots \amp d \amp =f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">Note that <span class="process-math">\(x_s\)</span> must also be fickle (why?) and so <span class="process-math">\(s\lt t\text{.}\)</span>
-</div>
+</ol> <div class="para" id="thm-BlandAnticycling-2-3">Then the Simplex Algorthm will not cycle.</div></article><details id="sec-cycling-8" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="sec-cycling-8-1">For the sake of notation, we denote the initial tableau: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{m+1}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{m+2}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_n\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{m+n}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> and order the variables in the associated way.  Suppose we follow Bland’s rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) <span class="process-math">\(B_1\to B_2\to \cdots B_\ell \to B_1\text{.}\)</span> We call a variable <span class="process-math">\(x_j\)</span> <em class="emphasis">fickle</em> if <span class="process-math">\(x_j\)</span> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.</div> <div class="para" id="sec-cycling-8-2">Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if <span class="process-math">\(x_j\)</span> is fickle, <span class="process-math">\(x_j=0\)</span> for each basic solution during the cycle.</div> <div class="para" id="sec-cycling-8-3">Since the number of variables is finite, the set of fickle variables is also finite, and let <span class="process-math">\(x_t\)</span> denote the fickle variable with largest subscript.  Suppose that <span class="process-math">\(x_t \in B_i, x_t\not\in B_{i+1}\)</span> (why must such a <span class="process-math">\(B_i\)</span> exist?). Denote the entering variable from <span class="process-math">\(B_i\to B_{i+1}\)</span> with <span class="process-math">\(x_s\text{.}\)</span> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width middle" style="width:45%;"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_s\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{ts}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{t}\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_s\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width middle" style="width:45%;"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_t\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{s}\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></div> Note that <span class="process-math">\(x_s\)</span> must also be fickle (why?) and so <span class="process-math">\(s\lt t\text{.}\)</span>
 </div> <div class="para logical" id="sec-cycling-8-4">
 <div class="para">We call the <em class="emphasis">dictionary</em> for a basis the system of equations corresponding to that basis.  So the dictionary for <span class="process-math">\(B_i\)</span> is <span class="process-math">\(D_i\)</span> which we can write as:</div>
 <div class="displaymath process-math" id="sec-cycling-8-4-4">
@@ -364,33 +632,92 @@ f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d
 <div class="para">Note that since the above pivot was valid, we must have that <span class="process-math">\(c_s&gt;0, a_{ts}&gt;0\)</span> and since the pivot was degenerate, we have <span class="process-math">\(b_t=0\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="sec-cycling-8-5">
-<div class="para">Now, because we have cycling, we must have that <span class="process-math">\(x_t\)</span> reenters the basis at some point</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|ccc|c|c}
-\cdots \amp x_t \amp \cdots \amp  -1\amp \\
-\hline
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\vdots \amp ? \amp \vdots \amp  0 \amp -x_? \\
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\hline
-\cdots \amp c_t^*\amp \cdots \amp d \amp =f \\
-\hline
-\end{array} 
-\to
-\begin{array}{|ccc|c|c}
-\cdots \amp x_? \amp \cdots \amp  -1\amp \\
-\hline
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\vdots \amp ? \amp \vdots \amp  0 \amp -x_t \\
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\hline
-\cdots \amp ?\amp \cdots \amp d \amp =f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">Note that for this pivot to be valid, we have that <span class="process-math">\(c_t^*&gt;0\text{.}\)</span> If we let <span class="process-math">\(D_\ell\)</span> denote the dictionary before <span class="process-math">\(x_t\)</span> re-enters the basis, we have:</div>
+<div class="para">Now, because we have cycling, we must have that <span class="process-math">\(x_t\)</span> reenters the basis at some point <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width middle" style="width:45%;"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_t\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{?}\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_t^*\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width middle" style="width:45%;"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{t}\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></div> Note that for this pivot to be valid, we have that <span class="process-math">\(c_t^*&gt;0\text{.}\)</span> If we let <span class="process-math">\(D_\ell\)</span> denote the dictionary before <span class="process-math">\(x_t\)</span> re-enters the basis, we have:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f = \displaystyle\sum_{x_j\not\in B_\ell} c_{j}^*x_j -d
@@ -439,25 +766,56 @@ c_r^*a_{rs}\lt 0.
 \end{equation*}
 </div>
 </div> <div class="para" id="sec-cycling-8-8">From this, we know that <span class="process-math">\(c_r^*\neq 0\text{.}\)</span>  So <span class="process-math">\(x_r\not\in B_\ell\text{,}\)</span> but <span class="process-math">\(x_r\in B_i\text{,}\)</span> so <span class="process-math">\(x_r\)</span> is fickle.  Since <span class="process-math">\(t\)</span> is the largest index of a fickle variable, <span class="process-math">\(r\lt t\text{.}\)</span>  Note that <span class="process-math">\(x_r\)</span> is not entering from <span class="process-math">\(B_\ell\text{,}\)</span> so <span class="process-math">\(c_r^*\leq 0\text{.}\)</span>  Thus <span class="process-math">\(a_{rs}&gt;0\text{.}\)</span>
-</div> <div class="para logical" id="sec-cycling-8-9">
-<div class="para">But <span class="process-math">\(x_r\)</span> is fickle, so <span class="process-math">\(b_r=0\)</span> in <span class="process-math">\(D_i\text{.}\)</span>  But then, we would have picked <span class="process-math">\(x_r\text{,}\)</span> not <span class="process-math">\(x_t\)</span> to leave.</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|ccc|c|c}
-\cdots \amp x_s \amp \cdots \amp  -1\amp \\
-\hline
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\vdots \amp a_{ts} \amp \vdots \amp 0 \amp -x_t \\
-\vdots \amp a_{rs} \amp \vdots \amp 0 \amp -x_r \\
-\cdots \amp \cdots \amp \cdots \amp \vdots \amp  \\
-\hline
-\cdots \amp c_s \amp \cdots \amp d \amp =f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">which is a contradiction.</div>
-</div></article></details><article class="activity project-like" id="sec-cycling-9"><h3 class="heading">
+</div> <div class="para" id="sec-cycling-8-9">But <span class="process-math">\(x_r\)</span> is fickle, so <span class="process-math">\(b_r=0\)</span> in <span class="process-math">\(D_i\text{.}\)</span>  But then, we would have picked <span class="process-math">\(x_r\text{,}\)</span> not <span class="process-math">\(x_t\)</span> to leave. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_s\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{ts}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{t}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{rs}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_{r}\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_s\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div> which is a contradiction.</div></article></details><article class="activity project-like" id="sec-cycling-9"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.5.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-cycling-9-1-1">If we follow <a href="" class="xref" data-knowl="./knowl/xref/thm-BlandAnticycling.html" title="Theorem 3.5.3: Bland’s Anticycling Rules">Theorem 3.5.3</a> then no basis is visited twice during the Simplex Algorithm.  Note that <span class="process-math">\(f\)</span> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?</div></article></section></div>
