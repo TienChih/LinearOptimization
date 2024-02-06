@@ -902,6 +902,7 @@
       Since the number of variables is finite, the set of fickle variables is also finite, and let <m>x_t</m> 
       denote the fickle variable with largest subscript.  Suppose that <m>x_t \in B_i, x_t\not\in B_{i+1}</m> (why must such a <m>B_i</m> exist?).
       Denote the entering variable from <m>B_i\to B_{i+1}</m> with <m>x_s</m>.
+
       
        <sidebyside widths="45% 45%" valign="middle" margins="0% 0%">
         <tabular halign="center">
@@ -1115,7 +1116,7 @@
     <p>
       Now, because we have cycling, we must have that <m>x_t</m> reenters the basis at some point
       
-      <sidebyside widths="45% 45%" valign="middle" margins="0% 0%">
+      <sidebyside widths="50% 50%" valign="middle" margins="0% 0%">
         <tabular halign="center">
           <row>
             <cell halign="right">
