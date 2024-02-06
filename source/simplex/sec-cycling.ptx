@@ -904,7 +904,7 @@
       Denote the entering variable from <m>B_i\to B_{i+1}</m> with <m>x_s</m>.
 
       
-       <sidebyside widths="45% 45%" valign="middle" margins="0% 0%">
+       <sidebyside widths="50% 50%" valign="middle" margins="0% 0%">
         <tabular halign="center">
           <row>
             <cell halign="right">
@@ -1115,7 +1115,8 @@
 
     <p>
       Now, because we have cycling, we must have that <m>x_t</m> reenters the basis at some point
-      
+    </p>
+    <p>
       <sidebyside widths="50% 50%" valign="middle" margins="0% 0%">
         <tabular halign="center">
           <row>
@@ -1307,6 +1308,8 @@
           </row>
         </tabular>
       </sidebyside>
+    </p>
+    <p>
       Note that for this pivot to be valid, we have that <m>c_t^*>0</m>.
       If we let <m>D_\ell</m> denote the dictionary before <m>x_t</m> re-enters the basis, we have:
       <me>
@@ -1338,7 +1341,8 @@
     </p>
     <p>
       But <m>x_r</m> is fickle, so <m>b_r=0</m> in <m>D_i</m>.  But then, we would have picked <m>x_r</m>, not <m>x_t</m> to leave.
-      
+    </p>
+    <p>
       <tabular halign="center">
         <row>
           <cell halign="right">
@@ -1452,6 +1456,8 @@
           </cell>
         </row>
       </tabular>
+    </p>
+    <p>
       which is a contradiction.
     </p>
   </proof>
