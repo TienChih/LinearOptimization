@@ -847,6 +847,33 @@ var ptx_lunr_docs = [
   "body": "  Solve the linear program:         "
 },
 {
+  "id": "sec-section-sensitivity",
+  "level": "1",
+  "url": "sec-section-sensitivity.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "Sensitivity Analysis",
+  "body": " Sensitivity Analysis  In this section, we begin to assign values to our bounds.    A witch is brewing a healing elixer and a poison. A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs. She currently has 34 newt eyes and 14 frogs.  Supposing that the healing elixer sells for three gold pieces, and the poison sells for two. She wishes to maximzie her revenue. Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.    Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.        *WITCH NAME* is frustrated by her production levels and income. She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?    Recompute this linear program with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs. Which provides the greater increase in revenue? Is this consistent with what you thought earlier?    If the need for healing elixer increases and they now sell for 5 gold, would that change our answer?      In both and we esentially explore the idea of assigning values somehow to the bounds of a maximization problem.  If you have a production problem, and wish to assign a value to all your materials, which of the following should be reasonable things to expect from these values?    The value of a material is non-negative.    The total value of the materials should be as big as possible.    The total value of these materials should be greater than or equal to the value of selling products made with those materials.    Think of more later.      "
+},
+{
+  "id": "exploration-witch",
+  "level": "2",
+  "url": "sec-section-sensitivity.html#exploration-witch",
+  "type": "Exploration",
+  "number": "5.1.1",
+  "title": "",
+  "body": "  A witch is brewing a healing elixer and a poison. A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs. She currently has 34 newt eyes and 14 frogs.  Supposing that the healing elixer sells for three gold pieces, and the poison sells for two. She wishes to maximzie her revenue. Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.    Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.        *WITCH NAME* is frustrated by her production levels and income. She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?    Recompute this linear program with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs. Which provides the greater increase in revenue? Is this consistent with what you thought earlier?    If the need for healing elixer increases and they now sell for 5 gold, would that change our answer?   "
+},
+{
+  "id": "sec-section-sensitivity-4",
+  "level": "2",
+  "url": "sec-section-sensitivity.html#sec-section-sensitivity-4",
+  "type": "Activity",
+  "number": "5.1.2",
+  "title": "",
+  "body": "  In both and we esentially explore the idea of assigning values somehow to the bounds of a maximization problem.  If you have a production problem, and wish to assign a value to all your materials, which of the following should be reasonable things to expect from these values?    The value of a material is non-negative.    The total value of the materials should be as big as possible.    The total value of these materials should be greater than or equal to the value of selling products made with those materials.    Think of more later.     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
