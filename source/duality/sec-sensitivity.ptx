@@ -128,7 +128,7 @@
         <me>\begin{bmatrix}3\\1 \end{bmatrix}, \begin{bmatrix}1\\1 \end{bmatrix}, \begin{bmatrix}-1\\0 \end{bmatrix}, \begin{bmatrix}0\\-1 \end{bmatrix} </me>
         which can be depicted as *FIX TIKZ*
           
-        <figure>
+        <!--<figure>
           <caption>The Feasible Region of the Witch Problem</caption>
             <image xml:id="witch-feasible" width="100%">
                 <description>The Feasible Region of the Witch Problem</description>
@@ -136,7 +136,7 @@
                   
                 </latex-image>
             </image>
-        </figure>
+        </figure>-->
       </p>
     </introduction>
     <task>
