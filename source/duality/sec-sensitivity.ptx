@@ -132,12 +132,12 @@
           <caption>The Feasible Region of the Witch Problem</caption>
             <image xml:id="witch-feasible" width="100%">
                 <description>The Feasible Region of the Witch Problem</description>
-                <latex-image>
-                  
+                <latex-image>  
+                    
                 </latex-image>
             </image>
         </figure>-->
-      </p>
+      </p>. 
     </introduction>
     <task>
       <statement>
