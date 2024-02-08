@@ -73,7 +73,7 @@
       <ol marker="A." cols="2">
         <li>
           <p>
-            The value of a material is non-negative.
+            The value of each material is non-negative.
           </p>
         </li>
         <li>
@@ -83,17 +83,379 @@
         </li>
         <li>
           <p>
+            The total value of the materials should be as small as possible.
+          </p>
+        </li>
+        <li>
+          <p>
             The total value of these materials should be greater than or equal to the value of selling products made with those materials.
           </p>
         </li>
         <li>
           <p>
-            Think of more later.
+            All materials must have non-zero value.
+          </p>
+        </li>
+        <li>
+          <p>
+            If a material is ever used, it has zero value.
           </p>
         </li>
       </ol>
     </statement>
     
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        From <xref ref="exploration-witch"/>, letting <m>x_1</m> denote the number of healing elixers,
+        and <m>x_2</m> denote the amount of poison created. Then, we get that the feasible region satisfies the inequalities:
+        <md>
+          <mrow>3x_1+x_2 \amp\leq 34 </mrow>
+          <mrow>x_1+x_2 \amp\leq 14 </mrow>
+          <mrow>-x_1 \amp\leq 0 </mrow>
+          <mrow>-x_2 \amp\leq 0 </mrow>
+        </md>
+        which is bounded by hyperplanes:
+        <md>
+          <mrow>3x_1+x_2 \amp = 34 </mrow>
+          <mrow>x_1+x_2 \amp = 14 </mrow>
+          <mrow>-x_1 \amp = 0 </mrow>
+          <mrow>-x_2 \amp = 0 </mrow>
+        </md>
+        with normal vectors 
+        <me>\begin{bmatrix}3\\1 \end{bmatrix}, \begin{bmatrix}1\\1 \end{bmatrix}, \begin{bmatrix}-1\\0 \end{bmatrix}, \begin{bmatrix}0\\-1 \end{bmatrix} </me>
+        which can be depicted as *FIX TIKZ*
+          
+        <figure>
+          <caption>The Feasible Region of the Witch Problem</caption>
+            <image xml:id="witch-feasible" width="100%">
+                <description>The Feasible Region of the Witch Problem</description>
+                <latex-image>
+                  \begin{tikzpicture}
+                  \draw[step=1cm,gray!50,very thin] (-0.5,-0.5) grid (15,15);
+                  \draw[fill, blue, opacity=0.4] (0,0) -- (0,14) -- (10,4) -- (34/3,0) -- (0,0);
+                  \draw[very thick,->] (-0.5,0) -- (15,0);
+                  \draw[very thick,->] (0,-0.5) -- (0,15);
+                  \foreach \x in {0,5,...,15}\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\tiny $\mathbf{\x}$};
+                  \foreach \y in {0,5,...,15}\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\tiny $\mathbf{\y}$};
+                  \draw[black, thick] (0,0) -- (0,14) -- (10,4) -- (34/3,0) -- (0,0);
+                  \draw[red, dashed, thick] (14,0) --node[above right]{$x+y=14$} (0,14);
+                  \draw[teal, dashed, thick] (19/3,15) --node[above right]{$3x+y=34$} (34/3,0);
+                  \draw[ fill] (0,0) node[below left]{\Large$(0,0)$} circle (2pt); 
+                  \draw[ fill] (0,14) node[above left]{\Large$(0,14)$} circle (2pt); 
+                  \draw[ fill] (34/3,0) node[below right]{\Large$(34/3,0)$} circle (2pt); 
+                  \draw[ fill] (10,4) node[above right]{\Large$(10,4)$} circle (2pt); 
+                  \draw[red, ->, ultra thick] (5,9) -- (5+0.707106781187, 9+0.707106781187);
+                  \draw[teal, ->, ultra thick] (32/3,2) -- (32/3+3*0.316227766017,2+0.316227766017);
+                  \draw[->, ultra thick] (17/3, 0 ) -- (17/3, -1);
+                  \draw[->, ultra thick] (0,7) -- (-1,7);
+                  \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          For any <m>k\in \mathbb{R}</m>, the objective plane is <m>3x_1+2x_2=k</m> with normal vector <m> \begin{bmatrix}3\\2 \end{bmatrix}</m>. 
+        </p>            
+        <p>
+          For each extreme point in the feasible region, express the normal vector for the objective plane as a linear combination of the normal vectors of the planes whose intersect at said point. 
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For each extreme point in the feasible region, consider the bounding planes who intersect at that point.  If you traverse in the direction of the normal vectors from the extreme point, does the objective function increase or decrease?  How does this connect to the coefficients we just found?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Starting at the basic solution, perform pivots as follows:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> 3^*</m>
+              </cell>
+              <cell right="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium">
+                <m> 34</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 14</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> 3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?^*</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> ?^*</m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> ?</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          For each tableau, confirm the solution is feasible.  Then look at the objective row, is there anything familiar about those values?
+        </p>
+        <p>
+          For each tableau above, if I decrease each decision variable from <m>0</m> to <m>-1</m>, how does that change the value of the objective function?  What does decreasing a decision variable from <m>0</m> to <m>-1</m> mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?
+        </p>
+      </statement>
+    </task>
   </activity>
 
   
