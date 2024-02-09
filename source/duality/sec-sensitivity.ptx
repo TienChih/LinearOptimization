@@ -615,7 +615,49 @@
           </p>
         </statement>
       </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that this tableau corresponds to an optimal solution.  If we decrease any <m>x_1</m> from <m>0</m> to <m>-1</m>, how does <m>f</m> change?  What does this decrease correspond to geometrically?
+          </p>
+        </statement>
+      </task>
   </activity>
+
+  <definition xml:id="definition-dual">
+    <p>
+      Recall the canonical maximization problem:
+
+    </p>
+    
+
+    <p>
+      <md>
+        <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+        <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
+        <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2</mrow>
+        <mrow> \vdots \amp   \vdots</mrow>
+        <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n</mrow>
+        <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
+      </md>
+    </p>
+
+    <p>
+      The <em>dual minimization program</em>  is aritculated as follows: 
+    </p>
+
+    <p>
+      <md>
+        <mrow>\textbf{Minimize: }  g(\mathbf{y}) = y_1b_1 + y_2b_2 +\cdots y_nb_n-d \amp= \left(\displaystyle\sum_{i=1}^n y_ib_i \right)-d</mrow>
+        <mrow>\textbf{Subject to: }  a_{1,1}y_1 + a_{2,1}y_2 +\cdots a_{n,1}y_n\amp \geq  c_1</mrow>
+        <mrow> a_{1,2}y_1 + a_{2,2}y_2 +\cdots a_{n,2}y_n\amp \geq  c_2</mrow>
+        <mrow> \vdots \amp   \vdots</mrow>
+        <mrow> a_{1,m}y_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \geq  c_m</mrow>
+        <mrow> y_1, y_2, \ldots, y_n\amp \geq  0</mrow>
+      </md>
+    </p>
+
+  </definition>
 
   
   
