@@ -425,7 +425,29 @@ x_1+x_2 \amp = 14 \\
 <article class="task exercise-like" id="sec-section-sensitivity-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-section-sensitivity-6-2-1-1">Prove that  the normal vector for <span class="process-math">\(f\)</span> is <span class="process-math">\(\sum_{j=1}^m (-c_j)\mathbf{v}_j\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-section-sensitivity-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-section-sensitivity-6-3-1-1">Is there anything special about a tableau where <span class="process-math">\(f\)</span> is a non-negative linear combination of normal vectors?</div></article></article></section></div>
+<div class="para" id="sec-section-sensitivity-6-3-1-1">Is there anything special about a tableau where <span class="process-math">\(f\)</span> is a non-negative linear combination of normal vectors?</div></article><article class="task exercise-like" id="sec-section-sensitivity-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-section-sensitivity-6-4-1-1">Suppose that this tableau corresponds to an optimal solution.  If we decrease any <span class="process-math">\(x_1\)</span> from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\text{,}\)</span> how does <span class="process-math">\(f\)</span> change?  What does this decrease correspond to geometrically?</div></article></article><article class="definition definition-like" id="definition-dual"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="definition-dual-1">Recall the canonical maximization problem:</div> <div class="para logical" id="definition-dual-2"><div class="displaymath process-math" id="definition-dual-2-1">
+\begin{align*}
+\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d\\
+\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1\\
+a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2\\
+\vdots \amp   \vdots\\
+a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n\\
+x_1, x_2, \ldots, x_m\amp \geq  0
+\end{align*}
+</div></div> <div class="para" id="definition-dual-3">The <em class="emphasis">dual minimization program</em>  is aritculated as follows:</div> <div class="para logical" id="definition-dual-4"><div class="displaymath process-math" id="definition-dual-4-1">
+\begin{align*}
+\textbf{Minimize: }  g(\mathbf{y}) = y_1b_1 + y_2b_2 +\cdots y_nb_n-d \amp= \left(\displaystyle\sum_{i=1}^n y_ib_i \right)-d\\
+\textbf{Subject to: }  a_{1,1}y_1 + a_{2,1}y_2 +\cdots a_{n,1}y_n\amp \geq  c_1\\
+a_{1,2}y_1 + a_{2,2}y_2 +\cdots a_{n,2}y_n\amp \geq  c_2\\
+\vdots \amp   \vdots\\
+a_{1,m}y_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \geq  c_m\\
+y_1, y_2, \ldots, y_n\amp \geq  0
+\end{align*}
+</div></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-duality.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
