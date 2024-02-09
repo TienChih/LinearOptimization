@@ -133,11 +133,11 @@
             <image xml:id="witch-feasible" width="100%">
                 <description>The Feasible Region of the Witch Problem</description>
                 <latex-image>  
-                    
+                  
                 </latex-image>
             </image>
         </figure>-->
-      </p>. 
+      </p> 
     </introduction>
     <task>
       <statement>
@@ -433,11 +433,188 @@
         <p>
           For each tableau, confirm the solution is feasible.  Then look at the objective row, is there anything familiar about those values?
         </p>
+       
+      </statement>
+    </task>
+    <task>
+      <statement>
         <p>
           For each tableau above, if I decrease each decision variable from <m>0</m> to <m>-1</m>, how does that change the value of the objective function?  What does decreasing a decision variable from <m>0</m> to <m>-1</m> mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?
         </p>
       </statement>
     </task>
+
+    <task>
+      <statement>
+        <p>
+          For which extreme point is the normal vector of the objective plane a linear combination
+          of the normal vectors of intersecting hyperplanes using only positive coefficients?  How is that reflected in
+          the corresponding tableau?  Is there anything special about the corresponding solution? 
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+  <activity>
+      <introduction>
+        <p>
+          Consider the tableau:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_m</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1m}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_{m+1}</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2m}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_{m+2}</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>b_n</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_{m+n}</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_m</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>d</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Suppose that for <m>j\in \{1,2,\ldots,n\}</m> each plane <m>-x_j=0</m> has corresponding normal vector
+          <m>\mathbf{v}_j</m>. 
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Prove that <m>f = \displaystyle \sum_{j=1}^m (-c_j)\mathbf{v}_j -d</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is there anything special about a tableau where <m>f</m> is a non-negative linear combination of normal vectors?
+          </p>
+        </statement>
+      </task>
   </activity>
 
   
