@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-dualitytheory" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Duality Theory</title>
+
+  <p> In this section, we establish the theoritical underpinnings of duality. </p>
+
+  <definition>
+    <statement>
+      <p>
+        Recall the primal maximization problem <xref ref="activity-maxslack"/>, and the corresponding
+        dual minimization problem <xref ref="definition-dual"/>. By letting 
+        <me>A = \begin{bmatrix} a_{11} \amp a_{12} \amp \cdots \amp a_{1m} \\ 
+          a_{21} \amp a_{22} \amp \cdots \amp a_{2m} \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots \\
+          a_{n1} \amp a_{n2} \amp \cdots \amp a_{nm} \end{bmatrix}, 
+        b = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}, 
+      c^{\top}= \begin{bmatrix}c_1 \amp c_2\amp \cdots \amp c_m \end{bmatrix}, d=d</me>
+
+      
+
+      </p>
+      <p>
+        We can rephrase the primal max problem as follows: Maximize <m>f = c^{\top}\mathbf{x}-d</m> for
+        <m>\mathbf{x}\in \mathbb{R}^m</m> subject to <me>A\mathbf{x}\leq b, \mathbf{x}\geq 0.</me>
+        Here, we understand <m>\leq, \geq </m> to denote entrywise inequality.
+      </p>
+
+      <p>
+        Likewise, we can rephrase the dual min problem as follows: Minimize <m>f = \mathbf{y}^{\top}b-d</m> for
+        <m>\mathbf{y}\in \mathbb{R}^n</m> subject to <me> \mathbf{y}^{\top}A\geq c^{\top}, \mathbf{y}\geq 0.</me>
+      </p>
+    </statement>
+  </definition>
+
+  <activity xml:id="activity-weakduality">
+    <introduction>
+      <statement>
+        <p>
+          In this activity, we explore a foundational relationship between the primal max 
+          problem and it's dual, called <em>weak duality</em>.
+        </p>
+      </statement>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Consider the matrix product <m>\mathbf{y}^{\top}A\mathbf{x}</m>.  Use this product to show that <m>g\geq f</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose there were feasible <m>\mathbf{x_0}, \mathbf{y_0}</m> for which <m>f(\mathbf{x_0},)= g(\mathbf{y_0})</m>.  What 
+          then must be true about these solutions?  Can we prove our assertion?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Recall <xref ref="activity-insurance"/> and <xref ref="exploration-witch"/>.  Consider the primal
+          max and dual min of the associated problems.  How does our assertion fit these problems?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Come up with a primal max problem (and corresponding min dual) where <m>A, b, c, d, \mathbf{x}, \mathbf{y}</m>
+          all have <em>integer</em> values, so that the primal max and dual min problems achieve optimal solutions <m>\mathbf{x_0}, \mathbf{y_0}</m>,
+          where <m>f(\mathbf{x_0}) \lt g(\mathbf{y_0})</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Simpler is better.
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Using the same values for <m>A, b, c, d</m> for the problem we just constructed, suppose we relax the condition that all our values must be integers.
+          What can we say about the optimal solutions then?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    We have now that if <m>f=g</m> for a pair of feasible solutions, then we have optimality
+    for both programs.  It would be good to prove that this is an if or only if statement.
+  </p>
+
+  <theorem xml:id="thm-hyperplaneseperation">
+    <title>Hyperplane Seperation Theorem</title>
+    
+    
+    <statement>
+      <p>
+        Given two disjoint convex sets <m>U, V\subseteq \R^{n}</m>, there is a hyperplane
+        <m>H=\{\mathbf{x}\in \R^n: \mathbf{h}^{\top}\mathbf{x}=k\} </m> for some <m>\mathbf{h}\in \R^n, k\in \R</m>, such that
+        <m>\mathbf{h}^{\top}U \geq k, \mathbf{h}^{\top}V\lt k</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    <task>
+      <statement>
+        <p>
+          Sketch two non-empty convex sets <m>U, V</m>, what does <m>H</m> look like here?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Sketch two non-convex sets where <xref ref="thm-hyperplaneseperation"/> fails.
+        </p>
+      </statement>
+    </task>
+  </activity>
+  
+
+  <activity>
+    <introduction>
+      <p>
+        We prove the case of <xref ref="thm-hyperplaneseperation"/> where there are <m>u_0\in U, v_0\in V</m>
+        that minimize <m>\{\|u-v\|: u\in U, v\in V\}</m>. We assume this is true.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Without loss of generality, let <m>v_0=0</m>.  Why can we do this?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\mathbf{h} = u_0-v_0</m>.  Sketch <m>u_0, v_0, \mathbf{h}</m> and <m>H:=\{\mathbf{x}\in \R^n: \mathbf{h}^\top \mathbf{x}=0\}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We want to show that <m>H</m> is the seperating hyperplane.  Suppose that <m>U</m> was not contained in <m>\{\mathbf{x}\in \R^n: \mathbf{h}^\top\mathbf{x}\geq0\}</m> what must be true about <m>U</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>u'\in U</m> such that <m>\mathbf{h}^\top u'\leq0</m>.  Sketch <m>u'</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\mathbf{d} = u'-u_0</m> decribe geometrically what <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m> represents.  Think dot product and projections.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\alpha = \frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}</m>, show that <m>0\lt \alpha \lt 1</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>w=\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u_0</m>, show that <m> w = \alpha u_0 + (1-\alpha)u'</m> 
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that <m>w\in U</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that <m>w^\top w = u_0^\top u_0 + \alpha \mathbf{d}^\top \mathbf{d}\left(2 \frac{u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}+\alpha\right)</m>, and explain why 
+          <m>w^\top w \lt u_0^\top u_0</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Why is the last statement a contradiction?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+
+  
+  
+
+
+
+  
+
+</section>
