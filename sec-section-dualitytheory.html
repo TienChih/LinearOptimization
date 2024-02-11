@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Geometric Linear Programming</title>
+<title>Duality Theory</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -137,7 +137,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="linear-optimization.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-section-initial.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-section-sensitivity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-duality.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -152,7 +152,7 @@ true);
 <div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Random Introductory Stuff</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A review of random things</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-chapter active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">2</span> <span class="title">Geometric Linear Programming</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-initial.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial Examples</span></a></div></li>
@@ -177,24 +177,95 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">5</span> <span class="title">Duality</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Duality Theory</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-geometric"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Geometric Linear Programming</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-section-dualitytheory"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.2</span><span class="space"> </span><span class="title">Duality Theory</span>
 </h2>
-<section class="introduction" id="ch-geometric-2"><div class="para" id="ch-geometric-2-1">Text before the first section.</div></section><nav class="summary-links"><ul>
-<li><a href="sec-section-initial.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Initial Examples</span></a></li>
-<li><a href="sec-section-convexity.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Polyhedral Convextiy</span></a></li>
-</ul></nav></section></div>
+<div class="para" id="sec-section-dualitytheory-2">In this section, we establish the theoritical underpinnings of duality.</div>
+<article class="definition definition-like" id="sec-section-dualitytheory-3"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-section-dualitytheory-3-1-1">
+<div class="para">Recall the primal maximization problem <a href="" class="xref" data-knowl="./knowl/xref/activity-maxslack.html" title="Activity 3.1.1">Activity 3.1.1</a>, and the corresponding dual minimization problem <a href="" class="xref" data-knowl="./knowl/xref/definition-dual.html" title="Definition 5.1.1">Definition 5.1.1</a>. By letting</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/activity-maxslack.html ./knowl/xref/definition-dual.html">
+\begin{equation*}
+A = \begin{bmatrix} a_{11} \amp a_{12} \amp \cdots \amp a_{1m} \\ 
+a_{21} \amp a_{22} \amp \cdots \amp a_{2m} \\
+\vdots \amp \vdots \amp \ddots \amp \vdots \\
+a_{n1} \amp a_{n2} \amp \cdots \amp a_{nm} \end{bmatrix}, 
+b = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}, 
+c^{\top}= \begin{bmatrix}c_1 \amp c_2\amp \cdots \amp c_m \end{bmatrix}, d=d
+\end{equation*}
+</div>
+</div> <div class="para logical" id="sec-section-dualitytheory-3-1-2">
+<div class="para">We can rephrase the primal max problem as follows: Maximize <span class="process-math">\(f = c^{\top}\mathbf{x}-d\)</span> for <span class="process-math">\(\mathbf{x}\in \mathbb{R}^m\)</span> subject to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\mathbf{x}\leq b, \mathbf{x}\geq 0.
+\end{equation*}
+</div>
+<div class="para">Here, we understand <span class="process-math">\(\leq, \geq \)</span> to denote entrywise inequality.</div>
+</div> <div class="para logical" id="sec-section-dualitytheory-3-1-3">
+<div class="para">Likewise, we can rephrase the dual min problem as follows: Minimize <span class="process-math">\(f = \mathbf{y}^{\top}b-d\)</span> for <span class="process-math">\(\mathbf{y}\in \mathbb{R}^n\)</span> subject to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{y}^{\top}A\geq c^{\top}, \mathbf{y}\geq 0.
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="activity-weakduality"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="activity-weakduality-1"><div class="para" id="activity-weakduality-1-1-1">In this activity, we explore a foundational relationship between the primal max problem and it’s dual, called <em class="emphasis">weak duality</em>.</div></div>
+<article class="task exercise-like" id="activity-weakduality-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-weakduality-2-1-1">Consider the matrix product <span class="process-math">\(\mathbf{y}^{\top}A\mathbf{x}\text{.}\)</span>  Use this product to show that <span class="process-math">\(g\geq f\text{.}\)</span>
+</div></article><article class="task exercise-like" id="activity-weakduality-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-weakduality-3-1-1">Suppose there were feasible <span class="process-math">\(\mathbf{x_0}, \mathbf{y_0}\)</span> for which <span class="process-math">\(f(\mathbf{x_0},)= g(\mathbf{y_0})\text{.}\)</span>  What then must be true about these solutions?  Can we prove our assertion?</div></article><article class="task exercise-like" id="activity-weakduality-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-weakduality-4-1-1">Recall <a href="" class="xref" data-knowl="./knowl/xref/activity-insurance.html" title="Activity 3.2.1">Activity 3.2.1</a> and <a href="" class="xref" data-knowl="./knowl/xref/exploration-witch.html" title="Exploration 5.1.1">Exploration 5.1.1</a>.  Consider the primal max and dual min of the associated problems.  How does our assertion fit these problems?</div></article><article class="task exercise-like" id="activity-weakduality-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-weakduality-5-1-1">Come up with a primal max problem (and corresponding min dual) where <span class="process-math">\(A, b, c, d, \mathbf{x}, \mathbf{y}\)</span> all have <em class="emphasis">integer</em> values, so that the primal max and dual min problems achieve optimal solutions <span class="process-math">\(\mathbf{x_0}, \mathbf{y_0}\text{,}\)</span> where <span class="process-math">\(f(\mathbf{x_0}) \lt g(\mathbf{y_0})\text{.}\)</span>
+</div>
+<div class="solutions"><details id="activity-weakduality-5-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="activity-weakduality-5-2-1">Simpler is better.</div></div></details></div></article><article class="task exercise-like" id="activity-weakduality-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-weakduality-6-1-1">Using the same values for <span class="process-math">\(A, b, c, d\)</span> for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?</div></article></article><div class="para" id="sec-section-dualitytheory-5">We have now that if <span class="process-math">\(f=g\)</span> for a pair of feasible solutions, then we have optimality for both programs.  It would be good to prove that this is an if or only if statement.</div>
+<article class="theorem theorem-like" id="thm-hyperplaneseperation"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Hyperplane Seperation Theorem.</span>
+</h3>
+<div class="para" id="thm-hyperplaneseperation-2-1">Given two disjoint convex sets <span class="process-math">\(U, V\subseteq \R^{n}\text{,}\)</span> there is a hyperplane <span class="process-math">\(H=\{\mathbf{x}\in \R^n: \mathbf{h}^{\top}\mathbf{x}=k\} \)</span> for some <span class="process-math">\(\mathbf{h}\in \R^n, k\in \R\text{,}\)</span> such that <span class="process-math">\(\mathbf{h}^{\top}U \geq k, \mathbf{h}^{\top}V\lt k\text{.}\)</span>
+</div></article><article class="activity project-like" id="sec-section-dualitytheory-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="sec-section-dualitytheory-7-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-section-dualitytheory-7-1-1-1">Sketch two non-empty convex sets <span class="process-math">\(U, V\text{,}\)</span> what does <span class="process-math">\(H\)</span> look like here?</div></article><article class="task exercise-like" id="sec-section-dualitytheory-7-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-section-dualitytheory-7-2-1-1">Sketch two non-convex sets where <a href="" class="xref" data-knowl="./knowl/xref/thm-hyperplaneseperation.html" title="Theorem 5.2.2: Hyperplane Seperation Theorem">Theorem 5.2.2</a> fails.</div></article></article><article class="activity project-like" id="sec-section-dualitytheory-8"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-section-dualitytheory-8-1"><div class="para" id="sec-section-dualitytheory-8-1-1">We prove the case of <a href="" class="xref" data-knowl="./knowl/xref/thm-hyperplaneseperation.html" title="Theorem 5.2.2: Hyperplane Seperation Theorem">Theorem 5.2.2</a> where there are <span class="process-math">\(u_0\in U, v_0\in V\)</span> that minimize <span class="process-math">\(\{\|u-v\|: u\in U, v\in V\}\text{.}\)</span> We assume this is true.</div></div>
+<article class="task exercise-like" id="sec-section-dualitytheory-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-2-1-1">Without loss of generality, let <span class="process-math">\(v_0=0\text{.}\)</span>  Why can we do this?</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-3-1-1">Let <span class="process-math">\(\mathbf{h} = u_0-v_0\text{.}\)</span>  Sketch <span class="process-math">\(u_0, v_0, \mathbf{h}\)</span> and <span class="process-math">\(H:=\{\mathbf{x}\in \R^n: \mathbf{h}^\top \mathbf{x}=0\}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-4-1-1">We want to show that <span class="process-math">\(H\)</span> is the seperating hyperplane.  Suppose that <span class="process-math">\(U\)</span> was not contained in <span class="process-math">\(\{\mathbf{x}\in \R^n: \mathbf{h}^\top\mathbf{x}\geq0\}\)</span> what must be true about <span class="process-math">\(U\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-5-1-1">Let <span class="process-math">\(u'\in U\)</span> such that <span class="process-math">\(\mathbf{h}^\top u'\leq0\text{.}\)</span>  Sketch <span class="process-math">\(u'\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-6-1-1">Let <span class="process-math">\(\mathbf{d} = u'-u_0\)</span> decribe geometrically what <span class="process-math">\(\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u\)</span> represents.  Think dot product and projections.</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-7-1-1">Let <span class="process-math">\(\alpha = \frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\text{,}\)</span> show that <span class="process-math">\(0\lt \alpha \lt 1\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-8-1-1">Let <span class="process-math">\(w=\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u_0\text{,}\)</span> show that <span class="process-math">\(w = \alpha u_0 + (1-\alpha)u'\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-9-1-1">Show that <span class="process-math">\(w\in U\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-10-1-1">Show that <span class="process-math">\(w^\top w = u_0^\top u_0 + \alpha \mathbf{d}^\top \mathbf{d}\left(2 \frac{u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}+\alpha\right)\text{,}\)</span> and explain why <span class="process-math">\(w^\top w \lt u_0^\top u_0\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-8-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para" id="sec-section-dualitytheory-8-11-1-1">Why is the last statement a contradiction?</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-section-initial.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-section-sensitivity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -901,6 +901,60 @@ var ptx_lunr_docs = [
   "body": " Recall the canonical maximization problem:     The dual minimization program is aritculated as follows:     "
 },
 {
+  "id": "sec-section-dualitytheory",
+  "level": "1",
+  "url": "sec-section-dualitytheory.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Duality Theory",
+  "body": " Duality Theory  In this section, we establish the theoritical underpinnings of duality.    Recall the primal maximization problem , and the corresponding dual minimization problem . By letting   We can rephrase the primal max problem as follows: Maximize for subject to Here, we understand to denote entrywise inequality.  Likewise, we can rephrase the dual min problem as follows: Minimize for subject to        In this activity, we explore a foundational relationship between the primal max problem and it's dual, called weak duality .     Consider the matrix product . Use this product to show that .    Suppose there were feasible for which . What then must be true about these solutions? Can we prove our assertion?    Recall and . Consider the primal max and dual min of the associated problems. How does our assertion fit these problems?    Come up with a primal max problem (and corresponding min dual) where all have integer values, so that the primal max and dual min problems achieve optimal solutions , where .   Simpler is better.    Using the same values for for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?    We have now that if for a pair of feasible solutions, then we have optimality for both programs. It would be good to prove that this is an if or only if statement.   Hyperplane Seperation Theorem   Given two disjoint convex sets , there is a hyperplane for some , such that .      Sketch two non-empty convex sets , what does look like here?    Sketch two non-convex sets where fails.      We prove the case of where there are that minimize . We assume this is true.    Without loss of generality, let . Why can we do this?    Let . Sketch and .    We want to show that is the seperating hyperplane. Suppose that was not contained in what must be true about ?    Let such that . Sketch .    Let decribe geometrically what represents. Think dot product and projections.    Let , show that .    Let , show that     Show that .    Show that , and explain why .    Why is the last statement a contradiction?    "
+},
+{
+  "id": "sec-section-dualitytheory-3",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-3",
+  "type": "Definition",
+  "number": "5.2.1",
+  "title": "",
+  "body": "  Recall the primal maximization problem , and the corresponding dual minimization problem . By letting   We can rephrase the primal max problem as follows: Maximize for subject to Here, we understand to denote entrywise inequality.  Likewise, we can rephrase the dual min problem as follows: Minimize for subject to    "
+},
+{
+  "id": "activity-weakduality",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#activity-weakduality",
+  "type": "Activity",
+  "number": "5.2.1",
+  "title": "",
+  "body": "   In this activity, we explore a foundational relationship between the primal max problem and it's dual, called weak duality .     Consider the matrix product . Use this product to show that .    Suppose there were feasible for which . What then must be true about these solutions? Can we prove our assertion?    Recall and . Consider the primal max and dual min of the associated problems. How does our assertion fit these problems?    Come up with a primal max problem (and corresponding min dual) where all have integer values, so that the primal max and dual min problems achieve optimal solutions , where .   Simpler is better.    Using the same values for for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?   "
+},
+{
+  "id": "thm-hyperplaneseperation",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#thm-hyperplaneseperation",
+  "type": "Theorem",
+  "number": "5.2.2",
+  "title": "Hyperplane Seperation Theorem.",
+  "body": " Hyperplane Seperation Theorem   Given two disjoint convex sets , there is a hyperplane for some , such that .   "
+},
+{
+  "id": "sec-section-dualitytheory-7",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-7",
+  "type": "Activity",
+  "number": "5.2.2",
+  "title": "",
+  "body": "  Sketch two non-empty convex sets , what does look like here?    Sketch two non-convex sets where fails.   "
+},
+{
+  "id": "sec-section-dualitytheory-8",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-8",
+  "type": "Activity",
+  "number": "5.2.3",
+  "title": "",
+  "body": "  We prove the case of where there are that minimize . We assume this is true.    Without loss of generality, let . Why can we do this?    Let . Sketch and .    We want to show that is the seperating hyperplane. Suppose that was not contained in what must be true about ?    Let such that . Sketch .    Let decribe geometrically what represents. Think dot product and projections.    Let , show that .    Let , show that     Show that .    Show that , and explain why .    Why is the last statement a contradiction?   "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
