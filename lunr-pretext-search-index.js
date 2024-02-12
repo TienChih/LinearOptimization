@@ -907,7 +907,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Duality Theory",
-  "body": " Duality Theory  In this section, we establish the theoritical underpinnings of duality.    Recall the primal maximization problem , and the corresponding dual minimization problem . By letting   We can rephrase the primal max problem as follows: Maximize for subject to Here, we understand to denote entrywise inequality.  Likewise, we can rephrase the dual min problem as follows: Minimize for subject to        In this activity, we explore a foundational relationship between the primal max problem and it's dual, called weak duality .     Consider the matrix product . Use this product to show that .    Suppose there were feasible for which . What then must be true about these solutions? Can we prove our assertion?    Recall and . Consider the primal max and dual min of the associated problems. How does our assertion fit these problems?    Come up with a primal max problem (and corresponding min dual) where all have integer values, so that the primal max and dual min problems achieve optimal solutions , where .   Simpler is better.    Using the same values for for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?    We have now that if for a pair of feasible solutions, then we have optimality for both programs. It would be good to prove that this is an if or only if statement.   Hyperplane Seperation Theorem   Given two disjoint convex sets , there is a hyperplane for some , such that .      Sketch two non-empty convex sets , what does look like here?    Sketch two non-convex sets where fails.      We prove the case of where there are that minimize . We assume this is true.    Without loss of generality, let . Why can we do this?    Let . Sketch and .    We want to show that is the seperating hyperplane. Suppose that was not contained in what must be true about ?    Let such that . Sketch .    Let decribe geometrically what represents. Think dot product and projections.    Let , show that .    Let , show that     Show that .    Show that , and explain why .    Why is the last statement a contradiction?    "
+  "body": " Duality Theory  In this section, we establish the theoritical underpinnings of duality.    Recall the primal maximization problem , and the corresponding dual minimization problem . By letting   We can rephrase the primal max problem as follows: Maximize for subject to Here, we understand to denote entrywise inequality.  Likewise, we can rephrase the dual min problem as follows: Minimize for subject to        In this activity, we explore a foundational relationship between the primal max problem and it's dual, called weak duality .     Consider the matrix product . Use this product to show that .    Suppose there were feasible for which . What then must be true about these solutions? Can we prove our assertion?    Recall and . Consider the primal max and dual min of the associated problems. How does our assertion fit these problems?    Come up with a primal max problem (and corresponding min dual) where all have integer values, so that the primal max and dual min problems achieve optimal solutions , where .   Simpler is better.    Using the same values for for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?    We have now that if for a pair of feasible solutions, then we have optimality for both programs. It would be good to prove that this is an if or only if statement.   Hyperplane Seperation Theorem   Given two disjoint convex sets , there is a hyperplane for some , such that .      Sketch two non-empty convex sets , what does look like here?    Sketch two non-convex sets where fails.      We prove the case of where there are that minimize . We assume this is true.    Without loss of generality, let . Why can we do this?    Let . Sketch and .    We want to show that is the seperating hyperplane. Suppose that was not contained in what must be true about ?    Let such that . Sketch .    Let decribe geometrically what represents. Think dot product and projections.    Let , show that .    Let , show that     Show that .    Show that , and explain why .    Why is the last statement a contradiction?    We now introduce a key idea which will tie together the primal and dual programs.    Let . We call the cone of , denoted to be the set .      In , describe .    Prove that for any is convex.    Let denote a matrix, and let denote the cone of the columns of .  Suppose . What does tell us?     The Farkas Lemma   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .        We prove and a useful corollary.    Recall (c). How do the cases (A) and (B) of relate to the cone ?    Suppose both cases (A) and (B) of held at the same time. use the product to derive a contradiction.    If (A) were true, what could we say about (B)?    Suppose (A) were false. We want to prove that (B) is true. What does (c) tell us?    Let's denote the normal vector of the seperating hyperplane by (interesting choice 👀) so that for any . Why must ?    Suppose had a column such that , show that there is an such that . Why is this a contradiction?    Why is (B) proven? Why is then proven?    Now that is proven, we apply it to and .  Suppose (A) held, and we had that there was a so that . How would compare to ?    Suppose (A) failed. Then there is a satisfing (B) for .  What can we say about and compared to ?     The Farkas Lemma v2   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .    Without loss of generality, we may let in case (B).     The Strong Duality Theorem   Given a pair of primal max-dual min programs, the primal max problem as an optimal solution if and only if the dual min program has an optimal solution . Moreover, .      We finally prove .    Suppose that optimal dual solution exists. Explain why by it suffices to show that for some feasible .    Without loss of generality, let and let .  Consider the matrices . Apply to . What does it mean for (A) to hold?    If (A) holds for , then it holds for the pair , as well as the pair for the same . Why does this show that a feasible optimal solution exists and that ?    On the other hand, suppose (B) holds for . What would it mean for (B) to hold?    We would like to derive a contradiction.  Let denote the vector produced by (B). Suppose . How would compare to and compare to ? Why is this a contradiction?    Suppose . Let .  Show that since that .    Show that since that .    Explain why (f) and (g) produce a contradiction.    "
 },
 {
   "id": "sec-section-dualitytheory-3",
@@ -953,6 +953,69 @@ var ptx_lunr_docs = [
   "number": "5.2.3",
   "title": "",
   "body": "  We prove the case of where there are that minimize . We assume this is true.    Without loss of generality, let . Why can we do this?    Let . Sketch and .    We want to show that is the seperating hyperplane. Suppose that was not contained in what must be true about ?    Let such that . Sketch .    Let decribe geometrically what represents. Think dot product and projections.    Let , show that .    Let , show that     Show that .    Show that , and explain why .    Why is the last statement a contradiction?   "
+},
+{
+  "id": "def-cone",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#def-cone",
+  "type": "Definition",
+  "number": "5.2.3",
+  "title": "",
+  "body": "  Let . We call the cone of , denoted to be the set .   "
+},
+{
+  "id": "activity-cone",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#activity-cone",
+  "type": "Activity",
+  "number": "5.2.4",
+  "title": "",
+  "body": "  In , describe .    Prove that for any is convex.    Let denote a matrix, and let denote the cone of the columns of .  Suppose . What does tell us?   "
+},
+{
+  "id": "thm-farkas",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#thm-farkas",
+  "type": "Theorem",
+  "number": "5.2.4",
+  "title": "The Farkas Lemma.",
+  "body": " The Farkas Lemma   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .     "
+},
+{
+  "id": "sec-section-dualitytheory-13",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-13",
+  "type": "Activity",
+  "number": "5.2.5",
+  "title": "",
+  "body": "  We prove and a useful corollary.    Recall (c). How do the cases (A) and (B) of relate to the cone ?    Suppose both cases (A) and (B) of held at the same time. use the product to derive a contradiction.    If (A) were true, what could we say about (B)?    Suppose (A) were false. We want to prove that (B) is true. What does (c) tell us?    Let's denote the normal vector of the seperating hyperplane by (interesting choice 👀) so that for any . Why must ?    Suppose had a column such that , show that there is an such that . Why is this a contradiction?    Why is (B) proven? Why is then proven?    Now that is proven, we apply it to and .  Suppose (A) held, and we had that there was a so that . How would compare to ?    Suppose (A) failed. Then there is a satisfing (B) for .  What can we say about and compared to ?   "
+},
+{
+  "id": "cor-farkasv2",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#cor-farkasv2",
+  "type": "Corollary",
+  "number": "5.2.5",
+  "title": "The Farkas Lemma v2.",
+  "body": " The Farkas Lemma v2   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .    Without loss of generality, we may let in case (B).   "
+},
+{
+  "id": "thm-strongduality",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#thm-strongduality",
+  "type": "Theorem",
+  "number": "5.2.6",
+  "title": "The Strong Duality Theorem.",
+  "body": " The Strong Duality Theorem   Given a pair of primal max-dual min programs, the primal max problem as an optimal solution if and only if the dual min program has an optimal solution . Moreover, .   "
+},
+{
+  "id": "sec-section-dualitytheory-16",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-16",
+  "type": "Activity",
+  "number": "5.2.6",
+  "title": "",
+  "body": "  We finally prove .    Suppose that optimal dual solution exists. Explain why by it suffices to show that for some feasible .    Without loss of generality, let and let .  Consider the matrices . Apply to . What does it mean for (A) to hold?    If (A) holds for , then it holds for the pair , as well as the pair for the same . Why does this show that a feasible optimal solution exists and that ?    On the other hand, suppose (B) holds for . What would it mean for (B) to hold?    We would like to derive a contradiction.  Let denote the vector produced by (B). Suppose . How would compare to and compare to ? Why is this a contradiction?    Suppose . Let .  Show that since that .    Show that since that .    Explain why (f) and (g) produce a contradiction.   "
 },
 {
   "id": "backmatter-2",
