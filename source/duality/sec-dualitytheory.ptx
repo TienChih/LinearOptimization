@@ -392,6 +392,9 @@
   </theorem>
 
   <activity>
+    <title>Proof of the Strong Duality Theorem</title>
+  
+  
     <introduction>
       <p>
         We finally prove <xref ref="thm-strongduality"/>.
@@ -469,6 +472,71 @@
       </statement>
     </task>
   </activity>
+
+  <activity>
+    <title>Complementary Slackness</title>
+    <task>
+      <statement>
+        <p>
+          Prove that <m>g-f = \x^\top\s + \y^\top\t</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          If <m>\x_*, \y_*</m> are feasible optimal solutions with slack variables <m>\t_*, \s_*</m>, what must be true about <m>\x_*^\top\s_* + \y_*^\top\t_*</m>?
+        </p>
+      
+      </statement>
+      <hint>  
+          <p>
+            Variables <m>\x, \y, \s, \t</m> are said to exhibit <em>complementary slackness</em> if 
+            <m>x_j\neq 0\implies s_j=0, s_j\neq 0\implies x_j=0, y_i\neq 0\implies t_i=0, t_i\neq 0\implies y_i=0,</m>
+          </p>
+      </hint>
+    </task>
+
+    
+    
+    
+    
+  </activity>
+
+  <problem xml:id="problem-duality">
+    <task>
+      <statement>
+        <p>
+          Prove that if the primal program is infeasible, and the dual program
+          is feasible, then the dual program is unbounded below.  (Use <xref ref="cor-farkasv2"/>.)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Prove that if the dual program is infeasible, and the primal program
+          is feasible, then the primal program is unbounded above.  (Use (a).)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Prove that if the primal (dual) program is feasible and unbounded above (below),
+          then the dual (primal) program is infeasible.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find a primal-dual linear program where both the primal and dual problems are infeasible.
+        </p>
+      </statement>
+    </task>
+  </problem>
   
   
 

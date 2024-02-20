@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-dualpivot" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Tucker Tableau's, Pivots and Duality</title>
+
+  <p> In this section, we examine pivoting with primal-dual tableau's. </p>
+
+  <activity>
+    <introduction>
+      <p>
+        Noting that the dual variables <m>y_i</m> are non-negative weights attached
+        to the hyperplanes defined by <m>t_i=0</m>, and the slack variables for the dual program
+        <m>s_j</m> are the weights associated with the planes <m>x-x_j=0</m>, we can encode all this information in the
+        <em>Primal-Dual Tucker Tableau</em>:
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_1</m>
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_n</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell>
+              <m>=s_1</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>=s_m</m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Write out the sufficient conditions for the tableau to determine:
+        </p>
+        <ol marker="A." >
+          <li>
+            <p>
+              The primal program is feasible.
+            </p>
+          </li>
+          <li>
+            <p>
+              The dual program is feasible.
+            </p>
+          </li>
+          <li>
+            <p>
+              A feasible primal program is unbounded above.
+            </p>
+          </li>
+          <li>
+            <p>
+              A feasible dual program is unbounded below.
+            </p>
+          </li>
+          <li>
+            <p>
+              A  primal program is infeasible.
+            </p>
+          </li>
+          <li>
+            <p>
+              A dual program is infeasible.
+            </p>
+          </li>
+          <li>
+            <p>
+              The primal program has a feasible basic solution.
+            </p>
+          </li>
+          <li>
+            <p>
+              The dual program has a feasible basic solution.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Are any of these identical?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        Recall  <xref ref="activity-exampleart"/>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Record this information in a primal-dual tucker tableau.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Apply the Simplex Algorithm 
+          <xref ref="def-simplexmax"/> to this tableau.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider the dual solution.  What does that mean in the context of the time spent 
+          by the painter and the sculptor?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <task>
+      <p>
+        If a primal program is infeasible, what <em>could</em> be true of the dual program?
+      </p>
+      <ol marker="A." >
+        <li>
+          <p>
+            The dual program has an optimal solution.
+          </p>
+        </li>
+        <li>
+          <p>
+            The dual program is unbounded below.
+          </p>
+        </li>
+        <li>
+          <p>
+            The dual program is infeasible.
+          </p>
+        </li>
+      </ol>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Verify that the primal program is infeasible.
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Take the negative transpose, then use the Simplex Algorithm 
+          <xref ref="def-simplexmax"/> to determine the nature of the dual program.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Verify that the primal program is infeasible.
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Take the negative transpose, then use the Simplex Algorithm 
+          <xref ref="def-simplexmax"/> to determine the nature of the dual program.
+        </p>
+      </statement>
+    </task>
+  </activity>
+  
+  
+
+  <activity>
+    <introduction>
+      <p>
+        We now consider unconstrained and equality constrained primal-dual programs.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Suppose for a pair of primal-dual solutions if <m>x_j</m> were allowed to be any value including negative values, 
+          What must be true about <m>s_j</m>?  (Think algebraiacally and geometrically.)
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>s_j</m> could be any value as well.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>s_j\geq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>s_j\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>s_j=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>s_j\neq 0</m>.
+              </p>
+            </li>
+          </ol>
+
+        </p>
+      </statement>
+    </task>
+  </activity>
+  
+  
+
+
+
+  
+
+</section>
