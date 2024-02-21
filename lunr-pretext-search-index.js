@@ -1090,6 +1090,42 @@ var ptx_lunr_docs = [
   "body": "  Solve the following non-canonical primal-dual problem:                                                                                                                           "
 },
 {
+  "id": "sec-minmaxgames",
+  "level": "1",
+  "url": "sec-minmaxgames.html",
+  "type": "Section",
+  "number": "6.1",
+  "title": "Min-Max Games",
+  "body": " Min-Max Games    Suppose we have two players, then Even player and the Odd player. Each player picks an integer from 1-3.    If the sum is even:   If the chosen numbers are distinct, then the Odd player pays the Even player the difference between the numbers.    If the chosen numbers are the same, then the Odd player pays the Even player the sum of the numbers.       If the sum is odd: the Even player pays the Odd player $3.      Record the net winnings to the Even player in the following table:            Odd                                             Even                                                      Examinine this table, and comparing the rows, is there any advantage to the Even player in picking the first row over the third row?    Comparing the columns, is there any advantage to the Odd player in picking the third column over the first column?    Delete any row (column) corresponding to a choice that the Even (Odd) player would never make.  If the Even player always picks a 2, what is the optimal strategy for the Odd player? Similarly if the Odd player always picks a 1, what is the optimal strategy for the even player?    Do either player gain any advantage by picking a single choice and sticking to it?    Suppose the Even player flips a coin to make their choice, if the Odd player picks a 1, what is their average expected winnings? What if they choose a 2?    Suppose the Odd player flips a coin to make their choice, if the Even player picks a 2, what is their average expected winnings? What if they choose a 3?    Does this game favor either the even or odd player?      In a two-player zero-sum game, where the row player has choices and the column player has choices, the payoff matrix is a matrix which records in each row and column the net payoff to the row player (this choice is purely by convention, but we will stick to it.)  If a row has entries that are strictly greater than or equal to the entries of another row , then we say that row  dominates row . We then may delete row since there is now reason the row player would choose . Similarly, if column is less than or equal to column , column  dominates column and we may delete column .      Consider the payoff matrix for a game between Rowan and Colleen.    "
+},
+{
+  "id": "sec-minmaxgames-2",
+  "level": "2",
+  "url": "sec-minmaxgames.html#sec-minmaxgames-2",
+  "type": "Exploration",
+  "number": "6.1.1",
+  "title": "",
+  "body": "  Suppose we have two players, then Even player and the Odd player. Each player picks an integer from 1-3.    If the sum is even:   If the chosen numbers are distinct, then the Odd player pays the Even player the difference between the numbers.    If the chosen numbers are the same, then the Odd player pays the Even player the sum of the numbers.       If the sum is odd: the Even player pays the Odd player $3.      Record the net winnings to the Even player in the following table:            Odd                                             Even                                                      Examinine this table, and comparing the rows, is there any advantage to the Even player in picking the first row over the third row?    Comparing the columns, is there any advantage to the Odd player in picking the third column over the first column?    Delete any row (column) corresponding to a choice that the Even (Odd) player would never make.  If the Even player always picks a 2, what is the optimal strategy for the Odd player? Similarly if the Odd player always picks a 1, what is the optimal strategy for the even player?    Do either player gain any advantage by picking a single choice and sticking to it?    Suppose the Even player flips a coin to make their choice, if the Odd player picks a 1, what is their average expected winnings? What if they choose a 2?    Suppose the Odd player flips a coin to make their choice, if the Even player picks a 2, what is their average expected winnings? What if they choose a 3?    Does this game favor either the even or odd player?   "
+},
+{
+  "id": "def-payoff",
+  "level": "2",
+  "url": "sec-minmaxgames.html#def-payoff",
+  "type": "Definition",
+  "number": "6.1.1",
+  "title": "",
+  "body": "  In a two-player zero-sum game, where the row player has choices and the column player has choices, the payoff matrix is a matrix which records in each row and column the net payoff to the row player (this choice is purely by convention, but we will stick to it.)  If a row has entries that are strictly greater than or equal to the entries of another row , then we say that row  dominates row . We then may delete row since there is now reason the row player would choose . Similarly, if column is less than or equal to column , column  dominates column and we may delete column .   "
+},
+{
+  "id": "sec-minmaxgames-4",
+  "level": "2",
+  "url": "sec-minmaxgames.html#sec-minmaxgames-4",
+  "type": "Activity",
+  "number": "6.1.2",
+  "title": "",
+  "body": "  Consider the payoff matrix for a game between Rowan and Colleen.   "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
