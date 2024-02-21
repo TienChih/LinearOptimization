@@ -224,7 +224,492 @@
       <p>
         Consider the payoff matrix for a game between Rowan and Colleen.
       </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell halign="left" bottom="medium">
+            </cell>
+            <cell colspan="2" bottom="medium">
+              Colleen
+            </cell>
+            <cell halign="left" bottom="medium">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+              Rowan
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+          </row>
+        </tabular>
+      </p>
     </introduction>
+    <task>
+      <statement>
+        <p>
+          Suppose that Rowan pursues a <em>mixed strategy</em> a probability distribution of their choices <m>P</m>
+          where <me>P^\top  = \begin{bmatrix} p_1 \\ p_2 \\ \vdots \\ p_n\end{bmatrix}, p_i\geq 0, \displaystyle \sum_{i=1}^n p_i=1.</me>
+        </p>
+        <p>
+          If Colleen chooses column <m>j</m> as her strategy, what is <m>E_j(P)</m> the expected value of Rowan's earnings?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>E_j(P) = \displaystyle \sum_{i=1}^n a_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>E_j(P) = \displaystyle \sum_{i=1}^n p_i</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>E_j(P) = \displaystyle \sum_{i=1}^n a_{ij}p_i</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n p_i</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}p_i</m>.
+            </p>
+          </li>
+          
+          
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If Colleen somehow figures out Rowan's strategy <m>P</m>, which column <m>j</m> should she choose?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Rowan is aware that Colleen is a sharp player can likely figure out <m>P</m>.  How then should he choose his strategy?
+          <m>P</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              Maximize <m>u=\displaystyle \max_{1\leq i\leq n}E_j(P)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Maximize <m>u=\displaystyle \min_{1\leq i\leq n}E_j(P)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Minimize <m>u=\displaystyle \max_{1\leq i\leq n}E_j(P)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Minimize <m>u=\displaystyle \min_{1\leq i\leq n}E_j(P)</m>.
+            </p>
+          </li>
+          
+          
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          At the exact same time, Colleen is pursuing her own mixed strategy <m>Q</m>: <me>Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0, \displaystyle \sum_{j=1}^m q_j=1.</me>
+        </p>
+        <p>
+          If Rowan chooses row <m>i</m> as his strategy, what is <m>F_i(Q)</m> the expected value of Colleen's losses?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>v=F_i(P) = \displaystyle \sum_{j=1}^m a_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>v=F_i(P) = \displaystyle \sum_{j=1}^m q_j</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>v=F_i(P) = \displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
+            </p>
+          </li>
+
+          
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If Roawn somehow figures out Colleen's strategy <m>Q</m>, which row <m>i</m> should he choose?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Colleen is also aware that Rowan is a sharp player can likely figure out <m>Q</m>.  How then should she choose her strategy?
+          <m>Q</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              Maximize <m>\displaystyle \max_{1\leq j\leq m}F_i(Q)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Maximize <m>\displaystyle \min_{1\leq j\leq m}F_i(Q)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Minimize <m>\displaystyle \max_{1\leq j\leq m}F_i(Q)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Minimize <m>\displaystyle \min_{1\leq j\leq m}F_i(Q)</m>.
+            </p>
+          </li>
+          
+          
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider the primal-dual program encoded by the tableau:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{v}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_m</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\bar{u}</m>
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1m}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_2</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2m}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_n</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>=0</m>
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell>
+                <m>=s_n</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Write out both the primal and dual problems encoded by this tableau.  How do they relate to the Rowan 
+          and Colleen's strategies? 
+        </p>
+        
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that the <m>p_i, q_j</m> satisfy the conditions for <m>P, Q,</m> to be mixed strategies.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          In solving this system, some rows or columns may be deeleted.  Why is this okay?
+        </p>
+      </statement>
+    </task>
   </activity>  
 
 </section>
