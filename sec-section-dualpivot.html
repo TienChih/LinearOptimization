@@ -357,16 +357,79 @@ true);
 <div class="introduction" id="sec-section-dualpivot-6-1"><div class="para" id="sec-section-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual programs.</div></div>
 <article class="task exercise-like" id="sec-section-dualpivot-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="sec-section-dualpivot-6-2-1-1">
-<div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(x_j\)</span> were allowed to be any value including negative values, What must be true about <span class="process-math">\(s_j\text{?}\)</span>  (Think algebraiacally and geometrically.)</div>
+<div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(x_j\)</span> were allowed to be be any value including negative values, What must be true about <span class="process-math">\(s_j\text{?}\)</span>  (If <span class="process-math">\(x_j\)</span> is unconstrained, what can we say about the hyperplane <span class="process-math">\(-x_j=0\)</span> as a bounding hyperplane?)</div>
 <ol class="upper-alpha cols2">
-<li id="sec-section-dualpivot-6-2-1-1-3-1"><div class="para" id="sec-section-dualpivot-6-2-1-1-3-1-1">
+<li id="sec-section-dualpivot-6-2-1-1-5-1"><div class="para" id="sec-section-dualpivot-6-2-1-1-5-1-1">
 <span class="process-math">\(s_j\)</span> could be any value as well.</div></li>
-<li id="sec-section-dualpivot-6-2-1-1-3-2"><div class="para" id="sec-section-dualpivot-6-2-1-1-3-2-1"><span class="process-math">\(s_j\geq 0\text{.}\)</span></div></li>
-<li id="sec-section-dualpivot-6-2-1-1-3-3"><div class="para" id="sec-section-dualpivot-6-2-1-1-3-3-1"><span class="process-math">\(s_j\leq 0\text{.}\)</span></div></li>
-<li id="sec-section-dualpivot-6-2-1-1-3-4"><div class="para" id="sec-section-dualpivot-6-2-1-1-3-4-1"><span class="process-math">\(s_j=0\text{.}\)</span></div></li>
-<li id="sec-section-dualpivot-6-2-1-1-3-5"><div class="para" id="sec-section-dualpivot-6-2-1-1-3-5-1"><span class="process-math">\(s_j\neq 0\text{.}\)</span></div></li>
+<li id="sec-section-dualpivot-6-2-1-1-5-2"><div class="para" id="sec-section-dualpivot-6-2-1-1-5-2-1"><span class="process-math">\(s_j\geq 0\text{.}\)</span></div></li>
+<li id="sec-section-dualpivot-6-2-1-1-5-3"><div class="para" id="sec-section-dualpivot-6-2-1-1-5-3-1"><span class="process-math">\(s_j\leq 0\text{.}\)</span></div></li>
+<li id="sec-section-dualpivot-6-2-1-1-5-4"><div class="para" id="sec-section-dualpivot-6-2-1-1-5-4-1"><span class="process-math">\(s_j=0\text{.}\)</span></div></li>
+<li id="sec-section-dualpivot-6-2-1-1-5-5"><div class="para" id="sec-section-dualpivot-6-2-1-1-5-5-1"><span class="process-math">\(s_j\neq 0\text{.}\)</span></div></li>
 </ol>
-</div></article></article></section></div>
+</div></article><article class="task exercise-like" id="sec-section-dualpivot-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-section-dualpivot-6-3-1-1">
+<div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(t_i=0\text{.}\)</span> What must be true about <span class="process-math">\(y_i\text{?}\)</span>  (If we increase <span class="process-math">\(b_i\)</span> can we predict if that helps or hurts <span class="process-math">\(f\text{?}\)</span> Does it matter?)</div>
+<ol class="upper-alpha cols2">
+<li id="sec-section-dualpivot-6-3-1-1-5-1"><div class="para" id="sec-section-dualpivot-6-3-1-1-5-1-1">
+<span class="process-math">\(y_i\)</span> could be any value as well.</div></li>
+<li id="sec-section-dualpivot-6-3-1-1-5-2"><div class="para" id="sec-section-dualpivot-6-3-1-1-5-2-1"><span class="process-math">\(y_i\geq 0\text{.}\)</span></div></li>
+<li id="sec-section-dualpivot-6-3-1-1-5-3"><div class="para" id="sec-section-dualpivot-6-3-1-1-5-3-1"><span class="process-math">\(y_i\leq 0\text{.}\)</span></div></li>
+<li id="sec-section-dualpivot-6-3-1-1-5-4"><div class="para" id="sec-section-dualpivot-6-3-1-1-5-4-1"><span class="process-math">\(y_i=0\text{.}\)</span></div></li>
+<li id="sec-section-dualpivot-6-3-1-1-5-5"><div class="para" id="sec-section-dualpivot-6-3-1-1-5-5-1"><span class="process-math">\(y_i\neq 0\text{.}\)</span></div></li>
+</ol>
+</div></article></article><article class="activity project-like" id="sec-section-dualpivot-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-section-dualpivot-7-1-1">Solve the following non-canonical primal-dual problem:</div> <div class="para" id="sec-section-dualpivot-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\bar{x}_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\bar{y}_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-0\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-section-dualitytheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
