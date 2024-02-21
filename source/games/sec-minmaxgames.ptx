@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-minmaxgames" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Min-Max Games</title>
+
+
+  <exploration>
+    <introduction>
+      <p>
+        Suppose we have two players, then <q>Even</q> player and the <q>Odd</q> player.  Each player picks an integer from 1-3.
+      </p>
+      <ul>
+        <li>
+          <p>
+            If the sum is even:
+            <ul>
+              <li>
+                <p>
+                  If the chosen numbers are distinct, then the Odd player pays the Even player the difference between the numbers.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If the chosen numbers are the same, then the Odd player pays the Even player the sum of the numbers.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            If the sum is odd: the Even player pays the Odd player $3.
+          </p>
+        </li>
+      </ul>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Record the net winnings to the Even player in the following table:
+        </p>
+        <p>
+          <tabular>
+            <row>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+              <cell halign="center">
+                <em>Odd</em>
+              </cell>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+              </cell>
+              <cell halign="right">
+              </cell>
+              <cell halign="center" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="center" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="center" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+              </cell>
+              <cell halign="right" right="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="center">
+                <m>?</m>
+              </cell>
+              <cell halign="center" >
+                <m>?</m>
+              </cell>
+              <cell halign="center" right="medium">
+                <m>?</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <em>Even</em>
+              </cell>
+              <cell halign="right" right="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="center" >
+                <m>?</m>
+              </cell>
+              <cell halign="center" >
+                <m>?</m>
+              </cell>
+              <cell halign="center" right="medium" >
+                <m>?</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+              </cell>
+              <cell halign="right" right="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="center" bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell halign="center"  bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell halign="center" right="medium" bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell>
+              </cell>
+              <cell>
+              </cell>
+              <cell halign="center">
+              </cell>
+              <cell halign="center">
+              </cell>
+              <cell halign="center">
+              </cell>
+              <cell>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Examinine this table, and comparing the rows, is there any advantage to the Even player in picking the first row over the third row?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Comparing the columns, is there any advantage to the Odd player in picking the third column over the first column?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Delete any row (column) corresponding to a choice that the Even (Odd) player would never make.
+        </p>
+        <p>
+          If the Even player always picks a 2, what is the optimal strategy for the Odd player?  Similarly if the Odd
+          player always picks a 1, what is the optimal strategy for the even player?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Do either player gain any advantage by picking a single choice and sticking to it?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose the Even player flips a coin to make their choice, if the Odd player picks a 1, what is their average expected winnings?
+          What if they choose a 2?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose the Odd player flips a coin to make their choice, if the Even player picks a 2, what is their average expected winnings?
+          What if they choose a 3?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Does this game favor either the even or odd player?
+        </p>
+      </statement>
+    </task>
+  </exploration>
+
+  <definition xml:id="def-payoff">
+    <statement>
+      <p>
+        In a two-player zero-sum game, where the row player has <m>n</m> choices and the column player has <m>m</m> choices, the
+         <em>payoff matrix</em> is a matrix which records in each row and column the net payoff to the row player (this choice is purely
+         by convention, but we will stick to it.)
+      </p>
+      <p>
+        If a row <m>i</m> has entries that are strictly greater than or equal to the entries of another row <m>j</m>, 
+        then we say that row <m>i</m> <em>dominates</em> row <m>j</m>.  We then may delete row <m>j</m> since there is now reason the row player would
+        choose <m>j</m>.  Similarly, if column <m>i</m> is less than or equal to column <m>j</m>, column <m>i</m> 
+        <em>dominates</em> column <m>j</m> and we may delete column <m>j</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the payoff matrix for a game between Rowan and Colleen.
+      </p>
+    </introduction>
+  </activity>  
+
+</section>
