@@ -478,7 +478,7 @@
     <task>
       <statement>
         <p>
-          Prove that <m>g-f = \x^\top\s + \y^\top\t</m>.
+          Prove that <m>g-f = \s^\top\x + \y^\top\t</m>.
         </p>
       </statement>
     </task>

@@ -459,8 +459,8 @@
     <task>
       <statement>
         <p>
-          Suppose for a pair of primal-dual solutions if <m>x_j</m> were allowed to be any value including negative values, 
-          What must be true about <m>s_j</m>?  (Think algebraiacally and geometrically.)
+          Suppose for a pair of primal-dual solutions if <m>x_j</m> were allowed to be be any value including negative values, 
+          What must be true about <m>s_j</m>?  (If <m>x_j</m> is unconstrained, what can we say about the hyperplane <m>-x_j=0</m> as a bounding hyperplane?)
           <ol marker="A." cols="2">
             <li>
               <p>
@@ -492,6 +492,172 @@
         </p>
       </statement>
     </task>
+
+    <task>
+      <statement>
+        <p>
+          Suppose for a pair of primal-dual solutions if <m>t_i=0</m>. 
+          What must be true about <m>y_i</m>?  (If we increase <m>b_i</m> can we predict if that helps or hurts <m>f</m>?
+            Does it matter?)
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>y_i</m> could be any value as well.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y_i\geq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y_i\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y_i=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>y_i\neq 0</m>.
+              </p>
+            </li>
+          </ol>
+
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        Solve the following non-canonical primal-dual problem:
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              <m>\bar{x}_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\bar{y}_1</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-0</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_2</m>
+            </cell>
+            <cell>
+              <m>-1</m>
+            </cell>
+            <cell>
+              <m>-3</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>-3</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell>
+              <m>=0</m>
+            </cell>
+            <cell>
+              <m>s_2</m>
+            </cell>
+            <cell>
+              <m>=s_3</m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+    </statement>
   </activity>
   
   
