@@ -149,13 +149,13 @@
         </p>
       </statement>
     </task>
-    <task>
+    <!--<task>
       <statement>
         <p>
           For each extreme point in the feasible region, consider the bounding planes who intersect at that point.  If you traverse in the direction of the normal vectors from the extreme point, does the objective function increase or decrease?  How does this connect to the coefficients we just found?
         </p>
       </statement>
-    </task>
+    </task>-->
     <task>
       <statement>
         <p>
