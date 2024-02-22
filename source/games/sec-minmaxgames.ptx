@@ -4,7 +4,7 @@
   <title>Min-Max Games</title>
 
 
-  <exploration>
+  <exploration xml:id="exploration-evenodd">
     <introduction>
       <p>
         Suppose we have two players, then <q>Even</q> player and the <q>Odd</q> player.  Each player picks an integer from 1-3.
@@ -197,7 +197,7 @@
     <task>
       <statement>
         <p>
-          Does this game favor either the even or odd player?
+          Does this game favor either the Even or Odd player?
         </p>
       </statement>
     </task>
@@ -219,7 +219,7 @@
     </statement>
   </definition>
 
-  <activity>
+  <activity xml:id="activity-rowcol">
     <introduction>
       <p>
         Consider the payoff matrix for a game between Rowan and Colleen.
@@ -651,7 +651,7 @@
                 <m>0</m>
               </cell>
               <cell bottom="medium">
-                <m>0</m>
+                <m>\cdots</m>
               </cell>
               <cell right="medium" bottom="medium">
                 <m>0</m>
@@ -706,10 +706,796 @@
     <task>
       <statement>
         <p>
-          In solving this system, some rows or columns may be deeleted.  Why is this okay?
+          In solving this system, some rows or columns may be deleted.  Why is this okay?
         </p>
       </statement>
     </task>
   </activity>  
+
+  <definition xml:id="def-saddlepoint">
+    <statement>
+      <p>
+        Suppose that the reduced payoff matrix had an entry <m>a_{ij}</m>
+        that is the largest value in it's column and the smallest value in 
+        it's row.
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              <m>\bar{v}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>q_k</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>q_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\bar{u}</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>-1</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-0</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>p_\ell</m>
+            </cell>
+            <cell>
+              <m>-1</m>
+            </cell>
+            <cell>
+              <m>a_{\ell k}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{\ell j}</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_\ell</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>p_i</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{ik}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{ij}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_i</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              <m>=0</m>
+            </cell>
+            <cell>
+              <m>=s_k</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>=s_j</m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        Such an entry <m>a_{ij}</m> is called a <em>saddle point</em>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <statement>
+      <p>
+        Suppose a reduced payoff matrix had a saddle point <m>a_{ij}</m>.
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              <m>\bar{v}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>q_k</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>q_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\bar{u}</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>-1</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell right="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-0</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>p_\ell</m>
+            </cell>
+            <cell>
+              <m>-1</m>
+            </cell>
+            <cell>
+              <m>a_{\ell k}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{\ell j}</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_\ell</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>p_i</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{ik}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{ij}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_i</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              <m>=0</m>
+            </cell>
+            <cell>
+              <m>=s_k</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>=s_j</m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+    </statement>
+    <task>
+      <statement>
+        <p>
+          Pivot first on the entry with a <m>*</m> then <m>**</m>.
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{v}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_k</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_j</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\bar{u}</m>
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>-1^*</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_\ell</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{\ell k}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{\ell j}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_\ell</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_i</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1^{**}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{ik}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{ij}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_i</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>=0</m>
+              </cell>
+              <cell>
+                <m>=s_k</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell>
+                <m>=s_j</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+
+
+
+        <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              <m>t_i</m>
+            </cell>
+            <cell bottom="medium">
+              <m>q_k</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>s_j</m>
+            </cell>
+            <cell>
+              <m>?</m>
+            </cell>
+            <cell>
+              <m>?</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>?</m>
+            </cell>
+            <cell right="medium">
+              <m>C</m>
+            </cell>
+            <cell halign="left">
+              <m>=-q_j</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>p_\ell</m>
+            </cell>
+            <cell>
+              <m>?</m>
+            </cell>
+            <cell>
+              <m>?</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>?</m>
+            </cell>
+            <cell right="medium">
+              <m>C'</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_\ell</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell halign="left">
+              <m>=-\bar{v}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>B</m>
+            </cell>
+            <cell bottom="medium">
+              <m>B'</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              <m>=p_i</m>
+            </cell>
+            <cell>
+              <m>=s_k</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>=\bar{u} </m>
+            </cell>
+            <cell>
+              <m>=g</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For each entry <m>B, B', C, C'</m> determine if:
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              The entry is zero.
+            </p>
+          </li>
+          <li>
+            <p>
+              The entry is positive.
+            </p>
+          </li>
+          <li>
+            <p>
+              The entry is negative.
+            </p>
+          </li>
+          <li>
+            <p>
+              The entries value cannot be determined.
+            </p>
+          </li>
+        </ol>
+
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          After we delete the appropriate rows and columns, what could be said about the 
+          resulting primal dual program?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Would it make a difference if we pivoted by <m>**</m> first then <m>*</m>?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <task>
+      <p>
+        Follow the outline provided by <xref ref="activity-rowcol"/> to find the optimal strategies
+        for the Even and Odd players in <xref ref="exploration-evenodd"/>, and who if anyone the game favors. 
+      </p>
+    </task>
+    <task>
+      <p>
+        To test out this solution edit this code:
+        <sage language="r">
+          <input>
+            numsamp = 1000000
+
+            Rowan = sample(1:3, numsamp, replace = TRUE, prob = c(FIXMER1, FIXMER2, FIXMER3))
+            Colleen = sample(1:3, numsamp, replace = TRUE, prob = c(FIXMEC1, FIXMEC2, FIXMEC3))
+
+            PayoffMatrix = matrix(c(2,-3,2,-3,4,-3,2,-3,6), nrow = 3, ncol = 3)
+
+            Winnings = rep(NA, numsamp)
+
+            for(i in 1:numsamp){  
+                Winnings[i]=PayoffMatrix[Rowan[i],Colleen[i]]
+            }
+
+            hist(Winnings)
+            abline(v=mean(Winnings), col="red",lwd=3, lty=2 )
+            print(mean(Winnings))
+          </input>
+          </sage>
+          Where <c>FIXMER1</c>, <c>FIXMER2</c>, <c>FIXMER3</c> represent the entries
+          for the optimal mixed strategy for the row player Even, and <c>FIXMEC1</c>, <c>FIXMEC2</c>, <c>FIXMEC3</c>
+          are for the optimal mixed strategy for the column player Odd.
+      </p>
+      <p>
+        Then run the cell and see the distributions of winnings and the average winnings.
+        How does this value compare to what you found.
+      </p>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Take turns, one student pick a new strategy for Even, and another student then modify the strategy for Odd in light of the new strategy.
+          Can we do better than Odd's current best strategy?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Conversely, take turns, one student pick a new strategy for Odd, and another student then modify the strategy for Even in light of the new strategy.
+          Can we do better than Even's current best strategy?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        Find the optimal strategies for two players Rowan and Colleen
+        playing <q>Rock, Paper, Scissors</q>
+      </p>
+    </statement>
+  </activity>
 
 </section>
