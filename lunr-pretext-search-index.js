@@ -1162,6 +1162,69 @@ var ptx_lunr_docs = [
   "body": "  Find the optimal strategies for two players Rowan and Colleen playing Rock, Paper, Scissors    "
 },
 {
+  "id": "sec-vonneumann",
+  "level": "1",
+  "url": "sec-vonneumann.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "VonNeumann Minimax Theorem",
+  "body": " VonNeumann Minimax Theorem    Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions .  Let denote the th row of a matrix and let denote the th column of .    Given a fixed column strategy which of these describes the role for the row player?                          Given a fixed row strategy which of these describes the role for the column player?                            We prove an interesting way to think of the optimal strategies.  Let denote a fixed column strategy, and let , and let     Recall that . Prove that .    Why must ?    Show that there is a (very simple) row strategy where .    Why must ?    What have we proven?      We now prove a characterization theorem about the optimal solutions for both the row and column player.  Suppose we have a payoff matrix where every entry is positive. In other words, after each round Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money. Roawn's strategy here is to take Colleen for as much money as he can and Colleen's strategy is to minimize her losses.  (We'll ignore the obvious question of why Colleen would be willing to play this game.)    Argue why optimal row and collumn outcomes .    Write out the primal maximization problem for the LP formulation of this game:                                                                                                                                                                                                                  Write out the non-canonical primal problem including the objective function and constraint equalities and inequalities involving the and where appropriate. (There should be no slack variables here.)    Consider the inequality constraints in our formulation, divide each of these by . Let . Can we rewrite our inequalities as linear combinations of is less than or equal to some cosntant?    Consider the equality constraint after dividing by , rewrite this equality in terms of without negatives.  Remember, Colleen's strategy is to minimize which must be positive. Can we rephrase this as maximizing or minimizing a linear function involving then ? What is this linear function and is it a maximization or minimization problem? (Note that the solution to this problem likely isn't the solution to the original problem, but both are optimized under the same conditions.)    Rewrite the new canonical linear programming problem with variables that optimizes Colleen's stretegy.    Why is the feasible region for Colleen's new problem non-empty but bounded? What does the Extreme Value Theorem then say about this?    Repeat tasks (b)-(c) for Rowan's strategy, where .    Compare Rowan and Colleen's problems with the . Show that these problems are dual problems to each other. Which is the primal max and which is the dual min?    What does the Strong Duality Theorem say about the optimal solutions to both problems? What in turn, does that say about ?    We're still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at Rowan. To balance things out, Rowan has to pay Colleen $5 after each round. Would this fact change anything about Rowan and Collen's strategies?  Say it was $ , would that make any difference?    Let denote any strategy for Rowan and Colleen. Let denote a matrix with all 1's. Show that .    Show that for fixed strategies and not fixed strategies that is maximized when is maximized and is minimized when is minimized.     VonNeumann's Minimax Theorem   Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions . Also let denote the th row of a matrix and let denote the th column of .  Then, there are optimal strategies such that:       Consider the payoff matrix     Find the optimal strategy for Colleen in this game, and the game value .    Find a strategy for Rowan so that , but is not the optimal strategy.    What does this say about ?      In a simplified game of battleship played on a two board, Colleen selects two consecutive squares on the board to place her ship. Roawn then picks one of six squares to fire at. If he hits, he gets a point, otherwise Colleen gets a point.    Write out a payoff matrix for this game. (Why is it ?)    Find the optimal solution for Colleen using Sage:      Does the game favor Rowan or Colleen?    Use sage to find the optimal solution for Rowan:      "
+},
+{
+  "id": "sec-vonneumann-2",
+  "level": "2",
+  "url": "sec-vonneumann.html#sec-vonneumann-2",
+  "type": "Activity",
+  "number": "6.2.1",
+  "title": "",
+  "body": "  Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions .  Let denote the th row of a matrix and let denote the th column of .    Given a fixed column strategy which of these describes the role for the row player?                          Given a fixed row strategy which of these describes the role for the column player?                         "
+},
+{
+  "id": "sec-vonneumann-3",
+  "level": "2",
+  "url": "sec-vonneumann.html#sec-vonneumann-3",
+  "type": "Activity",
+  "number": "6.2.2",
+  "title": "",
+  "body": "  We prove an interesting way to think of the optimal strategies.  Let denote a fixed column strategy, and let , and let     Recall that . Prove that .    Why must ?    Show that there is a (very simple) row strategy where .    Why must ?    What have we proven?   "
+},
+{
+  "id": "sec-vonneumann-4",
+  "level": "2",
+  "url": "sec-vonneumann.html#sec-vonneumann-4",
+  "type": "Activity",
+  "number": "6.2.3",
+  "title": "",
+  "body": "  We now prove a characterization theorem about the optimal solutions for both the row and column player.  Suppose we have a payoff matrix where every entry is positive. In other words, after each round Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money. Roawn's strategy here is to take Colleen for as much money as he can and Colleen's strategy is to minimize her losses.  (We'll ignore the obvious question of why Colleen would be willing to play this game.)    Argue why optimal row and collumn outcomes .    Write out the primal maximization problem for the LP formulation of this game:                                                                                                                                                                                                                  Write out the non-canonical primal problem including the objective function and constraint equalities and inequalities involving the and where appropriate. (There should be no slack variables here.)    Consider the inequality constraints in our formulation, divide each of these by . Let . Can we rewrite our inequalities as linear combinations of is less than or equal to some cosntant?    Consider the equality constraint after dividing by , rewrite this equality in terms of without negatives.  Remember, Colleen's strategy is to minimize which must be positive. Can we rephrase this as maximizing or minimizing a linear function involving then ? What is this linear function and is it a maximization or minimization problem? (Note that the solution to this problem likely isn't the solution to the original problem, but both are optimized under the same conditions.)    Rewrite the new canonical linear programming problem with variables that optimizes Colleen's stretegy.    Why is the feasible region for Colleen's new problem non-empty but bounded? What does the Extreme Value Theorem then say about this?    Repeat tasks (b)-(c) for Rowan's strategy, where .    Compare Rowan and Colleen's problems with the . Show that these problems are dual problems to each other. Which is the primal max and which is the dual min?    What does the Strong Duality Theorem say about the optimal solutions to both problems? What in turn, does that say about ?    We're still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at Rowan. To balance things out, Rowan has to pay Colleen $5 after each round. Would this fact change anything about Rowan and Collen's strategies?  Say it was $ , would that make any difference?    Let denote any strategy for Rowan and Colleen. Let denote a matrix with all 1's. Show that .    Show that for fixed strategies and not fixed strategies that is maximized when is maximized and is minimized when is minimized.   "
+},
+{
+  "id": "thm-vonneumann",
+  "level": "2",
+  "url": "sec-vonneumann.html#thm-vonneumann",
+  "type": "Theorem",
+  "number": "6.2.1",
+  "title": "VonNeumann’s Minimax Theorem.",
+  "body": " VonNeumann's Minimax Theorem   Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions . Also let denote the th row of a matrix and let denote the th column of .  Then, there are optimal strategies such that:    "
+},
+{
+  "id": "sec-vonneumann-6",
+  "level": "2",
+  "url": "sec-vonneumann.html#sec-vonneumann-6",
+  "type": "Activity",
+  "number": "6.2.4",
+  "title": "",
+  "body": "  Consider the payoff matrix     Find the optimal strategy for Colleen in this game, and the game value .    Find a strategy for Rowan so that , but is not the optimal strategy.    What does this say about ?   "
+},
+{
+  "id": "sec-vonneumann-7",
+  "level": "2",
+  "url": "sec-vonneumann.html#sec-vonneumann-7",
+  "type": "Activity",
+  "number": "6.2.5",
+  "title": "",
+  "body": "  In a simplified game of battleship played on a two board, Colleen selects two consecutive squares on the board to place her ship. Roawn then picks one of six squares to fire at. If he hits, he gets a point, otherwise Colleen gets a point.    Write out a payoff matrix for this game. (Why is it ?)    Find the optimal solution for Colleen using Sage:      Does the game favor Rowan or Colleen?    Use sage to find the optimal solution for Rowan:     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
