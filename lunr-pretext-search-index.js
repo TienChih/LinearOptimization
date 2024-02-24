@@ -847,6 +847,33 @@ var ptx_lunr_docs = [
   "body": "  Solve the linear program:         "
 },
 {
+  "id": "sec-noncanonsage",
+  "level": "1",
+  "url": "sec-noncanonsage.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Solving NonCanonical Problems with Sage",
+  "body": " Solving NonCanonical Problems with Sage    Say we want to solve the non-canonical linear program:       Record this non-canonical program using Sage:   We can then find the optimal solution:       Solve:           "
+},
+{
+  "id": "sec-noncanonsage-2",
+  "level": "2",
+  "url": "sec-noncanonsage.html#sec-noncanonsage-2",
+  "type": "Activity",
+  "number": "4.3.1",
+  "title": "",
+  "body": "  Say we want to solve the non-canonical linear program:       Record this non-canonical program using Sage:   We can then find the optimal solution:    "
+},
+{
+  "id": "sec-noncanonsage-3",
+  "level": "2",
+  "url": "sec-noncanonsage.html#sec-noncanonsage-3",
+  "type": "Activity",
+  "number": "4.3.2",
+  "title": "",
+  "body": "  Solve:          "
+},
+{
   "id": "sec-section-sensitivity",
   "level": "1",
   "url": "sec-section-sensitivity.html",
@@ -1042,7 +1069,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Tucker Tableau’s, Pivots and Duality",
-  "body": " Tucker Tableau's, Pivots and Duality  In this section, we examine pivoting with primal-dual tableau's.    Noting that the dual variables are non-negative weights attached to the hyperplanes defined by , and the slack variables for the dual program are the weights associated with the planes , we can encode all this information in the Primal-Dual Tucker Tableau :                                                                                                                            Write out the sufficient conditions for the tableau to determine:    The primal program is feasible.    The dual program is feasible.    A feasible primal program is unbounded above.    A feasible dual program is unbounded below.    A primal program is infeasible.    A dual program is infeasible.    The primal program has a feasible basic solution.    The dual program has a feasible basic solution.      Are any of these identical?      Recall .    Record this information in a primal-dual tucker tableau.    Apply the Simplex Algorithm to this tableau.    Consider the dual solution. What does that mean in the context of the time spent by the painter and the sculptor?     If a primal program is infeasible, what could be true of the dual program?   The dual program has an optimal solution.    The dual program is unbounded below.    The dual program is infeasible.     Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.    Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.      We now consider unconstrained and equality constrained primal-dual programs.    Suppose for a pair of primal-dual solutions if were allowed to be be any value including negative values, What must be true about ? (If is unconstrained, what can we say about the hyperplane as a bounding hyperplane?)    could be any value as well.     .     .     .     .       Suppose for a pair of primal-dual solutions if . What must be true about ? (If we increase can we predict if that helps or hurts ? Does it matter?)    could be any value as well.     .     .     .     .         Solve the following non-canonical primal-dual problem:                                                                                                                            "
+  "body": " Tucker Tableau's, Pivots and Duality  In this section, we examine pivoting with primal-dual tableau's.    Noting that the dual variables are non-negative weights attached to the hyperplanes defined by , and the slack variables for the dual program are the weights associated with the planes , we can encode all this information in the Primal-Dual Tucker Tableau :                                                                                                                            Write out the sufficient conditions for the tableau to determine:    The primal program is feasible.    The dual program is feasible.    A feasible primal program is unbounded above.    A feasible dual program is unbounded below.    A primal program is infeasible.    A dual program is infeasible.    The primal program has a feasible basic solution.    The dual program has a feasible basic solution.      Are any of these identical?      Recall .    Record this information in a primal-dual tucker tableau.    Apply the Simplex Algorithm to this tableau.    Consider the dual solution. What does that mean in the context of the time spent by the painter and the sculptor?     If a primal program is infeasible, what could be true of the dual program?   The dual program has an optimal solution.    The dual program is unbounded below.    The dual program is infeasible.     Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.    Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.      We now consider unconstrained and equality constrained primal-dual programs.    Suppose for a pair of primal-dual solutions if were allowed to be be any value including negative values, What must be true about ? (If is unconstrained, what can we say about the hyperplane as a bounding hyperplane?)    could be any value as well.     .     .     .     .       Suppose for a pair of primal-dual solutions if . What must be true about ? (If we increase can we predict if that helps or hurts ? Does it matter?)    could be any value as well.     .     .     .     .        Solve the following non-canonical primal-dual problem:                                                                                                                          Enter the primal-program and use Sage to confirm the solution:        Use sage to find the dual and solve it:      "
 },
 {
   "id": "sec-section-dualpivot-3",
@@ -1087,7 +1114,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "5.3.5",
   "title": "",
-  "body": "  Solve the following non-canonical primal-dual problem:                                                                                                                           "
+  "body": " Solve the following non-canonical primal-dual problem:                                                                                                                          Enter the primal-program and use Sage to confirm the solution:        Use sage to find the dual and solve it:     "
 },
 {
   "id": "sec-minmaxgames",
