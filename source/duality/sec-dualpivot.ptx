@@ -533,7 +533,7 @@
   </activity>
 
   <activity>
-    <statement>
+    <task>
       <p>
         Solve the following non-canonical primal-dual problem:
       </p>
@@ -657,7 +657,63 @@
           </row>
         </tabular>
       </p>
-    </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Enter the primal-program and use Sage to confirm the solution:
+          <p>
+            <sage>
+              <input>
+                %display typeset
+                A = (FIXME)
+                b = (FIXME)
+                c = (FIXME)
+                P = InteractiveLPProblem(A, b, c,
+                 [FIXME], 
+                 constraint_type = [FIXME],
+                 variable_type = [FIXME],
+                 problem_type = FIXME)
+                P
+              </input>         
+              </sage>
+              <sage>
+                <input>
+                  print(P.optimal_solution())
+                  print(P.optimal_value())
+                </input>         
+              </sage>
+        </p>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use sage to find the dual and solve it:
+        </p>
+        <sage>
+          <input>
+            %display typeset
+            A = (FIXME)
+            b = (FIXME)
+            c = (FIXME)
+            P = InteractiveLPProblem(A, b, c,
+             [FIXME], 
+             constraint_type = [FIXME],
+             variable_type = "",
+             problem_type = FIXME)
+            P
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(P.optimal_solution())
+              print(P.optimal_value())
+            </input>         
+          </sage>
+      </statement>
+    </task>
   </activity>
   
   
