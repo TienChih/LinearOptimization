@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-vonneumann" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>VonNeumann Minimax Theorem</title>
+
+
+  <activity>
+    <introduction>
+      <p>
+        Let <m>A</m> be a payoff matrix and <m>\p, \q</m> represent
+        the strategies of the row and column players respectively, with feasible regions <m>F_\p, F_\q</m>.
+      </p>
+      <p>
+        Let <m>A_{(i)}</m> denote the <m>i</m>th row of a matrix <m>A</m> and let <m>A^{(j)}</m>
+        denote the <m>j</m>th column of <m>A</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Given a fixed column strategy <m>\q'</m> which of these describes
+          the role for the row player? 
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>\displaystyle \min_{\p \in F_{\p}} \p^\top A\q'</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \max_{\p \in F_{\p}} \p^\top A\q'</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \min_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'</m>
+            </p>
+          </li>
+          
+        </ol>
+
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Given a fixed row strategy <m>\p'</m> which of these describes
+          the role for the column player? 
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \max_{\q \in F_{\q}} \p'^\top A\q</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \min_{\p \in F_{\p}} \sum_{j=1}^m \p^\top A^{(j)}\q_j</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{ij=1}^m \p^\top A^{(j)}\q_j</m>
+            </p>
+          </li>
+        </ol>
+
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        We prove an interesting way to think of the optimal strategies.
+      </p>
+      <p>
+        Let <m>\q'</m> denote a fixed column strategy, and let 
+        <m>v=\displaystyle \max_{1\leq i\leq n}A_{(i)}\q'</m>, and let
+        <m>u=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q</m>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        
+        <p>
+          Recall that <m>\p^\top A\q' = \displaystyle \sum_{i=1}^n \p_i A_{(i)}\q'</m>.
+          Prove that <m> \p^\top A\q' \leq v</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Why must <m>u\leq v</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that there is a (very simple) row strategy <m>\p''</m> where
+          <m>(\p'')^\top A \q'=v</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Why must <m>v\leq u</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What have we proven?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+
+
+  <activity>
+    <introduction>
+      <p>
+        We now prove a characterization theorem about the optimal solutions for both the row and column player.
+      </p>
+      <p>
+        Suppose we have a payoff matrix <m>A</m> where every entry is positive.  In other words, after each round 
+        Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Roawn's strategy here is to take Colleen for 
+        as much money as he can and Colleen's strategy is to minimize her losses. 
+      </p>
+      <p>
+        (We'll ignore the obvious question of
+        why Colleen would be willing to play this game.)
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Argue why optimal row and collumn outcomes <m>\bar{u}, \bar{v} > 0</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Write out the primal maximization problem for the LP formulation of this game:
+
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>\bar{v}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_m</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\bar{u}</m>
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1m}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_2</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2m}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_n</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>=0</m>
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell>
+                <m>=s_n</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Write out the non-canonical primal problem including the objective function and constraint equalities and 
+          inequalities involving the <m>q_i</m> and <m>\bar{v}</m> where appropriate. (There should be no slack variables here.)
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Consider the inequality constraints in our formulation, divide each of these by <m>\bar{v}</m>.  Let
+          <m>\tilde{q}_j:=\frac{q_j}{\bar{v}}</m>.  Can we rewrite our inequalities as linear combinations of <m>\tilde{q}_{j}</m>
+          is less than or equal to some cosntant?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Consider the equality constraint after dividing by <m>\bar{v}</m>, rewrite this equality in terms of <m>\tilde{q}_j</m> without
+          negatives.
+        </p>
+        <p>
+          Remember, Colleen's strategy is to minimize <m>\bar{v}</m> which must be positive.  Can we rephrase this as 
+          maximizing or minimizing a linear function involving then <m>\tilde{q}_j</m>?  What is this linear function and 
+          is it a maximization or minimization problem?  (Note that the solution to this problem likely isn't the solution to the original problem,
+          but both are optimized under the same conditions.)
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Rewrite the new <em>canonical</em> linear programming problem with variables <m>\tilde{q}_j</m> that optimizes
+          Colleen's stretegy.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Why is the feasible region for Colleen's new problem non-empty but bounded?  What does the Extreme Value Theorem
+          then say about this?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Repeat tasks (b)-(c) for Rowan's strategy, where <m>\tilde{p}_i = \frac{p_i}{\bar{u}}</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Compare Rowan and Colleen's problems with the <m>\tilde{p}_i, \tilde{q}_j</m>.  Show that these problems
+          are dual problems to each other.  Which is the primal max and which is the dual min?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What does the Strong Duality Theorem <xref ref="thm-strongduality"/> say about the optimal solutions to
+          both problems?  What in turn, does that say about <m>\tilde{u}, \tilde{v}</m>?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          We're still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at
+          Rowan.  To balance things out, Rowan has to pay Colleen $5 after each round.  Would this fact change anything about Rowan and Collen's strategies?
+        </p>
+        <p>
+          Say it was $<m>r</m>, would that make any difference?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Let <m>\p, \q</m> denote any strategy for Rowan and Colleen.  Let <m>E</m> denote a <m>n\times m</m> matrix with all 1's.
+          Show that <m>\p^\top(rE)\q=r</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Show that for fixed strategies <m>\p', \q'</m> and not fixed strategies <m>\p, \q</m> that
+          <m>\p^\top (A+rE)q'</m> is maximized when <m>\p^\top A \q'</m> is maximized and 
+          <m>\p'^\top (A+rE)q</m> is minimized when <m>\p'^\top A \q</m> is minimized.
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+
+  <theorem xml:id="thm-vonneumann">
+    <title>VonNeumann's Minimax Theorem</title>
+    <statement>
+      <p>
+        Let <m>A</m> be a payoff matrix and <m>\p, \q</m> represent
+        the strategies of the row and column players respectively, with feasible regions <m>F_\p, F_\q</m>. Also let <m>A_{(i)}</m> denote the <m>i</m>th row of a matrix <m>A</m> and let <m>A^{(j)}</m>
+        denote the <m>j</m>th column of <m>A</m>.
+      </p>
+      <p>
+        Then, there are optimal strategies <m>\p', \q'</m> such that:
+        <me>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q = \displaystyle \min_{1\leq i\leq n}A_{(i)}\q = \p'^\top A\q' = \max_{1\leq j\leq m}\p^\top A^{(m)} = \max_{\p \in F_{\p}} \p^\top A\q'.</me>
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the payoff matrix <m>A=\begin{bmatrix} 1 \amp 0 \\ 1\amp 2 \end{bmatrix}</m>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find the optimal strategy <m>\q'</m> for Colleen in this game, and the game value <m>v</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find a strategy <m>\p</m> for Rowan so that <m>\p^TA\q'=v</m>, but <m>\p</m> is not
+          the optimal strategy.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What does this say about <xref ref="thm-vonneumann"/>?
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        In a simplified game of battleship played on a two <m>2\times 3</m> board,
+        Colleen selects two consecutive squares on the board to place her ship.  Roawn then
+        picks one of six squares to fire at.  If he hits, he gets a point, otherwise
+        Colleen gets a point.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Write out a payoff matrix for this game. (Why is it <m>6\times 7</m>?)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find the optimal solution for Colleen using Sage:
+        </p>
+        <p>
+          <sage>
+            <input>
+              %display typeset
+              A = (FIX_ME)
+              b = (FIX_ME)
+              c = (FIX_ME)
+              P = InteractiveLPProblem(A, b, c,
+               ["v","q1","q2","q3","q4","q5","q6","q7"], 
+               constraint_type = ["==", "&lt;=", "&lt;=", "&lt;=", "&lt;=", "&lt;=", "&lt;="],
+               variable_type = ">=")
+              P
+            </input>         
+            </sage>
+            <sage>
+              <input>
+                print(P.optimal_solution())
+                print(P.optimal_value())
+              </input>         
+            </sage>
+        </p>
+        <p>
+          Does the game favor Rowan or Colleen?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use sage to find the optimal solution for Rowan:
+        </p>
+        <sage>
+          <input>
+            %display typeset
+            D = P.dual()
+            D
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(D.optimal_solution())
+              print(D.optimal_value())
+            </input>         
+          </sage>
+      </statement>
+    </task>
+  </activity>
+  
+
+</section>

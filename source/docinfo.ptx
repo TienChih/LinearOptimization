@@ -22,7 +22,7 @@
   <macros> \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
     \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
     \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\c}{\mathbf c} 
-    \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} 
+    \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
     
   
   </macros>
