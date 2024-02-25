@@ -141,7 +141,7 @@
       </p>
       <p>
         Suppose we have a payoff matrix <m>A</m> where every entry is positive.  In other words, after each round 
-        Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Roawn's strategy here is to take Colleen for 
+        Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Rowan's strategy here is to take Colleen for 
         as much money as he can and Colleen's strategy is to minimize her losses. 
       </p>
       <p>
@@ -152,7 +152,7 @@
     <task>
       <statement>
         <p>
-          Argue why optimal row and collumn outcomes <m>\bar{u}, \bar{v} > 0</m>.
+          Argue why optimal row and column outcomes <m>\ec{u}, \ec{v} > 0</m>.
         </p>
       </statement>
     </task>
@@ -168,7 +168,7 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                <m>\bar{v}</m>
+                <m>\ec{v}</m>
               </cell>
               <cell bottom="medium">
                 <m>q_1</m>
@@ -190,7 +190,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>\bar{u}</m>
+                <m>\ec{u}</m>
               </cell>
               <cell>
                 <m>0</m>
@@ -372,7 +372,7 @@
         </p>
         <p>
           Write out the non-canonical primal problem including the objective function and constraint equalities and 
-          inequalities involving the <m>q_i</m> and <m>\bar{v}</m> where appropriate. (There should be no slack variables here.)
+          inequalities involving the <m>q_i</m> and <m>\ec{v}</m> where appropriate. (There should be no slack variables here.)
         </p>
       </statement>
     </task>
@@ -380,8 +380,8 @@
     <task>
       <statement>
         <p>
-          Consider the inequality constraints in our formulation, divide each of these by <m>\bar{v}</m>.  Let
-          <m>\tilde{q}_j:=\frac{q_j}{\bar{v}}</m>.  Can we rewrite our inequalities as linear combinations of <m>\tilde{q}_{j}</m>
+          Consider the inequality constraints in our formulation, divide each of these by <m>\ec{v}</m>.  Let
+          <m>\tilde{q}_j:=\frac{q_j}{\ec{v}}</m>.  Can we rewrite our inequalities as linear combinations of <m>\tilde{q}_{j}</m>
           is less than or equal to some cosntant?
         </p>
       </statement>
@@ -390,11 +390,11 @@
     <task>
       <statement>
         <p>
-          Consider the equality constraint after dividing by <m>\bar{v}</m>, rewrite this equality in terms of <m>\tilde{q}_j</m> without
+          Consider the equality constraint after dividing by <m>\ec{v}</m>, rewrite this equality in terms of <m>\tilde{q}_j</m> without
           negatives.
         </p>
         <p>
-          Remember, Colleen's strategy is to minimize <m>\bar{v}</m> which must be positive.  Can we rephrase this as 
+          Remember, Colleen's strategy is to minimize <m>\ec{v}</m> which must be positive.  Can we rephrase this as 
           maximizing or minimizing a linear function involving then <m>\tilde{q}_j</m>?  What is this linear function and 
           is it a maximization or minimization problem?  (Note that the solution to this problem likely isn't the solution to the original problem,
           but both are optimized under the same conditions.)
@@ -423,7 +423,7 @@
     <task>
       <statement>
         <p>
-          Repeat tasks (b)-(c) for Rowan's strategy, where <m>\tilde{p}_i = \frac{p_i}{\bar{u}}</m>.
+          Repeat tasks (b)-(c) for Rowan's strategy, where <m>\tilde{p}_i = \frac{p_i}{\ec{u}}</m>.
         </p>
       </statement>
     </task>
@@ -530,7 +530,7 @@
     <introduction>
       <p>
         In a simplified game of battleship played on a two <m>2\times 3</m> board,
-        Colleen selects two consecutive squares on the board to place her ship.  Roawn then
+        Colleen selects two consecutive squares on the board to place her ship.  Rowan then
         picks one of six squares to fire at.  If he hits, he gets a point, otherwise
         Colleen gets a point.
       </p>

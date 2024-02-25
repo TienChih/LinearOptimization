@@ -40,10 +40,10 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m>\bar{x}</m>
+                <m>\ec{x}</m>
               </cell>
               <cell bottom="medium">
-                <m>\bar{y}</m>
+                <m>\ec{y}</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -136,10 +136,10 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m>\bar{x}</m>
+                <m>\ec{x}</m>
               </cell>
               <cell bottom="medium">
-                <m>\bar{y}</m>
+                <m>\ec{y}</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -233,7 +233,7 @@
                 <m>t_2</m>
               </cell>
               <cell bottom="medium">
-                <m>\bar{y}</m>
+                <m>\ec{y}</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -270,7 +270,7 @@
                 <m>? </m>
               </cell>
               <cell halign="left">
-                <m>=-\bar{x}</m>
+                <m>=-\ec{x}</m>
               </cell>
             </row>
             <row>
@@ -479,10 +479,10 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m> \bar{x} </m>
+                <m> \ec{x} </m>
               </cell>
               <cell bottom="medium">
-                <m> \bar{y} </m>
+                <m> \ec{y} </m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -559,7 +559,7 @@
                 <m> t_2 </m>
               </cell>
               <cell bottom="medium">
-                <m> \bar{y} </m>
+                <m> \ec{y} </m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -580,7 +580,7 @@
                 <m> ?</m>
               </cell>
               <cell halign="left">
-                <m>=-\bar{x}</m>
+                <m>=-\ec{x}</m>
               </cell>
             </row>
             
@@ -637,7 +637,7 @@
     <task>
       <statement>
         <p>
-          Consider the row with the <m>\bar{x}</m>, and recall that <m>\bar{x}</m> is allowed to be negative.
+          Consider the row with the <m>\ec{x}</m>, and recall that <m>\ec{x}</m> is allowed to be negative.
           Consider only this row and the non-negativity constraints of <m>t_i</m>.  Which of the following is <m>t_1</m> allowed to be?
         </p>
         <ol marker="A." cols="3">
@@ -749,7 +749,7 @@
                 <m> t_1 </m>
               </cell>
               <cell bottom="medium">
-                <m> \bar{y} </m>
+                <m> \ec{y} </m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -810,7 +810,7 @@
     <task>
       <statement>
         <p>
-          Which of the following bits of information does the <m>\bar{y}</m> row communicate to us? (There could be more than one.)
+          Which of the following bits of information does the <m>\ec{y}</m> row communicate to us? (There could be more than one.)
         </p>
         <ol marker="A." cols="2">
           <li>

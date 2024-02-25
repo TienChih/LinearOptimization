@@ -143,9 +143,618 @@
   <activity>
     <introduction>
       <p>
-        
+        While we could solve this transportation by the simplex algorithm,
+        it would be painfully tedious to do.  We develop an algorithm to simplify this process.
       </p>
+      <!--<p>
+        <figure>
+          <caption>RNA Codons Table, by Florian Hollandt</caption>
+          <image xml:id="rna-codons-table" width="100%">
+              <description>A table of the RNA codons.</description>
+              <latex-image>
+              \begin{tikzpicture}
+                \draw (0,0)  (1,0);
+              \end{tikzpicture}
+              </latex-image>
+          </image>
+      </figure>
+      
+      </p> -->
     </introduction>
+    <task>
+      <statement>
+        <p>
+          Suppose we had <m>n</m> warehouses and <m>m</m> markets with supplies <m>w_i</m>
+          and demands <m>m_j</m>.  We have linear equations <me>\sum a_{k\ell}x_{ij} = w_i, \sum a_{k\ell}x_{ij} = m_j</me>.
+          Since <m>\displaystyle \sum w_i = \sum m_j</m>, what is the maximum number of <m>x_{ij}</m>
+          that can be non-zero for a basic solution?  
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Imagine an augmented matrix with the coefficients of the <m>x_{ij}</m> on
+          one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix.
+          Then consider that <m>\displaystyle \sum w_i = \sum m_j</m>.  What does this say about the (in)dependence of the rows?
+          What then must the rank be?
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We first mark the difference between the lowest two values in each row/column:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                5
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                2
+              </cell>
+              <cell halign="left">
+                40 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                3
+              </cell>
+              <cell>
+                9
+              </cell>
+              <cell>
+                4
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                60 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left" bottom="medium">
+                10 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                40 
+              </cell>
+              <cell>
+                50 
+              </cell>
+              <cell right="medium">
+                20
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          A table like this is called a <em>transportation tableau</em>.
+        </p>
+        <p>
+          Ideally we would always want to move everything with the cheapest available option.
+          It's not hard to see that in most cases, like this one, this isn't actually possible.
+          What do these numbers we computed measure?  How can they help us decide how to move goods?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We select the row/olumn with the highest entries and use the smallest entry in said row/column to move as much of the 
+          goods as we can:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                5
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}</m>
+              </cell>
+              <cell halign="left">
+                40 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                3
+              </cell>
+              <cell>
+                9
+              </cell>
+              <cell>
+                4
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                60 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left" bottom="medium">
+                10 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                40 
+              </cell>
+              <cell>
+                50 
+              </cell>
+              <cell right="medium">
+                20
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                5
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell halign="left">
+                20 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                3
+              </cell>
+              <cell>
+                9
+              </cell>
+              <cell>
+                4
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                60 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left" bottom="medium">
+                10 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                40 
+              </cell>
+              <cell>
+                50 
+              </cell>
+              <cell right="medium">
+                0
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Would it make sense to move any more goods to market 3?  How should
+          we decide how to move goods next?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          The next highest difference is 3 for warehouse 2:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                5
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell halign="left">
+                20 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                3
+              </cell>
+              <cell>
+                9
+              </cell>
+              <cell>
+                <m>\enclose{circle}{4}</m>
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                60 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left" bottom="medium">
+                10 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                40 
+              </cell>
+              <cell>
+                50 
+              </cell>
+              <cell right="medium">
+                0
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                5
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell halign="left">
+                20 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                3
+              </cell>
+              <cell>
+                9
+              </cell>
+              <cell>
+                <m>\enclose{circle}{4}^{50}</m>
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                10 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left" bottom="medium">
+                10 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                40 
+              </cell>
+              <cell>
+                0 
+              </cell>
+              <cell right="medium">
+                0
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Does it make sense to continue to move goods from warehouse 2?
+        </p>
+        <p>
+          What should be the next choice of warehouse/market?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Finish moving the goods from warehouses to markets.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider the final transportation tableau:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                5
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell>
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell halign="left">
+                0 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                3
+              </cell>
+              <cell>
+                <m>\ec{9}^{10}</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{4}^{50}</m>
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                0 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                <m>\enclose{circle}{1}^{10}</m>
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left" bottom="medium">
+                0 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                0 
+              </cell>
+              <cell>
+                0 
+              </cell>
+              <cell right="medium">
+                0
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Verify that this is a feasible solution to the original transportation problem.
+          Is it optimal?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Out of the nine possible warehouse/market pairs, how many have actual
+          shipments between them?  How does that compare to what we found in (a)?
+        </p>
+      </statement>
+    </task>
   </activity>
 
   
