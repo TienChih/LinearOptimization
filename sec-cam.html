@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Solving NonCanonical Problems with Sage</title>
+<title>A Transportation problem and VAM</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,19 +86,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -149,7 +137,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-constrained.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-noncanon.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-duality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="ch-noncanon.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-noncanon.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\c}{\mathbf c} 
    \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q}
@@ -184,12 +172,12 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Using Sage</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">4</span> <span class="title">Noncanonical Problems</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -207,70 +195,66 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">6.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">7</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cam.html" class="internal"><span class="codenumber">7.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li></ul>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-cam.html" class="internal"><span class="codenumber">7.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-noncanonsage"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Solving NonCanonical Problems with Sage</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cam"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.1</span><span class="space"> </span><span class="title">A Transportation problem and VAM</span>
 </h2>
-<article class="activity project-like" id="sec-noncanonsage-2"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+<article class="exploration project-like" id="exploration-transportation"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-noncanonsage-2-1"><div class="para" id="sec-noncanonsage-2-1-1">Say we want to solve the non-canonical linear program: <div class="para logical" id="sec-noncanonsage-2-1-1-1"><div class="displaymath process-math" id="sec-noncanonsage-2-1-1-1-1">
-\begin{align*}
-\textbf{Minimize: }  f(\mathbf{x}) = 3x+y+2z\\
-\textbf{Subject to: }  x+2y+3z\amp \geq  24\\
-2x+4y+3z\amp = 36\\
-y, z\amp \geq  0
-\end{align*}
-</div></div>
-</div></div>
-<article class="task exercise-like" id="sec-noncanonsage-2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-noncanonsage-2-2-1-1">Record this non-canonical program using Sage:</div> <div class="para" id="sec-noncanonsage-2-2-1-2">
-<pre id="sec-noncanonsage-2-2-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
-A = ([[1,2,3],[2,4,3]])
-b = ([24,36])
-c = ([3,1,2])
-P = InteractiveLPProblem(A, b, c,
- ["x", "y", "z"], 
- constraint_type = [">=", "=="],
- variable_type = ["", ">=", ">="],
- problem_type = "min")
-P
-</script></pre> We can then find the optimal solution: <pre id="sec-noncanonsage-2-2-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
-print(P.optimal_value())
-</script></pre>
-</div></article></article><article class="activity project-like" id="sec-noncanonsage-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-noncanonsage-3-1-1">Solve: <div class="para logical" id="sec-noncanonsage-3-1-1-1"><div class="displaymath process-math" id="sec-noncanonsage-3-1-1-1-1">
-\begin{align*}
-\textbf{Minimize: }  f(\mathbf{x}) = -5x+y-2z\\
-\textbf{Subject to: }  2x+z\amp = 0\\
-x-y\amp \geq 1\\
-3x-y+z\amp \ leq  3
-\end{align*}
-</div></div>
-</div> <div class="para" id="sec-noncanonsage-3-1-2">
-<pre id="sec-noncanonsage-3-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
-A = (FIXME)
-b = (FIXME)
-c = (FIXME)
-P = InteractiveLPProblem(A, b, c,
- [FIXME], 
- constraint_type = [FIXME],
- variable_type = "",
- problem_type = FIXME)
-P
-</script></pre> <pre id="sec-noncanonsage-3-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
-print(P.optimal_value())
-</script></pre>
-</div></article></section></div>
+<div class="introduction" id="exploration-transportation-1">
+<div class="para" id="exploration-transportation-1-1">Suppose we have a company moving goods (lets say widgets) from 3 different warehouses to 3 different markets.  The cost of shipping from warehouses to markets is listed below, along with the demand from each market and the supply available at each warehouse:</div> <div class="para" id="exploration-transportation-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">Market 1</td>
+<td class="c m b2 r0 l0 t0 lines">Market 2</td>
+<td class="c m b2 r0 l0 t0 lines">Market 3</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">Warehouse 1</td>
+<td class="c m b0 r0 l0 t0 lines">$2/ton</td>
+<td class="c m b0 r0 l0 t0 lines">$1/ton</td>
+<td class="c m b0 r2 l0 t0 lines">$2/ton</td>
+<td class="l m b0 r0 l0 t0 lines">40 tons</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">Warehouse 2</td>
+<td class="c m b0 r0 l0 t0 lines">$9/ton</td>
+<td class="c m b0 r0 l0 t0 lines">$4/ton</td>
+<td class="c m b0 r2 l0 t0 lines">$7/ton</td>
+<td class="l m b0 r0 l0 t0 lines">60 tons</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">Warehouse 3</td>
+<td class="c m b2 r0 l0 t0 lines">$1/ton</td>
+<td class="c m b2 r0 l0 t0 lines">$2/ton</td>
+<td class="c m b2 r2 l0 t0 lines">$9/ton</td>
+<td class="l m b2 r0 l0 t0 lines">10 tons</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">40 tons</td>
+<td class="c m b0 r0 l0 t0 lines">50 tons</td>
+<td class="c m b0 r2 l0 t0 lines">20 tons</td>
+<td class="l m b0 r0 l0 t0 lines">110 tons</td>
+</tr>
+</table></div></div> <div class="para" id="exploration-transportation-1-3">We want to ship the goods from the warehouses to the markets in a way that minimizes costs.</div>
+</div>
+<article class="task exercise-like" id="exploration-transportation-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-transportation-2-1-1">Let <span class="process-math">\(x_{ij}\)</span> denote the cost to ship a ton of goods from warehouse <span class="process-math">\(i\)</span> to market <span class="process-math">\(j\text{.}\)</span>
+</div> <div class="para" id="exploration-transportation-2-1-2">Write an (in)equality that measure the cost to ship goods from Warehouse 1 in terms of the <span class="process-math">\(x_{ij}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="exploration-transportation-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-transportation-3-1-1">Write an (in)equality that measure the cost to ship goods to Market 2 in terms of the <span class="process-math">\(x_{ij}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="exploration-transportation-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-transportation-4-1-1">Write a (possibly noncanonical) linear minimization program that minimizes the cost to ship these goods.</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-constrained.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-duality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-noncanon.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
