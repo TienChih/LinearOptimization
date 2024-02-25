@@ -18,7 +18,7 @@
     <xi:include href="noncanon/ch-main.ptx" />
     <xi:include href="duality/ch-main.ptx" />
     <xi:include href="games/ch-main.ptx" />
-    <xi:include href="games/ch-transport.ptx" />
+    <xi:include href="transport/ch-main.ptx" />
 
 
     <!-- Include backmatter -->
