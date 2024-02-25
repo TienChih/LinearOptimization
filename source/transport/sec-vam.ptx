@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-cam" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>A Transportation problem and VAM</title>
+
+
+  <exploration xml:id="exploration-transportation">
+    <introduction>
+      <p>
+        Suppose we have a company moving goods (lets say widgets) from 3 different warehouses to
+        3 different markets.  The cost of shipping from warehouses to markets is listed below, along with
+        the demand from each market and the supply available at each warehouse:
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              Market 1
+            </cell>
+            <cell bottom="medium">
+              Market 2
+            </cell>
+            <cell bottom="medium">
+              Market 3
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Warehouse 1
+            </cell>
+            <cell>
+              <dollar />2/ton
+            </cell>
+            <cell>
+              <dollar />1/ton
+            </cell>
+            <cell right="medium">
+              <dollar />2/ton
+            </cell>
+            <cell halign="left">
+              40 tons
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Warehouse 2
+            </cell>
+            <cell>
+              <dollar />9/ton
+            </cell>
+            <cell>
+              <dollar />4/ton
+            </cell>
+            <cell right="medium">
+              <dollar />7/ton
+            </cell>
+            <cell halign="left">
+              60 tons
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Warehouse 3
+            </cell>
+            <cell bottom="medium">
+              <dollar />1/ton
+            </cell>
+            <cell bottom="medium">
+              <dollar />2/ton
+            </cell>
+            <cell right="medium" bottom="medium">
+              <dollar />9/ton
+            </cell>
+            <cell halign="left" bottom="medium">
+              10 tons
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              40 tons
+            </cell>
+            <cell>
+              50 tons
+            </cell>
+            <cell right="medium">
+              20 tons
+            </cell>
+            <cell halign="left">
+              110 tons
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        We want to ship the goods from the warehouses to the markets in a way that minimizes costs.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Let <m>x_{ij}</m> denote the cost to ship a ton of goods from warehouse <m>i</m> to 
+          market <m>j</m>.
+        </p>
+        <p>
+          Write an (in)equality that measure the cost to ship goods from Warehouse 1 in terms of the
+          <m>x_{ij}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Write an (in)equality that measure the cost to ship goods to Market 2 in terms of the
+          <m>x_{ij}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Write a (possibly noncanonical) linear minimization program that minimizes the cost
+          to ship these goods.
+        </p>
+      </statement>
+    </task>
+  </exploration>
+
+  
+
+</section>
