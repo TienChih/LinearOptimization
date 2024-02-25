@@ -131,6 +131,23 @@
     </task>
   </exploration>
 
+  <definition xml:id="def-balanced">
+    <statement>
+      <p>
+        A transportation problem where the total demand and the total supply
+        are the same is a <em>balanced</em> transportation problem.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        
+      </p>
+    </introduction>
+  </activity>
+
   
 
 </section>
