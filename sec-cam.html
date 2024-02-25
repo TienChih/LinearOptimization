@@ -140,7 +140,8 @@ true);
 </script></span><span class="treebuttons"><a class="previous-button button" href="ch-noncanon.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-noncanon.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\c}{\mathbf c} 
-   \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q}
+   \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -252,7 +253,247 @@ true);
 </div></article><article class="task exercise-like" id="exploration-transportation-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="exploration-transportation-3-1-1">Write an (in)equality that measure the cost to ship goods to Market 2 in terms of the <span class="process-math">\(x_{ij}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="exploration-transportation-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-transportation-4-1-1">Write a (possibly noncanonical) linear minimization program that minimizes the cost to ship these goods.</div></article></article></section></div>
+<div class="para" id="exploration-transportation-4-1-1">Write a (possibly noncanonical) linear minimization program that minimizes the cost to ship these goods.</div></article></article><article class="definition definition-like" id="def-balanced"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-balanced-1-1">A transportation problem where the total demand and the total supply are the same is a <em class="emphasis">balanced</em> transportation problem.</div></article><article class="activity project-like" id="sec-cam-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-cam-4-1">
+<div class="para" id="sec-cam-4-1-1">While we could solve this transportation by the simplex algorithm, it would be painfully tedious to do.  We develop an algorithm to simplify this process.</div> </div>
+<article class="task exercise-like" id="sec-cam-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-cam-4-2-1-1">
+<div class="para">Suppose we had <span class="process-math">\(n\)</span> warehouses and <span class="process-math">\(m\)</span> markets with supplies <span class="process-math">\(w_i\)</span> and demands <span class="process-math">\(m_j\text{.}\)</span>  We have linear equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum a_{k\ell}x_{ij} = w_i, \sum a_{k\ell}x_{ij} = m_j\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{,}\)</span> what is the maximum number of <span class="process-math">\(x_{ij}\)</span> that can be non-zero for a basic solution?</div>
+</div>
+<div class="solutions"><details id="sec-cam-4-2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="sec-cam-4-2-2-1">Imagine an augmented matrix with the coefficients of the <span class="process-math">\(x_{ij}\)</span> on one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix. Then consider that <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{.}\)</span>  What does this say about the (in)dependence of the rows? What then must the rank be?</div></div></details></div></article><article class="task exercise-like" id="sec-cam-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-cam-4-3-1-1">We first mark the difference between the lowest two values in each row/column:</div> <div class="para" id="sec-cam-4-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">40</td>
+<td class="c m b0 r0 l0 t0 lines">50</td>
+<td class="c m b0 r2 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="sec-cam-4-3-1-3">A table like this is called a <em class="emphasis">transportation tableau</em>.</div> <div class="para" id="sec-cam-4-3-1-4">Ideally we would always want to move everything with the cheapest available option. It’s not hard to see that in most cases, like this one, this isn’t actually possible. What do these numbers we computed measure?  How can they help us decide how to move goods?</div></article><article class="task exercise-like" id="sec-cam-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-cam-4-4-1-1">We select the row/olumn with the highest entries and use the smallest entry in said row/column to move as much of the goods as we can:</div> <div class="para" id="sec-cam-4-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">40</td>
+<td class="c m b0 r0 l0 t0 lines">50</td>
+<td class="c m b0 r2 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="sec-cam-4-4-1-3"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">40</td>
+<td class="c m b0 r0 l0 t0 lines">50</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="sec-cam-4-4-1-4">Would it make sense to move any more goods to market 3?  How should we decide how to move goods next?</div></article><article class="task exercise-like" id="sec-cam-4-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-cam-4-5-1-1">The next highest difference is 3 for warehouse 2:</div> <div class="para" id="sec-cam-4-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{4}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">40</td>
+<td class="c m b0 r0 l0 t0 lines">50</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="sec-cam-4-5-1-3"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{4}^{50}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">40</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="sec-cam-4-5-1-4">Does it make sense to continue to move goods from warehouse 2?</div> <div class="para" id="sec-cam-4-5-1-5">What should be the next choice of warehouse/market?</div></article><article class="task exercise-like" id="sec-cam-4-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-cam-4-6-1-1">Finish moving the goods from warehouses to markets.</div></article><article class="task exercise-like" id="sec-cam-4-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-cam-4-7-1-1">Consider the final transportation tableau:</div> <div class="para" id="sec-cam-4-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{9}^{10}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{4}^{50}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{1}^{10}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="sec-cam-4-7-1-3">Verify that this is a feasible solution to the original transportation problem. Is it optimal?</div></article><article class="task exercise-like" id="sec-cam-4-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="sec-cam-4-8-1-1">Out of the nine possible warehouse/market pairs, how many have actual shipments between them?  How does that compare to what we found in (a)?</div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-noncanon.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

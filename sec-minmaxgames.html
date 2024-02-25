@@ -152,7 +152,8 @@ true);
 </script></span><span class="treebuttons"><a class="previous-button button" href="ch-noncanon.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-noncanon.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-vonneumann.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\c}{\mathbf c} 
-   \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q}
+   \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -377,7 +378,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <li id="activity-rowcol-5-1-3-5"><div class="para" id="activity-rowcol-5-1-3-5-1"><span class="process-math">\(v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
 <li id="activity-rowcol-5-1-3-6"><div class="para" id="activity-rowcol-5-1-3-6-1"><span class="process-math">\(v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="activity-rowcol-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-rowcol-6-1-1">If Roawn somehow figures out Colleen’s strategy <span class="process-math">\(Q\text{,}\)</span> which row <span class="process-math">\(i\)</span> should he choose?</div></article><article class="task exercise-like" id="activity-rowcol-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-rowcol-6-1-1">If Rowan somehow figures out Colleen’s strategy <span class="process-math">\(Q\text{,}\)</span> which row <span class="process-math">\(i\)</span> should he choose?</div></article><article class="task exercise-like" id="activity-rowcol-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-rowcol-7-1-1">Colleen is also aware that Rowan is a sharp player can likely figure out <span class="process-math">\(Q\text{.}\)</span>  How then should she choose her strategy? <span class="process-math">\(Q\text{?}\)</span>
 </div> <ol class="upper-alpha cols2">
 <li id="activity-rowcol-7-1-2-1"><div class="para" id="activity-rowcol-7-1-2-1-1">Maximize <span class="process-math">\(\displaystyle \max_{1\leq j\leq m}F_i(Q)\text{.}\)</span>
@@ -392,7 +393,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <div class="para" id="activity-rowcol-8-1-1">Consider the primal-dual program encoded by the tableau:</div> <div class="para" id="activity-rowcol-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\bar{v}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{v}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
@@ -401,7 +402,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <td class="c m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\bar{u}\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{u}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
@@ -478,7 +479,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <div class="para" id="def-saddlepoint-1-1">Suppose that the reduced payoff matrix had an entry <span class="process-math">\(a_{ij}\)</span> that is the largest value in it’s column and the smallest value in it’s row.</div> <div class="para" id="def-saddlepoint-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\bar{v}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{v}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_k\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_j\)</span></td>
@@ -486,7 +487,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <td class="c m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\bar{u}\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{u}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
@@ -547,7 +548,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 </div> <div class="para" id="sec-minmaxgames-6-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\bar{v}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{v}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_k\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_j\)</span></td>
@@ -555,7 +556,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <td class="c m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\bar{u}\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{u}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
@@ -652,7 +653,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-\bar{v}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-\ec{v}\)</span></td>
 </tr>
 <tr>
 <td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
@@ -668,7 +669,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=p_i\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_k\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=\bar{u} \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=\ec{u} \)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>

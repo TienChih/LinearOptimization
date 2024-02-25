@@ -152,7 +152,8 @@ true);
 </script></span><span class="treebuttons"><a class="previous-button button" href="sec-minmaxgames.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-noncanon.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-noncanon.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\c}{\mathbf c} 
-   \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q}
+   \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -256,15 +257,15 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-vonneumann-4-1">
-<div class="para" id="sec-vonneumann-4-1-1">We now prove a characterization theorem about the optimal solutions for both the row and column player.</div> <div class="para" id="sec-vonneumann-4-1-2">Suppose we have a payoff matrix <span class="process-math">\(A\)</span> where every entry is positive.  In other words, after each round Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Roawn’s strategy here is to take Colleen for as much money as he can and Colleen’s strategy is to minimize her losses.</div> <div class="para" id="sec-vonneumann-4-1-3">(We’ll ignore the obvious question of why Colleen would be willing to play this game.)</div>
+<div class="para" id="sec-vonneumann-4-1-1">We now prove a characterization theorem about the optimal solutions for both the row and column player.</div> <div class="para" id="sec-vonneumann-4-1-2">Suppose we have a payoff matrix <span class="process-math">\(A\)</span> where every entry is positive.  In other words, after each round Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Rowan’s strategy here is to take Colleen for as much money as he can and Colleen’s strategy is to minimize her losses.</div> <div class="para" id="sec-vonneumann-4-1-3">(We’ll ignore the obvious question of why Colleen would be willing to play this game.)</div>
 </div>
 <article class="task exercise-like" id="sec-vonneumann-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-vonneumann-4-2-1-1">Argue why optimal row and collumn outcomes <span class="process-math">\(\bar{u}, \bar{v} &gt; 0\text{.}\)</span>
+<div class="para" id="sec-vonneumann-4-2-1-1">Argue why optimal row and column outcomes <span class="process-math">\(\ec{u}, \ec{v} &gt; 0\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-vonneumann-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-vonneumann-4-3-1-1">Write out the primal maximization problem for the LP formulation of this game:</div> <div class="para" id="sec-vonneumann-4-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\bar{v}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{v}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
@@ -273,7 +274,7 @@ true);
 <td class="c m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\bar{u}\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{u}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
@@ -342,12 +343,12 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="sec-vonneumann-4-3-1-3">Write out the non-canonical primal problem including the objective function and constraint equalities and inequalities involving the <span class="process-math">\(q_i\)</span> and <span class="process-math">\(\bar{v}\)</span> where appropriate. (There should be no slack variables here.)</div></article><article class="task exercise-like" id="sec-vonneumann-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-vonneumann-4-4-1-1">Consider the inequality constraints in our formulation, divide each of these by <span class="process-math">\(\bar{v}\text{.}\)</span>  Let <span class="process-math">\(\tilde{q}_j:=\frac{q_j}{\bar{v}}\text{.}\)</span>  Can we rewrite our inequalities as linear combinations of <span class="process-math">\(\tilde{q}_{j}\)</span> is less than or equal to some cosntant?</div></article><article class="task exercise-like" id="sec-vonneumann-4-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-vonneumann-4-5-1-1">Consider the equality constraint after dividing by <span class="process-math">\(\bar{v}\text{,}\)</span> rewrite this equality in terms of <span class="process-math">\(\tilde{q}_j\)</span> without negatives.</div> <div class="para" id="sec-vonneumann-4-5-1-2">Remember, Colleen’s strategy is to minimize <span class="process-math">\(\bar{v}\)</span> which must be positive.  Can we rephrase this as maximizing or minimizing a linear function involving then <span class="process-math">\(\tilde{q}_j\text{?}\)</span>  What is this linear function and is it a maximization or minimization problem?  (Note that the solution to this problem likely isn’t the solution to the original problem, but both are optimized under the same conditions.)</div></article><article class="task exercise-like" id="sec-vonneumann-4-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+</table></div></div> <div class="para" id="sec-vonneumann-4-3-1-3">Write out the non-canonical primal problem including the objective function and constraint equalities and inequalities involving the <span class="process-math">\(q_i\)</span> and <span class="process-math">\(\ec{v}\)</span> where appropriate. (There should be no slack variables here.)</div></article><article class="task exercise-like" id="sec-vonneumann-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-vonneumann-4-4-1-1">Consider the inequality constraints in our formulation, divide each of these by <span class="process-math">\(\ec{v}\text{.}\)</span>  Let <span class="process-math">\(\tilde{q}_j:=\frac{q_j}{\ec{v}}\text{.}\)</span>  Can we rewrite our inequalities as linear combinations of <span class="process-math">\(\tilde{q}_{j}\)</span> is less than or equal to some cosntant?</div></article><article class="task exercise-like" id="sec-vonneumann-4-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-vonneumann-4-5-1-1">Consider the equality constraint after dividing by <span class="process-math">\(\ec{v}\text{,}\)</span> rewrite this equality in terms of <span class="process-math">\(\tilde{q}_j\)</span> without negatives.</div> <div class="para" id="sec-vonneumann-4-5-1-2">Remember, Colleen’s strategy is to minimize <span class="process-math">\(\ec{v}\)</span> which must be positive.  Can we rephrase this as maximizing or minimizing a linear function involving then <span class="process-math">\(\tilde{q}_j\text{?}\)</span>  What is this linear function and is it a maximization or minimization problem?  (Note that the solution to this problem likely isn’t the solution to the original problem, but both are optimized under the same conditions.)</div></article><article class="task exercise-like" id="sec-vonneumann-4-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="sec-vonneumann-4-6-1-1">Rewrite the new <em class="emphasis">canonical</em> linear programming problem with variables <span class="process-math">\(\tilde{q}_j\)</span> that optimizes Colleen’s stretegy.</div></article><article class="task exercise-like" id="sec-vonneumann-4-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="sec-vonneumann-4-7-1-1">Why is the feasible region for Colleen’s new problem non-empty but bounded?  What does the Extreme Value Theorem then say about this?</div></article><article class="task exercise-like" id="sec-vonneumann-4-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="sec-vonneumann-4-8-1-1">Repeat tasks (b)-(c) for Rowan’s strategy, where <span class="process-math">\(\tilde{p}_i = \frac{p_i}{\bar{u}}\text{.}\)</span>
+<div class="para" id="sec-vonneumann-4-8-1-1">Repeat tasks (b)-(c) for Rowan’s strategy, where <span class="process-math">\(\tilde{p}_i = \frac{p_i}{\ec{u}}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-vonneumann-4-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="sec-vonneumann-4-9-1-1">Compare Rowan and Colleen’s problems with the <span class="process-math">\(\tilde{p}_i, \tilde{q}_j\text{.}\)</span>  Show that these problems are dual problems to each other.  Which is the primal max and which is the dual min?</div></article><article class="task exercise-like" id="sec-vonneumann-4-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
 <div class="para" id="sec-vonneumann-4-10-1-1">What does the Strong Duality Theorem <a href="" class="xref" data-knowl="./knowl/xref/thm-strongduality.html" title="Theorem 5.2.6: The Strong Duality Theorem">Theorem 5.2.6</a> say about the optimal solutions to both problems?  What in turn, does that say about <span class="process-math">\(\tilde{u}, \tilde{v}\text{?}\)</span>
@@ -378,7 +379,7 @@ true);
 <div class="para" id="sec-vonneumann-6-4-1-1">What does this say about <a href="" class="xref" data-knowl="./knowl/xref/thm-vonneumann.html" title="Theorem 6.2.1: VonNeumann’s Minimax Theorem">Theorem 6.2.1</a>?</div></article></article><article class="activity project-like" id="sec-vonneumann-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-vonneumann-7-1"><div class="para" id="sec-vonneumann-7-1-1">In a simplified game of battleship played on a two <span class="process-math">\(2\times 3\)</span> board, Colleen selects two consecutive squares on the board to place her ship.  Roawn then picks one of six squares to fire at.  If he hits, he gets a point, otherwise Colleen gets a point.</div></div>
+<div class="introduction" id="sec-vonneumann-7-1"><div class="para" id="sec-vonneumann-7-1-1">In a simplified game of battleship played on a two <span class="process-math">\(2\times 3\)</span> board, Colleen selects two consecutive squares on the board to place her ship.  Rowan then picks one of six squares to fire at.  If he hits, he gets a point, otherwise Colleen gets a point.</div></div>
 <article class="task exercise-like" id="sec-vonneumann-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-vonneumann-7-2-1-1">Write out a payoff matrix for this game. (Why is it <span class="process-math">\(6\times 7\text{?}\)</span>)</div></article><article class="task exercise-like" id="sec-vonneumann-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-vonneumann-7-3-1-1">Find the optimal solution for Colleen using Sage:</div> <div class="para" id="sec-vonneumann-7-3-1-2">
