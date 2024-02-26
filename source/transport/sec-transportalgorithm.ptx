@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-transportalgorithm" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Transportation Algorithm</title>
+
+
+  <exploration>
+    <introduction>
+      <p>
+        Consider a transportation tableau:
+      </p>
+      <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell>
+                <m>\ec{5}^{20}</m>
+              </cell>
+              <cell right="medium">
+                <m>\ec{5}^{30}</m>
+              </cell>
+              <cell halign="left">
+                0
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>\ec{8}^{10}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>\enclose{box}{5}^{0}</m>
+              </cell>
+              <cell halign="left" bottom="medium">
+                0
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                0
+              </cell>
+              <cell right="medium">
+                0
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        
+      </p>
+      <p>
+        The box here denotes that the bottom right 5 isn't currently being used by probably should be.
+      </p>
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          It is clear that we should shift some of warehouse 2's shipments to market 2 to reduce costs.
+          Why isn't this a valid transportation tableau?
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell>
+                <m>\ec{5}^{20}</m>
+              </cell>
+              <cell right="medium">
+                <m>\ec{5}^{30}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>\ec{8}^{0}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>\enclose{box}{5}^{10}</m>
+              </cell>
+              <cell halign="left" >
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                
+              </cell>
+              <cell >
+                
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        
+      </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How should we adjust these values to have a valid tableau?
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell>
+                <m>\ec{5}^{?}</m>
+              </cell>
+              <cell right="medium">
+                <m>\ec{5}^{?}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>\ec{8}^{0}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>\enclose{box}{5}^{10}</m>
+              </cell>
+              <cell halign="left" >
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                
+              </cell>
+              <cell >
+                
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        
+      </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          How about this one?
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell>
+                <m>\ec{*}^{13}</m>
+              </cell>
+              <cell>
+                <m>\ec{*}^{15}</m>
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell right="medium">
+                ?
+              </cell>
+              <cell halign="left">
+                0
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>\ec{*}^{7}</m>
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell>
+                <m>\ec{*}^{12}</m>
+              </cell>
+              <cell right="medium">
+                ?
+              </cell>
+              <cell halign="left">
+                0
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell>
+                <m>\ec{*}^{5}</m>
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell right="medium">
+                <m>\enclose{box}{*}^0</m>
+              </cell>
+              <cell halign="left">
+                0
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell right="medium">
+                ?
+              </cell>
+              <cell halign="left">
+                0
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell bottom="medium">
+                ?
+              </cell>
+              <cell bottom="medium">
+                ?
+              </cell>
+              <cell bottom="medium">
+                <m>\ec{*}^9</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>\ec{*}^6 </m>
+              </cell>
+              <cell halign="left">
+                0
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                0
+              </cell>
+              <cell>
+                0
+              </cell>
+              <cell>
+                0
+              </cell>
+              <cell>
+                0
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+  </exploration>
+
+
+  <activity xml:id="activity-transportalgorithm">
+    <introduction>
+      <p>
+        Recall the transportation tableau obtained in <xref ref="activity-vamexample"/>:
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              1
+            </cell>
+            <cell bottom="medium">
+              1
+            </cell>
+            <cell bottom="medium">
+              5
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              1
+            </cell>
+            <cell>
+              <m>\enclose{circle}{2}^{20}</m>
+            </cell>
+            <cell>
+              1
+            </cell>
+            <cell right="medium">
+              <m>\enclose{circle}{2}^{20}</m>
+            </cell>
+            <cell halign="left">
+              0 
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              3
+            </cell>
+            <cell>
+              <m>\ec{9}^{10}</m>
+            </cell>
+            <cell>
+              <m>\enclose{circle}{4}^{50}</m>
+            </cell>
+            <cell right="medium">
+              7
+            </cell>
+            <cell halign="left">
+              0 
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              1
+            </cell>
+            <cell bottom="medium">
+              <m>\enclose{circle}{1}^{10}</m>
+            </cell>
+            <cell bottom="medium">
+              2
+            </cell>
+            <cell right="medium" bottom="medium">
+              9
+            </cell>
+            <cell halign="left" bottom="medium">
+              0 
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              0 
+            </cell>
+            <cell>
+              0 
+            </cell>
+            <cell right="medium">
+              0
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        Note that this tableau corresponds to a basic feasible solution for the original minimization problem.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          If this solution is not optimal, what should the next step be?
+        </p>
+        <ol  marker="A.">
+          <li>
+            <p>
+              Pick a variable to exit the basis which increases the objective function and make the smallest change.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pick a variable to exit the basis which decreases the objective function and make the smallest change.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pick a variable to exit the basis which increases the objective function and make the biggest change.
+            </p>
+          </li>
+          <li>
+            <p>
+              Pick a variable to exit the basis which decreases the objective function and make the biggest change.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Select column values <m>b_i</m> and row values <m>a_j</m> so that each circled value is the sum of row and column values <m>b_i+c_j</m>.
+        </p>
+        <p>
+          (We can think of these as analogous to the shadow costs associated with the warehouse/market bounds)
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>b_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_3</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_1</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_2</m>
+              </cell>
+              <cell>
+                <m>\ec{9}^{10}</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{4}^{50}</m>
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\enclose{circle}{1}^{10}</m>
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left">
+                 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell >
+                
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Replace each entry of the tableau <m>c_{ij}</m> with
+          <m>c_{ij}-a_i-b_j</m>.  What does this measure?  What does it mean if each entry is non-negative?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Pick a <m>c_{ij}\lt 0</m> 
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>b_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_3</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_1</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{0}^{20}</m>
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{0}^{20}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_2</m>
+              </cell>
+              <cell>
+                <m>\ec{0}^{10}</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{0}^{50}</m>
+              </cell>
+              <cell right="medium">
+                <m>\enclose{box}{-2}^{0}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\enclose{circle}{0}^{10}</m>
+              </cell>
+              <cell bottom="medium">
+                ?
+              </cell>
+              <cell right="medium" bottom="medium">
+                ?
+              </cell>
+              <cell halign="left">
+                 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell >
+                
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pick  circled entries <m>c_{k \ell}</m> so that they with the 
+          boxed <m>c_{ij}</m> form a <em>cycle</em>, that is each of these entries shares a row with exactly one another of the entries,
+          and a column with another of the entries.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Based on the discussion in (a), which entry should transfer their 
+          shipments to <m>c_{23}</m>?
+
+        </p>
+        <ol cols="2" markers="A.">
+          <li>
+            <p>
+              <m>c_{21}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c_{13}</m>
+            </p>
+          </li>
+        </ol>
+        <p>
+          How do the other entries in the cycle adjust?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Remove the basis entry which is no longer being used, and recompute the 
+          <m>a_i, b_j</m> with the new basis.
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>b_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_3</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_1</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{0}^{30}</m>
+              </cell>
+              <cell>
+                ?
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{0}^{10}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_2</m>
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{0}^{50}</m>
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{-2}^{10}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\enclose{circle}{0}^{10}</m>
+              </cell>
+              <cell bottom="medium">
+                ?
+              </cell>
+              <cell right="medium" bottom="medium">
+                ?
+              </cell>
+              <cell halign="left">
+                 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell >
+                
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Verify that none of the entries are non negative.  Why do we now terminate?
+        </p>
+        <p>
+          We then replace the entries with the original entries
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m></m>
+              </cell>
+              <cell bottom="medium">
+                <m></m>
+              </cell>
+              <cell bottom="medium">
+                <m></m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m></m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{2}^{30}</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}^{10}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m></m>
+              </cell>
+              <cell>
+                <m>9</m>
+              </cell>
+              <cell>
+                <m>\enclose{circle}{4}^{50}</m>
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{7}^{10}</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>\enclose{circle}{1}^{10}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>9</m>
+              </cell>
+              <cell halign="left">
+                 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell>
+                 
+              </cell>
+              <cell >
+                
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use Sage to confirm the solution:
+          <p>
+            <sage>
+              <input>
+                %display typeset
+                A = (FIXME)
+                b = (FIXME)
+                c = (FIXME)
+                P = InteractiveLPProblem(A, b, c,
+                 [FIXME], 
+                 constraint_type = "==",
+                 variable_type = ">=",
+                 problem_type = "min")
+                P
+              </input>         
+              </sage>
+              <sage>
+                <input>
+                  print(P.optimal_solution())
+                  print(P.optimal_value())
+                </input>         
+              </sage>
+        </p>
+        </p>
+      </statement>
+    </task>
+    
+  </activity>
+
+  <definition xml:id="def-transportationalg">
+    <statement>
+      <p>
+        To summarize, the transportation algorithm is as follows:
+      </p>
+      <ol>
+        <li>
+          <p>
+            We begin with a feasible transportation tableau, probably via VAM <xref ref="def-vam"/>.
+          </p>
+          <p>
+            We then associate with each row an unknown <m>a_i</m> and each column a <m>b_j</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            We (by convention) let <m>b_1=0</m> and select values <m>a_i, b_j</m> so that for each basis entry <m>c_{ij}</m>
+            we have that <m>c_{ij} = a_i+b_j</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace every entry <m>c_{ij}</m> with <m>c_{ij}-a_i-b_j</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If there is a negative entry <m>c_{k\ell}</m> box this entry and select basis entries so that they,
+            along with the boxed entry, form a cycle.
+          </p>
+          <p>
+            If each entry is non-negative, GOTO 6.
+          </p>
+        </li>
+        <li>
+          <p>
+            Shift shipments appropriately along the cycle so that <m>c_{k\ell}</m> has a positive shipping quantity, and
+            one of the selected basis entries has a zero shipping quantity.
+          </p>
+          <p>
+            Then GOTO 2.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace each cost entry with the costs from step 1 and terminate.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
+  
+
+  
+
+</section>
