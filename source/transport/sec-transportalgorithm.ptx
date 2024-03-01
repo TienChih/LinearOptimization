@@ -954,6 +954,453 @@
     </statement>
   </definition>
 
+  <subsection xml:id="subsec-unbalanced">
+    <title>Unbalnced Transportation Problems</title>
+
+    <activity xml:id="activity-unbalanced">
+      <introduction>
+        <p>
+          We now consider the case of <em>unbalanced</em> transportation problems,
+          where the demand and supply are unequal.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>
+            Suppose we had the following transportation problem:
+          </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  Market 1
+                </cell>
+                <cell bottom="medium">
+                  Market 2
+                </cell>
+                <cell bottom="medium">
+                  Market 3
+                </cell>
+                <cell>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 1
+                </cell>
+                <cell>
+                  <dollar />5/ton
+                </cell>
+                <cell>
+                  <dollar />3/ton
+                </cell>
+                <cell right="medium">
+                  <dollar />1/ton
+                </cell>
+                <cell halign="left">
+                  35 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 2
+                </cell>
+                <cell>
+                  <dollar />6/ton
+                </cell>
+                <cell>
+                  <dollar />2/ton
+                </cell>
+                <cell right="medium">
+                  <dollar />5/ton
+                </cell>
+                <cell halign="left">
+                  45 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 3
+                </cell>
+                <cell bottom="medium">
+                  <dollar />4/ton
+                </cell>
+                <cell bottom="medium">
+                  <dollar />2/ton
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <dollar />1/ton
+                </cell>
+                <cell halign="left" bottom="medium">
+                  15 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  30 tons
+                </cell>
+                <cell>
+                  20 tons
+                </cell>
+                <cell right="medium">
+                  40 tons
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            Suppose we satisfy all the demand in a way that minimizes costs.
+            What would be the remaining result?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose we <q>ship</q> the excess supply to a phatom market:
+          </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  Market 1
+                </cell>
+                <cell bottom="medium">
+                  Market 2
+                </cell>
+                <cell bottom="medium">
+                  Market 3
+                </cell>
+                <cell bottom="medium">
+                  <q>Market</q>
+                </cell>
+                <cell>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 1
+                </cell>
+                <cell>
+                  <dollar />5/ton
+                </cell>
+                <cell>
+                  <dollar />3/ton
+                </cell>
+                <cell >
+                  <dollar />1/ton
+                </cell>
+                <cell right="medium">
+                  ?
+                </cell>
+                <cell halign="left">
+                  35 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 2
+                </cell>
+                <cell>
+                  <dollar />6/ton
+                </cell>
+                <cell>
+                  <dollar />2/ton
+                </cell>
+                <cell >
+                  <dollar />5/ton
+                </cell>
+                <cell right="medium">
+                  ?
+                </cell>
+                <cell halign="left">
+                  45 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 3
+                </cell>
+                <cell bottom="medium">
+                  <dollar />4/ton
+                </cell>
+                <cell bottom="medium">
+                  <dollar />2/ton
+                </cell>
+                <cell bottom="medium">
+                  <dollar />1/ton
+                </cell>
+                <cell right="medium" bottom="medium">
+                  ?
+                </cell>
+                <cell halign="left" bottom="medium">
+                  15 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  30 tons
+                </cell>
+                <cell>
+                  20 tons
+                </cell>
+                <cell >
+                  40 tons
+                </cell>
+                <cell right="medium">
+                  ? 
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            How much is shipped to the <q>Market</q>?  How much does it cost
+            to <q>ship</q> from each warehouse to <q>Market</q>?
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Suppose we had the following transportation problem:
+          </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  Market 1
+                </cell>
+                <cell bottom="medium">
+                  Market 2
+                </cell>
+                <cell bottom="medium">
+                  Market 3
+                </cell>
+                <cell>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 1
+                </cell>
+                <cell>
+                  <dollar />5/ton
+                </cell>
+                <cell>
+                  <dollar />3/ton
+                </cell>
+                <cell right="medium">
+                  <dollar />1/ton
+                </cell>
+                <cell halign="left">
+                  35 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 2
+                </cell>
+                <cell>
+                  <dollar />6/ton
+                </cell>
+                <cell>
+                  <dollar />2/ton
+                </cell>
+                <cell right="medium">
+                  <dollar />5/ton
+                </cell>
+                <cell halign="left">
+                  45 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 3
+                </cell>
+                <cell bottom="medium">
+                  <dollar />4/ton
+                </cell>
+                <cell bottom="medium">
+                  <dollar />2/ton
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <dollar />1/ton
+                </cell>
+                <cell halign="left" bottom="medium">
+                  15 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  30 tons
+                </cell>
+                <cell>
+                  50 tons
+                </cell>
+                <cell right="medium">
+                  40 tons
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            Suppose we exhaust all the supply in a way that minimizes costs.
+            What would be the remaining result?
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Suppose we have a phantom <q>Warehouse</q> that <q>filled</q> the
+            outstanding demand.
+          </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  Market 1
+                </cell>
+                <cell bottom="medium">
+                  Market 2
+                </cell>
+                <cell bottom="medium">
+                  Market 3
+                </cell>
+                <cell>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 1
+                </cell>
+                <cell>
+                  <dollar />5/ton
+                </cell>
+                <cell>
+                  <dollar />3/ton
+                </cell>
+                <cell right="medium">
+                  <dollar />1/ton
+                </cell>
+                <cell halign="left">
+                  35 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 2
+                </cell>
+                <cell>
+                  <dollar />6/ton
+                </cell>
+                <cell>
+                  <dollar />2/ton
+                </cell>
+                <cell right="medium">
+                  <dollar />5/ton
+                </cell>
+                <cell halign="left">
+                  45 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  Warehouse 3
+                </cell>
+                <cell >
+                  <dollar />4/ton
+                </cell>
+                <cell >
+                  <dollar />2/ton
+                </cell>
+                <cell right="medium" >
+                  <dollar />1/ton
+                </cell>
+                <cell halign="left" >
+                  15 tons
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <q>Warehouse</q>
+                </cell>
+                <cell bottom="medium">
+                  ?
+                </cell>
+                <cell bottom="medium">
+                  ?
+                </cell>
+                <cell right="medium" bottom="medium">
+                  ?
+                </cell>
+                <cell halign="left" bottom="medium">
+                  ? 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  30 tons
+                </cell>
+                <cell>
+                  50 tons
+                </cell>
+                <cell right="medium">
+                  40 tons
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            How much additional <q>supply</q> is needed?  How much would it cost
+            to ship this <q>supply</q> from <q>Warehouse</q> to the markets?
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Describe a general procedure for solving unbalanced transportation problems.
+          </p>
+        </statement>
+      </task>
+      
+    </activity>
+    
+  </subsection>
+
   
 
   

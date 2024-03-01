@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-assignment" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Assignment Problem and Hungarian Algorithm</title>
+
+
+  <exploration xml:id="exploration-assignment">
+    <introduction>
+      <p>
+        Supose we have 3 jobs and 3 contractors, and we wish to assign jobs
+        to contractors at the minimum price.
+        How can we distribute the jobs amongst the contractors?  
+        (Costs are in thousands of dollars)
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              Job 1
+            </cell>
+            <cell bottom="medium">
+              Job 2
+            </cell>
+            <cell bottom="medium">
+              Job 3
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Contractor 1
+            </cell>
+            <cell>
+              10
+            </cell>
+            <cell>
+              9
+            </cell>
+            <cell right="medium">
+              12
+            </cell>
+            <cell halign="left">
+              ?
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Contractor 2
+            </cell>
+            <cell>
+              9
+            </cell>
+            <cell>
+              9
+            </cell>
+            <cell right="medium">
+              10
+            </cell>
+            <cell halign="left">
+              ?
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Contractor 3
+            </cell>
+            <cell bottom="medium">
+              10
+            </cell>
+            <cell bottom="medium">
+              7
+            </cell>
+            <cell right="medium" bottom="medium">
+              9
+            </cell>
+            <cell halign="left" bottom="medium">
+              ?
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell right="medium">
+              ?
+            </cell>
+            <cell halign="left">
+              ?
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What are the <q>supply</q> and <q>demand</q> of each
+          job and contractor?
+
+        
+      </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use VAM <xref ref="def-vam"/> and the Transportation Algorithm <xref ref="def-transportationalg"/>
+          to solve this problem. 
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Was this really necessary?
+        </p>
+      </statement>
+    </task>
+  </exploration>
+
+
+  <definition xml:id="def-assignmentproblem">
+    <statement>
+      <p>
+        An <em>assignment problem</em> is a transportation problem
+        where the supply and demands are all 1.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Note that in <xref ref="exploration-assignment"/>, while we
+    were able to solve this as a transportation problem, the restriction to
+    supplies and demands of 1 ought to yield a simpler way to find a solution.
+  </p>
+
+  <definition xml:id="def-permutation">
+    <statement>
+      <p>
+        Let <m>T</m> be a tableau for a balanced assignment problem.
+        A <em>permutation set of zeroes</em> is a subset of zero cells for <m>T</m>
+        so that each row and column contains exactly one zero cell.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        We explore some features of the assignment tableau that can help 
+        shed light on what an appropriate algorithm would look like.
+          
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell bottom="medium">
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{13}</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{23}</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{31}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{32}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{33}</m>  
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+         
+        </tabular>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          If we multiply each entry by <m>2</m>, would that change our optimal solution?
+          What about by <m>-1</m>?  What values <m>k</m> could I multiply the tableau
+          by to preserve the optimal solution?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If we add or subtract <m>2</m> from each entry, does it change the optimal solution?
+          What about <m>n</m>?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Suppose we had an optimal solution to the assignment problem.
+          Explain why adding <m>k</m> to each entry in a row does not
+          change the optimal solution.  
+        </p>
+      </statement>
+      <hint>
+        <p>
+          How would this compare to solving the original problem and
+          assing <m>k</m> to the cost?
+        </p>
+      </hint>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What would change if we did this to a different row?  A column?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Suppose I subtracted the smallest value in each row from every
+          entry of that row.  If there was a permutation set of zeroes, what would that entail?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose I subtracted the smallest value in each column from every
+          entry of that column.  If there was a permutation set of zeroes, what would that entail?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If we had a tableau with all rational values, how could I change this
+          to a tableau of all integer values with the same optimal solution?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If we had a tableau with all integer values, how could I change this
+          to a tableau of all non-negative integer values with the same optimal solution?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <definition xml:id="def-hungarian">
+    <statement>
+      <p>
+        We state here the steps of the <em>Hungarian Algorithm</em>.  We start with an 
+        assignment tableau <m>T</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            IF the entries of <m>T</m> are rational but not all integeral, <m>a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}>0 </m>: 
+          </p>
+          <p>
+            THEN multiply each entry of <m>T</m> by the
+            lowest common multiple of the denominators, 
+            <m>\displaystyle \underset{ i, j}{\lcm} q_{ij}</m>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            IF the entries of <m>T</m> are not all non-negative: 
+          </p>
+          <p>
+            THEN add to every entry of <m>T</m> the smallest value of <m>T</m>, 
+            <m>\displaystyle \min_{i,j}a_{ij}</m>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            Subtract from each row the smallest entry in that row.
+          </p>
+        </li>
+        <li>
+          <p>
+            Subtract from each column the smallest entry in that column.
+          </p>
+        </li>
+        <li>
+          <p>
+            IF <m>T</m> has a permutation set of zeroes:
+          </p>
+          <p>
+            STOP
+          </p>
+        </li>
+        <li>
+          <p>
+            Draw a <alert>minimum</alert><m>^*</m> number of lines through <m>T</m> covering
+            an entire row or column such that all <m>0</m>'s are covered.
+          </p>
+          <hint>
+            <p>
+              <m>* \Rightarrow</m><alert>minimum</alert><m>\Leftarrow</m>.
+            </p>
+          </hint>
+          
+        </li>
+        <li>
+          <p>
+            Subtract all uncovered entries by the smallest entry that is not covered.
+          </p>
+        </li>
+        <li>
+          <p>
+            GOTO 5.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
+  <activity>
+    <statement>
+      <p>
+        Use the Hungarian Algorithm <xref ref="def-hungarian"/> to solve
+        the problem from <xref ref="exploration-assignment"/>.
+      </p>
+    </statement>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        Suppose 4 students are picking 4 research topics.  The four topics
+        are to be distributed one each amongst the four students.
+        They rated the ropics on a scale of 1-10.
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              Topic 1
+            </cell>
+            <cell bottom="medium">
+              Topic 2
+            </cell>
+            <cell bottom="medium">
+              Topic 3
+            </cell>
+            <cell bottom="medium">
+              Topic 4
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Student 1
+            </cell>
+            <cell>
+              6
+            </cell>
+            <cell>
+              9
+            </cell>
+            <cell>
+              10
+            </cell>
+            <cell right="medium">
+              8
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Student 2
+            </cell>
+            <cell>
+              2
+            </cell>
+            <cell>
+              8
+            </cell>
+            <cell>
+              9
+            </cell>
+            <cell right="medium">
+              7
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Student 3
+            </cell>
+            <cell>
+              7
+            </cell>
+            <cell>
+              7
+            </cell>
+            <cell>
+              8
+            </cell>
+            <cell right="medium">
+              9
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              Student 4
+            </cell>
+            <cell bottom="medium">
+              6
+            </cell>
+            <cell bottom="medium">
+              8
+            </cell>
+            <cell bottom="medium">
+              9
+            </cell>
+            <cell right="medium" bottom="medium">
+              8
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        We want to maximize the total <q>enjoyment</q>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          This is a maximization problem, and the assignment problem is a minimization
+          problem, how might we convert it to a minimization problem?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          After converting, use the Hungarian Algorithm <xref ref="def-hungarian"/> to solve
+          the problem.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  
+
+  
+
+</section>
