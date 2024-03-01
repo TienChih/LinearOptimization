@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Simplex Algorithm for Canonical Minimization</title>
+<title>The Assignment Problem and Hungarian Algorithm</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -137,7 +137,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-cycling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\c}{\mathbf c} 
    \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
@@ -162,13 +162,13 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-convexity.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">3</span> <span class="title">The Simplex Algorithm</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Curious Situation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycling</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Using Sage</span></a></div></li>
 </ul>
@@ -196,202 +196,199 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">6.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">7</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">7.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Transportation Algorithm</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simplexmin"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">The Simplex Algorithm for Canonical Minimization</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-assignment"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.3</span><span class="space"> </span><span class="title">The Assignment Problem and Hungarian Algorithm</span>
 </h2>
-<article class="definition definition-like" id="def-negativetranspose"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+<article class="exploration project-like" id="exploration-assignment"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="def-negativetranspose-1-1">Recall that the canonical minimization problem:</div> <div class="para logical" id="def-negativetranspose-1-2">
-<div class="displaymath process-math" id="def-negativetranspose-1-2-1">
-\begin{align*}
-\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
-\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1\\
-a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2\\
-\vdots \amp   \vdots\\
-a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m\\
-x_1, x_2, \ldots, x_n\amp \geq  0
-\end{align*}
+<div class="introduction" id="exploration-assignment-1">
+<div class="para" id="exploration-assignment-1-1">Supose we have 3 jobs and 3 contractors, and we wish to assign jobs to contractors at the minimum price. How can we distribute the jobs amongst the contractors? (Costs are in thousands of dollars)</div> <div class="para" id="exploration-assignment-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">Job 1</td>
+<td class="c m b2 r0 l0 t0 lines">Job 2</td>
+<td class="c m b2 r0 l0 t0 lines">Job 3</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">Contractor 1</td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">?</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">Contractor 2</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">?</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">Contractor 3</td>
+<td class="c m b2 r0 l0 t0 lines">10</td>
+<td class="c m b2 r0 l0 t0 lines">7</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">?</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">?</td>
+<td class="c m b0 r0 l0 t0 lines">?</td>
+<td class="c m b0 r2 l0 t0 lines">?</td>
+<td class="l m b0 r0 l0 t0 lines">?</td>
+</tr>
+</table></div></div>
 </div>
-<div class="para">Where <span class="process-math">\(a_{i,j}, b_i, c_j, d\in \mathbb{R}\text{.}\)</span>
-</div>
-</div> <div class="para" id="def-negativetranspose-1-3">This problem may be recorded in the following tableau:</div> <div class="para" id="def-negativetranspose-1-4"><div class="tabular-box natural-width"><table class="tabular">
+<article class="task exercise-like" id="exploration-assignment-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-assignment-2-1-1">What are the “supply” and “demand” of each job and contractor?</div></article><article class="task exercise-like" id="exploration-assignment-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-assignment-3-1-1">Use VAM <a href="" class="xref" data-knowl="./knowl/xref/def-vam.html" title="Definition 7.1.2">Definition 7.1.2</a> and the Transportation Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" title="Definition 7.2.1">Definition 7.2.1</a> to solve this problem.</div></article><article class="task exercise-like" id="exploration-assignment-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-assignment-4-1-1">Was this really necessary?</div></article></article><article class="definition definition-like" id="def-assignmentproblem"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-assignmentproblem-1-1">An <em class="emphasis">assignment problem</em> is a transportation problem where the supply and demands are all 1.</div></article><div class="para" id="sec-assignment-4">Note that in <a href="" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" title="Exploration 7.3.1">Exploration 7.3.1</a>, while we were able to solve this as a transportation problem, the restriction to supplies and demands of 1 ought to yield a simpler way to find a solution.</div>
+<article class="definition definition-like" id="def-permutation"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-permutation-1-1">Let <span class="process-math">\(T\)</span> be a tableau for a balanced assignment problem. A <em class="emphasis">permutation set of zeroes</em> is a subset of zero cells for <span class="process-math">\(T\)</span> so that each row and column contains exactly one zero cell.</div></article><article class="activity project-like" id="sec-assignment-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-assignment-6-1">
+<div class="para" id="sec-assignment-6-1-1">We explore some features of the assignment tableau that can help shed light on what an appropriate algorithm would look like.</div> <div class="para" id="sec-assignment-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{13}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{23}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{33}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_n\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_n\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_m\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
-</tr>
+</table></div></div>
+</div>
+<article class="task exercise-like" id="sec-assignment-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-6-2-1-1">If we multiply each entry by <span class="process-math">\(2\text{,}\)</span> would that change our optimal solution? What about by <span class="process-math">\(-1\text{?}\)</span>  What values <span class="process-math">\(k\)</span> could I multiply the tableau by to preserve the optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-assignment-6-3-1-1">If we add or subtract <span class="process-math">\(2\)</span> from each entry, does it change the optimal solution? What about <span class="process-math">\(n\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-assignment-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-assignment-6-4-1-1">Suppose we had an optimal solution to the assignment problem. Explain why adding <span class="process-math">\(k\)</span> to each entry in a row does not change the optimal solution.</div>
+<div class="solutions"><details id="sec-assignment-6-4-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="sec-assignment-6-4-2-1">How would this compare to solving the original problem and assing <span class="process-math">\(k\)</span> to the cost?</div></div></details></div></article><article class="task exercise-like" id="sec-assignment-6-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-assignment-6-5-1-1">What would change if we did this to a different row?  A column?</div></article><article class="task exercise-like" id="sec-assignment-6-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-assignment-6-6-1-1">Suppose I subtracted the smallest value in each row from every entry of that row.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-6-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-assignment-6-7-1-1">Suppose I subtracted the smallest value in each column from every entry of that column.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-6-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="sec-assignment-6-8-1-1">If we had a tableau with all rational values, how could I change this to a tableau of all integer values with the same optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-6-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="sec-assignment-6-9-1-1">If we had a tableau with all integer values, how could I change this to a tableau of all non-negative integer values with the same optimal solution?</div></article></article><article class="definition definition-like" id="def-hungarian"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-hungarian-1-1">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an assignment tableau <span class="process-math">\(T\text{.}\)</span>
+</div> <ol class="decimal">
+<li id="def-hungarian-1-2-1">
+<div class="para" id="def-hungarian-1-2-1-1">IF the entries of <span class="process-math">\(T\)</span> are rational but not all integeral, <span class="process-math">\(a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}&gt;0 \text{:}\)</span>
+</div>
+<div class="para" id="def-hungarian-1-2-1-2">THEN multiply each entry of <span class="process-math">\(T\)</span> by the lowest common multiple of the denominators, <span class="process-math">\(\displaystyle \underset{ i, j}{\lcm} q_{ij}\text{.}\)</span>
+</div>
+</li>
+<li id="def-hungarian-1-2-2">
+<div class="para" id="def-hungarian-1-2-2-1">IF the entries of <span class="process-math">\(T\)</span> are not all non-negative:</div>
+<div class="para" id="def-hungarian-1-2-2-2">THEN add to every entry of <span class="process-math">\(T\)</span> the smallest value of <span class="process-math">\(T\text{,}\)</span> <span class="process-math">\(\displaystyle \min_{i,j}a_{ij}\text{.}\)</span>
+</div>
+</li>
+<li id="def-hungarian-1-2-3"><div class="para" id="def-hungarian-1-2-3-1">Subtract from each row the smallest entry in that row.</div></li>
+<li id="def-hungarian-1-2-4"><div class="para" id="def-hungarian-1-2-4-1">Subtract from each column the smallest entry in that column.</div></li>
+<li id="def-hungarian-1-2-5">
+<div class="para" id="def-hungarian-1-2-5-1">IF <span class="process-math">\(T\)</span> has a permutation set of zeroes:</div>
+<div class="para" id="def-hungarian-1-2-5-2">STOP</div>
+</li>
+<li id="def-hungarian-1-2-6">
+<div class="para" id="def-hungarian-1-2-6-1">Draw a <em class="alert">minimum</em><span class="process-math">\(^*\)</span> number of lines through <span class="process-math">\(T\)</span> covering an entire row or column such that all <span class="process-math">\(0\)</span>’s are covered.</div>
+<details id="def-hungarian-1-2-6-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="def-hungarian-1-2-6-2-1">
+<span class="process-math">\(* \Rightarrow\)</span><em class="alert">minimum</em><span class="process-math">\(\Leftarrow\text{.}\)</span>
+</div></div></details>
+</li>
+<li id="def-hungarian-1-2-7"><div class="para" id="def-hungarian-1-2-7-1">Subtract all uncovered entries by the smallest entry that is not covered.</div></li>
+<li id="def-hungarian-1-2-8"><div class="para" id="def-hungarian-1-2-8-1">GOTO 5.</div></li>
+</ol></article><article class="activity project-like" id="sec-assignment-8"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-assignment-8-1-1">Use the Hungarian Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-hungarian.html" title="Definition 7.3.3">Definition 7.3.3</a> to solve the problem from <a href="" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" title="Exploration 7.3.1">Exploration 7.3.1</a>.</div></article><article class="activity project-like" id="sec-assignment-9"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-assignment-9-1">
+<div class="para" id="sec-assignment-9-1-1">Suppose 4 students are picking 4 research topics.  The four topics are to be distributed one each amongst the four students. They rated the ropics on a scale of 1-10.</div> <div class="para" id="sec-assignment-9-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_m\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
-</tr>
-</table></div></div> <div class="para" id="def-negativetranspose-1-5">The <em class="emphasis">negative transpose</em> of this tableau is:</div> <div class="para" id="def-negativetranspose-1-6"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_n\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">Topic 1</td>
+<td class="c m b2 r0 l0 t0 lines">Topic 2</td>
+<td class="c m b2 r0 l0 t0 lines">Topic 3</td>
+<td class="c m b2 r0 l0 t0 lines">Topic 4</td>
 </tr>
 <tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{11}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{21}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-a_{n1}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-b_1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+<td class="r m b0 r2 l0 t0 lines">Student 1</td>
+<td class="c m b0 r0 l0 t0 lines">6</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
 </tr>
 <tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{12}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{22}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-a_{n2}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-b_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+<td class="r m b0 r2 l0 t0 lines">Student 2</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
 </tr>
 <tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="r m b0 r2 l0 t0 lines">Student 3</td>
+<td class="c m b0 r0 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">7</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
 </tr>
 <tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-a_{1m}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-a_{2m}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-a_{nm}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-b_n\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_n\)</span></td>
+<td class="r m b0 r2 l0 t0 lines">Student 4</td>
+<td class="c m b2 r0 l0 t0 lines">6</td>
+<td class="c m b2 r0 l0 t0 lines">8</td>
+<td class="c m b2 r0 l0 t0 lines">9</td>
+<td class="c m b2 r2 l0 t0 lines">8</td>
 </tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-c_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-c_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-c_m\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-d\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="activity project-like" id="sec-simplexmin-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-simplexmin-3-1-1">Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.</div></article><div class="para" id="sec-simplexmin-4">This allows us to define a minimization algorithm.</div>
-<article class="definition definition-like" id="def-simplexmin"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h3>
-<div class="para" id="def-simplexmin-1-1">The Simplex Algorithm for Minimization Tableaus</div> <ol class="decimal">
-<li id="def-simplexmin-1-2-1"><div class="para" id="p-derived-def-simplexmin-1-2-1">TAKE the Negative Transpose.</div></li>
-<li id="def-simplexmin-1-2-2"><div class="para" id="p-derived-def-simplexmin-1-2-2">APPLY <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" title="Definition 3.3.2">Definition 3.3.2</a> .</div></li>
-</ol></article><article class="activity project-like" id="sec-simplexmin-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-simplexmin-6-1-1">Apply <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmin.html" title="Definition 3.4.2">Definition 3.4.2</a> to the following minimization tableau:</div> <div class="para" id="sec-simplexmin-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(20\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(25\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(300\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(40\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(500\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1000\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(800\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article></section></div>
+</table></div></div> <div class="para" id="sec-assignment-9-1-3">We want to maximize the total “enjoyment”.</div>
+</div>
+<article class="task exercise-like" id="sec-assignment-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-9-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article><article class="task exercise-like" id="sec-assignment-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-assignment-9-3-1-1">After converting, use the Hungarian Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-hungarian.html" title="Definition 7.3.3">Definition 7.3.3</a> to solve the problem.</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-cycling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
