@@ -486,23 +486,36 @@
     <task>
       <statement>
         <p>
+          If <m>\x, \y</m> are feasible, if <m>x_j\neq 0</m>, what does that
+          say about <m>s_j</m>?
+        </p>
+        <p>
+          What about <m>s_j\neq 0</m>?, <m>y_i\neq0</m>? <m>t_i\neq0</m>?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
           If <m>\x_*, \y_*</m> are feasible optimal solutions with slack variables <m>\t_*, \s_*</m>, what must be true about <m>\x_*^\top\s_* + \y_*^\top\t_*</m>?
         </p>
       
       </statement>
-      <hint>  
-          <p>
-            Variables <m>\x, \y, \s, \t</m> are said to exhibit <em>complementary slackness</em> if 
-            <m>x_j\neq 0\implies s_j=0, s_j\neq 0\implies x_j=0, y_i\neq 0\implies t_i=0, t_i\neq 0\implies y_i=0,</m>
-          </p>
-      </hint>
+      
     </task>
-
-    
-    
-    
     
   </activity>
+
+  <definition xml:id="def-complementaryslackness">
+    <statement>
+      <p>
+        Variables <m>\x, \y, \s, \t</m> are said to exhibit <em>complementary slackness</em> if 
+          <m>\s^\top\x=0, \y^\top\t=0</m>.
+          
+      </p>
+    </statement>
+  </definition>
 
   <problem xml:id="problem-duality">
     <task>
