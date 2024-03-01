@@ -695,21 +695,14 @@
         <sage>
           <input>
             %display typeset
-            A = (FIXME)
-            b = (FIXME)
-            c = (FIXME)
-            P = InteractiveLPProblem(A, b, c,
-             [FIXME], 
-             constraint_type = [FIXME],
-             variable_type = "",
-             problem_type = FIXME)
-            P
+            D = P.dual()
+            D
           </input>         
           </sage>
           <sage>
             <input>
-              print(P.optimal_solution())
-              print(P.optimal_value())
+              print(D.optimal_solution())
+              print(D.optimal_value())
             </input>         
           </sage>
       </statement>
