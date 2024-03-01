@@ -362,11 +362,16 @@ A\mathbf{x}\leq b, \mathbf{x}\geq 0.
 <article class="task exercise-like" id="sec-section-dualitytheory-17-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-section-dualitytheory-17-2-1-1">Prove that <span class="process-math">\(g-f = \s^\top\x + \y^\top\t\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-section-dualitytheory-17-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-section-dualitytheory-17-3-1-1">If <span class="process-math">\(\x_*, \y_*\)</span> are feasible optimal solutions with slack variables <span class="process-math">\(\t_*, \s_*\text{,}\)</span> what must be true about <span class="process-math">\(\x_*^\top\s_* + \y_*^\top\t_*\text{?}\)</span>
-</div>
-<div class="solutions"><details id="sec-section-dualitytheory-17-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="sec-section-dualitytheory-17-3-2-1">Variables <span class="process-math">\(\x, \y, \s, \t\)</span> are said to exhibit <em class="emphasis">complementary slackness</em> if <span class="process-math">\(x_j\neq 0\implies s_j=0, s_j\neq 0\implies x_j=0, y_i\neq 0\implies t_i=0, t_i\neq 0\implies y_i=0,\)</span>
-</div></div></details></div></article></article><article class="problem example-like" id="problem-duality"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.7</span><span class="period">.</span>
+<div class="para" id="sec-section-dualitytheory-17-3-1-1">If <span class="process-math">\(\x, \y\)</span> are feasible, if <span class="process-math">\(x_j\neq 0\text{,}\)</span> what does that say about <span class="process-math">\(s_j\text{?}\)</span>
+</div> <div class="para" id="sec-section-dualitytheory-17-3-1-2">What about <span class="process-math">\(s_j\neq 0\text{?,}\)</span> <span class="process-math">\(y_i\neq0\text{?}\)</span> <span class="process-math">\(t_i\neq0\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-section-dualitytheory-17-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-section-dualitytheory-17-4-1-1">If <span class="process-math">\(\x_*, \y_*\)</span> are feasible optimal solutions with slack variables <span class="process-math">\(\t_*, \s_*\text{,}\)</span> what must be true about <span class="process-math">\(\x_*^\top\s_* + \y_*^\top\t_*\text{?}\)</span>
+</div></article></article><article class="definition definition-like" id="def-complementaryslackness"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-complementaryslackness-1-1">Variables <span class="process-math">\(\x, \y, \s, \t\)</span> are said to exhibit <em class="emphasis">complementary slackness</em> if <span class="process-math">\(\s^\top\x=0, \y^\top\t=0\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-duality"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.8</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="problem-duality-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="problem-duality-1-1-1">Prove that if the primal program is infeasible, and the dual program is feasible, then the dual program is unbounded below.  (Use <a href="" class="xref" data-knowl="./knowl/xref/cor-farkasv2.html" title="Corollary 5.2.5: The Farkas Lemma v2">Corollary 5.2.5</a>.)</div></article><article class="task exercise-like" id="problem-duality-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
