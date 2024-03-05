@@ -128,16 +128,33 @@
         <me>\begin{bmatrix}3\\1 \end{bmatrix}, \begin{bmatrix}1\\1 \end{bmatrix}, \begin{bmatrix}-1\\0 \end{bmatrix}, \begin{bmatrix}0\\-1 \end{bmatrix} </me>
         which can be depicted as *FIX TIKZ*
           
-        <!--<figure>
-          <caption>The Feasible Region of the Witch Problem</caption>
-            <image xml:id="witch-feasible" width="100%">
-                <description>The Feasible Region of the Witch Problem</description>
-                <latex-image>  
-                  
-                </latex-image>
-            </image>
-        </figure>-->
-      </p> 
+        
+      </p>
+      <image xml:id="sample-latex">
+        <description>Sample LaTeX.</description>
+        <latex-image>
+          \begin{tikzpicture}
+          \draw[step=1cm,gray!50,very thin] (-0.5,-0.5) grid (15,15);
+          \draw[fill, blue, opacity=0.4] (0,0) -- (0,14) -- (10,4) -- (34/3,0) -- (0,0);
+          \draw[very thick,->] (-0.5,0) -- (15,0);
+          \draw[very thick,->] (0,-0.5) -- (0,15);
+          \foreach \x in {0,5,...,15}\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\tiny $\mathbf{\x}$};
+          \foreach \y in {0,5,...,15}\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\tiny $\mathbf{\y}$};
+          \draw[black, thick] (0,0) -- (0,14) -- (10,4) -- (34/3,0) -- (0,0);
+          \draw[red, dashed, thick] (14,0) --node[above right]{$x+y=14$} (0,14);
+          \draw[teal, dashed, thick] (19/3,15) --node[above right]{$3x+y=34$} (34/3,0);
+          \draw[ fill] (0,0) node[below left]{\Large$(0,0)$} circle (2pt); 
+          \draw[ fill] (0,14) node[above left]{\Large$(0,14)$} circle (2pt); 
+          \draw[ fill] (34/3,0) node[below right]{\Large$(34/3,0)$} circle (2pt); 
+          \draw[ fill] (10,4) node[above right]{\Large$(10,4)$} circle (2pt); 
+          \draw[red, ->, ultra thick] (5,9) -- (5+0.707106781187, 9+0.707106781187);
+          \draw[teal, ->, ultra thick] (32/3,2) -- (32/3+3*0.316227766017,2+0.316227766017);
+          \draw[->, ultra thick] (17/3, 0 ) -- (17/3, -1);
+          \draw[->, ultra thick] (0,7) -- (-1,7);
+          \end{tikzpicture}
+
+          </latex-image>
+      </image> 
     </introduction>
     <task>
       <statement>
