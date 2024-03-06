@@ -19,6 +19,7 @@
     <xi:include href="duality/ch-main.ptx" />
     <xi:include href="games/ch-main.ptx" />
     <xi:include href="transport/ch-main.ptx" />
+    <xi:include href="flow/ch-main.ptx" />
 
 
     <!-- Include backmatter -->

@@ -262,7 +262,7 @@
         </li>
         <li>
           <p>
-            There is a <m>\mathbf{y}\in \R^n</m> such that <m>\y^\top \b \lt 0</m> and <m>\y^\top A \geq \mathbf{0}</m>.
+            There is a <m>\mathbf{y}\in \R^n</m> such that <m>\y^\top \vb\lt 0</m> and <m>\y^\top A \geq \mathbf{0}</m>.
           </p>
         </li>
       </ol>
@@ -310,8 +310,8 @@
     <task>
       <statement>
         <p>
-          Let's   denote the normal vector of the seperating hyperplane by <m>\y</m> (interesting choice &#128064;) so that <m>\y^\top \b \lt \y^\top p</m> for any <m>p\in P</m>.
-          Why must <m>\y^\top \b\lt 0</m>?
+          Let's   denote the normal vector of the seperating hyperplane by <m>\y</m> (interesting choice &#128064;) so that <m>\y^\top \vb\lt \y^\top p</m> for any <m>p\in P</m>.
+          Why must <m>\y^\top \vb \lt 0</m>?
         </p>
       </statement>
     </task>
@@ -319,7 +319,7 @@
       <statement>
         <p>
           Suppose <m>A</m> had a column <m>A_j</m> such that <m>\y^\top A_j\lt 0</m>, show that there is an <m>\alpha>0</m>
-          such that <m>y^\top (\alpha A_j)\lt \y^\top \b</m>.  Why is this a contradiction?
+          such that <m>y^\top (\alpha A_j)\lt \y^\top \vb </m>.  Why is this a contradiction?
         </p>
       </statement>
     </task>
@@ -333,21 +333,21 @@
     <task>
       <statement>
         <p>
-          Now that <xref ref="thm-farkas"/> is proven, we apply it to <m>\begin{bmatrix} A \amp I_n \end{bmatrix}  </m> and <m> \b</m>.
+          Now that <xref ref="thm-farkas"/> is proven, we apply it to <m>\begin{bmatrix} A \amp I_n \end{bmatrix}  </m> and <m> \vb </m>.
         </p>
         <p>
-          Suppose (A) held, and we had that there was a <m>\begin{bmatrix} \x \\ \t \end{bmatrix} \geq 0</m> so that
-          <m>\begin{bmatrix} A \amp I_n \end{bmatrix} \begin{bmatrix} \x \\ \t \end{bmatrix} = \b</m>.  How would <m>A\x</m> compare to <m>\b</m>?
+          Suppose (A) held, and we had that there was a <m>\begin{bmatrix} \x \\ \vt\end{bmatrix} \geq 0</m> so that
+          <m>\begin{bmatrix} A \amp I_n \end{bmatrix} \begin{bmatrix} \x \\ \vt\end{bmatrix} = \vb </m>.  How would <m>A\x</m> compare to <m>\vb </m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Suppose (A) failed.  Then there is a <m>\y\in \R^n</m> satisfing (B) for <m>\begin{bmatrix} A \amp I_n \end{bmatrix}, \b</m>.
+          Suppose (A) failed.  Then there is a <m>\y\in \R^n</m> satisfing (B) for <m>\begin{bmatrix} A \amp I_n \end{bmatrix}, \vb </m>.
         </p>
         <p>
-            What can we say about <m>\y^\top A, \y^\top \b</m> and <m>\y</m> compared to <m>\mathbf{0}, 0</m>?
+            What can we say about <m>\y^\top A, \y^\top \vb </m> and <m>\y</m> compared to <m>\mathbf{0}, 0</m>?
         </p>
       </statement>
     </task>
@@ -370,12 +370,12 @@
         </li>
         <li>
           <p>
-            There is a <m>\mathbf{y}\in \R^n</m> such that <m>\y\geq 0, \y^\top \b \lt 0</m> and <m>\y^\top A \geq \mathbf{0}</m>.
+            There is a <m>\mathbf{y}\in \R^n</m> such that <m>\y\geq 0, \y^\top \vb\lt 0</m> and <m>\y^\top A \geq \mathbf{0}</m>.
           </p>
         </li>
       </ol>
       <p>
-        Without loss of generality, we may let <m>\y^\top \b=-1</m> in case (B).
+        Without loss of generality, we may let <m>\y^\top \vb=-1</m> in case (B).
       </p>
     </statement>
   </corollary>
@@ -410,10 +410,10 @@
     <task>
       <statement>
         <p>
-          Without loss of generality, let <m>d=0</m> and let <m>g^* = (\y^*)^\top \b</m>.
+          Without loss of generality, let <m>d=0</m> and let <m>g^* = (\y^*)^\top \vb </m>.
         </p>
         <p>
-          Consider the matrices <m>M = \begin{bmatrix} -\c^\top \\ A\end{bmatrix}, \mathbf{d} = \begin{bmatrix} -g^* \\ \b\end{bmatrix}</m>. Apply
+          Consider the matrices <m>M = \begin{bmatrix} -\vc^\top \\ A\end{bmatrix}, \mathbf{d} = \begin{bmatrix} -g^* \\ \vb \end{bmatrix}</m>. Apply
           <xref ref="cor-farkasv2"/> to <m>M, \mathbf{d}</m>.  What does it mean for (A) to hold?
         </p>
       </statement>
@@ -421,8 +421,8 @@
     <task>
       <statement>
         <p>
-          If <xref ref="cor-farkasv2"/> (A) holds for <m>M, \mathbf{d}</m>, then it holds for the pair <m>-\c^\top, \begin{bmatrix} -g^*\end{bmatrix} </m>, 
-          as well as the pair <m>A, \b</m> for the same <m>\x\in \R^m</m>.  Why does this show that a feasible optimal solution <m>\x^*</m> exists and that <m>f(\x^*)=g(\y^*)</m>?
+          If <xref ref="cor-farkasv2"/> (A) holds for <m>M, \mathbf{d}</m>, then it holds for the pair <m>-\vc^\top, \begin{bmatrix} -g^*\end{bmatrix} </m>, 
+          as well as the pair <m>A, \vb </m> for the same <m>\x\in \R^m</m>.  Why does this show that a feasible optimal solution <m>\x^*</m> exists and that <m>f(\x^*)=g(\y^*)</m>?
 
         </p>
       </statement>
@@ -443,7 +443,7 @@
         <p>
           Let <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}</m> denote the vector produced by 
           <xref ref="cor-farkasv2"/> (B). Suppose <m>y_0=0</m>.  How would <m>(\y^*+\y)^\top A</m> compare to <m>(\y^*)^\top A</m>
-          and <m>(\y^*+\y)^\top \b</m> compare to <m>(\y^*)^\top \b</m>?  Why is this a contradiction?
+          and <m>(\y^*+\y)^\top \vb </m> compare to <m>(\y^*)^\top \vb </m>?  Why is this a contradiction?
         </p>
       </statement>
     </task>
@@ -453,14 +453,14 @@
           Suppose <m>y_0>0</m>.  Let <m>\y' := \frac{\y}{y_0}</m>.
         </p>
         <p>
-          Show that since <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}M\geq 0</m> that <m>(\y')^\top A \geq \c^\top</m>.
+          Show that since <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}M\geq 0</m> that <m>(\y')^\top A \geq \vc^\top</m>.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Show that since <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}\mathbf{d} = -1</m> that <m>(\y')^\top \b = g^*-\frac{1}{y_0}</m>.
+          Show that since <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}\mathbf{d} = -1</m> that <m>(\y')^\top \vb= g^*-\frac{1}{y_0}</m>.
         </p>
       </statement>
     </task>
@@ -478,7 +478,7 @@
     <task>
       <statement>
         <p>
-          Prove that <m>g-f = \s^\top\x + \y^\top\t</m>.
+          Prove that <m>g-f = \vs^\top\x + \y^\top\vt </m>.
         </p>
       </statement>
     </task>
@@ -498,7 +498,7 @@
     <task>
       <statement>
         <p>
-          If <m>\x_*, \y_*</m> are feasible optimal solutions with slack variables <m>\t_*, \s_*</m>, what must be true about <m>\x_*^\top\s_* + \y_*^\top\t_*</m>?
+          If <m>\x_*, \y_*</m> are feasible optimal solutions with slack variables <m>\vt_*, \vs_*</m>, what must be true about <m>\x_*^\top\vs_* + \y_*^\top\vt_*</m>?
         </p>
       
       </statement>
@@ -510,8 +510,8 @@
   <definition xml:id="def-complementaryslackness">
     <statement>
       <p>
-        Variables <m>\x, \y, \s, \t</m> are said to exhibit <em>complementary slackness</em> if 
-          <m>\s^\top\x=0, \y^\top\t=0</m>.
+        Variables <m>\x, \y, \vs, \vt </m> are said to exhibit <em>complementary slackness</em> if 
+          <m>\vs^\top\x=0, \y^\top\vt=0</m>.
           
       </p>
     </statement>

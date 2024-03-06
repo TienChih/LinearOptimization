@@ -63,7 +63,7 @@
             <mrow>\textbf{Minimize: }  f(\mathbf{x}) = -5x+y-2z</mrow>
             <mrow>\textbf{Subject to: }  2x+z\amp = 0</mrow>
             <mrow> x-y\amp \geq 1</mrow>
-            <mrow> 3x-y+z\amp \ leq  3</mrow>
+            <mrow> 3x-y+z\amp \leq  3</mrow>
           </md>
         </p>
       </p>

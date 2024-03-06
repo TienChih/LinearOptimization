@@ -8,13 +8,18 @@
   <exploration xml:id="exploration-witch">
     <introduction>
       <p>
-        A witch is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes
+        A witch named Agnesi<m>^*</m> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes
         1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.
       </p>
       <p>
-        Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  She wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts 
+        Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts 
         of elixers and potions.
       </p>
+      <hint>
+        <p>
+          The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi's iconic curve.
+        </p>
+      </hint>
       
       
     </introduction>
@@ -34,7 +39,7 @@
     <task>
       <statement>
         <p>
-         *WITCH NAME* is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her.
+         Agnesi is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her.
          Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?
         </p>
       </statement>
@@ -130,8 +135,8 @@
           
         
       </p>
-      <image xml:id="sample-latex">
-        <description>Sample LaTeX.</description>
+      <image xml:id="witch">
+        <description>The feasible region for the witch production problem, and depicted normal vectors.</description>
         <latex-image>
           \begin{tikzpicture}
           \draw[step=1cm,gray!50,very thin] (-0.5,-0.5) grid (15,15);

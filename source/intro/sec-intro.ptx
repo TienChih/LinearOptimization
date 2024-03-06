@@ -12,7 +12,7 @@
         Let <me>A=\begin{bmatrix}1 &amp; a_2 &amp; a_3 &amp; \cdots &amp; a_n \end{bmatrix}.</me>
       </p>
       <p>
-        What is <m>\dim(\null(A))</m>?
+        What is <m>\dim(\operatorname{null}(A))</m>?
       </p>
     </statement>
     
