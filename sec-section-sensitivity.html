@@ -138,9 +138,11 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "disableAutoScale": false},
 true);
 </script></span><span class="treebuttons"><a class="previous-button button" href="ch-duality.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-duality.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-section-dualitytheory.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
-   \DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
-   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\c}{\mathbf c} 
-   \newcommand{\b}{\mathbf b} \newcommand{\s}{\mathbf s} \newcommand{\t}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   
+   \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
+    \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
+    \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
    \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -190,7 +192,7 @@ true);
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">6</span> <span class="title">Zero-Sum Games</span></a></div>
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">6</span> <span class="title">Zero-Sum Games</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Min-Max Games</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">6.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
@@ -207,6 +209,10 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">8</span> <span class="title">Network Flows</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-maximumflow.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Directed Graphs and Maximum Flow</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-section-sensitivity"><h2 class="heading hide-type">
@@ -217,12 +223,12 @@ true);
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="exploration-witch-1">
-<div class="para" id="exploration-witch-1-1">A witch is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.</div> <div class="para" id="exploration-witch-1-2">Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  She wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.</div>
+<div class="para" id="exploration-witch-1-1">A witch named Agnesi<span class="process-math">\(^*\)</span> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.</div> <div class="para" id="exploration-witch-1-2">Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.</div> <details id="exploration-witch-1-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="exploration-witch-1-3-1">The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi’s iconic curve.</div></div></details>
 </div>
 <article class="task exercise-like" id="exploration-witch-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="exploration-witch-2-1-1">Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.</div>
 <div class="solutions"><details id="exploration-witch-2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="exploration-witch-2-2-1"><iframe src="https://www.desmos.com/calculator/ktuonhl1nh" id="exploration-witch-2-2-1-1" width="600" height="600"></iframe></div></div></details></div></article><article class="task exercise-like" id="exploration-witch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="exploration-witch-3-1-1">*WITCH NAME* is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?</div></article><article class="task exercise-like" id="exploration-witch-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-witch-3-1-1">Agnesi is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?</div></article><article class="task exercise-like" id="exploration-witch-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="exploration-witch-4-1-1">Recompute this linear program with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs.  Which provides the greater increase in revenue? Is this consistent with what you thought earlier?</div></article><article class="task exercise-like" id="exploration-witch-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="exploration-witch-5-1-1">If the need for healing elixer increases and they now sell for 5 gold, would that change our answer?</div></article></article><article class="activity project-like" id="sec-section-sensitivity-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
@@ -237,7 +243,8 @@ true);
 </ol></article><article class="activity project-like" id="sec-section-sensitivity-5"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-section-sensitivity-5-1"><div class="para logical" id="sec-section-sensitivity-5-1-1">
+<div class="introduction" id="sec-section-sensitivity-5-1">
+<div class="para logical" id="sec-section-sensitivity-5-1-1">
 <div class="para">From <a href="" class="xref" data-knowl="./knowl/xref/exploration-witch.html" title="Exploration 5.1.1">Exploration 5.1.1</a>, letting <span class="process-math">\(x_1\)</span> denote the number of healing elixers, and <span class="process-math">\(x_2\)</span> denote the amount of poison created. Then, we get that the feasible region satisfies the inequalities:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exploration-witch.html" id="sec-section-sensitivity-5-1-1-4">
 \begin{align*}
@@ -262,8 +269,9 @@ x_1+x_2 \amp = 14 \\
 \begin{bmatrix}3\\1 \end{bmatrix}, \begin{bmatrix}1\\1 \end{bmatrix}, \begin{bmatrix}-1\\0 \end{bmatrix}, \begin{bmatrix}0\\-1 \end{bmatrix} 
 \end{equation*}
 </div>
-<div class="para">which can be depicted as *FIX TIKZ* </div>
-</div></div>
+<div class="para">which can be depicted as *FIX TIKZ*</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/witch.svg" role="img" class="contained" alt="The feasible region for the witch production problem, and depicted normal vectors."></div>
+</div>
 <article class="task exercise-like" id="sec-section-sensitivity-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-section-sensitivity-5-2-1-1">For any <span class="process-math">\(k\in \mathbb{R}\text{,}\)</span> the objective plane is <span class="process-math">\(3x_1+2x_2=k\)</span> with normal vector <span class="process-math">\(\begin{bmatrix}3\\2 \end{bmatrix}\text{.}\)</span>
 </div> <div class="para" id="sec-section-sensitivity-5-2-1-2">For each extreme point in the feasible region, express the normal vector for the objective plane as a linear combination of the normal vectors of the planes whose intersect at said point.</div></article><article class="task exercise-like" id="sec-section-sensitivity-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
