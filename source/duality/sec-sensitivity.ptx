@@ -131,7 +131,7 @@
         </md>
         with normal vectors 
         <me>\begin{bmatrix}3\\1 \end{bmatrix}, \begin{bmatrix}1\\1 \end{bmatrix}, \begin{bmatrix}-1\\0 \end{bmatrix}, \begin{bmatrix}0\\-1 \end{bmatrix} </me>
-        which can be depicted as *FIX TIKZ*
+        which may be depicted:
           
         
       </p>

@@ -92,7 +92,7 @@
   <note>
     <statement>
       <p>
-        Graph theory is a rich, complex and deep area of study.  Graphs theorists study a variety
+        Graph theory is a rich, complex and deep area of study.  Graph Theorists study a variety
         of graphs or objects called graphs, with a wide range of conventions.  For the purposes of
         this chapter, graphs are directed, there is at most two edges between graphs (one in each direction),
         and loops are disallowed.  Note that in general some or any of these conventions can be modified or removed.
