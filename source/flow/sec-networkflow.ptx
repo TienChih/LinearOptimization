@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-networkflow" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Directed Graphs and Network Flow</title>
+
+
+  <exploration xml:id="exploration-flow">
+    <introduction>
+      <p>
+        Consider a series of islands with bridges between them.  A group of people are trying to move from island <m>v_0</m> to island <m>v_5</m>.  Due to the length/width
+        of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled.  The bridges also only allow movement in one direction.
+      </p>
+      <image xml:id="island">
+        <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+        <latex-image>
+          \begin{tikzpicture}[
+            mycircle/.style={
+              circle,
+              draw=black,
+              fill=gray,
+              fill opacity = 0.3,
+              text opacity=1,
+              inner sep=0pt,
+              minimum size=20pt,
+              font=\small},
+            myarrow/.style={-Stealth},
+            node distance=0.6cm and 1.2cm
+            ]
+            \node[mycircle] (s) {$v_0$};
+            \node[mycircle,below right=of s] (v2) {$v_2$};
+            \node[mycircle,right=of v2] (v4) {$v_4$};
+            \node[mycircle,above right=of s] (v1) {$v_1$};
+            \node[mycircle,right=of v1] (v3) {$v_3$};
+            \node[mycircle,below right=of v3] (t) {$v_5$};
+
+          \draw[->] (s) --node[above left]{\tiny$3$} (v1);
+          \draw[->] (s) --node[below left]{\tiny$4$} (v2);
+          \draw[->] (v1.280) --node[right]{\tiny$4$} (v2.80);
+          \draw[->] (v2.100) --node[left]{\tiny$6$} (v1.260);
+          \draw[->] (v1)--node[above]{\tiny$2$}(v3);
+          \draw[->] (v1)--node[above right]{\tiny$2$}(v4);
+          \draw[->] (v2)--node[below ]{\tiny$2$}(v4);
+          \draw[->] (v4)--node[right]{\tiny$5$}(v3);
+          \draw[->] (v3)--node[above right]{\tiny$7$}(t);
+          \draw[->] (v4)--node[below right]{\tiny$1$}(t);
+          \end{tikzpicture}
+
+        </latex-image>
+      </image> 
+      
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Conjecture a solution to the maximum number of people that can arrive at <m>v_5</m> in a minute?
+
+        
+      </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If you could increase the capacity of a single bridge to increase the number of people who can travel to <m>v_5</m> in a minute, which
+          would it be and by how much?
+
+        
+      </p>
+      </statement>
+    </task>
+  </exploration>
+
+
+  <definition xml:id="def-directedgraph">
+    <statement>
+      <p>
+        A <em>directed graph</em> or <em>network</em> is a pair <m>D=(V, E)</m> where <m>V</m> is a set of
+        vertices and <m>E</m> is a set of ordered pairs of distinct elements of <m>V</m>.
+      </p>
+      <p>
+        A network is <em>capacitated</em> if for each edge <m>(v_i, v_j)\in E</m>
+        we assign a non negative capacity <m>c_{ij}</m>.  (If there is no edge from <m>v_i</m> to 
+        <m>v_j</m>, we may equivalently say that <m>c_{ij}=0</m>.)
+      </p>
+      <p>
+        A <em>flow</em> assigned to a capacitated network is an assignment to each edge
+        <m>(v_i, v_j)\in E</m>, a value <m>x_{ij}</m> such that <m>0\leq x_{ij}\leq c_{ij}</m>.
+        (If there is no edge from <m>v_i</m> to <m>v_j</m>, what must <m>x_{ij}</m> be?)
+      </p>
+    </statement>
+  </definition>
+
+  <note>
+    <statement>
+      <p>
+        Graph theory is a rich, complex and deep area of study.  Graph Theorists study a variety
+        of graphs or objects called graphs, with a wide range of conventions.  For the purposes of
+        this chapter, graphs are directed, there is at most two edges between graphs (one in each direction),
+        and loops are disallowed.  Note that in general some or any of these conventions can be modified or removed.
+      </p>
+    </statement>
+  </note>
+
+  <definition xml:id="def-netinput">
+    <statement>
+      <p>
+        For any vertex <m>v_j</m>, the <em>net input flow</em> at vertex <m>v_j</m>
+        is <m>\varphi(v_j)=\displaystyle \sum_{i} x_{ij} - \sum_{i} x_{ji}</m>
+      </p>
+      <p>
+        If <m>\varphi(v_j)\lt 0</m> then we say <m>v_j</m> is called a <em>source</em>.
+      </p>
+      <p>
+        If <m>\varphi(v_j) > 0</m> then we say <m>v_j</m> is called a <em>sink</em>.
+      </p>
+      <p>
+        If <m>\varphi(v_j) = 0</m> then we say <m>v_j</m> is called an <em>intermediary vertex</em>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        For the network in <xref ref="exploration-flow"/>, find three different flows, including one you believe is an <q>optimal</q> flow.
+      </p>
+    </introduction>
+    <task>
+      <p>
+        For each flow you found: identify the sources, sinks,
+        and intermediary vertices.
+      </p>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For each flow you found: compute the sum <m>\displaystyle\sum_{i} \varphi(v_i)</m>?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <theorem xml:id="thm-conservation">
+    <title>Conservation of Flow</title>
+    <statement>
+      <p>
+        For a capacited network <m>N</m>, <m>\displaystyle\sum_{i} \varphi(v_i)=0</m>.
+      </p>
+    </statement>
+  </theorem>
+  <activity>
+    <statement>
+      <p>
+        Prove <xref ref="thm-conservation"/>.
+      </p>
+    </statement>
+  </activity>
+
+  <activity xml:id="activity-uniquesourcesink">
+    <introduction>
+      <p>
+        Consider the network:
+        <image>
+          <shortdescription>A network with multiple sources and sinks.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+
+              \node[mycircle] (v1) at (0,1) {$v_1$};  
+              \node[mycircle] (v2) at (0,-1) {$v_2$};  
+
+              \node[mycircle] (v3) at (2,-2) {$v_3$};  
+              \node[mycircle] (v4) at (2,0) {$v_4$};  
+              \node[mycircle] (v5) at (2,2) {$v_5$};  
+
+              \node[mycircle] (v6) at (4,-2) {$v_6$};  
+              \node[mycircle] (v7) at (4,0) {$v_7$};  
+              \node[mycircle] (v8) at (4,2) {$v_8$};  
+
+              \node[mycircle] (v9) at (6,-1) {$v_9$};  
+              \node[mycircle] (v10) at (6,1) {$v_{10}$};  
+
+              \draw[->] (v1) --node[above , sloped, pos= 0.35]{\tiny$11$} (v5);
+              \draw[->] (v1) --node[above, sloped, pos= 0.8 ]{\tiny$10$} (v4);
+              \draw[->] (v1) --node[above right, sloped, pos= 0.6]{\tiny$12$} (v3);
+              \draw[->] (v2) --node[below right, sloped, pos= 0.7]{\tiny$8$} (v5);
+              \draw[->] (v2) --node[above, sloped, pos= 0.8 ]{\tiny$12$} (v4);
+              \draw[->] (v2) --node[below left, sloped, pos= 0.5]{\tiny$9$} (v3);
+
+              \draw[->] (v5) --node[above, sloped, pos= 0.7]{\tiny$8$} (v8);
+              \draw[->] (v5) --node[above, sloped, pos= 0.8 ]{\tiny$12$} (v7);
+              \draw[->] (v5) --node[above right, sloped, pos= 0.8]{\tiny$3$} (v6);
+
+              \draw[->] (v4) --node[above left, sloped, pos= 0.8]{\tiny$10$} (v8);
+              \draw[->] (v4) --node[above, sloped, pos= 0.8 ]{\tiny$7$} (v7);
+              \draw[->] (v4) --node[below left, sloped, pos= 0.8]{\tiny$4$} (v6);
+
+              \draw[->] (v3) --node[above left, sloped, pos= 0.25]{\tiny$10$} (v8);
+              \draw[->] (v3) --node[below right, sloped, pos= 0.15 ]{\tiny$14$} (v7);
+              \draw[->] (v3) --node[below left, sloped, pos= 0.5]{\tiny$2$} (v6);
+
+              \draw[->] (v8) --node[above right, sloped, pos= 0.25]{\tiny$2$} (v10);
+              \draw[->] (v7) --node[below right, sloped, pos= 0.15 ]{\tiny$3$} (v10);
+              \draw[->] (v6) --node[above left, sloped, pos= 0.3]{\tiny$12$} (v10);
+
+              \draw[->] (v8) --node[below left, sloped, pos= 0.25]{\tiny$4$} (v9);
+              \draw[->] (v7) --node[below right, sloped, pos= 0.15 ]{\tiny$1$} (v9);
+              \draw[->] (v6) --node[below right, sloped, pos= 0.3]{\tiny$10$} (v9);
+            \end{tikzpicture}
+          </latex-image>
+          
+        </image>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find a (not neccisarily optimal!) flow through this network with exactly two
+          sources and exactly two sinks.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Add two vertices to this network: <m>v_s, v_t</m>, and two edges from <m>v_s</m>
+          to two vertices, and two edges to <m>v_t</m> from two different vertices, each with 
+          infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <observation>
+    <statement>
+      <p>
+        To be able to address the sort of questions we wish to ask, we will restrict ourselves
+        to <em>networks with a unique fixed source or sink, with no edges from the sink or to the source.</em>
+         In light of <xref ref="activity-uniquesourcesink"/>, this is not really much of a restriction.
+      </p>
+    </statement>
+  </observation>
+
+  <subsection xml:id="subsec-maxflow">
+    <title>Max Flow</title>
+    <activity>
+      <introduction>
+        <p>
+          Suppose we have a capacitated network with a unique fixed source <m>v_s</m>
+          and sink <m>v_d</m>.
+        </p>
+        <p>
+          We wish to define a maximization linear program with decision variables <m>x_{ij}, v_i, v_j\in V</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Define the objective function both in terms of variables <m>x_{sj}</m> and
+            <m>x_{id}</m>.  Explain why these are equivalent (can you prove it?).
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For each edge <m>(v_i, v_j)</m>, there is a natural inequality constraint for the decision variables associated
+            with this edge.  What is this inequality?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For each vertex <m>v_i</m> not our source or sink, there is an equality constraint for the decision variables associated
+            with this vertex.  Which is this equality?
+            
+          </p>
+          <ol  marker="A." cols="2">
+            <li>
+              <p>
+                <m>\displaystyle \sum_{j}x_{ji} - \sum_{j}x_{sj}=0.</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{j}x_{ij} - \sum_{j}x_{jd}=0.</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{j}x_{ij}=0.</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{j}x_{ji}=0.</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{j}x_{ij} - \sum_{j}x_{ji}=0.</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\displaystyle \sum_{j}x_{ij} + \sum_{j}x_{ji}=0.</m>
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            There is an additional type of inequality for this problem, what is it?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Write out the primal max problem for <xref ref="exploration-flow"/>
+            as a non-canonical Tucker Tableau.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Solve this problem:
+          </p>
+          <p>
+            <sage>
+              <input>
+                %display typeset
+                A = (FIXME)
+                b = (FIXME)
+                c = (FIXME)
+                P = InteractiveLPProblem(A, b, c,
+                 [FIXME], 
+                 constraint_type = [FIXME],
+                 variable_type = [FIXME],
+                 problem_type = FIXME)
+                P
+              </input>         
+              </sage>
+              <sage>
+                <input>
+                  print(P.optimal_solution())
+                  print(P.optimal_value())
+                </input>         
+              </sage>
+        </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>\mu_i</m> denote the dual variable associated with vertex <m>i</m>
+            and let <m>y_{ij}</m> denote the dual variable associated with edge <m>(v_i, v_j)</m>.
+          </p>
+          <p>
+            Describe the dual min program
+          </p>
+        </statement>
+      </task>
+
+    </activity>
+    
+  </subsection>
+  
+
+
+
+  
+
+  
+
+</section>

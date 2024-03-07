@@ -8,7 +8,8 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-maximumflow.ptx" />
+  <xi:include href="sec-networkflow.ptx" />
+  <xi:include href="sec-maxflowmincut.ptx" />
   
   
 
