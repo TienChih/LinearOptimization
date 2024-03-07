@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Transportation Algorithm</title>
+<title>Max Flow - Min Cut</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -149,7 +149,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-vam.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-assignment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-networkflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
@@ -210,37 +210,37 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">6.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">7</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">7.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Transportation Algorithm</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">8</span> <span class="title">Network Flows</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-maxflow.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflow.html#subsec-unbalanced" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Max Flow - Min Cut</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-transportalgorithm"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.2</span><span class="space"> </span><span class="title">The Transportation Algorithm</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-maxflow"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">8.2</span><span class="space"> </span><span class="title">Max Flow - Min Cut</span>
 </h2>
-<article class="exploration project-like" id="sec-transportalgorithm-2"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+<article class="exploration project-like" id="sec-maxflow-2"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-transportalgorithm-2-1">
-<div class="para" id="sec-transportalgorithm-2-1-1">Consider a transportation tableau:</div> <div class="para" id="sec-transportalgorithm-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="introduction" id="sec-maxflow-2-1">
+<div class="para" id="sec-maxflow-2-1-1">Consider a transportation tableau:</div> <div class="para" id="sec-maxflow-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
@@ -265,10 +265,10 @@ true);
 <td class="c m b0 r2 l0 t0 lines">0</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="sec-transportalgorithm-2-1-3">The box here denotes that the bottom right 5 isn’t currently being used by probably should be.</div>
+</table></div></div> <div class="para" id="sec-maxflow-2-1-3">The box here denotes that the bottom right 5 isn’t currently being used by probably should be.</div>
 </div>
-<article class="task exercise-like" id="sec-transportalgorithm-2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-transportalgorithm-2-2-1-1">It is clear that we should shift some of warehouse 2’s shipments to market 2 to reduce costs. Why isn’t this a valid transportation tableau?</div> <div class="para" id="sec-transportalgorithm-2-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<article class="task exercise-like" id="sec-maxflow-2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-maxflow-2-2-1-1">It is clear that we should shift some of warehouse 2’s shipments to market 2 to reduce costs. Why isn’t this a valid transportation tableau?</div> <div class="para" id="sec-maxflow-2-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
@@ -293,8 +293,8 @@ true);
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="sec-transportalgorithm-2-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-transportalgorithm-2-3-1-1">How should we adjust these values to have a valid tableau?</div> <div class="para" id="sec-transportalgorithm-2-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
+</table></div></div></article><article class="task exercise-like" id="sec-maxflow-2-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-maxflow-2-3-1-1">How should we adjust these values to have a valid tableau?</div> <div class="para" id="sec-maxflow-2-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
@@ -319,8 +319,8 @@ true);
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="sec-transportalgorithm-2-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-transportalgorithm-2-4-1-1">How about this one?</div> <div class="para" id="sec-transportalgorithm-2-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
+</table></div></div></article><article class="task exercise-like" id="sec-maxflow-2-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-maxflow-2-4-1-1">How about this one?</div> <div class="para" id="sec-maxflow-2-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
@@ -378,7 +378,7 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article></article><article class="activity project-like" id="activity-transportalgorithm"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-transportalgorithm-1">
 <div class="para" id="activity-transportalgorithm-1-1">Recall the transportation tableau obtained in <a href="" class="xref" data-knowl="./knowl/xref/activity-vamexample.html" title="Activity 7.1.2">Activity 7.1.2</a>:</div> <div class="para" id="activity-transportalgorithm-1-2"><div class="tabular-box natural-width"><table class="tabular">
@@ -599,7 +599,7 @@ print(P.optimal_value())
 </script></pre>
 </div>
 </div></article></article><article class="definition definition-like" id="def-transportationalg"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-transportationalg-1-1">To summarize, the transportation algorithm is as follows:</div> <ol class="decimal">
 <li id="def-transportationalg-1-2-1">
@@ -621,10 +621,10 @@ print(P.optimal_value())
 </li>
 <li id="def-transportationalg-1-2-6"><div class="para" id="def-transportationalg-1-2-6-1">Replace each cost entry with the costs from step 1 and terminate.</div></li>
 </ol></article><section class="subsection" id="subsec-unbalanced"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="space"> </span><span class="title">Unbalnced Transportation Problems</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="space"> </span><span class="title">Unbalnced Transportation Problems</span>
 </h3>
 <article class="activity project-like" id="activity-unbalanced"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-unbalanced-1"><div class="para" id="activity-unbalanced-1-1">We now consider the case of <em class="emphasis">unbalanced</em> transportation problems, where the demand and supply are unequal.</div></div>
 <article class="task exercise-like" id="activity-unbalanced-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -790,7 +790,7 @@ print(P.optimal_value())
 </table></div></div> <div class="para" id="activity-unbalanced-5-1-3">How much additional “supply” is needed?  How much would it cost to ship this “supply” from “Warehouse” to the markets?</div></article><article class="task exercise-like" id="activity-unbalanced-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <div class="para" id="activity-unbalanced-6-1-1">Describe a general procedure for solving unbalanced transportation problems.</div></article></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-vam.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-assignment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-networkflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

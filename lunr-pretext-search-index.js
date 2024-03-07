@@ -1423,40 +1423,112 @@ var ptx_lunr_docs = [
   "body": "  Suppose 4 students are picking 4 research topics. The four topics are to be distributed one each amongst the four students. They rated the ropics on a scale of 1-10.       Topic 1  Topic 2  Topic 3  Topic 4    Student 1  6  9  10  8    Student 2  2  8  9  7    Student 3  7  7  8  9    Student 4  6  8  9  8     We want to maximize the total enjoyment .    This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?    After converting, use the Hungarian Algorithm to solve the problem.   "
 },
 {
-  "id": "sec-maximumflow",
+  "id": "sec-networkflow",
   "level": "1",
-  "url": "sec-maximumflow.html",
+  "url": "sec-networkflow.html",
   "type": "Section",
   "number": "8.1",
-  "title": "Directed Graphs and Maximum Flow",
-  "body": " Directed Graphs and Maximum Flow    Consider a series of islands with bridges between them. A group of people are trying to move from island to island . Due to the length\/width of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled. The bridges also only allow movement in one direction.   A Network Flow depicting several islands with bridges and carrying capacity.      What is the maximum number of people that can arrive at in a minute?    If you could increase the capacity of a single bridge to increase the number of people who can travel to in a minute, which would it be and by how much?      A directed graph or network is a pair where is a set of vertices and is a set of ordered pairs of distinct elements of .  A network is capacitated if for each edge we assign a non negative capacity .  A flow assigned to a capacitated network is an assignment to each edge , a value such that .      Graph theory is a rich, complex and deep area of study. Graph Theorists study a variety of graphs or objects called graphs, with a wide range of conventions. For the purposes of this chapter, graphs are directed, there is at most two edges between graphs (one in each direction), and loops are disallowed. Note that in general some or any of these conventions can be modified or removed.    "
+  "title": "Directed Graphs and Network Flow",
+  "body": " Directed Graphs and Network Flow    Consider a series of islands with bridges between them. A group of people are trying to move from island to island . Due to the length\/width of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled. The bridges also only allow movement in one direction.   A Network Flow depicting several islands with bridges and carrying capacity.      Conjecture a solution to the maximum number of people that can arrive at in a minute?    If you could increase the capacity of a single bridge to increase the number of people who can travel to in a minute, which would it be and by how much?      A directed graph or network is a pair where is a set of vertices and is a set of ordered pairs of distinct elements of .  A network is capacitated if for each edge we assign a non negative capacity . (If there is no edge from to , we may equivalently say that .)  A flow assigned to a capacitated network is an assignment to each edge , a value such that . (If there is no edge from to , what must be?)      Graph theory is a rich, complex and deep area of study. Graph Theorists study a variety of graphs or objects called graphs, with a wide range of conventions. For the purposes of this chapter, graphs are directed, there is at most two edges between graphs (one in each direction), and loops are disallowed. Note that in general some or any of these conventions can be modified or removed.      For any vertex , the net input flow at vertex is   If then we say is called a source .  If then we say is called a sink .  If then we say is called an intermediary vertex .      For the network in , find three different flows, including one you believe is an optimal flow.   For each flow you found: identify the sources, sinks, and intermediary vertices.   For each flow you found: compute the sum ?     Conservation of Flow   For a capacited network , .      Prove .      Consider the network:  A network with multiple sources and sinks.       Find a (not neccisarily optimal!) flow through this network with exactly two sources and exactly two sinks.    Add two vertices to this network: , and two edges from to two vertices, and two edges to from two different vertices, each with infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.      To be able to address the sort of questions we wish to ask, we will restrict ourselves to networks with a unique fixed source or sink, with no edges from the sink or to the source. In light of , this is not really much of a restriction.     Max Flow    Suppose we have a capacitated network with a unique fixed source and sink .  We wish to define a maximization linear program with decision variables .    Define the objective function both in terms of variables and . Explain why these are equivalent (can you prove it?).    For each edge , there is a natural inequality constraint for the decision variables associated with this edge. What is this inequality?    For each vertex not our source or sink, there is an equality constraint for the decision variables associated with this vertex. Which is this equality?                                    There is an additional type of inequality for this problem, what is it?    Write out the primal max problem for as a non-canonical Tucker Tableau.    Solve this problem:        Let denote the dual variable associated with vertex and let denote the dual variable associated with edge .  Describe the dual min program     "
 },
 {
   "id": "exploration-flow",
   "level": "2",
-  "url": "sec-maximumflow.html#exploration-flow",
+  "url": "sec-networkflow.html#exploration-flow",
   "type": "Exploration",
   "number": "8.1.1",
   "title": "",
-  "body": "  Consider a series of islands with bridges between them. A group of people are trying to move from island to island . Due to the length\/width of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled. The bridges also only allow movement in one direction.   A Network Flow depicting several islands with bridges and carrying capacity.      What is the maximum number of people that can arrive at in a minute?    If you could increase the capacity of a single bridge to increase the number of people who can travel to in a minute, which would it be and by how much?   "
+  "body": "  Consider a series of islands with bridges between them. A group of people are trying to move from island to island . Due to the length\/width of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled. The bridges also only allow movement in one direction.   A Network Flow depicting several islands with bridges and carrying capacity.      Conjecture a solution to the maximum number of people that can arrive at in a minute?    If you could increase the capacity of a single bridge to increase the number of people who can travel to in a minute, which would it be and by how much?   "
 },
 {
   "id": "def-directedgraph",
   "level": "2",
-  "url": "sec-maximumflow.html#def-directedgraph",
+  "url": "sec-networkflow.html#def-directedgraph",
   "type": "Definition",
   "number": "8.1.1",
   "title": "",
-  "body": "  A directed graph or network is a pair where is a set of vertices and is a set of ordered pairs of distinct elements of .  A network is capacitated if for each edge we assign a non negative capacity .  A flow assigned to a capacitated network is an assignment to each edge , a value such that .   "
+  "body": "  A directed graph or network is a pair where is a set of vertices and is a set of ordered pairs of distinct elements of .  A network is capacitated if for each edge we assign a non negative capacity . (If there is no edge from to , we may equivalently say that .)  A flow assigned to a capacitated network is an assignment to each edge , a value such that . (If there is no edge from to , what must be?)   "
 },
 {
-  "id": "sec-maximumflow-4",
+  "id": "sec-networkflow-4",
   "level": "2",
-  "url": "sec-maximumflow.html#sec-maximumflow-4",
+  "url": "sec-networkflow.html#sec-networkflow-4",
   "type": "Note",
   "number": "8.1.2",
   "title": "",
   "body": "  Graph theory is a rich, complex and deep area of study. Graph Theorists study a variety of graphs or objects called graphs, with a wide range of conventions. For the purposes of this chapter, graphs are directed, there is at most two edges between graphs (one in each direction), and loops are disallowed. Note that in general some or any of these conventions can be modified or removed.   "
+},
+{
+  "id": "def-netinput",
+  "level": "2",
+  "url": "sec-networkflow.html#def-netinput",
+  "type": "Definition",
+  "number": "8.1.3",
+  "title": "",
+  "body": "  For any vertex , the net input flow at vertex is   If then we say is called a source .  If then we say is called a sink .  If then we say is called an intermediary vertex .   "
+},
+{
+  "id": "sec-networkflow-6",
+  "level": "2",
+  "url": "sec-networkflow.html#sec-networkflow-6",
+  "type": "Activity",
+  "number": "8.1.2",
+  "title": "",
+  "body": "  For the network in , find three different flows, including one you believe is an optimal flow.   For each flow you found: identify the sources, sinks, and intermediary vertices.   For each flow you found: compute the sum ?   "
+},
+{
+  "id": "thm-conservation",
+  "level": "2",
+  "url": "sec-networkflow.html#thm-conservation",
+  "type": "Theorem",
+  "number": "8.1.4",
+  "title": "Conservation of Flow.",
+  "body": " Conservation of Flow   For a capacited network , .   "
+},
+{
+  "id": "sec-networkflow-8",
+  "level": "2",
+  "url": "sec-networkflow.html#sec-networkflow-8",
+  "type": "Activity",
+  "number": "8.1.3",
+  "title": "",
+  "body": "  Prove .   "
+},
+{
+  "id": "activity-uniquesourcesink",
+  "level": "2",
+  "url": "sec-networkflow.html#activity-uniquesourcesink",
+  "type": "Activity",
+  "number": "8.1.4",
+  "title": "",
+  "body": "  Consider the network:  A network with multiple sources and sinks.       Find a (not neccisarily optimal!) flow through this network with exactly two sources and exactly two sinks.    Add two vertices to this network: , and two edges from to two vertices, and two edges to from two different vertices, each with infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.   "
+},
+{
+  "id": "sec-networkflow-10",
+  "level": "2",
+  "url": "sec-networkflow.html#sec-networkflow-10",
+  "type": "Observation",
+  "number": "8.1.5",
+  "title": "",
+  "body": "  To be able to address the sort of questions we wish to ask, we will restrict ourselves to networks with a unique fixed source or sink, with no edges from the sink or to the source. In light of , this is not really much of a restriction.   "
+},
+{
+  "id": "subsec-maxflow-2",
+  "level": "2",
+  "url": "sec-networkflow.html#subsec-maxflow-2",
+  "type": "Activity",
+  "number": "8.1.5",
+  "title": "",
+  "body": "  Suppose we have a capacitated network with a unique fixed source and sink .  We wish to define a maximization linear program with decision variables .    Define the objective function both in terms of variables and . Explain why these are equivalent (can you prove it?).    For each edge , there is a natural inequality constraint for the decision variables associated with this edge. What is this inequality?    For each vertex not our source or sink, there is an equality constraint for the decision variables associated with this vertex. Which is this equality?                                    There is an additional type of inequality for this problem, what is it?    Write out the primal max problem for as a non-canonical Tucker Tableau.    Solve this problem:        Let denote the dual variable associated with vertex and let denote the dual variable associated with edge .  Describe the dual min program   "
+},
+{
+  "id": "sec-maxflowmincut",
+  "level": "1",
+  "url": "sec-maxflowmincut.html",
+  "type": "Section",
+  "number": "8.2",
+  "title": "Max Flow - Min Cut",
+  "body": " Max Flow - Min Cut  "
 },
 {
   "id": "backmatter-2",
