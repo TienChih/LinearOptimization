@@ -227,7 +227,7 @@
     <task>
       <statement>
         <p>
-          Find a (not neccisarily optimal!) flow through this network with exactly two
+          Find a (not necessarily optimal!) flow through this network with exactly two
           sources and exactly two sinks.
         </p>
       </statement>
@@ -284,39 +284,39 @@
       <task>
         <statement>
           <p>
-            For each vertex <m>v_i</m> not our source or sink, there is an equality constraint for the decision variables associated
+            For each vertex <m>v_j</m> not our source or sink, there is an equality constraint for the decision variables associated
             with this vertex.  Which is this equality?
             
           </p>
           <ol  marker="A." cols="2">
             <li>
               <p>
-                <m>\displaystyle \sum_{j}x_{ji} - \sum_{j}x_{sj}=0.</m>
+                <m>\displaystyle \sum_{i}x_{ji} - \sum_{i}x_{sj}=0.</m>
               </p>
             </li>
             <li>
               <p>
-                <m>\displaystyle \sum_{j}x_{ij} - \sum_{j}x_{jd}=0.</m>
+                <m>\displaystyle \sum_{i}x_{ij} - \sum_{i}x_{jd}=0.</m>
               </p>
             </li>
             <li>
               <p>
-                <m>\displaystyle \sum_{j}x_{ij}=0.</m>
+                <m>\displaystyle \sum_{i}x_{ij}=0.</m>
               </p>
             </li>
             <li>
               <p>
-                <m>\displaystyle \sum_{j}x_{ji}=0.</m>
+                <m>\displaystyle \sum_{i}x_{ji}=0.</m>
               </p>
             </li>
             <li>
               <p>
-                <m>\displaystyle \sum_{j}x_{ij} - \sum_{j}x_{ji}=0.</m>
+                <m>\displaystyle \sum_{i}x_{ij} - \sum_{i}x_{ji}=0.</m>
               </p>
             </li>
             <li>
               <p>
-                <m>\displaystyle \sum_{j}x_{ij} + \sum_{j}x_{ji}=0.</m>
+                <m>\displaystyle \sum_{i}x_{ij} + \sum_{i}x_{ji}=0.</m>
               </p>
             </li>
           </ol>
@@ -370,16 +370,20 @@
       <task>
         <statement>
           <p>
-            Let <m>\mu_i</m> denote the dual variable associated with vertex <m>i</m>
-            and let <m>y_{ij}</m> denote the dual variable associated with edge <m>(v_i, v_j)</m>.
+            Let <m>\mu_i</m> denote the dual  variable for <xref ref="exploration-flow"/> associated with vertex <m>i</m>
+            and let <m>y_{ij}</m> denote the dual  variable associated with edge <m>(v_i, v_j)</m>.
           </p>
           <p>
-            Describe the dual min program
+            Describe the dual min program.
           </p>
         </statement>
       </task>
 
+      
+
     </activity>
+
+    
     
   </subsection>
   

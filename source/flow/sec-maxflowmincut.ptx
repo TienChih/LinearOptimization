@@ -4,6 +4,370 @@
   <title>Max Flow - Min Cut</title>
 
 
+  <exploration>
+    <introduction>
+      <p>
+        Recall <xref ref="exploration-flow"/>.  Suppose that we wish to install a toll
+        booth on these bridges so that each person going to <m>v_5</m> pays a toll at least once.
+        The cost of installing a toll booth on a bridge is proportional to it's capacity.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find three different ways to install these booths, and find what you believe is the cheapest way to do so.
+        </p>
+      </statement>
+    </task>
+  </exploration>
+
+  <definition xml:id="def-cut">
+    <statement>
+      <p>
+        Given a capacitated network <m>N</m>, a <em>cut</em> of <m>N</m> is
+        a partition of the vertex set into non-empty subsets <m>C=(V_1, V_2)</m>, where <m>V=V_1\sqcup V_2, v_s\in V_1, v_d\in V_2</m>.
+      </p>
+      <p>
+        The <em>capacity</em> of a cut <m>C</m> is the sum <m>\displaystyle \sum_{v_i\in V_1, v_j\in V_2} c_{ij}</m>.
+      </p>
+    </statement>
+  </definition>
+  <activity xml:id="activity-cutflow">
+    <task>
+      <p>
+        From <xref ref="exploration-flow"/>, find three different cuts and their capacities.
+      </p>
+    </task>
+    <task>
+      <p>
+        What cut do you think minimizes the capacity, how does this compare to
+        your conjectured max flow for this problem?
+      </p>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Prove that for any capacitated network, and flow on this network
+          that the value of this flow is equal to <me>\sum_{v_i\in V_1, v_j\in V_2} x_{ij} - \sum_{v_i\in V_1, v_j\in V_2} x_{ji}.</me>
+          (Work it out for the example cuts you found first)
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity xml:id="activity-dualflow">
+    <introduction>
+      <p>
+        Consider the primal maximization program for a max flow problem for a capacitated network
+        with unique source <m>v_s</m> and unique sink <m>v_d</m>:
+
+      </p>
+      <p>
+        <md>
+          <mrow>\textbf{Maximize: }  \displaystyle \sum_{i} x_{id}</mrow>
+          <mrow>\textbf{Subject to: }  \sum_{i}x_{ij} - \sum_{i} x_{ji} \amp =  0, \text{for each vertex }v_j</mrow>
+          <mrow> x_{ij}\amp \leq  c_{ij}, \text{for each edge} (v_i, v_j)</mrow>
+          <mrow> x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+        </md>
+        
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Consider the dual program for this problem where <m>\mu_{j}</m> is the unconstrained
+          dual variable for the vertex equality constraint and the <m>y_{ij}</m> is the dual
+          variable for the capacity constraint.  Verify that this program may be written as
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}</mrow>
+            <mrow>\textbf{Subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{for each edge }(v_s, v_j)</mrow>
+            <mrow> -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j), i\neq s, j\neq d</mrow>
+            <mrow> - \mu_i +y_{id} \amp \geq  0, \text{for each edge }(v_i, v_d)</mrow>
+            <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Explain why we may let <m>y_s=0, y_d=-1</m>
+          without affecting the solution.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Verify that we may simplify the dual solution as:
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}</mrow>
+            <mrow>\textbf{Subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+            <mrow>y_s \amp =0 </mrow>
+            <mrow> y_d \amp =-1</mrow>
+            <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose <m>\mu_j=-1</m>.  What could <m>\mu_i, y_{ij}</m> be?
+          Which would minimize the dual objective function?  What happens if <m>\mu_i</m>
+          is huge, how would that affect <m>-\mu_k+\mu_i+y_{ki}</m>?
+        </p>
+        <p>
+          Repeat for <m>\mu_j=0, \mu_i=-1, 0</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Is it possible for all the <m>\mu_k</m> to have the same value?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose each <m>\mu_k\in \{0, -1\}</m>,
+          Note that <m>V_1:=\{v_i:\mu_i=0\}, V_2:=\{v_j:\mu_j=-1\}</m>
+          forms a cut of <m>N</m>.
+        </p>
+        <p>
+          For <m>v_i, v_j\in V_1</m>, what is <m>y_{ij}</m>?
+        </p>
+        <p>
+          For <m>v_i, v_j\in V_2</m>, what is <m>y_{ij}</m>?
+        </p>
+        <p>
+          For <m>v_i\in V_1, v_j\in V_2</m>, what is <m>y_{ij}</m>?
+        </p>
+        <p>
+          Can any cut of <m>N</m> be modled this way?
+        </p>
+      </statement>
+    </task>
+   
+    <task>
+      <statement>
+        <p>
+          What is the capacity of the above cut?  How does that relate to the dual
+          program?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Prove that the maximum flow through a network is bounded above by the minimum cut capacity.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        We explore a way of generating potential minimum cuts using a maximum flow.
+      </p>
+      <p>
+        Recall <xref ref="exploration-flow"/> and your proposed maximum flow <m>f'</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Let <m>v_0\in V_1'</m>, we recursively define <m>V_1'</m> by adding
+          <m>v_j</m> to <m>V_1'</m> if either:
+          <ul>
+            <li>
+              <p>
+                <m>v_i\in V_1', (v_i,v_j)\in E, x'_{ij}\lt c_{ij}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>v_i\in V_1', (v_j,v_i)\in E, x'_{ji}>0</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>V_2':=V\backslash V_1'</m>.  What is the cut capacity of <m>(V_1', V_2')</m>?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+
+  <activity>
+    <introduction>
+      <p>
+        We now prove that the minimum cut capacity is equal to the maximum flow.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Why does the primal max problem achieve optimality?
+        </p>
+        <p>
+          Call the maximum flow <m>f'</m>, with flow on each edge <m>x_{ij}'</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>v_s\in V_1'</m>, we recursively define <m>V_1'</m> by adding
+          <m>v_j</m> to <m>V_1'</m> if either:
+          <ul>
+            <li>
+              <p>
+                <m>v_i\in V_1', (v_i,v_j)\in E, x'_{ij}\lt c_{ij}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>v_i\in V_1', (v_j,v_i)\in E, x'_{ji}>0</m>.
+              </p>
+            </li>
+          </ul>
+          and repeating until we stabilize, why must we eventually stabilize?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement> 
+        <p>
+          Show that for any <m>v_k</m> in <m>V'_1</m>, there is an
+          <em><m>\alpha</m>-path</em> <m>P</m>: a sequence of vertices starting <m>v_s</m> to <m>v_k</m>, where
+          between <m>v_{i}, v_j</m> either <m>(v_i, v_j), (v_j, v_i)\in E</m>.
+        </p>
+        <p>
+          <image xml:id="alpha-path">
+            <shortdescription>An <m>\alpha</m>-path.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[
+                mycircle/.style={
+                  circle,
+                  draw=black,
+                  fill=gray,
+                  fill opacity = 0.3,
+                  text opacity=1,
+                  inner sep=0pt,
+                  minimum size=20pt,
+                  font=\small},
+                myarrow/.style={-Stealth},
+                node distance=0.6cm and 1.2cm
+                ]
+
+                \node[mycircle] (vs) at (0,0) {$v_s$};  
+                \node[mycircle] (v1) at (2,0) {$v_1$};  
+                \node[mycircle] (v2) at (4,0) {$v_2$};  
+                \node[mycircle] (v3) at (6,0) {$v_3$};  
+                \node[mycircle] (vk) at (8,0) {$v_k$};  
+
+                \draw[->] (vs)--(v1);
+                \draw[->] (v2)--(v1);
+                \draw[->] (v2)--(v3);
+                \draw[->] (v3)--(vk);
+
+                
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </p>
+        <p>
+          We would call the edges <m>(v_i, v_j)</m> to be <em>forward edges</em> and <m>(v_j, v_i)</m>
+          <em>backwards edges</em> of <m>P</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose (by way of contradiction) that <m>v_d\in V_1'</m>.
+          There is by (c) an <m>\alpha</m>-path <m>P</m> from
+          <m>v_s</m> to <m>v_d</m>.
+        </p>
+        <p>
+          Let <me> q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}</me>
+        </p>
+        <p>
+          Why is <m>q>0</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We define a new flow <m>f''</m> as follows: for each forward edge of <m>P</m>, <m>(v_i, v_j)</m>, we
+          add <m>x_{ij}''=q+x'_{ij}</m>.  For each backwards edge <m>(v_j, v_i)</m> we subtract <m>x_{ji}'' = x'_{ji}-q</m>.
+        </p>
+        <p>
+          Explain why this is still a valid network flow.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Explain why <m>f''</m> has a greater value than <m>f'</m>.  Why must <m>v_d\not \in V_1'</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Define <m>V_2' = V\backslash V_1'</m>.  Prove that for any
+          <m>v_i\in V_1', v_2\in V_2'</m>, we have that <m>x_{ij}'=c_{ij}, x_{ji}=0</m>.
+        </p>
+        <p>
+          (Not neccesary for this proof, but to tie things in, if <m>x_{ij'}=c_{ij}</m>, what does that say about <m>y_{ij}</m> from the dual program in <xref ref="activity-dualflow"/>?  If <m>x_{ij}'\lt c_{ij}</m>,  what does that say about <m>y_{ij}</m>?  )
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use <xref ref="activity-cutflow"/> to show that the value of
+          <m>f'</m> is equal to the cut capacity of <m>(V_1', V_2')</m>. (Proving the result!)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Going back to <xref ref="activity-dualflow"/> if we let <m>\mu_i=0</m>
+          for <m>v_i\in V_1'</m> and <m>\mu_j=-1</m> for <m>v_j\in V_2'</m>, what is the 
+          value of the dual min objective?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <theorem xml:id="thm-maxflowmincut">
+    <statement>
+      <p>
+        Let <m>N = (V, E)</m> be a capacitated
+directed network with unique fixed source and unique fixed sink, no edges into the
+source, and no edges out of the sink. Then the value of the maximalflow from <m>v_s</m> to
+<m>v_d</m> is equal to the minimal cut capacity in <m>N</m>.
+      </p>
+    </statement>
+  </theorem>
   
 
   
