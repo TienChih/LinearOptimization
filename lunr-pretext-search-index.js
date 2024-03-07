@@ -1429,7 +1429,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.1",
   "title": "Directed Graphs and Network Flow",
-  "body": " Directed Graphs and Network Flow    Consider a series of islands with bridges between them. A group of people are trying to move from island to island . Due to the length\/width of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled. The bridges also only allow movement in one direction.   A Network Flow depicting several islands with bridges and carrying capacity.      Conjecture a solution to the maximum number of people that can arrive at in a minute?    If you could increase the capacity of a single bridge to increase the number of people who can travel to in a minute, which would it be and by how much?      A directed graph or network is a pair where is a set of vertices and is a set of ordered pairs of distinct elements of .  A network is capacitated if for each edge we assign a non negative capacity . (If there is no edge from to , we may equivalently say that .)  A flow assigned to a capacitated network is an assignment to each edge , a value such that . (If there is no edge from to , what must be?)      Graph theory is a rich, complex and deep area of study. Graph Theorists study a variety of graphs or objects called graphs, with a wide range of conventions. For the purposes of this chapter, graphs are directed, there is at most two edges between graphs (one in each direction), and loops are disallowed. Note that in general some or any of these conventions can be modified or removed.      For any vertex , the net input flow at vertex is   If then we say is called a source .  If then we say is called a sink .  If then we say is called an intermediary vertex .      For the network in , find three different flows, including one you believe is an optimal flow.   For each flow you found: identify the sources, sinks, and intermediary vertices.   For each flow you found: compute the sum ?     Conservation of Flow   For a capacited network , .      Prove .      Consider the network:  A network with multiple sources and sinks.       Find a (not neccisarily optimal!) flow through this network with exactly two sources and exactly two sinks.    Add two vertices to this network: , and two edges from to two vertices, and two edges to from two different vertices, each with infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.      To be able to address the sort of questions we wish to ask, we will restrict ourselves to networks with a unique fixed source or sink, with no edges from the sink or to the source. In light of , this is not really much of a restriction.     Max Flow    Suppose we have a capacitated network with a unique fixed source and sink .  We wish to define a maximization linear program with decision variables .    Define the objective function both in terms of variables and . Explain why these are equivalent (can you prove it?).    For each edge , there is a natural inequality constraint for the decision variables associated with this edge. What is this inequality?    For each vertex not our source or sink, there is an equality constraint for the decision variables associated with this vertex. Which is this equality?                                    There is an additional type of inequality for this problem, what is it?    Write out the primal max problem for as a non-canonical Tucker Tableau.    Solve this problem:        Let denote the dual variable associated with vertex and let denote the dual variable associated with edge .  Describe the dual min program     "
+  "body": " Directed Graphs and Network Flow    Consider a series of islands with bridges between them. A group of people are trying to move from island to island . Due to the length\/width of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled. The bridges also only allow movement in one direction.   A Network Flow depicting several islands with bridges and carrying capacity.      Conjecture a solution to the maximum number of people that can arrive at in a minute?    If you could increase the capacity of a single bridge to increase the number of people who can travel to in a minute, which would it be and by how much?      A directed graph or network is a pair where is a set of vertices and is a set of ordered pairs of distinct elements of .  A network is capacitated if for each edge we assign a non negative capacity . (If there is no edge from to , we may equivalently say that .)  A flow assigned to a capacitated network is an assignment to each edge , a value such that . (If there is no edge from to , what must be?)      Graph theory is a rich, complex and deep area of study. Graph Theorists study a variety of graphs or objects called graphs, with a wide range of conventions. For the purposes of this chapter, graphs are directed, there is at most two edges between graphs (one in each direction), and loops are disallowed. Note that in general some or any of these conventions can be modified or removed.      For any vertex , the net input flow at vertex is   If then we say is called a source .  If then we say is called a sink .  If then we say is called an intermediary vertex .      For the network in , find three different flows, including one you believe is an optimal flow.   For each flow you found: identify the sources, sinks, and intermediary vertices.   For each flow you found: compute the sum ?     Conservation of Flow   For a capacited network , .      Prove .      Consider the network:  A network with multiple sources and sinks.       Find a (not necessarily optimal!) flow through this network with exactly two sources and exactly two sinks.    Add two vertices to this network: , and two edges from to two vertices, and two edges to from two different vertices, each with infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.      To be able to address the sort of questions we wish to ask, we will restrict ourselves to networks with a unique fixed source or sink, with no edges from the sink or to the source. In light of , this is not really much of a restriction.     Max Flow    Suppose we have a capacitated network with a unique fixed source and sink .  We wish to define a maximization linear program with decision variables .    Define the objective function both in terms of variables and . Explain why these are equivalent (can you prove it?).    For each edge , there is a natural inequality constraint for the decision variables associated with this edge. What is this inequality?    For each vertex not our source or sink, there is an equality constraint for the decision variables associated with this vertex. Which is this equality?                                    There is an additional type of inequality for this problem, what is it?    Write out the primal max problem for as a non-canonical Tucker Tableau.    Solve this problem:        Let denote the dual variable for associated with vertex and let denote the dual variable associated with edge .  Describe the dual min program.     "
 },
 {
   "id": "exploration-flow",
@@ -1501,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "8.1.4",
   "title": "",
-  "body": "  Consider the network:  A network with multiple sources and sinks.       Find a (not neccisarily optimal!) flow through this network with exactly two sources and exactly two sinks.    Add two vertices to this network: , and two edges from to two vertices, and two edges to from two different vertices, each with infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.   "
+  "body": "  Consider the network:  A network with multiple sources and sinks.       Find a (not necessarily optimal!) flow through this network with exactly two sources and exactly two sinks.    Add two vertices to this network: , and two edges from to two vertices, and two edges to from two different vertices, each with infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.   "
 },
 {
   "id": "sec-networkflow-10",
@@ -1519,7 +1519,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "8.1.5",
   "title": "",
-  "body": "  Suppose we have a capacitated network with a unique fixed source and sink .  We wish to define a maximization linear program with decision variables .    Define the objective function both in terms of variables and . Explain why these are equivalent (can you prove it?).    For each edge , there is a natural inequality constraint for the decision variables associated with this edge. What is this inequality?    For each vertex not our source or sink, there is an equality constraint for the decision variables associated with this vertex. Which is this equality?                                    There is an additional type of inequality for this problem, what is it?    Write out the primal max problem for as a non-canonical Tucker Tableau.    Solve this problem:        Let denote the dual variable associated with vertex and let denote the dual variable associated with edge .  Describe the dual min program   "
+  "body": "  Suppose we have a capacitated network with a unique fixed source and sink .  We wish to define a maximization linear program with decision variables .    Define the objective function both in terms of variables and . Explain why these are equivalent (can you prove it?).    For each edge , there is a natural inequality constraint for the decision variables associated with this edge. What is this inequality?    For each vertex not our source or sink, there is an equality constraint for the decision variables associated with this vertex. Which is this equality?                                    There is an additional type of inequality for this problem, what is it?    Write out the primal max problem for as a non-canonical Tucker Tableau.    Solve this problem:        Let denote the dual variable for associated with vertex and let denote the dual variable associated with edge .  Describe the dual min program.   "
 },
 {
   "id": "sec-maxflowmincut",
@@ -1528,7 +1528,70 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Max Flow - Min Cut",
-  "body": " Max Flow - Min Cut  "
+  "body": " Max Flow - Min Cut    Recall . Suppose that we wish to install a toll booth on these bridges so that each person going to pays a toll at least once. The cost of installing a toll booth on a bridge is proportional to it's capacity.    Find three different ways to install these booths, and find what you believe is the cheapest way to do so.      Given a capacitated network , a cut of is a partition of the vertex set into non-empty subsets , where .  The capacity of a cut is the sum .     From , find three different cuts and their capacities.  What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?   Prove that for any capacitated network, and flow on this network that the value of this flow is equal to (Work it out for the example cuts you found first)      Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as       Explain why we may let without affecting the solution.    Verify that we may simplify the dual solution as:       Suppose . What could be? Which would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Is it possible for all the to have the same value?    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.      We explore a way of generating potential minimum cuts using a maximum flow.  Recall and your proposed maximum flow .    Let , we recursively define by adding to if either:    .     .       Let . What is the cut capacity of ?      We now prove that the minimum cut capacity is equal to the maximum flow.    Why does the primal max problem achieve optimality?  Call the maximum flow , with flow on each edge .    Let , we recursively define by adding to if either:    .     .   and repeating until we stabilize, why must we eventually stabilize?    Show that for any in , there is an -path  : a sequence of vertices starting to , where between either .    An -path.     We would call the edges to be forward edges and  backwards edges of .    Suppose (by way of contradiction) that . There is by (c) an -path from to .  Let   Why is ?    We define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Explain why this is still a valid network flow.    Explain why has a greater value than . Why must ?    Define . Prove that for any , we have that .  (Not neccesary for this proof, but to tie things in, if , what does that say about from the dual program in ? If , what does that say about ? )    Use to show that the value of is equal to the cut capacity of . (Proving the result!)    Going back to if we let for and for , what is the value of the dual min objective?      Let be a capacitated directed network with unique fixed source and unique fixed sink, no edges into the source, and no edges out of the sink. Then the value of the maximalflow from to is equal to the minimal cut capacity in .    "
+},
+{
+  "id": "sec-maxflowmincut-2",
+  "level": "2",
+  "url": "sec-maxflowmincut.html#sec-maxflowmincut-2",
+  "type": "Exploration",
+  "number": "8.2.1",
+  "title": "",
+  "body": "  Recall . Suppose that we wish to install a toll booth on these bridges so that each person going to pays a toll at least once. The cost of installing a toll booth on a bridge is proportional to it's capacity.    Find three different ways to install these booths, and find what you believe is the cheapest way to do so.   "
+},
+{
+  "id": "def-cut",
+  "level": "2",
+  "url": "sec-maxflowmincut.html#def-cut",
+  "type": "Definition",
+  "number": "8.2.1",
+  "title": "",
+  "body": "  Given a capacitated network , a cut of is a partition of the vertex set into non-empty subsets , where .  The capacity of a cut is the sum .   "
+},
+{
+  "id": "activity-cutflow",
+  "level": "2",
+  "url": "sec-maxflowmincut.html#activity-cutflow",
+  "type": "Activity",
+  "number": "8.2.2",
+  "title": "",
+  "body": " From , find three different cuts and their capacities.  What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?   Prove that for any capacitated network, and flow on this network that the value of this flow is equal to (Work it out for the example cuts you found first)   "
+},
+{
+  "id": "activity-dualflow",
+  "level": "2",
+  "url": "sec-maxflowmincut.html#activity-dualflow",
+  "type": "Activity",
+  "number": "8.2.3",
+  "title": "",
+  "body": "  Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as       Explain why we may let without affecting the solution.    Verify that we may simplify the dual solution as:       Suppose . What could be? Which would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Is it possible for all the to have the same value?    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.   "
+},
+{
+  "id": "sec-maxflowmincut-6",
+  "level": "2",
+  "url": "sec-maxflowmincut.html#sec-maxflowmincut-6",
+  "type": "Activity",
+  "number": "8.2.4",
+  "title": "",
+  "body": "  We explore a way of generating potential minimum cuts using a maximum flow.  Recall and your proposed maximum flow .    Let , we recursively define by adding to if either:    .     .       Let . What is the cut capacity of ?   "
+},
+{
+  "id": "sec-maxflowmincut-7",
+  "level": "2",
+  "url": "sec-maxflowmincut.html#sec-maxflowmincut-7",
+  "type": "Activity",
+  "number": "8.2.5",
+  "title": "",
+  "body": "  We now prove that the minimum cut capacity is equal to the maximum flow.    Why does the primal max problem achieve optimality?  Call the maximum flow , with flow on each edge .    Let , we recursively define by adding to if either:    .     .   and repeating until we stabilize, why must we eventually stabilize?    Show that for any in , there is an -path  : a sequence of vertices starting to , where between either .    An -path.     We would call the edges to be forward edges and  backwards edges of .    Suppose (by way of contradiction) that . There is by (c) an -path from to .  Let   Why is ?    We define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Explain why this is still a valid network flow.    Explain why has a greater value than . Why must ?    Define . Prove that for any , we have that .  (Not neccesary for this proof, but to tie things in, if , what does that say about from the dual program in ? If , what does that say about ? )    Use to show that the value of is equal to the cut capacity of . (Proving the result!)    Going back to if we let for and for , what is the value of the dual min objective?   "
+},
+{
+  "id": "thm-maxflowmincut",
+  "level": "2",
+  "url": "sec-maxflowmincut.html#thm-maxflowmincut",
+  "type": "Theorem",
+  "number": "8.2.2",
+  "title": "",
+  "body": "  Let be a capacitated directed network with unique fixed source and unique fixed sink, no edges into the source, and no edges out of the sink. Then the value of the maximalflow from to is equal to the minimal cut capacity in .   "
 },
 {
   "id": "backmatter-2",
