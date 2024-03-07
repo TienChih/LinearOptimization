@@ -211,7 +211,7 @@
   </activity>
 
 
-  <activity>
+  <activity xml:id="activity-maxflowmincutproof">
     <introduction>
       <p>
         We now prove that the minimum cut capacity is equal to the maximum flow.
@@ -368,6 +368,15 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
       </p>
     </statement>
   </theorem>
+
+  <activity>
+    <statement>
+      <p>
+        Suppose we had a non-optimal flow <m>f</m>, how could we adopt the procedure
+        in <xref ref="activity-maxflowmincutproof"/> to obtain a better flow?
+      </p>
+    </statement>
+  </activity>
   
 
   

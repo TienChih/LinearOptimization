@@ -367,23 +367,23 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              Maximize <m>u=\displaystyle \max_{1\leq i\leq n}E_j(P)</m>.
+              Maximize <m>u=\displaystyle \max_{1\leq j\leq m}E_j(P)</m>.
             </p>
           </li>
           <li>
             <p>
-              Maximize <m>u=\displaystyle \min_{1\leq i\leq n}E_j(P)</m>.
+              Maximize <m>u=\displaystyle \min_{1\leq j\leq m}E_j(P)</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Minimize <m>u=\displaystyle \max_{1\leq i\leq n}E_j(P)</m>.
+              Minimize <m>u=\displaystyle \max_{1\leq j\leq m}E_j(P)</m>.
             </p>
           </li>
           <li>
             <p>
-              Minimize <m>u=\displaystyle \min_{1\leq i\leq n}E_j(P)</m>.
+              Minimize <m>u=\displaystyle \min_{1\leq j\leq m}E_j(P)</m>.
             </p>
           </li>
           
@@ -402,33 +402,33 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>v=F_i(P) = \displaystyle \sum_{j=1}^m a_{ij}</m>.
+              <m>F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>v=F_i(P) = \displaystyle \sum_{j=1}^m q_j</m>.
+              <m>F_i(Q) = \displaystyle \sum_{j=1}^m q_j</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>v=F_i(P) = \displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
+              <m>F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
             </p>
           </li>
 
           <li>
             <p>
-              <m>v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}</m>.
+              <m>F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j</m>.
+              <m>F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
+              <m>F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
             </p>
           </li>
 
@@ -452,23 +452,23 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              Maximize <m>\displaystyle \max_{1\leq j\leq m}F_i(Q)</m>.
+              Maximize <m>v=\displaystyle \max_{1\leq i\leq n}F_i(Q)</m>.
             </p>
           </li>
           <li>
             <p>
-              Maximize <m>\displaystyle \min_{1\leq j\leq m}F_i(Q)</m>.
+              Maximize <m>v=\displaystyle \min_{1\leq i\leq n}F_i(Q)</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Minimize <m>\displaystyle \max_{1\leq j\leq m}F_i(Q)</m>.
+              Minimize <m>v=\displaystyle \max_{1\leq i\leq n}F_i(Q)</m>.
             </p>
           </li>
           <li>
             <p>
-              Minimize <m>\displaystyle \min_{1\leq j\leq m}F_i(Q)</m>.
+              Minimize <m>v=\displaystyle \min_{1\leq i\leq n}F_i(Q)</m>.
             </p>
           </li>
           
