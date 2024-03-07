@@ -71,13 +71,13 @@ P^\top  = \begin{bmatrix} p_1 \\ p_2 \\ \vdots \\ p_n\end{bmatrix}, p_i\geq 0, \
 <div class="para">If Colleen somehow figures out Rowan’s strategy <span class="process-math">\(P\text{,}\)</span> which column <span class="process-math">\(j\)</span> should she choose?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para">Rowan is aware that Colleen is a sharp player can likely figure out <span class="process-math">\(P\text{.}\)</span>  How then should he choose his strategy? <span class="process-math">\(P\text{?}\)</span>
 </div> <ol class="upper-alpha cols2">
-<li><div class="para">Maximize <span class="process-math">\(u=\displaystyle \max_{1\leq i\leq n}E_j(P)\text{.}\)</span>
+<li><div class="para">Maximize <span class="process-math">\(u=\displaystyle \max_{1\leq j\leq m}E_j(P)\text{.}\)</span>
 </div></li>
-<li><div class="para">Maximize <span class="process-math">\(u=\displaystyle \min_{1\leq i\leq n}E_j(P)\text{.}\)</span>
+<li><div class="para">Maximize <span class="process-math">\(u=\displaystyle \min_{1\leq j\leq m}E_j(P)\text{.}\)</span>
 </div></li>
-<li><div class="para">Minimize <span class="process-math">\(u=\displaystyle \max_{1\leq i\leq n}E_j(P)\text{.}\)</span>
+<li><div class="para">Minimize <span class="process-math">\(u=\displaystyle \max_{1\leq j\leq m}E_j(P)\text{.}\)</span>
 </div></li>
-<li><div class="para">Minimize <span class="process-math">\(u=\displaystyle \min_{1\leq i\leq n}E_j(P)\text{.}\)</span>
+<li><div class="para">Minimize <span class="process-math">\(u=\displaystyle \min_{1\leq j\leq m}E_j(P)\text{.}\)</span>
 </div></li>
 </ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para logical">
@@ -89,23 +89,23 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 \end{equation*}
 </div>
 </div> <div class="para">If Rowan chooses row <span class="process-math">\(i\)</span> as his strategy, what is <span class="process-math">\(F_i(Q)\)</span> the expected value of Colleen’s losses?</div> <ol class="upper-alpha cols2">
-<li><div class="para"><span class="process-math">\(v=F_i(P) = \displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(v=F_i(P) = \displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(v=F_i(P) = \displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(v=F_i(P) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(F_i(Q) = \displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para">If Rowan somehow figures out Colleen’s strategy <span class="process-math">\(Q\text{,}\)</span> which row <span class="process-math">\(i\)</span> should he choose?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para">Colleen is also aware that Rowan is a sharp player can likely figure out <span class="process-math">\(Q\text{.}\)</span>  How then should she choose her strategy? <span class="process-math">\(Q\text{?}\)</span>
 </div> <ol class="upper-alpha cols2">
-<li><div class="para">Maximize <span class="process-math">\(\displaystyle \max_{1\leq j\leq m}F_i(Q)\text{.}\)</span>
+<li><div class="para">Maximize <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
 </div></li>
-<li><div class="para">Maximize <span class="process-math">\(\displaystyle \min_{1\leq j\leq m}F_i(Q)\text{.}\)</span>
+<li><div class="para">Maximize <span class="process-math">\(v=\displaystyle \min_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
 </div></li>
-<li><div class="para">Minimize <span class="process-math">\(\displaystyle \max_{1\leq j\leq m}F_i(Q)\text{.}\)</span>
+<li><div class="para">Minimize <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
 </div></li>
-<li><div class="para">Minimize <span class="process-math">\(\displaystyle \min_{1\leq j\leq m}F_i(Q)\text{.}\)</span>
+<li><div class="para">Minimize <span class="process-math">\(v=\displaystyle \min_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
 </div></li>
 </ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para">Consider the primal-dual program encoded by the tableau:</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
