@@ -242,49 +242,100 @@ true);
 <article class="exploration project-like" id="sec-simplexsage-2"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.6.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-simplexsage-2-1-1">
-<div class="para">Suppose we wanted to solve the following maximization problem by hand:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|c}
-x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
-\hline
-8 \amp  2 \amp 4 \amp 5 \amp 3 \amp -t_1 \\
--4 \amp  6 \amp 2 \amp 7 \amp 4 \amp -t_2 \\
-2 \amp  8 \amp 4 \amp 3 \amp 2 \amp -t_3 \\
-\hline
-1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">How annoying would this be?</div>
-</div> <ol class="upper-alpha cols2">
-<li id="sec-simplexsage-2-1-2-1"><div class="para" id="sec-simplexsage-2-1-2-1-1">Very.</div></li>
-<li id="sec-simplexsage-2-1-2-2"><div class="para" id="sec-simplexsage-2-1-2-2-1">Extraordinarily.</div></li>
-<li id="sec-simplexsage-2-1-2-3"><div class="para" id="sec-simplexsage-2-1-2-3-1">Horrifically.</div></li>
-<li id="sec-simplexsage-2-1-2-4"><div class="para" id="sec-simplexsage-2-1-2-4-1">I have nothing to do for the next hour anyway.  Hope I don’t forget a minus sign!</div></li>
+<div class="para" id="sec-simplexsage-2-1-1">Suppose we wanted to solve the following maximization problem by hand:</div> <div class="para" id="sec-simplexsage-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para" id="sec-simplexsage-2-1-3">How annoying would this be?</div> <ol class="upper-alpha cols2">
+<li id="sec-simplexsage-2-1-4-1"><div class="para" id="sec-simplexsage-2-1-4-1-1">Very.</div></li>
+<li id="sec-simplexsage-2-1-4-2"><div class="para" id="sec-simplexsage-2-1-4-2-1">Extraordinarily.</div></li>
+<li id="sec-simplexsage-2-1-4-3"><div class="para" id="sec-simplexsage-2-1-4-3-1">Horrifically.</div></li>
+<li id="sec-simplexsage-2-1-4-4"><div class="para" id="sec-simplexsage-2-1-4-4-1">I have nothing to do for the next hour anyway.  Hope I don’t forget a minus sign!</div></li>
 </ol></article><div class="para" id="sec-simplexsage-3">Given that we have a developed an algorithm, guaranteed to terminate, using only arithmetic in it’s steps, it seems reasonable to think this can be done via a computer.</div>
 <article class="activity project-like" id="activity-initialsage"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-initialsage-1"><div class="para logical" id="activity-initialsage-1-1">
-<div class="para">Let’s start simple, suppose we want to solve:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-x_1 \amp x_2 \amp  -1\\
-\hline
-2 \amp -1 \amp 5 \amp  -t_1 \\
--2 \amp 1 \amp 2  \amp   -t_2 \\
-3 \amp 2 \amp 12  \amp   -t_3 \\
-\hline
-5 \amp  4 \amp  0  \amp = f \\
-\hline
-\end{array} 
-\end{equation*}
+<div class="introduction" id="activity-initialsage-1">
+<div class="para" id="activity-initialsage-1-1">Let’s start simple, suppose we want to solve:</div> <div class="para" id="activity-initialsage-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2  \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(12\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(5 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(4 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div>
 </div>
-</div></div>
 <article class="task exercise-like" id="activity-initialsage-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-initialsage-2-1-1">We can enter the above problem into sage via: <pre id="activity-initialsage-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = ([2, -1], [-2, 1], [3, 2])
@@ -301,28 +352,48 @@ P
 D
 </script></pre> We will understand that <span class="process-math">\(t_1=x_3, t_2=x_4, t_3=x_5\text{.}\)</span>
 </div></article><article class="task exercise-like" id="activity-initialsage-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para logical" id="activity-initialsage-5-1-1">
-<div class="para">If we want to pivot from <span class="process-math">\(x_4\)</span> to <span class="process-math">\(x_2\)</span> we can write that as: <pre id="activity-initialsage-5-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("x2")
+<div class="para" id="activity-initialsage-5-1-1">If we want to pivot from <span class="process-math">\(x_4\)</span> to <span class="process-math">\(x_2\)</span> we can write that as: <pre id="activity-initialsage-5-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("x2")
 D.leave("x4")
 D
 </script></pre> Then we can update the dictionary: <pre id="activity-initialsage-5-1-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.update()
 D
-</script></pre> We should read this as:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|c}
-x_1 \amp x_4 \amp  -1\\
-\hline
-0 \amp 1 \amp 7 \amp  -x_3 \\
--2 \amp 1 \amp 2  \amp   -x_2 \\
-7 \amp -2 \amp 8  \amp   -x_5 \\
-\hline
-13 \amp  -4 \amp  -8  \amp = f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-</div></article><article class="task exercise-like" id="activity-initialsage-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+</script></pre> We should read this as:</div> <div class="para" id="activity-initialsage-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0  \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(7 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(=2 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_5\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(13 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-4 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-8 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="activity-initialsage-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-initialsage-6-1-1">What pivot should we do next?  Encode it below: <pre id="activity-initialsage-6-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("FIX_ME")
 D.leave("FIX_ME2")
 D.update()
@@ -334,23 +405,54 @@ D
 </div></article></article><article class="activity project-like" id="sec-simplexsage-5"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.6.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-simplexsage-5-1"><div class="para logical" id="sec-simplexsage-5-1-1">
-<div class="para">So if we want to solve:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cccc|c|c}
-x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
-\hline
-8 \amp  2 \amp 4 \amp 5 \amp 3 \amp -t_1 \\
--4 \amp  6 \amp 2 \amp 7 \amp 4 \amp -t_2 \\
-2 \amp  8 \amp 4 \amp 3 \amp 2 \amp -t_3 \\
-\hline
-1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">We can encode this in: <pre id="sec-simplexsage-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="introduction" id="sec-simplexsage-5-1">
+<div class="para" id="sec-simplexsage-5-1-1">So if we want to solve:</div> <div class="para" id="sec-simplexsage-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para" id="sec-simplexsage-5-1-3">We can encode this in: <pre id="sec-simplexsage-5-1-3-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = ([8, 2, 4, 5], [-4, 6, 2, 7], [2, 8,4,3])
 b = (3, 4, 2)
 c = (1, 3, 2, 1)
@@ -358,7 +460,7 @@ P = InteractiveLPProblemStandardForm(A, b, c,)
 P
 </script></pre>
 </div>
-</div></div>
+</div>
 <article class="task exercise-like" id="sec-simplexsage-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-simplexsage-5-2-1-1">We now encode the above problem in a dictionary. <pre id="sec-simplexsage-5-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 D = P.initial_dictionary()
