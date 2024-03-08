@@ -823,19 +823,48 @@ true);
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div></div></article><article class="task exercise-like" id="sec-simplexmax-5-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para logical" id="sec-simplexmax-5-8-1-1"><div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|ccc|c|}            
-\hline
-0 \amp 1 \amp 0 \amp 4  \\
-2 \amp 2  \amp 8 \amp  6  \\
-2 \amp 0  \amp 3 \amp  3  \\ 
-\hline
-5 \amp 3 \amp -4  \amp -23  \\
-\hline
-\end{array} 
-\end{equation*}
-</div></div></article></article><div class="para" id="sec-simplexmax-6">With all this, we finally may define our <em class="emphasis">Simplex Algorithm for Maximum Basic Feasible Tableaus</em>.</div>
+<div class="para" id="sec-simplexmax-5-8-1-1"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-23\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article></article><div class="para" id="sec-simplexmax-6">With all this, we finally may define our <em class="emphasis">Simplex Algorithm for Maximum Basic Feasible Tableaus</em>.</div>
 <article class="definition definition-like" id="def-simplexcanonmaxbf"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h3>
@@ -1108,24 +1137,56 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-simplexmax-11-1">
-<div class="para" id="sec-simplexmax-11-1-1">We now want to concoct a scheme to turn all the <span class="process-math">\(b_i\)</span> non-negative, if possible.</div> <div class="para logical" id="sec-simplexmax-11-1-2">
-<div class="para">Consider the tableau:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|ccc|c|}          
-\hline
-a_{11} \amp a_{12} \amp a_{13} \amp b_1\\
-a_{21} \amp a_{22} \amp a_{23} \amp b_2\\
-a_{31} \amp a_{32} \amp a_{33} \amp b_3\\
-a_{41} \amp a_{42} \amp a_{43} \amp b_4\\
-\hline
-c_1 \amp  c_2 \amp c_3 \amp 0\\
-\hline
-\end{array} 
-\end{equation*}
-</div>
-<div class="para">Suppose that <span class="process-math">\(b_2\lt 0, b_3, b_4&gt;0\text{.}\)</span> We want to turn <span class="process-math">\(b_2\)</span> positive while making sure <span class="process-math">\(b_3, b_4\)</span> stay positive.</div>
-</div>
+<div class="para" id="sec-simplexmax-11-1-1">We now want to concoct a scheme to turn all the <span class="process-math">\(b_i\)</span> non-negative, if possible.</div> <div class="para" id="sec-simplexmax-11-1-2">Consider the tableau:</div> <div class="para" id="sec-simplexmax-11-1-3"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{13}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{23}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{33}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{41}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{42}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{43}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para" id="sec-simplexmax-11-1-4">Suppose that <span class="process-math">\(b_2\lt 0, b_3, b_4&gt;0\text{.}\)</span> We want to turn <span class="process-math">\(b_2\)</span> positive while making sure <span class="process-math">\(b_3, b_4\)</span> stay positive.</div>
 </div>
 <article class="task exercise-like" id="sec-simplexmax-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-simplexmax-11-2-1-1">Suppose each <span class="process-math">\(a_{2j}\geq 0\text{,}\)</span> what can we say about the associated problem?</div></article><article class="task exercise-like" id="sec-simplexmax-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
@@ -1159,31 +1220,73 @@ c_1 \amp  c_2 \amp c_3 \amp 0\\
 </h3>
 <div class="introduction" id="sec-simplexmax-14-1"><div class="para" id="sec-simplexmax-14-1-1">Apply <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" title="Definition 3.3.2">Definition 3.3.2</a> to the following tableau:</div></div>
 <article class="task exercise-like" id="sec-simplexmax-14-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="sec-simplexmax-14-2-1-1"><div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|}          
-\hline
--1 \amp -2 \amp -3\\
-1 \amp 1 \amp 2\\
-\hline
-2 \amp  -4 \amp 0\\
-\hline
-\end{array} 
-\end{equation*}
-</div></div></article><article class="task exercise-like" id="sec-simplexmax-14-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="sec-simplexmax-14-3-1-1"><div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{|cc|c|}          
-\hline
--3 \amp -2 \amp -6\\
-3 \amp 5 \amp 20\\
-2 \amp 0 \amp 4\\
-\hline
-3 \amp  4 \amp 0\\
-\hline
-\end{array} 
-\end{equation*}
-</div></div></article></article></section></div>
+<div class="para" id="sec-simplexmax-14-2-1-1"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="sec-simplexmax-14-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-simplexmax-14-3-1-1"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-curious.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simplexmin.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
