@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Simplex Algorithm for Canonical Minimization</title>
+<title>Algorithms for Max Flow and Min Cut</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -137,7 +137,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-cycling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
@@ -164,13 +164,13 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-convexity.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">3</span> <span class="title">The Simplex Algorithm</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">3.2</span> <span class="title">A Curious Situation</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">3.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Cycling</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Using Sage</span></a></div></li>
 </ul>
@@ -209,204 +209,72 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">8</span> <span class="title">Network Flows</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Max Flow - Min Cut</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-flowcutalgorithm.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Algorithms for Max Flow and Min Cut</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simplexmin"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">The Simplex Algorithm for Canonical Minimization</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-flowcutalgorithm"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">8.3</span><span class="space"> </span><span class="title">Algorithms for Max Flow and Min Cut</span>
 </h2>
-<article class="definition definition-like" id="def-negativetranspose"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+<article class="exploration project-like" id="exploration-transportation"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="def-negativetranspose-1-1">Recall that the canonical minimization problem:</div> <div class="para logical" id="def-negativetranspose-1-2">
-<div class="displaymath process-math" id="def-negativetranspose-1-2-1">
-\begin{align*}
-\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
-\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1\\
-a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2\\
-\vdots \amp   \vdots\\
-a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m\\
-x_1, x_2, \ldots, x_n\amp \geq  0
-\end{align*}
+<div class="introduction" id="exploration-transportation-1">
+<div class="para" id="exploration-transportation-1-1">Consider the following capacitated network with source <span class="process-math">\(v_0\)</span> and sink <span class="process-math">\(v_5\text{:}\)</span>
+</div> <div class="para" id="exploration-transportation-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exploration-maxflowalg.svg" role="img" class="contained" alt="A network with multiple sources and sinks."></div></div> <div class="para" id="exploration-transportation-1-3">Recall the procedure to produce improved flows in <a href="" class="xref" data-knowl="./knowl/xref/activity-maxflowmincutproof.html" title="Activity 8.2.5">Activity 8.2.5</a>.</div>
 </div>
-<div class="para">Where <span class="process-math">\(a_{i,j}, b_i, c_j, d\in \mathbb{R}\text{.}\)</span>
+<article class="task exercise-like" id="exploration-transportation-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-transportation-2-1-1">Begin with the zero-flow. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exploration-zeroflow.svg" role="img" class="contained" alt="A network with multiple sources and sinks."></div>
+</div> <div class="para" id="exploration-transportation-2-1-2">Consider the <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(v_0v_2v_4v_5\text{.}\)</span>  Apply <a href="" class="xref" data-knowl="./knowl/xref/activity-maxflowmincutproof.html" title="Activity 8.2.5">Activity 8.2.5</a> (d) to this path.  What is <span class="process-math">\(q\text{?}\)</span>
+</div></article><article class="task exercise-like" id="exploration-transportation-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-transportation-3-1-1">Adjust the flow on edges by <span class="process-math">\(q\)</span> appropriately.  Explain why we need not consider the edge <span class="process-math">\(v_2v_4\)</span> for any future <span class="process-math">\(\alpha\)</span>-paths.</div></article><article class="task exercise-like" id="exploration-transportation-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-transportation-4-1-1">Pick another <span class="process-math">\(\alpha\)</span>-path where <span class="process-math">\(q&gt;0\)</span> and repeat until we achieve a maximum flow.</div> <details id="exploration-transportation-4-1-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exploration-alphapathfilled.svg" role="img" class="contained" alt="A network with multiple sources and sinks."></div></div></details></article><article class="task exercise-like" id="exploration-transportation-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-transportation-5-1-1">Use the maximum flow and the argument in <a href="" class="xref" data-knowl="./knowl/xref/activity-maxflowmincutproof.html" title="Activity 8.2.5">Activity 8.2.5</a>  to find a minimum cut.</div></article></article><article class="definition definition-like" id="def-maxflowalgorithm"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Max Flow Algorithm.</span>
+</h3> <div class="para" id="def-maxflowalgorithm-2-1">We describe an algorithm to find the maximum flow for <span class="process-math">\(N\text{,}\)</span>  a capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{:}\)</span>
+</div> <ol class="decimal">
+<li id="def-maxflowalgorithm-2-2-1"><div class="para" id="def-maxflowalgorithm-2-2-1-1">INITIALIZE: We begin with any feasible flow <span class="process-math">\(f\)</span> (including the zero flow.)</div></li>
+<li id="def-maxflowalgorithm-2-2-2"><div class="para logical" id="def-maxflowalgorithm-2-2-2-1">
+<div class="para">Pick an <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> in <span class="process-math">\(N\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> such that:</div>
+<ul class="disc"><li id="def-maxflowalgorithm-2-2-2-1-6-1">
+<div class="para" id="def-maxflowalgorithm-2-2-2-1-6-1-1">Each forward edge of <span class="process-math">\(P\)</span> satisfies <span class="process-math">\(x_{ij} \lt c_{ij}\text{.}\)</span>
 </div>
-</div> <div class="para" id="def-negativetranspose-1-3">This problem may be recorded in the following tableau:</div> <div class="para" id="def-negativetranspose-1-4"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_n\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_n\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_m\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_m\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
-</tr>
-</table></div></div> <div class="para" id="def-negativetranspose-1-5">The <em class="emphasis">negative transpose</em> of this tableau is:</div> <div class="para" id="def-negativetranspose-1-6"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_n\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{11}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{21}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-a_{n1}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-b_1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{12}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-a_{22}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-a_{n2}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-b_2\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-a_{1m}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-a_{2m}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-a_{nm}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-b_n\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_n\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-c_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-c_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-c_m\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-d\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="activity project-like" id="sec-simplexmin-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+                  <div class="para" id="def-maxflowalgorithm-2-2-2-1-6-1-2-1">Eack backwards edge satisfies <span class="process-math">\(x_{ij} &gt;0\text{.}\)</span>
+</div>
+                </li></ul>
+<div class="para">(If no such <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> exists, GOTO 5)</div>
+</div></li>
+<li id="def-maxflowalgorithm-2-2-3"><div class="para logical" id="def-maxflowalgorithm-2-2-3-1">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}.
+\end{equation*}
+</div>
+</div></li>
+<li id="def-maxflowalgorithm-2-2-4">
+<div class="para" id="def-maxflowalgorithm-2-2-4-1">Define a new flow <span class="process-math">\(f'\)</span> as follows: for each forward edge of <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\((v_i, v_j)\text{,}\)</span> we add <span class="process-math">\(x_{ij}'=q+x_{ij}\text{.}\)</span>  For each backwards edge <span class="process-math">\((v_j, v_i)\)</span> we subtract <span class="process-math">\(x_{ji}' = x_{ji}-q\text{.}\)</span>
+</div>
+<div class="para" id="def-maxflowalgorithm-2-2-4-2">Let <span class="process-math">\(f:=f'\)</span> and GOTO 2</div>
+</li>
+<li id="def-maxflowalgorithm-2-2-5"><div class="para" id="def-maxflowalgorithm-2-2-5-1">STOP.  The flow is now optimal.</div></li>
+</ol></article><article class="activity project-like" id="sec-flowcutalgorithm-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-simplexmin-3-1-1">Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.</div></article><div class="para" id="sec-simplexmin-4">This allows us to define a minimization algorithm.</div>
-<article class="definition definition-like" id="def-simplexmin"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h3>
-<div class="para" id="def-simplexmin-1-1">The Simplex Algorithm for Minimization Tableaus</div> <ol class="decimal">
-<li id="def-simplexmin-1-2-1"><div class="para" id="p-derived-def-simplexmin-1-2-1">TAKE the Negative Transpose.</div></li>
-<li id="def-simplexmin-1-2-2"><div class="para" id="p-derived-def-simplexmin-1-2-2">APPLY <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" title="Definition 3.3.2">Definition 3.3.2</a> .</div></li>
-</ol></article><article class="activity project-like" id="sec-simplexmin-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-simplexmin-6-1-1">Apply <a href="" class="xref" data-knowl="./knowl/xref/def-simplexmin.html" title="Definition 3.4.2">Definition 3.4.2</a> to the following minimization tableau:</div> <div class="para" id="sec-simplexmin-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(20\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(25\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(300\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(40\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(500\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1000\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(800\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=t_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article></section></div>
+<div class="para" id="sec-flowcutalgorithm-4-1">Prove that the Max Flow Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" title="Definition 8.3.1: Max Flow Algorithm">Definition 8.3.1</a> terminates at a maximum flow.</div></article><article class="definition definition-like" id="def-mincutalgorithm"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Min Cut Algorithm.</span>
+</h3> <div class="para" id="def-mincutalgorithm-2-1"></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-cycling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
