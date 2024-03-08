@@ -377,6 +377,307 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
       </p>
     </statement>
   </activity>
+
+
+  <subsection xml:id="subsec-flowcutalgorithms">
+    <title>Max Flow-Min Cut Algorithms</title>
+    <title>Algorithms for Max Flow and Min Cut</title>
+
+
+  <exploration xml:id="exploration-transportation">
+    <introduction>
+      <p>
+        Consider the following capacitated network with source <m>v_0</m> and sink <m>v_5</m>:
+      </p>
+      <p>
+        <image xml:id="exploration-maxflowalg">
+          <shortdescription>A network with multiple sources and sinks.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+
+              \node[mycircle] (v0) at (0,0) {$v_0$};  
+              \node[mycircle] (v1) at (2,1) {$v_1$};  
+              \node[mycircle] (v2) at (2,-1) {$v_2$};  
+
+              \node[mycircle] (v3) at (4,1) {$v_3$};  
+              \node[mycircle] (v4) at (4,-1) {$v_4$};  
+              
+              \node[mycircle] (v5) at (6,0) {$v_5$};  
+
+              
+
+              \draw[->] (v0) --node[above left, sloped, pos= 0.5]{\tiny$6$} (v1);
+              \draw[->] (v0) --node[below left , sloped, pos= 0.5]{\tiny$3$} (v2);
+
+              \draw[->] (v1) --node[above, sloped, pos= 0.5]{\tiny$2$} (v3);
+              \draw[->] (v1) --node[below left, sloped, pos= 0.35]{\tiny$3$} (v4);
+
+              \draw[->] (v2) --node[above left, sloped, pos= 0.35]{\tiny$2$} (v3);
+              \draw[->] (v2) --node[below, sloped, pos= 0.5]{\tiny$2$} (v4);
+
+              \draw[->] (v3) --node[above right, sloped, pos= 0.5]{\tiny$4$} (v5);
+              \draw[->] (v4) --node[below right , sloped, pos= 0.5]{\tiny$5$} (v5);
+              
+            \end{tikzpicture}
+          </latex-image>
+          
+        </image>
+      </p>
+      <p>
+        Recall the procedure to produce improved flows in <xref ref="activity-maxflowmincutproof"/>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Begin with the zero-flow.
+          <image xml:id="exploration-zeroflow">
+            <shortdescription>A network with multiple sources and sinks.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+
+              \node[mycircle] (v0) at (0,0) {$v_0$};  
+              \node[mycircle] (v1) at (2,1) {$v_1$};  
+              \node[mycircle] (v2) at (2,-1) {$v_2$};  
+
+              \node[mycircle] (v3) at (4,1) {$v_3$};  
+              \node[mycircle] (v4) at (4,-1) {$v_4$};  
+              
+              \node[mycircle] (v5) at (6,0) {$v_5$};  
+
+              
+
+              \draw[->] (v0) --node[above, sloped, pos= 0.5]{\tiny$6$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v1);
+              \draw[->] (v0) --node[below , sloped, pos= 0.5]{\tiny$3$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v2);
+
+              \draw[->] (v1) --node[above, sloped, pos= 0.5]{\tiny$2$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v3);
+              \draw[->] (v1) --node[below , sloped, pos= 0.25]{\tiny$3$}node[above  , inner sep=0.5pt, draw, circle, sloped, pos= 0.25]{\tiny$0$} (v4);
+
+              \draw[->] (v2) --node[above , sloped, pos= 0.25]{\tiny$2$}node[below  , inner sep=0.5pt, draw, circle, sloped, pos= 0.25]{\tiny$0$}  (v3);
+              \draw[->] (v2) --node[below, sloped, pos= 0.5]{\tiny$2$}node[above  , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v4);
+
+              \draw[->] (v3) --node[above , sloped, pos= 0.5]{\tiny$4$}node[below  , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v5);
+              \draw[->] (v4) --node[below  , sloped, pos= 0.5]{\tiny$5$}node[above  , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v5);
+              
+            \end{tikzpicture}
+            </latex-image>
+            
+          </image>
+        </p>
+        <p>
+          Consider the <m>\alpha</m>-path <m>v_0v_2v_4v_5</m>.  Apply <xref ref="activity-maxflowmincutproof"/> (d)
+          to this path.  What is <m>q</m>?
+        </p>
+        
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Adjust the flow on edges by <m>q</m> appropriately.  Explain why we need not consider the edge
+          <m>v_2v_4</m> for any future <m>\alpha</m>-paths.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pick another <m>\alpha</m>-path where <m>q>0</m> and repeat until we achieve a maximum flow.
+        </p>
+        <hint>
+          <image xml:id="exploration-alphapathfilled">
+            <shortdescription>A network with multiple sources and sinks.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+
+              \node[mycircle] (v0) at (0,0) {$v_0$};  
+              \node[mycircle] (v1) at (2,1) {$v_1$};  
+              \node[mycircle] (v2) at (2,-1) {$v_2$};  
+
+              \node[mycircle] (v3) at (4,1) {$v_3$};  
+              \node[mycircle] (v4) at (4,-1) {$v_4$};  
+              
+              \node[mycircle] (v5) at (6,0) {$v_5$};  
+
+              
+
+              \draw[->] (v0) --node[above, sloped, pos= 0.5]{\tiny$6$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v1);
+              \draw[->] (v0) --node[below , sloped, pos= 0.5]{\tiny$3$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$2$} (v2);
+
+              \draw[->] (v1) --node[above, sloped, pos= 0.5]{\tiny$2$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v3);
+              \draw[->] (v1) --node[below , sloped, pos= 0.25]{\tiny$3$}node[above  , inner sep=0.5pt, draw, circle, sloped, pos= 0.25]{\tiny$0$} (v4);
+
+              \draw[->] (v2) --node[above , sloped, pos= 0.25]{\tiny$2$}node[below  , inner sep=0.5pt, draw, circle, sloped, pos= 0.25]{\tiny$0$}  (v3);
+              \draw[->,  thick, dashed] (v2) --node[below, sloped, pos= 0.5]{\tiny$2$}node[above  , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$2$} (v4);
+
+              \draw[->] (v3) --node[above , sloped, pos= 0.5]{\tiny$4$}node[below  , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$0$} (v5);
+              \draw[->] (v4) --node[below  , sloped, pos= 0.5]{\tiny$5$}node[above  , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$2$} (v5);
+              
+            \end{tikzpicture}
+            </latex-image>
+            
+          </image>
+        </hint>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use the maximum flow and the argument in <xref ref="activity-maxflowmincutproof"/>  to find a minimum cut.
+        </p>
+      </statement>
+    </task>
+  </exploration>
+
+  <definition xml:id="def-maxflowalgorithm">
+    <title>Max Flow Algorithm</title>
+    
+    
+    <statement>
+      <p>
+        We describe an algorithm to find the maximum flow for <m>N</m>,  a capacitated network with a unique source <m>v_s</m> and sink <m>v_d</m>:
+      </p>
+      <ol>
+        <li>
+          <p>
+            INITIALIZE: We begin with any feasible flow <m>f</m> (including the zero flow.)
+          </p>
+        </li>
+        <li>
+          <p>
+            Pick an <m>\alpha</m>-path <m>P</m> in <m>N</m> from <m>v_s</m> to <m>v_d</m> such that:
+            <ul>
+              <li>
+                <p>
+                  Each forward edge of <m>P</m> satisfies <m>x_{ij} \lt c_{ij}</m>.
+                </p>
+                <li>
+                  <p>
+                    Eack backwards edge satisfies <m>x_{ij} >0</m>.
+                  </p>
+                </li>
+              </li>
+            </ul>
+            (If no such <m>\alpha</m>-path <m>P</m> exists, GOTO 5)
+          </p>
+        </li>
+        <li>
+          <p>
+            Compute <me> q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}.</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Define a new flow <m>f'</m> as follows: for each forward edge of <m>P</m>, <m>(v_i, v_j)</m>, we
+          add <m>x_{ij}'=q+x_{ij}</m>.  For each backwards edge <m>(v_j, v_i)</m> we subtract <m>x_{ji}' = x_{ji}-q</m>.
+          </p>
+          <p>
+            Let <m>f:=f'</m> and GOTO 2
+          </p>
+        </li>
+        <li>
+          <p>
+            STOP.  The flow is now optimal.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
+  <activity>
+    <p>
+      Prove that the Max Flow Algorithm <xref ref="def-maxflowalgorithm"/> terminates at a maximum flow.
+    </p>
+  </activity>
+
+  <definition xml:id="def-mincutalgorithm">
+    <title>Min Cut Algorithm</title>
+    
+    
+    <statement>
+      <p>
+        We describe an algorithm to find the minimum for <m>N</m>,  a capacitated network with a unique source <m>v_s</m> and sink <m>v_d</m>:
+      </p>
+      <ol>
+        <li>
+          <p>
+            INITIALIZE: We begin with a maximum flow <m>f'</m> and <m>V_1=\{v_s\}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            We add <m>v_j</m> to <m>V_1</m> if there is a <m>v_i\in V_1</m> such that either:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <m>(v_i,v_j)\in E, x'_{ij}\lt c_{ij}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(v_j,v_i)\in E, x'_{ji}>0</m>.
+              </p>
+            </li>
+          </ul>
+          <p>
+            If there is no such <m>v_i</m>, GOTO 4
+          </p>
+        </li>
+        <li>
+          <p>
+            GOTO 2
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>V_2 = V\backslash V_1</m>.
+          </p>
+          <p>
+            STOP <m>(V_1, V_2)</m> form a minimum cut.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+    
+  </subsection>
   
 
   

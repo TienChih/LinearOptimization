@@ -489,6 +489,12 @@
           If <m>\x, \y</m> are feasible, if <m>x_j\neq 0</m>, what does that
           say about <m>s_j</m>?
         </p>
+        <hint>
+          <p>
+            <m>s_j</m> is the coefficient of the normal vector for the plane <m>-x_j=0</m>.  If
+            the feasible solution does not lie on <m>-x_j=0</m>, what can we say about <m>s_j</m>?
+          </p>
+        </hint>
         <p>
           What about <m>s_j\neq 0</m>?, <m>y_i\neq0</m>? <m>t_i\neq0</m>?
         </p>

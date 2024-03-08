@@ -31,7 +31,7 @@
     <task>
       <statement>
         <p>
-          We can record the program with the following tableau, we denote the variables which can be negative with a bar (because I can't get circles too work.):
+          We can record the program with the following tableau, we denote the variables which can be negative by circling them:
           
         </p>
         <p>
