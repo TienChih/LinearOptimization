@@ -1576,18 +1576,109 @@
 
     <task>
       <statement>
+        
+        
         <p>
-          <me>
-            \begin{array}{|ccc|c|}            
-            \hline
-            0 \amp 1 \amp 0 \amp 4  \\
-            2 \amp 2  \amp 8 \amp  6  \\
-            2 \amp 0  \amp 3 \amp  3  \\ 
-            \hline
-            5 \amp 3 \amp -4  \amp -23  \\
-            \hline
-            \end{array} 
-          </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>8</m>
+              </cell>
+              <cell right="medium">
+                <m>6</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-23</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -2268,19 +2359,134 @@
       <p>
         Consider the tableau: 
 
-        <me>
-          \begin{array}{|ccc|c|}          
-          \hline
-           a_{11} \amp a_{12} \amp a_{13} \amp b_1\\
-           a_{21} \amp a_{22} \amp a_{23} \amp b_2\\
-           a_{31} \amp a_{32} \amp a_{33} \amp b_3\\
-           a_{41} \amp a_{42} \amp a_{43} \amp b_4\\
-          \hline
-          c_1 \amp  c_2 \amp c_3 \amp 0\\
-          \hline
-          \end{array} 
-         </me>
-         Suppose that <m>b_2\lt 0, b_3, b_4>0</m>. We want to turn <m>b_2</m> positive while making sure <m>b_3, b_4</m> stay positive.
+        
+         
+      </p>
+      
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{13}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{23}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell>
+              <m>a_{31}</m>
+            </cell>
+            <cell>
+              <m>a_{32}</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{33}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_3</m>
+            </cell>
+            <cell halign="left">
+              <m>=-?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell bottom="medium">
+              <m>a_{41}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{42}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{43}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_4</m>
+            </cell>
+            <cell halign="left">
+              <m>=-?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_3</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        Suppose that <m>b_2\lt 0, b_3, b_4>0</m>. We want to turn <m>b_2</m> positive while making sure <m>b_3, b_4</m> stay positive.
       </p>
     </introduction>
     <task>
@@ -2374,35 +2580,163 @@
     </introduction>
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|cc|c|}          
-            \hline
-             -1 \amp -2 \amp -3\\
-             1 \amp 1 \amp 2\\
-            \hline
-            2 \amp  -4 \amp 0\\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>-3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|cc|c|}          
-            \hline
-             -3 \amp -2 \amp -6\\
-             3 \amp 5 \amp 20\\
-             2 \amp 0 \amp 4\\
-            \hline
-            3 \amp  4 \amp 0\\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                <m>20</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
