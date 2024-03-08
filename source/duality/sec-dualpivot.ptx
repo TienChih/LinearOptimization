@@ -543,7 +543,7 @@
             <cell halign="right">
             </cell>
             <cell bottom="medium">
-              <m>\ec{x}_1</m>
+              <m>\ec{x_1} </m>
             </cell>
             <cell bottom="medium">
               <m>x_2</m>
@@ -559,7 +559,7 @@
           </row>
           <row>
             <cell halign="right" right="medium">
-              <m>\ec{y}_1</m>
+              <m>\ec{y_1}</m>
             </cell>
             <cell>
               <m>0</m>
