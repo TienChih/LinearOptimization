@@ -927,18 +927,108 @@
     </introduction>
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|ccc|c|}            
-            \hline
-            1 \amp 1 \amp 4 \amp 4  \\
-            2 \amp 2  \amp 3 \amp  -1  \\
-            1 \amp 4  \amp 1 \amp  3  \\ 
-            \hline
-            1 \amp -2 \amp 2  \amp -5 \\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-5</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
 
@@ -946,90 +1036,540 @@
 
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|ccc|c|}            
-            \hline
-            -3 \amp 1 \amp 0 \amp 5  \\
-            5 \amp -3  \amp 8 \amp  4  \\
-            2 \amp 4  \amp 2 \amp  2  \\ 
-            \hline
-            -2 \amp 3 \amp 0  \amp 2 \\
-            \hline
-            \end{array} 
-          </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>5</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>5</m>
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>8</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|ccc|c|}            
-            \hline
-            3 \amp 4 \amp -1 \amp 2  \\
-            6 \amp -3  \amp 2 \amp  1  \\
-            4 \amp -2  \amp 0 \amp  3  \\ 
-            \hline
-            -4 \amp -2 \amp 0  \amp 17 \\
-            \hline
-            \end{array} 
-           </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>3</m>
+              </cell>
+              <cell>
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>6</m>
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>-4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>17</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
     <task>
       <statement>
+       
         <p>
-          <me>
-            \begin{array}{|ccc|c|}            
-            \hline
-            -4 \amp 3 \amp -2 \amp 2  \\
-            0 \amp -1  \amp 4 \amp  0  \\
-            -1 \amp 4  \amp 0 \amp  5  \\ 
-            \hline
-            -2 \amp 3 \amp 2  \amp -34  \\
-            \hline
-            \end{array} 
-          </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>-4</m>
+              </cell>
+              <cell>
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-34</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
     <task>
       <statement>
+        
         <p>
-          <me>
-            \begin{array}{|ccc|c|}            
-            \hline
-            1 \amp -1 \amp 0 \amp -2  \\
-            -1 \amp -3  \amp 8 \amp  4  \\
-            3 \amp 4  \amp 2 \amp  2  \\ 
-            \hline
-            -2 \amp -3 \amp -5  \amp 9  \\
-            \hline
-            \end{array} 
-          </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium">
+                <m>-2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>8</m>
+              </cell>
+              <cell right="medium">
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-5</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>9</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
 
     <task>
       <statement>
+       
         <p>
-          <me>
-            \begin{array}{|ccc|c|}            
-            \hline
-            3 \amp -2 \amp 6 \amp 3  \\
-            4 \amp -3  \amp -3 \amp  0  \\
-            -1 \amp 2  \amp 5 \amp  1  \\ 
-            \hline
-            -1 \amp -4 \amp -2  \amp 54  \\
-            \hline
-            \end{array} 
-          </me>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>3</m>
+              </cell>
+              <cell>
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>6</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>4</m>
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-54</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>

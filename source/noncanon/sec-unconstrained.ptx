@@ -945,7 +945,7 @@
         </li>
         <li>
           <p>
-            If there are no unconstrained decision variables: END.
+            If there are no unconstrained decision variables: STOP.
           </p>
         </li>
         <li>

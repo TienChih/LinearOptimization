@@ -10,19 +10,125 @@
     <statement>
       <p>
         Suppose we wanted to solve the following maximization problem by hand:
-        <me>
-          \begin{array}{|cccc|c|c}
-           x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
-           \hline
-           8 \amp  2 \amp 4 \amp 5 \amp 3 \amp -t_1 \\
-           -4 \amp  6 \amp 2 \amp 7 \amp 4 \amp -t_2 \\
-           2 \amp  8 \amp 4 \amp 3 \amp 2 \amp -t_3 \\
-          \hline
-           1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
-          \hline
-          \end{array} 
-         </me>
-         How annoying would this be?
+        
+        
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_4</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>8</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left"  right="medium">
+            </cell>
+            <cell >
+              <m>-4</m>
+            </cell>
+            <cell >
+              <m>6</m>
+            </cell>
+            <cell >
+              <m>2</m>
+            </cell>
+            <cell right="medium" >
+              <m>7</m>
+            </cell>
+            <cell right="medium" >
+              <m>4</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>8</m>
+            </cell>
+            <cell bottom="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_3</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>1</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        How annoying would this be?
       </p>
       <ol marker="A." cols="2">
         <li>
@@ -64,18 +170,91 @@
     <introduction>
       <p>
         Let's start simple, suppose we want to solve:
-        <me>
-          \begin{array}{|cc|c|c}
-          x_1 \amp x_2 \amp  -1\\
-          \hline
-          2 \amp -1 \amp 5 \amp  -t_1 \\
-          -2 \amp 1 \amp 2  \amp   -t_2 \\
-          3 \amp 2 \amp 12  \amp   -t_3 \\
-          \hline
-          5 \amp  4 \amp  0  \amp = f \\
-          \hline
-          \end{array} 
-         </me> 
+       
+      </p>
+      <p>
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>2  </m>
+            </cell>
+            <cell right="medium">
+              <m> -1 </m>
+            </cell>
+            <cell right="medium">
+              <m> 5</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m> -2 </m>
+            </cell>
+            <cell right="medium">
+              <m> 1 </m>
+            </cell>
+            <cell right="medium">
+              <m> 2 </m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>  3 </m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m> 2 </m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m> 12</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_3</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m> 5 </m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m> 4 </m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m> 0 </m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
       </p>
     </introduction>
     <task>
@@ -142,19 +321,92 @@
           </sage>
           We should read this as:
 
-          <me>
-            \begin{array}{|cc|c|c}
-            x_1 \amp x_4 \amp  -1\\
-            \hline
-            0 \amp 1 \amp 7 \amp  -x_3 \\
-            -2 \amp 1 \amp 2  \amp   -x_2 \\
-            7 \amp -2 \amp 8  \amp   -x_5 \\
-            \hline
-            13 \amp  -4 \amp  -8  \amp = f \\
-            \hline
-            \end{array} 
-           </me> 
+          
 
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>0  </m>
+              </cell>
+              <cell right="medium">
+                <m> 1 </m>
+              </cell>
+              <cell right="medium">
+                <m> 7</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> -2 </m>
+              </cell>
+              <cell right="medium">
+                <m> 1 </m>
+              </cell>
+              <cell right="medium">
+                <m> 2 </m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>  7 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> =2 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 8</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_5</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> 13 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> -4 </m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> -8 </m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
         </p>
       </statement>
     </task>
@@ -191,18 +443,124 @@
     <introduction>
       <p>
         So if we want to solve:
-        <me>
-          \begin{array}{|cccc|c|c}
-           x_1 \amp x_2 \amp x_3 \amp x_4\amp -1\amp \\
-           \hline
-           8 \amp  2 \amp 4 \amp 5 \amp 3 \amp -t_1 \\
-           -4 \amp  6 \amp 2 \amp 7 \amp 4 \amp -t_2 \\
-           2 \amp  8 \amp 4 \amp 3 \amp 2 \amp -t_3 \\
-          \hline
-           1 \amp 3  \amp 2 \amp 1 \amp   0 \amp f \\
-          \hline
-          \end{array} 
-         </me>
+        
+        </p>
+
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>8</m>
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell>
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left"  right="medium">
+              </cell>
+              <cell >
+                <m>-4</m>
+              </cell>
+              <cell >
+                <m>6</m>
+              </cell>
+              <cell >
+                <m>2</m>
+              </cell>
+              <cell right="medium" >
+                <m>7</m>
+              </cell>
+              <cell right="medium" >
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>8</m>
+              </cell>
+              <cell bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
          We can encode this in:
          <sage>
           <input>

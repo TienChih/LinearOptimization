@@ -1192,19 +1192,7 @@
       <statement>
         <p>
           Pivot on the entry with <m>*</m> (Keep track of the decision and slack variables.)
-          <me>
-            \begin{array}{|cc|c|c}
-            
-            \hline
-            ? \amp ? \amp ? \amp  \\
-            ? \amp ? \amp ?  \amp    \\
-             ? \amp ?  \amp  ? \amp    \\
-             ? \amp ?^* \amp  ? \amp   \\
-            \hline
-            ? \amp ?  \amp ?   \amp  \\
-            \hline
-            \end{array} 
-           </me>
+          
            
         </p>
         <p>
