@@ -349,7 +349,7 @@
     <task>
       <statement>
         <p>
-          Find an if and only if condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.
+          Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.
         </p>
         <ol marker="A." cols="2">
           <li>
