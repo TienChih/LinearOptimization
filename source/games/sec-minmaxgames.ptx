@@ -493,7 +493,7 @@
                 <m>q_1</m>
               </cell>
               <cell bottom="medium">
-                <m>q_1</m>
+                <m>q_2</m>
               </cell>
               <cell bottom="medium">
                 <m>\cdots</m>
@@ -690,8 +690,7 @@
           </tabular>
         </p>
         <p>
-          Write out both the primal and dual problems encoded by this tableau.  How do they relate to the Rowan 
-          and Colleen's strategies? 
+          Write out both the primal and dual problems encoded by this tableau.  (Including all equalities, inequalities, and the objective functions)
         </p>
         
       </statement>
@@ -699,14 +698,35 @@
     <task>
       <statement>
         <p>
-          Show that the <m>p_i, q_j</m> satisfy the conditions for <m>P, Q,</m> to be mixed strategies.
+          What primal constraint does the first row represent?  How does it relate to Colleen's strategy?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          In solving this system, some rows or columns may be deleted.  Why is this okay?
+          What primal constraint do the next <m>n</m> rows represent?  How does it relate to Colleen's strategy?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is the primal objective function?  How does it relate to Colleen's strategy?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Repeat (h)-(j) for the columns, and with regards to Rowan's strategy.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Supposing that this system has an optimal primal and dual solution, what would those solutions represent?
         </p>
       </statement>
     </task>
@@ -887,172 +907,174 @@
   </definition>
 
   <activity>
-    <statement>
-      <p>
-        Suppose a reduced payoff matrix had a saddle point <m>a_{ij}</m>.
-      </p>
-      <p>
-        <tabular halign="center">
-          <row>
-            <cell halign="right">
-            </cell>
-            <cell bottom="medium">
-              <m>\ec{v}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>q_k</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell bottom="medium">
-              <m>q_j</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>\ec{u}</m>
-            </cell>
-            <cell>
-              <m>0</m>
-            </cell>
-            <cell>
-              <m>-1</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>-1</m>
-            </cell>
-            <cell right="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-              <m>=-0</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>p_\ell</m>
-            </cell>
-            <cell>
-              <m>-1</m>
-            </cell>
-            <cell>
-              <m>a_{\ell k}</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{\ell j}</m>
-            </cell>
-            <cell right="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_\ell</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\ddots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell halign="left">
-              <m>\vdots</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>p_i</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>a_{ik}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>a_{ij}</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_i</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>-1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=f</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right">
-            </cell>
-            <cell>
-              <m>=0</m>
-            </cell>
-            <cell>
-              <m>=s_k</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell>
-              <m>=s_j</m>
-            </cell>
-            <cell>
-              <m>=g</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-        </tabular>
-      </p>
-    </statement>
+    <introduction>
+      <statement>
+        <p>
+          Suppose a reduced payoff matrix had a saddle point <m>a_{ij}</m>.
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>\ec{v}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_k</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_j</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\ec{u}</m>
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_\ell</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{\ell k}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{\ell j}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_\ell</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_i</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{ik}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{ij}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_i</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>=0</m>
+              </cell>
+              <cell>
+                <m>=s_k</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell>
+                <m>=s_j</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </introduction>
     <task>
       <statement>
         <p>
@@ -1354,7 +1376,7 @@
               <m>?</m>
             </cell>
             <cell right="medium" bottom="medium">
-              <m>?</m>
+              <m>D</m>
             </cell>
             <cell halign="left">
               <m>=f</m>
@@ -1418,11 +1440,19 @@
     <task>
       <statement>
         <p>
+          What is <m>D</m>?  What are <m>\ec{u}, \ec{v}</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
           After we delete the appropriate rows and columns, what could be said about the 
           resulting primal dual program?
         </p>
       </statement>
     </task>
+    
     <task>
       <statement>
         <p>
