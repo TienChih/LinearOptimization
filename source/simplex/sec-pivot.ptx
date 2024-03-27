@@ -292,7 +292,11 @@
         </tabular>
       </p>
       <p>
-        The variables at the top are called the <em>decision variables</em> or <em>independent variables</em>, the variables on the side are the <em>slack variables</em> or <em>basic variables</em>.
+        The variables at the top are called the <em>decision variables</em> or <em>independent variables</em>, the variables on the side are the <em>slack variables</em>, <em>basis variables</em> or <em>basic variables</em>.
+      </p>
+      <p>
+        The <em>basic solution</em> recorded by a Tucker Tableau is the solution where each decision variable has
+        the value zero.
       </p>
     </statement>
   </definition>
@@ -300,7 +304,7 @@
   <observation>
     <statement>
       <p>
-        Note that this tableau <q>corresponds</q> to the point where <m>x_1, x_2, \ldots, x_m=0</m>.  We will further explore what this means in a bit.  
+        Note that this tableau records a basic solution <m>x_1, x_2, \ldots, x_m=0</m>.  We will further explore what this means in a bit.  
         But for now, if <m>x_1, x_2, \ldots, x_m =0</m>, then:
         <md>
           <mrow>a_{1,1}0 + a_{1,2}0 +\cdots a_{1,m}0-b_1  \amp =  -t_1</mrow>
@@ -367,7 +371,7 @@
     <task>
       <statement>
         <p>
-          Set up the canonical maximization problem corresponding to the above and record it in the following tableau:
+          Set up the canonical maximization problem for the information given above and record it in the following tableau:
           
         </p>
         <p>
@@ -458,7 +462,7 @@
     <task>
       <statement>
         <p>
-          Recall that this tableau corresponds to the point <m>x_1, x_2=0</m>.  If we slightly increase <m>x_1, x_2</m>, do we increase <m>f</m>?
+          Recall that this tableau has a basic solution where  <m>x_1, x_2=0</m>.  If we slightly increase <m>x_1, x_2</m>, do we increase <m>f</m>?
         </p>
       </statement>
     </task>
@@ -569,7 +573,7 @@
     <task>
       <statement>
         <p>
-          Recall that this new tableau corresponds to <m>t_C, x_2=0</m>, what point is this?
+          Recall that this new tableau has a basic solution where <m>t_C, x_2=0</m>, what point is this?
         </p>
       </statement>
     </task>
@@ -674,7 +678,7 @@
     <task>
       <statement>
         <p>
-          What point does this new tableau correspond to?
+          What point in <m>\R^2</m> represents the basic solution for this new tableau?
         </p>
       </statement>
     </task>
@@ -705,7 +709,7 @@
   <activity>
     <statement>
       <p>
-        Based on <xref ref="activity-widget"/>, what is a criteria to determine if a feasible tableau corresponds to an optimal solution?
+        Based on <xref ref="activity-widget"/>, what is a criteria to determine if a feasible tableau has a basic optimal solution?
       </p>
       <ol marker="A." cols="2">
         <li>
