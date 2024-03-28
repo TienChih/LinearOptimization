@@ -104,11 +104,11 @@
     <task>
       <statement>
         <p>
-          Let <m>x_{ij}</m> denote the cost to ship a ton of goods from warehouse <m>i</m> to 
+          Let <m>x_{ij}</m> denote the the tons of goods shipped from warehouse <m>i</m> to 
           market <m>j</m>.
         </p>
         <p>
-          Write an (in)equality that measure the cost to ship goods from Warehouse 1 in terms of the
+          Write an (in)equality for the quantity of goods shipped from Warehouse 1 in terms of the
           <m>x_{ij}</m>.
         </p>
       </statement>
@@ -116,7 +116,7 @@
     <task>
       <statement>
         <p>
-          Write an (in)equality that measure the cost to ship goods to Market 2 in terms of the
+          Write an (in)equality for the quantity of goods shipped to Market 2 in terms of the
           <m>x_{ij}</m>.
         </p>
       </statement>
