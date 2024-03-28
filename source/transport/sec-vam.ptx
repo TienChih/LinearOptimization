@@ -165,7 +165,7 @@
       <statement>
         <p>
           Suppose we had <m>n</m> warehouses and <m>m</m> markets with supplies <m>w_i</m>
-          and demands <m>m_j</m>.  We have linear equations <me>\sum x_{kj} = w_i, \sum x_{i\ell} = m_j</me>.
+          and demands <m>m_j</m>.  We have linear equations <me>\sum x_{i\ell} = w_i, \sum x_{kj} = m_j</me>.
           Since <m>\displaystyle \sum w_i = \sum m_j</m>, what is the maximum number of <m>x_{ij}</m>
           that can be non-zero for a basic solution?  
         </p>
@@ -796,7 +796,7 @@
         <li>
           <p>
             If all source/sinks are exhausted and we have not yet circled <m>m+n-1</m> entries, we circle any entries in the last row/column
-            we've circled, noting that the quantities <q>shipped</q> for these entries is zero.
+            we've examined, noting that the quantities <q>shipped</q> for these entries is zero.
           </p>
         </li>
         <li>

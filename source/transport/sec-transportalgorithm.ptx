@@ -882,7 +882,6 @@
                 b = (FIXME)
                 c = (FIXME)
                 P = InteractiveLPProblem(A, b, c,
-                 [FIXME], 
                  constraint_type = "==",
                  variable_type = ">=",
                  problem_type = "min")
