@@ -303,7 +303,7 @@
   <definition xml:id="def-hungarian">
     <statement>
       <p>
-        We state here the steps of the <em>Hungarian Algorithm</em>.  We start with an 
+        We state here the steps of the <em>Hungarian Algorithm</em>.  We start with an <m>n\times n</m>
         assignment tableau <m>T</m>.
       </p>
       <ol>
@@ -358,7 +358,7 @@
         </li>
         <li>
           <p>
-            Subtract all uncovered entries by the smallest entry that is not covered.
+            Subtract all uncovered entries by the smallest entry that is not covered, and add that value to the entries corresponding to intersections of the lines.
           </p>
         </li>
         <li>
@@ -369,6 +369,38 @@
       </ol>
     </statement>
   </definition>
+
+  <activity>
+    <task>
+      <statement>
+        <p>
+          In step 6 of <xref ref="def-hungarian"/>, suppose we draw
+          <m>k</m> lines.  Could <m>k</m> be greater than <m>n</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What would it mean if <m>k=n</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If <m>k\lt n</m>, would it be possible for all the lines to be parallel?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What's going on in step 7?
+        </p>
+      </statement>
+    </task>
+  </activity>
 
   <activity>
     <statement>
