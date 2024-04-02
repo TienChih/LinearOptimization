@@ -327,7 +327,7 @@ true);
 <div class="para" id="sec-assignment-6-9-1-1">If we had a tableau with all integer values, how could I change this to a tableau of all non-negative integer values with the same optimal solution?</div></article></article><article class="definition definition-like" id="def-hungarian"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="def-hungarian-1-1">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an assignment tableau <span class="process-math">\(T\text{.}\)</span>
+<div class="para" id="def-hungarian-1-1">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an <span class="process-math">\(n\times n\)</span> assignment tableau <span class="process-math">\(T\text{.}\)</span>
 </div> <ol class="decimal">
 <li id="def-hungarian-1-2-1">
 <div class="para" id="def-hungarian-1-2-1-1">IF the entries of <span class="process-math">\(T\)</span> are rational but not all integeral, <span class="process-math">\(a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}&gt;0 \text{:}\)</span>
@@ -352,16 +352,25 @@ true);
 <span class="process-math">\(* \Rightarrow\)</span><em class="alert">minimum</em><span class="process-math">\(\Leftarrow\text{.}\)</span>
 </div></div></details>
 </li>
-<li id="def-hungarian-1-2-7"><div class="para" id="def-hungarian-1-2-7-1">Subtract all uncovered entries by the smallest entry that is not covered.</div></li>
+<li id="def-hungarian-1-2-7"><div class="para" id="def-hungarian-1-2-7-1">Subtract all uncovered entries by the smallest entry that is not covered, and add that value to the entries corresponding to intersections of the lines.</div></li>
 <li id="def-hungarian-1-2-8"><div class="para" id="def-hungarian-1-2-8-1">GOTO 5.</div></li>
 </ol></article><article class="activity project-like" id="sec-assignment-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-assignment-8-1-1">Use the Hungarian Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-hungarian.html" title="Definition 7.3.3">Definition 7.3.3</a> to solve the problem from <a href="" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" title="Exploration 7.3.1">Exploration 7.3.1</a>.</div></article><article class="activity project-like" id="sec-assignment-9"><h3 class="heading">
+<article class="task exercise-like" id="sec-assignment-8-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-8-1-1-1">In step 6 of <a href="" class="xref" data-knowl="./knowl/xref/def-hungarian.html" title="Definition 7.3.3">Definition 7.3.3</a>, suppose we draw <span class="process-math">\(k\)</span> lines.  Could <span class="process-math">\(k\)</span> be greater than <span class="process-math">\(n\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-assignment-8-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-assignment-8-2-1-1">What would it mean if <span class="process-math">\(k=n\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-assignment-8-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-assignment-8-3-1-1">If <span class="process-math">\(k\lt n\text{,}\)</span> would it be possible for all the lines to be parallel?</div></article><article class="task exercise-like" id="sec-assignment-8-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-assignment-8-4-1-1">What’s going on in step 7?</div></article></article><article class="activity project-like" id="sec-assignment-9"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-assignment-9-1">
-<div class="para" id="sec-assignment-9-1-1">Suppose 4 students are picking 4 research topics.  The four topics are to be distributed one each amongst the four students. They rated the ropics on a scale of 1-10.</div> <div class="para" id="sec-assignment-9-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="sec-assignment-9-1-1">Use the Hungarian Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-hungarian.html" title="Definition 7.3.3">Definition 7.3.3</a> to solve the problem from <a href="" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" title="Exploration 7.3.1">Exploration 7.3.1</a>.</div></article><article class="activity project-like" id="sec-assignment-10"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-assignment-10-1">
+<div class="para" id="sec-assignment-10-1-1">Suppose 4 students are picking 4 research topics.  The four topics are to be distributed one each amongst the four students. They rated the ropics on a scale of 1-10.</div> <div class="para" id="sec-assignment-10-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines">Topic 1</td>
@@ -397,11 +406,11 @@ true);
 <td class="c m b2 r0 l0 t0 lines">9</td>
 <td class="c m b2 r2 l0 t0 lines">8</td>
 </tr>
-</table></div></div> <div class="para" id="sec-assignment-9-1-3">We want to maximize the total “enjoyment”.</div>
+</table></div></div> <div class="para" id="sec-assignment-10-1-3">We want to maximize the total “enjoyment”.</div>
 </div>
-<article class="task exercise-like" id="sec-assignment-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-9-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article><article class="task exercise-like" id="sec-assignment-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-assignment-9-3-1-1">After converting, use the Hungarian Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-hungarian.html" title="Definition 7.3.3">Definition 7.3.3</a> to solve the problem.</div></article></article></section></div>
+<article class="task exercise-like" id="sec-assignment-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-10-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article><article class="task exercise-like" id="sec-assignment-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-assignment-10-3-1-1">After converting, use the Hungarian Algorithm <a href="" class="xref" data-knowl="./knowl/xref/def-hungarian.html" title="Definition 7.3.3">Definition 7.3.3</a> to solve the problem.</div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-flow.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
