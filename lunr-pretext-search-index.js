@@ -1648,6 +1648,60 @@ var ptx_lunr_docs = [
   "body": " Min Cut Algorithm   We describe an algorithm to find the minimum for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with a maximum flow and .    We add to if there is a such that either:     .     .    If there is no such , GOTO 4    GOTO 2    Let .  STOP form a minimum cut.     "
 },
 {
+  "id": "sec-covermatch",
+  "level": "1",
+  "url": "sec-covermatch.html",
+  "type": "Section",
+  "number": "9.1",
+  "title": "Coverings and Matchings of Graphs",
+  "body": " Coverings and Matchings of Graphs    Consider the following graph .  An undirected graph.       A matching is a collection of edges such that no two edges in are incident to the same vertex. Let denote the size of the largest possible matching(s).  What is ? How can we be sure this is true?    Find for :  An undirected graph.       What are some differences you notice between the matchings for and ?      Let be a graph with vertices . For each edge let such that if , then , otherwise .    For each vertex , write an inequality to ensure that is a matching.    Given the above constraints, do we need another constraint to ensure that ?    Find a linear objective function to compute .    State the maximization linear programming problem for computing the maximum matching of a graph .    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?      Consider the maximizations problems you found in , both the specific ones and the particular ones.    Let denote the dual variable corresponding to the primal constraint for vertex . What is the dual objective function in terms of ?    For each edge , there is a dual constraint, state this dual constraint. (Hint: in the original Tucker Tableau, when would an entry in the column be a zero, and when would it be a one?)    State the dual minimization program to the primal maximum matching problem.    Suppose we restrict to only integer values, give an interpretation for the dual min problem (Hint: each corresponds to a vertex . Would take on any values besides 0 or 1)?      Given a graph , a vertex cover is a colection of vertices such that for any edge either or (possibly both) are in .  Let denote the size of the smallest vertex cover.    Find for from,     Find for from,     For each vertex , let if and otherwise. Write out a minimization problem for computing for a general graph .    How does this compare to the problem you found in ?    Since we solved the matching problem for in , use Sage to solve the dual problem    What do we notice?    We solved the matching problem for in , use Sage to solve the dual problem    What do we notice?      Consider the maximum matching and minimum covering problems. What does duality tell us about these problems?     .     .     .      "
+},
+{
+  "id": "exploration-matching",
+  "level": "2",
+  "url": "sec-covermatch.html#exploration-matching",
+  "type": "Exploration",
+  "number": "9.1.1",
+  "title": "",
+  "body": "  Consider the following graph .  An undirected graph.       A matching is a collection of edges such that no two edges in are incident to the same vertex. Let denote the size of the largest possible matching(s).  What is ? How can we be sure this is true?    Find for :  An undirected graph.       What are some differences you notice between the matchings for and ?   "
+},
+{
+  "id": "activity-maxmatch",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-maxmatch",
+  "type": "Activity",
+  "number": "9.1.2",
+  "title": "",
+  "body": "  Let be a graph with vertices . For each edge let such that if , then , otherwise .    For each vertex , write an inequality to ensure that is a matching.    Given the above constraints, do we need another constraint to ensure that ?    Find a linear objective function to compute .    State the maximization linear programming problem for computing the maximum matching of a graph .    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?   "
+},
+{
+  "id": "activity-mincover",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-mincover",
+  "type": "Activity",
+  "number": "9.1.3",
+  "title": "",
+  "body": "  Consider the maximizations problems you found in , both the specific ones and the particular ones.    Let denote the dual variable corresponding to the primal constraint for vertex . What is the dual objective function in terms of ?    For each edge , there is a dual constraint, state this dual constraint. (Hint: in the original Tucker Tableau, when would an entry in the column be a zero, and when would it be a one?)    State the dual minimization program to the primal maximum matching problem.    Suppose we restrict to only integer values, give an interpretation for the dual min problem (Hint: each corresponds to a vertex . Would take on any values besides 0 or 1)?   "
+},
+{
+  "id": "sec-covermatch-5",
+  "level": "2",
+  "url": "sec-covermatch.html#sec-covermatch-5",
+  "type": "Activity",
+  "number": "9.1.4",
+  "title": "",
+  "body": "  Given a graph , a vertex cover is a colection of vertices such that for any edge either or (possibly both) are in .  Let denote the size of the smallest vertex cover.    Find for from,     Find for from,     For each vertex , let if and otherwise. Write out a minimization problem for computing for a general graph .    How does this compare to the problem you found in ?    Since we solved the matching problem for in , use Sage to solve the dual problem    What do we notice?    We solved the matching problem for in , use Sage to solve the dual problem    What do we notice?   "
+},
+{
+  "id": "sec-covermatch-6",
+  "level": "2",
+  "url": "sec-covermatch.html#sec-covermatch-6",
+  "type": "Activity",
+  "number": "9.1.5",
+  "title": "",
+  "body": "  Consider the maximum matching and minimum covering problems. What does duality tell us about these problems?     .     .     .     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
