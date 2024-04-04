@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-covermatch" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Coverings and Matchings of Graphs</title>
+
+
+  <exploration xml:id="exploration-matching">
+    <introduction>
+      <p>
+        Consider the following graph <m>G</m>.
+        <image xml:id="exploration-graph">
+          <shortdescription>An undirected graph.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}
+            \foreach \x in {-2,...,2}{
+                \draw[fill, black] (\x,1) circle (2pt);
+                \draw[fill, black] (\x,0) circle (2pt);
+            };
+            \foreach \x in {-1,...,1}{
+                \draw (2*\x, 0) -- (2*\x,1);
+            };
+
+            \foreach \x in {0,...,1}{
+                \draw (-2+3*\x, 0) -- (-2+3*\x+1,1);
+                \draw (-2+3*\x, 0) -- (-2+3*\x+1,0);
+                \draw (-2+3*\x, 1) -- (-2+3*\x+1,1);
+                \draw (-2+3*\x, 1) -- (-2+3*\x+1,0);
+                \draw (-1+2*\x, 0) -- (0,\x);
+                \draw (-1+2*\x, 1) -- (0,\x);
+            };
+              
+        \end{tikzpicture}
+          </latex-image>
+          
+        </image>
+      </p>
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          A <em>matching</em> is a collection of edges <m>M</m> such that no two
+          edges in <m>M</m> are incident to the same vertex.  Let <m>\Xi(G)</m>
+          denote the size of the largest possible matching(s).
+        </p>
+        <p>
+          What is <m>\Xi(G)</m>?  How can we be sure this is true?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Find <m>\Xi(H)</m> for <m>H</m>:
+          <image xml:id="exploration-noperfect">
+            <shortdescription>An undirected graph.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}
+            \foreach \x in {0,...,2}{
+                \draw[fill, black] ({0.5*sin(\x*120)}, {0.5*cos(\x*120)}) circle (2pt);
+                \draw[fill, black] ({1*sin(\x*120)}, {1*cos(\x*120)}) circle (2pt);
+                \draw[fill, black] ({1*sin(\x*120+25)}, {1*cos(\x*120+25)}) circle (2pt);
+                \draw[fill, black] ({1*sin(\x*120-25)}, {1*cos(\x*120-25)}) circle (2pt);
+                \draw[fill, black] ({1.5*sin(\x*120)}, {1.5*cos(\x*120)}) circle (2pt);
+
+                \draw (0,0)--({0.5*sin(\x*120)}, {0.5*cos(\x*120)}) -- ({1*sin(\x*120+25)}, {1*cos(\x*120+25)}) --({1*sin(\x*120)}, {1*cos(\x*120)})--({1*sin(\x*120-25)}, {1*cos(\x*120-25)}) --({1.5*sin(\x*120)}, {1.5*cos(\x*120)}) -- ({1*sin(\x*120+25)}, {1*cos(\x*120+25)});
+                \draw ({1*sin(\x*120)}, {1*cos(\x*120)}) -- ({1.5*sin(\x*120)}, {1.5*cos(\x*120)});
+                \draw ({0.5*sin(\x*120)}, {0.5*cos(\x*120)}) -- ({1*sin(\x*120-25)}, {1*cos(\x*120-25)}); 
+            };
+            \draw[fill, black] (0,0) circle (2pt);
+        \end{tikzpicture}
+            </latex-image>
+            
+          </image>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What are some differences you notice between the matchings for <m>G</m> and <m>H</m>?
+        </p>
+      </statement>
+    </task>
+    
+  </exploration>
+
+  <activity xml:id="activity-maxmatch">
+    <introduction>
+      <p>
+        Let <m>G</m> be a graph with vertices <m>v_1, \ldots, v_n</m>.
+        For each edge <m>v_iv_j</m> let <m>x_{ij}\in [0,1]</m> such that if <m>v_iv_j\in M</m>,
+        then <m>x_{ij}=1</m>, otherwise <m>x_{ij}=0</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          For each vertex <m>v_i</m>, write an inequality to ensure that <m>M</m> is a matching.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Given the above constraints, do we need another constraint to ensure that <m>x_{ij}\leq 1</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find a linear objective function to compute <m>\Xi(G)</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          State the maximization linear programming problem for computing the maximum matching of a graph <m>G</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider <m>G</m> from <xref ref="exploration-matching"/>.  Label each vertex and write out a Tucker Tableau
+          for the linear programming problem for computing the maximum matching.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Solve the above programming problem:
+        </p>
+        <sage>
+          <input>
+            %display typeset
+            AH = (FIX_ME)
+            bH = (FIX_ME)
+            cH = (FIX_ME)
+            PH = InteractiveLPProblem(AH, bH, cH,
+             constraint_type = "&lt;=",
+             variable_type = ">=")
+            PH
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(PH.optimal_solution())
+              print(PH.optimal_value())
+            </input>         
+          </sage>
+          <p>
+            What do you notice?
+          </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider <m>H</m> from <xref ref="exploration-matching"/>.  Label each vertex and write out a Tucker Tableau
+          for the linear programming problem for computing the maximum matching.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Solve the above programming problem:
+        </p>
+        <sage>
+          <input>
+            %display typeset
+            A = (FIX_ME)
+            b = (FIX_ME)
+            c = (FIX_ME)
+            P = InteractiveLPProblem(A, b, c,
+             constraint_type = "&lt;=",
+             variable_type = ">=")
+            P
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(P.optimal_solution())
+              print(P.optimal_value())
+            </input>         
+          </sage>
+          <p>
+            What do you notice?
+          </p>
+      </statement>
+    </task>
+    
+  </activity>
+
+  <activity xml:id="activity-mincover">
+    <introduction>
+      <p>
+        Consider the maximizations problems you found in <xref ref="activity-maxmatch"/>,
+        both the specific ones and the particular ones.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Let <m>y_i</m> denote the dual variable corresponding to the primal constraint for vertex
+          <m>v_i</m>.   What is the dual objective function in terms of <m>y_i</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For each edge <m>v_{i}v_j</m>, there is a dual constraint, state this dual constraint. (Hint: in the original
+          Tucker Tableau, when would an entry in the <m>x_{ij}</m> column be a zero, and when would it be a one?)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          State the dual minimization program to the primal maximum matching problem.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose we restrict to only integer values, give an interpretation for the dual min problem 
+          (Hint: each <m>y_i</m> corresponds to a vertex <m>v_i</m>. Would <m>y_i</m> take on any values besides
+          0 or 1)?
+        </p>
+      </statement>
+    </task>
+    
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        Given a graph <m>G</m>, a <em>vertex cover</em> is a colection of vertices <m>U</m>
+        such that for any edge <m>v_iv_j</m> either <m>v_i</m> or <m>v_j</m> (possibly both)
+        are in <m>U</m>.
+      </p>
+      <p>
+        Let <m>\tau(G)</m> denote the size of the smallest vertex cover.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find <m>\tau(G)</m> for <m>G</m> from, <xref ref="exploration-matching"/>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find <m>\tau(H)</m> for <m>H</m> from, <xref ref="exploration-matching"/>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For each vertex <m>v_i</m>, let <m>y_i=1</m> if <m>v_i\in U</m> and <m>y_i=0</m> otherwise. Write out a minimization problem for computing <m>\tau(G)</m> for a general graph <m>G</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How does this compare to the problem you found in <xref ref="activity-mincover"/>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Since we solved the matching problem for <m>G</m> in <xref ref="exploration-matching"/>, use
+          Sage to solve the dual problem
+        </p>
+        <sage>
+          <input>
+            %display typeset
+            D = P.dual()
+            D
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(D.optimal_solution())
+              print(D.optimal_value())
+            </input>         
+          </sage>
+          <p>
+            What do we notice?
+          </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We <q>solved</q> the matching problem for <m>H</m> in <xref ref="exploration-matching"/>, use
+          Sage to solve the dual problem
+        </p>
+        <sage>
+          <input>
+            %display typeset
+            DH = PH.dual()
+            DH
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(DH.optimal_solution())
+              print(DH.optimal_value())
+            </input>         
+          </sage>
+          <p>
+            What do we notice?
+          </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        Consider the maximum matching and minimum covering problems.  What does duality tell
+        us about these problems?
+      </p>
+      <ol marker="A." cols="3">
+        <li>
+          <p>
+            <m>\Xi(G)\leq \tau(G)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\Xi(G)\geq \tau(G)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\Xi(G) = \tau(G)</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  
+
+  
+
+</section>
