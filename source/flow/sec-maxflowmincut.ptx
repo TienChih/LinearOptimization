@@ -87,14 +87,8 @@
             <mrow> - \mu_i +y_{id} \amp \geq  0, \text{for each edge }(v_i, v_d)</mrow>
             <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
           </md>
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Explain why we may let <m>y_s=0, y_d=-1</m>
-          without affecting the solution.
+        
+          where <m>\mu_s=0, \mu_d=-1</m>.
         </p>
       </statement>
     </task>
@@ -107,8 +101,8 @@
           <md>
             <mrow>\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}</mrow>
             <mrow>\textbf{Subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
-            <mrow>y_s \amp =0 </mrow>
-            <mrow> y_d \amp =-1</mrow>
+            <mrow>\mu_s \amp =0 </mrow>
+            <mrow> \mu_d \amp =-1</mrow>
             <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
           </md>
         </p>
@@ -150,7 +144,7 @@
           For <m>v_i\in V_1, v_j\in V_2</m>, what is <m>y_{ij}</m>?
         </p>
         <p>
-          Can any cut of <m>N</m> be modled this way?
+          Can any cut of <m>N</m> be modeled this way?
         </p>
       </statement>
     </task>
