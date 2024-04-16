@@ -1537,7 +1537,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Max Flow - Min Cut",
-  "body": " Max Flow - Min Cut    Recall . Suppose that we wish to install a toll booth on these bridges so that each person going to pays a toll at least once. The cost of installing a toll booth on a bridge is proportional to it's capacity.    Find three different ways to install these booths, and find what you believe is the cheapest way to do so.      Given a capacitated network , a cut of is a partition of the vertex set into non-empty subsets , where .  The capacity of a cut is the sum .     From , find three different cuts and their capacities.  What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?   Prove that for any capacitated network, and flow on this network that the value of this flow is equal to (Work it out for the example cuts you found first)      Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as   where .    Verify that we may simplify the dual solution as:       Suppose . What could be? Which would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Is it possible for all the to have the same value?    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modeled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.      We explore a way of generating potential minimum cuts using a maximum flow.  Recall and your proposed maximum flow .    Let , we recursively define by adding to if either:    .     .       Let . What is the cut capacity of ?      We now prove that the minimum cut capacity is equal to the maximum flow.    Why does the primal max problem achieve optimality?  Call the maximum flow , with flow on each edge .    Let , we recursively define by adding to if either:    .     .   and repeating until we stabilize, why must we eventually stabilize?    Show that for any in , there is an -path  : a sequence of vertices starting to , where between either .    An -path.     We would call the edges to be forward edges and  backwards edges of .    Suppose (by way of contradiction) that . There is by (c) an -path from to .  Let   Why is ?    We define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Explain why this is still a valid network flow.    Explain why has a greater value than . Why must ?    Define . Prove that for any , we have that .  (Not neccesary for this proof, but to tie things in, if , what does that say about from the dual program in ? If , what does that say about ? )    Use to show that the value of is equal to the cut capacity of . (Proving the result!)    Going back to if we let for and for , what is the value of the dual min objective?      Let be a capacitated directed network with unique fixed source and unique fixed sink, no edges into the source, and no edges out of the sink. Then the value of the maximalflow from to is equal to the minimal cut capacity in .      Suppose we had a non-optimal flow , how could we adopt the procedure in to obtain a better flow?     Max Flow-Min Cut Algorithms  Algorithms for Max Flow and Min Cut    Consider the following capacitated network with source and sink :    A network with multiple sources and sinks.     Recall the procedure to produce improved flows in .    Begin with the zero-flow.  A network with multiple sources and sinks.     Consider the -path . Apply (d) to this path. What is ?    Adjust the flow on edges by appropriately. Explain why we need not consider the edge for any future -paths.    Pick another -path where and repeat until we achieve a maximum flow.    A network with multiple sources and sinks.       Use the maximum flow and the argument in to find a minimum cut.     Max Flow Algorithm   We describe an algorithm to find the maximum flow for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with any feasible flow (including the zero flow.)    Pick an -path in from to such that:   Each forward edge of satisfies .   Eack backwards edge satisfies .    (If no such -path exists, GOTO 5)    Compute     Define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Let and GOTO 2    STOP. The flow is now optimal.       Prove that the Max Flow Algorithm terminates at a maximum flow.    Min Cut Algorithm   We describe an algorithm to find the minimum for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with a maximum flow and .    We add to if there is a such that either:     .     .    If there is no such , GOTO 4    GOTO 2    Let .  STOP form a minimum cut.       "
+  "body": " Max Flow - Min Cut    Recall . Suppose that we wish to install a toll booth on these bridges so that each person going to pays a toll at least once. The cost of installing a toll booth on a bridge is proportional to it's capacity.    Find three different ways to install these booths, and find what you believe is the cheapest way to do so.      Given a capacitated network , a cut of is a partition of the vertex set into non-empty subsets , where .  The capacity of a cut is the sum .     From , find three different cuts and their capacities.  What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?      Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as   where .    Verify that we may simplify the dual solution as:       Suppose . What could be? What value for would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modeled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.      We explore a way of generating potential minimum cuts using a maximum flow.  Recall and your proposed maximum flow .    Let , we recursively define by adding to if either:    .     .       Let . What is the cut capacity of ?      We now prove that the minimum cut capacity is equal to the maximum flow.    Why does the primal max problem achieve optimality?  Call the maximum flow , with flow on each edge .    Let , we recursively define by adding to if either:    .     .   and repeating until we stabilize, why must we eventually stabilize?    Show that for any in , there is an -path  : a sequence of vertices starting to , where between either .    An -path.     We would call the edges to be forward edges and  backwards edges of .    Suppose (by way of contradiction) that . There is by (c) an -path from to .  Let   Why is ?    We define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Explain why this is still a valid network flow.    Explain why has a greater value than . Why must ?    Define . Prove that for any , we have that .  (Not neccesary for this proof, but to tie things in, if , what does that say about from the dual program in ? If , what does that say about ? )    Use to show that the value of is equal to the cut capacity of . (Proving the result!)    Going back to if we let for and for , what is the value of the dual min objective?      Let be a capacitated directed network with unique fixed source and unique fixed sink, no edges into the source, and no edges out of the sink. Then the value of the maximalflow from to is equal to the minimal cut capacity in .      Suppose we had a non-optimal flow , how could we adopt the procedure in to obtain a better flow?     Max Flow-Min Cut Algorithms  Algorithms for Max Flow and Min Cut    Consider the following capacitated network with source and sink :    A network with multiple sources and sinks.     Recall the procedure to produce improved flows in .    Begin with the zero-flow.  A network with multiple sources and sinks.     Consider the -path . Apply (d) to this path. What is ?    Adjust the flow on edges by appropriately. Explain why we need not consider the edge for any future -paths.    Pick another -path where and repeat until we achieve a maximum flow.    A network with multiple sources and sinks.       Use the maximum flow and the argument in to find a minimum cut.     Max Flow Algorithm   We describe an algorithm to find the maximum flow for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with any feasible flow (including the zero flow.)    Pick an -path in from to such that:   Each forward edge of satisfies .   Eack backwards edge satisfies .    (If no such -path exists, GOTO 5)    Compute     Define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Let and GOTO 2    STOP. The flow is now optimal.       Prove that the Max Flow Algorithm terminates at a maximum flow.    Min Cut Algorithm   We describe an algorithm to find the minimum for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with a maximum flow and .    We add to if there is a such that either:     .     .    If there is no such , GOTO 4    GOTO 2    Let .  STOP form a minimum cut.       "
 },
 {
   "id": "sec-maxflowmincut-2",
@@ -1564,7 +1564,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "8.2.2",
   "title": "",
-  "body": " From , find three different cuts and their capacities.  What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?   Prove that for any capacitated network, and flow on this network that the value of this flow is equal to (Work it out for the example cuts you found first)   "
+  "body": " From , find three different cuts and their capacities.  What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?   "
 },
 {
   "id": "activity-dualflow",
@@ -1573,7 +1573,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "8.2.3",
   "title": "",
-  "body": "  Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as   where .    Verify that we may simplify the dual solution as:       Suppose . What could be? Which would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Is it possible for all the to have the same value?    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modeled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.   "
+  "body": "  Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as   where .    Verify that we may simplify the dual solution as:       Suppose . What could be? What value for would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modeled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.   "
 },
 {
   "id": "sec-maxflowmincut-6",
@@ -1646,6 +1646,60 @@ var ptx_lunr_docs = [
   "number": "8.2.4",
   "title": "Min Cut Algorithm.",
   "body": " Min Cut Algorithm   We describe an algorithm to find the minimum for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with a maximum flow and .    We add to if there is a such that either:     .     .    If there is no such , GOTO 4    GOTO 2    Let .  STOP form a minimum cut.     "
+},
+{
+  "id": "sec-weighted",
+  "level": "1",
+  "url": "sec-weighted.html",
+  "type": "Section",
+  "number": "8.3",
+  "title": "Weighted Graphs",
+  "body": " Weighted Graphs    Dr. Ayad is driving from her home to Fantasi college. The town is connected by a series of one way streets, each labled with the time it would take to traverse the road.   A Network Flow depicting several islands with bridges and carrying capacity.      What is the shortest amout of time needed for her to arrive at Fantasi College?    Is there a unique route she could take that minimizes this time?      A network is weighted if for each edge we assign (potentially negative!) weight .      Give a network , a path  from , is a sequence of consecutive edges where . We say that the length of is . We say that the distance from to , , is the length of a shortest path from to .     What is the shortest path from to      In this activity, we model the shortest path algorithm as a linear programming problem. Let where if is in a shortest path from to .   What is the objective problem?   Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .     What inequality ensure that the path traverses through ?    "
+},
+{
+  "id": "exploration-path",
+  "level": "2",
+  "url": "sec-weighted.html#exploration-path",
+  "type": "Exploration",
+  "number": "8.3.1",
+  "title": "",
+  "body": "  Dr. Ayad is driving from her home to Fantasi college. The town is connected by a series of one way streets, each labled with the time it would take to traverse the road.   A Network Flow depicting several islands with bridges and carrying capacity.      What is the shortest amout of time needed for her to arrive at Fantasi College?    Is there a unique route she could take that minimizes this time?   "
+},
+{
+  "id": "def-weightedgraph",
+  "level": "2",
+  "url": "sec-weighted.html#def-weightedgraph",
+  "type": "Definition",
+  "number": "8.3.1",
+  "title": "",
+  "body": "  A network is weighted if for each edge we assign (potentially negative!) weight .   "
+},
+{
+  "id": "def-path",
+  "level": "2",
+  "url": "sec-weighted.html#def-path",
+  "type": "Definition",
+  "number": "8.3.2",
+  "title": "",
+  "body": "  Give a network , a path  from , is a sequence of consecutive edges where . We say that the length of is . We say that the distance from to , , is the length of a shortest path from to .   "
+},
+{
+  "id": "sec-weighted-5",
+  "level": "2",
+  "url": "sec-weighted.html#sec-weighted-5",
+  "type": "Activity",
+  "number": "8.3.2",
+  "title": "",
+  "body": " What is the shortest path from to   "
+},
+{
+  "id": "sec-weighted-6",
+  "level": "2",
+  "url": "sec-weighted.html#sec-weighted-6",
+  "type": "Activity",
+  "number": "8.3.3",
+  "title": "",
+  "body": "  In this activity, we model the shortest path algorithm as a linear programming problem. Let where if is in a shortest path from to .   What is the objective problem?   Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .     What inequality ensure that the path traverses through ?   "
 },
 {
   "id": "sec-covermatch",

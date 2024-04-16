@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Colophon</title>
+<title>Weighted Graphs</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -137,7 +137,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-extras.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
@@ -209,9 +209,9 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">8</span> <span class="title">Network Flows</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
@@ -220,21 +220,64 @@ true);
 <div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Weighted Graphs</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-extras.html" class="internal"><span class="codenumber">9</span> <span class="title">Extra Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-covermatch.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Coverings and Matchings of Graphs</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-backmatter contains-active"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="colophon" id="backmatter-2"><h2 class="heading hide-type">
-<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-weighted"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">8.3</span><span class="space"> </span><span class="title">Weighted Graphs</span>
 </h2>
-<div class="para" id="backmatter-2-1">This book was authored in PreTeXt.</div></section></div>
+<article class="exploration project-like" id="exploration-path"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="exploration-path-1">
+<div class="para" id="exploration-path-1-1">Dr. Ayad is driving from her home to Fantasi college.  The town is connected by a series of one way streets, each labled with the time it would take to traverse the road.</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/traffic.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+</div>
+<article class="task exercise-like" id="exploration-path-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-path-2-1-1">What is the shortest amout of time needed for her to arrive at Fantasi College?</div></article><article class="task exercise-like" id="exploration-path-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-path-3-1-1">Is there a unique route she could take that minimizes this time?</div></article></article><article class="definition definition-like" id="def-weightedgraph"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-weightedgraph-1-1">A network is <em class="emphasis">weighted</em> if for each edge <span class="process-math">\((v_i, v_j)\in E\)</span> we assign (potentially negative!) weight <span class="process-math">\(w_{ij}\text{.}\)</span>
+</div></article><article class="definition definition-like" id="def-path"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-path-1-1">Give a network <span class="process-math">\(N\text{,}\)</span> a <em class="emphasis">path</em> <span class="process-math">\(P\)</span> from <span class="process-math">\(v_x\text{,}\)</span> <span class="process-math">\(v_y\)</span> is a sequence of consecutive edges <span class="process-math">\((v_0, v_1), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})\)</span> where <span class="process-math">\(v_{a_0}=v_x, v_{a_k}=v_y\text{.}\)</span>  We say that the <em class="emphasis">length</em> of <span class="process-math">\(P\)</span> is <span class="process-math">\(\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}\text{.}\)</span>   We say that the <em class="emphasis">distance</em> from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{,}\)</span> <span class="process-math">\(d(v_x, v_y)\text{,}\)</span> is the length of a shortest path from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{.}\)</span>
+</div></article><article class="activity project-like" id="sec-weighted-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="sec-weighted-5-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-weighted-5-1-1">What is the shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span>
+</div></article></article><article class="activity project-like" id="sec-weighted-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.3.3</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-weighted-6-1"><div class="para" id="sec-weighted-6-1-1">In this activity, we model the shortest path algorithm as a linear programming problem.  Let <span class="process-math">\(0\leq x_{ij}\leq 1\)</span> where <span class="process-math">\(x_{ij}=1\)</span> if <span class="process-math">\((v_i, v_j)\)</span> is in a shortest path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_t\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="sec-weighted-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-weighted-6-2-1">What is the objective problem?</div>
+<ol class="upper-alpha cols2">
+<li id="sec-weighted-6-2-2-1"><div class="para" id="sec-weighted-6-2-2-1-1">Maximize <span class="process-math">\(\displaystyle \sum_i w_{it}x_{it} \text{.}\)</span>
+</div></li>
+<li id="sec-weighted-6-2-2-2"><div class="para" id="sec-weighted-6-2-2-2-1">Maximize <span class="process-math">\(\displaystyle \sum_j w_{sj}x_{sj} \text{.}\)</span>
+</div></li>
+<li id="sec-weighted-6-2-2-3"><div class="para" id="sec-weighted-6-2-2-3-1">Maximize <span class="process-math">\(\displaystyle \sum_{i,j} w_{ij}x_{ij} \text{.}\)</span>
+</div></li>
+<li id="sec-weighted-6-2-2-4"><div class="para" id="sec-weighted-6-2-2-4-1">Minimize <span class="process-math">\(\displaystyle \sum_i w_{it}x_{it} \text{.}\)</span>
+</div></li>
+<li id="sec-weighted-6-2-2-5"><div class="para" id="sec-weighted-6-2-2-5-1">Minimize <span class="process-math">\(\displaystyle \sum_j w_{sj}x_{sj} \text{.}\)</span>
+</div></li>
+<li id="sec-weighted-6-2-2-6"><div class="para" id="sec-weighted-6-2-2-6-1">Minimize <span class="process-math">\(\displaystyle \sum_{i,j} w_{ij}x_{ij} \text{.}\)</span>
+</div></li>
+</ol></article><article class="task exercise-like" id="sec-weighted-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-weighted-6-3-1-1">What inequality ensure that the path traverses through <span class="process-math">\(v_t\text{?}\)</span>
+</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-extras.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
