@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-weighted" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Weighted Graphs</title>
+
+
+  <exploration xml:id="exploration-path">
+    <introduction>
+      <p>
+        Dr. Ayad is driving from her home to Fantasi college.  The town is connected by a series of one way streets,
+        each labled with the time it would take to traverse the road.
+      </p>
+      <image xml:id="traffic">
+        <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+        <latex-image>
+          \begin{tikzpicture}[
+            mycircle/.style={
+              circle,
+              draw=black,
+              fill=gray,
+              fill opacity = 0.3,
+              text opacity=1,
+              inner sep=0pt,
+              minimum size=20pt,
+              font=\small},
+            myarrow/.style={-Stealth},
+            node distance=0.6cm and 1.2cm
+            ]
+            \node[mycircle] (s) {$v_0$};
+            \node[mycircle,below right=of s] (v2) {$v_2$};
+            \node[mycircle,right=of v2] (v4) {$v_4$};
+            \node[mycircle,above right=of s] (v1) {$v_1$};
+            \node[mycircle,right=of v1] (v3) {$v_3$};
+            \node[mycircle,below right=of v3] (t) {$v_5$};
+
+          \draw[->] (s) --node[above, sloped]{\tiny$3$} (v1);
+          \draw[->] (s) --node[above , sloped]{\tiny$13$} (v2);
+          \draw[->] (v1.280) --node[above , sloped]{\tiny$12$} (v2.80);
+          \draw[->] (v2.100) --node[above , sloped]{\tiny$6$} (v1.260);
+          \draw[->] (v1)--node[above , sloped]{\tiny$4$}(v3);
+          \draw[->] (v1)--node[above , sloped , pos=0.15 ]{\tiny$10$}(v4);
+          \draw[->] (v2)--node[above , sloped ]{\tiny$2$}(v4);
+          \draw[->] (v4)--node[above , sloped]{\tiny$5$}(v3);
+          \draw[->] (v3)--node[above , sloped]{\tiny$22$}(t);
+          \draw[->] (v3)--node[above , sloped, pos=0.15]{\tiny$6$}(v2);
+          \draw[->] (v4)--node[above , sloped]{\tiny$8$}(t);
+          \end{tikzpicture}
+
+        </latex-image>
+      </image> 
+      
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What is the shortest amout of time needed for her to arrive at Fantasi College?
+
+        
+      </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Is there a unique route she could take that minimizes this time?
+
+        
+      </p>
+      </statement>
+    </task>
+  </exploration>
+
+  <definition xml:id="def-weightedgraph">
+    <statement>
+     
+      <p>
+        A network is <em>weighted</em> if for each edge <m>(v_i, v_j)\in E</m>
+        we assign (potentially negative!) weight <m>w_{ij}</m>. 
+      </p>
+      
+    </statement>
+  </definition>
+
+  <definition xml:id="def-path">
+    <statement>
+      <p>
+        Give a network <m>N</m>, a <em>path</em> <m>P</m> from <m>v_x</m>, <m>v_y</m> is a sequence of consecutive edges <m>(v_0, v_1), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})</m>
+        where <m>v_{a_0}=v_x, v_{a_k}=v_y</m>.  We say that the <em>length</em> of <m>P</m> is <m>\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}</m>.   We say that the
+        <em>distance</em> from <m>v_x</m> to <m>v_y</m>, <m>d(v_x, v_y), is the length of a shortest path from <m>v_x</m> to <m>v_y</m>.
+      </p>
+    </statement>
+  </definition>
+
+
+  <activity>
+    <task>
+      <p>
+        What is the shortest path from <m>v_0</m> to <m>v_5</m>
+      </p>
+    </task>
+  </activity>
+
+
+  <activity>
+    <introduction>
+      <p>
+        In this activity, we model the shortest path algorithm as a linear programming problem.  Let <m>0\leq x_{ij}\leq 1</m>
+        where <m>x_{ij}=1</m> if <m>(v_i, v_j)</m> is in a shortest path <m>P</m> from <m>v_s</m> to <m>v_t</m>.
+      </p>
+    </introduction>
+    <task>
+      <p>
+        What is the objective problem?
+      </p>
+      <ol cols.="2", style="A">
+        <li>
+          <p>
+            Maximize <m>\displaystyle \sum_i w_{it}x_{it} </m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Maximize <m>\displaystyle \sum_j w_{sj}x_{sj} </m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Maximize <m>\displaystyle \sum_{i,j} w_{ij}x_{ij} </m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Minimize <m>\displaystyle \sum_i w_{it}x_{it} </m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Minimize <m>\displaystyle \sum_j w_{sj}x_{sj} </m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Minimize <m>\displaystyle \sum_{i,j} w_{ij}x_{ij} </m>.
+          </p>
+        </li>
+      </ol>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What inequality ensure that the path traverses through <m>v_t</m>?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  
+
+  
+
+</section>

@@ -44,7 +44,7 @@
         your conjectured max flow for this problem?
       </p>
     </task>
-    <task>
+    <!--<task>
       <statement>
         <p>
           Prove that for any capacitated network, and flow on this network
@@ -52,7 +52,7 @@
           (Work it out for the example cuts you found first)
         </p>
       </statement>
-    </task>
+    </task>-->
   </activity>
 
   <activity xml:id="activity-dualflow">
@@ -111,22 +111,15 @@
     <task>
       <statement>
         <p>
-          Suppose <m>\mu_j=-1</m>.  What could <m>\mu_i, y_{ij}</m> be?
-          Which would minimize the dual objective function?  What happens if <m>\mu_i</m>
+          Suppose <m>\mu_j=-1</m>.  What could <m>\mu_i, y_{ij}</m> be?  What value for <m>\mu_i</m> would minimize the dual objective function?  What happens if <m>\mu_i</m>
           is huge, how would that affect <m>-\mu_k+\mu_i+y_{ki}</m>?
         </p>
         <p>
-          Repeat for <m>\mu_j=0, \mu_i=-1, 0</m>.
+          Repeat for <m>\mu_i=0, \mu_j=-1, 0</m>.
         </p>
       </statement>
     </task>
-    <task>
-      <statement>
-        <p>
-          Is it possible for all the <m>\mu_k</m> to have the same value?
-        </p>
-      </statement>
-    </task>
+   
     <task>
       <statement>
         <p>
@@ -326,7 +319,7 @@
       <statement>
         <p>
           Define <m>V_2' = V\backslash V_1'</m>.  Prove that for any
-          <m>v_i\in V_1', v_2\in V_2'</m>, we have that <m>x_{ij}'=c_{ij}, x_{ji}=0</m>.
+          <m>v_i\in V_1', v_j\in V_2'</m>, we have that <m>x_{ij}'=c_{ij}, x_{ji}=0</m>.
         </p>
         <p>
           (Not neccesary for this proof, but to tie things in, if <m>x_{ij'}=c_{ij}</m>, what does that say about <m>y_{ij}</m> from the dual program in <xref ref="activity-dualflow"/>?  If <m>x_{ij}'\lt c_{ij}</m>,  what does that say about <m>y_{ij}</m>?  )
