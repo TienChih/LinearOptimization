@@ -345,7 +345,7 @@
         </li>
         <li>
           <p>
-            Let <m>R=r\cup \{v_k\}, T=V\backslash R</m>.
+            Let <m>R=R\cup \{v_k\}, T=V\backslash R</m>.
           </p>
         </li>
         <li>
@@ -430,7 +430,66 @@
         </p>
       </statement>
     </task>
+    <task>
+      <statement>
+        <p>
+          Conclude that <m>d(v_s, v_k)=\ell_k</m>.
+        </p>
+      </statement>
+    </task>
   </activity>
+
+  <p>
+    We present an alternative algorithm for when weights can be negative.
+  </p>
+
+  <definition xml:id="def-otheralgorithm">
+    
+    
+    <statement>
+      <p>
+        Let <m>N</m> be a weighted network with no negative cycles.  Then an algorithm to find shortest paths is as follows:
+      </p>
+      <ol>
+        <li>
+          <p>
+            INITIALIZE: Let <m>R=\{v_s\}</m> and let <m>T=V\backslash R</m>.  Label <m>\ell_s=0</m>, <m>\ell_i = w_{si}</m>
+            if <m>w_{si}</m> exists, <m>\infty</m> otherwise.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>\ell_k=\displaystyle \min_{i\in T} \ell_i</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>R=R\cup \{v_k\}, T=V\backslash R</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>T=\emptyset</m>: STOP.
+          </p>
+        </li>
+        <li>
+          <p>
+            For each <m>v_j\in V</m>, let <m> \ell_j=\min\{\ell_j, \ell_j+w_{kj}\}</m>, if <m>v_j\in R</m> has a value changed by this process, remove <m>v_j</m> from <m>R</m> and add it to <m>T</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            GOTO 2.
+          </p>
+        </li>
+      </ol>
+      <p>
+        When the algorithm terminates, <m>\ell_j = d(v_s, v_j)</m>, the length of the shortest path from <m>v_s</m> to <m>v_j</m>.
+      </p>
+    </statement>
+  </definition>
+
+
 
   
 
