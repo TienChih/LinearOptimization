@@ -11,7 +11,7 @@
         each labled with the time it would take to traverse the road.
       </p>
       <image xml:id="traffic">
-        <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+        <description>A Network Flow depicting several nodes and edges with weights.</description>
         <latex-image>
           \begin{tikzpicture}[
             mycircle/.style={
@@ -85,7 +85,7 @@
   <definition xml:id="def-path">
     <statement>
       <p>
-        Give a network <m>N</m>, a <em>path</em> <m>P</m> from <m>v_x</m>, <m>v_y</m> is a sequence of consecutive edges <m>(v_0, v_1), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})</m>
+        Give a network <m>N</m>, a <em>path</em> <m>P</m> from <m>v_x</m>, <m>v_y</m> is a sequence of consecutive edges <m>(v_{a_0}, v_{a_1}), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})</m>
         where <m>v_{a_0}=v_x, v_{a_k}=v_y</m>.  We say that the <em>length</em> of <m>P</m> is <m>\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}</m>.   We say that the
         <em>distance</em> from <m>v_x</m> to <m>v_y</m>, <m>d(v_x, v_y)</m>, is the length of a shortest path from <m>v_x</m> to <m>v_y</m>.
       </p>
@@ -94,19 +94,76 @@
 
 
   <activity>
+    <introduction>
+      <p>
+        Consider the weighted network: 
+      </p>
+      <image xml:id="negativecycle">
+        <description>A network with negative weights.</description>
+        <latex-image>
+          \begin{tikzpicture}[
+            mycircle/.style={
+              circle,
+              draw=black,
+              fill=gray,
+              fill opacity = 0.3,
+              text opacity=1,
+              inner sep=0pt,
+              minimum size=20pt,
+              font=\small},
+            myarrow/.style={-Stealth},
+            node distance=0.6cm and 1.2cm
+            ]
+            \node[mycircle] (s) {$v_0$};
+            \node[mycircle, right=of s] (v1) {$v_1$};
+            \node[mycircle, below left=of v1] (v2) {$v_2$};
+            \node[mycircle, below right=of v1] (v3) {$v_3$};
+            \node[mycircle,right=of v1] (v4) {$v_4$};
+
+          \draw[->] (s) --node[above, sloped]{\tiny$3$} (v1);
+          \draw[->] (v1) --node[above , sloped]{\tiny$2$} (v2);
+          \draw[->] (v2)--node[above , sloped ]{\tiny$-6$}(v3);
+          \draw[->] (v3)--node[above , sloped]{\tiny$3$}(v1);
+          \draw[->] (v1)--node[above , sloped]{\tiny$4$}(v4);
+          \end{tikzpicture}
+
+        </latex-image>
+      </image> 
+    </introduction>
     <task>
       <p>
-        What is the shortest path from <m>v_0</m> to <m>v_5</m>
+        What is the shortest path from <m>v_0</m> to <m>v_4</m>?  (You may repeat edges.)
       </p>
     </task>
+    <task>
+      <p>
+        What if we change <m>w_{23}=-1</m>?
+      </p>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is a reasonable condition for the shortest path to be well defined?
+        </p>
+      </statement>
+    </task>
   </activity>
+
+  <definition xml:id="def-negativecycle">
+    <statement>
+      <p>
+        We define a <em> cycle</em> in a weighted network to be a path froma vertex <m>v_x</m> to itself.  If the length of a cycle is negative,
+        we call it a <em>negative cycle</em>.
+      </p>
+    </statement>
+  </definition>
 
 
   <activity>
     <introduction>
       <p>
-        In this activity, we model the shortest path algorithm as a linear programming problem.  Let <m>0\leq x_{ij}\leq 1</m>
-        where <m>x_{ij}=1</m> if <m>(v_i, v_j)</m> is in a shortest path <m>P</m> from <m>v_s</m> to <m>v_t</m>.
+        In this activity, we model the shortest path algorithm as a linear programming problem.  Assume <m>N</m> is a weighted network with no negative cycles.  Let <m>0\leq x_{ij}\leq 1</m>
+        where <m>x_{ij}=1</m> if <m>(v_i, v_j)</m> is in a shortest path <m>P</m> from <m>v_s</m> to <m>v_d</m>.
       </p>
     </introduction>
     <task>
@@ -149,7 +206,227 @@
     <task>
       <statement>
         <p>
-          What inequality ensure that the path traverses through <m>v_t</m>?
+          What inequality ensures that  exactly one edge of the chosen edges is incident to <m>v_d</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>\displaystyle \sum_i x_{id} \leq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_i x_{id} \geq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_i x_{id} = 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_i x_{id} \leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_i x_{id} \geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_i x_{id} = 0</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What inequality ensures that the chosen edges form a path?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              For each vertex <m>v_i\neq v_s, v_d</m>, <m>\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}=1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each vertex <m>v_i\neq v_s, v_d</m>, <m>\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}\leq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each vertex <m>v_i\neq v_s, v_d</m>, <m>\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}\geq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each vertex <m>v_i\neq v_s, v_d</m>, <m>\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}=0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each vertex <m>v_i\neq v_s, v_d</m>, <m>\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each vertex <m>v_i\neq v_s, v_d</m>, <m>\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}\geq 0</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Why do we not need a constraint for <m>v_s</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Model the shortest path problem in <xref ref="exploration-path"/> as a linear programming problem and solve it:
+        </p>
+        <p>
+          <sage>
+            <input>
+              %display typeset
+              A = (FIXME)
+              b = (FIXME)
+              c = (FIXME)
+              P = InteractiveLPProblem(A, b, c,
+               [FIXME], 
+               constraint_type = [FIXME],
+               variable_type = [FIXME],
+               problem_type = FIXME)
+              P
+            </input>         
+            </sage>
+            <sage>
+              <input>
+                print(P.optimal_solution())
+                print(P.optimal_value())
+              </input>         
+            </sage>
+      </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    As was the case in previous examples, we introduce a less cumbersome method for finding these shortest paths.
+  </p>
+
+  <definition xml:id="def-DijkstrasAlgorithm">
+    <title>Dijkstra's Algorithm</title>
+    
+    
+    <statement>
+      <p>
+        Let <m>N</m> be a weighted network with only non-negative weights.  Then <em>Dijkstra's Shortest Path Algorithm</em> is as follows:
+      </p>
+      <ol>
+        <li>
+          <p>
+            INITIALIZE: Let <m>R=\{v_s\}</m> and let <m>T=V\backslash R</m>.  Label <m>\ell_s=0</m>, <m>\ell_i = w_{si}</m>
+            if <m>w_{si}</m> exists, <m>\infty</m> otherwise.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>\ell_k=\displaystyle \min_{i\in T} \ell_i</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>R=r\cup \{v_k\}, T=V\backslash R</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>T=\emptyset</m>: STOP.
+          </p>
+        </li>
+        <li>
+          <p>
+            For each <m>v_j\in T</m>, let <m> \ell_j=\min\{\ell_j, \ell_j+w_{kj}\}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            GOTO 2.
+          </p>
+        </li>
+      </ol>
+      <p>
+        When the algorithm terminates, <m>\ell_j = d(v_s, v_j)</m>, the length of the shortest path from <m>v_s</m> to <m>v_j</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity>
+    <statement>
+      <p>
+        Apply <xref ref="def-DijkstrasAlgorithm"/> to the shortest path problem in <xref ref="exploration-path"/>.
+      </p>
+    </statement>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        We prove that in <xref ref="def-DijkstrasAlgorithm"/>, <m>\ell_i=d(v_s, v_i)</m> for each <m>v_i\in R</m> via induction on <m>|R|</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Verify that the statement is true when <m>|R|=1</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Prove that in step 3, if we select <m>v_k</m> then <m>v_k</m> is adjacent to a vertex in <m>v_{k}'\in R</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Let <m>|R|=m\geq 1</m> and consider <m>v_k, \ell_k</m> as chosen in step 3.  Show that <m>\ell_k</m> is the shortest distance from <m>v_s</m>
+          to <m>v_k</m> traversing only vertices in <m>R\cup \{v_k\}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose (by way of contradiction) that there was a shortest path <m>P</m> from <m>v_s</m> to <m>v_k</m> where the length of <m>P\lt \ell_k</m>.  Show that
+          there must be an edge in <m>P</m>, <m>(v_x,v_y</m>) so that <m>v_x\in R, v_y\not \in R, v_y\neq v_k</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that in this case that <m>\ell_x+w_{xy}\leq \ell_k</m>.  (Invoke the induction hypothesis).
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that the last statement produces a contradiction (why wasn't <m>y</m> already chosen?)
         </p>
       </statement>
     </task>

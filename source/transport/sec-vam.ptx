@@ -282,7 +282,7 @@
     <task>
       <statement>
         <p>
-          We select the row/olumn with the highest entries and use the smallest entry in said row/column to move as much of the 
+          We select the row/column with the highest entries and use the smallest entry in said row/column to move as much of the 
           goods as we can:
         </p>
         <p>
@@ -461,31 +461,33 @@
         </p>
       </statement>
     </task>
+
     <task>
       <statement>
         <p>
-          The next highest difference is 3 for warehouse 2:
+          Now that Market 3 has all their demand filled, and shipping there is no longer an option, what are the differences between the lowest costs and second lowest costs in each row/column?
         </p>
+        
         <p>
           <tabular halign="center">
             <row>
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                1
+                ?
               </cell>
               <cell bottom="medium">
-                1
+                ?
               </cell>
               <cell bottom="medium">
-                5
+                NA
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                ?
               </cell>
               <cell>
                 2
@@ -502,7 +504,104 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                3
+                ?
+              </cell>
+              <cell>
+                9
+              </cell>
+              <cell>
+                4
+              </cell>
+              <cell right="medium">
+                7
+              </cell>
+              <cell halign="left">
+                60 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                ?
+              </cell>
+              <cell bottom="medium">
+                1
+              </cell>
+              <cell bottom="medium">
+                2
+              </cell>
+              <cell right="medium" bottom="medium">
+                9
+              </cell>
+              <cell halign="left" bottom="medium">
+                10 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                40 
+              </cell>
+              <cell>
+                50 
+              </cell>
+              <cell right="medium">
+                0
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Would it make sense to move any more goods to market 3?  How should
+          we decide how to move goods next?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          The next highest difference is 3 for warehouse 2:
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                ?
+              </cell>
+              <cell bottom="medium">
+                ?
+              </cell>
+              <cell bottom="medium">
+                NA
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                ?
+              </cell>
+              <cell>
+                2
+              </cell>
+              <cell>
+                1
+              </cell>
+              <cell right="medium">
+                <m>\enclose{circle}{2}^{20}</m>
+              </cell>
+              <cell halign="left">
+                20 
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                ?
               </cell>
               <cell>
                 9
@@ -519,7 +618,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                ?
               </cell>
               <cell bottom="medium">
                 1
@@ -557,20 +656,20 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                1
+                ?
               </cell>
               <cell bottom="medium">
-                1
+                ?
               </cell>
               <cell bottom="medium">
-                5
+                NA
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                ?
               </cell>
               <cell>
                 2
@@ -587,7 +686,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                3
+                ?
               </cell>
               <cell>
                 9
@@ -604,7 +703,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                ?
               </cell>
               <cell bottom="medium">
                 1
@@ -790,7 +889,7 @@
         </li>
         <li>
           <p>
-            We ignore any source/sink with 0 supply/demand and repeat 3-4.
+            We ignore any source/sink with 0 supply/demand and repeat 2-4.
           </p>
         </li>
         <li>
