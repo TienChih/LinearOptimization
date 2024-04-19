@@ -490,6 +490,157 @@
   </definition>
 
 
+  <exploration>
+    <introduction>
+      <p>
+        Suppose a shipping company is moving goods through a series of
+        transportation hubs via rail.  The maximum capcity in tons and the cost in
+        thousands of dollars per ton are listed as an ordered pair:
+
+        <image xml:id="train">
+          <description>A Network Flow depicting several hubs with rails showing capacity and cost.</description>
+          <latex-image>
+            \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (s) {$v_0$};
+              \node[mycircle,below right=of s] (v2) {$v_2$};
+              \node[mycircle,right=of v2] (v4) {$v_4$};
+              \node[mycircle,above right=of s] (v1) {$v_1$};
+              \node[mycircle,right=of v1] (v3) {$v_3$};
+              \node[mycircle,below right=of v3] (t) {$v_5$};
+  
+            \draw[->] (s) --node[above,  sloped, pos= 0.5]{\tiny$(5,1)$} (v1);
+            \draw[->] (s) --node[below, sloped, pos= 0.5]{\tiny$(5,1)$} (v2);
+            \draw[->] (v1) --node[below, sloped, pos= 0.5]{\tiny$(5,1)$} (v2);
+            
+            \draw[->] (v1)--node[above, sloped, pos= 0.5]{\tiny$(5,1)$}(v3);
+            \draw[->] (v1)--node[above, sloped, pos= 0.25]{\tiny$(5,2)$}(v4);
+            \draw[->] (v2)--node[above, sloped, pos= 0.25]{\tiny$(5,3)$}(v3);
+            \draw[->] (v2)--node[below ]{\tiny$(10,100)$}(v4);
+            \draw[->] (v3)--node[above, sloped, pos= 0.5]{\tiny$(5,1)$}(t);
+            \draw[->] (v4)--node[below, sloped, pos= 0.5]{\tiny$(10,2)$}(t);
+            \end{tikzpicture}
+  
+          </latex-image>
+        </image> 
+        The pairs are (capacity, cost) pairs, and we are trying to ship 10 tons
+        of goods from <m>v_0</m> to <m>v_5</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find a shortest path from <m>v_0</m> to <m>v_5</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use this as an <m>\alpha</m>-path as in <xref ref="def-maxflowalgorithm"/>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Adjust capacities appropriately and remove any fuly capacitated edges.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Repeat (a)-(c) until we have a flow of 10.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Argue that this is not the lowest cost flow.
+        </p>
+      </statement>
+    </task>
+  </exploration> 
+
+  <definition xml:id="def-mincostflowalgorithm">
+    <title>Minimum Cost Flow Algorithm</title>
+    <statement>
+      <p>
+        The steps for the <em>Minimum Cost Flow Algorithm</em> are as follows:
+      </p>
+      <ol>
+        <li>
+          <p>
+            INITIALIZE: Let <m>N=(V, E)</m> be a weighted capacitated network with a unique source <m>v_s</m> and sink <m>v_d</m>, with no edges going into
+            the source and no edges coming out of the sink.  We start with the zero flow <m>x_{ij}=0</m>
+            for each edge <m>(v_i, v_j)</m>.  Let <m>F</m> be the desired total flow.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>\displaystyle \varphi(v_d)=\sum_{i} x_{id}=F</m>, STOP, we have reached a total flow of <m>F</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Form a weighted network <m>N'=(V', E')</m> as follows:
+            <ul>
+              <li>
+                <p>
+                  Let <m>V'=V</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Let <m>(v_i, v_j)\in E'</m> if and only if <m>x_{ij}\lt c_{ij}</m>.  Let <m>w'_{ij}=w_{ij}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Let <m>(v_j, v_i)\in E'</m> if and only if <m>x_{ij} > 0</m>.  Let <m>w'_{ij}=-w_{ij}</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            Apply the shortest path algorithm on <m>N'</m> to find the shortest path from <m>v_s</m> to <m>v_d</m>.
+            If no path exists STOP, there is no flow with total value <m>F</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the <m>\alpha</m>-path corresponding to the shortest path found in (4).  Let <me>q = \displaystyle \min_{(v_i, v_j) \in \alpha}\left\{ \min_{(v_i, v_j)\text{ forward }}\{c_{ij}-x_{ij}\}, \min_{(v_i, v_j)\text{ backwards }}\{F-\varphi(v_d) \}\right\}</me> 
+          </p>
+        </li>
+        <li>
+          <p>
+            Add <m>q</m> to each forward <m>x_{ij}</m> in <m>\alpha</m>, and subtract <m>q</m> from each backwards <m>x_{ij}</m> in <m>\alpha</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            GOTO 2.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
 
   
 
