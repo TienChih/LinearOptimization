@@ -382,7 +382,48 @@ print(P.optimal_value())
 </div></li>
 <li id="def-otheralgorithm-1-2-6"><div class="para" id="def-otheralgorithm-1-2-6-1">GOTO 2.</div></li>
 </ol> <div class="para" id="def-otheralgorithm-1-3">When the algorithm terminates, <span class="process-math">\(\ell_j = d(v_s, v_j)\text{,}\)</span> the length of the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
-</div></article></section></div>
+</div></article><article class="exploration project-like" id="sec-weighted-14"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">8.3.6</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-weighted-14-1"><div class="para" id="sec-weighted-14-1-1">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs, and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="sec-weighted-14-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-weighted-14-2-1-1">Find a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-weighted-14-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-weighted-14-3-1-1">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" title="Definition 8.2.3: Max Flow Algorithm">Definition 8.2.3</a>.</div></article><article class="task exercise-like" id="sec-weighted-14-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-weighted-14-4-1-1">Adjust capacities appropriately and remove any fuly capacitated edges.</div></article><article class="task exercise-like" id="sec-weighted-14-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-weighted-14-5-1-1">Repeat (a)-(c) until we have a flow of 10.</div></article><article class="task exercise-like" id="sec-weighted-14-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-weighted-14-6-1-1">Argue that this is not the lowest cost flow.</div></article></article><article class="definition definition-like" id="def-mincostflowalgorithm"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Minimum Cost Flow Algorithm.</span>
+</h3> <div class="para" id="def-mincostflowalgorithm-2-1">The steps for the <em class="emphasis">Minimum Cost Flow Algorithm</em> are as follows:</div> <ol class="decimal">
+<li id="def-mincostflowalgorithm-2-2-1"><div class="para" id="def-mincostflowalgorithm-2-2-1-1">INITIALIZE: Let <span class="process-math">\(N=(V, E)\)</span> be a weighted capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{,}\)</span> with no edges going into the source and no edges coming out of the sink.  We start with the zero flow <span class="process-math">\(x_{ij}=0\)</span> for each edge <span class="process-math">\((v_i, v_j)\text{.}\)</span>  Let <span class="process-math">\(F\)</span> be the desired total flow.</div></li>
+<li id="def-mincostflowalgorithm-2-2-2"><div class="para" id="def-mincostflowalgorithm-2-2-2-1">If <span class="process-math">\(\displaystyle \varphi(v_d)=\sum_{i} x_{id}=F\text{,}\)</span> STOP, we have reached a total flow of <span class="process-math">\(F\text{.}\)</span>
+</div></li>
+<li id="def-mincostflowalgorithm-2-2-3"><div class="para logical" id="def-mincostflowalgorithm-2-2-3-1">
+<div class="para">Form a weighted network <span class="process-math">\(N'=(V', E')\)</span> as follows:</div>
+<ul class="disc">
+<li id="def-mincostflowalgorithm-2-2-3-1-2-1"><div class="para" id="def-mincostflowalgorithm-2-2-3-1-2-1-1">Let <span class="process-math">\(V'=V\)</span>
+</div></li>
+<li id="def-mincostflowalgorithm-2-2-3-1-2-2"><div class="para" id="def-mincostflowalgorithm-2-2-3-1-2-2-1">Let <span class="process-math">\((v_i, v_j)\in E'\)</span> if and only if <span class="process-math">\(x_{ij}\lt c_{ij}\text{.}\)</span>  Let <span class="process-math">\(w'_{ij}=w_{ij}\text{.}\)</span>
+</div></li>
+<li id="def-mincostflowalgorithm-2-2-3-1-2-3"><div class="para" id="def-mincostflowalgorithm-2-2-3-1-2-3-1">Let <span class="process-math">\((v_j, v_i)\in E'\)</span> if and only if <span class="process-math">\(x_{ij} &gt; 0\text{.}\)</span>  Let <span class="process-math">\(w'_{ij}=-w_{ij}\text{.}\)</span>
+</div></li>
+</ul>
+</div></li>
+<li id="def-mincostflowalgorithm-2-2-4"><div class="para" id="def-mincostflowalgorithm-2-2-4-1">Apply the shortest path algorithm on <span class="process-math">\(N'\)</span> to find the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span> If no path exists STOP, there is no flow with total value <span class="process-math">\(F\text{.}\)</span>
+</div></li>
+<li id="def-mincostflowalgorithm-2-2-5"><div class="para logical" id="def-mincostflowalgorithm-2-2-5-1">
+<div class="para">Find the <span class="process-math">\(\alpha\)</span>-path corresponding to the shortest path found in (4).  Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q = \displaystyle \min_{(v_i, v_j) \in \alpha}\left\{ \min_{(v_i, v_j)\text{ forward }}\{c_{ij}-x_{ij}\}, \min_{(v_i, v_j)\text{ backwards }}\{F-\varphi(v_d) \}\right\}
+\end{equation*}
+</div>
+</div></li>
+<li id="def-mincostflowalgorithm-2-2-6"><div class="para" id="def-mincostflowalgorithm-2-2-6-1">Add <span class="process-math">\(q\)</span> to each forward <span class="process-math">\(x_{ij}\)</span> in <span class="process-math">\(\alpha\text{,}\)</span> and subtract <span class="process-math">\(q\)</span> from each backwards <span class="process-math">\(x_{ij}\)</span> in <span class="process-math">\(\alpha\text{.}\)</span>
+</div></li>
+<li id="def-mincostflowalgorithm-2-2-7"><div class="para" id="def-mincostflowalgorithm-2-2-7-1">GOTO 2.</div></li>
+</ol></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-extras.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
