@@ -557,7 +557,7 @@
               P = InteractiveLPProblem(A, b, c,
                ["v","q1","q2","q3","q4","q5","q6","q7"], 
                constraint_type = ["==", "&lt;=", "&lt;=", "&lt;=", "&lt;=", "&lt;=", "&lt;="],
-               variable_type = ">=")
+               variable_type = ["", "&gt;=", "&gt;=", "&gt;=", "&gt;=", "&gt;=", "&gt;="])
               P
             </input>         
             </sage>
