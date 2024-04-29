@@ -296,9 +296,7 @@
     
             <interactive  platform="doenetml" width="100%" >
     <slate surface="doenetml">
-      &lt;p&gt;
-      Enter the coefficients for the objective function &lt;m&gt;f(x_1, x_2)&lt;/m&gt; and drag the point to a feasible solution which maximizes the objective function.
-    &lt;/p&gt;
+      
     &lt;graph xmin="-4" ymin="-4" xmax="22" ymax="22"&gt;
       &lt;polygon vertices="(0,0) (0, 17.5) (15,10) (20,0)" filled draggable="false" styleNumber="4"/&gt;
       &lt;point name="u" styleNumber="5"&gt;

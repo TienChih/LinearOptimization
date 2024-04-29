@@ -1419,19 +1419,52 @@
           How do we know we now have an optimal solution based only on the tableau?
         </p>
       </statement>
+     
     </task>
     
     <task>
       <statement>
         <p>
-          
+          Confirm your solution geometrically:
+          <interactive  platform="doenetml" width="100%" >
+            <slate surface="doenetml">
+              
+              &lt;graph xmin="-2" ymin="-2" xmax="15" ymax="15"&gt;
+              &lt;polygon vertices="(0,0) (8, 4) (10,10) (2,14)" filled draggable="false" styleNumber="4"/&gt;
+              &lt;point name="u" styleNumber="5"&gt;
+                  (0,0)
+                &lt;constraints&gt;
+                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,0)&lt;/point&gt;&lt;/attractTo&gt;
+                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(8,4)&lt;/point&gt;&lt;/attractTo&gt;
+                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(10,10)&lt;/point&gt;&lt;/attractTo&gt;
+                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(2, 14)&lt;/point&gt;&lt;/attractTo&gt;
+                &lt;/constraints&gt;
+              &lt;/point&gt;
+              &lt;m draggable="false" anchor="($u.x+1,$u.y+1)"&gt;
+                  $u
+                &lt;/m&gt;
+            
+              &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
+            &lt;/graph&gt;
+            &lt;p&gt;
+              &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;m&gt;f($u.x, $u.y)= &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;&lt;/m&gt;.
+            &lt;/p&gt;
+            
+            &lt;answer&gt;
+              &lt;award&gt;
+                &lt;when&gt;
+                  $u = (10, 10) and $c1=5 and $c2=-1 
+                &lt;/when&gt;
+              &lt;/award&gt;
+            &lt;/answer&gt;
+            </slate>
+                    </interactive>
         </p>
       </statement>
-      <hint>
-        <p>
-          <interactive desmos="uxspyigm2m"/>
-        </p>
-      </hint>
+      
     </task>
 
   </activity>
