@@ -640,6 +640,7 @@
       <statement>
         <p>
           Consider a sketch of our feasible region:
+          
           <image xml:id="whichpivot">
             <description>The feasible region for a canonical maximization problem.</description>
             <latex-image>
