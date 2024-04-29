@@ -644,27 +644,23 @@
           <image xml:id="whichpivot">
             <description>The feasible region for a canonical maximization problem.</description>
             <latex-image>
-              \begin{tikzpicture}
+              \begin{tikzpicture}[scale=0.2] 
               \draw[fill, blue, opacity=0.4] (0,0) -- (0,6.5) -- (2, 6) -- (5,4) -- (6,0) -- (0,0);
               \draw[very thick,->] (-1.5,0) -- (30,0);
               \draw[very thick,->] (0,-1.5) -- (0,30);
-              \foreach \x in {0,5,...,30}\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\tiny $\mathbf{\x}$};
-              \foreach \y in {0,5,...,30}\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\tiny $\mathbf{\y}$};
               \draw[black, thick] (0,0) -- (0,6.5) -- (2,6) -- (5,4) -- (6,0)-- (0,0);         
-              \draw[red, dashed, thick] (-1,8) --node[above right]{$2x+3y=22$} (12.5, -1);          
-              \draw[purple, dashed, thick] (-1,6.75) --node[above]{$x+4y=26$} (30, -1);
-              \draw[orange, dashed, thick] (-1,28) --node[above right]{$4x+y=24$} (6.25, -1);
-              \draw[ fill] (0,0) node[below left]{\Large$(0,0)$} circle (2pt); 
-              \draw[ fill] (0,6.5) node[ left]{\Large$(0,6.5)$} circle (2pt); 
-              \draw[ fill] (0,22/3) node[ left]{\Large$(0,22/3)$} circle (2pt); 
-              \draw[ fill] (0,6.5) node[ left]{\Large$(0,6.5)$} circle (2pt); 
-              \draw[ fill] (0,24) node[ left]{\Large$(0,24)$} circle (2pt);  
-              \draw[ fill] (6,0) node[ below]{\Large$(6,0)$} circle (2pt); 
-              \draw[ fill] (11,0) node[ below]{\Large$(11,0)$} circle (2pt); 
-              \draw[ fill] (6,0) node[ below]{\Large$(6,0)$} circle (2pt); 
-              \draw[ fill] (26,0) node[ below]{\Large$(26,0)$} circle (2pt); 
-              \draw[ fill] (2,6) node[ above right]{\Large$(2,6)$} circle (2pt); 
-              \draw[ fill] (5,4) node[ above right]{\Large$(5,4)$} circle (2pt); 
+              \draw[red, dashed, thick] (-1,8) --node[above, sloped, pos= 0.7]{\tiny $2x+3y=22$} (12.5, -1);          
+              \draw[purple, dashed, thick] (-1,6.75) --node[above, sloped, pos= 0.5]{\tiny $x+4y=26$} (30, -1);
+              \draw[orange, dashed, thick] (-1,28) --node[above, sloped, pos= 0.3]{\tiny $4x+y=24$} (6.25, -1);
+              \draw[ fill] (0,0) node[below left]{\tiny $(0,0)$} circle (6pt); 
+              \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
+              \draw[ fill] (0,22/3) node[ left]{\tiny $(0,22/3)$} circle (6pt); 
+              \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
+              \draw[ fill] (0,24) node[ left]{\tiny $(0,24)$} circle (6pt);  
+              \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
+              \draw[ fill] (11,0) node[ below]{\tiny $(11,0)$} circle (6pt); 
+              \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
+              \draw[ fill] (26,0) node[ below]{\tiny $(26,0)$} circle (6pt);  
           
           \end{tikzpicture}
     
