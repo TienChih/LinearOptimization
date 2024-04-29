@@ -509,7 +509,7 @@
   <activity>
     <introduction>
       <p>
-        Consider the canonical max problem corresponding to:
+        Consider the canonical maximization problem and basic solution encoded by the following tableau:
         
       </p>
       <p>
@@ -608,7 +608,35 @@
       <statement>
         <p>
           Consider a sketch of our feasible region:
-          <interactive desmos="oda5mzgqs1"/>
+          <image xml:id="whichpivot">
+            <description>The feasible region for a canonical maximization problem.</description>
+            <latex-image>
+              \begin{tikzpicture}
+              \draw[fill, blue, opacity=0.4] (0,0) -- (0,6.5) -- (2, 6) -- (5,4) -- (6,0) -- (0,0);
+              \draw[very thick,->] (-1.5,0) -- (30,0);
+              \draw[very thick,->] (0,-1.5) -- (0,30);
+              \foreach \x in {0,5,...,30}\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\tiny $\mathbf{\x}$};
+              \foreach \y in {0,5,...,30}\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\tiny $\mathbf{\y}$};
+              \draw[black, thick] (0,0) -- (0,6.5) -- (2,6) -- (5,4) -- (6,0)-- (0,0);         
+              \draw[red, dashed, thick] (-1,8) --node[above right]{$2x+3y=22$} (12.5, -1);          
+              \draw[purple, dashed, thick] (-1,6.75) --node[above]{$x+4y=26$} (30, -1);
+              \draw[orange, dashed, thick] (-1,28) --node[above right]{$4x+y=24$} (6.25, -1);
+              \draw[ fill] (0,0) node[below left]{\Large$(0,0)$} circle (2pt); 
+              \draw[ fill] (0,6.5) node[ left]{\Large$(0,6.5)$} circle (2pt); 
+              \draw[ fill] (0,22/3) node[ left]{\Large$(0,22/3)$} circle (2pt); 
+              \draw[ fill] (0,6.5) node[ left]{\Large$(0,6.5)$} circle (2pt); 
+              \draw[ fill] (0,24) node[ left]{\Large$(0,24)$} circle (2pt);  
+              \draw[ fill] (6,0) node[ below]{\Large$(6,0)$} circle (2pt); 
+              \draw[ fill] (11,0) node[ below]{\Large$(11,0)$} circle (2pt); 
+              \draw[ fill] (6,0) node[ below]{\Large$(6,0)$} circle (2pt); 
+              \draw[ fill] (26,0) node[ below]{\Large$(26,0)$} circle (2pt); 
+              \draw[ fill] (2,6) node[ above right]{\Large$(2,6)$} circle (2pt); 
+              \draw[ fill] (5,4) node[ above right]{\Large$(5,4)$} circle (2pt); 
+          
+          \end{tikzpicture}
+    
+              </latex-image>
+          </image> 
         </p>
         <p>
           We could choose to pivot <m>x_2</m> (<m>y</m> in the sketch) with either <m>t_1, t_2, t_3</m>.  Only one of these would result in a feasible solution.  Looking graphically, which is it?
@@ -625,7 +653,7 @@
     <task>
       <statement>
         <p>
-          For a canonical linear program encoded by a Tucker tableau:
+          For a canonical linear program and basic solution encoded by a Tucker tableau:
           
         </p>
         <p>
