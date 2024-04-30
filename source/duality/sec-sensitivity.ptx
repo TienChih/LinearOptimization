@@ -474,7 +474,7 @@
           the corresponding tableau?  Is there anything special about the corresponding solution? 
         </p>
         <p>
-          <interactive  platform="doenetml" width="100%" aspect="3:4">
+          <interactive  platform="doenetml" width="100%" aspect="2:3">
             <slate surface="doenetml">
               &lt;graph xmin="-2" ymin="-2" xmax="16" ymax="16"&gt;
               &lt;polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/&gt;
@@ -541,11 +541,14 @@
             &lt;/graph&gt;
             &lt;p&gt;
               &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c11"/&gt; &lt;m&gt;\begin{bmatrix} -1 \\ 0\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c12"/&gt; &lt;m&gt;\begin{bmatrix} 0 \\ -1\end{bmatrix}&lt;/m&gt;,
+              &lt;/p&gt;
+              &lt;p&gt;  
               &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c21"/&gt; &lt;m&gt;\begin{bmatrix} -1 \\ 0\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c22"/&gt; &lt;m&gt;\begin{bmatrix} 1 \\ 1\end{bmatrix}&lt;/m&gt;.
             &lt;/p&gt;
             &lt;p&gt;
               &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c31"/&gt; &lt;m&gt;\begin{bmatrix} 1 \\ 1\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c32"/&gt; &lt;m&gt;\begin{bmatrix} 3 \\ 1\end{bmatrix}&lt;/m&gt;,
-            
+              &lt;/p&gt;
+              &lt;p&gt;
               &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c41"/&gt; &lt;m&gt;\begin{bmatrix} 0 \\ -1\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c42"/&gt; &lt;m&gt;\begin{bmatrix} 3 \\ 1\end{bmatrix}&lt;/m&gt;.
             &lt;/p&gt;
             
