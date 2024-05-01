@@ -551,7 +551,7 @@
               &lt;line name="line2" slope="-3/2" through="$u2"  styleNumber="6"/&gt; 
               &lt;lineSegment name="segment2" endpoints="$u2 ($u2.x+3,$u2.y+2)" styleNumber="6"/&gt;
             
-              &lt;line name="line2a" slope="(-1*$c21 +$c22*1)/$c22" through="$u2" styleNumber="2"/&gt; 
+              &lt;line name="line2a" slope="-(-1*$c21 +$c22*1)/$c22" through="$u2" styleNumber="2"/&gt; 
               &lt;lineSegment name="segment2a" endpoints="$u2 ($u2.x-1*$c21 +$c22*1, $u2.y+1*$c22)" styleNumber="2"/&gt;
             
             
