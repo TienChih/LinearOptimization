@@ -524,9 +524,9 @@
     <task>
       <statement>
         <p>
-          For which extreme point is the normal vector of the objective plane a linear combination
-          of the normal vectors of intersecting hyperplanes using only positive coefficients?  How is that reflected in
-          the corresponding tableau?  Is there anything special about the corresponding solution? 
+          For each extreme point, express <m>\begin{bmatrix}3 \\ 2\end{bmatrix} </m> as a linear combination of the normal vectors of the corresponding hyperplanes.
+          Then, for each tableau computed above, look at their basic solutions.  Which point is it, and how are these coefficients reflected in
+          the tableau?
         </p>
         <p>
           <interactive  platform="doenetml" width="100%" aspect="3:4">
@@ -641,6 +641,14 @@
             &lt;/answer&gt;
             </slate>
                     </interactive>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For which extreme points are the normal vector of the objective plane a linear combination
+          of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about the corresponding solution? 
         </p>
       </statement>
     </task>
