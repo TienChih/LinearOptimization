@@ -648,7 +648,7 @@
       <statement>
         <p>
           For which extreme points are the normal vector of the objective plane a linear combination
-          of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about the corresponding solution? 
+          of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about those extreme points? 
         </p>
       </statement>
     </task>
