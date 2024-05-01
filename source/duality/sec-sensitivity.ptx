@@ -512,7 +512,7 @@
             &lt;answer&gt;
               &lt;award&gt;
                 &lt;when&gt;
-                  $c21=-1 and $c22=2
+                  $c1=-1 and $c2=2
                 &lt;/when&gt;
               &lt;/award&gt;
             &lt;/answer&gt;
