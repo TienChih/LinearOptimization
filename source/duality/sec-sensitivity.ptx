@@ -477,7 +477,7 @@
         <p>
           Drag sliders for <m>c_1, c_2</m> so that <me>\begin{bmatrix} 3 \\ 2 \end{bmatrix} = c_1\begin{bmatrix} -1 \\ 0 \end{bmatrix}+c_2 \begin{bmatrix} 1 \\ 1 \end{bmatrix}.</me>
         </p>
-        <interactive  platform="doenetml" width="100%" aspect="2:3">
+        <interactive  platform="doenetml" width="100%" aspect="3:4">
           <slate surface="doenetml">
             &lt;graph xmin="-2" ymin="4" xmax="12" ymax="18"&gt;
               &lt;polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/&gt;
@@ -529,7 +529,7 @@
           the corresponding tableau?  Is there anything special about the corresponding solution? 
         </p>
         <p>
-          <interactive  platform="doenetml" width="100%" aspect="2:3">
+          <interactive  platform="doenetml" width="100%" aspect="3:4">
             <slate surface="doenetml">
               &lt;graph xmin="-2" ymin="-2" xmax="16" ymax="16"&gt;
               &lt;polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/&gt;
