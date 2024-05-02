@@ -99,8 +99,7 @@ window.MathJax = {
 <p>Waiting on the page to load...</p>
 </div>
 <script type="text/doenetml">
-              
-            <graph xmin="-4" ymin="-4" xmax="22" ymax="22">
+              <graph xmin="-4" ymin="-4" xmax="22" ymax="22">
               <polygon vertices="(0,0) (0, 17.5) (15,10) (20,0)" filled draggable="false" styleNumber="4"/>
               <point name="u" styleNumber="5">
                   (0,0)
@@ -112,22 +111,18 @@ window.MathJax = {
                 </constraints>
               </point>
               <m draggable="false" anchor="($u.x+1,$u.y+1)">
-                  $u
+                  f$u = <number>$c1*$u.x+$c2*$u.y</number>
                 </m>
-            
+
               <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
             </graph>
             <p>
               <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
             </p>
-            <p>
-              <m>f($u.x, $u.y)= <number>$c1*$u.x+$c2*$u.y</number></m>.
-            </p>
-            
             <answer>
               <award>
                 <when>
-                  $u = (20,0) and $c1=1000 and $c2=120
+                  $u = (15,10) and $c1=100 and $c2=120
                 </when>
               </award>
             </answer>
