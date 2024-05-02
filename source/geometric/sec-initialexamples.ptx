@@ -38,47 +38,73 @@
         <p>
           Treating <m>x_1</m> as <m>x</m> and <m>x_2</m> as <m>y</m>, sketch the region on the cartesian plane satisfying all the above inequalities.
         </p>
-      </statement>
-      <hint>
-        <p>
-          <interactive  platform="doenetml" width="100%" >
-            <slate surface="doenetml">
-              
+        <interactive platform="doenetml" width="100%" aspect="4:4">
+          <slate surface="doenetml">
             &lt;graph xmin="-4" ymin="-4" xmax="22" ymax="22"&gt;
-              &lt;polygon vertices="(0,0) (0, 17.5) (15,10) (20,0)" filled draggable="false" styleNumber="4"/&gt;
-              &lt;point name="u" styleNumber="5"&gt;
-                  (0,0)
-                &lt;constraints&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,0)&lt;/point&gt;&lt;/attractTo&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,17.5)&lt;/point&gt;&lt;/attractTo&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(20,0)&lt;/point&gt;&lt;/attractTo&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(15,10)&lt;/point&gt;&lt;/attractTo&gt;
-                &lt;/constraints&gt;
-              &lt;/point&gt;
-              &lt;m draggable="false" anchor="($u.x+1,$u.y+1)"&gt;
-                  $u
-                &lt;/m&gt;
+&lt;polygon vertices="(0,0) (0, 17.5) (15,10) (20,0)" filled draggable="false" styleNumber="4"/&gt;
+&lt;point name="u" styleNumber="5"&gt;
+  (0,0)
+&lt;constraints&gt;
+  &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,0)&lt;/point&gt;&lt;/attractTo&gt;
+  &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,17.5)&lt;/point&gt;&lt;/attractTo&gt;
+  &lt;attractTo threshold="1"&gt;&lt;point&gt;(20,0)&lt;/point&gt;&lt;/attractTo&gt;
+  &lt;attractTo threshold="1"&gt;&lt;point&gt;(15,10)&lt;/point&gt;&lt;/attractTo&gt;
+&lt;/constraints&gt;
+&lt;/point&gt;
+&lt;m draggable="false" anchor="($u.x+1,$u.y+1)"&gt;
+  f$u = &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;
+&lt;/m&gt;
+
+&lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
+&lt;/graph&gt;
+&lt;p&gt;
+&lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
+&lt;/p&gt;
+&lt;answer&gt;
+&lt;award&gt;
+&lt;when&gt;
+  $u = (15,10) and $c1=100 and $c2=120
+&lt;/when&gt;
+&lt;/award&gt;
+&lt;/answer&gt;
+          </slate>
+                  </interactive>
+        <answer>
+            <interactive platform="doenetml" width="100%" aspect="4:4">
+              <slate surface="doenetml">
+                &lt;graph xmin="-4" ymin="-4" xmax="22" ymax="22"&gt;
+  &lt;polygon vertices="(0,0) (0, 17.5) (15,10) (20,0)" filled draggable="false" styleNumber="4"/&gt;
+  &lt;point name="u" styleNumber="5"&gt;
+      (0,0)
+    &lt;constraints&gt;
+      &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,0)&lt;/point&gt;&lt;/attractTo&gt;
+      &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,17.5)&lt;/point&gt;&lt;/attractTo&gt;
+      &lt;attractTo threshold="1"&gt;&lt;point&gt;(20,0)&lt;/point&gt;&lt;/attractTo&gt;
+      &lt;attractTo threshold="1"&gt;&lt;point&gt;(15,10)&lt;/point&gt;&lt;/attractTo&gt;
+    &lt;/constraints&gt;
+  &lt;/point&gt;
+  &lt;m draggable="false" anchor="($u.x+1,$u.y+1)"&gt;
+      f$u = &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;
+    &lt;/m&gt;
+
+  &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
+&lt;/graph&gt;
+&lt;p&gt;
+  &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
+&lt;/p&gt;
+&lt;answer&gt;
+  &lt;award&gt;
+    &lt;when&gt;
+      $u = (15,10) and $c1=100 and $c2=120
+    &lt;/when&gt;
+  &lt;/award&gt;
+&lt;/answer&gt;
+              </slate>
+                      </interactive>
+        </answer>
             
-              &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
-            &lt;/graph&gt;
-            &lt;p&gt;
-              &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
-            &lt;/p&gt;
-            &lt;p&gt;
-              &lt;m&gt;f($u.x, $u.y)= &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;&lt;/m&gt;.
-            &lt;/p&gt;
-            
-            &lt;answer&gt;
-              &lt;award&gt;
-                &lt;when&gt;
-                  $u = (15,10) and $c1=100 and $c2=120
-                &lt;/when&gt;
-              &lt;/award&gt;
-            &lt;/answer&gt;
-            </slate>
-                    </interactive>
-        </p>
-      </hint>
+      </statement>
+        
     </task>
 
     <task>
@@ -99,10 +125,9 @@
       </statement>
       <hint>
         <p>
-          <interactive  platform="doenetml" width="100%" >
+          <interactive  platform="doenetml" width="100%" aspect="4:4">
             <slate surface="doenetml">
-              
-            &lt;graph xmin="-4" ymin="-4" xmax="22" ymax="22"&gt;
+              &lt;graph xmin="-4" ymin="-4" xmax="22" ymax="22"&gt;
               &lt;polygon vertices="(0,0) (0, 17.5) (15,10) (20,0)" filled draggable="false" styleNumber="4"/&gt;
               &lt;point name="u" styleNumber="5"&gt;
                   (0,0)
@@ -114,22 +139,18 @@
                 &lt;/constraints&gt;
               &lt;/point&gt;
               &lt;m draggable="false" anchor="($u.x+1,$u.y+1)"&gt;
-                  $u
+                  f$u = &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;
                 &lt;/m&gt;
-            
+
               &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
             &lt;/graph&gt;
             &lt;p&gt;
               &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
             &lt;/p&gt;
-            &lt;p&gt;
-              &lt;m&gt;f($u.x, $u.y)= &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;&lt;/m&gt;.
-            &lt;/p&gt;
-            
             &lt;answer&gt;
               &lt;award&gt;
                 &lt;when&gt;
-                  $u = (20,0) and $c1=1000 and $c2=120
+                  $u = (15,10) and $c1=100 and $c2=120
                 &lt;/when&gt;
               &lt;/award&gt;
             &lt;/answer&gt;
