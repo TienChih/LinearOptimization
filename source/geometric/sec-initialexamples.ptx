@@ -43,7 +43,7 @@
           <image xml:id="art">
             <description>The feasible region for the art shop.</description>
             <latex-image>
-              \begin{tikzpicture}
+              \begin{tikzpicture}[scale=0.6]
                 \draw[fill, blue, opacity=0.4] (0,0) -- (0,17.5) -- (15, 10) -- (20,0) -- (0,0);
                 \draw[very thick,->] (-1.5,0) -- (22,0);
                 \draw[very thick,->] (0,-1.5) -- (0, 22);

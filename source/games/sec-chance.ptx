@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-chance" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Games of Chance</title>
+
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the following game.  Rowan and Colleen place $25 into a pot.  Then they are dealt either a Jack, Queen or King at random.
+        This deck only has those three cards.  Whoever has the highest card takes the pot.  
+
+      </p>
+      <p>
+        Rowan has the option of raising by $10 or folding. If he folds, he loses $25.  Otherwise
+        Colleen then can either fold or call.  If they fold, she loses $25, if she calls, she puts $10 into the pot.
+      </p>
+      <p>
+        Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What would best describe possible choices of strategy for Rowan and Colleen?
+        </p>
+        <ol marker="A." >
+          <li>
+            <p>
+              The cards Jack, Queen, King.
+            </p>
+          </li>
+          <li>
+            <p>
+              Whether to Fold/Raise for Rowan, whether to Fold/Call for Colleen.
+            </p>
+          </li>
+          <li>
+            <p>
+              Whether to Fold/Raise for Rowan depending on the card he is dealt, whether to Fold/Call for Colleen, depending on the card she is dealt.
+            </p>
+          </li>
+          
+        </ol>
+
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          List the possible pairs of Rowan/Colleen hands.
+        </p>
+      </statement>
+    </task>
+    
+
+    <task>
+      <statement>
+        <p>
+          Let's say Rowan raises on a Jack, folds on a Queen, and raises on a
+          King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen of King,
+          denoted FCC.
+        </p>
+        <p>
+          If both players are committed to these strategies, what are Rowans expected net winnings?  (Note that all
+          the above hand pairs are equally likely, what are Rowan's net winnings in each case?)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If Rowan's strategy is (for some reason) FFF, what are Rowans net winnings?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          If Colleen's strategy is  FFF, what are Rowans net winnings?  (These may be different for each of Rowan's choice of strategy.)
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Without computing the entire payoff matrix, are there any obviously poor strategies for Rowan
+          or Colleen?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Fill out the remainder of this payoff matrix, where the entries are expected values.
+        </p>
+        <tabular halign="center">
+          <row>
+            <cell>
+            </cell>
+            <cell bottom="medium">
+              FFF
+            </cell>
+            <cell bottom="medium">
+              FFC
+            </cell>
+            <cell bottom="medium">
+              FCF
+            </cell>
+            <cell bottom="medium">
+              CFF
+            </cell>
+            <cell bottom="medium">
+              FCC
+            </cell>
+            <cell bottom="medium">
+              CFC
+            </cell>
+            <cell bottom="medium">
+              CCF
+            </cell>
+            <cell bottom="medium">
+              CCC
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              FFF
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell right="medium">
+              ?
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              FFR
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>-25/3</m>
+            </cell>
+            <cell>
+              <m>-20/3</m>
+            </cell>
+            <cell>
+              <m>-20/3</m>
+            </cell>
+            <cell>
+              <m>-20/3</m>
+            </cell>
+            <cell>
+              <m>-20/3</m>
+            </cell>
+            <cell>
+              <m>-5</m>
+            </cell>
+            <cell right="medium">
+              <m>-5</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              FRF
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>-55/3</m>
+            </cell>
+            <cell>
+              <m>-25/3</m>
+            </cell>
+            <cell>
+              <m>-20/3</m>
+            </cell>
+            <cell>
+              -55/3
+            </cell>
+            <cell>
+              <m>-50/3</m>
+            </cell>
+            <cell>
+              <m>-20/3</m>
+            </cell>
+            <cell right="medium">
+              <m>-50/3</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              RFF
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>-55/3</m>
+            </cell>
+            <cell>
+              <m>-55/3</m>
+            </cell>
+            <cell>
+              <m>-25/3</m>
+            </cell>
+            <cell>
+              <m>-85/3</m>
+            </cell>
+            <cell>
+              <m>-55/3</m>
+            </cell>
+            <cell>
+              <m>-55/3</m>
+            </cell>
+            <cell right="medium">
+              -85/3
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              FRR
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>-5/3</m>
+            </cell>
+            <cell>
+              <m>10</m>
+            </cell>
+            <cell>
+              <m>35/3</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>5/3</m>
+            </cell>
+            <cell>
+              <m>40/3</m>
+            </cell>
+            <cell right="medium">
+              <m>10/3</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              RFR
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>-5/3</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>10</m>
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>5/3</m>
+            </cell>
+            <cell right="medium">
+              <m>-25/3</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              RRF
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>-35/3</m>
+            </cell>
+            <cell>
+              <m>-5/3</m>
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>-65/3</m>
+            </cell>
+            <cell>
+              <m>-10</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              <m>-20</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              RRR
+            </cell>
+            <cell bottom="medium">
+              ?
+            </cell>
+            <cell bottom="medium">
+              <m>5</m>
+            </cell>
+            <cell bottom="medium">
+              <m>50/3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>85/3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-10/3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>25/3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>20</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              ?
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          After dominating what does this table reduce to?
+        </p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              ???
+            </cell>
+            <cell bottom="medium">
+              ???
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              ???
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell right="medium">
+              ?
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              ???
+            </cell>
+            <cell bottom="medium">
+              ?
+            </cell>
+            <cell right="medium" bottom="medium">
+              ?
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+        </tabular>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Solve for the optimal strategies using LP methods.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Who does the game favor and by how much?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          If Rowan is dealt a Jack, what is his optimal strategy (as a pair of probabilities to Raise or Fold).  Queen? King?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          If Colleen is dealt a Jack, what is her optimal strategy.  Queen? King?
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+
+  <activity>
+    <introduction>
+      <p>
+        We introduce a second game here.  Each player places $<m>p</m> into the pot.
+        Then the each secretly flip a coin.  We consider heads <q>greater</q> than tails.
+      </p>
+      <p>
+        Rowan then has the options of passing or betting.  If he passes, then both players reveal their coin
+        and the higher value wins.  If they are the same, players split the pot evenly, and both players net wins/losses are $0.
+        His other option is to bet, in which case he adds $<m>r</m> to the pot.
+      </p>
+      <p>
+        Then Colleen has a choice as well, to fold or call.  If she folds, then Rowan
+        nets the $<m>b</m>.  Otherwise, she calls, and also adds $<m>r</m> to the pot and both coins are revealed.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Suppose that Rowan will stick to the strategy of RP (raise on head, pass on tails) and Colleen choses
+          CC (call on both heads or tails).  What are Rowan's expected winnings in this case?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Fill out the payoff matrix for this game.
+        </p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              FF
+            </cell>
+            <cell bottom="medium">
+              FC
+            </cell>
+            <cell bottom="medium">
+              CF
+            </cell>
+            <cell bottom="medium">
+              FF
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              PP
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              ?
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              PR
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>b/2</m>
+            </cell>
+            <cell>
+              <m>(b-r)/4</m>
+            </cell>
+            <cell right="medium">
+              ?
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              RP
+            </cell>
+            <cell>
+              <m>b/4</m>
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell>
+              <m>0</m>
+            </cell>
+            <cell right="medium">
+              ?
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              RR
+            </cell>
+            <cell bottom="medium">
+              <m>b</m>
+            </cell>
+            <cell bottom="medium">
+              ?
+            </cell>
+            <cell bottom="medium">
+              ?
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+        </tabular>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          It's not possible to determine all the domination without knowing what <m>b, r</m> are.  However, knowing <m>b,r>0</m>,
+          dominate as much as possible
+        </p>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              ??
+            </cell>
+            <cell bottom="medium">
+              ??
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              ??
+            </cell>
+            <cell>
+              ?
+            </cell>
+            <cell right="medium">
+              ?
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              ??
+            </cell>
+            <cell bottom="medium">
+              ?
+            </cell>
+            <cell right="medium" bottom="medium">
+              ?
+            </cell>
+            <cell>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+          </row>
+        </tabular>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If <m>b\leq r</m>, use domination to find the optimal pure strategy for both players.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If <m>b>0</m>, used linear optimization methods to find the optimal mixed strategies for both players.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  
+  
+
+</section>
