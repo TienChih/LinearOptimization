@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-branchbound" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Branch and Bound Method</title>
+
+
+  <exploration xml:id="exploration-meat">
+    <introduction>
+      <p>
+        Suppose the witch Agnesi also goes into the business of selling food,
+        meat sandwiches and meat pies.  Each day she is able to acquire 50 oz of
+        mystery meat (don't ask) and 30 oz of flour.  The sandwiches take 8 oz of meat and 2 oz of flour,
+        the pies take 3oz of meat and 5 oz of flour.  She is able to sell the sandwiches for 
+        10 gold pieces and the pies for 7 gold pieces.
+      </p>
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Agnesi wishes to be able to produce sandwiches and pies in a way
+          to maximize her income.  Set up this problem as a linear programming problem and solve.
+        </p>
+        <p>
+          <sage>
+            <input>
+              %display typeset
+              A = (FIXME)
+              b = (FIXME)
+              c = (FIXME)
+              P = InteractiveLPProblem(A, b, c,
+               [FIXME], 
+               constraint_type = [FIXME],
+               variable_type = [FIXME],
+               problem_type = FIXME)
+              P
+            </input>         
+            </sage>
+            <sage>
+              <input>
+                print(P.optimal_solution())
+                print(P.optimal_value())
+              </input>         
+            </sage>
+      </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What are some problems with this solution?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          How many sandwiches and pies should she actually sell to maximize her
+          income?
+        </p>
+        <interactive platform="doenetml" width="100%" aspect="4:4">
+          <slate surface="doenetml">
+            &lt;graph xmin="-0.2" ymin="-0.2" xmax="6.5" ymax="6.5"&gt;
+            &lt;polygon name="feasible" vertices="(0,0) (0, 6) (80/17,70/17) (6.25,0)" filled draggable="false" styleNumber="4"/&gt;
+            &lt;point name="u" styleNumber="5" draggable="true"&gt;
+                (0,0)
+              &lt;constraints&gt;
+                &lt;constrainToGrid/&gt; 
+              &lt;/constraints&gt;
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (6,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,5)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,5)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,5)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,6)
+            &lt;/point&gt;
+            &lt;m draggable="false" anchor="($u.x+0.2,$u.y+0.2)"&gt;
+                f$u = &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;
+              &lt;/m&gt;
+            &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
+
+            &lt;line name="line1" styleNumber="2"&gt;x+2y=20 &lt;/line&gt;
+            &lt;line name="line2" styleNumber="3"&gt;2x+2y=30 &lt;/line&gt;
+            &lt;line name="line3" styleNumber="4"&gt;2x+y=25 &lt;/line&gt;
+            &lt;/graph&gt;
+          &lt;p&gt;
+            &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
+          &lt;/p&gt;
+
+          &lt;answer&gt;
+            &lt;award&gt;
+              &lt;when&gt;
+                $u = (5,3) and $c1=10 and $c2=7
+              &lt;/when&gt;
+            &lt;/award&gt;
+          &lt;/answer&gt;
+          </slate>
+        </interactive>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          After the local barber has been arrested, demand for Agnesi's pies
+          sees an increase, and she is able to now sell them for 12 gold pieces.  Now what production
+          level maximizes her income?
+        </p>
+        <interactive platform="doenetml" width="100%" aspect="4:4">
+          <slate surface="doenetml">
+            &lt;graph xmin="-0.2" ymin="-0.2" xmax="6.5" ymax="6.5"&gt;
+            &lt;polygon name="feasible" vertices="(0,0) (0, 6) (80/17,70/17) (6.25,0)" filled draggable="false" styleNumber="4"/&gt;
+            &lt;point name="u" styleNumber="5" draggable="true"&gt;
+                (0,0)
+              &lt;constraints&gt;
+                &lt;constrainToGrid/&gt; 
+              &lt;/constraints&gt;
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (6,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (5,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,4)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,5)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,5)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,5)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,6)
+            &lt;/point&gt;
+            &lt;m draggable="false" anchor="($u.x+0.2,$u.y+0.2)"&gt;
+                f$u = &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;
+              &lt;/m&gt;
+            &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
+
+            &lt;line name="line1" styleNumber="2"&gt;x+2y=20 &lt;/line&gt;
+            &lt;line name="line2" styleNumber="3"&gt;2x+2y=30 &lt;/line&gt;
+            &lt;line name="line3" styleNumber="4"&gt;2x+y=25 &lt;/line&gt;
+            &lt;/graph&gt;
+          &lt;p&gt;
+            &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
+          &lt;/p&gt;
+
+          &lt;answer&gt;
+            &lt;award&gt;
+              &lt;when&gt;
+                $u = (4,4) and $c1=10 and $c2=12
+              &lt;/when&gt;
+            &lt;/award&gt;
+          &lt;/answer&gt;
+          </slate>
+        </interactive>
+      </statement>
+    </task>
+
+    
+    
+  </exploration>
+
+  
+  
+
+  
+
+</section>

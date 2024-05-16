@@ -20,6 +20,7 @@
     <xi:include href="games/ch-main.ptx" />
     <xi:include href="transport/ch-main.ptx" />
     <xi:include href="flow/ch-main.ptx" />
+    <xi:include href="integer/ch-main.ptx" />
     <xi:include href="extras/ch-main.ptx" />
 
 
