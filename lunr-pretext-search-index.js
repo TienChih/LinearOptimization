@@ -1261,6 +1261,33 @@ var ptx_lunr_docs = [
   "body": "  In a simplified game of battleship played on a two board, Colleen selects two consecutive squares on the board to place her ship. Rowan then picks one of six squares to fire at. If he hits, he gets a point, otherwise Colleen gets a point.    Write out a payoff matrix for this game. (Why is it ?)    Find the optimal solution for Colleen using Sage:      Does the game favor Rowan or Colleen?    Use sage to find the optimal solution for Rowan:     "
 },
 {
+  "id": "sec-chance",
+  "level": "1",
+  "url": "sec-chance.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Games of Chance",
+  "body": " Games of Chance    Consider the following game. Rowan and Colleen place $25 into a pot. Then they are dealt either a Jack, Queen or King at random. This deck only has those three cards. Whoever has the highest card takes the pot.  Rowan has the option of raising by $10 or folding. If he folds, he loses $25. Otherwise Colleen then can either fold or call. If they fold, she loses $25, if she calls, she puts $10 into the pot.  Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.    What would best describe possible choices of strategy for Rowan and Colleen?    The cards Jack, Queen, King.    Whether to Fold\/Raise for Rowan, whether to Fold\/Call for Colleen.    Whether to Fold\/Raise for Rowan depending on the card he is dealt, whether to Fold\/Call for Colleen, depending on the card she is dealt.      List the possible pairs of Rowan\/Colleen hands.    Let's say Rowan raises on a Jack, folds on a Queen, and raises on a King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen of King, denoted FCC.  If both players are committed to these strategies, what are Rowans expected net winnings? (Note that all the above hand pairs are equally likely, what are Rowan's net winnings in each case?)    If Rowan's strategy is (for some reason) FFF, what are Rowans net winnings?    If Colleen's strategy is FFF, what are Rowans net winnings? (These may be different for each of Rowan's choice of strategy.)    Without computing the entire payoff matrix, are there any obviously poor strategies for Rowan or Colleen?    Fill out the remainder of this payoff matrix, where the entries are expected values.      FFF  FFC  FCF  CFF  FCC  CFC  CCF  CCC      FFF  ?  ?  ?  ?  ?  ?  ?  ?      FFR  ?                           FRF  ?           -55\/3               RFF  ?                    -85\/3      FRR  ?                           RFR  ?           ?               RRF  ?        ?                  RRR  ?                    ?                              After dominating what does this table reduce to?      ???  ???      ???  ?  ?      ???  ?  ?                  Solve for the optimal strategies using LP methods.    Who does the game favor and by how much?    If Rowan is dealt a Jack, what is his optimal strategy (as a pair of probabilities to Raise or Fold). Queen? King?    If Colleen is dealt a Jack, what is her optimal strategy. Queen? King?      We introduce a second game here. Each player places $ into the pot. Then the each secretly flip a coin. We consider heads greater than tails.  Rowan then has the options of passing or betting. If he passes, then both players reveal their coin and the higher value wins. If they are the same, players split the pot evenly, and both players net wins\/losses are $0. His other option is to bet, in which case he adds $ to the pot.  Then Colleen has a choice as well, to fold or call. If she folds, then Rowan nets the $ . Otherwise, she calls, and also adds $ to the pot and both coins are revealed.    Suppose that Rowan will stick to the strategy of RP (raise on head, pass on tails) and Colleen choses CC (call on both heads or tails). What are Rowan's expected winnings in this case?    Fill out the payoff matrix for this game.      FF  FC  CF  FF      PP  ?        ?      PR  ?        ?      RP     ?     ?      RR     ?  ?                         It's not possible to determine all the domination without knowing what are. However, knowing , dominate as much as possible      ??  ??      ??  ?  ?      ??  ?  ?                  If , use domination to find the optimal pure strategy for both players.    If , used linear optimization methods to find the optimal mixed strategies for both players.    "
+},
+{
+  "id": "sec-chance-2",
+  "level": "2",
+  "url": "sec-chance.html#sec-chance-2",
+  "type": "Activity",
+  "number": "6.3.1",
+  "title": "",
+  "body": "  Consider the following game. Rowan and Colleen place $25 into a pot. Then they are dealt either a Jack, Queen or King at random. This deck only has those three cards. Whoever has the highest card takes the pot.  Rowan has the option of raising by $10 or folding. If he folds, he loses $25. Otherwise Colleen then can either fold or call. If they fold, she loses $25, if she calls, she puts $10 into the pot.  Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.    What would best describe possible choices of strategy for Rowan and Colleen?    The cards Jack, Queen, King.    Whether to Fold\/Raise for Rowan, whether to Fold\/Call for Colleen.    Whether to Fold\/Raise for Rowan depending on the card he is dealt, whether to Fold\/Call for Colleen, depending on the card she is dealt.      List the possible pairs of Rowan\/Colleen hands.    Let's say Rowan raises on a Jack, folds on a Queen, and raises on a King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen of King, denoted FCC.  If both players are committed to these strategies, what are Rowans expected net winnings? (Note that all the above hand pairs are equally likely, what are Rowan's net winnings in each case?)    If Rowan's strategy is (for some reason) FFF, what are Rowans net winnings?    If Colleen's strategy is FFF, what are Rowans net winnings? (These may be different for each of Rowan's choice of strategy.)    Without computing the entire payoff matrix, are there any obviously poor strategies for Rowan or Colleen?    Fill out the remainder of this payoff matrix, where the entries are expected values.      FFF  FFC  FCF  CFF  FCC  CFC  CCF  CCC      FFF  ?  ?  ?  ?  ?  ?  ?  ?      FFR  ?                           FRF  ?           -55\/3               RFF  ?                    -85\/3      FRR  ?                           RFR  ?           ?               RRF  ?        ?                  RRR  ?                    ?                              After dominating what does this table reduce to?      ???  ???      ???  ?  ?      ???  ?  ?                  Solve for the optimal strategies using LP methods.    Who does the game favor and by how much?    If Rowan is dealt a Jack, what is his optimal strategy (as a pair of probabilities to Raise or Fold). Queen? King?    If Colleen is dealt a Jack, what is her optimal strategy. Queen? King?   "
+},
+{
+  "id": "sec-chance-3",
+  "level": "2",
+  "url": "sec-chance.html#sec-chance-3",
+  "type": "Activity",
+  "number": "6.3.2",
+  "title": "",
+  "body": "  We introduce a second game here. Each player places $ into the pot. Then the each secretly flip a coin. We consider heads greater than tails.  Rowan then has the options of passing or betting. If he passes, then both players reveal their coin and the higher value wins. If they are the same, players split the pot evenly, and both players net wins\/losses are $0. His other option is to bet, in which case he adds $ to the pot.  Then Colleen has a choice as well, to fold or call. If she folds, then Rowan nets the $ . Otherwise, she calls, and also adds $ to the pot and both coins are revealed.    Suppose that Rowan will stick to the strategy of RP (raise on head, pass on tails) and Colleen choses CC (call on both heads or tails). What are Rowan's expected winnings in this case?    Fill out the payoff matrix for this game.      FF  FC  CF  FF      PP  ?        ?      PR  ?        ?      RP     ?     ?      RR     ?  ?                         It's not possible to determine all the domination without knowing what are. However, knowing , dominate as much as possible      ??  ??      ??  ?  ?      ??  ?  ?                  If , use domination to find the optimal pure strategy for both players.    If , used linear optimization methods to find the optimal mixed strategies for both players.   "
+},
+{
   "id": "sec-vam",
   "level": "1",
   "url": "sec-vam.html",
@@ -1765,11 +1792,29 @@ var ptx_lunr_docs = [
   "body": " Minimum Cost Flow Algorithm   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply the shortest path algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.     "
 },
 {
+  "id": "sec-branchbound",
+  "level": "1",
+  "url": "sec-branchbound.html",
+  "type": "Section",
+  "number": "9.1",
+  "title": "Branch and Bound Method",
+  "body": " Branch and Bound Method    Suppose the witch Agnesi also goes into the business of selling food, meat sandwiches and meat pies. Each day she is able to acquire 50 oz of mystery meat (don't ask) and 30 oz of flour. The sandwiches take 8 oz of meat and 2 oz of flour, the pies take 3oz of meat and 5 oz of flour. She is able to sell the sandwiches for 10 gold pieces and the pies for 7 gold pieces.    Agnesi wishes to be able to produce sandwiches and pies in a way to maximize her income. Set up this problem as a linear programming problem and solve.        What are some problems with this solution?    How many sandwiches and pies should she actually sell to maximize her income?     After the local barber has been arrested, demand for Agnesi's pies sees an increase, and she is able to now sell them for 12 gold pieces. Now what production level maximizes her income?     "
+},
+{
+  "id": "exploration-meat",
+  "level": "2",
+  "url": "sec-branchbound.html#exploration-meat",
+  "type": "Exploration",
+  "number": "9.1.1",
+  "title": "",
+  "body": "  Suppose the witch Agnesi also goes into the business of selling food, meat sandwiches and meat pies. Each day she is able to acquire 50 oz of mystery meat (don't ask) and 30 oz of flour. The sandwiches take 8 oz of meat and 2 oz of flour, the pies take 3oz of meat and 5 oz of flour. She is able to sell the sandwiches for 10 gold pieces and the pies for 7 gold pieces.    Agnesi wishes to be able to produce sandwiches and pies in a way to maximize her income. Set up this problem as a linear programming problem and solve.        What are some problems with this solution?    How many sandwiches and pies should she actually sell to maximize her income?     After the local barber has been arrested, demand for Agnesi's pies sees an increase, and she is able to now sell them for 12 gold pieces. Now what production level maximizes her income?    "
+},
+{
   "id": "sec-covermatch",
   "level": "1",
   "url": "sec-covermatch.html",
   "type": "Section",
-  "number": "9.1",
+  "number": "10.1",
   "title": "Coverings and Matchings of Graphs",
   "body": " Coverings and Matchings of Graphs    Consider the following graph .  An undirected graph.       A matching is a collection of edges such that no two edges in are incident to the same vertex. Let denote the size of the largest possible matching(s).  What is ? How can we be sure this is true?    Find for :  An undirected graph.       What are some differences you notice between the matchings for and ?      Let be a graph with vertices . For each edge let such that if , then , otherwise .    For each vertex , write an inequality to ensure that is a matching.    Given the above constraints, do we need another constraint to ensure that ?    Find a linear objective function to compute .    State the maximization linear programming problem for computing the maximum matching of a graph .    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?      Consider the maximizations problems you found in , both the specific ones and the particular ones.    Let denote the dual variable corresponding to the primal constraint for vertex . What is the dual objective function in terms of ?    For each edge , there is a dual constraint, state this dual constraint. (Hint: in the original Tucker Tableau, when would an entry in the column be a zero, and when would it be a one?)    State the dual minimization program to the primal maximum matching problem.    Suppose we restrict to only integer values, give an interpretation for the dual min problem (Hint: each corresponds to a vertex . Would take on any values besides 0 or 1)?      Given a graph , a vertex cover is a colection of vertices such that for any edge either or (possibly both) are in .  Let denote the size of the smallest vertex cover.    Find for from,     Find for from,     For each vertex , let if and otherwise. Write out a minimization problem for computing for a general graph .    How does this compare to the problem you found in ?    Since we solved the matching problem for in , use Sage to solve the dual problem    What do we notice?    We solved the matching problem for in , use Sage to solve the dual problem    What do we notice?      Consider the maximum matching and minimum covering problems. What does duality tell us about these problems?     .     .     .      "
 },
@@ -1778,7 +1823,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-covermatch.html#exploration-matching",
   "type": "Exploration",
-  "number": "9.1.1",
+  "number": "10.1.1",
   "title": "",
   "body": "  Consider the following graph .  An undirected graph.       A matching is a collection of edges such that no two edges in are incident to the same vertex. Let denote the size of the largest possible matching(s).  What is ? How can we be sure this is true?    Find for :  An undirected graph.       What are some differences you notice between the matchings for and ?   "
 },
@@ -1787,7 +1832,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-covermatch.html#activity-maxmatch",
   "type": "Activity",
-  "number": "9.1.2",
+  "number": "10.1.2",
   "title": "",
   "body": "  Let be a graph with vertices . For each edge let such that if , then , otherwise .    For each vertex , write an inequality to ensure that is a matching.    Given the above constraints, do we need another constraint to ensure that ?    Find a linear objective function to compute .    State the maximization linear programming problem for computing the maximum matching of a graph .    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?    Consider from . Label each vertex and write out a Tucker Tableau for the linear programming problem for computing the maximum matching.    Solve the above programming problem:    What do you notice?   "
 },
@@ -1796,7 +1841,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-covermatch.html#activity-mincover",
   "type": "Activity",
-  "number": "9.1.3",
+  "number": "10.1.3",
   "title": "",
   "body": "  Consider the maximizations problems you found in , both the specific ones and the particular ones.    Let denote the dual variable corresponding to the primal constraint for vertex . What is the dual objective function in terms of ?    For each edge , there is a dual constraint, state this dual constraint. (Hint: in the original Tucker Tableau, when would an entry in the column be a zero, and when would it be a one?)    State the dual minimization program to the primal maximum matching problem.    Suppose we restrict to only integer values, give an interpretation for the dual min problem (Hint: each corresponds to a vertex . Would take on any values besides 0 or 1)?   "
 },
@@ -1805,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-covermatch.html#sec-covermatch-5",
   "type": "Activity",
-  "number": "9.1.4",
+  "number": "10.1.4",
   "title": "",
   "body": "  Given a graph , a vertex cover is a colection of vertices such that for any edge either or (possibly both) are in .  Let denote the size of the smallest vertex cover.    Find for from,     Find for from,     For each vertex , let if and otherwise. Write out a minimization problem for computing for a general graph .    How does this compare to the problem you found in ?    Since we solved the matching problem for in , use Sage to solve the dual problem    What do we notice?    We solved the matching problem for in , use Sage to solve the dual problem    What do we notice?   "
 },
@@ -1814,7 +1859,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-covermatch.html#sec-covermatch-6",
   "type": "Activity",
-  "number": "9.1.5",
+  "number": "10.1.5",
   "title": "",
   "body": "  Consider the maximum matching and minimum covering problems. What does duality tell us about these problems?     .     .     .     "
 },
