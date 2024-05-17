@@ -308,7 +308,7 @@
         &lt;/constraints&gt;
       &lt;/point&gt;
       &lt;m draggable="false" anchor="($u.x+1,$u.y+1)"&gt;
-          $u
+          f $u = &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;
         &lt;/m&gt;
     
       &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
@@ -316,9 +316,7 @@
     &lt;p&gt;
       &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
     &lt;/p&gt;
-    &lt;p&gt;
-      &lt;m&gt;f($u.x, $u.y)= &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;&lt;/m&gt;.
-    &lt;/p&gt;
+    
     
     &lt;answer&gt;
       &lt;award&gt;

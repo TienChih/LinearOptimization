@@ -49,7 +49,8 @@
     <task>
       <statement>
         <p>
-          What are some problems with this solution?
+          What are some problems with this solution?  Without trying to explictly find 
+          the optimal solution, how far off is this solution?
         </p>
       </statement>
     </task>
@@ -344,6 +345,122 @@
     
     
   </exploration>
+
+
+  <activity>
+    <introduction>
+      <p>
+        The <em>branch and bound</em> method is a way to systematically add bounds to a
+        linear programming problem to ensure the solution is integral.
+      </p>
+      <p>
+        We examine the integer programming problem from <xref ref="exploration-meat"/>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Consider <m>x_1</m> the number of sandwiches sold, the current optimal <m>x_1</m>.
+          Which two of the following potential additional constraints would force the 
+          value of <m>x_1</m> to be an integer, while remaining as close to the optimal solution of the relaxation
+           as possible.
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>x_1\leq 3</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\geq 3</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\leq 4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\geq 4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\leq 5</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\geq 5</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\leq 6</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_1\geq 6</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let us consider the additional constraint <m>x_1\leq 4</m>.  Solve the resulting general
+          linear programming problem:
+        </p>
+        <p>
+          <sage>
+            <input>
+              %display typeset
+              A = (FIXME)
+              b = (FIXME)
+              c = (FIXME)
+              P = InteractiveLPProblem(A, b, c,
+               [FIXME], 
+               constraint_type = [FIXME],
+               variable_type = [FIXME],
+               problem_type = FIXME)
+              P
+            </input>         
+            </sage>
+            <sage>
+              <input>
+                print(P.optimal_solution())
+                print(P.optimal_value())
+              </input>         
+            </sage>
+      </p>
+      <image xml:id="tree1">
+        <description>A Tree Diagram describing additional constraints.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            [
+              grow                    = down,
+              sibling distance        = 12em,
+              level distance          = 8em,
+              edge from parent/.style = {draw, -latex},
+              every node/.style       = {font=\footnotesize},
+              sloped
+            ]
+            \node [root] {$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 96.47$}
+              child { node [env] {$f(?,?)=?$}
+                edge from parent node [below] {$x_1\leq 4$} }
+              child { node [env] {???} 
+                edge from parent node [above] {$x_1\geq 5$} };
+          \end{tikzpicture}
+
+        </latex-image>
+      </image> 
+      </statement>
+    </task>
+  </activity>
 
   
   
