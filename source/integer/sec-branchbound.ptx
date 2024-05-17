@@ -347,14 +347,78 @@
   </exploration>
 
 
+  <definition xml:id="def-intergerprogra">
+    <statement>
+      <p>
+        A linear programming problem where all solutions must be integers is called an
+        <em>integer programming problem</em>.
+      </p>
+      <p>
+        If the condition that solutions be integers are relaxed, this is called the <em>relaxation</em>
+        of the integer programming problem.
+      </p>
+    </statement>
+  </definition>
+
   <activity>
+    <task>
+      <statement>
+        <p>
+          Come up with three realistic optimization problems who are best modeled
+          by an integer programming problem.  You do not need to work out all the details
+          or solve the problems.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider an integer programming maximization problem whose relaxation
+          achieves an optimal solution.  Which of the following are true about the 
+          integer program?
+        </p>
+        <ol marker="A.">
+          <li>
+            <p>
+              The integer program achieves an optimal solution that is equal to
+              the optimal solution of the relaxation.
+            </p>
+          </li>
+          <li>
+            <p>
+              The integer program achieves an optimal solution that is less than to
+              the optimal solution of the relaxation.
+            </p>
+          </li>
+          <li>
+            <p>
+              The integer program achieves an optimal solution that is greater than to
+              the optimal solution of the relaxation.
+            </p>
+          </li>
+          <li>
+            <p>
+              The integer program is infeasible.
+            </p>
+          </li>
+          <li>
+            <p>
+              The integer program is unbounded above.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </activity>
+
+  <activity xml:id="activity-meat1">
     <introduction>
       <p>
         The <em>branch and bound</em> method is a way to systematically add bounds to a
         linear programming problem to ensure the solution is integral.
       </p>
       <p>
-        We examine the integer programming problem from <xref ref="exploration-meat"/>.
+        We examine the integer programming problem from <xref ref="exploration-meat"/>, and it's relaxation.
       </p>
     </introduction>
     <task>
@@ -437,9 +501,329 @@
               </input>         
             </sage>
       </p>
-      <image xml:id="tree1">
+      <p>
+        <image xml:id="tree1">
+          <description>A Tree Diagram describing additional constraints.</description>
+          <latex-image>
+            \tikzset{
+              treenode/.style = {shape=rectangle, rounded corners,
+                                 draw, align=center,
+                                 top color=white, bottom color=blue!20},
+              root/.style     = {treenode, font=\Large, bottom color=red!30},
+              env/.style      = {treenode, font=\ttfamily\normalsize},
+              dummy/.style    = {circle,draw}
+            }
+            \begin{tikzpicture}
+              [
+                grow                    = down,
+                sibling distance        = 12em,
+                level distance          = 8em,
+                edge from parent/.style = {draw, -latex},
+                every node/.style       = {font=\footnotesize},
+                sloped
+              ]
+              \node [root] {\(f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88\)}
+                child { node [env] {\(f(?,?)=?\)}
+                  edge from parent node [below] {\(x_1\leq 4\)} }
+                child { node [env] {???} 
+                  edge from parent node [below] {\(x_1\geq 5\)} };
+            \end{tikzpicture}
+
+          </latex-image>
+        </image> 
+      </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What additional constraints on <m>x_2</m> would ensure
+          that <m>x_2</m> would be integral while changing <m>x_2</m> 
+          as little as possible? 
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider the additional constraint <m>x_2\leq 4</m>.  Solve this maximization problem.  Why do we
+          no longer need to adjust <m>x_1</m>?  Are we gaurunteed that this solution
+          is optimal?
+        </p>
+        <p>
+          <image xml:id="tree2">
+            <description>A Tree Diagram describing additional constraints.</description>
+            <latex-image>
+              \tikzset{
+                treenode/.style = {shape=rectangle, rounded corners,
+                                   draw, align=center,
+                                   top color=white, bottom color=blue!20},
+                root/.style     = {treenode, font=\Large, bottom color=red!30},
+                env/.style      = {treenode, font=\ttfamily\normalsize},
+                dummy/.style    = {circle,draw}
+              }
+              \begin{tikzpicture}
+                [
+                  grow                    = down,
+                  sibling distance        = 12em,
+                  level distance          = 8em,
+                  edge from parent/.style = {draw, -latex},
+                  every node/.style       = {font=\footnotesize},
+                  sloped
+                ]
+                \node [root] {$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
+                  child { node [env] {$f(?,?)=?$}
+                    child { node [env] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\leq 4$} } 
+                    child { node [env] {???} 
+                      edge from parent node [below] {$x_2\geq 5$} } 
+                    edge from parent node [below] {$x_1\leq 4$} }
+                  child { node [env] {???} 
+                    edge from parent node [below] {$x_1\geq 5$} };
+              \end{tikzpicture}
+  
+            </latex-image>
+          </image> 
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We consider the constraint <m>x_2\geq 5</m> instead.  Solve this
+          maximization problem.  Even though the solution is not integral, why do we no longer
+          need to pursue the case where <m>x_1\leq 4, x_2\geq 5</m>?
+        </p>
+        <p>
+          <image xml:id="tree3">
+            <description>A Tree Diagram describing additional constraints.</description>
+            <latex-image>
+              \tikzset{
+                treenode/.style = {shape=rectangle, rounded corners,
+                                   draw, align=center,
+                                   top color=white, bottom color=blue!20},
+                root/.style     = {treenode, font=\Large, bottom color=red!30},
+                env/.style      = {treenode, font=\ttfamily\normalsize},
+                dummy/.style    = {circle,draw}
+              }
+              \begin{tikzpicture}
+                [
+                  grow                    = down,
+                  sibling distance        = 12em,
+                  level distance          = 8em,
+                  edge from parent/.style = {draw, -latex},
+                  every node/.style       = {font=\footnotesize},
+                  sloped
+                ]
+                \node [root] {$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
+                  child { node [env] {$f(?,?)=?$}
+                    child { node [env] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\leq 4$} } 
+                    child { node [env] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\geq 5$} } 
+                    edge from parent node [below] {$x_1\leq 4$} }
+                  child { node [env] {???} 
+                    edge from parent node [below] {$x_1\geq 5$} };
+              \end{tikzpicture}
+  
+            </latex-image>
+          </image> 
+        </p>
+        
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We return to the other possible initial constraint for <m>x_1</m>,
+          <m>x_1\geq 5</m>.  Solve this maximization problem.  What are the
+          possible constraints we could now add for <m>x_2</m>? 
+        </p>
+        <p>
+          <image xml:id="tree4">
+            <description>A Tree Diagram describing additional constraints.</description>
+            <latex-image>
+              \tikzset{
+                treenode/.style = {shape=rectangle, rounded corners,
+                                   draw, align=center,
+                                   top color=white, bottom color=blue!20},
+                root/.style     = {treenode, font=\Large, bottom color=red!30},
+                env/.style      = {treenode, font=\ttfamily\normalsize},
+                dummy/.style    = {circle,draw}
+              }
+              \begin{tikzpicture}
+                [
+                  grow                    = down,
+                  sibling distance        = 12em,
+                  level distance          = 8em,
+                  edge from parent/.style = {draw, -latex},
+                  every node/.style       = {font=\footnotesize},
+                  sloped
+                ]
+                \node [root] {$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
+                  child { node [env] {$f(?,?)=?$}
+                    child { node [env] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\leq 4$} } 
+                    child { node [env, left] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\geq 5$} } 
+                    edge from parent node [below] {$x_1\leq 4$} }
+                  child { node [env] {$f(?,?)=???$}
+                    child { node [env, right] {???} 
+                      edge from parent node [below] {$x_2\leq 3$} } 
+                    child { node [env] {???} 
+                      edge from parent node [below] {$x_2\geq 4$} }   
+                    edge from parent node [below] {$x_1\geq 5$} };
+              \end{tikzpicture}
+  
+            </latex-image>
+          </image> 
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We consider now the constraint <m>x_2\leq 3</m>.  Solve this
+          maximazation problem.  How does this solution compare to the previous
+          integral solution we found?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Instead we now consider the constraint <m>x_2\geq 4</m>.  Solve this
+          maximization problem.  Why do we no longer need to consider the case where
+          <m>x_2\geq 4</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How do we know we now have arrived at the optimal solution?
+        </p>
+        <p>
+          <image xml:id="tree5">
+            <description>A Tree Diagram describing additional constraints.</description>
+            <latex-image>
+              \tikzset{
+                treenode/.style = {shape=rectangle, rounded corners,
+                                   draw, align=center,
+                                   top color=white, bottom color=blue!20},
+                root/.style     = {treenode, font=\Large, bottom color=red!30},
+                env/.style      = {treenode, font=\ttfamily\normalsize},
+                dummy/.style    = {circle,draw}
+              }
+              \begin{tikzpicture}
+                [
+                  grow                    = down,
+                  sibling distance        = 12em,
+                  level distance          = 8em,
+                  edge from parent/.style = {draw, -latex},
+                  every node/.style       = {font=\footnotesize},
+                  sloped
+                ]
+                \node [root] {$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
+                  child { node [env] {$f(?,?)=?$}
+                    child { node [env] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\leq 4$} } 
+                    child { node [env, left] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\geq 5$} } 
+                    edge from parent node [below] {$x_1\leq 4$} }
+                  child { node [env] {$f(?,?)=???$}
+                    child { node [env, right] {$f(?,?)=?^*$\\ stop}  
+                      edge from parent node [below] {$x_2\leq 3$} } 
+                    child { node [env] {infeasible\\ stop}  
+                      edge from parent node [below] {$x_2\geq 4$} }   
+                    edge from parent node [below] {$x_1\geq 5$} };
+              \end{tikzpicture}
+  
+            </latex-image>
+          </image> 
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <definition xml:id="def-branchbound">
+    <statement>
+      <p>
+        The <em>branch and bound</em> algorithm for solving an integer programming maximization problem
+        is as follows:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Solve the relaxation of the linear programming problem.  If the solution is
+            integral STOP.
+          </p>
+        </li>
+        <li>
+          <p>
+            For some <m>x_i^*</m> in the optimal solution found in the previous step,
+            define two sub problems, one with additional constraint <m>x_i\leq \floor*{x_i^*}</m>
+            and <m>x_i\geq \ceil*{x_i^*}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Pick one of the subproblems and solve the linear relaxation with the additional constraint.
+            
+          </p>
+        </li>
+        <li>
+          <p>
+            If the solution is integral, RETURN to 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            If the solution is less than any integral solution found,
+            RETURN to 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            If the problem is infeasible, RETURN to 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            Apply 2-6 to the new problem.
+          </p>
+        </li>
+        <li>
+          <p>
+            If all subproblems are explored, RETURN to 3 for parent problem.
+          </p>
+        </li>
+        <li>
+          <p>
+            Once the search tree has been exhausted, identify the optimal 
+            integral solution.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        The complete search tree for <xref ref="activity-meat1"/> is as follows
+      </p>
+      <image xml:id="treecomplete">
         <description>A Tree Diagram describing additional constraints.</description>
         <latex-image>
+          \tikzset{
+            treenode/.style = {shape=rectangle, rounded corners,
+                               draw, align=center,
+                               top color=white, bottom color=blue!20},
+            root/.style     = {treenode, font=\Large, bottom color=red!30},
+            env/.style      = {treenode, font=\ttfamily\normalsize},
+            dummy/.style    = {circle,draw}
+          }
           \begin{tikzpicture}
             [
               grow                    = down,
@@ -449,17 +833,72 @@
               every node/.style       = {font=\footnotesize},
               sloped
             ]
-            \node [root] {$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 96.47$}
-              child { node [env] {$f(?,?)=?$}
-                edge from parent node [below] {$x_1\leq 4$} }
-              child { node [env] {???} 
-                edge from parent node [above] {$x_1\geq 5$} };
+            \node [root] {Node 0:\\$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
+              child { node [env] {Node 1:\\ $f(4,4.4)=70.8$}
+              child { node [env] {Node 2:\\$f(4,4)=68$\\ stop} 
+                edge from parent node [below] {$x_2\leq 4$} } 
+              child { node [env, left] {Node 3:\\ $f(2.5,5)=60$\\ stop} 
+                edge from parent node [below] {$x_2\geq 5$} } 
+              edge from parent node [below] {$x_1\leq 4$} }
+              child { node [env] {Node 4: $f(5,\frac{10}{3})\approx 73.33$}
+                child { node [env, right] {Node 5:\\ $f(5,3)=71^*$\\stop} 
+                  edge from parent node [below] {$x_2\leq 3$} } 
+                child { node [env] {Node 6:\\ infeasible \\ stop} 
+                  edge from parent node [below] {$x_2\geq 4$} }   
+                edge from parent node [below] {$x_1\geq 5$} };
           \end{tikzpicture}
 
         </latex-image>
       </image> 
-      </statement>
-    </task>
+      <p>
+        We start at Node 0, and identify the two subproblems.  We exlore the subproblem where
+        <m>x_1\leq 4</m> in Node 1, and again identify two subproblems.  We stop and return at
+        Node 2 because the solution was integral.  We stop and return from Node 3,
+        even though the solution is not integral, because the optimal solution for that subproblem
+        was already less than the solution found in Node 1, and any further exploration would lead to a lower value still.
+      </p>
+      <p>
+        We then return to the starting node and to the other initial subproblem in Node 4, were
+        <m>x\geq 5</m>.  When we split into the the two subproblems, <m>x_2\leq 3</m> gives
+        an integral solution in Node 5, and the constraint <m>x_2\geq 6</m> gives an infeasible problem.
+      </p>
+      <p>
+        Thus, we return, and of the two integral solutions found, <m>f(5,3)=71</m> has the highest value.
+      </p>
+    </statement>
+  </example>
+
+  <activity>
+    <statement>
+      <p>
+        As the demand for meat pies skyrockets, Agnesi is now able to acquire 40 oz of floor a day,
+        but now uses 10 oz of floor per meat pie to thicken the gravy.  She is able to sell these for 40 gp each.
+        Use the branch and bound algorithm <xref ref="def-branchbound"/> to found her
+        new optimal production level.
+      </p>
+      <p>
+        <sage>
+          <input>
+            %display typeset
+            A = (FIXME)
+            b = (FIXME)
+            c = (FIXME)
+            P = InteractiveLPProblem(A, b, c,
+             [FIXME], 
+             constraint_type = [FIXME],
+             variable_type = [FIXME],
+             problem_type = FIXME)
+            P
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(P.optimal_solution())
+              print(P.optimal_value())
+            </input>         
+          </sage>
+    </p>
+    </statement>
   </activity>
 
   
