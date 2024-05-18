@@ -4,13 +4,13 @@
   <title>CuttingPlane Method</title>
 
 
-  <activity>
+  <exploration xml:id="exploration-cut">
     <introduction>
       <p>
-        In this activity, we motivate the math behind the cutting plane method.
+        In this exploration, we motivate the math behind the cutting plane method.
       </p>
       <p>
-        Let <m>x_1, \ldots, x_m, \ldots, x_{m+n}</m> be a feasible solution of the relaxation
+        Let <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> be a feasible solution of the relaxation
         of a canonical integer programming maximization problem, where the <m>x_i</m> are basic (slack) variables
         and the <m>x_j</m> are non-basic variables.
       </p>
@@ -156,10 +156,929 @@
           <me>  \sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)</me>
           for any feasible integral solution to the relaxation of the integer programming problem.
         </p>
+        <p>
+          We call the hyperplane <m>\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j = (\lfloor b_i \rfloor - b_i)</m>
+          a <em>cutting-plane</em>.
+        </p>
       </statement>
     </task>
+    <task>
+      <statement>
+        <p>
+          Show that if <m>b_i</m> is non-integral, then by adding this constraint, the solution <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> is no longer feasible.
+        </p>
+      </statement>
+    </task>
+    <!--<task>
+      <statement>
+        <p>
+          Given that adding these constraints are meant to elimate as many non-integral
+          solutions as possible, how should index <m>i</m> be chosen?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>b_i</m> should be as big as possible.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>b_i</m> should be as small as possible.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>b_i-\lfloor b_i\rfloor</m> should be as big as possible.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>b_i-\lfloor b_i\rfloor</m> should be as small as possible.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>-->
 
+  </exploration>
+
+  <activity>
+    <introduction>
+      <p>
+        We now apply this idea to an integer program.  
+      </p>
+      <p>
+        Consider the integer programming problem:
+        <md>
+          <mrow>\textbf{Maximize: }  f(x_1, x_2) \amp = -x_1+5x_2</mrow>
+          <mrow>\textbf{Subject to: }  3x_1+2x_2 \amp \leq 12</mrow>
+          <mrow> -3x_1+2x_2 \amp \leq 70</mrow>
+          <mrow> x_1, x_2 \amp \geq  0</mrow>
+          <mrow> x_1, x_2 \text{are integers.} \amp </mrow>
+        </md>
+      </p>
+      
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Solve the relaxation of this integer program, and verify that this solution is not integral.
+        
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{11}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> a_{21}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> a_{22}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> c_1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Take the second row <m>x_2=b_2-a_{21}x_1-a_{22}x_2</m> and follow the procedure
+          in <xref ref="exploration-cut"/> to generate a new constraint <m>a_{31}t_1+a_{32}t_2\leq b_3</m>:
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{11}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{21}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{22}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> a_{31}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> a_{32}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> c_1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Using the fact that <m>t_1=12-3x_1-2x_2, t_2=7+3x_1-2x_2</m>, describe this cutting plane <m>a_{31}t_1+a_{32}t_2=b_3</m>
+          in terms of <m>x_1, x_2</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot of the entry <m>a_{31}</m> and verify that the resulting basic solution is optimal and non-integral.
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{11}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{21}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{22}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> a_{31}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> a_{32}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> c_1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          There is only one valid choice of row to generate a new constraint.  Follow the procedure in <xref ref="exploration-cut"/>
+          to generate a new constraint <m>a_{41}t_3+a_{42}t_2=b_4</m>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{11}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{21}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{22}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{31}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{32}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> a_{41}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> a_{42}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> b_4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_4</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> c_1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Using the fact that <m>t_3=-\frac{3}{4}+\frac{1}{4}t_1+\frac{1}{4}t_2</m>, express this new cutting plane
+          <m>a_{41}t_3+a_{42}t_2=b_4</m> in terms of <m>x_1, x_2</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot on the entry <m>a_{42}</m> and verify that the resulting basic solution is optimal and non-integral.
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{11}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{21}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{22}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{31}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{32}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> a_{41}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> a_{42}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> b_4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> c_1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use either the <m>t_1</m> or <m>t_2</m> row to generate a new constraint <m>a_{51}t_3+a_{52}t_4\leq b_5</m>.
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{11}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{21}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{22}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{31}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{32}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{41}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{42}</m>
+              </cell>
+              <cell right="medium">
+                <m> 4_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> a_{51}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> a_{52}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> b_5</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_5</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> c_1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Using the fact that <m>t_4=-\frac{1}{3}+\frac{2}{3}s_3+\frac{2}{3}t_2</m>, express this new cutting plane
+          <m>a_{51}t_3+a_{52}t_4=b_5</m> in terms of <m>x_1, x_2</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Pivot on the <m>a_{52}</m> entry and verify that the resulting basic solution is optimal <em>and</em> integral!
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_5</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{11}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{12}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{21}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{22}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{31}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{32}</m>
+              </cell>
+              <cell right="medium">
+                <m> b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> a_{41}</m>
+              </cell>
+              <cell right="medium">
+                <m> a_{42}</m>
+              </cell>
+              <cell right="medium">
+                <m> 4_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> a_{51}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> a_{52}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> b_5</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> c_1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> d</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag
+          the objective plane onto the optimal solution to the integer program.
+        </p>
+        <interactive platform="doenetml" width="100%" aspect="4:5">
+          <slate surface="doenetml">
+            &lt;graph xmin="-0.2" ymin="-0.2" xmax="5" ymax="5"&gt;
+            &lt;polygon name="feasible" vertices="(0,0) (0, 3.5) (5/6, 4.75) (4,0)" filled draggable="false" styleNumber="1"/&gt;
+            &lt;point name="u" styleNumber="5" draggable="true"&gt;
+                (0,0)
+              &lt;constraints&gt;
+                &lt;constrainToGrid/&gt; 
+              &lt;/constraints&gt;
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (0,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,0)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (4,0)
+            &lt;/point&gt;
+            
+            &lt;point draggable="false"&gt;
+              (0,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,1)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (3,1)
+            &lt;/point&gt;
+            
+            &lt;point draggable="false"&gt;
+              (0,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,2)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,2)
+            &lt;/point&gt;
+            
+            &lt;point draggable="false"&gt;
+              (0,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (1,3)
+            &lt;/point&gt;
+            &lt;point draggable="false"&gt;
+              (2,3)
+            &lt;/point&gt;
+            
+            &lt;point draggable="false"&gt;
+              (1,4)
+            &lt;/point&gt;
+            
+            &lt;m draggable="false" anchor="($u.x+0.2,$u.y+0.2)"&gt;
+                f$u = &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;
+              &lt;/m&gt;
+            &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="5"/&gt; 
+
+            &lt;line name="line1" styleNumber="2"&gt;$c11*x+$c12*y=$c13 &lt;/line&gt;
+            &lt;line name="line2" styleNumber="3"&gt;$c21*x+$c22*y=$c23 &lt;/line&gt;
+            &lt;line name="line3" styleNumber="4"&gt;$c31*x+$c32*y=$c33 &lt;/line&gt;
+            
+            &lt;/graph&gt;
+          &lt;p&gt;
+            &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
+          &lt;/p&gt;
+          &lt;p&gt;
+            Cut 1: &lt;mathInput name="c11"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c12"/&gt; &lt;m&gt;x_2 = &lt;/m&gt; &lt;mathInput name="c13"/&gt;
+          &lt;/p&gt;
+          &lt;p&gt;
+            Cut 2: &lt;mathInput name="c21"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c22"/&gt; &lt;m&gt;x_2 = &lt;/m&gt; &lt;mathInput name="c23"/&gt;
+          &lt;/p&gt;
+          &lt;p&gt;
+            Cut 3: &lt;mathInput name="c31"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c32"/&gt; &lt;m&gt;x_2 = &lt;/m&gt; &lt;mathInput name="c33"/&gt;
+          &lt;/p&gt;
+
+          &lt;answer&gt;
+            &lt;award&gt;
+              &lt;when&gt;
+                $u = (1,4) and $c1=-1 and $c2=5 and $c11=0 and $c13/$c12=4 and $c21/$c22=-1 and $c23/$c22=7/2 and $c31/$c32=-1 and $c33/$c32=3
+              &lt;/when&gt;
+            &lt;/award&gt;
+          &lt;/answer&gt;
+          </slate>
+        </interactive>
+      </statement>
+    </task>
   </activity>
+
+  <definition xml:id="def-gomoryplane">
+    <title>Gomory Cutting-Plane Algorithm</title>
+    <statement>
+      <p>
+        The <em>Gomory cutting-plane</em> algorithm for an optimization problem is as follows:
+      </p>
+      <ol>
+        <li>
+          <p>
+            INITIALIZE: Begin with a canonical maximization integer programming problem.
+          </p>
+        </li>
+        <li>
+          <p>
+            Solve the relaxation of the integer program.  If all the resulting <m>b_i</m> are integral STOP: you
+            have found an optimal integral solution.
+          </p>
+        </li>
+        <li>
+          <p>
+            Select a <m>b_i</m> that is non integral and for that row, construct the additional bound:
+            <m>\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            GOTO 2.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
 
   
   
