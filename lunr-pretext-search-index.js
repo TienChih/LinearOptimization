@@ -1864,6 +1864,24 @@ var ptx_lunr_docs = [
   "body": "  As the demand for meat pies skyrockets, Agnesi is now able to acquire 40 oz of floor a day, but now uses 10 oz of floor per meat pie to thicken the gravy. She is able to sell these for 40 gp each. Use the branch and bound algorithm to found her new optimal production level.       "
 },
 {
+  "id": "sec-cuttingplane",
+  "level": "1",
+  "url": "sec-cuttingplane.html",
+  "type": "Section",
+  "number": "9.2",
+  "title": "CuttingPlane Method",
+  "body": " CuttingPlane Method    In this activity, we motivate the math behind the cutting plane method.  Let be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                     Explain why the above equality is equivalent to     Show that for any feasible integeral solution of the left hand side off the equality in (2) is an integer.    Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.    For any integral solution, what is a non-negative integer upper bound for ?    Show that for any feasible integral solution to the relaxation of the integer programming problem.    "
+},
+{
+  "id": "sec-cuttingplane-2",
+  "level": "2",
+  "url": "sec-cuttingplane.html#sec-cuttingplane-2",
+  "type": "Activity",
+  "number": "9.2.1",
+  "title": "",
+  "body": "  In this activity, we motivate the math behind the cutting plane method.  Let be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                     Explain why the above equality is equivalent to     Show that for any feasible integeral solution of the left hand side off the equality in (2) is an integer.    Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.    For any integral solution, what is a non-negative integer upper bound for ?    Show that for any feasible integral solution to the relaxation of the integer programming problem.   "
+},
+{
   "id": "sec-covermatch",
   "level": "1",
   "url": "sec-covermatch.html",
