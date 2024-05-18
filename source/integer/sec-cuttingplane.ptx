@@ -772,7 +772,7 @@
                 <m> a_{42}</m>
               </cell>
               <cell right="medium">
-                <m> 4_3</m>
+                <m> b_4</m>
               </cell>
               <cell halign="left">
                 <m>=-t_2</m>
@@ -900,7 +900,7 @@
                 <m> a_{42}</m>
               </cell>
               <cell right="medium">
-                <m> 4_3</m>
+                <m> b_4</m>
               </cell>
               <cell halign="left">
                 <m>=-t_2</m>
