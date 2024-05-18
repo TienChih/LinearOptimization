@@ -178,9 +178,7 @@
               &lt;/m&gt;
             &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
 
-            &lt;line name="line1" styleNumber="2"&gt;x+2y=20 &lt;/line&gt;
-            &lt;line name="line2" styleNumber="3"&gt;2x+2y=30 &lt;/line&gt;
-            &lt;line name="line3" styleNumber="4"&gt;2x+y=25 &lt;/line&gt;
+            
             &lt;/graph&gt;
           &lt;p&gt;
             &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
@@ -322,9 +320,7 @@
               &lt;/m&gt;
             &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
 
-            &lt;line name="line1" styleNumber="2"&gt;x+2y=20 &lt;/line&gt;
-            &lt;line name="line2" styleNumber="3"&gt;2x+2y=30 &lt;/line&gt;
-            &lt;line name="line3" styleNumber="4"&gt;2x+y=25 &lt;/line&gt;
+            
             &lt;/graph&gt;
           &lt;p&gt;
             &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
@@ -762,8 +758,8 @@
         <li>
           <p>
             For some <m>x_i^*</m> in the optimal solution found in the previous step,
-            define two sub problems, one with additional constraint <m>x_i\leq \floor*{x_i^*}</m>
-            and <m>x_i\geq \ceil*{x_i^*}</m>
+            define two sub problems, one with additional constraint <m>x_i\leq \lfloor x_i^*\rfloor</m>
+            and <m>x_i\geq \lceil x_i^*\rceil</m>
           </p>
         </li>
         <li>

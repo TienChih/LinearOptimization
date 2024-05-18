@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-cuttingplane" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>CuttingPlane Method</title>
+
+
+  <activity>
+    <introduction>
+      <p>
+        In this activity, we motivate the math behind the cutting plane method.
+      </p>
+      <p>
+        Let <m>x_1, \ldots, x_m, \ldots, x_{m+n}</m> be a feasible solution of the relaxation
+        of a canonical integer programming maximization problem, where the <m>x_i</m> are basic (slack) variables
+        and the <m>x_j</m> are non-basic variables.
+      </p>
+      <p>
+        We consider the constraint <me>x_i+\sum_j a_{ij}x_j=b_i.</me>
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>=-?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{ij}</m>
+            </cell>
+            <cell right="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>b_i</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_i</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>=-?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>?</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Explain why the above equality is equivalent to <me>x_i+\sum_j \lfloor a_{ij} \rfloor x_j - \lfloor b_i\rfloor =(b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j </me>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Show that for any feasible  integeral solution of the left hand side off the equality in (2) is an integer.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For any integral solution, what is a non-negative integer upper bound for 
+          <m>(b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that 
+          <me>  \sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)</me>
+          for any feasible integral solution to the relaxation of the integer programming problem.
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+  
+  
+
+  
+
+</section>
