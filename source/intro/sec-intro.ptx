@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>A review of random things</title>
+  <title>A Brief Geometric Review of Linear Algebra</title>
 
 
   
@@ -53,8 +53,49 @@
         </p>
       </statement>
     </task>
+
+
+   
+  </activity>
+
+  <activity xml:id="activity-basis">
+    <introduction>
+      <p>
+        Consider the  matrix <me>M=\left(\begin{array}{cccc}
+          a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} \\
+          a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n} \\
+          \vdots &amp; \vdots &amp;  \ddots &amp; \vdots\\
+          a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn}  \\
+          \end{array}\right) = (A|b).</me>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Describe neccesary and sufficient conditions for the columns to be linearly independent.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Describe neccesary and sufficient conditions for the columns to be a spanning set.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Describe neccesary and sufficient conditions for the columns to be a basis for <m>\mathbb{R}^m</m>.
+        </p>
+      </statement>
+    </task>
     
   </activity>
+
+  
 
   <activity>
     <introduction>
@@ -83,7 +124,7 @@
             \vdots &amp; \vdots &amp;  \ddots &amp; \vdots  \\
             a_{n1}+ca_{j1} &amp; a_{n2}+ca_{j2} &amp;  \cdots &amp; a_{nn} +ca_{jn}  \\
             \end{array}\right)</me>
-            geometrically, meaning no cofactor expansion (eww).
+            geometrically, i.e. without cofactor expansion.
         </p>
       </statement>
     </task>
