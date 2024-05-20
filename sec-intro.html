@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>A review of random things</title>
+<title>A Brief Geometric Review of Linear Algebra</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -155,7 +155,7 @@ true);
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Random Introductory Stuff</span></a></div>
-<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A review of random things</span></a></div></li></ul>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">2</span> <span class="title">Geometric Linear Programming</span></a></div>
@@ -238,7 +238,7 @@ true);
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-intro"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">A review of random things</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">A Brief Geometric Review of Linear Algebra</span>
 </h2>
 <article class="activity project-like" id="activity-null"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
@@ -271,10 +271,30 @@ a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn} &amp; b_m \\
 <div class="para" id="activity-solspace-2-1-1">What given a fixed <span class="process-math">\(n\text{,}\)</span> what should <span class="process-math">\(m\)</span> be for the system of equations encoded by <span class="process-math">\(M\)</span>  to have a unique solution?</div></article><article class="task exercise-like" id="activity-solspace-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-solspace-3-1-1">What does this mean geometrically?</div></article><article class="task exercise-like" id="activity-solspace-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="activity-solspace-4-1-1">If the rows of <span class="process-math">\(A\)</span> are independent, and <span class="process-math">\(m\lt n\text{,}\)</span> then what is the dimension of the solution space of <span class="process-math">\(M\text{?}\)</span>
-</div></article></article><article class="activity project-like" id="sec-intro-4"><h3 class="heading">
+</div></article></article><article class="activity project-like" id="activity-basis"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-intro-4-1"><div class="para logical" id="sec-intro-4-1-1-1">
+<div class="introduction" id="activity-basis-1"><div class="para logical" id="activity-basis-1-1">
+<div class="para">Consider the  matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+M=\left(\begin{array}{cccc}
+a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp;  \ddots &amp; \vdots\\
+a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn}  \\
+\end{array}\right) = (A|b).
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="activity-basis-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-basis-2-1-1">Describe neccesary and sufficient conditions for the columns to be linearly independent.</div></article><article class="task exercise-like" id="activity-basis-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-basis-3-1-1">Describe neccesary and sufficient conditions for the columns to be a spanning set.</div></article><article class="task exercise-like" id="activity-basis-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-basis-4-1-1">Describe neccesary and sufficient conditions for the columns to be a basis for <span class="process-math">\(\mathbb{R}^m\text{.}\)</span>
+</div></article></article><article class="activity project-like" id="sec-intro-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-intro-5-1"><div class="para logical" id="sec-intro-5-1-1-1">
 <div class="para">Consider the square matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -287,8 +307,8 @@ a_{n1} &amp; a_{n2} &amp;  \cdots &amp; a_{nn}  \\
 \end{equation*}
 </div>
 </div></div>
-<article class="task exercise-like" id="sec-intro-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="sec-intro-4-2-1-1">
+<article class="task exercise-like" id="sec-intro-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-intro-5-2-1-1">
 <div class="para">Explain why for any constant <span class="process-math">\(c\)</span> and <span class="process-math">\(1\leq j\leq n-1\)</span>
 </div>
 <div class="displaymath process-math">
@@ -301,9 +321,9 @@ a_{n1}+ca_{j1} &amp; a_{n2}+ca_{j2} &amp;  \cdots &amp; a_{nn} +ca_{jn}  \\
 \end{array}\right)
 \end{equation*}
 </div>
-<div class="para">geometrically, meaning no cofactor expansion (eww).</div>
-</div></article><article class="task exercise-like" id="sec-intro-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="sec-intro-4-3-1-1">
+<div class="para">geometrically, i.e. without cofactor expansion.</div>
+</div></article><article class="task exercise-like" id="sec-intro-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-intro-5-3-1-1">
 <div class="para">Explain why for any constant <span class="process-math">\(c\)</span> and <span class="process-math">\(1\leq j\leq n\)</span>
 </div>
 <div class="displaymath process-math">
@@ -317,8 +337,8 @@ ca_{n1} &amp; ca_{n2} &amp;  \cdots &amp; ca_{nn}  \\
 \end{equation*}
 </div>
 <div class="para">geometrically.</div>
-</div></article><article class="task exercise-like" id="sec-intro-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para logical" id="sec-intro-4-4-1-1">
+</div></article><article class="task exercise-like" id="sec-intro-5-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="sec-intro-5-4-1-1">
 <div class="para">Explain why for any constant <span class="process-math">\(c\)</span> and <span class="process-math">\(1\leq j\leq n\)</span>
 </div>
 <div class="displaymath process-math">
@@ -338,14 +358,14 @@ a_{(n-1)1} &amp; a_{(n-1)2} &amp;  \cdots &amp; a_{(n-1)(n-1)}  \\
 \end{equation*}
 </div>
 <div class="para">geometrically.</div>
-</div></article></article><article class="observation remark-like" id="sec-intro-5"><h3 class="heading">
+</div></article></article><article class="observation remark-like" id="sec-intro-6"><h3 class="heading">
 <span class="type">Observation</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-intro-5-1-1">Some resource for linear algebra define the determinant algebraically, then prove that it has these special geometric properties. In many ways this is a natural approach to introduce the subject to student whose background is primarily algebraic.  However, in my opinion, this is backwards.  It makes far more sense to approach the determinant geometrically first, there is a property of transformations we want to measure, we call this quantity the determinant, it happens to have cool algebraic properties.</div> <div class="para" id="sec-intro-5-1-2">Speaking of <span class="process-math">\(\ldots\)</span>
-</div></article><article class="activity project-like" id="sec-intro-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+<div class="para" id="sec-intro-6-1-1">Some resource for linear algebra define the determinant algebraically, then prove that it has these special geometric properties. In many ways this is a natural approach to introduce the subject to student whose background is primarily algebraic.  However, in my opinion, this is backwards.  It makes far more sense to approach the determinant geometrically first, there is a property of transformations we want to measure, we call this quantity the determinant, it happens to have cool algebraic properties.</div> <div class="para" id="sec-intro-6-1-2">Speaking of <span class="process-math">\(\ldots\)</span>
+</div></article><article class="activity project-like" id="sec-intro-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-intro-6-1-1">Michael Atiyah (1929 - 2019),  mathematician and Field’s medalist (1966), once said</div> <div class="para" id="sec-intro-6-1-2">“Algebra is the offer made by the devil to the mathematician. The devil says: “I will give you this powerful machine, it will answer any question you like. All you need to do is give me your soul: give up geometry and you will have this marvelous machine.””</div> <div class="para" id="sec-intro-6-1-3">What do you suppose Dr. Atiyah meant by this quote?  How might it have impacted your mathematical journey or education?</div></article></section></div>
+<div class="para" id="sec-intro-7-1-1">Michael Atiyah (1929 - 2019),  mathematician and Field’s medalist (1966), once said</div> <div class="para" id="sec-intro-7-1-2">“Algebra is the offer made by the devil to the mathematician. The devil says: “I will give you this powerful machine, it will answer any question you like. All you need to do is give me your soul: give up geometry and you will have this marvelous machine.””</div> <div class="para" id="sec-intro-7-1-3">What do you suppose Dr. Atiyah meant by this quote?  How might it have impacted your mathematical journey or education?</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-geometric.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
