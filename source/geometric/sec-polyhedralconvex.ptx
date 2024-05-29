@@ -245,6 +245,8 @@
     
   </activity>
 
+  
+
   <activity>
     <introduction>
       <statement>
@@ -283,6 +285,15 @@
       </p>
     </task>
   </activity>
+
+  <definition xml:id="def-polyhedralconvex">
+    <statement>
+      <p>
+        A convex set <m>S</m> that is equal to a finite intersection
+        of half-spaces (defined by either strict or non-strict inequalities) is <em>polyhedral convex</em>.
+      </p>
+    </statement>
+  </definition>
 
   <example>
     <statement>

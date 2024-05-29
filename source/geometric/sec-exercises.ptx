@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Problems for <xref ref="ch-geometric"/></title>
+
+  <exercises xml:id="exercises-geometric">
+    <exercise>
+      <p>
+        Draw and shade appropriate regions in <m>\mathbb{R}^2</m> as described below,
+         where <m>x, y\geq 0</m>.
+
+      </p>
+      <ol marker="A.">
+        <li>
+          <p>
+            A bounded polyhedral convex subset.
+          </p>
+        </li>
+        <li>
+          <p>
+            An unbounded polyhedral convex subset.
+          </p>
+        </li>
+        <li>
+          <p>
+            A bounded nonconvex subset
+          </p>
+        </li>
+        <li>
+          <p>
+            An unbounded nonconvex subset.
+          </p>
+        </li>
+        <li>
+          <p>
+            A convex subset that is not a polyhedral convex subset.
+          </p>
+        </li>
+        <li>
+          <p>
+            A convex subset having no extreme points.
+          </p>
+        </li>
+        <li>
+          <p>
+            A polyhedral convex subset having no extreme points.
+          </p>
+        </li>
+        <li>
+          <p>
+            A bounded polyhedral convex subset having exactly one extreme point.
+          </p>
+        </li>
+        <li>
+          <p>
+            An unbounded polyhedral convex subset having exactly one extreme point.
+          </p>
+        </li>
+        <li>
+          <p>
+            An bounded convex subset having infinitely many extreme points.
+          </p>
+        </li>
+        <li>
+          <p>
+            An unbounded convex subset having infinitely many extreme points.
+          </p>
+        </li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ex-convertcanon">
+      <p>
+        Convert each of the linear optimization problems below to canonical form as in
+<xref ref="def-canonicalproblems"/>.
+      </p>
+      <ol marker="A.">
+        <li>
+          <p>
+            <md>
+              <mrow>\textbf{Maximize: }  f(x,y) = \amp 3x-y</mrow>
+              <mrow>\textbf{Subject to: } 15-4x\amp \geq  y</mrow>
+              <mrow> 2x+3y\amp \leq  y+12</mrow>
+              <mrow> x,y\amp \geq  0</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            <md>
+              <mrow>\textbf{Minimize: }  g(x,y) = \amp -4x-2y</mrow>
+              <mrow>\textbf{Subject to: } 4x-7y\amp \leq  -2</mrow>
+              <mrow> 5x+3y\amp \leq  21</mrow>
+              <mrow> x,y\amp \geq  0</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            <md>
+              <mrow>\textbf{Maximize: }  h(x,y, z) = \amp x+3y-3z</mrow>
+              <mrow>\textbf{Subject to: } 3-4x+z\amp \geq  5y</mrow>
+              <mrow> 1\leq 2y+z \amp \leq  9</mrow>
+              <mrow> 0\leq x \amp \leq  8</mrow>
+              <mrow> y, z\amp \geq  0</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            <md>
+              <mrow>\textbf{Minimize: }  k(x,y,z) = \amp x-2y-z</mrow>
+              <mrow>\textbf{Subject to: } 10x+5y+2z\amp \leq  1000</mrow>
+              <mrow> 2y+4z \amp \leq  800</mrow>
+              <mrow> x,y,z\amp \geq  0</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            A drive-in sells homemade hot dogs and hamburgers.  The hot dogs take <m>3/8</m> cup of flour and <m>2.5</m> oz of beef to make.
+            A hamburger bun takes <m>1/4</m> cups of flour and <m>5</m> oz of beef.  Suppose the drive-in has <m>20</m> cups of flour
+            and <m>200</m> oz of beef on hand.  If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to
+            maximize revenue?
+          </p>
+        </li>
+        <li>
+          <p>
+            A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional
+        elements A, B, and C, respectively, per day.  Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of
+        elements A, B, C respectively.  Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of
+        elements A, B, C respectively.  How much of each feed should the rancher purchase to cover the herds nutritional
+        needs while minimizing cost?
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            A drug company sells three different formulations of vitamin complex and
+            mineral complex. The first formulation consists entirely of vitamin complex and
+            sells for $1 per unit. The second formulation consists of 3/4 of a unit of vitamin
+            complex and 1/4 of a unit of mineral complex and sells for $2 per unit. The third
+            formulation consists of 1/2 of a unit of each of the complexes and sells for $3 per
+            unit. If the company has 100 units of vitamin complex and 75 units of mineral
+            complex available, how many units of each formulation should the company
+            produce so as to maximize sales revenue?
+          </p>
+        </li>
+        
+      </ol>
+    </exercise>
+
+    <exercise xml:id="ex-geosolve">
+      <p>
+        For each of the following, sketch the feasible region <m>\mathbf{R}</m>,
+        and find the optimal solution by identifying the extreme points of <m>\mathbf{R}</m>
+        and evaluating.
+      </p>
+      <ol marker="A.">
+        <li>
+          <p>
+            <md>
+              <mrow>\textbf{Maximize: }  f(x,y) = \amp 2x+y</mrow>
+              <mrow>\textbf{Subject to: } x+4y\amp \leq  11</mrow>
+              <mrow> 6x+2y\amp \leq  22</mrow>
+              <mrow> x,y\amp \geq  0</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            <md>
+              <mrow>\textbf{Minimize: }  f(x,y) = \amp 2x+y</mrow>
+              <mrow>\textbf{Subject to: } x+4y\amp \geq  11</mrow>
+              <mrow> 6x+2y\amp \geq  22</mrow>
+              <mrow> x,y\amp \geq  0</mrow>
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            <xref ref="ex-convertcanon"/> (A).
+          </p>
+        </li>
+        <li>
+          <p>
+            <xref ref="ex-convertcanon"/> (B).
+          </p>
+        </li>
+        <li>
+          <p>
+            <xref ref="ex-convertcanon"/> (D).
+          </p>
+        </li>
+        <li>
+          <p>
+            <xref ref="ex-convertcanon"/> (E).
+          </p>
+        </li>
+        <li>
+          <p>
+            <xref ref="ex-convertcanon"/> (F).
+          </p>
+        </li>
+        <li>
+          <p>
+            <xref ref="ex-convertcanon"/> (G).
+          </p>
+        </li>
+        
+      </ol>
+    </exercise>
+
+    <exercise>
+      <p>
+        Prove that <xref ref="ex-geosolve"/> (H) has infinitely many optimal solutions, two of which lie on extreme points.  Identify
+        these points on the plot of the feasible region done in <xref ref="ex-geosolve"/>.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        Prove that if <m>\mathbf{x}, \mathbf{x}'</m> are distinct optimal solutions of a canonical linear optimization problem, then
+        all points on the line segment between <m>\mathbf{x}, \mathbf{x}'</m> are also optimal solutions of the problem.
+
+      </p>
+      <p>
+        Conclude that a canonical linear optimization problem can have 0, 1 or infinitely many optimal solutions
+        and no other possibilities.
+      </p>
+    </exercise>
+
+    <exercise xml:id="ex-5planes">
+      <p>
+        Consider the canonical linear optimization problem
+        <md>
+          <mrow>\textbf{Maximize: }  f(x,y) = 3x-2y+5z-w</mrow>
+          <mrow>\textbf{Subject to: } -x+2y-3z+6w\amp \leq  12</mrow>
+          <mrow> x,y, z, w\amp \geq  0.</mrow>
+        </md>
+      </p>
+      <p>
+        Find the <m>{5\choose 4}</m> potential intersections of bounding hyperplanes, determine which are feasible, and which of
+        those are optimal.
+      </p>
+    </exercise>
+
+    <exercise xml:id="ex-6planes">
+      <p>
+        Consider the canonical linear optimization problem
+        <md>
+          <mrow>\textbf{Minimize: }  f(x,y) = 2x-y-3z+4w</mrow>
+          <mrow>\textbf{Subject to: } x+2y+2z+4y\amp \geq  8</mrow>
+          <mrow>4x-y\amp \geq 6</mrow>
+          <mrow> x,y, z, w\amp \geq  0.</mrow>
+        </md>
+      </p>
+      <p>
+        Find the <m>{6\choose 4}</m> potential intersections of bounding hyperplanes, determine which are feasible, and which of
+        those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.)
+        <sage>
+          <input>
+            A=matrix([[1,0,0,0,0],[0,1,0,0,0], [0,0,1,0,0],[0,0,0,1,0]])
+            print(A)
+            print(" ")
+            print(A.rref())
+          </input>
+        </sage>
+      </p>
+
+    </exercise>
+    <exercise>
+      <p>
+        Express <m>{k+4\choose 4}</m> as a polynomial in terms
+        of <m>k</m>.  How does this relate to <xref ref="ex-5planes"/>,
+        <xref ref="ex-6planes"/>?
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        Show that 
+        <md>
+          <mrow>\textbf{Maximize: }  f(x,y) = \amp x-y</mrow>
+          <mrow>\textbf{Subject to: } x+y\amp \geq  5</mrow>
+          <mrow> x-5y\amp \leq  0</mrow>
+          <mrow> y-2x\amp \leq  1</mrow>
+          <mrow> x,y\amp \geq  0</mrow>
+        </md>
+        is unbounded.  (Hint: sketch the feasible region and consider feasible points on the line <m>x=5y</m>.)
+      </p>
+    
+    </exercise>
+
+  <exercise>
+    <p>
+      Show that 
+      <md>
+        <mrow>\textbf{Minimize: }  g(x,y) = \amp 5x+3y</mrow>
+        <mrow>\textbf{Subject to: } y-5x\amp \geq  1</mrow>
+        <mrow> x-5y\amp \geq  0</mrow>
+        <mrow> x,y\amp \geq  0</mrow>
+      </md>
+      is infeasible. 
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      For each of the following, determine whether or not the statement is TRUE or FALSE.  If TRUE, provide a proof,
+      if FALSE, provide a counterexample.
+    </p>
+    <ol markers="A.">
+      <li>
+        <p>
+          If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.
+        </p>
+      </li>
+      <li>
+        <p>
+          If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.
+        </p>
+      </li>
+    </ol>
+  </exercise>
+
+
+      
+    
+  </exercises>
+  
+
+
+
+  
+
+</section>

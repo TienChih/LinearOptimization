@@ -44,7 +44,7 @@
         <p>
           What must be true about the slack variables <m>t_i</m>?
         </p>
-        <ol style="A">
+        <ol marker="A.">
           <li>
             <p>
               <m>t_i\leq 0</m>
