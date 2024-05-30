@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-exercisesgeometric" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems for <xref ref="ch-geometric"/></title>
 
   <exercises xml:id="exercises-geometric">
@@ -146,6 +146,17 @@
             produce so as to maximize sales revenue?
           </p>
         </li>
+        <li>
+          <p>
+            <md>
+              <mrow>\textbf{Maximize: }  f(x,y) = \amp 5x+6y</mrow>
+              <mrow>\textbf{Subject to: } 2x+3y\amp \geq  12</mrow>
+              <mrow> -3x+2y\amp \leq  14</mrow>
+              <mrow> x+y\amp \leq  12</mrow>
+              <mrow> x,y\amp \geq  0</mrow>
+            </md>
+          </p>
+        </li>
         
       </ol>
     </exercise>
@@ -207,6 +218,12 @@
             <xref ref="ex-convertcanon"/> (G).
           </p>
         </li>
+        <li>
+          <p>
+            <xref ref="ex-convertcanon"/> (H).
+          </p>
+        </li>
+        
         
       </ol>
     </exercise>
@@ -234,7 +251,7 @@
       <p>
         Consider the canonical linear optimization problem
         <md>
-          <mrow>\textbf{Maximize: }  f(x,y) = 3x-2y+5z-w</mrow>
+          <mrow>\textbf{Maximize: }  f(x,y,z,w) = 3x-2y+5z-w</mrow>
           <mrow>\textbf{Subject to: } -x+2y-3z+6w\amp \leq  12</mrow>
           <mrow> x,y, z, w\amp \geq  0.</mrow>
         </md>
@@ -249,7 +266,7 @@
       <p>
         Consider the canonical linear optimization problem
         <md>
-          <mrow>\textbf{Minimize: }  f(x,y) = 2x-y-3z+4w</mrow>
+          <mrow>\textbf{Minimize: }  g(x,y,z,w) = 2x-y-3z+4w</mrow>
           <mrow>\textbf{Subject to: } x+2y+2z+4y\amp \geq  8</mrow>
           <mrow>4x-y\amp \geq 6</mrow>
           <mrow> x,y, z, w\amp \geq  0.</mrow>
