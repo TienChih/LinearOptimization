@@ -361,18 +361,18 @@ var ptx_lunr_docs = [
   "body": "  So, we see that the hunt for optimal solutions boils down to a hunt for extreme points.    In How many lines are needed to intersect to obtain a point?    In How many planes are needed to intersect to obtain a point?    In How many dimensional hyperplanes are needed to intersect to obtain a point?                          Suppose a canonical linear programming problem in is bounded by the usual hyperplanes corresponding to as well as additional hyperplanes. How many potential points of intersection could there be?                               So for a canonical linear programming problem in bounded by an additional 15 hyperplanes, how many potential extreme points are there?   "
 },
 {
-  "id": "sec-exercises",
+  "id": "sec-exercisesgeometric",
   "level": "1",
-  "url": "sec-exercises.html",
+  "url": "sec-exercisesgeometric.html",
   "type": "Section",
   "number": "1.4",
   "title": "Problems for Chapter 1",
-  "body": " Problems for   Draw and shade appropriate regions in as described below, where .   A bounded polyhedral convex subset.    An unbounded polyhedral convex subset.    A bounded nonconvex subset    An unbounded nonconvex subset.    A convex subset that is not a polyhedral convex subset.    A convex subset having no extreme points.    A polyhedral convex subset having no extreme points.    A bounded polyhedral convex subset having exactly one extreme point.    An unbounded polyhedral convex subset having exactly one extreme point.    An bounded convex subset having infinitely many extreme points.    An unbounded convex subset having infinitely many extreme points.    Convert each of the linear optimization problems below to canonical form as in .                       A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?    A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?    A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?    For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.              (A).     (B).     (D).     (E).     (F).     (G).    Prove that (H) has infinitely many optimal solutions, two of which lie on extreme points. Identify these points on the plot of the feasible region done in .  Prove that if are distinct optimal solutions of a canonical linear optimization problem, then all points on the line segment between are also optimal solutions of the problem. Conclude that a canonical linear optimization problem can have 0, 1 or infinitely many optimal solutions and no other possibilities.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal. (It is recommended that you use some technological tools to solve for the resulting linear systems.)   Express as a polynomial in terms of . How does this relate to , ?  Show that is unbounded. (Hint: sketch the feasible region and consider feasible points on the line .)  Show that is infeasible.  For each of the following, determine whether or not the statement is TRUE or FALSE. If TRUE, provide a proof, if FALSE, provide a counterexample.   If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.    If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.     "
+  "body": " Problems for   Draw and shade appropriate regions in as described below, where .   A bounded polyhedral convex subset.    An unbounded polyhedral convex subset.    A bounded nonconvex subset    An unbounded nonconvex subset.    A convex subset that is not a polyhedral convex subset.    A convex subset having no extreme points.    A polyhedral convex subset having no extreme points.    A bounded polyhedral convex subset having exactly one extreme point.    An unbounded polyhedral convex subset having exactly one extreme point.    An bounded convex subset having infinitely many extreme points.    An unbounded convex subset having infinitely many extreme points.    Convert each of the linear optimization problems below to canonical form as in .                       A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?    A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?    A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?         For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.              (A).     (B).     (D).     (E).     (F).     (G).     (H).    Prove that (H) has infinitely many optimal solutions, two of which lie on extreme points. Identify these points on the plot of the feasible region done in .  Prove that if are distinct optimal solutions of a canonical linear optimization problem, then all points on the line segment between are also optimal solutions of the problem. Conclude that a canonical linear optimization problem can have 0, 1 or infinitely many optimal solutions and no other possibilities.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal. (It is recommended that you use some technological tools to solve for the resulting linear systems.)   Express as a polynomial in terms of . How does this relate to , ?  Show that is unbounded. (Hint: sketch the feasible region and consider feasible points on the line .)  Show that is infeasible.  For each of the following, determine whether or not the statement is TRUE or FALSE. If TRUE, provide a proof, if FALSE, provide a counterexample.   If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.    If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.     "
 },
 {
   "id": "exercises-geometric-1",
   "level": "2",
-  "url": "sec-exercises.html#exercises-geometric-1",
+  "url": "sec-exercisesgeometric.html#exercises-geometric-1",
   "type": "Exercise",
   "number": "1.4.1",
   "title": "",
@@ -381,25 +381,25 @@ var ptx_lunr_docs = [
 {
   "id": "ex-convertcanon",
   "level": "2",
-  "url": "sec-exercises.html#ex-convertcanon",
+  "url": "sec-exercisesgeometric.html#ex-convertcanon",
   "type": "Exercise",
   "number": "1.4.2",
   "title": "",
-  "body": "Convert each of the linear optimization problems below to canonical form as in .                       A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?    A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?    A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?   "
+  "body": "Convert each of the linear optimization problems below to canonical form as in .                       A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?    A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?    A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?        "
 },
 {
   "id": "ex-geosolve",
   "level": "2",
-  "url": "sec-exercises.html#ex-geosolve",
+  "url": "sec-exercisesgeometric.html#ex-geosolve",
   "type": "Exercise",
   "number": "1.4.3",
   "title": "",
-  "body": "For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.              (A).     (B).     (D).     (E).     (F).     (G).   "
+  "body": "For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.              (A).     (B).     (D).     (E).     (F).     (G).     (H).   "
 },
 {
   "id": "exercises-geometric-4",
   "level": "2",
-  "url": "sec-exercises.html#exercises-geometric-4",
+  "url": "sec-exercisesgeometric.html#exercises-geometric-4",
   "type": "Exercise",
   "number": "1.4.4",
   "title": "",
@@ -408,7 +408,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercises-geometric-5",
   "level": "2",
-  "url": "sec-exercises.html#exercises-geometric-5",
+  "url": "sec-exercisesgeometric.html#exercises-geometric-5",
   "type": "Exercise",
   "number": "1.4.5",
   "title": "",
@@ -417,7 +417,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-5planes",
   "level": "2",
-  "url": "sec-exercises.html#ex-5planes",
+  "url": "sec-exercisesgeometric.html#ex-5planes",
   "type": "Exercise",
   "number": "1.4.6",
   "title": "",
@@ -426,7 +426,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-6planes",
   "level": "2",
-  "url": "sec-exercises.html#ex-6planes",
+  "url": "sec-exercisesgeometric.html#ex-6planes",
   "type": "Exercise",
   "number": "1.4.7",
   "title": "",
@@ -435,7 +435,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercises-geometric-8",
   "level": "2",
-  "url": "sec-exercises.html#exercises-geometric-8",
+  "url": "sec-exercisesgeometric.html#exercises-geometric-8",
   "type": "Exercise",
   "number": "1.4.8",
   "title": "",
@@ -444,7 +444,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercises-geometric-9",
   "level": "2",
-  "url": "sec-exercises.html#exercises-geometric-9",
+  "url": "sec-exercisesgeometric.html#exercises-geometric-9",
   "type": "Exercise",
   "number": "1.4.9",
   "title": "",
@@ -453,7 +453,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercises-geometric-10",
   "level": "2",
-  "url": "sec-exercises.html#exercises-geometric-10",
+  "url": "sec-exercisesgeometric.html#exercises-geometric-10",
   "type": "Exercise",
   "number": "1.4.10",
   "title": "",
@@ -462,7 +462,7 @@ var ptx_lunr_docs = [
 {
   "id": "exercises-geometric-11",
   "level": "2",
-  "url": "sec-exercises.html#exercises-geometric-11",
+  "url": "sec-exercisesgeometric.html#exercises-geometric-11",
   "type": "Exercise",
   "number": "1.4.11",
   "title": "",
@@ -854,6 +854,87 @@ var ptx_lunr_docs = [
   "number": "2.6.4",
   "title": "",
   "body": "  Remember that cycling example ?    Encode the problem into sage:     Now let's run the simplex algorithm to see what the deal is:    "
+},
+{
+  "id": "sec-exercisessimplex",
+  "level": "1",
+  "url": "sec-exercisessimplex.html",
+  "type": "Section",
+  "number": "2.7",
+  "title": "Problems for Chapter 2",
+  "body": " Problems for   Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .    Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .    For each of the following canonical maximization tableaus:   Write out the current basic solution.    Determine if the current basic solution is feasible.    Determine if the tableau detects that the feasible region is unbounded.    Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.    Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.    Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.    Identify all valid pivot entries.    Pivot on the entry corresponding to Bland's Anti-cycling rules.    Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  For each problem in solve these problems using the Simplex Algorithm.  Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                           For each problem in Sketch the feasible region and label the extreme points traversed by the simplex algorithm in order.  Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?    A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?    The canonical programming problem below potentially cycles (due to H.W. Kuhn.). Solve the problem by using the simplex algorithm with Bland anti-cycling rules.                                                                                                                   "
+},
+{
+  "id": "exercises-simplex-1",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#exercises-simplex-1",
+  "type": "Exercise",
+  "number": "2.7.1",
+  "title": "",
+  "body": "Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .   "
+},
+{
+  "id": "exercises-simplex-2",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#exercises-simplex-2",
+  "type": "Exercise",
+  "number": "2.7.2",
+  "title": "",
+  "body": "Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .   "
+},
+{
+  "id": "exercises-simplex-3",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#exercises-simplex-3",
+  "type": "Exercise",
+  "number": "2.7.3",
+  "title": "",
+  "body": "For each of the following canonical maximization tableaus:   Write out the current basic solution.    Determine if the current basic solution is feasible.    Determine if the tableau detects that the feasible region is unbounded.    Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.    Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.    Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.    Identify all valid pivot entries.    Pivot on the entry corresponding to Bland's Anti-cycling rules.    Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 "
+},
+{
+  "id": "exercises-simplex-4",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#exercises-simplex-4",
+  "type": "Exercise",
+  "number": "2.7.4",
+  "title": "",
+  "body": "For each problem in solve these problems using the Simplex Algorithm. "
+},
+{
+  "id": "ex-solvesimplex",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#ex-solvesimplex",
+  "type": "Exercise",
+  "number": "2.7.5",
+  "title": "",
+  "body": "Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                          "
+},
+{
+  "id": "exercises-simplex-6",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#exercises-simplex-6",
+  "type": "Exercise",
+  "number": "2.7.6",
+  "title": "",
+  "body": "For each problem in Sketch the feasible region and label the extreme points traversed by the simplex algorithm in order. "
+},
+{
+  "id": "exercises-simplex-7",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#exercises-simplex-7",
+  "type": "Exercise",
+  "number": "2.7.7",
+  "title": "",
+  "body": "Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?    A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?   "
+},
+{
+  "id": "exercises-simplex-8",
+  "level": "2",
+  "url": "sec-exercisessimplex.html#exercises-simplex-8",
+  "type": "Exercise",
+  "number": "2.7.8",
+  "title": "",
+  "body": "The canonical programming problem below potentially cycles (due to H.W. Kuhn.). Solve the problem by using the simplex algorithm with Bland anti-cycling rules.                                                                                                                 "
 },
 {
   "id": "sec-unconstrained",
