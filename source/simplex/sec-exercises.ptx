@@ -1362,6 +1362,15 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
 
     <exercise>
       <p>
+        Consider a tableau  whose basic solution
+        is feasible and optimal.  Suppose each <m>b_i &gt; 0</m>.
+          Prove that this is the <em>unique</em> optimal
+        solution if and only if each <m>c_j &lt; 0</m>.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
         The following have multiple optimal solutions, use the
         Simplex Algorithm and then pivots to classify all the optimal solutions.
       </p>
@@ -1548,14 +1557,7 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
       </ol>
     </exercise>
 
-    <exercise>
-      <p>
-        Consider a tableau  whose basic solution
-        is feasible and optimal.  Suppose each <m>b_i &gt; 0</m>.
-          Prove that this is the <em>unique</em> optimal
-        solution if and only if each <m>c_j &lt; 0</m>.
-      </p>
-    </exercise>
+    
 
     <exercise xml:id="ex-invert">
       <p>
