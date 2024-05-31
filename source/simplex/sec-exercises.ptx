@@ -1550,8 +1550,9 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
 
     <exercise>
       <p>
-        Consider a tableau which whose basic solution
-        is optimal.  Prove that this is the unique optimal
+        Consider a tableau  whose basic solution
+        is feasible and optimal.  Suppose each <m>b_i &gt; 0</m>.
+          Prove that this is the <em>unique</em> optimal
         solution if and only if each <m>c_j &lt; 0</m>.
       </p>
     </exercise>
@@ -1863,7 +1864,20 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
           <p>
             Find neccesary and sufficient conditions for the minimization tableau
             <tabular halign="center">
-              
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                </cell>
+                <cell bottom="medium">
+                </cell>
+                <cell bottom="medium">
+                </cell>
+                <cell bottom="medium">
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
               <row>
                 <cell halign="right" right="medium">
                   <m>y_1</m>
