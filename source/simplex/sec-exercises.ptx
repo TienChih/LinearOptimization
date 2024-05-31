@@ -1360,6 +1360,762 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
       </p>
     </exercise>
 
+    <exercise>
+      <p>
+        The following have multiple optimal solutions, use the
+        Simplex Algorithm and then pivots to classify all the optimal solutions.
+      </p>
+      <ol markers="A.">
+        <li>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_4</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>0</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </li>
+        <li>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+              
+            </tabular>
+          </p>
+        </li>
+      </ol>
+    </exercise>
+
+    <exercise>
+      <p>
+        Consider a tableau which whose basic solution
+        is optimal.  Prove that this is the unique optimal
+        solution if and only if each <m>c_j &lt; 0</m>.
+      </p>
+    </exercise>
+
+    <exercise xml:id="ex-invert">
+      <p>
+        Consider a square tableau:
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_n</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1n}</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2n}</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nn}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+        Suppose we perform pivots so we achieve a tableau of the form:
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>t_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_n</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a'_{11}</m>
+            </cell>
+            <cell>
+              <m>a'_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a'_{1n}</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a'_{21}</m>
+            </cell>
+            <cell>
+              <m>a'_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a'_{2n}</m>
+            </cell>
+            <cell right="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a'_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a'_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a'_{nn}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        Let <m>A=[a_{ij}]_{n\times n}</m> and <m>A'=[a'_{ij}]_{n\times n}</m>.
+        For each of the following matrices <m>A</m> perform appropriate
+        pivots to achieve <m>A'</m> and confirm <m>A'=A^{-1}</m>.
+      </p>
+      <ol markers="A.">
+        <li>
+          <p>
+            <m>A=\begin{bmatrix}0 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1    \end{bmatrix}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>A=\begin{bmatrix}1 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; -1    \end{bmatrix}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>A=\begin{bmatrix}0 &amp; 1 &amp; 2 &amp; 3 \\ 1 &amp; 2 &amp; 3 &amp; 2 \\ 2 &amp; 3 &amp; 2 &amp; 1 \\ 3 &amp; 2 &amp; 1 &amp; 0    \end{bmatrix}</m>
+          </p>
+        </li>
+      </ol>
+    </exercise>
+
+    <exercise>
+      <p>
+        Explain why in <xref ref="ex-invert"/> that <m>A'=A^{-1}</m> in general.
+      </p>
+    </exercise>
+
+    <exercise>
+      <ol marker="A.">
+        <li>
+          <p>
+            Find neccesary and sufficient conditions for the minimization tableau
+            <tabular halign="center">
+              
+              <row>
+                <cell halign="right" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m>a_{11}</m>
+                </cell>
+                <cell>
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium">
+                  <m>a_{1m}</m>
+                </cell>
+                <cell right="medium">
+                  <m>b_1</m>
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell>
+                  <m>\vdots</m>
+                </cell>
+                <cell>
+                  <m>\ddots</m>
+                </cell>
+                <cell right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell halign="left">
+                  <m>\vdots</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>y_n</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>a_{n1}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>a_{nm}</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>b_n</m>
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>c_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>c_m</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>d</m>
+                </cell>
+                <cell halign="left">
+                  
+                </cell>
+              </row>
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>\cdots</m>
+                </cell>
+                <cell>
+                  <m>=s_m</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+            to have a feasible basic solution.
+          </p>
+        </li>
+        <li>
+          <p>
+            If a minimization tableau as depicted above has a feasible 
+            basic solution, must it also have a feasible basic maximum solution?  Prove
+            or find a counterexample.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find neccesary and sufficient conditions for 
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_m</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m>a_{11}</m>
+                </cell>
+                <cell>
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium">
+                  <m>a_{1m}</m>
+                </cell>
+                <cell right="medium">
+                  <m>b_1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell>
+                  <m>\vdots</m>
+                </cell>
+                <cell>
+                  <m>\ddots</m>
+                </cell>
+                <cell right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell halign="left">
+                  <m>\vdots</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>y_n</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>a_{n1}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>a_{nm}</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>b_n</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_n</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>c_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>c_m</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>d</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>\cdots</m>
+                </cell>
+                <cell>
+                  <m>=s_m</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+            to encode feasible basic solutions for both it's maximization
+            and minimization problems.
+          </p>
+        </li>
+      </ol>
+    </exercise>
+
+    <exercise>
+      <p>
+        Prove that each tableau always encodes a <em>unique</em> basic solution
+        by first showing that the default starting basic solution is unique,
+        and then proving that each pivot preserves the uniqueness of the basic solution.
+      </p>
+      <hint>
+        <p>
+          Note that each basic solution is the intersection of <m>m</m>
+          hyperplanes.  What would it take for this to be empty or contain multiple points?
+          Think in terms of linear (in)dependence and solving linear systems.
+        </p>
+      </hint>
+    </exercise>
+
 
 
   </exercises>
