@@ -1059,13 +1059,13 @@
                 <cell halign="left" right="medium">
                 </cell>
                 <cell>
-                  <m> 1</m>
-                </cell>
-                <cell right="medium">
                   <m> -2</m>
                 </cell>
                 <cell right="medium">
-                  <m> 0</m>
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
                 </cell>
                 <cell halign="left">
                   <m>=-t_2</m>

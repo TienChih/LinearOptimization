@@ -11,6 +11,7 @@
   <xi:include href="sec-unconstrained.ptx" />
   <xi:include href="sec-superconstrained.ptx" />
   <xi:include href="sec-noncanonsage.ptx" />
+  <xi:include href="sec-exercises.ptx" />
   
 
 </chapter>
