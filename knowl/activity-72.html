@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-r' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-r",
+  "linked": true,
+  "linkKey": "linked-r",
+  "autoeval": false,
+  "languages": [
+    "r"
+  ],
+  "evalButtonText": "Evaluate (R)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Follow the outline provided by <a href="" class="xref" data-knowl="./knowl/activity-rowcol.html" title="Activity 5.1.2">Activity 5.1.2</a> to find the optimal strategies for the Even and Odd players in <a href="" class="xref" data-knowl="./knowl/exploration-evenodd.html" title="Exploration 5.1.1">Exploration 5.1.1</a>, and who if anyone the game favors.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">To test out this solution edit this code: <pre class="ptx-sagecell sagecell-r" id="sage-27"><script type="text/x-sage">numsamp = 1000000
+
+Rowan = sample(1:3, numsamp, replace = TRUE, prob = c(FIXMER1, FIXMER2, FIXMER3))
+Colleen = sample(1:3, numsamp, replace = TRUE, prob = c(FIXMEC1, FIXMEC2, FIXMEC3))
+
+PayoffMatrix = matrix(c(2,-3,2,-3,4,-3,2,-3,6), nrow = 3, ncol = 3)
+
+Winnings = rep(NA, numsamp)
+
+for(i in 1:numsamp){  
+    Winnings[i]=PayoffMatrix[Rowan[i],Colleen[i]]
+}
+
+hist(Winnings)
+abline(v=mean(Winnings), col="red",lwd=3, lty=2 )
+print(mean(Winnings))
+</script></pre> Where <code class="code-inline tex2jax_ignore">FIXMER1</code>, <code class="code-inline tex2jax_ignore">FIXMER2</code>, <code class="code-inline tex2jax_ignore">FIXMER3</code> represent the entries for the optimal mixed strategy for the row player Even, and <code class="code-inline tex2jax_ignore">FIXMEC1</code>, <code class="code-inline tex2jax_ignore">FIXMEC2</code>, <code class="code-inline tex2jax_ignore">FIXMEC3</code> are for the optimal mixed strategy for the column player Odd.</div>
+<div class="para">Then run the cell and see the distributions of winnings and the average winnings. How does this value compare to what you found.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Take turns, one student pick a new strategy for Even, and another student then modify the strategy for Odd in light of the new strategy. Can we do better than Odd’s current best strategy?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Conversely, take turns, one student pick a new strategy for Odd, and another student then modify the strategy for Even in light of the new strategy. Can we do better than Even’s current best strategy?</div></article></article><span class="incontext"><a href="sec-minmaxgames.html#activity-72" class="internal">in-context</a></span>
+</body>
+</html>

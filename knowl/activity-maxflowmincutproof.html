@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span>
+</h3>
+<div class="introduction"><div class="para">We now prove that the minimum cut capacity is equal to the maximum flow.</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Why does the primal max problem achieve optimality?</div> <div class="para">Call the maximum flow <span class="process-math">\(f'\text{,}\)</span> with flow on each edge <span class="process-math">\(x_{ij}'\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(v_s\in V_1'\text{,}\)</span> we recursively define <span class="process-math">\(V_1'\)</span> by adding <span class="process-math">\(v_j\)</span> to <span class="process-math">\(V_1'\)</span> if either:</div>
+<ul class="disc">
+<li><div class="para"><span class="process-math">\(v_i\in V_1', (v_i,v_j)\in E, x'_{ij}\lt c_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(v_i\in V_1', (v_j,v_i)\in E, x'_{ji}&gt;0\text{.}\)</span></div></li>
+</ul>
+<div class="para">and repeating until we stabilize, why must we eventually stabilize?</div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Show that for any <span class="process-math">\(v_k\)</span> in <span class="process-math">\(V'_1\text{,}\)</span> there is an <em class="emphasis"><span class="process-math">\(\alpha\)</span>-path</em> <span class="process-math">\(P\text{:}\)</span> a sequence of vertices starting <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_k\text{,}\)</span> where between <span class="process-math">\(v_{i}, v_j\)</span> either <span class="process-math">\((v_i, v_j), (v_j, v_i)\in E\text{.}\)</span>
+</div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/alpha-path.svg" role="img" class="contained" alt="An \(\alpha\)-path."></div></div> <div class="para">We would call the edges <span class="process-math">\((v_i, v_j)\)</span> to be <em class="emphasis">forward edges</em> and <span class="process-math">\((v_j, v_i)\)</span> <em class="emphasis">backwards edges</em> of <span class="process-math">\(P\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Suppose (by way of contradiction) that <span class="process-math">\(v_d\in V_1'\text{.}\)</span> There is by (c) an <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}
+\end{equation*}
+</div>
+</div> <div class="para">Why is <span class="process-math">\(q&gt;0\text{?}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">We define a new flow <span class="process-math">\(f''\)</span> as follows: for each forward edge of <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\((v_i, v_j)\text{,}\)</span> we add <span class="process-math">\(x_{ij}''=q+x'_{ij}\text{.}\)</span>  For each backwards edge <span class="process-math">\((v_j, v_i)\)</span> we subtract <span class="process-math">\(x_{ji}'' = x'_{ji}-q\text{.}\)</span>
+</div> <div class="para">Explain why this is still a valid network flow.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Explain why <span class="process-math">\(f''\)</span> has a greater value than <span class="process-math">\(f'\text{.}\)</span>  Why must <span class="process-math">\(v_d\not \in V_1'\text{?}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">Define <span class="process-math">\(V_2' = V\backslash V_1'\text{.}\)</span>  Prove that for any <span class="process-math">\(v_i\in V_1', v_j\in V_2'\text{,}\)</span> we have that <span class="process-math">\(x_{ij}'=c_{ij}, x_{ji}=0\text{.}\)</span>
+</div> <div class="para">(Not neccesary for this proof, but to tie things in, if <span class="process-math">\(x_{ij'}=c_{ij}\text{,}\)</span> what does that say about <span class="process-math">\(y_{ij}\)</span> from the dual program in <a href="" class="xref" data-knowl="./knowl/activity-dualflow.html" title="Activity 7.2.3">Activity 7.2.3</a>?  If <span class="process-math">\(x_{ij}'\lt c_{ij}\text{,}\)</span>  what does that say about <span class="process-math">\(y_{ij}\text{?}\)</span>  )</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para">Use <a href="" class="xref" data-knowl="./knowl/activity-cutflow.html" title="Activity 7.2.2">Activity 7.2.2</a> to show that the value of <span class="process-math">\(f'\)</span> is equal to the cut capacity of <span class="process-math">\((V_1', V_2')\text{.}\)</span> (Proving the result!)</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para">Going back to <a href="" class="xref" data-knowl="./knowl/activity-dualflow.html" title="Activity 7.2.3">Activity 7.2.3</a> if we let <span class="process-math">\(\mu_i=0\)</span> for <span class="process-math">\(v_i\in V_1'\)</span> and <span class="process-math">\(\mu_j=-1\)</span> for <span class="process-math">\(v_j\in V_2'\text{,}\)</span> what is the value of the dual min objective?</div></article></article><span class="incontext"><a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="internal">in-context</a></span>
+</body>
+</html>

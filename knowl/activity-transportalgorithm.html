@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
+</h3>
+<div class="introduction">
+<div class="para">Recall the transportation tableau obtained in <a href="" class="xref" data-knowl="./knowl/activity-vamexample.html" title="Activity 6.1.2">Activity 6.1.2</a>:</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{9}^{10}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{4}^{50}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines">1</td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{1}^{10}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b2 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para">Note that this tableau corresponds to a basic feasible solution for the original minimization problem.</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">If this solution is not optimal, what should the next step be?</div> <ol class="upper-alpha">
+<li><div class="para">Pick a variable to exit the basis which increases the objective function and make the smallest change.</div></li>
+<li><div class="para">Pick a variable to exit the basis which decreases the objective function and make the smallest change.</div></li>
+<li><div class="para">Pick a variable to exit the basis which increases the objective function and make the biggest change.</div></li>
+<li><div class="para">Pick a variable to exit the basis which decreases the objective function and make the biggest change.</div></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Select column values <span class="process-math">\(b_i\)</span> and row values <span class="process-math">\(a_j\)</span> so that each circled value is the sum of row and column values <span class="process-math">\(b_i+c_j\text{.}\)</span>
+</div> <div class="para">(We can think of these as analogous to the shadow costs associated with the warehouse/market bounds)</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{20}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{9}^{10}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{4}^{50}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{1}^{10}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines">2</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Replace each entry of the tableau <span class="process-math">\(c_{ij}\)</span> with <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>  What does this measure?  What does it mean if each entry is non-negative?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Pick a <span class="process-math">\(c_{ij}\lt 0\)</span>
+</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{20}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">?</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{20}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{10}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{50}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{box}{-2}^{0}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{10}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines">?</td>
+<td class="c m b2 r2 l0 t0 lines">?</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">Pick  circled entries <span class="process-math">\(c_{k \ell}\)</span> so that they with the boxed <span class="process-math">\(c_{ij}\)</span> form a <em class="emphasis">cycle</em>, that is each of these entries shares a row with exactly one another of the entries, and a column with another of the entries.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Based on the discussion in (a), which entry should transfer their shipments to <span class="process-math">\(c_{23}\text{?}\)</span>
+</div> <ol class="decimal cols2">
+<li><div class="para"><span class="process-math">\(\displaystyle c_{21}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle c_{13}\)</span></div></li>
+</ol> <div class="para">How do the other entries in the cycle adjust?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">Remove the basis entry which is no longer being used, and recompute the <span class="process-math">\(a_i, b_j\)</span> with the new basis.</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{30}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">?</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{10}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{50}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{-2}^{10}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{0}^{10}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines">?</td>
+<td class="c m b2 r2 l0 t0 lines">?</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para">Verify that none of the entries are non negative.  Why do we now terminate?</div> <div class="para">We then replace the entries with the original entries</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{30}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{2}^{10}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{4}^{50}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\enclose{circle}{7}^{10}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\enclose{circle}{1}^{10}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para">Use Sage to confirm the solution: <div class="para">
+<pre class="ptx-sagecell sagecell-sage" id="sage-32"><script type="text/x-sage">%display typeset
+A = (FIXME)
+b = (FIXME)
+c = (FIXME)
+P = InteractiveLPProblem(A, b, c,
+ constraint_type = "==",
+ variable_type = ">=",
+ problem_type = "min")
+P
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-33"><script type="text/x-sage">print(P.optimal_solution())
+print(P.optimal_value())
+</script></pre>
+</div>
+</div></article></article><span class="incontext"><a href="sec-transportalgorithm.html#activity-transportalgorithm" class="internal">in-context</a></span>
+</body>
+</html>

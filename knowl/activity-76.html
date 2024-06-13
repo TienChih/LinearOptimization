@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+</h3>
+<div class="introduction">
+<div class="para">We now prove a characterization theorem about the optimal solutions for both the row and column player.</div> <div class="para">Suppose we have a payoff matrix <span class="process-math">\(A\)</span> where every entry is positive.  In other words, after each round Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Rowan’s strategy here is to take Colleen for as much money as he can and Colleen’s strategy is to minimize her losses.</div> <div class="para">(We’ll ignore the obvious question of why Colleen would be willing to play this game.)</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Argue why optimal row and column outcomes <span class="process-math">\(\ec{u}, \ec{v} &gt; 0\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Write out the primal maximization problem for the LP formulation of this game:</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{v}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(q_m\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{u}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-0\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(p_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(p_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(p_n\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_n\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_n\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para">Write out the non-canonical primal problem including the objective function and constraint equalities and inequalities involving the <span class="process-math">\(q_i\)</span> and <span class="process-math">\(\ec{v}\)</span> where appropriate. (There should be no slack variables here.)</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Consider the inequality constraints in our formulation, divide each of these by <span class="process-math">\(\ec{v}\text{.}\)</span>  Let <span class="process-math">\(\tilde{q}_j:=\frac{q_j}{\ec{v}}\text{.}\)</span>  Can we rewrite our inequalities as linear combinations of <span class="process-math">\(\tilde{q}_{j}\)</span> is less than or equal to some cosntant?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Consider the equality constraint after dividing by <span class="process-math">\(\ec{v}\text{,}\)</span> rewrite this equality in terms of <span class="process-math">\(\tilde{q}_j\)</span> without negatives.</div> <div class="para">Remember, Colleen’s strategy is to minimize <span class="process-math">\(\ec{v}\)</span> which must be positive.  Can we rephrase this as maximizing or minimizing a linear function involving then <span class="process-math">\(\tilde{q}_j\text{?}\)</span>  What is this linear function and is it a maximization or minimization problem?  (Note that the solution to this problem likely isn’t the solution to the original problem, but both are optimized under the same conditions.)</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">Rewrite the new <em class="emphasis">canonical</em> linear programming problem with variables <span class="process-math">\(\tilde{q}_j\)</span> that optimizes Colleen’s stretegy.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Why is the feasible region for Colleen’s new problem non-empty but bounded?  What does the Extreme Value Theorem then say about this?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">Repeat tasks (b)-(c) for Rowan’s strategy, where <span class="process-math">\(\tilde{p}_i = \frac{p_i}{\ec{u}}\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para">Compare Rowan and Colleen’s problems with the <span class="process-math">\(\tilde{p}_i, \tilde{q}_j\text{.}\)</span>  Show that these problems are dual problems to each other.  Which is the primal max and which is the dual min?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para">What does the Strong Duality Theorem <a href="" class="xref" data-knowl="./knowl/thm-strongduality.html" title="Theorem 4.2.7: The Strong Duality Theorem">Theorem 4.2.7</a> say about the optimal solutions to both problems?  What in turn, does that say about <span class="process-math">\(\tilde{u}, \tilde{v}\text{?}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para">We’re still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at Rowan.  To balance things out, Rowan has to pay Colleen $5 after each round.  Would this fact change anything about Rowan and Collen’s strategies?</div> <div class="para">Say it was $<span class="process-math">\(r\text{,}\)</span> would that make any difference?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(k)</span></h4>
+<div class="para">Let <span class="process-math">\(\p, \q\)</span> denote any strategy for Rowan and Colleen.  Let <span class="process-math">\(E\)</span> denote a <span class="process-math">\(n\times m\)</span> matrix with all 1’s. Show that <span class="process-math">\(\p^\top(rE)\q=r\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(l)</span></h4>
+<div class="para">Show that for fixed strategies <span class="process-math">\(\p', \q'\)</span> and not fixed strategies <span class="process-math">\(\p, \q\)</span> that <span class="process-math">\(\p^\top (A+rE)q'\)</span> is maximized when <span class="process-math">\(\p^\top A \q'\)</span> is maximized and <span class="process-math">\(\p'^\top (A+rE)q\)</span> is minimized when <span class="process-math">\(\p'^\top A \q\)</span> is minimized.</div></article></article><span class="incontext"><a href="sec-vonneumann.html#activity-76" class="internal">in-context</a></span>
+</body>
+</html>

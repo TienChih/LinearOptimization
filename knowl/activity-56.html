@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h3>
+<div class="introduction">
+<div class="para logical">
+<div class="para">From <a href="" class="xref" data-knowl="./knowl/exploration-witch.html" title="Exploration 4.1.1">Exploration 4.1.1</a>, letting <span class="process-math">\(x_1\)</span> denote the number of healing elixers, and <span class="process-math">\(x_2\)</span> denote the amount of poison created. Then, we get that the feasible region satisfies the inequalities:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exploration-witch.html">
+\begin{align*}
+3x_1+x_2 \amp\leq 34 \\
+x_1+x_2 \amp\leq 14 \\
+-x_1 \amp\leq 0 \\
+-x_2 \amp\leq 0 
+\end{align*}
+</div>
+<div class="para">which is bounded by hyperplanes:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exploration-witch.html">
+\begin{align*}
+3x_1+x_2 \amp = 34 \\
+x_1+x_2 \amp = 14 \\
+-x_1 \amp = 0 \\
+-x_2 \amp = 0 
+\end{align*}
+</div>
+<div class="para">with normal vectors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exploration-witch.html">
+\begin{equation*}
+\begin{bmatrix}3\\1 \end{bmatrix}, \begin{bmatrix}1\\1 \end{bmatrix}, \begin{bmatrix}-1\\0 \end{bmatrix}, \begin{bmatrix}0\\-1 \end{bmatrix} 
+\end{equation*}
+</div>
+<div class="para">which may be depicted:</div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/witch.svg" role="img" class="contained" alt="The feasible region for the witch production problem, and depicted normal vectors."></div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">For any <span class="process-math">\(k\in \mathbb{R}\text{,}\)</span> the objective plane is <span class="process-math">\(3x_1+2x_2=k\)</span> with normal vector <span class="process-math">\(\begin{bmatrix}3\\2 \end{bmatrix}\text{.}\)</span>
+</div> <div class="para">For each extreme point in the feasible region, express the normal vector for the objective plane as a linear combination of the normal vectors of the planes whose intersect at said point.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Starting at the basic solution, perform pivots as follows:</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3^*\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(34\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(14\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div> <div class="para">For each tableau, confirm the solution is feasible.  Then look at the objective row, is there anything familiar about those values?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">For each tableau above, if I decrease each decision variable from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\text{,}\)</span> how does that change the value of the objective function?  What does decreasing a decision variable from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\)</span> mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Consider that <span class="process-math">\((0,14)\)</span> is on the intersection of <span class="process-math">\(-x=0, x+y=14\)</span> which are hyperplanes with normal vectors <span class="process-math">\(\begin{bmatrix} -1 \\ 0 \end{bmatrix}\)</span> and <span class="process-math">\(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span> respectively.  Note that <span class="process-math">\(3x+2y=28\)</span> passes through <span class="process-math">\((0,14)\)</span> with normal vector <span class="process-math">\(\begin{bmatrix} 3 \\ 2 \end{bmatrix}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Drag sliders for <span class="process-math">\(c_1, c_2\)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 2 \end{bmatrix} = c_1\begin{bmatrix} -1 \\ 0 \end{bmatrix}+c_2 \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+\end{equation*}
+</div>
+</div> <iframe id="interactive-23" width="600" height="800" src="interactive-23-if.html"></iframe></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">For each extreme point, express <span class="process-math">\(\begin{bmatrix}3 \\ 2\end{bmatrix} \)</span> as a linear combination of the normal vectors of the corresponding hyperplanes. Then, for each tableau computed above, look at their basic solutions.  Which point is it, and how are these coefficients reflected in the tableau?</div> <div class="para"><iframe id="interactive-24" width="600" height="800" src="interactive-24-if.html"></iframe></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">For which extreme points are the normal vector of the objective plane a linear combination of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about those extreme points?</div></article></article><span class="incontext"><a href="sec-section-sensitivity.html#activity-56" class="internal">in-context</a></span>
+</body>
+</html>

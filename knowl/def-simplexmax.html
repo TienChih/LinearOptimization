@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h3>
+<div class="para">The Simplex Algorithm for Maximum Tableaus</div> <ol class="decimal">
+<li><div class="para">IF each <span class="process-math">\(b_i\geq 0\text{,}\)</span> GOTO 8.</div></li>
+<li><div class="para">PICK the largest <span class="process-math">\(i\)</span> such that <span class="process-math">\(b_i\lt 0\text{.}\)</span>
+</div></li>
+<li><div class="para">IF  <span class="process-math">\(a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 \text{:}\)</span> STOP the problem in infeasible.</div></li>
+<li><div class="para">PICK a column <span class="process-math">\(j\)</span>  such that <span class="process-math">\(a_{ij} \lt 0\)</span> .</div></li>
+<li><div class="para">PICK a row <span class="process-math">\(p\geq i\)</span> so that <span class="process-math">\(\displaystyle \min_{k&gt;i}\left(\{b_i/a_{ij}\} \cup \{b_k/a_{kj}:a_{kj}&gt;0\} \right)=b_p/a_{pj}\text{.}\)</span>
+</div></li>
+<li><div class="para">PIVOT on <span class="process-math">\(a_{pj}\text{.}\)</span>
+</div></li>
+<li><div class="para">GOTO 1.</div></li>
+<li><div class="para">APPLY <a href="" class="xref" data-knowl="./knowl/def-simplexcanonmaxbf.html" title="Definition 2.3.1">Definition 2.3.1</a> .</div></li>
+</ol></article><span class="incontext"><a href="sec-simplexmax.html#def-simplexmax" class="internal">in-context</a></span>
+</body>
+</html>

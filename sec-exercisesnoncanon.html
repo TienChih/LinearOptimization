@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Problems for Chapter 3</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Linear Optimization">
+<meta property="book:author" content="Tien Chih">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.31</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.31/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.31/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.31/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.81/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-noncanonsage.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-noncanon.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-duality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+   
+   \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
+    \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
+    \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometric Linear Programming</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-convexity.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">3</span> <span class="title">Noncanonical Problems</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">7</span> <span class="title">Network Flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercisesnoncanon"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Problems for Chapter 3</span>
+</h2>
+<section class="exercises" id="exercises-noncanon"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="ex-noncanon"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-51"><div class="para" id="p-599">Solve each of the noncanonicallinear programming problems below. If a linear programming problem has infinitely many optimal solutions, find all optimal solutions.</div></div>
+<article class="task exercise-like" id="task-236"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="p-600"><div class="displaymath process-math" id="md-43">
+\begin{align*}
+\textbf{Maximize: }  f(x,y,z)  \amp = x-2y-z\\
+\textbf{Subject to: } x+y\amp \leq  1\\
+x+y+z\amp \geq  2\\
+y-2z \amp \geq  0
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-237"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="p-601"><div class="displaymath process-math" id="md-44">
+\begin{align*}
+\textbf{Maximize: }  g(x,y,z)  \amp = 4x+2y+z\\
+\textbf{Subject to: } x+y+z\amp \leq  5\\
+4x-y-z\amp \leq  5\\
+2y+z \amp \leq  4
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-238"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="p-602"><div class="displaymath process-math" id="md-45">
+\begin{align*}
+\textbf{Maximize: }  f(x,y,z)  \amp = 4x+2y+z\\
+\textbf{Subject to: } x+z\amp \leq  5\\
+4x-y-z\amp \leq  5\\
+2y+z \amp \leq  4
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-239"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para logical" id="p-603"><div class="displaymath process-math" id="md-46">
+\begin{align*}
+\textbf{Maximize: }  k(x,y,z)  \amp = x+2y+z\\
+\textbf{Subject to: } 2x-y+z\amp =  3\\
+x+2y\amp \leq  4\\
+-2x+5y+3z \amp \leq  4\\
+x, y, z \amp \geq 0
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-240"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para logical" id="p-604"><div class="displaymath process-math" id="md-47">
+\begin{align*}
+\textbf{Minimize: }  h(x,y,z)  \amp = x+y+z\\
+\textbf{Subject to: } x-y\amp \geq 1\\
+2x+z\amp \leq  10\\
+y+z \amp =  4\\
+x, y, z \amp \geq 0
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-241"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para logical" id="p-605"><div class="displaymath process-math" id="md-48">
+\begin{align*}
+\textbf{Minimize: }  f(x,y,z)  \amp = 3x+y+2z\\
+\textbf{Subject to: } x+2y+3z\amp \geq 24\\
+2x+4y+3z\amp =  36\\
+y, z \amp \geq 0
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-242"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para logical" id="p-606"><div class="displaymath process-math" id="md-49">
+\begin{align*}
+\textbf{Maximize: }  \ell(x,y,z)  \amp = x+y+z\\
+\textbf{Subject to: } x+y+z\amp \leq 3\\
+x+y\amp \leq  1\\
+y+2z\amp =2\\
+x, y \amp \geq 0
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-243"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<div class="para logical" id="p-607"><div class="displaymath process-math" id="md-50">
+\begin{align*}
+\textbf{Maximize: }  f(x,y,z)  \amp = 3x-2y+3z\\
+\textbf{Subject to: } x-y+2z\amp =6\\
+x+2z\amp =8\\
+y+2z\amp \geq 2\\
+y, z \amp \geq 0
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-244"><h5 class="heading"><span class="codenumber">(i)</span></h5>
+<div class="para logical" id="p-608"><div class="displaymath process-math" id="md-51">
+\begin{align*}
+\textbf{Minimize: }  \alpha(x,y,z)  \amp = -5x+y-2z\\
+\textbf{Subject to: } 2x+z\amp =0\\
+x-y\amp \geq  1\\
+3x-y+z\amp \leq 3
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-245"><h5 class="heading"><span class="codenumber">(j)</span></h5>
+<div class="para logical" id="p-609"><div class="displaymath process-math" id="md-52">
+\begin{align*}
+\textbf{Maximize: }  g(x,y,z)  \amp = x+y+z\\
+\textbf{Subject to: } x-y-z\amp \leq 2\\
+y-z\amp \geq  1
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-246"><h5 class="heading"><span class="codenumber">(k)</span></h5>
+<div class="para logical" id="p-610"><div class="displaymath process-math" id="md-53">
+\begin{align*}
+\textbf{Maximize: }  f(x,y)  \amp = x+y\\
+\textbf{Subject to: } 2x+y\amp =5\\
+x-y\amp =-2\\
+x+2y\amp =8\\
+x, y \amp \geq 0
+\end{align*}
+</div></div></article></article><article class="exercise exercise-like" id="exercise-27"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-52"><div class="para" id="p-611">Label each of the following statements TRUE or FALSE. If the statement is FALSE, provide a counterexample.</div></div>
+<article class="task exercise-like" id="task-247"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-612">A noncanonical linear programming problem with more unconstrained independent variables than constraints has unbounded objective function.  (As in  <a href="" class="xref" data-knowl="./knowl/ex-noncanon.html" title="Exercise 3.4.1">Exercise 3.4.1</a> (J))</div></article><article class="task exercise-like" id="task-248"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-613">A noncanonicallinear programming problem with more equations of constraint than independent variables is infeasible.  (As in  <a href="" class="xref" data-knowl="./knowl/ex-noncanon.html" title="Exercise 3.4.1">Exercise 3.4.1</a> (K))</div></article></article><article class="exercise exercise-like" id="exercise-28"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-53"><div class="para" id="p-614">Sketch the constraint set for each noncanonicallinear programming problem below. On the basis of this constraint set, formulate a conjecture as to whether or not the solution of the given problem is the same as the solution of the associated canonical linear programming problem where all independent variables are constrained to be nonnegative. Verify your conjecture by solving both linear programming problems.</div></div>
+<article class="task exercise-like" id="task-249"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="p-615"><div class="displaymath process-math" id="md-54">
+\begin{align*}
+\textbf{Maximize: }  f(x,y)  \amp = x+y\\
+\textbf{Subject to: } 2x+y\amp \leq 11\\
+x-y\amp \geq -2
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-250"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="p-616"><div class="displaymath process-math" id="md-55">
+\begin{align*}
+\textbf{Minimize: }  g(x,y)  \amp = 2x+y\\
+\textbf{Subject to: } 3x+2y\amp \geq 5\\
+2x-y\amp \geq 1
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-251"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="p-617"><div class="displaymath process-math" id="md-56">
+\begin{align*}
+\textbf{Maximize: }  f(x,y)  \amp = 5x+y\\
+\textbf{Subject to: } x-y\amp \leq 8\\
+2x+y\amp \leq 7
+\end{align*}
+</div></div></article><article class="task exercise-like" id="task-252"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para logical" id="p-618"><div class="displaymath process-math" id="md-57">
+\begin{align*}
+\textbf{Minimize: }  g(x,y)  \amp = x+2y\\
+\textbf{Subject to: } x+3y\amp \geq 5\\
+2x+y\amp \geq 0
+\end{align*}
+</div></div></article></article><article class="exercise exercise-like" id="exercise-29"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-619">The following problem has infinitely many solutions.  Sketch the feasible region, find the optimal solutions and sketch the solution set.</div>
+<div class="para logical" id="p-620"><div class="displaymath process-math" id="md-58">
+\begin{align*}
+\textbf{Maximize: }  f(x,y,z)  \amp = 2x+y-2z\\
+\textbf{Subject to: } x+y+z\amp \leq 1\\
+y+4z\amp =2\\
+x, y, z\amp \geq0
+\end{align*}
+</div></div></article><article class="exercise exercise-like" id="ex-unconstrained"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-54">
+<div class="para" id="p-621">Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.</div> <div class="para" id="p-622">For example:</div> <div class="para logical" id="p-623"><div class="displaymath process-math" id="md-59">
+\begin{align*}
+\textbf{Maximize: }  f(x,y)  \amp = 4x+y\\
+\textbf{Subject to: } x+y\amp \leq 2\\
+x-2y\amp \leq 5\\
+x\amp \geq0
+\end{align*}
+</div></div> <div class="para" id="p-624">May be restated as the following canonical optimization problem:</div> <div class="para logical" id="p-625"><div class="displaymath process-math" id="md-60">
+\begin{align*}
+\textbf{Maximize: }  f(x,y^+, y^-)  \amp = 4x+y^+-y^-\\
+\textbf{Subject to: } x+y^+-y^-\amp \leq 2\\
+x-2y^+ + 2y^-\amp \leq 5\\
+x, y^+, y^-\amp \geq0
+\end{align*}
+</div></div> <div class="para" id="p-626">where we let <span class="process-math">\(y=y^+ - y^-\text{.}\)</span>
+</div>
+</div>
+<article class="task exercise-like" id="task-253"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-627">Solve the second canonical optimization problem above.</div></article><article class="task exercise-like" id="task-254"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-628">Solve the original optimization problem.</div></article><article class="task exercise-like" id="task-255"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-629">How do the solutions compare?</div></article></article><article class="exercise exercise-like" id="ex-superconstrained"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-55">
+<div class="para" id="p-630">Another method method for transforming a linear programming problem with equations of constraint into canonical form is to replace every equation of constraint by two inequality constraints. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.</div> <div class="para" id="p-631">For example:</div> <div class="para logical" id="p-632"><div class="displaymath process-math" id="md-61">
+\begin{align*}
+\textbf{Maximize: }  f(x,y, z)  \amp = x+y+z\\
+\textbf{Subject to: } x+2z\amp \leq 7\\
+-x+2y-z\amp \leq 3\\
+x+y\amp =7\\
+x, y, z\amp \geq0
+\end{align*}
+</div></div> <div class="para" id="p-633">May be restated as the following canonical optimization problem:</div> <div class="para logical" id="p-634"><div class="displaymath process-math" id="md-62">
+\begin{align*}
+\textbf{Maximize: }  f(x,y, z)  \amp = x+y+z\\
+\textbf{Subject to: } x+2z\amp \leq 7\\
+-x+2y-z\amp \leq 3\\
+x+y\amp \leq 7\\
+x+y\amp \geq 7\\
+x, y, z\amp \geq0
+\end{align*}
+</div></div>
+</div>
+<article class="task exercise-like" id="task-256"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-635">Solve the second canonical optimization problem above.</div></article><article class="task exercise-like" id="task-257"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-636">Solve the original optimization problem.</div></article><article class="task exercise-like" id="task-258"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-637">How do the solutions compare?</div></article></article><article class="exercise exercise-like" id="exercise-32"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-638">Use the methods presented in <a href="" class="xref" data-knowl="./knowl/ex-unconstrained.html" title="Exercise 3.4.5">Exercise 3.4.5</a> and <a href="" class="xref" data-knowl="./knowl/ex-superconstrained.html" title="Exercise 3.4.6">Exercise 3.4.6</a> to solve:</div>
+<div class="para logical" id="p-639"><div class="displaymath process-math" id="md-63">
+\begin{align*}
+\textbf{Maximize: }  f(x,y, z)  \amp = 2x+y-2z\\
+\textbf{Subject to: } 2x+y\amp \leq 3\\
+x+2y-z\amp \leq 5\\
+x+y+z\amp =0\\
+x, y\amp \geq0
+\end{align*}
+</div></div></article><article class="exercise exercise-like" id="exercise-33"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-640">What are some pros and cons of the methods presented in <a href="" class="xref" data-knowl="./knowl/ex-unconstrained.html" title="Exercise 3.4.5">Exercise 3.4.5</a> and <a href="" class="xref" data-knowl="./knowl/ex-superconstrained.html" title="Exercise 3.4.6">Exercise 3.4.6</a>?</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-noncanonsage.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-duality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

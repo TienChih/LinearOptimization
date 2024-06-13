@@ -1,9 +1,9 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "frontmatter-2",
+  "id": "colophon-1",
   "level": "1",
-  "url": "frontmatter-2.html",
+  "url": "colophon-1.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",
@@ -46,27 +46,27 @@ var ptx_lunr_docs = [
   "body": "  Consider the matrix     Describe neccesary and sufficient conditions for the columns to be linearly independent.    Describe neccesary and sufficient conditions for the columns to be a spanning set.    Describe neccesary and sufficient conditions for the columns to be a basis for .   "
 },
 {
-  "id": "sec-intro-5",
+  "id": "activity-4",
   "level": "2",
-  "url": "sec-intro.html#sec-intro-5",
+  "url": "sec-intro.html#activity-4",
   "type": "Activity",
   "number": "1.1.4",
   "title": "",
   "body": "   Consider the square matrix      Explain why for any constant and  geometrically, i.e. without cofactor expansion.    Explain why for any constant and  geometrically.    Explain why for any constant and  geometrically.   "
 },
 {
-  "id": "sec-intro-6",
+  "id": "observation-1",
   "level": "2",
-  "url": "sec-intro.html#sec-intro-6",
+  "url": "sec-intro.html#observation-1",
   "type": "Observation",
   "number": "1.1.1",
   "title": "",
   "body": "  Some resource for linear algebra define the determinant algebraically, then prove that it has these special geometric properties. In many ways this is a natural approach to introduce the subject to student whose background is primarily algebraic. However, in my opinion, this is backwards. It makes far more sense to approach the determinant geometrically first, there is a property of transformations we want to measure, we call this quantity the determinant, it happens to have cool algebraic properties.  Speaking of    "
 },
 {
-  "id": "sec-intro-7",
+  "id": "activity-5",
   "level": "2",
-  "url": "sec-intro.html#sec-intro-7",
+  "url": "sec-intro.html#activity-5",
   "type": "Activity",
   "number": "1.1.5",
   "title": "",
@@ -190,36 +190,36 @@ var ptx_lunr_docs = [
   "body": "  Let , we say that is convex if given any , also contains the line segment between .   "
 },
 {
-  "id": "sec-section-convexity-7",
+  "id": "activity-11",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-7",
+  "url": "sec-section-convexity.html#activity-11",
   "type": "Activity",
   "number": "1.3.3",
   "title": "",
   "body": "  For each of the following subsets of , sketch the region, decide if it is convex or not.     .     .     (in polar coordinates).     (in polar coordinates).     .     .   "
 },
 {
-  "id": "sec-section-convexity-8",
+  "id": "activity-12",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-8",
+  "url": "sec-section-convexity.html#activity-12",
   "type": "Activity",
   "number": "1.3.4",
   "title": "",
   "body": "   Let be defined by for some (ie is a half-space of ).     Let . Explain why for any .    Show that for any , that .    Let , that is, there are such that and . Show that .    Show that     Conclude that is convex.   "
 },
 {
-  "id": "sec-section-convexity-9",
+  "id": "activity-13",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-9",
+  "url": "sec-section-convexity.html#activity-13",
   "type": "Activity",
   "number": "1.3.5",
   "title": "",
   "body": "   Let be convex sets.     Show that is convex. Hint: Let . Why is the line segment between them contained in ? ?    Sketch an induction argument to show that if is convex, is convex.    Find convex sets so that is not convex.   "
 },
 {
-  "id": "sec-section-convexity-10",
+  "id": "activity-14",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-10",
+  "url": "sec-section-convexity.html#activity-14",
   "type": "Activity",
   "number": "1.3.6",
   "title": "",
@@ -235,18 +235,18 @@ var ptx_lunr_docs = [
   "body": "  A convex set that is equal to a finite intersection of half-spaces (defined by either strict or non-strict inequalities) is polyhedral convex .   "
 },
 {
-  "id": "sec-section-convexity-12",
+  "id": "example-1",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-12",
+  "url": "sec-section-convexity.html#example-1",
   "type": "Example",
   "number": "1.3.4",
   "title": "",
   "body": "  The feasible region for is:      "
 },
 {
-  "id": "sec-section-convexity-13",
+  "id": "example-2",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-13",
+  "url": "sec-section-convexity.html#example-2",
   "type": "Example",
   "number": "1.3.5",
   "title": "",
@@ -271,9 +271,9 @@ var ptx_lunr_docs = [
   "body": "  Given in we define the closed ball of radius centered at to be   The open ball centered at with radius is similarly defined. What do you think it is?   "
 },
 {
-  "id": "sec-section-convexity-16",
+  "id": "activity-15",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-16",
+  "url": "sec-section-convexity.html#activity-15",
   "type": "Activity",
   "number": "1.3.7",
   "title": "",
@@ -289,9 +289,9 @@ var ptx_lunr_docs = [
   "body": "  A set is bounded if there is a such that .   "
 },
 {
-  "id": "sec-section-convexity-18",
+  "id": "activity-16",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-18",
+  "url": "sec-section-convexity.html#activity-16",
   "type": "Activity",
   "number": "1.3.8",
   "title": "",
@@ -316,9 +316,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a convex set. We say is an extreme point of if there are no so that .  In other words, does not lie on any non-trivial line segment contained in .   "
 },
 {
-  "id": "sec-section-convexity-21",
+  "id": "activity-18",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-21",
+  "url": "sec-section-convexity.html#activity-18",
   "type": "Activity",
   "number": "1.3.10",
   "title": "",
@@ -343,18 +343,18 @@ var ptx_lunr_docs = [
   "body": "  If is the feasible region of a canonical problem and is unbounded:    If the problem is a maximization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .    If the problem is a minimization problem and if there is a so that for all , then contains an optimal solution which is an extreme point of .     "
 },
 {
-  "id": "sec-section-convexity-24",
+  "id": "activity-19",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-24",
+  "url": "sec-section-convexity.html#activity-19",
   "type": "Activity",
   "number": "1.3.11",
   "title": "",
   "body": "  Let be the objective function for a canonical maximization problem, subject to:  Find a maximal solution that is not a corner point. Why doesn't this contradict ?    Let be optimal solutions of a canonical linear programming problem, giving optimal solution . Show that for any , and that .    Let be the objective function for a canonical maximization problem. Find a set of constraints so that the feasible region is unbounded but there is a maximal solution. Why doesn't this contradict ?   "
 },
 {
-  "id": "sec-section-convexity-25",
+  "id": "activity-20",
   "level": "2",
-  "url": "sec-section-convexity.html#sec-section-convexity-25",
+  "url": "sec-section-convexity.html#activity-20",
   "type": "Activity",
   "number": "1.3.12",
   "title": "",
@@ -367,16 +367,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Problems for Chapter 1",
-  "body": " Problems for   Draw and shade appropriate regions in as described below, where .   A bounded polyhedral convex subset.    An unbounded polyhedral convex subset.    A bounded nonconvex subset    An unbounded nonconvex subset.    A convex subset that is not a polyhedral convex subset.    A convex subset having no extreme points.    A polyhedral convex subset having no extreme points.    A bounded polyhedral convex subset having exactly one extreme point.    An unbounded polyhedral convex subset having exactly one extreme point.    An bounded convex subset having infinitely many extreme points.    An unbounded convex subset having infinitely many extreme points.    Convert each of the linear optimization problems below to canonical form as in .                       A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?    A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?    A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?         For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.              (A).     (B).     (D).     (E).     (F).     (G).     (H).    Prove that (H) has infinitely many optimal solutions, two of which lie on extreme points. Identify these points on the plot of the feasible region done in .  Prove that if are distinct optimal solutions of a canonical linear optimization problem, then all points on the line segment between are also optimal solutions of the problem. Conclude that a canonical linear optimization problem can have 0, 1 or infinitely many optimal solutions and no other possibilities.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal. (It is recommended that you use some technological tools to solve for the resulting linear systems.)   Express as a polynomial in terms of . How does this relate to , ?  Show that is unbounded. (Hint: sketch the feasible region and consider feasible points on the line .)  Show that is infeasible.  For each of the following, determine whether or not the statement is TRUE or FALSE. If TRUE, provide a proof, if FALSE, provide a counterexample.   If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.    If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.     "
+  "body": " Problems for    Draw and shade appropriate regions in as described below, where .   A bounded polyhedral convex subset.   An unbounded polyhedral convex subset.   A bounded nonconvex subset   An unbounded nonconvex subset.   A convex subset that is not a polyhedral convex subset.   A convex subset having no extreme points.   A polyhedral convex subset having no extreme points.   A bounded polyhedral convex subset having exactly one extreme point.   An unbounded polyhedral convex subset having exactly one extreme point.   An bounded convex subset having infinitely many extreme points.   An unbounded convex subset having infinitely many extreme points.    Convert each of the linear optimization problems below to canonical form as in .                   A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?   A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?   A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?        For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.            (A).    (B).    (D).    (E).    (F).    (G).    (H).   Prove that (H) has infinitely many optimal solutions, two of which lie on extreme points. Identify these points on the plot of the feasible region done in .  Prove that if are distinct optimal solutions of a canonical linear optimization problem, then all points on the line segment between are also optimal solutions of the problem. Conclude that a canonical linear optimization problem can have 0, 1 or infinitely many optimal solutions and no other possibilities.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal. (It is recommended that you use some technological tools to solve for the resulting linear systems.)   Express as a polynomial in terms of . How does this relate to , ?  Show that is unbounded. (Hint: sketch the feasible region and consider feasible points on the line .)  Show that is infeasible.   For each of the following, determine whether or not the statement is TRUE or FALSE. If TRUE, provide a proof, if FALSE, provide a counterexample.   If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.   If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.    "
 },
 {
-  "id": "exercises-geometric-1",
+  "id": "exercise-1",
   "level": "2",
-  "url": "sec-exercisesgeometric.html#exercises-geometric-1",
+  "url": "sec-exercisesgeometric.html#exercise-1",
   "type": "Exercise",
   "number": "1.4.1",
   "title": "",
-  "body": "Draw and shade appropriate regions in as described below, where .   A bounded polyhedral convex subset.    An unbounded polyhedral convex subset.    A bounded nonconvex subset    An unbounded nonconvex subset.    A convex subset that is not a polyhedral convex subset.    A convex subset having no extreme points.    A polyhedral convex subset having no extreme points.    A bounded polyhedral convex subset having exactly one extreme point.    An unbounded polyhedral convex subset having exactly one extreme point.    An bounded convex subset having infinitely many extreme points.    An unbounded convex subset having infinitely many extreme points.   "
+  "body": " Draw and shade appropriate regions in as described below, where .   A bounded polyhedral convex subset.   An unbounded polyhedral convex subset.   A bounded nonconvex subset   An unbounded nonconvex subset.   A convex subset that is not a polyhedral convex subset.   A convex subset having no extreme points.   A polyhedral convex subset having no extreme points.   A bounded polyhedral convex subset having exactly one extreme point.   An unbounded polyhedral convex subset having exactly one extreme point.   An bounded convex subset having infinitely many extreme points.   An unbounded convex subset having infinitely many extreme points.  "
 },
 {
   "id": "ex-convertcanon",
@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.2",
   "title": "",
-  "body": "Convert each of the linear optimization problems below to canonical form as in .                       A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?    A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?    A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?        "
+  "body": " Convert each of the linear optimization problems below to canonical form as in .                   A drive-in sells homemade hot dogs and hamburgers. The hot dogs take cup of flour and oz of beef to make. A hamburger bun takes cups of flour and oz of beef. Suppose the drive-in has cups of flour and oz of beef on hand. If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to maximize revenue?   A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional elements A, B, and C, respectively, per day. Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of elements A, B, C respectively. Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of elements A, B, C respectively. How much of each feed should the rancher purchase to cover the herds nutritional needs while minimizing cost?   A drug company sells three different formulations of vitamin complex and mineral complex. The first formulation consists entirely of vitamin complex and sells for $1 per unit. The second formulation consists of 3\/4 of a unit of vitamin complex and 1\/4 of a unit of mineral complex and sells for $2 per unit. The third formulation consists of 1\/2 of a unit of each of the complexes and sells for $3 per unit. If the company has 100 units of vitamin complex and 75 units of mineral complex available, how many units of each formulation should the company produce so as to maximize sales revenue?      "
 },
 {
   "id": "ex-geosolve",
@@ -394,21 +394,21 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.3",
   "title": "",
-  "body": "For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.              (A).     (B).     (D).     (E).     (F).     (G).     (H).   "
+  "body": " For each of the following, sketch the feasible region , and find the optimal solution by identifying the extreme points of and evaluating.            (A).    (B).    (D).    (E).    (F).    (G).    (H).  "
 },
 {
-  "id": "exercises-geometric-4",
+  "id": "exercise-4",
   "level": "2",
-  "url": "sec-exercisesgeometric.html#exercises-geometric-4",
+  "url": "sec-exercisesgeometric.html#exercise-4",
   "type": "Exercise",
   "number": "1.4.4",
   "title": "",
   "body": "Prove that (H) has infinitely many optimal solutions, two of which lie on extreme points. Identify these points on the plot of the feasible region done in . "
 },
 {
-  "id": "exercises-geometric-5",
+  "id": "exercise-5",
   "level": "2",
-  "url": "sec-exercisesgeometric.html#exercises-geometric-5",
+  "url": "sec-exercisesgeometric.html#exercise-5",
   "type": "Exercise",
   "number": "1.4.5",
   "title": "",
@@ -433,40 +433,40 @@ var ptx_lunr_docs = [
   "body": "Consider the canonical linear optimization problem  Find the potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal. (It is recommended that you use some technological tools to solve for the resulting linear systems.)  "
 },
 {
-  "id": "exercises-geometric-8",
+  "id": "exercise-8",
   "level": "2",
-  "url": "sec-exercisesgeometric.html#exercises-geometric-8",
+  "url": "sec-exercisesgeometric.html#exercise-8",
   "type": "Exercise",
   "number": "1.4.8",
   "title": "",
   "body": "Express as a polynomial in terms of . How does this relate to , ? "
 },
 {
-  "id": "exercises-geometric-9",
+  "id": "exercise-9",
   "level": "2",
-  "url": "sec-exercisesgeometric.html#exercises-geometric-9",
+  "url": "sec-exercisesgeometric.html#exercise-9",
   "type": "Exercise",
   "number": "1.4.9",
   "title": "",
   "body": "Show that is unbounded. (Hint: sketch the feasible region and consider feasible points on the line .) "
 },
 {
-  "id": "exercises-geometric-10",
+  "id": "exercise-10",
   "level": "2",
-  "url": "sec-exercisesgeometric.html#exercises-geometric-10",
+  "url": "sec-exercisesgeometric.html#exercise-10",
   "type": "Exercise",
   "number": "1.4.10",
   "title": "",
   "body": "Show that is infeasible. "
 },
 {
-  "id": "exercises-geometric-11",
+  "id": "exercise-11",
   "level": "2",
-  "url": "sec-exercisesgeometric.html#exercises-geometric-11",
+  "url": "sec-exercisesgeometric.html#exercise-11",
   "type": "Exercise",
   "number": "1.4.11",
   "title": "",
-  "body": "For each of the following, determine whether or not the statement is TRUE or FALSE. If TRUE, provide a proof, if FALSE, provide a counterexample.   If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.    If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.   "
+  "body": " For each of the following, determine whether or not the statement is TRUE or FALSE. If TRUE, provide a proof, if FALSE, provide a counterexample.   If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.   If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.  "
 },
 {
   "id": "sec-pivot",
@@ -487,9 +487,9 @@ var ptx_lunr_docs = [
   "body": "  Consider the canonical maximization problem:     Note that we may rewrite this as a system of equalities by introducing the slack variables  .       What must be true about the slack variables ?                     What is the largest value could obtain?                    is unbounded.     "
 },
 {
-  "id": "sec-pivot-4",
+  "id": "observation-2",
   "level": "2",
-  "url": "sec-pivot.html#sec-pivot-4",
+  "url": "sec-pivot.html#observation-2",
   "type": "Observation",
   "number": "2.1.1",
   "title": "",
@@ -505,18 +505,18 @@ var ptx_lunr_docs = [
   "body": "  We can rewrite as Which may be recorded by the Tucker Tableau :                                                                                                                                        The variables at the top are called the decision variables or independent variables , the variables on the side are the slack variables , basis variables or basic variables .  The basic solution recorded by a Tucker Tableau is the solution where each decision variable has the value zero.   "
 },
 {
-  "id": "sec-pivot-7",
+  "id": "observation-3",
   "level": "2",
-  "url": "sec-pivot.html#sec-pivot-7",
+  "url": "sec-pivot.html#observation-3",
   "type": "Observation",
   "number": "2.1.3",
   "title": "",
   "body": "  Note that this tableau records a basic solution . We will further explore what this means in a bit. But for now, if , then:    "
 },
 {
-  "id": "sec-pivot-8",
+  "id": "activity-22",
   "level": "2",
-  "url": "sec-pivot.html#sec-pivot-8",
+  "url": "sec-pivot.html#activity-22",
   "type": "Activity",
   "number": "2.1.2",
   "title": "",
@@ -532,18 +532,18 @@ var ptx_lunr_docs = [
   "body": "  Suppose a company produces two types of widgets. Widget 1 sells for $200 and Widget 2 sells for $150.  Each widget takes ingredients A, B and C. Widget 1 needs 1 unit of A, 2 units of B and 2 units of C. Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.  The company has 20 units of ingredient A, 30 units of B and 25 units of C.    Set up the canonical maximization problem for the information given above and record it in the following tableau:                                                                                       Recall that this tableau has a basic solution where . If we slightly increase , do we increase ?    Let's increase . Take the row corresponding to and solve for in terms of .   For each equality corresponding to the rows replace with the value you found ealier and rewrite the left hand sides.    Record this new system in the following tableau:                                                                                       Recall that this new tableau has a basic solution where , what point is this?    If we increase from 0, do we increase ? What about increasing ?    Let's increase . Take the row corrresponding to and repeat Tasks (c) and (d) to obtain a tableau of the form:                                                                                       What point in represents the basic solution for this new tableau?    If I increase from 0, do I increase ? What about ?    Consider the plot of the feasible region for this problem. What exactly, geometrically, did we end up doing here?      "
 },
 {
-  "id": "sec-pivot-10",
+  "id": "activity-24",
   "level": "2",
-  "url": "sec-pivot.html#sec-pivot-10",
+  "url": "sec-pivot.html#activity-24",
   "type": "Activity",
   "number": "2.1.4",
   "title": "",
   "body": "  Based on , what is a criteria to determine if a feasible tableau has a basic optimal solution?    Some of the .    All of the .    Some of the .    All of the .    Some of the .    All of the .    Some of the .    All of the .     "
 },
 {
-  "id": "sec-pivot-11",
+  "id": "activity-25",
   "level": "2",
-  "url": "sec-pivot.html#sec-pivot-11",
+  "url": "sec-pivot.html#activity-25",
   "type": "Activity",
   "number": "2.1.5",
   "title": "",
@@ -613,18 +613,18 @@ var ptx_lunr_docs = [
   "body": "  Consider the following tableau:                                                                                                                   Note that each for this tableau.    Why is this tableau feasible?    Which of the following could we increase from zero to increase our objective function value?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    If we increase to 5, are all our inequalities satisfied? What about 10? 100?    What is the largest value we could increase while satisfying our 3 inequalities? What about ?    Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.    All of the .    There is a row so that all of the in that row.    There is a column so that all of the in that column.    All of the .    All of the .      Consider the following tableau:                                                                     Our previous discussion leads us to believe that may be increased as much as we please, and our two inequalities will remain satisfied. Yet consider a sketch of the region and function:     It turns out this system still achieves a maximum solution. Why does this not contradict our previous work?    Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.    All of the .    There is a row so that all of the in that row and .    There is a row so that all of the in that row and .    There is a column so that all of the in that column and .    There is a column so that all of the in that column and .     "
 },
 {
-  "id": "sec-simplexmax-4",
+  "id": "activity-30",
   "level": "2",
-  "url": "sec-simplexmax.html#sec-simplexmax-4",
+  "url": "sec-simplexmax.html#activity-30",
   "type": "Activity",
   "number": "2.3.3",
   "title": "",
   "body": "  Consider the canonical maximization problem and basic solution encoded by the following tableau:                                                                                       Let's say we wanted to increase from 0. What is the largest we could increase to while satisfying all 3 inequalities?    Consider a sketch of our feasible region:  The feasible region for a canonical maximization problem.     We could choose to pivot ( in the sketch) with either . Only one of these would result in a feasible solution. Looking graphically, which is it?    What's the connection between the two above tasks?    For a canonical linear program and basic solution encoded by a Tucker tableau:                                                                                                                                        If we pivot in column , which row should we choose?    Any row .    Any as long as .    The row where is minimized.    The row where is minimized.    The row where is minimized of of the rows where .    The row where is minimized of of the rows where .      Based on the observations above, what should be the pivot entry for the following tableau?                                                                                      "
 },
 {
-  "id": "sec-simplexmax-5",
+  "id": "activity-31",
   "level": "2",
-  "url": "sec-simplexmax.html#sec-simplexmax-5",
+  "url": "sec-simplexmax.html#activity-31",
   "type": "Activity",
   "number": "2.3.4",
   "title": "",
@@ -640,36 +640,36 @@ var ptx_lunr_docs = [
   "body": "  The Simplex Algorithm for Maximum Basic Feasible Tableaus   Ensure that each , that is that the solution is feasible.  IF every : STOP the current solution is optimal.  PICK a column such that .  IF each : STOP the objective function is unbounded.  PICK a row that minimizes .  PIVOT on .  GOTO 1.    "
 },
 {
-  "id": "sec-simplexmax-8",
+  "id": "activity-32",
   "level": "2",
-  "url": "sec-simplexmax.html#sec-simplexmax-8",
+  "url": "sec-simplexmax.html#activity-32",
   "type": "Activity",
   "number": "2.3.5",
   "title": "",
   "body": "  Recall the canonical tableau                                                                                                                                        Suppose that after pivoting on according to we had that . Show that    "
 },
 {
-  "id": "sec-simplexmax-9",
+  "id": "activity-33",
   "level": "2",
-  "url": "sec-simplexmax.html#sec-simplexmax-9",
+  "url": "sec-simplexmax.html#activity-33",
   "type": "Activity",
   "number": "2.3.6",
   "title": "",
   "body": "   Apply to the following tableaus.                                                                                                                                                                                                                                                                "
 },
 {
-  "id": "sec-simplexmax-10",
+  "id": "activity-34",
   "level": "2",
-  "url": "sec-simplexmax.html#sec-simplexmax-10",
+  "url": "sec-simplexmax.html#activity-34",
   "type": "Activity",
   "number": "2.3.7",
   "title": "",
   "body": "  Each of the following tableaus records the origin as a basic solution, which is not feasible. Determine geometrically which of these tableau record a problem which has an optimal solution. Then answer the follow-up questions.                                                                                                                                                                              For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?    If , what should be true about so that is positive afterwards?    Consider the inequality . Is there a solution which satisfies this where each ?    Consider the inequality . Is there a solution which satisfies this where each ?   "
 },
 {
-  "id": "sec-simplexmax-11",
+  "id": "activity-35",
   "level": "2",
-  "url": "sec-simplexmax.html#sec-simplexmax-11",
+  "url": "sec-simplexmax.html#activity-35",
   "type": "Activity",
   "number": "2.3.8",
   "title": "",
@@ -685,9 +685,9 @@ var ptx_lunr_docs = [
   "body": "  The Simplex Algorithm for Maximum Tableaus   IF each , GOTO 8.  PICK the largest such that .  IF : STOP the problem in infeasible.  PICK a column such that .  PICK a row so that .  PIVOT on .  GOTO 1.  APPLY .    "
 },
 {
-  "id": "sec-simplexmax-14",
+  "id": "activity-36",
   "level": "2",
-  "url": "sec-simplexmax.html#sec-simplexmax-14",
+  "url": "sec-simplexmax.html#activity-36",
   "type": "Activity",
   "number": "2.3.9",
   "title": "",
@@ -712,9 +712,9 @@ var ptx_lunr_docs = [
   "body": "  Recall that the canonical minimization problem:   Where .  This problem may be recorded in the following tableau:                                                                                                                                           The negative transpose of this tableau is:                                                                                                                                         "
 },
 {
-  "id": "sec-simplexmin-3",
+  "id": "activity-37",
   "level": "2",
-  "url": "sec-simplexmin.html#sec-simplexmin-3",
+  "url": "sec-simplexmin.html#activity-37",
   "type": "Activity",
   "number": "2.4.1",
   "title": "",
@@ -730,9 +730,9 @@ var ptx_lunr_docs = [
   "body": "  The Simplex Algorithm for Minimization Tableaus   TAKE the Negative Transpose.  APPLY .    "
 },
 {
-  "id": "sec-simplexmin-6",
+  "id": "activity-38",
   "level": "2",
-  "url": "sec-simplexmin.html#sec-simplexmin-6",
+  "url": "sec-simplexmin.html#activity-38",
   "type": "Activity",
   "number": "2.4.2",
   "title": "",
@@ -757,9 +757,9 @@ var ptx_lunr_docs = [
   "body": "  Consider the following canonical maximization tableau:                                                                                               Perform the following sequence of pivots, ensure each time that it is a valid pivot according to , and keep track of the variables.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Compare your final tableau to the initial tableau. Are there any similarities?   "
 },
 {
-  "id": "sec-cycling-3",
+  "id": "activity-40",
   "level": "2",
-  "url": "sec-cycling.html#sec-cycling-3",
+  "url": "sec-cycling.html#activity-40",
   "type": "Activity",
   "number": "2.5.2",
   "title": "",
@@ -793,18 +793,18 @@ var ptx_lunr_docs = [
   "body": " Bland's Anticycling Rules   List all variables, independent and dependent in the initial tableau. Then consider the following rules:    Whenever there is more than one possible choice for a pivot row according to : select the row corresponding to the variable closest to the front of the initial list.    Whenever there is more than one possible choice for a pivot column according to : select the column corresponding to the variable closest to the front of the initial list.    Then the Simplex Algorthm will not cycle.   "
 },
 {
-  "id": "sec-cycling-8",
+  "id": "proof-1",
   "level": "2",
-  "url": "sec-cycling.html#sec-cycling-8",
+  "url": "sec-cycling.html#proof-1",
   "type": "Proof",
   "number": "2.5.1",
   "title": "",
   "body": " For the sake of notation, we denote the initial tableau:                                                                                                                                     and order the variables in the associated way. Suppose we follow Bland's rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) . We call a variable  fickle if is in one, but not all of the bases. That is, it leaves a basis, and reenters it later during the cycle.  Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if is fickle, for each basic solution during the cycle.  Since the number of variables is finite, the set of fickle variables is also finite, and let denote the fickle variable with largest subscript. Suppose that (why must such a exist?). Denote the entering variable from with .                                                                                                                                                                                              Note that must also be fickle (why?) and so .  We call the dictionary for a basis the system of equations corresponding to that basis. So the dictionary for is which we can write as: Note that since the above pivot was valid, we must have that and since the pivot was degenerate, we have .  Now, because we have cycling, we must have that reenters the basis at some point                                                                                                                                                                                                  Note that for this pivot to be valid, we have that . If we let denote the dictionary before re-enters the basis, we have: So note that the solution space to the system of equations for both these dictionaries are the same. So we have a solution for (not neccessarily feasible ie non-negativity may fail) that must also be a solution to :   So we have where for . So via algebra:   The above equation holds true no matter what is. Thus: Note that , NOT is entering the basis. If is already in the basis, . Otherwise, , otherwise would have entered by Bland's Anticyling rules. We've also shown . Thus which is only possible if there is some such that   From this, we know that . So , but , so is fickle. Since is the largest index of a fickle variable, . Note that is not entering from , so . Thus .  But is fickle, so in . But then, we would have picked , not to leave.                                                                                                                     which is a contradiction.  "
 },
 {
-  "id": "sec-cycling-9",
+  "id": "activity-41",
   "level": "2",
-  "url": "sec-cycling.html#sec-cycling-9",
+  "url": "sec-cycling.html#activity-41",
   "type": "Activity",
   "number": "2.5.3",
   "title": "",
@@ -820,9 +820,9 @@ var ptx_lunr_docs = [
   "body": " Using Sage    Suppose we wanted to solve the following maximization problem by hand:                                                                                                                   How annoying would this be?    Very.    Extraordinarily.    Horrifically.    I have nothing to do for the next hour anyway. Hope I don't forget a minus sign!      Given that we have a developed an algorithm, guaranteed to terminate, using only arithmetic in it's steps, it seems reasonable to think this can be done via a computer.    Let's start simple, suppose we want to solve:                                                                                       We can enter the above problem into sage via:     We can plot the feasible region and objective level curves, since this is a 2d problem:     We could also encode this problem into a dictionary. We will understand that .    If we want to pivot from to we can write that as: Then we can update the dictionary: We should read this as:                                                                                       What pivot should we do next? Encode it below:     We can check at any point if we have an optimal solution.       So if we want to solve:                                                                                                                   We can encode this in:     We now encode the above problem in a dictionary.     We can see who can enter: If we say, pick to enter, see who can legitimately leave: Then select one to leave     From here, pick another legitimate pivot and perform it:     This still seems like a it would be annoying. Why don't we revisit the original problem and then just run the simplex algorithm:       Remember that cycling example ?    Encode the problem into sage:     Now let's run the simplex algorithm to see what the deal is:      "
 },
 {
-  "id": "sec-simplexsage-2",
+  "id": "exploration-1",
   "level": "2",
-  "url": "sec-simplexsage.html#sec-simplexsage-2",
+  "url": "sec-simplexsage.html#exploration-1",
   "type": "Exploration",
   "number": "2.6.1",
   "title": "",
@@ -838,18 +838,18 @@ var ptx_lunr_docs = [
   "body": "  Let's start simple, suppose we want to solve:                                                                                       We can enter the above problem into sage via:     We can plot the feasible region and objective level curves, since this is a 2d problem:     We could also encode this problem into a dictionary. We will understand that .    If we want to pivot from to we can write that as: Then we can update the dictionary: We should read this as:                                                                                       What pivot should we do next? Encode it below:     We can check at any point if we have an optimal solution.    "
 },
 {
-  "id": "sec-simplexsage-5",
+  "id": "activity-43",
   "level": "2",
-  "url": "sec-simplexsage.html#sec-simplexsage-5",
+  "url": "sec-simplexsage.html#activity-43",
   "type": "Activity",
   "number": "2.6.3",
   "title": "",
   "body": "  So if we want to solve:                                                                                                                   We can encode this in:     We now encode the above problem in a dictionary.     We can see who can enter: If we say, pick to enter, see who can legitimately leave: Then select one to leave     From here, pick another legitimate pivot and perform it:     This still seems like a it would be annoying. Why don't we revisit the original problem and then just run the simplex algorithm:    "
 },
 {
-  "id": "sec-simplexsage-6",
+  "id": "activity-44",
   "level": "2",
-  "url": "sec-simplexsage.html#sec-simplexsage-6",
+  "url": "sec-simplexsage.html#activity-44",
   "type": "Activity",
   "number": "2.6.4",
   "title": "",
@@ -862,39 +862,39 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.7",
   "title": "Problems for Chapter 2",
-  "body": " Problems for   Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .    Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .    For each of the following canonical maximization tableaus:   Write out the current basic solution.    Determine if the current basic solution is feasible.    Determine if the tableau detects that the feasible region is unbounded.    Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.    Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.    Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.    Identify all valid pivot entries.    Pivot on the entry corresponding to Bland's Anti-cycling rules.    Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  For each problem in solve these problems using the Simplex Algorithm.  Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                           For each problem in Sketch the feasible region and label the extreme points traversed by the simplex algorithm in order.  Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?    A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?    The canonical programming problem below potentially cycles (due to H.W. Kuhn.). Solve the problem by using the simplex algorithm with Bland anti-cycling rules.                                                                                                                  Consider a tableau whose basic solution is feasible and optimal. Suppose each . Prove that this is the unique optimal solution if and only if each .  The following have multiple optimal solutions, use the Simplex Algorithm and then pivots to classify all the optimal solutions.                                                                                                                                                                               Consider a square tableau:                                                                                                                                    Suppose we perform pivots so we achieve a tableau of the form:                                                                                                                                     Let and . For each of the following matrices perform appropriate pivots to achieve and confirm .                  Explain why in that in general.    Find neccesary and sufficient conditions for the minimization tableau                                                                                                               to have a feasible basic solution.    If a minimization tableau as depicted above has a feasible basic solution, must it also have a feasible basic maximum solution? Prove or find a counterexample.    Find neccesary and sufficient conditions for                                                                                                                      to encode feasible basic solutions for both it's maximization and minimization problems.    Prove that each tableau always encodes a unique basic solution by first showing that the default starting basic solution is unique, and then proving that each pivot preserves the uniqueness of the basic solution.  Note that each basic solution is the intersection of hyperplanes. What would it take for this to be empty or contain multiple points? Think in terms of linear (in)dependence and solving linear systems.    "
+  "body": " Problems for    Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .    Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .    For each of the following canonical maximization tableaus:    Write out the current basic solution.      Determine if the current basic solution is feasible.      Determine if the tableau detects that the feasible region is unbounded.      Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.      Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.     Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.     Identify all valid pivot entries.      Pivot on the entry corresponding to Bland's Anti-cycling rules.      Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            For each problem in solve these problems using the Simplex Algorithm.   Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                     For each problem in Sketch the feasible region and label the extreme points traversed by the simplex algorithm in order.   Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?   A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?   The canonical programming problem below potentially cycles (due to H.W. Kuhn.). Solve the problem by using the simplex algorithm with Bland anti-cycling rules.                                                                                                                  Consider a tableau whose basic solution is feasible and optimal. Suppose each . Prove that this is the unique optimal solution if and only if each .   The following have multiple optimal solutions, use the Simplex Algorithm and then pivots to classify all the optimal solutions.                                                                                                                                                                              Consider a square tableau:                                                                                                                                    Suppose we perform pivots so we achieve a tableau of the form:                                                                                                                                      Let and . For each of the following matrices perform appropriate pivots to achieve and confirm .               Explain why in that in general.   Find neccesary and sufficient conditions for the minimization tableau                                                                                                               to have a feasible basic solution.   If a minimization tableau as depicted above has a feasible basic solution, must it also have a feasible basic maximum solution? Prove or find a counterexample.   Find neccesary and sufficient conditions for                                                                                                                      to encode feasible basic solutions for both it's maximization and minimization problems.   Prove that each tableau always encodes a unique basic solution by first showing that the default starting basic solution is unique, and then proving that each pivot preserves the uniqueness of the basic solution.  Note that each basic solution is the intersection of hyperplanes. What would it take for this to be empty or contain multiple points? Think in terms of linear (in)dependence and solving linear systems.    "
 },
 {
-  "id": "exercises-simplex-1",
+  "id": "exercise-12",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-1",
+  "url": "sec-exercisessimplex.html#exercise-12",
   "type": "Exercise",
   "number": "2.7.1",
   "title": "",
-  "body": "Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .   "
+  "body": " Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .  "
 },
 {
-  "id": "exercises-simplex-2",
+  "id": "exercise-13",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-2",
+  "url": "sec-exercisessimplex.html#exercise-13",
   "type": "Exercise",
   "number": "2.7.2",
   "title": "",
-  "body": "Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.    State the basic solution for this tableau.    Determine if the basic solution is feasible.    Pivot on the entry .    Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .   "
+  "body": " Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .  "
 },
 {
-  "id": "exercises-simplex-3",
+  "id": "exercise-14",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-3",
+  "url": "sec-exercisessimplex.html#exercise-14",
   "type": "Exercise",
   "number": "2.7.3",
   "title": "",
-  "body": "For each of the following canonical maximization tableaus:   Write out the current basic solution.    Determine if the current basic solution is feasible.    Determine if the tableau detects that the feasible region is unbounded.    Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.    Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.    Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.    Identify all valid pivot entries.    Pivot on the entry corresponding to Bland's Anti-cycling rules.    Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 "
+  "body": " For each of the following canonical maximization tableaus:    Write out the current basic solution.      Determine if the current basic solution is feasible.      Determine if the tableau detects that the feasible region is unbounded.      Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.      Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.     Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.     Identify all valid pivot entries.      Pivot on the entry corresponding to Bland's Anti-cycling rules.      Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "
 },
 {
-  "id": "exercises-simplex-4",
+  "id": "exercise-15",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-4",
+  "url": "sec-exercisessimplex.html#exercise-15",
   "type": "Exercise",
   "number": "2.7.4",
   "title": "",
@@ -907,52 +907,52 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.7.5",
   "title": "",
-  "body": "Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                          "
+  "body": " Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                    "
 },
 {
-  "id": "exercises-simplex-6",
+  "id": "exercise-17",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-6",
+  "url": "sec-exercisessimplex.html#exercise-17",
   "type": "Exercise",
   "number": "2.7.6",
   "title": "",
   "body": "For each problem in Sketch the feasible region and label the extreme points traversed by the simplex algorithm in order. "
 },
 {
-  "id": "exercises-simplex-7",
+  "id": "exercise-18",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-7",
+  "url": "sec-exercisessimplex.html#exercise-18",
   "type": "Exercise",
   "number": "2.7.7",
   "title": "",
-  "body": "Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?    A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?   "
+  "body": " Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?   A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?  "
 },
 {
-  "id": "exercises-simplex-8",
+  "id": "exercise-19",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-8",
+  "url": "sec-exercisessimplex.html#exercise-19",
   "type": "Exercise",
   "number": "2.7.8",
   "title": "",
   "body": "The canonical programming problem below potentially cycles (due to H.W. Kuhn.). Solve the problem by using the simplex algorithm with Bland anti-cycling rules.                                                                                                                 "
 },
 {
-  "id": "exercises-simplex-9",
+  "id": "exercise-20",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-9",
+  "url": "sec-exercisessimplex.html#exercise-20",
   "type": "Exercise",
   "number": "2.7.9",
   "title": "",
   "body": "Consider a tableau whose basic solution is feasible and optimal. Suppose each . Prove that this is the unique optimal solution if and only if each . "
 },
 {
-  "id": "exercises-simplex-10",
+  "id": "exercise-21",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-10",
+  "url": "sec-exercisessimplex.html#exercise-21",
   "type": "Exercise",
   "number": "2.7.10",
   "title": "",
-  "body": "The following have multiple optimal solutions, use the Simplex Algorithm and then pivots to classify all the optimal solutions.                                                                                                                                                                              "
+  "body": " The following have multiple optimal solutions, use the Simplex Algorithm and then pivots to classify all the optimal solutions.                                                                                                                                                                            "
 },
 {
   "id": "ex-invert",
@@ -961,30 +961,30 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.7.11",
   "title": "",
-  "body": "Consider a square tableau:                                                                                                                                    Suppose we perform pivots so we achieve a tableau of the form:                                                                                                                                     Let and . For each of the following matrices perform appropriate pivots to achieve and confirm .                 "
+  "body": " Consider a square tableau:                                                                                                                                    Suppose we perform pivots so we achieve a tableau of the form:                                                                                                                                      Let and . For each of the following matrices perform appropriate pivots to achieve and confirm .              "
 },
 {
-  "id": "exercises-simplex-12",
+  "id": "exercise-23",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-12",
+  "url": "sec-exercisessimplex.html#exercise-23",
   "type": "Exercise",
   "number": "2.7.12",
   "title": "",
   "body": "Explain why in that in general. "
 },
 {
-  "id": "exercises-simplex-13",
+  "id": "exercise-24",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-13",
+  "url": "sec-exercisessimplex.html#exercise-24",
   "type": "Exercise",
   "number": "2.7.13",
   "title": "",
-  "body": "  Find neccesary and sufficient conditions for the minimization tableau                                                                                                               to have a feasible basic solution.    If a minimization tableau as depicted above has a feasible basic solution, must it also have a feasible basic maximum solution? Prove or find a counterexample.    Find neccesary and sufficient conditions for                                                                                                                      to encode feasible basic solutions for both it's maximization and minimization problems.   "
+  "body": " Find neccesary and sufficient conditions for the minimization tableau                                                                                                               to have a feasible basic solution.   If a minimization tableau as depicted above has a feasible basic solution, must it also have a feasible basic maximum solution? Prove or find a counterexample.   Find neccesary and sufficient conditions for                                                                                                                      to encode feasible basic solutions for both it's maximization and minimization problems.  "
 },
 {
-  "id": "exercises-simplex-14",
+  "id": "exercise-25",
   "level": "2",
-  "url": "sec-exercisessimplex.html#exercises-simplex-14",
+  "url": "sec-exercisessimplex.html#exercise-25",
   "type": "Exercise",
   "number": "2.7.14",
   "title": "",
@@ -1027,18 +1027,18 @@ var ptx_lunr_docs = [
   "body": "  Suppose we wanted to solve the linear program:     We can record the program as follows:                                                                     Out of , which are non-negative?    Perform a pivot on the given entry.                                                                       Consider the resulting tableau:                                                                     What point are we on?    Why is this point NOT optimal?    Consider the row with the , and recall that is allowed to be negative. Consider only this row and the non-negativity constraints of . Which of the following is allowed to be?     .     .     .    For each choice of that is valid, with , what would be?    Which of the following bits of information does this row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it:                                                     Pivot on the entry with the     Why is the resulting tableau NOT infeasible?    Which of the following bits of information does the row communicate to us? (There could be more than one.)    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    There is a lower bound for which is greater than 0.    There is an upper bound for .    That .      After recording this piece of information, we may as well delete this row, since we have what we need from it:                                     Why is this tableau optimal?    What are ?    Consider the plot of the feasible region. If we started at the origin, what did we do in each step?        "
 },
 {
-  "id": "sec-unconstrained-5",
+  "id": "observation-4",
   "level": "2",
-  "url": "sec-unconstrained.html#sec-unconstrained-5",
+  "url": "sec-unconstrained.html#observation-4",
   "type": "Observation",
   "number": "3.1.2",
   "title": "",
   "body": "  With unconstrained variables, we proceed as follows.    Remove all unconstrained slack variables and delete the corresponding rows.    If there are no unconstrained decision variables: STOP.    Pivot an unconstrained decision variable with a slack variable.    GOTO 1    What is left should be a maximization tableau with no unconstrained variable. One should take a moment to ponder: It may well be that the resulting tableau is infeasible. Why is this either not possible, or possible but ok?   "
 },
 {
-  "id": "sec-unconstrained-6",
+  "id": "activity-47",
   "level": "2",
-  "url": "sec-unconstrained.html#sec-unconstrained-6",
+  "url": "sec-unconstrained.html#activity-47",
   "type": "Activity",
   "number": "3.1.3",
   "title": "",
@@ -1063,45 +1063,45 @@ var ptx_lunr_docs = [
   "body": "  Suppose we wanted to solve the linear program:     Plot the feasible region, what dimension is it?         Suppose we added in the constraint Plot the feasible region, what dimension is it?         Consider the inequality captured by the equality . What value must so that is always an equality? Call this value ?.    Note that this progam may be encoded in the tableau:                                                                                                                     Without computing the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?    As we traverse corner points on the way to an optimal solution, would we ever leave the plane ?    After the last pivot, our tableau has the form:                                                                                                                     Ignoring the specific values of the entries of this tableau, using the value for ? computed earlier, rewrite each of the above equations in terms of . What information did the ? column provide?   "
 },
 {
-  "id": "sec-constrained-3",
+  "id": "observation-5",
   "level": "2",
-  "url": "sec-constrained.html#sec-constrained-3",
+  "url": "sec-constrained.html#observation-5",
   "type": "Observation",
   "number": "3.2.1",
   "title": "",
   "body": "  An equality constraint can be written as: and thus recorded in a tableau as:                                                                                                                                                                                                                                  If we pivot on the entry, we obtain:                                                                                                                                                                                                                                  Then depending on your perspective, we can either delete the 0 column because it does not contribute information algebraically, or because it is redundant geometrically, and we restrict ourselves to a dimensional solution space. Either way, removing this column gives us:                                                                                                                                                                                     "
 },
 {
-  "id": "sec-constrained-4",
+  "id": "activity-49",
   "level": "2",
-  "url": "sec-constrained.html#sec-constrained-4",
+  "url": "sec-constrained.html#activity-49",
   "type": "Activity",
   "number": "3.2.2",
   "title": "",
   "body": "   Solve the linear program:     "
 },
 {
-  "id": "sec-constrained-5",
+  "id": "activity-50",
   "level": "2",
-  "url": "sec-constrained.html#sec-constrained-5",
+  "url": "sec-constrained.html#activity-50",
   "type": "Activity",
   "number": "3.2.3",
   "title": "",
   "body": "  Consider the linear program:     Record this program in a tableau with an equality constraint.                                                                                  Pivot on the entry with .                                                                                  We obtained a tableau of the form:                                                                              Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.    Delete the 0 column and solve the remaining system.        "
 },
 {
-  "id": "sec-constrained-6",
+  "id": "activity-51",
   "level": "2",
-  "url": "sec-constrained.html#sec-constrained-6",
+  "url": "sec-constrained.html#activity-51",
   "type": "Activity",
   "number": "3.2.4",
   "title": "",
   "body": "  Solve the linear program:         "
 },
 {
-  "id": "sec-constrained-7",
+  "id": "activity-52",
   "level": "2",
-  "url": "sec-constrained.html#sec-constrained-7",
+  "url": "sec-constrained.html#activity-52",
   "type": "Activity",
   "number": "3.2.5",
   "title": "",
@@ -1117,22 +1117,103 @@ var ptx_lunr_docs = [
   "body": " Solving NonCanonical Problems with Sage    Say we want to solve the non-canonical linear program:       Record this non-canonical program using Sage:   We can then find the optimal solution:       Solve:           "
 },
 {
-  "id": "sec-noncanonsage-2",
+  "id": "activity-53",
   "level": "2",
-  "url": "sec-noncanonsage.html#sec-noncanonsage-2",
+  "url": "sec-noncanonsage.html#activity-53",
   "type": "Activity",
   "number": "3.3.1",
   "title": "",
   "body": "  Say we want to solve the non-canonical linear program:       Record this non-canonical program using Sage:   We can then find the optimal solution:    "
 },
 {
-  "id": "sec-noncanonsage-3",
+  "id": "activity-54",
   "level": "2",
-  "url": "sec-noncanonsage.html#sec-noncanonsage-3",
+  "url": "sec-noncanonsage.html#activity-54",
   "type": "Activity",
   "number": "3.3.2",
   "title": "",
   "body": "  Solve:          "
+},
+{
+  "id": "sec-exercisesnoncanon",
+  "level": "1",
+  "url": "sec-exercisesnoncanon.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Problems for Chapter 3",
+  "body": " Problems for    Solve each of the noncanonicallinear programming problems below. If a linear programming problem has infinitely many optimal solutions, find all optimal solutions.                                                Label each of the following statements TRUE or FALSE. If the statement is FALSE, provide a counterexample.   A noncanonical linear programming problem with more unconstrained independent variables than constraints has unbounded objective function. (As in (J))   A noncanonicallinear programming problem with more equations of constraint than independent variables is infeasible. (As in (K))    Sketch the constraint set for each noncanonicallinear programming problem below. On the basis of this constraint set, formulate a conjecture as to whether or not the solution of the given problem is the same as the solution of the associated canonical linear programming problem where all independent variables are constrained to be nonnegative. Verify your conjecture by solving both linear programming problems.                   The following problem has infinitely many solutions. Sketch the feasible region, find the optimal solutions and sketch the solution set.     Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.  For example:     May be restated as the following canonical optimization problem:     where we let .   Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?    Another method method for transforming a linear programming problem with equations of constraint into canonical form is to replace every equation of constraint by two inequality constraints. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.  For example:     May be restated as the following canonical optimization problem:      Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?   Use the methods presented in and to solve:    What are some pros and cons of the methods presented in and ?   "
+},
+{
+  "id": "ex-noncanon",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#ex-noncanon",
+  "type": "Exercise",
+  "number": "3.4.1",
+  "title": "",
+  "body": " Solve each of the noncanonicallinear programming problems below. If a linear programming problem has infinitely many optimal solutions, find all optimal solutions.                                              "
+},
+{
+  "id": "exercise-27",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#exercise-27",
+  "type": "Exercise",
+  "number": "3.4.2",
+  "title": "",
+  "body": " Label each of the following statements TRUE or FALSE. If the statement is FALSE, provide a counterexample.   A noncanonical linear programming problem with more unconstrained independent variables than constraints has unbounded objective function. (As in (J))   A noncanonicallinear programming problem with more equations of constraint than independent variables is infeasible. (As in (K))  "
+},
+{
+  "id": "exercise-28",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#exercise-28",
+  "type": "Exercise",
+  "number": "3.4.3",
+  "title": "",
+  "body": " Sketch the constraint set for each noncanonicallinear programming problem below. On the basis of this constraint set, formulate a conjecture as to whether or not the solution of the given problem is the same as the solution of the associated canonical linear programming problem where all independent variables are constrained to be nonnegative. Verify your conjecture by solving both linear programming problems.                  "
+},
+{
+  "id": "exercise-29",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#exercise-29",
+  "type": "Exercise",
+  "number": "3.4.4",
+  "title": "",
+  "body": "The following problem has infinitely many solutions. Sketch the feasible region, find the optimal solutions and sketch the solution set.   "
+},
+{
+  "id": "ex-unconstrained",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#ex-unconstrained",
+  "type": "Exercise",
+  "number": "3.4.5",
+  "title": "",
+  "body": " Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.  For example:     May be restated as the following canonical optimization problem:     where we let .   Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?  "
+},
+{
+  "id": "ex-superconstrained",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#ex-superconstrained",
+  "type": "Exercise",
+  "number": "3.4.6",
+  "title": "",
+  "body": " Another method method for transforming a linear programming problem with equations of constraint into canonical form is to replace every equation of constraint by two inequality constraints. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.  For example:     May be restated as the following canonical optimization problem:      Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?  "
+},
+{
+  "id": "exercise-32",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#exercise-32",
+  "type": "Exercise",
+  "number": "3.4.7",
+  "title": "",
+  "body": "Use the methods presented in and to solve:   "
+},
+{
+  "id": "exercise-33",
+  "level": "2",
+  "url": "sec-exercisesnoncanon.html#exercise-33",
+  "type": "Exercise",
+  "number": "3.4.8",
+  "title": "",
+  "body": "What are some pros and cons of the methods presented in and ? "
 },
 {
   "id": "sec-section-sensitivity",
@@ -1153,27 +1234,27 @@ var ptx_lunr_docs = [
   "body": "  A witch named Agnesi is brewing a healing elixer and a poison. A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs. She currently has 34 newt eyes and 14 frogs.  Supposing that the healing elixer sells for three gold pieces, and the poison sells for two. Agnesi wishes to maximzie her revenue. Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.   The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi's iconic curve.     Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.        Agnesi is frustrated by her production levels and income. She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?    Recompute this linear program with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs. Which provides the greater increase in revenue? Is this consistent with what you thought earlier?    If the need for healing elixer increases and they now sell for 5 gold, would that change our answer?   "
 },
 {
-  "id": "sec-section-sensitivity-4",
+  "id": "activity-55",
   "level": "2",
-  "url": "sec-section-sensitivity.html#sec-section-sensitivity-4",
+  "url": "sec-section-sensitivity.html#activity-55",
   "type": "Activity",
   "number": "4.1.2",
   "title": "",
   "body": "  In both and we esentially explore the idea of assigning values somehow to the bounds of a maximization problem.  If you have a production problem, and wish to assign a value to all your materials, which of the following should be reasonable things to expect from these values?    The value of each material is non-negative.    The total value of the materials should be as big as possible.    The total value of the materials should be as small as possible.    The total value of these materials should be greater than or equal to the value of selling products made with those materials.    All materials must have non-zero value.    If a material is ever used, it has zero value.     "
 },
 {
-  "id": "sec-section-sensitivity-5",
+  "id": "activity-56",
   "level": "2",
-  "url": "sec-section-sensitivity.html#sec-section-sensitivity-5",
+  "url": "sec-section-sensitivity.html#activity-56",
   "type": "Activity",
   "number": "4.1.3",
   "title": "",
   "body": "  From , letting denote the number of healing elixers, and denote the amount of poison created. Then, we get that the feasible region satisfies the inequalities: which is bounded by hyperplanes: with normal vectors which may be depicted:   The feasible region for the witch production problem, and depicted normal vectors.      For any , the objective plane is with normal vector .  For each extreme point in the feasible region, express the normal vector for the objective plane as a linear combination of the normal vectors of the planes whose intersect at said point.     Starting at the basic solution, perform pivots as follows:                                                                                                                                                                                                                                                                              For each tableau, confirm the solution is feasible. Then look at the objective row, is there anything familiar about those values?    For each tableau above, if I decrease each decision variable from to , how does that change the value of the objective function? What does decreasing a decision variable from to mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?    Consider that is on the intersection of which are hyperplanes with normal vectors and respectively. Note that passes through with normal vector .  Drag sliders for so that      For each extreme point, express as a linear combination of the normal vectors of the corresponding hyperplanes. Then, for each tableau computed above, look at their basic solutions. Which point is it, and how are these coefficients reflected in the tableau?       For which extreme points are the normal vector of the objective plane a linear combination of the normal vectors of intersecting hyperplanes using only positive coefficients? Is there anything special about those extreme points?   "
 },
 {
-  "id": "sec-section-sensitivity-6",
+  "id": "activity-57",
   "level": "2",
-  "url": "sec-section-sensitivity.html#sec-section-sensitivity-6",
+  "url": "sec-section-sensitivity.html#activity-57",
   "type": "Activity",
   "number": "4.1.4",
   "title": "",
@@ -1195,12 +1276,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Duality Theory",
-  "body": " Duality Theory  In this section, we establish the theoretical underpinnings of duality.    Recall the primal maximization problem , and the corresponding dual minimization problem . By letting   We can rephrase the primal max problem as follows: Maximize for subject to Here, we understand to denote entrywise inequality.  Likewise, we can rephrase the dual min problem as follows: Minimize for subject to        In this activity, we explore a foundational relationship between the primal max problem and it's dual, called weak duality .     Consider the matrix product . Use this product to show that .    Suppose there were feasible for which . What then must be true about these solutions? Can we prove our assertion?    Recall and . Consider the primal max and dual min of the associated problems. How does our assertion fit these problems?    Come up with a primal max problem (and corresponding min dual) where all have integer values, so that the primal max and dual min problems achieve optimal solutions , where .   Simpler is better.    Using the same values for for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?    We have now that if for a pair of feasible solutions, then we have optimality for both programs. It would be good to prove that this is an if or only if statement.   Hyperplane Seperation Theorem   Given two disjoint convex sets , there is a hyperplane for some , such that .      Sketch two non-empty convex sets , what does look like here?    Sketch two non-convex sets where fails.      We prove the case of where there are that minimize . We assume this is true.    Without loss of generality, let . Why can we do this?    Let . Sketch and .    We want to show that is the seperating hyperplane. Suppose that was not contained in what must be true about ?    Let such that . Sketch .    Let decribe geometrically what represents. Think dot product and projections.    Let , show that .    Let , show that     Show that .    Show that , and explain why .    Why is the last statement a contradiction?    We now introduce a key idea which will tie together the primal and dual programs.    Let . We call the cone of , denoted to be the set .      In , describe .    Prove that for any is convex.    Let denote a matrix, and let denote the cone of the columns of .  Suppose . What does tell us?     The Farkas Lemma   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .        We prove and a useful corollary.    Recall (c). How do the cases (A) and (B) of relate to the cone ?    Suppose both cases (A) and (B) of held at the same time. use the product to derive a contradiction.    If (A) were true, what could we say about (B)?    Suppose (A) were false. We want to prove that (B) is true. What does (c) tell us?    Let's denote the normal vector of the seperating hyperplane by (interesting choice 👀) so that for any . Why must ?    Suppose had a column such that , show that there is an such that . Why is this a contradiction?    Why is (B) proven? Why is then proven?    Now that is proven, we apply it to and .  Suppose (A) held, and we had that there was a so that . How would compare to ?    Suppose (A) failed. Then there is a satisfing (B) for .  What can we say about and compared to ?     The Farkas Lemma v2   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .    Without loss of generality, we may let in case (B).     The Strong Duality Theorem   Given a pair of primal max-dual min programs, the primal max problem as an optimal solution if and only if the dual min program has an optimal solution . Moreover, .     Proof of the Strong Duality Theorem   We finally prove .    Suppose that optimal dual solution exists. Explain why by it suffices to show that for some feasible .    Without loss of generality, let and let .  Consider the matrices . Apply to . What does it mean for (A) to hold?    If (A) holds for , then it holds for the pair , as well as the pair for the same . Why does this show that a feasible optimal solution exists and that ?    On the other hand, suppose (B) holds for . What would it mean for (B) to hold?    We would like to derive a contradiction.  Let denote the vector produced by (B). Suppose . How would compare to and compare to ? Why is this a contradiction?    Suppose . Let .  Show that since that .    Show that since that .    Explain why (f) and (g) produce a contradiction.     Complementary Slackness   Prove that .    If are feasible, if , what does that say about ?    is the coefficient of the normal vector for the plane . If the feasible solution does not lie on , what can we say about ?   What about ?, ? ?    If are feasible optimal solutions with slack variables , what must be true about ?      Variables are said to exhibit complementary slackness if .      Prove that if the primal program is infeasible, and the dual program is feasible, then the dual program is unbounded below. (Use .)    Prove that if the dual program is infeasible, and the primal program is feasible, then the primal program is unbounded above. (Use (a).)    Prove that if the primal (dual) program is feasible and unbounded above (below), then the dual (primal) program is infeasible.    Find a primal-dual linear program where both the primal and dual problems are infeasible.    "
+  "body": " Duality Theory  In this section, we establish the theoretical underpinnings of duality.    Recall the primal maximization problem , and the corresponding dual minimization problem . By letting   We can rephrase the primal max problem as follows: Maximize for subject to Here, we understand to denote entrywise inequality.  Likewise, we can rephrase the dual min problem as follows: Minimize for subject to        In this activity, we explore a foundational relationship between the primal max problem and it's dual, called weak duality .     Consider the matrix product . Use this product to show that .    Suppose there were feasible for which . What then must be true about these solutions? Can we prove our assertion?    Recall and . Consider the primal max and dual min of the associated problems. How does our assertion fit these problems?    Come up with a primal max problem (and corresponding min dual) where all have integer values, so that the primal max and dual min problems achieve optimal solutions , where .   Simpler is better.    Using the same values for for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?    What we have proven is the following:    For a primal maximization linear programming problem with objective function and dual objective , we have that   In particular, if there is a feasible primal solution and feasible dual solution such that then are optimal solutions for the primal and dual problems respectively.    We have now that if for a pair of feasible solutions, then we have optimality for both programs. It would be good to prove that this is an if or only if statement.   Hyperplane Seperation Theorem   Given two disjoint convex sets , there is a hyperplane for some , such that .      Sketch two non-empty convex sets , what does look like here?    Sketch two non-convex sets where fails.      We prove the case of where there are that minimize . We assume this is true.    Without loss of generality, let . Why can we do this?    Let . Sketch and .    We want to show that is the seperating hyperplane. Suppose that was not contained in what must be true about ?    Let such that . Sketch .    Let decribe geometrically what represents. Think dot product and projections.    Let , show that .    Let , show that     Show that .    Show that , and explain why .    Why is the last statement a contradiction?    We now introduce a key idea which will tie together the primal and dual programs.    Let . We call the cone of , denoted to be the set .      In , describe .    Prove that for any is convex.    Let denote a matrix, and let denote the cone of the columns of .  Suppose . What does tell us?     The Farkas Lemma   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .        We prove and a useful corollary.    Recall (c). How do the cases (A) and (B) of relate to the cone ?    Suppose both cases (A) and (B) of held at the same time. use the product to derive a contradiction.    If (A) were true, what could we say about (B)?    Suppose (A) were false. We want to prove that (B) is true. What does (c) tell us?    Let's denote the normal vector of the seperating hyperplane by (interesting choice 👀) so that for any . Why must ?    Suppose had a column such that , show that there is an such that . Why is this a contradiction?    Why is (B) proven? Why is then proven?    Now that is proven, we apply it to and .  Suppose (A) held, and we had that there was a so that . How would compare to ?    Suppose (A) failed. Then there is a satisfing (B) for .  What can we say about and compared to ?     The Farkas Lemma v2   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .    Without loss of generality, we may let in case (B).     The Strong Duality Theorem   Given a pair of primal max-dual min programs, the primal max problem as an optimal solution if and only if the dual min program has an optimal solution . Moreover, .     Proof of the Strong Duality Theorem   We finally prove .    Suppose that optimal dual solution exists. Explain why by it suffices to show that for some feasible .    Without loss of generality, let and let .  Consider the matrices . Apply to . What does it mean for (A) to hold?    If (A) holds for , then it holds for the pair , as well as the pair for the same . Why does this show that a feasible optimal solution exists and that ?    On the other hand, suppose (B) holds for . What would it mean for (B) to hold?    We would like to derive a contradiction.  Let denote the vector produced by (B). Suppose . How would compare to and compare to ? Why is this a contradiction?    Suppose . Let .  Show that since that .    Show that since that .    Explain why (f) and (g) produce a contradiction.     Complementary Slackness   Prove that .    If are feasible, if , what does that say about ?    is the coefficient of the normal vector for the plane . If the feasible solution does not lie on , what can we say about ?   What about ?, ? ?    If are feasible optimal solutions with slack variables , what must be true about ?      Variables are said to exhibit complementary slackness if .    "
 },
 {
-  "id": "sec-section-dualitytheory-3",
+  "id": "definition-22",
   "level": "2",
-  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-3",
+  "url": "sec-section-dualitytheory.html#definition-22",
   "type": "Definition",
   "number": "4.2.1",
   "title": "",
@@ -1216,27 +1297,36 @@ var ptx_lunr_docs = [
   "body": "   In this activity, we explore a foundational relationship between the primal max problem and it's dual, called weak duality .     Consider the matrix product . Use this product to show that .    Suppose there were feasible for which . What then must be true about these solutions? Can we prove our assertion?    Recall and . Consider the primal max and dual min of the associated problems. How does our assertion fit these problems?    Come up with a primal max problem (and corresponding min dual) where all have integer values, so that the primal max and dual min problems achieve optimal solutions , where .   Simpler is better.    Using the same values for for the problem we just constructed, suppose we relax the condition that all our values must be integers. What can we say about the optimal solutions then?   "
 },
 {
+  "id": "prop-weakduality",
+  "level": "2",
+  "url": "sec-section-dualitytheory.html#prop-weakduality",
+  "type": "Proposition",
+  "number": "4.2.2",
+  "title": "",
+  "body": "  For a primal maximization linear programming problem with objective function and dual objective , we have that   In particular, if there is a feasible primal solution and feasible dual solution such that then are optimal solutions for the primal and dual problems respectively.   "
+},
+{
   "id": "thm-hyperplaneseperation",
   "level": "2",
   "url": "sec-section-dualitytheory.html#thm-hyperplaneseperation",
   "type": "Theorem",
-  "number": "4.2.2",
+  "number": "4.2.3",
   "title": "Hyperplane Seperation Theorem.",
   "body": " Hyperplane Seperation Theorem   Given two disjoint convex sets , there is a hyperplane for some , such that .   "
 },
 {
-  "id": "sec-section-dualitytheory-7",
+  "id": "activity-59",
   "level": "2",
-  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-7",
+  "url": "sec-section-dualitytheory.html#activity-59",
   "type": "Activity",
   "number": "4.2.2",
   "title": "",
   "body": "  Sketch two non-empty convex sets , what does look like here?    Sketch two non-convex sets where fails.   "
 },
 {
-  "id": "sec-section-dualitytheory-8",
+  "id": "activity-60",
   "level": "2",
-  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-8",
+  "url": "sec-section-dualitytheory.html#activity-60",
   "type": "Activity",
   "number": "4.2.3",
   "title": "",
@@ -1247,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-dualitytheory.html#def-cone",
   "type": "Definition",
-  "number": "4.2.3",
+  "number": "4.2.4",
   "title": "",
   "body": "  Let . We call the cone of , denoted to be the set .   "
 },
@@ -1265,14 +1355,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-dualitytheory.html#thm-farkas",
   "type": "Theorem",
-  "number": "4.2.4",
+  "number": "4.2.5",
   "title": "The Farkas Lemma.",
   "body": " The Farkas Lemma   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .     "
 },
 {
-  "id": "sec-section-dualitytheory-13",
+  "id": "activity-62",
   "level": "2",
-  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-13",
+  "url": "sec-section-dualitytheory.html#activity-62",
   "type": "Activity",
   "number": "4.2.5",
   "title": "",
@@ -1283,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-dualitytheory.html#cor-farkasv2",
   "type": "Corollary",
-  "number": "4.2.5",
+  "number": "4.2.6",
   "title": "The Farkas Lemma v2.",
   "body": " The Farkas Lemma v2   Given a matrix and , exactly one of the following is true:    There is a such that and     There is a such that and .    Without loss of generality, we may let in case (B).   "
 },
@@ -1292,23 +1382,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-dualitytheory.html#thm-strongduality",
   "type": "Theorem",
-  "number": "4.2.6",
+  "number": "4.2.7",
   "title": "The Strong Duality Theorem.",
   "body": " The Strong Duality Theorem   Given a pair of primal max-dual min programs, the primal max problem as an optimal solution if and only if the dual min program has an optimal solution . Moreover, .   "
 },
 {
-  "id": "sec-section-dualitytheory-16",
+  "id": "activity-63",
   "level": "2",
-  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-16",
+  "url": "sec-section-dualitytheory.html#activity-63",
   "type": "Activity",
   "number": "4.2.6",
   "title": "Proof of the Strong Duality Theorem.",
   "body": " Proof of the Strong Duality Theorem   We finally prove .    Suppose that optimal dual solution exists. Explain why by it suffices to show that for some feasible .    Without loss of generality, let and let .  Consider the matrices . Apply to . What does it mean for (A) to hold?    If (A) holds for , then it holds for the pair , as well as the pair for the same . Why does this show that a feasible optimal solution exists and that ?    On the other hand, suppose (B) holds for . What would it mean for (B) to hold?    We would like to derive a contradiction.  Let denote the vector produced by (B). Suppose . How would compare to and compare to ? Why is this a contradiction?    Suppose . Let .  Show that since that .    Show that since that .    Explain why (f) and (g) produce a contradiction.   "
 },
 {
-  "id": "sec-section-dualitytheory-17",
+  "id": "activity-64",
   "level": "2",
-  "url": "sec-section-dualitytheory.html#sec-section-dualitytheory-17",
+  "url": "sec-section-dualitytheory.html#activity-64",
   "type": "Activity",
   "number": "4.2.7",
   "title": "Complementary Slackness.",
@@ -1319,18 +1409,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-section-dualitytheory.html#def-complementaryslackness",
   "type": "Definition",
-  "number": "4.2.7",
-  "title": "",
-  "body": "  Variables are said to exhibit complementary slackness if .   "
-},
-{
-  "id": "problem-duality",
-  "level": "2",
-  "url": "sec-section-dualitytheory.html#problem-duality",
-  "type": "Problem",
   "number": "4.2.8",
   "title": "",
-  "body": "  Prove that if the primal program is infeasible, and the dual program is feasible, then the dual program is unbounded below. (Use .)    Prove that if the dual program is infeasible, and the primal program is feasible, then the primal program is unbounded above. (Use (a).)    Prove that if the primal (dual) program is feasible and unbounded above (below), then the dual (primal) program is infeasible.    Find a primal-dual linear program where both the primal and dual problems are infeasible.   "
+  "body": "  Variables are said to exhibit complementary slackness if .   "
 },
 {
   "id": "sec-section-dualpivot",
@@ -1342,49 +1423,157 @@ var ptx_lunr_docs = [
   "body": " Tucker Tableau's, Pivots and Duality  In this section, we examine pivoting with primal-dual tableau's.    Noting that the dual variables are non-negative weights attached to the hyperplanes defined by , and the slack variables for the dual program are the weights associated with the planes , we can encode all this information in the Primal-Dual Tucker Tableau :                                                                                                                            Write out the sufficient conditions for the tableau to determine:    The primal program is feasible.    The dual program is feasible.    A feasible primal program is unbounded above.    A feasible dual program is unbounded below.    A primal program is infeasible.    A dual program is infeasible.    The primal program has a feasible basic solution.    The dual program has a feasible basic solution.      Are any of these identical?      Recall .    Record this information in a primal-dual tucker tableau.    Apply the Simplex Algorithm to this tableau.    Consider the dual solution. What does that mean in the context of the time spent by the painter and the sculptor?     If a primal program is infeasible, what could be true of the dual program?   The dual program has an optimal solution.    The dual program is unbounded below.    The dual program is infeasible.     Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.    Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.      We now consider unconstrained and equality constrained primal-dual programs.    Suppose for a pair of primal-dual solutions if were allowed to be be any value including negative values, What must be true about ? (If is unconstrained, what can we say about the hyperplane as a bounding hyperplane?)    could be any value as well.     .     .     .     .       Suppose for a pair of primal-dual solutions if . What must be true about ? (If we increase can we predict if that helps or hurts ? Does it matter?)    could be any value as well.     .     .     .     .        Solve the following non-canonical primal-dual problem:                                                                                                                          Enter the primal-program and use Sage to confirm the solution:        Use sage to find the dual and solve it:      "
 },
 {
-  "id": "sec-section-dualpivot-3",
+  "id": "activity-65",
   "level": "2",
-  "url": "sec-section-dualpivot.html#sec-section-dualpivot-3",
+  "url": "sec-section-dualpivot.html#activity-65",
   "type": "Activity",
   "number": "4.3.1",
   "title": "",
   "body": "  Noting that the dual variables are non-negative weights attached to the hyperplanes defined by , and the slack variables for the dual program are the weights associated with the planes , we can encode all this information in the Primal-Dual Tucker Tableau :                                                                                                                            Write out the sufficient conditions for the tableau to determine:    The primal program is feasible.    The dual program is feasible.    A feasible primal program is unbounded above.    A feasible dual program is unbounded below.    A primal program is infeasible.    A dual program is infeasible.    The primal program has a feasible basic solution.    The dual program has a feasible basic solution.      Are any of these identical?   "
 },
 {
-  "id": "sec-section-dualpivot-4",
+  "id": "activity-66",
   "level": "2",
-  "url": "sec-section-dualpivot.html#sec-section-dualpivot-4",
+  "url": "sec-section-dualpivot.html#activity-66",
   "type": "Activity",
   "number": "4.3.2",
   "title": "",
   "body": "  Recall .    Record this information in a primal-dual tucker tableau.    Apply the Simplex Algorithm to this tableau.    Consider the dual solution. What does that mean in the context of the time spent by the painter and the sculptor?   "
 },
 {
-  "id": "sec-section-dualpivot-5",
+  "id": "activity-67",
   "level": "2",
-  "url": "sec-section-dualpivot.html#sec-section-dualpivot-5",
+  "url": "sec-section-dualpivot.html#activity-67",
   "type": "Activity",
   "number": "4.3.3",
   "title": "",
   "body": " If a primal program is infeasible, what could be true of the dual program?   The dual program has an optimal solution.    The dual program is unbounded below.    The dual program is infeasible.     Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.    Verify that the primal program is infeasible.                                                                                         Take the negative transpose, then use the Simplex Algorithm to determine the nature of the dual program.   "
 },
 {
-  "id": "sec-section-dualpivot-6",
+  "id": "activity-68",
   "level": "2",
-  "url": "sec-section-dualpivot.html#sec-section-dualpivot-6",
+  "url": "sec-section-dualpivot.html#activity-68",
   "type": "Activity",
   "number": "4.3.4",
   "title": "",
   "body": "  We now consider unconstrained and equality constrained primal-dual programs.    Suppose for a pair of primal-dual solutions if were allowed to be be any value including negative values, What must be true about ? (If is unconstrained, what can we say about the hyperplane as a bounding hyperplane?)    could be any value as well.     .     .     .     .       Suppose for a pair of primal-dual solutions if . What must be true about ? (If we increase can we predict if that helps or hurts ? Does it matter?)    could be any value as well.     .     .     .     .      "
 },
 {
-  "id": "sec-section-dualpivot-7",
+  "id": "activity-69",
   "level": "2",
-  "url": "sec-section-dualpivot.html#sec-section-dualpivot-7",
+  "url": "sec-section-dualpivot.html#activity-69",
   "type": "Activity",
   "number": "4.3.5",
   "title": "",
   "body": " Solve the following non-canonical primal-dual problem:                                                                                                                          Enter the primal-program and use Sage to confirm the solution:        Use sage to find the dual and solve it:     "
+},
+{
+  "id": "sec-exercisesduality",
+  "level": "1",
+  "url": "sec-exercisesduality.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "Problems for Chapter 4",
+  "body": " Problems for   For each problem in , if the problem has an optimal solution, identify the bounding hyperplanes that the solution lies on, then state the normal vector for the objective plane in terms of the normal vectors of the bounding hyperplanes.   Suppose that a company is painting figurines, 4 colors . The colors are mixed from red, green and blue paint.   takes 2 oz of red, 2 oz green and 1 oz blue. takes 3 oz of red, 1 oz green and 1 oz blue. takes 1 oz of red, 2 oz green and 2 oz blue. takes 1 oz of red and 4 oz blue.  Figurines with color sell for $20, colored figures sell for $25 dollars and colored figurines sell for $30. The company has many figurines to paint and 100 oz each of red, green and blue paint. How many of each colored figurine should be painted to maximize revenue?   Solve the above canonical maximization problem and   If we had 110 oz red, 100 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?   If we had 95 oz red, 100 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?   If we had 100 oz red, 110 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?   If we had 100 oz red, 100 oz green, and 95 oz blue paint, without resolving the problem, what would the optimal revenue be?    An office worker is eating in their work cafeteria and they are recently put on a low cholestrol diet. Their usual choices are pasta, tofu and chicken sandwiches. The pasta has 8 g of protein, 60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol. The tofu has 60 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 50 mg of cholesterol. The chicken sandwich has 40 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.  They need 200 g of protein, 960 g of carbohydrates and 40 mg of vitamin C in a month, and wishes to minimize cholesterol.   Find the optimal solution to the above problem.   Suppose they needed to increase their protein consumption to 220 g a month. Without recomputing the solution, what would the new minimum cholesterol be?   Suppose instead that they needed to decrease their carbohydrate consumption to 190 g a month. Without recomputing the solution, what would the new minimum cholesterol be?   Suppose instead that they needed to increase their vitamin C consumption to 45 g a month. Without recomputing the solution, what would the new minimum cholesterol be?    Suppose the maximum value of the objective function of a linear optimization problem is attained at the point with the first variables as basic variables. Determine if the following are TRUE or FALSE:    If we increase , the value of the objective function is still .    If we increase , the value of the objective function is still .      Consider .   Prove that if the primal program is infeasible, and the dual program is feasible, then the dual program is unbounded below. (Use .)   Prove that if the dual program is infeasible, and the primal program is feasible, then the primal program is unbounded above. (Use (a).)   Prove that if the primal (dual) program is feasible and unbounded above (below), then the dual (primal) program is infeasible.   Find a primal-dual linear program where both the primal and dual problems are infeasible.    Consider the canonical maximization linear optimization problem below:      State the dual canonical minimization linear programming problem.   Sketch the constraint sets for both problems above.   Solve both problems above by applying the simplex algorithm to a dual tableau. Indicate the movement in both constraint set diagrams exhibited by the basic solutions of successive tableaus.   Is complementary slackness exhibited in the solutions above? Why or why not?    For each problem in , state the dual problem and find it's solution.    For each of the following, solve the canonical dual minimization problem. If there are infinitely many solutions, classify them all.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Consider the following tableau:                                                                                      Find so that the basic solutions of the above tableau are optimal, and both problems have infinitely many solutions.   Classify the choices for for which the conditions of part a hold.    Consider a two variable, two constraint primal maximization problem. Recall Weak Duality , and Complementary Slackness, .  Suppose we found a pair of primal-dual solutions which satisfied main constraints, but one or more non-negativity constraints.   Must the Weak Duality still hold? Prove or find a counterexample.   Suppose there were a pair of such solutions so that , must complementary slackness still hold? Prove or find a counterexample.    Solve the following non-cononical primal-dual problems:                                                                                                                                                                                                                                                                                                                                                                                       "
+},
+{
+  "id": "exercise-34",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-34",
+  "type": "Exercise",
+  "number": "4.4.1",
+  "title": "",
+  "body": "For each problem in , if the problem has an optimal solution, identify the bounding hyperplanes that the solution lies on, then state the normal vector for the objective plane in terms of the normal vectors of the bounding hyperplanes. "
+},
+{
+  "id": "exercise-35",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-35",
+  "type": "Exercise",
+  "number": "4.4.2",
+  "title": "",
+  "body": " Suppose that a company is painting figurines, 4 colors . The colors are mixed from red, green and blue paint.   takes 2 oz of red, 2 oz green and 1 oz blue. takes 3 oz of red, 1 oz green and 1 oz blue. takes 1 oz of red, 2 oz green and 2 oz blue. takes 1 oz of red and 4 oz blue.  Figurines with color sell for $20, colored figures sell for $25 dollars and colored figurines sell for $30. The company has many figurines to paint and 100 oz each of red, green and blue paint. How many of each colored figurine should be painted to maximize revenue?   Solve the above canonical maximization problem and   If we had 110 oz red, 100 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?   If we had 95 oz red, 100 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?   If we had 100 oz red, 110 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?   If we had 100 oz red, 100 oz green, and 95 oz blue paint, without resolving the problem, what would the optimal revenue be?  "
+},
+{
+  "id": "exercise-36",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-36",
+  "type": "Exercise",
+  "number": "4.4.3",
+  "title": "",
+  "body": " An office worker is eating in their work cafeteria and they are recently put on a low cholestrol diet. Their usual choices are pasta, tofu and chicken sandwiches. The pasta has 8 g of protein, 60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol. The tofu has 60 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 50 mg of cholesterol. The chicken sandwich has 40 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.  They need 200 g of protein, 960 g of carbohydrates and 40 mg of vitamin C in a month, and wishes to minimize cholesterol.   Find the optimal solution to the above problem.   Suppose they needed to increase their protein consumption to 220 g a month. Without recomputing the solution, what would the new minimum cholesterol be?   Suppose instead that they needed to decrease their carbohydrate consumption to 190 g a month. Without recomputing the solution, what would the new minimum cholesterol be?   Suppose instead that they needed to increase their vitamin C consumption to 45 g a month. Without recomputing the solution, what would the new minimum cholesterol be?  "
+},
+{
+  "id": "exercise-37",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-37",
+  "type": "Exercise",
+  "number": "4.4.4",
+  "title": "",
+  "body": " Suppose the maximum value of the objective function of a linear optimization problem is attained at the point with the first variables as basic variables. Determine if the following are TRUE or FALSE:    If we increase , the value of the objective function is still .    If we increase , the value of the objective function is still .    "
+},
+{
+  "id": "ex-duality",
+  "level": "2",
+  "url": "sec-exercisesduality.html#ex-duality",
+  "type": "Exercise",
+  "number": "4.4.5",
+  "title": "",
+  "body": " Consider .   Prove that if the primal program is infeasible, and the dual program is feasible, then the dual program is unbounded below. (Use .)   Prove that if the dual program is infeasible, and the primal program is feasible, then the primal program is unbounded above. (Use (a).)   Prove that if the primal (dual) program is feasible and unbounded above (below), then the dual (primal) program is infeasible.   Find a primal-dual linear program where both the primal and dual problems are infeasible.  "
+},
+{
+  "id": "exercise-39",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-39",
+  "type": "Exercise",
+  "number": "4.4.6",
+  "title": "",
+  "body": " Consider the canonical maximization linear optimization problem below:      State the dual canonical minimization linear programming problem.   Sketch the constraint sets for both problems above.   Solve both problems above by applying the simplex algorithm to a dual tableau. Indicate the movement in both constraint set diagrams exhibited by the basic solutions of successive tableaus.   Is complementary slackness exhibited in the solutions above? Why or why not?  "
+},
+{
+  "id": "exercise-40",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-40",
+  "type": "Exercise",
+  "number": "4.4.7",
+  "title": "",
+  "body": " For each problem in , state the dual problem and find it's solution.  "
+},
+{
+  "id": "exercise-41",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-41",
+  "type": "Exercise",
+  "number": "4.4.8",
+  "title": "",
+  "body": " For each of the following, solve the canonical dual minimization problem. If there are infinitely many solutions, classify them all.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "
+},
+{
+  "id": "exercise-42",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-42",
+  "type": "Exercise",
+  "number": "4.4.9",
+  "title": "",
+  "body": " Consider the following tableau:                                                                                      Find so that the basic solutions of the above tableau are optimal, and both problems have infinitely many solutions.   Classify the choices for for which the conditions of part a hold.  "
+},
+{
+  "id": "exercise-43",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-43",
+  "type": "Exercise",
+  "number": "4.4.10",
+  "title": "",
+  "body": " Consider a two variable, two constraint primal maximization problem. Recall Weak Duality , and Complementary Slackness, .  Suppose we found a pair of primal-dual solutions which satisfied main constraints, but one or more non-negativity constraints.   Must the Weak Duality still hold? Prove or find a counterexample.   Suppose there were a pair of such solutions so that , must complementary slackness still hold? Prove or find a counterexample.  "
+},
+{
+  "id": "exercise-44",
+  "level": "2",
+  "url": "sec-exercisesduality.html#exercise-44",
+  "type": "Exercise",
+  "number": "4.4.11",
+  "title": "",
+  "body": " Solve the following non-cononical primal-dual problems:                                                                                                                                                                                                                                                                                                                                                                                     "
 },
 {
   "id": "sec-minmaxgames",
@@ -1432,27 +1621,27 @@ var ptx_lunr_docs = [
   "body": "  Suppose that the reduced payoff matrix had an entry that is the largest value in it's column and the smallest value in it's row.                                                                                                                                                                   Such an entry is called a saddle point .   "
 },
 {
-  "id": "sec-minmaxgames-6",
+  "id": "activity-71",
   "level": "2",
-  "url": "sec-minmaxgames.html#sec-minmaxgames-6",
+  "url": "sec-minmaxgames.html#activity-71",
   "type": "Activity",
   "number": "5.1.3",
   "title": "",
   "body": "   Suppose a reduced payoff matrix had a saddle point .                                                                                                                                                                      Pivot first on the entry with a then .                                                                                                                                                                                                                                                                                                                                      For each entry determine if:    The entry is zero.    The entry is positive.    The entry is negative.    The entries value cannot be determined.      What is ? What are ?    After we delete the appropriate rows and columns, what could be said about the resulting primal dual program?    Would it make a difference if we pivoted by first then ?   "
 },
 {
-  "id": "sec-minmaxgames-7",
+  "id": "activity-72",
   "level": "2",
-  "url": "sec-minmaxgames.html#sec-minmaxgames-7",
+  "url": "sec-minmaxgames.html#activity-72",
   "type": "Activity",
   "number": "5.1.4",
   "title": "",
   "body": " Follow the outline provided by to find the optimal strategies for the Even and Odd players in , and who if anyone the game favors.  To test out this solution edit this code: Where FIXMER1 , FIXMER2 , FIXMER3 represent the entries for the optimal mixed strategy for the row player Even, and FIXMEC1 , FIXMEC2 , FIXMEC3 are for the optimal mixed strategy for the column player Odd. Then run the cell and see the distributions of winnings and the average winnings. How does this value compare to what you found.   Take turns, one student pick a new strategy for Even, and another student then modify the strategy for Odd in light of the new strategy. Can we do better than Odd's current best strategy?    Conversely, take turns, one student pick a new strategy for Odd, and another student then modify the strategy for Even in light of the new strategy. Can we do better than Even's current best strategy?   "
 },
 {
-  "id": "sec-minmaxgames-8",
+  "id": "activity-73",
   "level": "2",
-  "url": "sec-minmaxgames.html#sec-minmaxgames-8",
+  "url": "sec-minmaxgames.html#activity-73",
   "type": "Activity",
   "number": "5.1.5",
   "title": "",
@@ -1468,27 +1657,27 @@ var ptx_lunr_docs = [
   "body": " VonNeumann Minimax Theorem    Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions .  Let denote the th row of a matrix and let denote the th column of .    Given a fixed column strategy which of these describes the role for the row player?                          Given a fixed row strategy which of these describes the role for the column player?                            We prove an interesting way to think of the optimal strategies.  Let denote a fixed column strategy, and let , and let     Recall that . Prove that .    Why must ?    Show that there is a (very simple) row strategy where .    Why must ?    What have we proven?      We now prove a characterization theorem about the optimal solutions for both the row and column player.  Suppose we have a payoff matrix where every entry is positive. In other words, after each round Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money. Rowan's strategy here is to take Colleen for as much money as he can and Colleen's strategy is to minimize her losses.  (We'll ignore the obvious question of why Colleen would be willing to play this game.)    Argue why optimal row and column outcomes .    Write out the primal maximization problem for the LP formulation of this game:                                                                                                                                                                                                                  Write out the non-canonical primal problem including the objective function and constraint equalities and inequalities involving the and where appropriate. (There should be no slack variables here.)    Consider the inequality constraints in our formulation, divide each of these by . Let . Can we rewrite our inequalities as linear combinations of is less than or equal to some cosntant?    Consider the equality constraint after dividing by , rewrite this equality in terms of without negatives.  Remember, Colleen's strategy is to minimize which must be positive. Can we rephrase this as maximizing or minimizing a linear function involving then ? What is this linear function and is it a maximization or minimization problem? (Note that the solution to this problem likely isn't the solution to the original problem, but both are optimized under the same conditions.)    Rewrite the new canonical linear programming problem with variables that optimizes Colleen's stretegy.    Why is the feasible region for Colleen's new problem non-empty but bounded? What does the Extreme Value Theorem then say about this?    Repeat tasks (b)-(c) for Rowan's strategy, where .    Compare Rowan and Colleen's problems with the . Show that these problems are dual problems to each other. Which is the primal max and which is the dual min?    What does the Strong Duality Theorem say about the optimal solutions to both problems? What in turn, does that say about ?    We're still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at Rowan. To balance things out, Rowan has to pay Colleen $5 after each round. Would this fact change anything about Rowan and Collen's strategies?  Say it was $ , would that make any difference?    Let denote any strategy for Rowan and Colleen. Let denote a matrix with all 1's. Show that .    Show that for fixed strategies and not fixed strategies that is maximized when is maximized and is minimized when is minimized.     VonNeumann's Minimax Theorem   Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions . Also let denote the th row of a matrix and let denote the th column of .  Then, there are optimal strategies such that:       Consider the payoff matrix     Find the optimal strategy for Colleen in this game, and the game value .    Find a strategy for Rowan so that , but is not the optimal strategy.    What does this say about ?      In a simplified game of battleship played on a two board, Colleen selects two consecutive squares on the board to place her ship. Rowan then picks one of six squares to fire at. If he hits, he gets a point, otherwise Colleen gets a point.    Write out a payoff matrix for this game. (Why is it ?)    Find the optimal solution for Colleen using Sage:      Does the game favor Rowan or Colleen?    Use sage to find the optimal solution for Rowan:      "
 },
 {
-  "id": "sec-vonneumann-2",
+  "id": "activity-74",
   "level": "2",
-  "url": "sec-vonneumann.html#sec-vonneumann-2",
+  "url": "sec-vonneumann.html#activity-74",
   "type": "Activity",
   "number": "5.2.1",
   "title": "",
   "body": "  Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions .  Let denote the th row of a matrix and let denote the th column of .    Given a fixed column strategy which of these describes the role for the row player?                          Given a fixed row strategy which of these describes the role for the column player?                         "
 },
 {
-  "id": "sec-vonneumann-3",
+  "id": "activity-75",
   "level": "2",
-  "url": "sec-vonneumann.html#sec-vonneumann-3",
+  "url": "sec-vonneumann.html#activity-75",
   "type": "Activity",
   "number": "5.2.2",
   "title": "",
   "body": "  We prove an interesting way to think of the optimal strategies.  Let denote a fixed column strategy, and let , and let     Recall that . Prove that .    Why must ?    Show that there is a (very simple) row strategy where .    Why must ?    What have we proven?   "
 },
 {
-  "id": "sec-vonneumann-4",
+  "id": "activity-76",
   "level": "2",
-  "url": "sec-vonneumann.html#sec-vonneumann-4",
+  "url": "sec-vonneumann.html#activity-76",
   "type": "Activity",
   "number": "5.2.3",
   "title": "",
@@ -1504,18 +1693,18 @@ var ptx_lunr_docs = [
   "body": " VonNeumann's Minimax Theorem   Let be a payoff matrix and represent the strategies of the row and column players respectively, with feasible regions . Also let denote the th row of a matrix and let denote the th column of .  Then, there are optimal strategies such that:    "
 },
 {
-  "id": "sec-vonneumann-6",
+  "id": "activity-77",
   "level": "2",
-  "url": "sec-vonneumann.html#sec-vonneumann-6",
+  "url": "sec-vonneumann.html#activity-77",
   "type": "Activity",
   "number": "5.2.4",
   "title": "",
   "body": "  Consider the payoff matrix     Find the optimal strategy for Colleen in this game, and the game value .    Find a strategy for Rowan so that , but is not the optimal strategy.    What does this say about ?   "
 },
 {
-  "id": "sec-vonneumann-7",
+  "id": "activity-78",
   "level": "2",
-  "url": "sec-vonneumann.html#sec-vonneumann-7",
+  "url": "sec-vonneumann.html#activity-78",
   "type": "Activity",
   "number": "5.2.5",
   "title": "",
@@ -1531,18 +1720,18 @@ var ptx_lunr_docs = [
   "body": " Games of Chance    Consider the following game. Rowan and Colleen place $25 into a pot. Then they are dealt either a Jack, Queen or King at random. This deck only has those three cards. Whoever has the highest card takes the pot.  Rowan has the option of raising by $10 or folding. If he folds, he loses $25. Otherwise Colleen then can either fold or call. If they fold, she loses $25, if she calls, she puts $10 into the pot.  Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.    What would best describe possible choices of strategy for Rowan and Colleen?    The cards Jack, Queen, King.    Whether to Fold\/Raise for Rowan, whether to Fold\/Call for Colleen.    Whether to Fold\/Raise for Rowan depending on the card he is dealt, whether to Fold\/Call for Colleen, depending on the card she is dealt.      List the possible pairs of Rowan\/Colleen hands.    Let's say Rowan raises on a Jack, folds on a Queen, and raises on a King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen of King, denoted FCC.  If both players are committed to these strategies, what are Rowans expected net winnings? (Note that all the above hand pairs are equally likely, what are Rowan's net winnings in each case?)    If Rowan's strategy is (for some reason) FFF, what are Rowans net winnings?    If Colleen's strategy is FFF, what are Rowans net winnings? (These may be different for each of Rowan's choice of strategy.)    Without computing the entire payoff matrix, are there any obviously poor strategies for Rowan or Colleen?    Fill out the remainder of this payoff matrix, where the entries are expected values.      FFF  FFC  FCF  CFF  FCC  CFC  CCF  CCC      FFF  ?  ?  ?  ?  ?  ?  ?  ?      FFR  ?                           FRF  ?           -55\/3               RFF  ?                    -85\/3      FRR  ?                           RFR  ?           ?               RRF  ?        ?                  RRR  ?                    ?                              After dominating what does this table reduce to?      ???  ???      ???  ?  ?      ???  ?  ?                  Solve for the optimal strategies using LP methods.    Who does the game favor and by how much?    If Rowan is dealt a Jack, what is his optimal strategy (as a pair of probabilities to Raise or Fold). Queen? King?    If Colleen is dealt a Jack, what is her optimal strategy. Queen? King?      We introduce a second game here. Each player places $ into the pot. Then the each secretly flip a coin. We consider heads greater than tails.  Rowan then has the options of passing or betting. If he passes, then both players reveal their coin and the higher value wins. If they are the same, players split the pot evenly, and both players net wins\/losses are $0. His other option is to bet, in which case he adds $ to the pot.  Then Colleen has a choice as well, to fold or call. If she folds, then Rowan nets the $ . Otherwise, she calls, and also adds $ to the pot and both coins are revealed.    Suppose that Rowan will stick to the strategy of RP (raise on head, pass on tails) and Colleen choses CC (call on both heads or tails). What are Rowan's expected winnings in this case?    Fill out the payoff matrix for this game.      FF  FC  CF  FF      PP  ?        ?      PR  ?        ?      RP     ?     ?      RR     ?  ?                         It's not possible to determine all the domination without knowing what are. However, knowing , dominate as much as possible      ??  ??      ??  ?  ?      ??  ?  ?                  If , use domination to find the optimal pure strategy for both players.    If , used linear optimization methods to find the optimal mixed strategies for both players.    "
 },
 {
-  "id": "sec-chance-2",
+  "id": "activity-79",
   "level": "2",
-  "url": "sec-chance.html#sec-chance-2",
+  "url": "sec-chance.html#activity-79",
   "type": "Activity",
   "number": "5.3.1",
   "title": "",
   "body": "  Consider the following game. Rowan and Colleen place $25 into a pot. Then they are dealt either a Jack, Queen or King at random. This deck only has those three cards. Whoever has the highest card takes the pot.  Rowan has the option of raising by $10 or folding. If he folds, he loses $25. Otherwise Colleen then can either fold or call. If they fold, she loses $25, if she calls, she puts $10 into the pot.  Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.    What would best describe possible choices of strategy for Rowan and Colleen?    The cards Jack, Queen, King.    Whether to Fold\/Raise for Rowan, whether to Fold\/Call for Colleen.    Whether to Fold\/Raise for Rowan depending on the card he is dealt, whether to Fold\/Call for Colleen, depending on the card she is dealt.      List the possible pairs of Rowan\/Colleen hands.    Let's say Rowan raises on a Jack, folds on a Queen, and raises on a King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen of King, denoted FCC.  If both players are committed to these strategies, what are Rowans expected net winnings? (Note that all the above hand pairs are equally likely, what are Rowan's net winnings in each case?)    If Rowan's strategy is (for some reason) FFF, what are Rowans net winnings?    If Colleen's strategy is FFF, what are Rowans net winnings? (These may be different for each of Rowan's choice of strategy.)    Without computing the entire payoff matrix, are there any obviously poor strategies for Rowan or Colleen?    Fill out the remainder of this payoff matrix, where the entries are expected values.      FFF  FFC  FCF  CFF  FCC  CFC  CCF  CCC      FFF  ?  ?  ?  ?  ?  ?  ?  ?      FFR  ?                           FRF  ?           -55\/3               RFF  ?                    -85\/3      FRR  ?                           RFR  ?           ?               RRF  ?        ?                  RRR  ?                    ?                              After dominating what does this table reduce to?      ???  ???      ???  ?  ?      ???  ?  ?                  Solve for the optimal strategies using LP methods.    Who does the game favor and by how much?    If Rowan is dealt a Jack, what is his optimal strategy (as a pair of probabilities to Raise or Fold). Queen? King?    If Colleen is dealt a Jack, what is her optimal strategy. Queen? King?   "
 },
 {
-  "id": "sec-chance-3",
+  "id": "activity-80",
   "level": "2",
-  "url": "sec-chance.html#sec-chance-3",
+  "url": "sec-chance.html#activity-80",
   "type": "Activity",
   "number": "5.3.2",
   "title": "",
@@ -1603,9 +1792,9 @@ var ptx_lunr_docs = [
   "body": " The Transportation Algorithm    Consider a transportation tableau:                       0            0      0  0       The box here denotes that the bottom right 5 isn't currently being used by probably should be.    It is clear that we should shift some of warehouse 2's shipments to market 2 to reduce costs. Why isn't this a valid transportation tableau?                                                    How should we adjust these values to have a valid tableau?                                                    How about this one?                           ?  ?  0         ?     ?  0      ?     ?     0      ?  ?  ?  ?  0      ?  ?        0      0  0  0  0           Recall the transportation tableau obtained in :       1  1  5      1     1     0    3        7  0    1     2  9  0      0  0  0       Note that this tableau corresponds to a basic feasible solution for the original minimization problem.    If this solution is not optimal, what should the next step be?    Pick a variable to exit the basis which increases the objective function and make the smallest change.    Pick a variable to exit the basis which decreases the objective function and make the smallest change.    Pick a variable to exit the basis which increases the objective function and make the biggest change.    Pick a variable to exit the basis which decreases the objective function and make the biggest change.      Select column values and row values so that each circled value is the sum of row and column values .  (We can think of these as analogous to the shadow costs associated with the warehouse\/market bounds)                          1                  7            2  9                     Replace each entry of the tableau with . What does this measure? What does it mean if each entry is non-negative?    Pick a                           ?                               ?  ?                     Pick circled entries so that they with the boxed form a cycle , that is each of these entries shares a row with exactly one another of the entries, and a column with another of the entries.    Based on the discussion in (a), which entry should transfer their shipments to ?              How do the other entries in the cycle adjust?    Remove the basis entry which is no longer being used, and recompute the with the new basis.                          ?                               ?  ?                     Verify that none of the entries are non negative. Why do we now terminate?  We then replace the entries with the original entries                                                                                  Use Sage to confirm the solution:          To summarize, the transportation algorithm is as follows:    We begin with a feasible transportation tableau, probably via VAM .  We then associate with each row an unknown and each column a .    We (by convention) let and select values so that for each basis entry we have that .    Replace every entry with .    If there is a negative entry box this entry and select basis entries so that they, along with the boxed entry, form a cycle.  If each entry is non-negative, GOTO 6.    Shift shipments appropriately along the cycle so that has a positive shipping quantity, and one of the selected basis entries has a zero shipping quantity.  Then GOTO 2.    Replace each cost entry with the costs from step 1 and terminate.       Unbalnced Transportation Problems    We now consider the case of unbalanced transportation problems, where the demand and supply are unequal.    Suppose we had the following transportation problem:       Market 1  Market 2  Market 3      Warehouse 1  $5\/ton  $3\/ton  $1\/ton  35 tons    Warehouse 2  $6\/ton  $2\/ton  $5\/ton  45 tons    Warehouse 3  $4\/ton  $2\/ton  $1\/ton  15 tons      30 tons  20 tons  40 tons       Suppose we satisfy all the demand in a way that minimizes costs. What would be the remaining result?    Suppose we ship the excess supply to a phatom market:       Market 1  Market 2  Market 3   Market       Warehouse 1  $5\/ton  $3\/ton  $1\/ton  ?  35 tons    Warehouse 2  $6\/ton  $2\/ton  $5\/ton  ?  45 tons    Warehouse 3  $4\/ton  $2\/ton  $1\/ton  ?  15 tons      30 tons  20 tons  40 tons  ?       How much is shipped to the Market ? How much does it cost to ship from each warehouse to Market ?    Suppose we had the following transportation problem:       Market 1  Market 2  Market 3      Warehouse 1  $5\/ton  $3\/ton  $1\/ton  35 tons    Warehouse 2  $6\/ton  $2\/ton  $5\/ton  45 tons    Warehouse 3  $4\/ton  $2\/ton  $1\/ton  15 tons      30 tons  50 tons  40 tons       Suppose we exhaust all the supply in a way that minimizes costs. What would be the remaining result?    Suppose we have a phantom Warehouse that filled the outstanding demand.       Market 1  Market 2  Market 3      Warehouse 1  $5\/ton  $3\/ton  $1\/ton  35 tons    Warehouse 2  $6\/ton  $2\/ton  $5\/ton  45 tons    Warehouse 3  $4\/ton  $2\/ton  $1\/ton  15 tons     Warehouse   ?  ?  ?  ?      30 tons  50 tons  40 tons       How much additional supply is needed? How much would it cost to ship this supply from Warehouse to the markets?    Describe a general procedure for solving unbalanced transportation problems.     "
 },
 {
-  "id": "sec-transportalgorithm-2",
+  "id": "exploration-5",
   "level": "2",
-  "url": "sec-transportalgorithm.html#sec-transportalgorithm-2",
+  "url": "sec-transportalgorithm.html#exploration-5",
   "type": "Exploration",
   "number": "6.2.1",
   "title": "",
@@ -1675,9 +1864,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a tableau for a balanced assignment problem. A permutation set of zeroes is a subset of zero cells for so that each row and column contains exactly one zero cell.   "
 },
 {
-  "id": "sec-assignment-6",
+  "id": "activity-84",
   "level": "2",
-  "url": "sec-assignment.html#sec-assignment-6",
+  "url": "sec-assignment.html#activity-84",
   "type": "Activity",
   "number": "6.3.2",
   "title": "",
@@ -1693,27 +1882,27 @@ var ptx_lunr_docs = [
   "body": "  We state here the steps of the Hungarian Algorithm . We start with an assignment tableau .    IF the entries of are rational but not all integeral, :  THEN multiply each entry of by the lowest common multiple of the denominators, .    IF the entries of are not all non-negative:  THEN add to every entry of the smallest value of , .    Subtract from each row the smallest entry in that row.    Subtract from each column the smallest entry in that column.    IF has a permutation set of zeroes:  STOP    Draw a minimum number of lines through covering an entire row or column such that all 's are covered.    minimum .     Subtract all uncovered entries by the smallest entry that is not covered, and add that value to the entries corresponding to intersections of the lines.    GOTO 5.     "
 },
 {
-  "id": "sec-assignment-8",
+  "id": "activity-85",
   "level": "2",
-  "url": "sec-assignment.html#sec-assignment-8",
+  "url": "sec-assignment.html#activity-85",
   "type": "Activity",
   "number": "6.3.3",
   "title": "",
   "body": "  In step 6 of , suppose we draw lines. Could be greater than ?    What would it mean if ?    If , would it be possible for all the lines to be parallel?    What's going on in step 7?   "
 },
 {
-  "id": "sec-assignment-9",
+  "id": "activity-86",
   "level": "2",
-  "url": "sec-assignment.html#sec-assignment-9",
+  "url": "sec-assignment.html#activity-86",
   "type": "Activity",
   "number": "6.3.4",
   "title": "",
   "body": "  Use the Hungarian Algorithm to solve the problem from .   "
 },
 {
-  "id": "sec-assignment-10",
+  "id": "activity-87",
   "level": "2",
-  "url": "sec-assignment.html#sec-assignment-10",
+  "url": "sec-assignment.html#activity-87",
   "type": "Activity",
   "number": "6.3.5",
   "title": "",
@@ -1747,9 +1936,9 @@ var ptx_lunr_docs = [
   "body": "  A directed graph or network is a pair where is a set of vertices and is a set of ordered pairs of distinct elements of .  A network is capacitated if for each edge we assign a non negative capacity . (If there is no edge from to , we may equivalently say that .)  A flow assigned to a capacitated network is an assignment to each edge , a value such that . (If there is no edge from to , what must be?)   "
 },
 {
-  "id": "sec-networkflow-4",
+  "id": "note-1",
   "level": "2",
-  "url": "sec-networkflow.html#sec-networkflow-4",
+  "url": "sec-networkflow.html#note-1",
   "type": "Note",
   "number": "7.1.2",
   "title": "",
@@ -1765,9 +1954,9 @@ var ptx_lunr_docs = [
   "body": "  For any vertex , the net input flow at vertex is   If then we say is called a source .  If then we say is called a sink .  If then we say is called an intermediary vertex .   "
 },
 {
-  "id": "sec-networkflow-6",
+  "id": "activity-88",
   "level": "2",
-  "url": "sec-networkflow.html#sec-networkflow-6",
+  "url": "sec-networkflow.html#activity-88",
   "type": "Activity",
   "number": "7.1.2",
   "title": "",
@@ -1783,9 +1972,9 @@ var ptx_lunr_docs = [
   "body": " Conservation of Flow   For a capacited network , .   "
 },
 {
-  "id": "sec-networkflow-8",
+  "id": "activity-89",
   "level": "2",
-  "url": "sec-networkflow.html#sec-networkflow-8",
+  "url": "sec-networkflow.html#activity-89",
   "type": "Activity",
   "number": "7.1.3",
   "title": "",
@@ -1801,18 +1990,18 @@ var ptx_lunr_docs = [
   "body": "  Consider the network:  A network with multiple sources and sinks.       Find a (not necessarily optimal!) flow through this network with exactly two sources and exactly two sinks.    Add two vertices to this network: , and two edges from to two vertices, and two edges to from two different vertices, each with infinite capacity, and extend the above flow to those edges so that this flow has a unique source and sink.   "
 },
 {
-  "id": "sec-networkflow-10",
+  "id": "observation-6",
   "level": "2",
-  "url": "sec-networkflow.html#sec-networkflow-10",
+  "url": "sec-networkflow.html#observation-6",
   "type": "Observation",
   "number": "7.1.5",
   "title": "",
   "body": "  To be able to address the sort of questions we wish to ask, we will restrict ourselves to networks with a unique fixed source or sink, with no edges from the sink or to the source. In light of , this is not really much of a restriction.   "
 },
 {
-  "id": "subsec-maxflow-2",
+  "id": "activity-91",
   "level": "2",
-  "url": "sec-networkflow.html#subsec-maxflow-2",
+  "url": "sec-networkflow.html#activity-91",
   "type": "Activity",
   "number": "7.1.5",
   "title": "",
@@ -1828,9 +2017,9 @@ var ptx_lunr_docs = [
   "body": " Max Flow - Min Cut    Recall . Suppose that we wish to install a toll booth on these bridges so that each person going to pays a toll at least once. The cost of installing a toll booth on a bridge is proportional to it's capacity.    Find three different ways to install these booths, and find what you believe is the cheapest way to do so.      Given a capacitated network , a cut of is a partition of the vertex set into non-empty subsets , where .  The capacity of a cut is the sum .     From , find three different cuts and their capacities.  What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?      Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as   where .    Verify that we may simplify the dual solution as:       Suppose . What could be? What value for would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modeled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.      We explore a way of generating potential minimum cuts using a maximum flow.  Recall and your proposed maximum flow .    Let , we recursively define by adding to if either:    .     .       Let . What is the cut capacity of ?      We now prove that the minimum cut capacity is equal to the maximum flow.    Why does the primal max problem achieve optimality?  Call the maximum flow , with flow on each edge .    Let , we recursively define by adding to if either:    .     .   and repeating until we stabilize, why must we eventually stabilize?    Show that for any in , there is an -path  : a sequence of vertices starting to , where between either .    An -path.     We would call the edges to be forward edges and  backwards edges of .    Suppose (by way of contradiction) that . There is by (c) an -path from to .  Let   Why is ?    We define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Explain why this is still a valid network flow.    Explain why has a greater value than . Why must ?    Define . Prove that for any , we have that .  (Not neccesary for this proof, but to tie things in, if , what does that say about from the dual program in ? If , what does that say about ? )    Use to show that the value of is equal to the cut capacity of . (Proving the result!)    Going back to if we let for and for , what is the value of the dual min objective?      Let be a capacitated directed network with unique fixed source and unique fixed sink, no edges into the source, and no edges out of the sink. Then the value of the maximalflow from to is equal to the minimal cut capacity in .      Suppose we had a non-optimal flow , how could we adopt the procedure in to obtain a better flow?     Max Flow-Min Cut Algorithms  Algorithms for Max Flow and Min Cut    Consider the following capacitated network with source and sink :    A network with multiple sources and sinks.     Recall the procedure to produce improved flows in .    Begin with the zero-flow.  A network with multiple sources and sinks.     Consider the -path . Apply (d) to this path. What is ?    Adjust the flow on edges by appropriately. Explain why we need not consider the edge for any future -paths.    Pick another -path where and repeat until we achieve a maximum flow.    A network with multiple sources and sinks.       Use the maximum flow and the argument in to find a minimum cut.     Max Flow Algorithm   We describe an algorithm to find the maximum flow for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with any feasible flow (including the zero flow.)    Pick an -path in from to such that:   Each forward edge of satisfies .   Eack backwards edge satisfies .    (If no such -path exists, GOTO 5)    Compute     Define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Let and GOTO 2    STOP. The flow is now optimal.       Prove that the Max Flow Algorithm terminates at a maximum flow.    Min Cut Algorithm   We describe an algorithm to find the minimum for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with a maximum flow and .    We add to if there is a such that either:     .     .    If there is no such , GOTO 4    GOTO 2    Let .  STOP form a minimum cut.       "
 },
 {
-  "id": "sec-maxflowmincut-2",
+  "id": "exploration-8",
   "level": "2",
-  "url": "sec-maxflowmincut.html#sec-maxflowmincut-2",
+  "url": "sec-maxflowmincut.html#exploration-8",
   "type": "Exploration",
   "number": "7.2.1",
   "title": "",
@@ -1864,9 +2053,9 @@ var ptx_lunr_docs = [
   "body": "  Consider the primal maximization program for a max flow problem for a capacitated network with unique source and unique sink :       Consider the dual program for this problem where is the unconstrained dual variable for the vertex equality constraint and the is the dual variable for the capacity constraint. Verify that this program may be written as   where .    Verify that we may simplify the dual solution as:       Suppose . What could be? What value for would minimize the dual objective function? What happens if is huge, how would that affect ?  Repeat for .    Suppose each , Note that forms a cut of .  For , what is ?  For , what is ?  For , what is ?  Can any cut of be modeled this way?    What is the capacity of the above cut? How does that relate to the dual program?    Prove that the maximum flow through a network is bounded above by the minimum cut capacity.   "
 },
 {
-  "id": "sec-maxflowmincut-6",
+  "id": "activity-94",
   "level": "2",
-  "url": "sec-maxflowmincut.html#sec-maxflowmincut-6",
+  "url": "sec-maxflowmincut.html#activity-94",
   "type": "Activity",
   "number": "7.2.4",
   "title": "",
@@ -1891,9 +2080,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a capacitated directed network with unique fixed source and unique fixed sink, no edges into the source, and no edges out of the sink. Then the value of the maximalflow from to is equal to the minimal cut capacity in .   "
 },
 {
-  "id": "sec-maxflowmincut-9",
+  "id": "activity-96",
   "level": "2",
-  "url": "sec-maxflowmincut.html#sec-maxflowmincut-9",
+  "url": "sec-maxflowmincut.html#activity-96",
   "type": "Activity",
   "number": "7.2.6",
   "title": "",
@@ -1918,9 +2107,9 @@ var ptx_lunr_docs = [
   "body": " Max Flow Algorithm   We describe an algorithm to find the maximum flow for , a capacitated network with a unique source and sink :    INITIALIZE: We begin with any feasible flow (including the zero flow.)    Pick an -path in from to such that:   Each forward edge of satisfies .   Eack backwards edge satisfies .    (If no such -path exists, GOTO 5)    Compute     Define a new flow as follows: for each forward edge of , , we add . For each backwards edge we subtract .  Let and GOTO 2    STOP. The flow is now optimal.     "
 },
 {
-  "id": "subsec-flowcutalgorithms-5",
+  "id": "activity-97",
   "level": "2",
-  "url": "sec-maxflowmincut.html#subsec-flowcutalgorithms-5",
+  "url": "sec-maxflowmincut.html#activity-97",
   "type": "Activity",
   "number": "7.2.8",
   "title": "",
@@ -1972,9 +2161,9 @@ var ptx_lunr_docs = [
   "body": "  Give a network , a path  from , is a sequence of consecutive edges where . We say that the length of is . We say that the distance from to , , is the length of a shortest path from to .   "
 },
 {
-  "id": "sec-weighted-5",
+  "id": "activity-98",
   "level": "2",
-  "url": "sec-weighted.html#sec-weighted-5",
+  "url": "sec-weighted.html#activity-98",
   "type": "Activity",
   "number": "7.3.2",
   "title": "",
@@ -1990,9 +2179,9 @@ var ptx_lunr_docs = [
   "body": "  We define a cycle in a weighted network to be a path froma vertex to itself. If the length of a cycle is negative, we call it a negative cycle .   "
 },
 {
-  "id": "sec-weighted-7",
+  "id": "activity-99",
   "level": "2",
-  "url": "sec-weighted.html#sec-weighted-7",
+  "url": "sec-weighted.html#activity-99",
   "type": "Activity",
   "number": "7.3.3",
   "title": "",
@@ -2008,18 +2197,18 @@ var ptx_lunr_docs = [
   "body": " Dijkstra's Algorithm   Let be a weighted network with only non-negative weights. Then Dijkstra's Shortest Path Algorithm is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let .    Let .    If : STOP.    For each , let .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .   "
 },
 {
-  "id": "sec-weighted-10",
+  "id": "activity-100",
   "level": "2",
-  "url": "sec-weighted.html#sec-weighted-10",
+  "url": "sec-weighted.html#activity-100",
   "type": "Activity",
   "number": "7.3.4",
   "title": "",
   "body": "  Apply to the shortest path problem in .   "
 },
 {
-  "id": "sec-weighted-11",
+  "id": "activity-101",
   "level": "2",
-  "url": "sec-weighted.html#sec-weighted-11",
+  "url": "sec-weighted.html#activity-101",
   "type": "Activity",
   "number": "7.3.5",
   "title": "",
@@ -2035,9 +2224,9 @@ var ptx_lunr_docs = [
   "body": "  Let be a weighted network with no negative cycles. Then an algorithm to find shortest paths is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let .    Let .    If : STOP.    For each , let , if has a value changed by this process, remove from and add it to .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .   "
 },
 {
-  "id": "sec-weighted-14",
+  "id": "exploration-11",
   "level": "2",
-  "url": "sec-weighted.html#sec-weighted-14",
+  "url": "sec-weighted.html#exploration-11",
   "type": "Exploration",
   "number": "7.3.6",
   "title": "",
@@ -2080,9 +2269,9 @@ var ptx_lunr_docs = [
   "body": "  A linear programming problem where all solutions must be integers is called an integer programming problem .  If the condition that solutions be integers are relaxed, this is called the relaxation of the integer programming problem.   "
 },
 {
-  "id": "sec-branchbound-4",
+  "id": "activity-102",
   "level": "2",
-  "url": "sec-branchbound.html#sec-branchbound-4",
+  "url": "sec-branchbound.html#activity-102",
   "type": "Activity",
   "number": "8.1.2",
   "title": "",
@@ -2107,18 +2296,18 @@ var ptx_lunr_docs = [
   "body": "  The branch and bound algorithm for solving an integer programming maximization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer programming problem.    Solve the relaxation of the linear programming problem. If the solution is integral STOP.    For some in the optimal solution found in the previous step, define two sub problems, one with additional constraint and     Pick one of the subproblems and solve the linear relaxation with the additional constraint.    If the solution is integral, RETURN to 4.    If the solution is less than any integral solution found, RETURN to 4.    If the problem is infeasible, RETURN to 4.    Apply 3-7 to the new problem.    If all subproblems are explored, RETURN to 4 for the parent problem.    Once the search tree has been exhausted, identify the optimal integral solution.     "
 },
 {
-  "id": "sec-branchbound-7",
+  "id": "example-3",
   "level": "2",
-  "url": "sec-branchbound.html#sec-branchbound-7",
+  "url": "sec-branchbound.html#example-3",
   "type": "Example",
   "number": "8.1.3",
   "title": "",
   "body": "  The complete search tree for is as follows   A Tree Diagram describing additional constraints.    We start at Node 0, and identify the two subproblems. We exlore the subproblem where in Node 1, and again identify two subproblems. We stop and return at Node 2 because the solution was integral. We stop and return from Node 3, even though the solution is not integral, because the optimal solution for that subproblem was already less than the solution found in Node 1, and any further exploration would lead to a lower value still.  We then return to the starting node and to the other initial subproblem in Node 4, were . When we split into the the two subproblems, gives an integral solution in Node 5, and the constraint gives an infeasible problem.  Thus, we return, and of the two integral solutions found, has the highest value.   "
 },
 {
-  "id": "sec-branchbound-8",
+  "id": "activity-104",
   "level": "2",
-  "url": "sec-branchbound.html#sec-branchbound-8",
+  "url": "sec-branchbound.html#activity-104",
   "type": "Activity",
   "number": "8.1.4",
   "title": "",
@@ -2143,9 +2332,9 @@ var ptx_lunr_docs = [
   "body": "  In this exploration, we motivate the math behind the cutting plane method.  Let be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                     Explain why the above equality is equivalent to     Show that for any feasible integeral solution of the left hand side off the equality in (2) is an integer.    Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.    For any integral solution, what is a non-negative integer upper bound for ?    Show that for any feasible integral solution to the relaxation of the integer programming problem.  We call the hyperplane a cutting-plane .    Show that if is non-integral, then by adding this constraint, the solution is no longer feasible.    "
 },
 {
-  "id": "sec-cuttingplane-3",
+  "id": "activity-105",
   "level": "2",
-  "url": "sec-cuttingplane.html#sec-cuttingplane-3",
+  "url": "sec-cuttingplane.html#activity-105",
   "type": "Activity",
   "number": "8.2.2",
   "title": "",
@@ -2161,9 +2350,9 @@ var ptx_lunr_docs = [
   "body": " Gomory Cutting-Plane Algorithm   The Gomory cutting-plane algorithm for an optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer programming problem.    Solve the relaxation of the integer program. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non integral and for that row, construct the additional bound: .    GOTO 2.     "
 },
 {
-  "id": "backmatter-2",
+  "id": "colophon-2",
   "level": "1",
-  "url": "backmatter-2.html",
+  "url": "colophon-2.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",

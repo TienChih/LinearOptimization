@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
+</h3>
+<div class="introduction">
+<div class="para">We now apply this idea to an integer program.</div> <div class="para logical">
+<div class="para">Consider the integer programming problem:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\textbf{Maximize: }  f(x_1, x_2) \amp = -x_1+5x_2\\
+\textbf{Subject to: }  3x_1+2x_2 \amp \leq 12\\
+-3x_1+2x_2 \amp \leq 70\\
+x_1, x_2 \amp \geq  0\\
+x_1, x_2 \text{are integers.} \amp 
+\end{align*}
+</div>
+</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Solve the relaxation of this integer program, and verify that this solution is not integral. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Take the second row <span class="process-math">\(x_2=b_2-a_{21}x_1-a_{22}x_2\)</span> and follow the procedure in <a href="" class="xref" data-knowl="./knowl/exploration-cut.html" title="Exploration 8.2.1">Exploration 8.2.1</a> to generate a new constraint <span class="process-math">\(a_{31}t_1+a_{32}t_2\leq b_3\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Using the fact that <span class="process-math">\(t_1=12-3x_1-2x_2, t_2=7+3x_1-2x_2\text{,}\)</span> describe this cutting plane <span class="process-math">\(a_{31}t_1+a_{32}t_2=b_3\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Pivot of the entry <span class="process-math">\(a_{31}\)</span> and verify that the resulting basic solution is optimal and non-integral. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">There is only one valid choice of row to generate a new constraint.  Follow the procedure in <a href="" class="xref" data-knowl="./knowl/exploration-cut.html" title="Exploration 8.2.1">Exploration 8.2.1</a> to generate a new constraint <span class="process-math">\(a_{41}t_3+a_{42}t_2=b_4\)</span> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{41}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{42}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_4\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Using the fact that <span class="process-math">\(t_3=-\frac{3}{4}+\frac{1}{4}t_1+\frac{1}{4}t_2\text{,}\)</span> express this new cutting plane <span class="process-math">\(a_{41}t_3+a_{42}t_2=b_4\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">Pivot on the entry <span class="process-math">\(a_{42}\)</span> and verify that the resulting basic solution is optimal and non-integral. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{41}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{42}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para">Use either the <span class="process-math">\(t_1\)</span> or <span class="process-math">\(t_2\)</span> row to generate a new constraint <span class="process-math">\(a_{51}t_3+a_{52}t_4\leq b_5\text{.}\)</span> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_4\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{41}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{42}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{51}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{52}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_5\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para">Using the fact that <span class="process-math">\(t_4=-\frac{1}{3}+\frac{2}{3}s_3+\frac{2}{3}t_2\text{,}\)</span> express this new cutting plane <span class="process-math">\(a_{51}t_3+a_{52}t_4=b_5\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para">Pivot on the <span class="process-math">\(a_{52}\)</span> entry and verify that the resulting basic solution is optimal <em class="emphasis">and</em> integral! <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_5\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{41}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{42}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{51}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{52}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(k)</span></h4>
+<div class="para">Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag the objective plane onto the optimal solution to the integer program.</div> <iframe id="interactive-27" width="600" height="750" src="interactive-27-if.html"></iframe></article></article><span class="incontext"><a href="sec-cuttingplane.html#activity-105" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Problems for Chapter 4</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Linear Optimization">
+<meta property="book:author" content="Tien Chih">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.31/pretext_search.js"></script><link href="https://pretextbook.org/css/0.81/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.31</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.31/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.31/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.31/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="https://pretextbook.org/css/0.81/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.81/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-section-dualpivot.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-duality.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-games.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+   
+   \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
+    \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
+    \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometric Linear Programming</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-convexity.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">3</span> <span class="title">Noncanonical Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">7</span> <span class="title">Network Flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercisesduality"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.4</span><span class="space"> </span><span class="title">Problems for Chapter 4</span>
+</h2>
+<section class="exercises" id="exercises-duality"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-34"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-802">For each problem in <a href="" class="xref" data-knowl="./knowl/ex-solvesimplex.html" title="Exercise 2.7.5">Exercise 2.7.5</a>, if the problem has an optimal solution, identify the bounding hyperplanes that the solution lies on, then state the normal vector for the objective plane in terms of the normal vectors of the bounding hyperplanes.</div></article><article class="exercise exercise-like" id="exercise-35"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-67">
+<div class="para" id="p-803">Suppose that a company is painting figurines, 4 colors <span class="process-math">\(C_1, C_2, C_3, C_4\text{.}\)</span>   The colors are mixed from red, green and blue paint.</div> <div class="para" id="p-804">
+<span class="process-math">\(C_1\)</span> takes 2 oz of red, 2 oz green and 1 oz blue. <span class="process-math">\(C_2\)</span> takes 3 oz of red, 1 oz green and 1 oz blue. <span class="process-math">\(C_3\)</span> takes 1 oz of red, 2 oz green and 2 oz blue. <span class="process-math">\(C_4\)</span> takes 1 oz of red and 4 oz blue.</div> <div class="para" id="p-805">Figurines with color <span class="process-math">\(C_1, C_3\)</span> sell for $20, <span class="process-math">\(C_2\)</span> colored figures sell for $25 dollars and <span class="process-math">\(C_4\)</span> colored figurines sell for $30.  The company has many figurines to paint and 100 oz each of red, green and blue paint.  How many of each colored figurine should be painted to maximize revenue?</div>
+</div>
+<article class="task exercise-like" id="task-327"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-806">Solve the above canonical maximization problem and</div></article><article class="task exercise-like" id="task-328"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-807">If we had 110 oz red, 100 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?</div></article><article class="task exercise-like" id="task-329"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-808">If we had 95 oz red, 100 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?</div></article><article class="task exercise-like" id="task-330"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-809">If we had 100 oz red, 110 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?</div></article><article class="task exercise-like" id="task-331"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="p-810">If we had 100 oz red, 100 oz green, and 95 oz blue paint, without resolving the problem, what would the optimal revenue be?</div></article></article><article class="exercise exercise-like" id="exercise-36"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-68">
+<div class="para" id="p-811">An office worker is eating in their work cafeteria and they are recently put on a low cholestrol diet.  Their usual choices are pasta, tofu and chicken sandwiches.  The pasta has 8 g of protein, 60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol. The tofu has 60 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 50 mg of cholesterol. The chicken sandwich has 40 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.</div> <div class="para" id="p-812">They need 200 g of protein, 960 g of carbohydrates and 40 mg of vitamin C in a month, and wishes to minimize cholesterol.</div>
+</div>
+<article class="task exercise-like" id="task-332"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-813">Find the optimal solution to the above problem.</div></article><article class="task exercise-like" id="task-333"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-814">Suppose they needed to increase their protein consumption to 220 g a month.  Without recomputing the solution, what would the new minimum cholesterol be?</div></article><article class="task exercise-like" id="task-334"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-815">Suppose instead that they needed to decrease their carbohydrate consumption to 190 g a month.  Without recomputing the solution, what would the new minimum cholesterol be?</div></article><article class="task exercise-like" id="task-335"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-816">Suppose instead that they needed to increase their vitamin C consumption to 45 g a month.  Without recomputing the solution, what would the new minimum cholesterol be?</div></article></article><article class="exercise exercise-like" id="exercise-37"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-817">Suppose the maximum value of the objective function <span class="process-math">\(f(\x)=c_1x_1+\cdots +c_{m+n}x_{m+n}\)</span> of a linear optimization problem is attained at the point <span class="process-math">\(\x^*\)</span> with the first <span class="process-math">\(m\)</span> variables as basic variables. Determine if the following are TRUE or FALSE:</div> <ol class="lower-alpha">
+<li id="li-154"><div class="para" id="p-818">If we increase <span class="process-math">\(x_i, 1\leq i\leq m\text{,}\)</span> the value of the objective function is still <span class="process-math">\(f(\x')\text{.}\)</span>
+</div></li>
+<li id="li-155"><div class="para" id="p-819">If we increase <span class="process-math">\(x_i, m+1\leq i\leq m+n\text{,}\)</span> the value of the objective function is still <span class="process-math">\(f(\x')\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="ex-duality"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-69"><div class="para" id="p-820">Consider <a href="" class="xref" data-knowl="./knowl/cor-farkasv2.html" title="Corollary 4.2.6: The Farkas Lemma v2">Corollary 4.2.6</a>.</div></div>
+<article class="task exercise-like" id="task-336"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-821">Prove that if the primal program is infeasible, and the dual program is feasible, then the dual program is unbounded below.  (Use <a href="" class="xref" data-knowl="./knowl/cor-farkasv2.html" title="Corollary 4.2.6: The Farkas Lemma v2">Corollary 4.2.6</a>.)</div></article><article class="task exercise-like" id="task-337"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-822">Prove that if the dual program is infeasible, and the primal program is feasible, then the primal program is unbounded above.  (Use (a).)</div></article><article class="task exercise-like" id="task-338"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-823">Prove that if the primal (dual) program is feasible and unbounded above (below), then the dual (primal) program is infeasible.</div></article><article class="task exercise-like" id="task-339"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-824">Find a primal-dual linear program where both the primal and dual problems are infeasible.</div></article></article><article class="exercise exercise-like" id="exercise-39"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-70">
+<div class="para" id="p-825">Consider the canonical maximization linear optimization problem below:</div> <div class="para logical" id="p-826"><div class="displaymath process-math" id="md-68">
+\begin{align*}
+\textbf{Maximize: }  f(x,y) = \amp x+y\\
+\textbf{Subject to: } x+2y\amp \leq  4\\
+3x+y\amp \leq  6\\
+x,y\amp \geq  0
+\end{align*}
+</div></div>
+</div>
+<article class="task exercise-like" id="task-340"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-827">State the dual canonical minimization linear programming problem.</div></article><article class="task exercise-like" id="task-341"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-828">Sketch the constraint sets for both problems above.</div></article><article class="task exercise-like" id="task-342"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-829">Solve both problems above by applying the simplex algorithm to a dual tableau. Indicate the movement in both constraint set diagrams exhibited by the basic solutions of successive tableaus.</div></article><article class="task exercise-like" id="task-343"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-830">Is complementary slackness exhibited in the solutions above? Why or why not?</div></article></article><article class="exercise exercise-like" id="exercise-40"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-831">For each problem in <a href="" class="xref" data-knowl="./knowl/ex-solvesimplex.html" title="Exercise 2.7.5">Exercise 2.7.5</a>, state the dual problem and find it’s solution.</div></article><article class="exercise exercise-like" id="exercise-41"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-71"><div class="para" id="p-832">For each of the following, solve the canonical dual minimization problem.  If there are infinitely many solutions, classify them all.</div></div>
+<article class="task exercise-like" id="task-344"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-833"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-345"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-834"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-346"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-835"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-347"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-836"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-348"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="p-837"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-349"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="p-838"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article></article><article class="exercise exercise-like" id="exercise-42"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-72">
+<div class="para" id="p-839">Consider the following tableau:</div> <div class="para" id="p-840"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div>
+</div>
+<article class="task exercise-like" id="task-350"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-841">Find <span class="process-math">\(b_1, b_2, c_1, c_2\)</span> so that the basic solutions of the above tableau are optimal, and both problems have infinitely many solutions.</div></article><article class="task exercise-like" id="task-351"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-842">Classify the choices for <span class="process-math">\(b_1, b_2, c_1, c_2\)</span> for which the conditions of part a hold.</div></article></article><article class="exercise exercise-like" id="exercise-43"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-73">
+<div class="para" id="p-843">Consider a two variable, two constraint primal maximization problem.  Recall Weak Duality <a href="" class="xref" data-knowl="./knowl/prop-weakduality.html" title="Proposition 4.2.2">Proposition 4.2.2</a>, and Complementary Slackness, <a href="" class="xref" data-knowl="./knowl/def-complementaryslackness.html" title="Definition 4.2.8">Definition 4.2.8</a>.</div> <div class="para" id="p-844">Suppose we found a pair of primal-dual solutions which satisfied main constraints, but one or more non-negativity constraints.</div>
+</div>
+<article class="task exercise-like" id="task-352"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-845">Must the  Weak Duality  still hold?  Prove or find a counterexample.</div></article><article class="task exercise-like" id="task-353"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-846">Suppose there were a pair of such solutions so that <span class="process-math">\(f=g\text{,}\)</span> must complementary slackness still hold?  Prove or find a counterexample.</div></article></article><article class="exercise exercise-like" id="exercise-44"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-74"><div class="para" id="p-847">Solve the following non-cononical primal-dual problems:</div></div>
+<article class="task exercise-like" id="task-354"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-848"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{y_1}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-355"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-849"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{y_1}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-356"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-850"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{y_1}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="task-357"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-851"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_2}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{y_1}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(y_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+</tr>
+</table></div></div></article></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-section-dualpivot.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-games.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

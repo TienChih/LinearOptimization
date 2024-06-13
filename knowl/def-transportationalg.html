@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
+</h3>
+<div class="para">To summarize, the transportation algorithm is as follows:</div> <ol class="decimal">
+<li>
+<div class="para">We begin with a feasible transportation tableau, probably via VAM <a href="" class="xref" data-knowl="./knowl/def-vam.html" title="Definition 6.1.2">Definition 6.1.2</a>.</div>
+<div class="para">We then associate with each row an unknown <span class="process-math">\(a_i\)</span> and each column a <span class="process-math">\(b_j\text{.}\)</span>
+</div>
+</li>
+<li><div class="para">We (by convention) let <span class="process-math">\(b_1=0\)</span> and select values <span class="process-math">\(a_i, b_j\)</span> so that for each basis entry <span class="process-math">\(c_{ij}\)</span> we have that <span class="process-math">\(c_{ij} = a_i+b_j\text{.}\)</span>
+</div></li>
+<li><div class="para">Replace every entry <span class="process-math">\(c_{ij}\)</span> with <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>
+</div></li>
+<li>
+<div class="para">If there is a negative entry <span class="process-math">\(c_{k\ell}\)</span> box this entry and select basis entries so that they, along with the boxed entry, form a cycle.</div>
+<div class="para">If each entry is non-negative, GOTO 6.</div>
+</li>
+<li>
+<div class="para">Shift shipments appropriately along the cycle so that <span class="process-math">\(c_{k\ell}\)</span> has a positive shipping quantity, and one of the selected basis entries has a zero shipping quantity.</div>
+<div class="para">Then GOTO 2.</div>
+</li>
+<li><div class="para">Replace each cost entry with the costs from step 1 and terminate.</div></li>
+</ol></article><span class="incontext"><a href="sec-transportalgorithm.html#def-transportationalg" class="internal">in-context</a></span>
+</body>
+</html>
