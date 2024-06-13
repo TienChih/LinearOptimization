@@ -4,10 +4,1372 @@
   <title>Problems for <xref ref="ch-duality"/></title>
 
   <exercises xml:id="exercises-duality">
+
+    <exercise>
+      <p>
+        For each problem in <xref ref="ex-solvesimplex"/>,
+        if the problem has an optimal solution, identify the bounding hyperplanes
+        that the solution lies on, then state the normal vector for the objective plane
+        in terms of the normal vectors of the bounding hyperplanes.
+      </p>
+    </exercise>
+    
+    <exercise>
+      <introduction>
+        <p>
+          Suppose that a company is painting figurines, 4 colors
+          <m>C_1, C_2, C_3, C_4</m>.   The colors are mixed from red, green and blue paint. 
+        </p>
+        <p>
+          <m>C_1</m> takes 2 oz of red, 2 oz green and 1 oz blue. <m>C_2</m> takes 3 oz of red, 1 oz green and 1 oz blue.
+          <m>C_3</m> takes 1 oz of red, 2 oz green and 2 oz blue. <m>C_4</m> takes 1 oz of red and 4 oz blue.
+        </p>
+        <p>
+          Figurines with color <m>C_1, C_3</m> sell for $20, <m>C_2</m> colored figures sell for
+          $25 dollars and <m>C_4</m> colored figurines sell for $30.  The company has many figurines to paint 
+          and 100 oz each of red, green and blue paint.  How many of each colored
+          figurine should be painted to maximize revenue?
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Solve the above canonical maximization problem and 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If we had 110 oz red, 100 oz green, and 100 oz blue
+            paint, without resolving the problem, what would the optimal
+            revenue be? 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If we had 95 oz red, 100 oz green, and 100 oz blue
+            paint, without resolving the problem, what would the optimal
+            revenue be? 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If we had 100 oz red, 110 oz green, and 100 oz blue
+            paint, without resolving the problem, what would the optimal
+            revenue be? 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If we had 100 oz red, 100 oz green, and 95 oz blue
+            paint, without resolving the problem, what would the optimal
+            revenue be? 
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          An office worker is eating in their work cafeteria and they 
+          are recently put on a low cholestrol diet.  Their usual choices
+          are pasta, tofu and chicken sandwiches.  The pasta has 8 g of protein,
+          60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.
+          The tofu has 60 g of protein,
+          40 g of carbohydrates, 2 mg of vitamin C, and 50 mg of cholesterol.
+          The chicken sandwich has 40 g of protein,
+          40 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.
+        </p>
+        <p>
+          They need 200 g of protein, 960 g of
+          carbohydrates and 40 mg of vitamin C in a month,
+          and wishes to minimize cholesterol.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find the optimal solution to the above problem.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose they needed to increase their protein consumption to
+            220 g a month.  Without recomputing the solution, what would the new
+            minimum cholesterol be?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose instead that they needed to decrease their carbohydrate consumption to
+            190 g a month.  Without recomputing the solution, what would the new
+            minimum cholesterol be?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose instead that they needed to increase their vitamin C consumption to
+            45 g a month.  Without recomputing the solution, what would the new
+            minimum cholesterol be?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    
+
+    <exercise>
+      <statement>
+        <p>
+          Suppose the maximum value of the objective function <m>f(\x)=c_1x_1+\cdots +c_{m+n}x_{m+n}</m>
+          of a linear optimization problem is attained at the point <m>\x^*</m> with the first <m>m</m> variables as
+basic variables. Determine if the following are TRUE or FALSE:
+        </p>
+        <ol>
+          <li>
+            <p>
+              If we increase <m>x_i, 1\leq i\leq m</m>, the value
+              of the objective function is still <m>f(\x')</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If we increase <m>x_i, m+1\leq i\leq m+n</m>, the value
+              of the objective function is still <m>f(\x')</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
     
 
     
     
+    <exercise xml:id="ex-duality">
+      <introduction>
+        <p>
+          Consider <xref ref="cor-farkasv2"/>.
+        </p>
+      </introduction>
+      
+      <task>
+        <statement>
+          <p>
+            Prove that if the primal program is infeasible, and the dual program
+            is feasible, then the dual program is unbounded below.  (Use <xref ref="cor-farkasv2"/>.)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove that if the dual program is infeasible, and the primal program
+            is feasible, then the primal program is unbounded above.  (Use (a).)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove that if the primal (dual) program is feasible and unbounded above (below),
+            then the dual (primal) program is infeasible.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find a primal-dual linear program where both the primal and dual problems are infeasible.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider the canonical maximization linear optimization problem below:
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Maximize: }  f(x,y) = \amp x+y</mrow>
+            <mrow>\textbf{Subject to: } x+2y\amp \leq  4</mrow>
+            <mrow> 3x+y\amp \leq  6</mrow>
+            <mrow> x,y\amp \geq  0</mrow>
+          </md>
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            State the dual canonical minimization linear programming problem.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Sketch the constraint sets for both problems above.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Solve both problems above by applying the simplex algorithm to a dual tableau.
+Indicate the movement in both constraint set diagrams exhibited by the basic
+solutions of successive tableaus.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is complementary slackness exhibited in the solutions above? Why or why not?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+
+    <exercise>
+      <statement>
+        <p>
+          For each problem in <xref ref="ex-solvesimplex"/>, state the dual problem
+          and find it's solution.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          For each of the following, solve the canonical dual minimization
+          problem.  If there are infinitely many solutions, classify them all.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> -2</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> 2</m>
+                </cell>
+                <cell right="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> 9</m>
+                </cell>
+                <cell right="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell>
+                  <m> 3</m>
+                </cell>
+                <cell right="medium">
+                  <m> 2</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> 2</m>
+                </cell>
+                <cell>
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=s_3</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 0</m>
+                </cell>
+                <cell right="medium">
+                  <m> -2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell>
+                  <m> -2</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+            <p>
+              Consider the following tableau:
+            </p>
+            <p>
+              <tabular halign="center">
+                <row>
+                  <cell halign="left">
+                  </cell>
+                  <cell bottom="medium">
+                    <m>x_1</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m>x_2</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m>-1</m>
+                  </cell>
+                  <cell halign="left">
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="left" right="medium">
+                    <m>y_1</m>
+                  </cell>
+                  <cell>
+                    <m> 2</m>
+                  </cell>
+                  <cell right="medium">
+                    <m> 0</m>
+                  </cell>
+                  <cell right="medium">
+                    <m> c_1</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>=-t_1</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="left" right="medium">
+                    <m>y_2</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m> 0</m>
+                  </cell>
+                  <cell right="medium" bottom="medium">
+                    <m> 3</m>
+                  </cell>
+                  <cell right="medium" bottom="medium">
+                    <m> c_2</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>=-t_2</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="left" right="medium">
+                    <m>-1</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m> b_1</m>
+                  </cell>
+                  <cell right="medium" bottom="medium">
+                    <m> b_2</m>
+                  </cell>
+                  <cell right="medium" bottom="medium">
+                    <m> 0</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>=f</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                  </cell>
+                  <cell>
+                    <m>=s_1</m>
+                  </cell>
+                  <cell>
+                    <m>=s_2</m>
+                  </cell>
+                  <cell>
+                    <m>=g</m>
+                  </cell>
+                </row>
+              </tabular>
+            </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find <m>b_1, b_2, c_1, c_2</m> so that the basic solutions
+            of the above tableau are optimal, and both problems have infinitely many solutions.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Classify the choices for <m>b_1, b_2, c_1, c_2</m>
+            for which the conditions of part a hold.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider a two variable, two constraint primal maximization
+          problem.  Recall 
+          Weak Duality <xref ref="prop-weakduality"/>, and Complementary Slackness, <xref ref="def-complementaryslackness"/>.
+
+        </p>
+        <p>
+          Suppose we found a pair of primal-dual solutions which satisfied main constraints,
+          but one or more non-negativity constraints.
+        </p>
+      </introduction>
+      
+      <task>
+        <statement>
+          <p>
+            Must the  Weak Duality  still hold?  Prove or find a counterexample.
+          </p>
+        </statement>
+      </task>
+      
+      <task>
+        <statement>
+          <p>
+            Suppose there were a pair of such solutions so that <m>f=g</m>,
+            must complementary slackness still hold?  Prove or find a counterexample.
+          </p>
+        </statement>
+      </task>
+
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Solve the following non-cononical primal-dual problems:
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>\ec{x_1}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>\ec{y_1}</m>
+                </cell>
+                <cell>
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 2</m>
+                </cell>
+                <cell right="medium">
+                  <m> 2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=0</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=0</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>\ec{x_1}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>\ec{y_1}</m>
+                </cell>
+                <cell>
+                  <m> 2</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=0</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=0</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>\ec{x_1}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>\ec{y_1}</m>
+                </cell>
+                <cell>
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=0</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=0</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>\ec{x_1}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\ec{x_2}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>\ec{y_1}</m>
+                </cell>
+                <cell>
+                  <m> 1</m>
+                </cell>
+                <cell>
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=0</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell>
+                  <m> -1</m>
+                </cell>
+                <cell>
+                  <m> -1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium">
+                  <m> 1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=0</m>
+                </cell>
+                <cell>
+                  <m>=0</m>
+                </cell>
+                <cell>
+                  <m>=s_3</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      
+    </exercise>
 
 
       

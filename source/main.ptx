@@ -12,16 +12,15 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <!--<xi:include href="intro/ch-main.ptx" />
     <xi:include href="geometric/ch-main.ptx" />
     <xi:include href="simplex/ch-main.ptx" />
-    <xi:include href="noncanon/ch-main.ptx" />-->
+    <xi:include href="noncanon/ch-main.ptx" />
     <xi:include href="duality/ch-main.ptx" />
-    <!--<xi:include href="games/ch-main.ptx" />
+    <xi:include href="games/ch-main.ptx" />
     <xi:include href="transport/ch-main.ptx" />
     <xi:include href="flow/ch-main.ptx" />
     <xi:include href="integer/ch-main.ptx" />
-   <xi:include href="extras/ch-main.ptx" />-->
+   <!--<xi:include href="extras/ch-main.ptx" />-->
 
 
     <!-- Include backmatter -->

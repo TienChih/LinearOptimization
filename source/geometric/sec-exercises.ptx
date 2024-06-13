@@ -5,77 +5,103 @@
 
   <exercises xml:id="exercises-geometric">
     <exercise>
-      <p>
-        Draw and shade appropriate regions in <m>\mathbb{R}^2</m> as described below,
-         where <m>x, y\geq 0</m>.
-
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          Draw and shade appropriate regions in <m>\mathbb{R}^2</m> as described below,
+           where <m>x, y\geq 0</m>.
+  
+        </p>
+      </introduction>
+      <task>
+        <statement>
           <p>
             A bounded polyhedral convex subset.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+      <task>
+        <statement>
           <p>
             An unbounded polyhedral convex subset.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A bounded nonconvex subset
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             An unbounded nonconvex subset.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A convex subset that is not a polyhedral convex subset.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A convex subset having no extreme points.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A polyhedral convex subset having no extreme points.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A bounded polyhedral convex subset having exactly one extreme point.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             An unbounded polyhedral convex subset having exactly one extreme point.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             An bounded convex subset having infinitely many extreme points.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             An unbounded convex subset having infinitely many extreme points.
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+       
     </exercise>
 
     <exercise xml:id="ex-convertcanon">
-      <p>
-        Convert each of the linear optimization problems below to canonical form as in
-<xref ref="def-canonicalproblems"/>.
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          Convert each of the linear optimization problems below to canonical form as in
+  <xref ref="def-canonicalproblems"/>.
+        </p>
+      </introduction>
+      
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y) = \amp 3x-y</mrow>
@@ -84,8 +110,10 @@
               <mrow> x,y\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  g(x,y) = \amp -4x-2y</mrow>
@@ -94,8 +122,10 @@
               <mrow> x,y\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  h(x,y, z) = \amp x+3y-3z</mrow>
@@ -105,8 +135,10 @@
               <mrow> y, z\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  k(x,y,z) = \amp x-2y-z</mrow>
@@ -115,16 +147,20 @@
               <mrow> x,y,z\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A drive-in sells homemade hot dogs and hamburgers.  The hot dogs take <m>3/8</m> cup of flour and <m>2.5</m> oz of beef to make.
             A hamburger bun takes <m>1/4</m> cups of flour and <m>5</m> oz of beef.  Suppose the drive-in has <m>20</m> cups of flour
             and <m>200</m> oz of beef on hand.  If hot dogs sell for $4 and hamburgers for $6, how much of each should they make to
             maximize revenue?
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional
         elements A, B, and C, respectively, per day.  Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of
@@ -132,9 +168,11 @@
         elements A, B, C respectively.  How much of each feed should the rancher purchase to cover the herds nutritional
         needs while minimizing cost?
           </p>
-        </li>
+        </statement>
+      </task>
         
-        <li>
+        <task>
+        <statement>
           <p>
             A drug company sells three different formulations of vitamin complex and
             mineral complex. The first formulation consists entirely of vitamin complex and
@@ -145,8 +183,10 @@
             complex available, how many units of each formulation should the company
             produce so as to maximize sales revenue?
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y) = \amp 5x+6y</mrow>
@@ -156,19 +196,24 @@
               <mrow> x,y\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
         
-      </ol>
+       
     </exercise>
 
     <exercise xml:id="ex-geosolve">
-      <p>
-        For each of the following, sketch the feasible region <m>\mathbf{R}</m>,
-        and find the optimal solution by identifying the extreme points of <m>\mathbf{R}</m>
-        and evaluating.
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          For each of the following, sketch the feasible region <m>\mathbf{R}</m>,
+          and find the optimal solution by identifying the extreme points of <m>\mathbf{R}</m>
+          and evaluating.
+        </p>
+      </introduction>
+      
+       
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y) = \amp 2x+y</mrow>
@@ -177,8 +222,10 @@
               <mrow> x,y\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  f(x,y) = \amp 2x+y</mrow>
@@ -187,45 +234,60 @@
               <mrow> x,y\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <xref ref="ex-convertcanon"/> (A).
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <xref ref="ex-convertcanon"/> (B).
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <xref ref="ex-convertcanon"/> (D).
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <xref ref="ex-convertcanon"/> (E).
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <xref ref="ex-convertcanon"/> (F).
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <xref ref="ex-convertcanon"/> (G).
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <xref ref="ex-convertcanon"/> (H).
           </p>
-        </li>
+        </statement>
+      </task>
         
         
-      </ol>
+       
     </exercise>
 
     <exercise>
@@ -323,22 +385,28 @@
   </exercise>
 
   <exercise>
-    <p>
-      For each of the following, determine whether or not the statement is TRUE or FALSE.  If TRUE, provide a proof,
-      if FALSE, provide a counterexample.
-    </p>
-    <ol markers="A.">
-      <li>
+    <introduction>
+      <p>
+        For each of the following, determine whether or not the statement is TRUE or FALSE.  If TRUE, provide a proof,
+        if FALSE, provide a counterexample.
+      </p>
+    </introduction>
+    
+      <task>
+        <statement>
         <p>
           If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.
         </p>
-      </li>
-      <li>
+      </statement>
+      </task>
+      <task>
+        <statement>
         <p>
           If a canonical feasible linear optimization problem has unbounded feasible region, then it is unbounded.
         </p>
-      </li>
-    </ol>
+      </statement>
+      </task>
+     
   </exercise>
 
 

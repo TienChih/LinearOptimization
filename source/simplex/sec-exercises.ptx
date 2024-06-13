@@ -5,276 +5,323 @@
 
   <exercises xml:id="exercises-simplex">
     <exercise>
-      <p>
-        Consider the tableau:
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              <m>x_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m> 3</m>
-            </cell>
-            <cell right="medium">
-              <m> 4</m>
-            </cell>
-            <cell right="medium">
-              <m> 8</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_1</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m> 1</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 2</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 9</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_2</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m> 5</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 6</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 7</m>
-            </cell>
-            <cell halign="left">
-              <m>=f</m>
-            </cell>
-          </row>
-        </tabular>
-
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          Consider the tableau:
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m> 3</m>
+              </cell>
+              <cell right="medium">
+                <m> 4</m>
+              </cell>
+              <cell right="medium">
+                <m> 8</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 9</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m> 5</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 6</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 7</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+  
+        </p>
+      </introduction>
+      
+      <task>
+        <statement>
           <p>
             Write out the canonical maximization problem encoded by the tableau.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+         
+        
+        <task>
+        <statement>
           <p>
             State the basic solution for this tableau.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             Determine if the basic solution is feasible.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             Pivot on the entry <m>2</m>.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             Write out the new canonical maximization problem in terms of the non-basic variables and
             the new basic solution in terms of <m>x_1, x_2</m>.
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     <exercise>
-      <p>
-        Consider the tableau:
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              
-            </cell>
-            <cell bottom="medium">
-              
-            </cell>
-            <cell bottom="medium">
-              
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>y_1</m>
-            </cell>
-            <cell>
-              <m> 3</m>
-            </cell>
-            <cell right="medium">
-              <m> 4</m>
-            </cell>
-            <cell right="medium">
-              <m> 8</m>
-            </cell>
-            <cell halign="left">
-              
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>y_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m> 1</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 2</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 9</m>
-            </cell>
-            <cell halign="left">
-              
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              <m>-1</m>
-            </cell>
-            <cell bottom="medium">
-              <m> 5</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 6</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m> 7</m>
-            </cell>
-            <cell halign="left">
-              
-            </cell>
-          </row>
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell>
-              <m>=s_1</m>
-            </cell>
-            <cell>
-              <m>=s_2</m>
-            </cell>
-            <cell>
-              <m>=g</m>
-            </cell>
-          </row>
-          
-        </tabular>
-
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          Consider the tableau:
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_1</m>
+              </cell>
+              <cell>
+                <m> 3</m>
+              </cell>
+              <cell right="medium">
+                <m> 4</m>
+              </cell>
+              <cell right="medium">
+                <m> 8</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>y_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m> 1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 9</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m> 5</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 6</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m> 7</m>
+              </cell>
+              <cell halign="left">
+                
+              </cell>
+            </row>
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+            </row>
+            
+          </tabular>
+  
+        </p>
+      </introduction>
+      
+         
+        <task>
+        <statement>
           <p>
             Write out the canonical minimization problem encoded by the tableau.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             State the basic solution for this tableau.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             Determine if the basic solution is feasible.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             Pivot on the entry <m>3</m>.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             Write out the new canonical minimization problem in terms of the non-basic variables and
             the new basic solution in terms of <m>y_1, y_2</m>.
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     <exercise>
-      <p>
-        For each of the following canonical maximization tableaus:
-        <ul>
-          <li>
-            <p>
-              Write out the current basic solution.
-            </p>
+      <introduction>
+        <p>
+          For each of the following canonical maximization tableaus:
+          <ul>
+            <li>
+          <statement>
+              <p>
+                Write out the current basic solution.
+              </p>
+            </statement>
+          </li>
+            <li>
+          <statement>
+              <p>
+                Determine if the current basic solution is feasible.
+              </p>
+            </statement>
+          </li>
+            <li>
+          <statement>
+              <p>
+                Determine if the tableau detects that the feasible region is unbounded.
+              </p>
+            </statement>
+          </li>
+            <li>
+          <statement>
+              <p>
+                Determine if the tableau detects that the problem is infeasible.  If so,
+                ignore the rest of the prompts.
+              </p>
+            </statement>
+          </li>
+            <li>
+          <statement>
+              <p>
+                Determine if the tableau detects that the problem is unbounded.  If so, ignore the rest of the prompts.
+              </p>
+            </statement>
           </li>
           <li>
-            <p>
-              Determine if the current basic solution is feasible.
-            </p>
+              <p>
+                Determine if the current basic solution is optimal.  If so, ignore the rest of the prompts.
+              </p>
           </li>
-          <li>
-            <p>
-              Determine if the tableau detects that the feasible region is unbounded.
-            </p>
+            <li>
+          <statement>
+              <p>
+                Identify all valid pivot entries.
+              </p>
+            </statement>
           </li>
-          <li>
-            <p>
-              Determine if the tableau detects that the problem is infeasible.  If so,
-              ignore the rest of the prompts.
-            </p>
+            <li>
+          <statement>
+              <p>
+                Pivot on the entry corresponding to Bland's Anti-cycling rules.
+              </p>
+            </statement>
           </li>
-          <li>
-            <p>
-              Determine if the tableau detects that the problem is unbounded.  If so, ignore the rest of the prompts.
-            </p>
+            <li>
+          <statement>
+              <p>
+                Write out the new basic solution.
+              </p>
+            </statement>
           </li>
-          <li>
-            <p>
-              Determine if the current basic solution is optimal.  If so, ignore the rest of the prompts.
-            </p>
-          </li>
-          <li>
-            <p>
-              Identify all valid pivot entries.
-            </p>
-          </li>
-          <li>
-            <p>
-              Pivot on the entry corresponding to Bland's Anti-cycling rules.
-            </p>
-          </li>
-          <li>
-            <p>
-              Write out the new basic solution.
-            </p>
-          </li>
-        </ul>
-      </p>
-      <ol marker="A.">
-        <li>
+          </ul>
+        </p>
+      </introduction>
+      
+         
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -343,8 +390,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -425,8 +474,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -527,8 +578,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -629,8 +682,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -716,8 +771,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -803,8 +860,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -905,8 +964,9 @@
               </row>
             </tabular>
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     <exercise>
@@ -917,11 +977,15 @@
     </exercise>
 
     <exercise xml:id="ex-solvesimplex">
-      <p>
-        Solve the following using the Simplex Algorithm.
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          Solve the following using the Simplex Algorithm.
+        </p>
+      </introduction>
+      
+         
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y) = \amp -x+4y</mrow>
@@ -931,8 +995,10 @@
               <mrow> x,y\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  g(x,y) = \amp 3x+2y</mrow>
@@ -941,8 +1007,10 @@
               <mrow> x,y\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  h(x,y,z) = \amp -x-y</mrow>
@@ -951,8 +1019,10 @@
               <mrow> x,y,z\amp \geq  0</mrow>
             </md>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -1020,8 +1090,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -1105,8 +1177,10 @@
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -1191,8 +1265,9 @@
               
             </tabular>
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     <exercise>
@@ -1204,11 +1279,15 @@
     </exercise>
 
     <exercise>
-      <p>
-        Solve the following using the Simplex Algorithm.
-      </p>
-      <ol markers="A.">
-        <li>
+      <introduction>
+        <p>
+          Solve the following using the Simplex Algorithm.
+        </p>
+      </introduction>
+      
+        
+        <task>
+        <statement>
           <p>
             A firm produces a rare blend of scotch whiskey. The blend must contain at least
 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three
@@ -1223,8 +1302,10 @@ distillery products can be combined for the blend.
             How much of each product should be used to produce 100 gallons of blend
             at minimal cost?
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             A company produces three types of tires for the SUV market. In their manufacture,
 the tires are processed on two machines, a molder and a capper. Tire type A takes
@@ -1234,8 +1315,9 @@ the tires are processed on two machines, a molder and a capper. Tire type A take
 needs to be made each week to fulfill current contracts.  If 3000 hours are available each week for molders
 and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     <exercise>
@@ -1370,12 +1452,16 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
     </exercise>
 
     <exercise>
-      <p>
-        The following have multiple optimal solutions, use the
-        Simplex Algorithm and then pivots to classify all the optimal solutions.
-      </p>
-      <ol markers="A.">
-        <li>
+      <introduction>
+        <p>
+          The following have multiple optimal solutions, use the
+          Simplex Algorithm and then pivots to classify all the optimal solutions.
+        </p>
+      </introduction>
+      
+        
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -1467,8 +1553,10 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
               </row>
             </tabular>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <tabular halign="center">
               <row>
@@ -1553,305 +1641,317 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
               
             </tabular>
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     
 
     <exercise xml:id="ex-invert">
-      <p>
-        Consider a square tableau:
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              <m>x_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_n</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>a_{11}</m>
-            </cell>
-            <cell>
-              <m>a_{12}</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{1n}</m>
-            </cell>
-            <cell right="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_1</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>a_{21}</m>
-            </cell>
-            <cell>
-              <m>a_{22}</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{2n}</m>
-            </cell>
-            <cell right="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_2</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\ddots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell halign="left">
-              <m>\vdots</m>
-            </cell>
-          </row>
-          
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>a_{n1}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>a_{n2}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>a_{nn}</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_n</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-        </tabular>
-        Suppose we perform pivots so we achieve a tableau of the form:
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              <m>t_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>t_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell bottom="medium">
-              <m>t_n</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>a'_{11}</m>
-            </cell>
-            <cell>
-              <m>a'_{12}</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>a'_{1n}</m>
-            </cell>
-            <cell right="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-x_1</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>a'_{21}</m>
-            </cell>
-            <cell>
-              <m>a'_{22}</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>a'_{2n}</m>
-            </cell>
-            <cell right="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-x_2</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\ddots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell halign="left">
-              <m>\vdots</m>
-            </cell>
-          </row>
-          
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>a'_{n1}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>a'_{n2}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>a'_{nn}</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=-x_n</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-        </tabular>
-      </p>
-      <p>
-        Let <m>A=[a_{ij}]_{n\times n}</m> and <m>A'=[a'_{ij}]_{n\times n}</m>.
-        For each of the following matrices <m>A</m> perform appropriate
-        pivots to achieve <m>A'</m> and confirm <m>A'=A^{-1}</m>.
-      </p>
-      <ol markers="A.">
-        <li>
+      <introduction>
+        <p>
+          Consider a square tableau:
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_n</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1n}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2n}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nn}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+          Suppose we perform pivots so we achieve a tableau of the form:
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_n</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a'_{11}</m>
+              </cell>
+              <cell>
+                <m>a'_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a'_{1n}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>a'_{21}</m>
+              </cell>
+              <cell>
+                <m>a'_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a'_{2n}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>a'_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a'_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a'_{nn}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Let <m>A=[a_{ij}]_{n\times n}</m> and <m>A'=[a'_{ij}]_{n\times n}</m>.
+          For each of the following matrices <m>A</m> perform appropriate
+          pivots to achieve <m>A'</m> and confirm <m>A'=A^{-1}</m>.
+        </p>
+
+      </introduction>
+      
+     
+        
+        <task>
+        <statement>
           <p>
             <m>A=\begin{bmatrix}0 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 1    \end{bmatrix}</m>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <m>A=\begin{bmatrix}1 &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; -1    \end{bmatrix}</m>
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             <m>A=\begin{bmatrix}0 &amp; 1 &amp; 2 &amp; 3 \\ 1 &amp; 2 &amp; 3 &amp; 2 \\ 2 &amp; 3 &amp; 2 &amp; 1 \\ 3 &amp; 2 &amp; 1 &amp; 0    \end{bmatrix}</m>
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     <exercise>
@@ -1861,8 +1961,9 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
     </exercise>
 
     <exercise>
-      <ol marker="A.">
-        <li>
+         
+        <task>
+        <statement>
           <p>
             Find neccesary and sufficient conditions for the minimization tableau
             <tabular halign="center">
@@ -1981,15 +2082,19 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
             </tabular>
             to have a feasible basic solution.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             If a minimization tableau as depicted above has a feasible 
             basic solution, must it also have a feasible basic maximum solution?  Prove
             or find a counterexample.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+        <task>
+        <statement>
           <p>
             Find neccesary and sufficient conditions for 
             <tabular halign="center">
@@ -2113,8 +2218,9 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
             to encode feasible basic solutions for both it's maximization
             and minimization problems.
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+         
     </exercise>
 
     <exercise>

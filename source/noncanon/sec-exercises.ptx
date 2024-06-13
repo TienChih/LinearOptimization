@@ -7,13 +7,16 @@
     
 
     <exercise xml:id="ex-noncanon">
-      <p>
-        Solve each of the noncanonicallinear programming problems below. If a linear
-programming problem has infinitely many optimal solutions, find all optimal
-solutions.
-      </p>
-      <ol marker="A.">
-        <li  >
+      <introduction>
+        <p>
+          Solve each of the noncanonicallinear programming problems below. If a linear
+  programming problem has infinitely many optimal solutions, find all optimal
+  solutions.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y,z)  \amp = x-2y-z</mrow>
@@ -22,9 +25,14 @@ solutions.
               <mrow> y-2z \amp \geq  0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
+      
+      
         
-        <li  >
+        
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  g(x,y,z)  \amp = 4x+2y+z</mrow>
@@ -33,10 +41,12 @@ solutions.
               <mrow> 2y+z \amp \leq  4</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y,z)  \amp = 4x+2y+z</mrow>
@@ -45,9 +55,11 @@ solutions.
               <mrow> 2y+z \amp \leq  4</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  k(x,y,z)  \amp = x+2y+z</mrow>
@@ -57,9 +69,11 @@ solutions.
               <mrow>x, y, z \amp \geq 0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  h(x,y,z)  \amp = x+y+z</mrow>
@@ -69,9 +83,11 @@ solutions.
               <mrow>x, y, z \amp \geq 0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  f(x,y,z)  \amp = 3x+y+2z</mrow>
@@ -80,9 +96,11 @@ solutions.
               <mrow>y, z \amp \geq 0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  \ell(x,y,z)  \amp = x+y+z</mrow>
@@ -92,9 +110,11 @@ solutions.
               <mrow>x, y \amp \geq 0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y,z)  \amp = 3x-2y+3z</mrow>
@@ -104,9 +124,11 @@ solutions.
               <mrow>y, z \amp \geq 0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  \alpha(x,y,z)  \amp = -5x+y-2z</mrow>
@@ -115,9 +137,11 @@ solutions.
               <mrow> 3x-y+z\amp \leq 3</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  g(x,y,z)  \amp = x+y+z</mrow>
@@ -125,9 +149,11 @@ solutions.
               <mrow> y-z\amp \geq  1</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
 
-        <li  >
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y)  \amp = x+y</mrow>
@@ -137,43 +163,53 @@ solutions.
               <mrow>x, y \amp \geq 0</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
         
-      </ol>
+       
     </exercise>
 
     <exercise>
-      <p>
-        Label each of the following statements TRUE or FALSE. If the statement is FALSE,
-provide a counterexample.
-      </p>
-      <ol>
-        <li marker="A.">
+      <introduction>
+        <p>
+          Label each of the following statements TRUE or FALSE. If the statement is FALSE,
+  provide a counterexample.
+        </p>
+      </introduction>
+      
+      <task>
+        <statement>
           <p>
             A noncanonical linear programming problem with more unconstrained independent
 variables than constraints has unbounded objective function.  (As in  <xref ref="ex-noncanon"/> (J))
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+         <task>
+        <statement>
           <p>
             A noncanonicallinear programming problem with more equations of constraint
 than independent variables is infeasible.  (As in  <xref ref="ex-noncanon"/> (K))
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+       
     </exercise>
 
 
     <exercise>
-      <p>
-        Sketch the constraint set for each noncanonicallinear programming problem below.
-On the basis of this constraint set, formulate a conjecture as to whether or not the
-solution of the given problem is the same as the solution of the associated canonical
-linear programming problem where all independent variables are constrained to be
-nonnegative. Verify your conjecture by solving both linear programming problems.
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          Sketch the constraint set for each noncanonicallinear programming problem below.
+  On the basis of this constraint set, formulate a conjecture as to whether or not the
+  solution of the given problem is the same as the solution of the associated canonical
+  linear programming problem where all independent variables are constrained to be
+  nonnegative. Verify your conjecture by solving both linear programming problems.
+        </p>
+      </introduction>
+       
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y)  \amp = x+y</mrow>
@@ -181,9 +217,11 @@ nonnegative. Verify your conjecture by solving both linear programming problems.
               <mrow> x-y\amp \geq -2</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
   
-        <li>
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  g(x,y)  \amp = 2x+y</mrow>
@@ -191,9 +229,11 @@ nonnegative. Verify your conjecture by solving both linear programming problems.
               <mrow> 2x-y\amp \geq 1</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
   
-        <li>
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y)  \amp = 5x+y</mrow>
@@ -201,9 +241,11 @@ nonnegative. Verify your conjecture by solving both linear programming problems.
               <mrow> 2x+y\amp \leq 7</mrow>
             </md>
           </p>
-        </li>
+        </statement>
+      </task>
   
-        <li>
+         <task>
+        <statement>
           <p>
             <md>
               <mrow>\textbf{Minimize: }  g(x,y)  \amp = x+2y</mrow>
@@ -211,8 +253,9 @@ nonnegative. Verify your conjecture by solving both linear programming problems.
               <mrow> 2x+y\amp \geq 0</mrow>
             </md>
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+       
     </exercise>
 
     <exercise>
@@ -231,107 +274,123 @@ nonnegative. Verify your conjecture by solving both linear programming problems.
     </exercise>
 
     <exercise xml:id="ex-unconstrained">
-      <p>
-        Another method method for transforming a linear optimization problem with
-        unconstrained independent variables into canonical form is to replace every
-        unconstrained independent variable by the difference of two independent variables
-        constrained to be nonnegative. This produces an equivalent canonical linear
-        programming problem which is solved by using the simplex algorithm.
-      </p>
-      <p>
-        For example:
-      </p>
-      <p>
-        <md>
-          <mrow>\textbf{Maximize: }  f(x,y)  \amp = 4x+y</mrow>
-          <mrow>\textbf{Subject to: } x+y\amp \leq 2</mrow>
-          <mrow> x-2y\amp \leq 5</mrow>
-          <mrow> x\amp \geq0</mrow>
-        </md>
-      </p>
-      <p>
-        May be restated as the following canonical optimization problem:
-      </p>
-      <p>
-        <md>
-          <mrow>\textbf{Maximize: }  f(x,y^+, y^-)  \amp = 4x+y^+-y^-</mrow>
-          <mrow>\textbf{Subject to: } x+y^+-y^-\amp \leq 2</mrow>
-          <mrow> x-2y^+ + 2y^-\amp \leq 5</mrow>
-          <mrow> x, y^+, y^-\amp \geq0</mrow>
-        </md>
-      </p>
-      <p>
-        where we let <m>y=y^+ - y^-</m>.
-      </p>
-      <ol marker="A.">
-        <li>
+      <introduction>
+        <p>
+          Another method method for transforming a linear optimization problem with
+          unconstrained independent variables into canonical form is to replace every
+          unconstrained independent variable by the difference of two independent variables
+          constrained to be nonnegative. This produces an equivalent canonical linear
+          programming problem which is solved by using the simplex algorithm.
+        </p>
+        <p>
+          For example:
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Maximize: }  f(x,y)  \amp = 4x+y</mrow>
+            <mrow>\textbf{Subject to: } x+y\amp \leq 2</mrow>
+            <mrow> x-2y\amp \leq 5</mrow>
+            <mrow> x\amp \geq0</mrow>
+          </md>
+        </p>
+        <p>
+          May be restated as the following canonical optimization problem:
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Maximize: }  f(x,y^+, y^-)  \amp = 4x+y^+-y^-</mrow>
+            <mrow>\textbf{Subject to: } x+y^+-y^-\amp \leq 2</mrow>
+            <mrow> x-2y^+ + 2y^-\amp \leq 5</mrow>
+            <mrow> x, y^+, y^-\amp \geq0</mrow>
+          </md>
+        </p>
+        <p>
+          where we let <m>y=y^+ - y^-</m>.
+        </p>
+      </introduction>
+       
+         <task>
+        <statement>
           <p>
             Solve the second canonical optimization problem above.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+         <task>
+        <statement>
           <p>
             Solve the original optimization problem.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+         <task>
+        <statement>
           <p>
             How do the solutions compare?
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+       
     </exercise>
 
     <exercise xml:id="ex-superconstrained">
-      <p>
-        Another method method for transforming a linear programming problem with
-        equations of constraint into canonical form is to replace every equation of
-        constraint by two inequality constraints. This produces an equivalent canonical
-        linear programming problem which is solved by using the simplex algorithm.
-      </p>
-      <p>
-        For example:
-      </p>
-      <p>
-        <md>
-          <mrow>\textbf{Maximize: }  f(x,y, z)  \amp = x+y+z</mrow>
-          <mrow>\textbf{Subject to: } x+2z\amp \leq 7</mrow>
-          <mrow> -x+2y-z\amp \leq 3</mrow>
-          <mrow> x+y\amp =7</mrow>
-          <mrow> x, y, z\amp \geq0</mrow>
-        </md>
-      </p>
-      <p>
-        May be restated as the following canonical optimization problem:
-      </p>
-      <p>
-        <md>
-          <mrow>\textbf{Maximize: }  f(x,y, z)  \amp = x+y+z</mrow>
-          <mrow>\textbf{Subject to: } x+2z\amp \leq 7</mrow>
-          <mrow> -x+2y-z\amp \leq 3</mrow>
-          <mrow> x+y\amp \leq 7</mrow>
-          <mrow> x+y\amp \geq 7</mrow>
-          <mrow> x, y, z\amp \geq0</mrow>
-        </md>
-      </p>
+      <introduction>
+        <p>
+          Another method method for transforming a linear programming problem with
+          equations of constraint into canonical form is to replace every equation of
+          constraint by two inequality constraints. This produces an equivalent canonical
+          linear programming problem which is solved by using the simplex algorithm.
+        </p>
+        <p>
+          For example:
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Maximize: }  f(x,y, z)  \amp = x+y+z</mrow>
+            <mrow>\textbf{Subject to: } x+2z\amp \leq 7</mrow>
+            <mrow> -x+2y-z\amp \leq 3</mrow>
+            <mrow> x+y\amp =7</mrow>
+            <mrow> x, y, z\amp \geq0</mrow>
+          </md>
+        </p>
+        <p>
+          May be restated as the following canonical optimization problem:
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Maximize: }  f(x,y, z)  \amp = x+y+z</mrow>
+            <mrow>\textbf{Subject to: } x+2z\amp \leq 7</mrow>
+            <mrow> -x+2y-z\amp \leq 3</mrow>
+            <mrow> x+y\amp \leq 7</mrow>
+            <mrow> x+y\amp \geq 7</mrow>
+            <mrow> x, y, z\amp \geq0</mrow>
+          </md>
+        </p>
+      </introduction>
     
-      <ol marker="A.">
-        <li>
+       
+         <task>
+        <statement>
           <p>
             Solve the second canonical optimization problem above.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+         <task>
+        <statement>
           <p>
             Solve the original optimization problem.
           </p>
-        </li>
-        <li>
+        </statement>
+      </task>
+         <task>
+        <statement>
           <p>
             How do the solutions compare?
           </p>
-        </li>
-      </ol>
+        </statement>
+      </task>
+       
     </exercise>
 
     <exercise>

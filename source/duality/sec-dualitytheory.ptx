@@ -90,6 +90,23 @@
   </activity>
 
   <p>
+    What we have proven is the following:
+  </p>
+
+  <proposition xml:id="prop-weakduality">
+    <statement>
+      <p>
+        For a primal maximization linear programming problem with objective function <m>f</m> and dual objective <m>g</m>,
+        we have that <me>f\leq g</me>
+      </p>
+      <p>
+        In particular, if there is a feasible primal solution <m>\x'</m> and feasible dual solution <m>\y'</m> such that
+        <me>f(\x')=g(\y')</me> then <m>\x', \y'</m> are optimal solutions for the primal and dual problems respectively.  
+      </p>
+    </statement>
+  </proposition>
+
+  <p>
     We have now that if <m>f=g</m> for a pair of feasible solutions, then we have optimality
     for both programs.  It would be good to prove that this is an if or only if statement.
   </p>
@@ -523,39 +540,7 @@
     </statement>
   </definition>
 
-  <problem xml:id="problem-duality">
-    <task>
-      <statement>
-        <p>
-          Prove that if the primal program is infeasible, and the dual program
-          is feasible, then the dual program is unbounded below.  (Use <xref ref="cor-farkasv2"/>.)
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Prove that if the dual program is infeasible, and the primal program
-          is feasible, then the primal program is unbounded above.  (Use (a).)
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Prove that if the primal (dual) program is feasible and unbounded above (below),
-          then the dual (primal) program is infeasible.
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Find a primal-dual linear program where both the primal and dual problems are infeasible.
-        </p>
-      </statement>
-    </task>
-  </problem>
+  
   
   
 
