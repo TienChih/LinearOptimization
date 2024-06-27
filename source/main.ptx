@@ -11,7 +11,7 @@
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
-    <!-- Include chapters -->
+    <!--Include chapters -->
     <xi:include href="geometric/ch-main.ptx" />
     <xi:include href="simplex/ch-main.ptx" />
     <xi:include href="noncanon/ch-main.ptx" />

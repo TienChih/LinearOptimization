@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-exercisesgames" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Problems for <xref ref="ch-games"/></title>
+
+  <exercises xml:id="exercises-games">
+
+    <exercise>
+      <introduction>
+        <p>
+          For the following games, write out the payoff matrix and the
+          reduced matrix after domination.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Rowan has a 3 of hearts, 4 of spades, 9 of spades and 10 of hearts.
+            Collen has a 5 of spades, 6 of hearts, 7 of hearts and 8 of spades.
+          </p>
+          <p>
+            Each player selects a card without revealing it, and both players flip their
+            cards over at the same time.  If the suits are the same, then Rowan wins the sum of the two card values.
+            Otherwise, Colleen wins that sum.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The same as (A) but reverse the payoff conditions for Rowan and Colleen.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Rowan picks an even integer from 1-10, and Colleen picks an
+            odd integer from 1-10.  If the difference is less than 4, the
+            player who played the bigger number wins the sum of the two values.
+            Otherwise the player who played the smaller number wins the sum of
+            the two values.
+          
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Rowan picks an integer from 1-3.  Colleen picks two guesses
+            which may be the same.  Colleen reveals their guesses one at a time.
+            If they guess correctly, they win $ equal to the value of their other guess.  
+            If they do not guess correctly, Rowan wins $ equal to the sum of both
+            guesses.
+          </p>
+        </statement>
+      </task>
+      
+      
+    </exercise>
+
+
+
+    <exercise>
+      <introduction>
+        <p>
+          For each of the following, find the von Neumann value of the
+          payoff matrix.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 0\amp 1 \amp 0 \amp -2 \amp -1\\
+              3\amp 1 \amp 1 \amp -2 \amp 2\\
+              1\amp 1 \amp 0 \amp -2 \amp 0\\
+              5\amp -3 \amp -2 \amp 4 \amp 0\\
+              2\amp 1 \amp 0 \amp -3 \amp 0\\\end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 2\amp 2 \amp -1 \amp -1 \amp 2\amp 2\\
+              -7\amp -6 \amp 5 \amp 5 \amp -6\amp -2\\
+              1\amp 1 \amp 0 \amp -1 \amp 2 \amp 2\\
+              2\amp 2 \amp 0 \amp -1 \amp 2\amp 2\\
+              6\amp -7 \amp 5 \amp 4 \amp -6 \amp -2\\\end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 4\amp -5 \amp -7 \amp 4\\
+              -1\amp 4 \amp 4 \amp 0\\
+              -2\amp 3 \amp 4 \amp 0\\
+              -2\amp 4 \amp 4 \amp -1\end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 1\amp 2 \amp -1 \amp 1 \amp 1\amp 0\\
+              3\amp 2 \amp 0 \amp 1 \amp 3\amp 1\\
+              2\amp 2 \amp 0 \amp 0 \amp 1 \amp 0\\
+              2\amp 1 \amp 0 \amp 1 \amp 1\amp 0\\
+              2\amp 1 \amp 0 \amp -1 \amp 2\amp 1\\
+              1\amp 1 \amp 0 \amp 1 \amp 1 \amp 2\\\end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+
+      
+    
+  </exercises>
+  
+
+
+
+  
+
+</section>

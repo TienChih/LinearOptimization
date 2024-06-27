@@ -81,17 +81,17 @@
         <p>
           An office worker is eating in their work cafeteria and they 
           are recently put on a low cholestrol diet.  Their usual choices
-          are pasta, tofu and chicken sandwiches.  The pasta has 8 g of protein,
+          are pasta, fried tofu and chicken sandwiches.  The pasta has 6 g of protein,
           60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.
-          The tofu has 60 g of protein,
+          The fried tofu has 10 g of protein,
           40 g of carbohydrates, 2 mg of vitamin C, and 50 mg of cholesterol.
-          The chicken sandwich has 40 g of protein,
+          The chicken sandwich has 18 g of protein,
           40 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.
         </p>
         <p>
           They need 200 g of protein, 960 g of
           carbohydrates and 40 mg of vitamin C in a month,
-          and wishes to minimize cholesterol.
+          and wishes to minimize cholesterol.  How many of each meal should they eat?
         </p>
       </introduction>
       <task>
@@ -289,10 +289,10 @@ solutions of successive tableaus.
                   <m> 1</m>
                 </cell>
                 <cell right="medium">
-                  <m> -1</m>
+                  <m> -2</m>
                 </cell>
                 <cell right="medium">
-                  <m> -1</m>
+                  <m> -2</m>
                 </cell>
                 <cell halign="left">
                   <m>=-t_1</m>
@@ -379,93 +379,6 @@ solutions of successive tableaus.
                   <m> 1</m>
                 </cell>
                 <cell right="medium">
-                  <m> -2</m>
-                </cell>
-                <cell halign="left">
-                  <m>=-t_1</m>
-                </cell>
-              </row>
-              <row>
-                <cell halign="left" right="medium">
-                  <m>y_2</m>
-                </cell>
-                <cell bottom="medium">
-                  <m> 1</m>
-                </cell>
-                <cell right="medium" bottom="medium">
-                  <m> -1</m>
-                </cell>
-                <cell right="medium" bottom="medium">
-                  <m> -1</m>
-                </cell>
-                <cell halign="left">
-                  <m>=-t_2</m>
-                </cell>
-              </row>
-              <row>
-                <cell halign="left" right="medium">
-                  <m>-1</m>
-                </cell>
-                <cell bottom="medium">
-                  <m> 1</m>
-                </cell>
-                <cell right="medium" bottom="medium">
-                  <m> 1</m>
-                </cell>
-                <cell right="medium" bottom="medium">
-                  <m> 0</m>
-                </cell>
-                <cell halign="left">
-                  <m>=f</m>
-                </cell>
-              </row>
-              <row>
-                <cell>
-                </cell>
-                <cell>
-                  <m>=s_1</m>
-                </cell>
-                <cell>
-                  <m>=s_2</m>
-                </cell>
-                <cell>
-                  <m>=g</m>
-                </cell>
-              </row>
-            </tabular>
-          </p>
-        </statement>
-      </task>
-      <task>
-        <statement>
-          <p>
-            <tabular halign="center">
-              <row>
-                <cell halign="left">
-                </cell>
-                <cell bottom="medium">
-                  <m>x_1</m>
-                </cell>
-                <cell bottom="medium">
-                  <m>x_2</m>
-                </cell>
-                <cell bottom="medium">
-                  <m>-1</m>
-                </cell>
-                <cell halign="left">
-                </cell>
-              </row>
-              <row>
-                <cell halign="left" right="medium">
-                  <m>y_1</m>
-                </cell>
-                <cell>
-                  <m> 2</m>
-                </cell>
-                <cell right="medium">
-                  <m> -2</m>
-                </cell>
-                <cell right="medium">
                   <m> -1</m>
                 </cell>
                 <cell halign="left">
@@ -477,10 +390,10 @@ solutions of successive tableaus.
                   <m>y_2</m>
                 </cell>
                 <cell bottom="medium">
-                  <m> -1</m>
+                  <m> 1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m> 1</m>
+                  <m> -1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
                   <m> -1</m>
@@ -547,10 +460,97 @@ solutions of successive tableaus.
                   <m>y_1</m>
                 </cell>
                 <cell>
-                  <m> 9</m>
+                  <m> 2</m>
                 </cell>
                 <cell right="medium">
                   <m> -2</m>
+                </cell>
+                <cell right="medium">
+                  <m> 2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> -1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> 0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell>
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> 6</m>
+                </cell>
+                <cell right="medium">
+                  <m> -1</m>
                 </cell>
                 <cell right="medium">
                   <m> 0</m>
@@ -567,7 +567,7 @@ solutions of successive tableaus.
                   <m> 3</m>
                 </cell>
                 <cell right="medium">
-                  <m> 2</m>
+                  <m> 1</m>
                 </cell>
                 <cell right="medium">
                   <m> 1</m>
@@ -598,7 +598,7 @@ solutions of successive tableaus.
                   <m>-1</m>
                 </cell>
                 <cell bottom="medium">
-                  <m> 3</m>
+                  <m> 2</m>
                 </cell>
                 <cell right="medium" bottom="medium">
                   <m> 2</m>
@@ -654,7 +654,7 @@ solutions of successive tableaus.
                   <m>y_1</m>
                 </cell>
                 <cell>
-                  <m> 2</m>
+                  <m> 1</m>
                 </cell>
                 <cell>
                   <m> -1</m>
@@ -663,7 +663,7 @@ solutions of successive tableaus.
                   <m> 1</m>
                 </cell>
                 <cell right="medium">
-                  <m> -1</m>
+                  <m> -2</m>
                 </cell>
                 <cell halign="left">
                   <m>=-t_1</m>
@@ -677,7 +677,7 @@ solutions of successive tableaus.
                   <m> -1</m>
                 </cell>
                 <cell bottom="medium">
-                  <m> 2</m>
+                  <m> 1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
                   <m> 1</m>
@@ -700,7 +700,7 @@ solutions of successive tableaus.
                   <m> -1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m> 2</m>
+                  <m> 1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
                   <m> 0</m>
@@ -759,7 +759,7 @@ solutions of successive tableaus.
                   <m> 0</m>
                 </cell>
                 <cell right="medium">
-                  <m> -2</m>
+                  <m> -1</m>
                 </cell>
                 <cell halign="left">
                   <m>=-t_1</m>
@@ -770,7 +770,7 @@ solutions of successive tableaus.
                   <m>y_2</m>
                 </cell>
                 <cell>
-                  <m> -2</m>
+                  <m> -1</m>
                 </cell>
                 <cell right="medium">
                   <m> 1</m>
@@ -793,7 +793,7 @@ solutions of successive tableaus.
                   <m> -1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m> -3</m>
+                  <m> -1</m>
                 </cell>
                 <cell halign="left">
                   <m>=-t_3</m>
@@ -1008,7 +1008,7 @@ solutions of successive tableaus.
                   <m> 1</m>
                 </cell>
                 <cell right="medium">
-                  <m> 2</m>
+                  <m> 1</m>
                 </cell>
                 <cell right="medium">
                   <m> 2</m>
@@ -1025,7 +1025,7 @@ solutions of successive tableaus.
                   <m> -1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m> -2</m>
+                  <m> -1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
                   <m> -2</m>
@@ -1096,10 +1096,10 @@ solutions of successive tableaus.
                   <m> 2</m>
                 </cell>
                 <cell right="medium">
-                  <m> -1</m>
+                  <m> -2</m>
                 </cell>
                 <cell right="medium">
-                  <m> -1</m>
+                  <m> -2</m>
                 </cell>
                 <cell halign="left">
                   <m>=0</m>
@@ -1113,10 +1113,10 @@ solutions of successive tableaus.
                   <m> -1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m> 1</m>
+                  <m> 2</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m> -1</m>
+                  <m> -2</m>
                 </cell>
                 <cell halign="left">
                   <m>=-t_2</m>
@@ -1187,7 +1187,7 @@ solutions of successive tableaus.
                   <m> -1</m>
                 </cell>
                 <cell right="medium">
-                  <m> -2</m>
+                  <m> -1</m>
                 </cell>
                 <cell halign="left">
                   <m>=0</m>
@@ -1198,10 +1198,10 @@ solutions of successive tableaus.
                   <m>y_2</m>
                 </cell>
                 <cell bottom="medium">
-                  <m> -2</m>
+                  <m> -1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m> 2</m>
+                  <m> 1</m>
                 </cell>
                 <cell right="medium" bottom="medium">
                   <m> -1</m>
