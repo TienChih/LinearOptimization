@@ -9,11 +9,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body class="ignore-math">
 <article class="task exercise-like"><h4 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">6.3.1.c</span><span class="period">.</span>
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">6.2.2.i</span><span class="period">.</span>
 </h4>
-<div class="para">Was this really necessary?</div></article><span class="incontext"><a href="sec-assignment.html#task-459" class="internal">in-context</a></span>
+<div class="para">Use Sage to confirm the solution: <div class="para">
+<pre class="ptx-sagecell sagecell-sage" id="sage-32"><script type="text/x-sage">%display typeset
+A = (FIXME)
+b = (FIXME)
+c = (FIXME)
+P = InteractiveLPProblem(A, b, c,
+ constraint_type = "==",
+ variable_type = ">=",
+ problem_type = "min")
+P
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-33"><script type="text/x-sage">print(P.optimal_solution())
+print(P.optimal_value())
+</script></pre>
+</div>
+</div></article><span class="incontext"><a href="sec-transportalgorithm.html#task-459" class="internal">in-context</a></span>
 </body>
 </html>

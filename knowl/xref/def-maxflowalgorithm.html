@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Max Flow Algorithm.</span>
+</h4> <div class="para">We describe an algorithm to find the maximum flow for <span class="process-math">\(N\text{,}\)</span>  a capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{:}\)</span>
+</div> <ol class="decimal">
+<li><div class="para">INITIALIZE: We begin with any feasible flow <span class="process-math">\(f\)</span> (including the zero flow.)</div></li>
+<li><div class="para logical">
+<div class="para">Pick an <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> in <span class="process-math">\(N\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> such that:</div>
+<ul class="disc"><li>
+<div class="para">Each forward edge of <span class="process-math">\(P\)</span> satisfies <span class="process-math">\(x_{ij} \lt c_{ij}\text{.}\)</span>
+</div>
+                  <div class="para">Eack backwards edge satisfies <span class="process-math">\(x_{ij} &gt;0\text{.}\)</span>
+</div>
+                </li></ul>
+<div class="para">(If no such <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> exists, GOTO 5)</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}.
+\end{equation*}
+</div>
+</div></li>
+<li>
+<div class="para">Define a new flow <span class="process-math">\(f'\)</span> as follows: for each forward edge of <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\((v_i, v_j)\text{,}\)</span> we add <span class="process-math">\(x_{ij}'=q+x_{ij}\text{.}\)</span>  For each backwards edge <span class="process-math">\((v_j, v_i)\)</span> we subtract <span class="process-math">\(x_{ji}' = x_{ji}-q\text{.}\)</span>
+</div>
+<div class="para">Let <span class="process-math">\(f:=f'\)</span> and GOTO 2</div>
+</li>
+<li><div class="para">STOP.  The flow is now optimal.</div></li>
+</ol></article><span class="incontext"><a class="internal" href="sec-maxflowmincut.html#def-maxflowalgorithm">in-context</a></span>
+</body>
+</html>

@@ -12,9 +12,20 @@
 </head>
 <body class="ignore-math">
 <article class="task exercise-like"><h4 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.2.5.a</span><span class="period">.</span>
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.2.3.a</span><span class="period">.</span>
 </h4>
-<div class="para">Why does the primal max problem achieve optimality?</div> <div class="para">Call the maximum flow <span class="process-math">\(f'\text{,}\)</span> with flow on each edge <span class="process-math">\(x_{ij}'\text{.}\)</span>
+<div class="para">Consider the dual program for this problem where <span class="process-math">\(\mu_{j}\)</span> is the unconstrained dual variable for the vertex equality constraint and the <span class="process-math">\(y_{ij}\)</span> is the dual variable for the capacity constraint.  Verify that this program may be written as</div> <div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}\\
+\textbf{Subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{for each edge }(v_s, v_j)\\
+-\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j), i\neq s, j\neq d\\
+- \mu_i +y_{id} \amp \geq  0, \text{for each edge }(v_i, v_d)\\
+y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(\mu_s=0, \mu_d=-1 \text{.}\)</span>
+</div>
 </div></article><span class="incontext"><a href="sec-maxflowmincut.html#task-498" class="internal">in-context</a></span>
 </body>
 </html>
