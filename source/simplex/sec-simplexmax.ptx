@@ -131,7 +131,7 @@
     <task>
       <statement>
         <p>
-          Which of the following is sufficient condition for a Tucker Tableau to correspond to a feasible solution?
+          Which of the following is a sufficient condition for a Tucker Tableau to correspond to a feasible solution?
         </p>
         <ol marker="A." cols="2">
           <li>
