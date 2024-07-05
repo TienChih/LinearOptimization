@@ -987,7 +987,7 @@
         </li>
         <li>
           <p>
-            Replace each entry <m>q</m> in the same row as <m>p</m> (but not <m>p</m>) with <m>q/p</m>.
+            Replace each entry <m>s</m> in the same row as <m>p</m> (but not <m>p</m>) with <m>s/p</m>.
           </p>
         </li>
         <li>
@@ -997,8 +997,8 @@
         </li>
         <li>
           <p>
-            Each entry <m>s</m> not in the same row or column as <m>p</m> but in the same column as <m>q</m> (which is in the same row as <m>p</m>) and in the same row as <m>r</m> (which is in the same column as <m>p</m>)
-            is replaced with <m>\frac{ps-qr}{p}</m>.
+            Each entry <m>q</m> not in the same row or column as <m>p</m> but in the same column as <m>s</m> (which is in the same row as <m>p</m>) and in the same row as <m>r</m> (which is in the same column as <m>p</m>)
+            is replaced with <m>\frac{pq-rs}{p}</m>.
           </p>
         </li>
 
