@@ -1,0 +1,2139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-exercisestransports" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Problems for <xref ref="ch-transport"/></title>
+
+  <exercises xml:id="exercises-transport">
+    <exercise xml:id="ex-transport">
+      <introduction>
+        <p>
+          Solve each of the following transportation problems
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell left="medium">
+                  <m>7</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>5</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell right="medium">
+                  <m>6</m>
+                </cell>
+                <cell halign="left">
+                  <m>20</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>6</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>10</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>15</m> 
+                </cell>
+                <cell>
+                  <m>10</m> 
+                </cell>
+                <cell right="medium">
+                  <m>10</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell left="medium">
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>10</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>20</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>10</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>15</m> 
+                </cell>
+                <cell>
+                  <m>20</m> 
+                </cell>
+                <cell right="medium">
+                  <m>5</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>25</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>5</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>5</m> 
+                </cell>
+                <cell>
+                  <m>10</m> 
+                </cell>
+                <cell right="medium">
+                  <m>15</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+               
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell left="medium">
+                  <m>5</m>
+                </cell>
+                
+                <cell right="medium">
+                  <m>9</m>
+                </cell>
+                <cell halign="left">
+                  <m>5</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+              
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>10</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>7</m>
+                </cell>
+                
+                <cell right="medium" bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>25</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>30</m> 
+                </cell>
+                
+                <cell right="medium">
+                  <m>10</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+               
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell left="medium">
+                  <m>4</m>
+                </cell>
+                
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>3</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+              
+                <cell right="medium">
+                  <m>8</m>
+                </cell>
+                <cell halign="left">
+                  <m>2</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>9</m>
+                </cell>
+              
+                <cell right="medium">
+                  <m>10</m>
+                </cell>
+                <cell halign="left">
+                  <m>6</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>10</m>
+                </cell>
+                
+                <cell right="medium" bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>7</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>6</m> 
+                </cell>
+                
+                <cell right="medium">
+                  <m>12</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>7</m>
+                </cell>
+                <cell>
+                  <m>10</m>
+                </cell>
+                <cell right="medium">
+                  <m>10</m>
+                </cell>
+                <cell halign="left">
+                  <m>5</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>16</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>6</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>3</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>5</m> 
+                </cell>
+                <cell>
+                  <m>9</m> 
+                </cell>
+                <cell>
+                  <m>4</m> 
+                </cell>
+                <cell right="medium">
+                  <m>6</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell left="medium">
+                  <m>3</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>14</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>7</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell>
+                  <m>7</m>
+                </cell>
+                <cell right="medium">
+                  <m>11</m>
+                </cell>
+                <cell halign="left">
+                  <m>5</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>9</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>12</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>4</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>5</m> 
+                </cell>
+                <cell>
+                  <m>7</m> 
+                </cell>
+                <cell right="medium">
+                  <m>18</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell>
+                  <m>7</m>
+                </cell>
+                <cell>
+                  <m>9</m>
+                </cell>
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>8</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell>
+                  <m>8</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>15</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>8</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>6</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>6</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>11</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>10</m> 
+                </cell>
+                <cell>
+                  <m>11</m> 
+                </cell>
+                <cell>
+                  <m>8</m> 
+                </cell>
+                <cell right="medium">
+                  <m>13</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell>
+
+                </cell>
+              </row>
+              
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>5</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>14</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell>
+                  <m>7</m>
+                </cell>
+                <cell>
+                  <m>7</m>
+                </cell>
+                <cell right="medium">
+                  <m>6</m>
+                </cell>
+                <cell halign="left">
+                  <m>4</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>7</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>6</m> 
+                </cell>
+              </row>
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell>
+                  <m>8</m> 
+                </cell>
+                <cell>
+                  <m>6</m> 
+                </cell>
+                <cell>
+                  <m>10</m> 
+                </cell>
+                <cell right="medium">
+                  <m>5</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+
+      
+    </exercise>
+
+    <exercise>
+      <p>
+        In <xref ref="ex-transport"/>, looking at the final talbeau of the transportation
+        algorithm, determine which of these have a <em>unique</em> optimal solution.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        In <xref ref="ex-transport"/>, for each problem <em>without</em> a unique optimal solution,
+        find an alternative solution and show that it is feasible and gives the same objective value.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        <em>True or False</em> for a valid choice of <m>a_i, b_j</m> in <xref ref="def-transportationalg"/>
+        step 2, then for a fixed real number <m>Z</m>, <m>a_i-Z, b_j+Z</m> is also a valid choice.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        Suppose <m>Z</m> were an absurdly large number.  Solve the transportation problem:
+        <tabular halign="center">
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell bottom="medium">
+              
+            </cell>
+            <cell bottom="medium">
+              
+            </cell>
+            <cell bottom="medium">
+              
+            </cell>
+            <cell>
+
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell left="medium">
+              <m>3</m>
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>Z</m>
+            </cell>
+            <cell halign="left">
+              <m>8</m> 
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell>
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell halign="left">
+              <m>6</m> 
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell>
+              <m>Z</m>
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell halign="left">
+              <m>7</m> 
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              
+            </cell>
+            <cell bottom="medium">
+              <m>5</m>
+            </cell>
+            <cell bottom="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>3</m>
+            </cell>
+            <cell halign="left" bottom="medium">
+              <m>10</m> 
+            </cell>
+          </row>
+          <row>
+            <cell halign="right">
+            </cell>
+            <cell>
+              <m>10</m> 
+            </cell>
+            <cell>
+              <m>9</m> 
+            </cell>
+            <cell right="medium">
+              <m>12</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+      </p>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Solve the following transportation problems:
+        </p>
+        <task>
+          <statement>
+            <p>
+              <tabular halign="center">
+                <row>
+                  <cell halign="right">
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell>
+  
+                  </cell>
+                </row>
+                
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell>
+                    <m>4</m>
+                  </cell>
+                  <cell>
+                    <m>6</m>
+                  </cell>
+                  <cell>
+                    <m>5</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>6</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>8</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell>
+                    <m>6</m>
+                  </cell>
+                  <cell>
+                    <m>6</m>
+                  </cell>
+                  <cell>
+                    <m>4</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>7</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>19</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell>
+                    <m>6</m>
+                  </cell>
+                  <cell>
+                    <m>5</m>
+                  </cell>
+                  <cell>
+                    <m>4</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>5</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>14</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    <m>4</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m>6</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m>3</m>
+                  </cell>
+                  <cell right="medium" bottom="medium">
+                    <m>7</m>
+                  </cell>
+                  <cell halign="left" bottom="medium">
+                    <m>14</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right">
+                  </cell>
+                  <cell>
+                    <m>15</m> 
+                  </cell>
+                  <cell>
+                    <m>20</m> 
+                  </cell>
+                  <cell>
+                    <m>20</m> 
+                  </cell>
+                  <cell right="medium">
+                    <m>10</m>
+                  </cell>
+                  <cell halign="left">
+                  </cell>
+                </row>
+              </tabular>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              <tabular halign="center">
+                <row>
+                  <cell halign="right">
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    
+                  </cell>
+                  <cell>
+  
+                  </cell>
+                </row>
+                
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell>
+                    <m>3</m>
+                  </cell>
+                  <cell>
+                    <m>5</m>
+                  </cell>
+                  <cell>
+                    <m>6</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>5</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>15</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell>
+                    <m>3</m>
+                  </cell>
+                  <cell>
+                    <m>4</m>
+                  </cell>
+                  <cell>
+                    <m>3</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>5</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>5</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell>
+                    <m>3</m>
+                  </cell>
+                  <cell>
+                    <m>3</m>
+                  </cell>
+                  <cell>
+                    <m>3</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>5</m>
+                  </cell>
+                  <cell halign="left">
+                    <m>15</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right" right="medium">
+                    
+                  </cell>
+                  <cell bottom="medium">
+                    <m>3</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m>6</m>
+                  </cell>
+                  <cell bottom="medium">
+                    <m>5</m>
+                  </cell>
+                  <cell right="medium" bottom="medium">
+                    <m>5</m>
+                  </cell>
+                  <cell halign="left" bottom="medium">
+                    <m>10</m> 
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right">
+                  </cell>
+                  <cell>
+                    <m>10</m> 
+                  </cell>
+                  <cell>
+                    <m>7</m> 
+                  </cell>
+                  <cell>
+                    <m>9</m> 
+                  </cell>
+                  <cell right="medium">
+                    <m>12</m>
+                  </cell>
+                  <cell halign="left">
+                  </cell>
+                </row>
+              </tabular>
+            </p>
+          </statement>
+        </task>
+      </introduction>
+    </exercise>
+
+    <exercise>
+      <p>
+        On the planet Zeltros, a luxury resort is preparing for a multi-day celebration they are hosting.
+        One of the requested activities by the guests is hoverbike riding.  Over the three day event, they will require
+        <m>500</m> hoverbikes on the first day, <m>300</m> hoverbikes on the second and <m>800</m> hoverbikes on the final day.
+      </p>
+      <p>
+        Brand new hoverbikes are <m>1000</m> credits.  After use they undergo a maintanence procedure 
+        which costs <m>250</m> credits and takes two days, before they may be used again.  A rush job that takes one day is possible
+        but costs <m>400</m> credits.
+      </p>
+      <p>
+        The resort naturally wishes to minimize their costs.  They wish to know how many bikes to purchase and what maintanence 
+        schedule would achieve this.
+      </p>
+      <p>
+        Model this as a transportation problem where the <q>warehouses</q> are the number of brand new hoverbikes purchased before day 1,
+        used hoverbikes from day 1 and used hoverbikes from day 2.  Can we make educated guesses on what these capacities should be?  What
+        should the <q>markets</q> represent and what are their demands?  Then solve the problem.
+      </p>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Solve the following assignment problem using both <xref ref="def-hungarian"/> and
+          as a transportation problem using <xref ref="def-transportationalg"/>.
+
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                
+              </cell>
+              
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell left="medium">
+                <m>2</m>
+              </cell>
+              <cell>
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>5</m>
+              </cell>
+              <cell>
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>6</m>
+              </cell>
+              
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>5</m>
+              </cell>
+            
+            </row>
+            
+          </tabular>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="ex-assignment">
+      <introduction>
+        <p>
+          Solve the following assignment problems
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell left="medium">
+                  <m>33</m>
+                </cell>
+                <cell>
+                  <m>23</m>
+                </cell>
+                <cell right="medium">
+                  <m>22</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>38</m>
+                </cell>
+                <cell>
+                  <m>27</m>
+                </cell>
+                <cell right="medium">
+                  <m>30</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>38</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>33</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>34</m>
+                </cell>
+              
+              </row>
+              
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                
+              </row>
+              
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell>
+                  <m>7</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>5</m>
+                </cell>
+                
+              </row>
+              
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                
+              </row>
+              
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>11</m>
+                </cell>
+                <cell>
+                  <m>13</m>
+                </cell>
+                <cell>
+                  <m>15</m>
+                </cell>
+                <cell right="medium">
+                  <m>18</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>9</m>
+                </cell>
+                <cell>
+                  <m>8</m>
+                </cell>
+                <cell>
+                  <m>12</m>
+                </cell>
+                <cell right="medium">
+                  <m>16</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>15</m>
+                </cell>
+                <cell>
+                  <m>16</m>
+                </cell>
+                <cell>
+                  <m>17</m>
+                </cell>
+                <cell right="medium">
+                  <m>20</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>14</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>14</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>16</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>19</m>
+                </cell>
+                
+              </row>
+              
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                
+              </row>
+              
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>12</m>
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell>
+                  <m>9</m>
+                </cell>
+              <cell>
+                <m>11</m>
+              </cell>
+                <cell right="medium">
+                  <m>7</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>14</m>
+                </cell>
+                <cell>
+                  <m>7</m>
+                </cell>
+                <cell>
+                  <m>8</m>
+                </cell>
+                <cell>
+                  <m>12</m>
+                </cell>
+                <cell right="medium">
+                  <m>9</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>17</m>
+                </cell>
+                <cell>
+                  <m>11</m>
+                </cell>
+                <cell>
+                  <m>12</m>
+                </cell>
+                <cell>
+                  <m>14</m>
+                </cell>
+                <cell right="medium">
+                  <m>11</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>18</m>
+                </cell>
+                <cell>
+                  <m>10</m>
+                </cell>
+                <cell>
+                  <m>13</m>
+                </cell>
+                <cell>
+                  <m>17</m>
+                </cell>
+                <cell right="medium">
+                  <m>12</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>13</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>6</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>8</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>11</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>6</m>
+                </cell>
+                
+              </row>
+              
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  
+                </cell>
+                
+              </row>
+              
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>13</m>
+                </cell>
+                <cell>
+                  <m>10</m>
+                </cell>
+                <cell>
+                  <m>13</m>
+                </cell>
+              <cell>
+                <m>10</m>
+              </cell>
+                <cell right="medium">
+                  <m>15</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>13</m>
+                </cell>
+                <cell>
+                  <m>8</m>
+                </cell>
+                <cell>
+                  <m>11</m>
+                </cell>
+                <cell>
+                  <m>10</m>
+                </cell>
+                <cell right="medium">
+                  <m>13</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>9</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>9</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>10</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>10</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>8</m>
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell right="medium">
+                  <m>111</m>
+                </cell>
+                
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>14</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>7</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>12</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>9</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>13</m>
+                </cell>
+                
+              </row>
+              
+            </tabular>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <p>
+        Some of the problems in <xref ref="ex-assignment"/> have multiple solutions.
+        Identify them and identify all the optimal solutions.
+      </p>
+    </exercise>
+    
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider a general balanced transportation problem with <m>w_1, \ldots, w_n</m> warehouses,
+          <m>m_1, \ldots, m_m</m> markets, and cost to ship from warehouse <m>i</m> to market <m>j</m> is
+          <m>c_{ij}</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Write out a canonical minimization problem which models this problem (it's ok to use inequalities here that
+            may not make complete sense, so long as they aren't strict inequalities)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            State the dual problem to the transportation problem.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove that in <xref ref="def-transportationalg"/>, for a valid choice of <m>a_i, b_j</m> in
+            step 2 that <me>f(\x) = \displaystyle \sum_{i} a_iw_i+\sum_{j} b_jm_j</me> How does this relate to the dual problem to the
+            transportation problem?
+          </p>
+        </statement>
+      </task>
+
+      
+
+      <task>
+        <statement>
+          <p>
+            Consider the non-negativity condition in step 4 of <xref ref="def-transportationalg"/>.  How does
+            this relate to the constraints of the dual problem to the transportation problem.
+          </p>
+        </statement>
+      </task>
+      
+    </exercise>
+
+    <exercise>
+      <p>
+        Consider an <m>n\times n</m> assignment problem treated as a transportation problem.
+        Apply VAM <xref ref="def-vam"/> to this initial tableau.  Show that the resulting basis generated has <m>n-1</m> selected entries where
+        the shipment along those entries (<m>x_{ij}</m>) is zero.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        Prove that the transportation  algorithm <xref ref="def-transportationalg"/> will lead to an optimal solution
+after a finite number of steps if the algorithm is applied to a problem with all
+data rational.
+      </p>
+    </exercise>
+
+    
+
+    <exercise xml:id="ex-shortestpathassignmentparticular">
+      <introduction>
+        <p>
+          Consider the following network:
+        </p>
+        <image xml:id="shortestpathassignment">
+          <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+          <latex-image>
+            \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (s) {$v_0$};
+              \node[mycircle,below right=of s] (v2) {$v_2$};
+              \node[mycircle,right=of v2] (v4) {$v_4$};
+              \node[mycircle,above right=of s] (v1) {$v_1$};
+              \node[mycircle,right=of v1] (v3) {$v_3$};
+              \node[mycircle,below right=of v3] (t) {$v_5$};
+  
+            \draw[->] (s) --node[above left]{\tiny$5$} (v1);
+            \draw[->] (s) --node[below left]{\tiny$3$} (v2);
+            \draw[->] (v1.280) --node[right]{\tiny$1$} (v2.80);
+            \draw[->] (v1)--node[above]{\tiny$3$}(v3);
+            \draw[->] (v1)--node[above right]{\tiny$2$}(v4);
+            \draw[->] (v2)--node[below ]{\tiny$4$}(v4);
+            \draw[->] (v3)--node[right]{\tiny$1$}(v4);
+            \draw[->] (v3)--node[above right]{\tiny$4$}(t);
+            \draw[->] (v4)--node[below right]{\tiny$4$}(t);
+            \end{tikzpicture}
+  
+          </latex-image>
+        </image> 
+        <p>
+          where the labels on each edge denote the <q>distance</q> from <m>v_i</m> to <m>v_j</m>.
+        </p>
+        <p>
+          (More about directed weighted networks may be found in <xref ref="def-weightedgraph"/>)
+        </p>
+      </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Consider an <q>assignment</q> problem with <q>sources</q> and <q>sinks</q> 
+              <m>v_0,\ldots, v_5</m> such that the <q>cost</q> of from shipping from <m>v_i</m> to <m>v_j</m> is
+              the label on the <m>v_iv_j</m> edge.  Let the cost from shipping from <m>v_5</m> to <m>v_1</m>
+              be 0.  For each <m>i, 1\leq i\leq 4</m>, let the cost of shipping from <m>v_i</m> to itself
+              be 0.  Let every other cost be an absurdly high <m>Z</m>.
+    
+            </p>
+            <p>
+              Solve this assignment problem. 
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              For your optimal solution, if  <m>v_i</m> <q>ships</q> to
+              <m>v_j</m>, highlight the corresponding edge on network above.
+              If a vertex <m>v_k</m> ships to itself, highlight that vertex.  Disregard the case when <m>v_5</m> ships to <m>v_1</m>.
+              What can you say about the highlighted edges?  What may be reasonable conjectures about these edges?
+            </p>
+          </statement>
+        </task>
+       
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider a general directed weighted network with vertices <m>v_0, \ldots, v_n</m> with a unique source <m>v_0</m> and sink <m>v_n</m>, and all weights on edges are positive
+          such as <xref ref="ex-shortestpathassignmentparticular"/>  (see <xref ref="def-weightedgraph"/> for more information).
+
+        </p>
+        <p>
+          We will be considering assignment problems where  <q>warehouses</q> and <q>markets</q> 
+          are the vertices <m>v_0, \ldots, v_n</m>.  Throughout this problem, let <m>Z</m> be an
+          absurdly large number.
+        </p>
+      </introduction>
+    </exercise>
+
+    <task>
+      <statement>
+        <p>
+          Consider an assignment problem where the cost of shipping from <m>v_i</m> to <m>v_j</m> is
+          the weight on that edge if it exists and <m>Z</m> otherwise.  Show that any solution to the assignment problem
+          (not neccesarily optimal) is bijective with the set of possible unions of disjoint cycles on the network.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Suppose we adjust the previous assignment problem where the cost of shipping from <m>v_n</m> to <m>v_0</m>
+          is 0.  Show that solutions to this assignment problem are bijective with the union of disjoint cycles 
+          and path from <m>v_0</m> to <m>v_n</m> on this network.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Suppose we then further adjust this assignment problem by setting the cost to ship from <m>v_i</m> to itself
+          for any <m>1\leq i\leq n-1</m> to be 0.  Show that an <em>optimal</em> solution to this problem must be a shortest
+          path from <m>v_0</m> to <m>v_n</m>.
+        </p>
+      </statement>
+    </task>
+
+  </exercises>
+  
+
+
+
+  
+
+</section>

@@ -122,7 +122,7 @@
     <task>
       <statement>
         <p>
-          Was this really necessary?
+          Could there have been an easier way to approach this problem?
         </p>
       </statement>
     </task>
@@ -358,7 +358,7 @@
         </li>
         <li>
           <p>
-            Subtract all uncovered entries by the smallest entry that is not covered, and add that value to the entries corresponding to intersections of the lines.
+            Let <m>M</m> be the value of the smallest uncovered entry.  Subtract all uncovered entries by <m>M</m>, and add <m>M</m> to the entries corresponding to intersections of the lines.
           </p>
         </li>
         <li>
@@ -382,6 +382,14 @@
     <task>
       <statement>
         <p>
+          Suppose that the zeroes of the tableau in a given step do <em>not</em> form a permutation
+          set of zeroes.  Show that <m>k&lt;n</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
           What would it mean if <m>k=n</m>?
         </p>
       </statement>
@@ -389,14 +397,16 @@
     <task>
       <statement>
         <p>
-          If <m>k\lt n</m>, would it be possible for all the lines to be parallel?
+          Show that step 7 is equivalent to subtracting <m>M</m> from each uncovered row,
+          and adding <m>M</m> to each covered column.  (Or subtracting <m>M</m> from each uncovered column,
+          and adding <m>M</m> to each covered row.)
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          What's going on in step 7?
+          Why does step 7 not change the optimal assignment?
         </p>
       </statement>
     </task>
@@ -416,7 +426,7 @@
       <p>
         Suppose 4 students are picking 4 research topics.  The four topics
         are to be distributed one each amongst the four students.
-        They rated the ropics on a scale of 1-10.
+        They rated the topics on a scale of 1-10.
       </p>
       <p>
         <tabular halign="center">

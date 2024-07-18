@@ -5,7 +5,7 @@
 
   <exercises xml:id="exercises-games">
 
-    <exercise>
+    <exercise xml:id="ex-games">
       <introduction>
         <p>
           For the following games, write out the payoff matrix and the
@@ -35,8 +35,8 @@
       <task>
         <statement>
           <p>
-            Rowan picks an even integer from 1-10, and Colleen picks an
-            odd integer from 1-10.  If the difference is less than 4, the
+            Rowan picks an even integer from 1-6, and Colleen picks an
+            odd integer from 1-6.  If the difference is less than 3, the
             player who played the bigger number wins the sum of the two values.
             Otherwise the player who played the smaller number wins the sum of
             the two values.
@@ -55,16 +55,127 @@
           </p>
         </statement>
       </task>
+
+      <task>
+        <title>Colonel Blotto</title>
+        <statement>
+          <p>
+            Colonel Rowan is attacking a town defended by Colonel Colleen.  Rowan
+            has three regiments and Colleen has four.  There are two routes to the town.
+            Rowan and select any number of regiments to attack along each route, up to a total of three
+            and Colleen can likewise assign her four regiments along either route, neither
+            knowing beforehand the other's strategy.
+          </p>
+          <p>
+            Along each route, whatever side has a greater number of regiments wins points
+            equal to the number of regiments sent by the opposing side (as they capture those
+            units).  Furthermore, if Rowan wins along either route, he captures the town
+            also worth one point.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <title>Morra</title>
+        <statement>
+          <p>
+            Rowan and Colleen each simultaneously hold up one or two fingers and 
+            shouts a guess for the total number of fingers held.  If either Rowan or Colleen
+            guess correctly, then they collect $ from their opponent equal to this number of fingers.
+            If they both guess correctly or both guess incorrectly, then no money changes hands.
+          </p>
+        </statement>
+      </task>
       
       
     </exercise>
 
 
 
+    
+
     <exercise>
       <introduction>
         <p>
-          For each of the following, find the von Neumann value of the
+          For each of the following payoff matrices, determine if there is a value of
+          <m>x</m> so that the matrix has a saddle point.  If so, determine the value(s) of <m>x</m>
+          and the saddle point(s).
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 1 &amp; 2 \\ x &amp; 3 \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; x \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 1 &amp; 3 \\ 2 &amp; x \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 3 &amp; x \\ x &amp; 1 \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 2 &amp; 1 \\ 3 &amp; x \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} 2 &amp; 3 \\ 1 &amp; x \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} x &amp; 1 \\ 2 &amp; 3 \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\begin{bmatrix} x &amp; 2 \\ 1 &amp; 3 \end{bmatrix}</m>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Write out a reduced payoff matrix with exactly three saddle points.
+        </p>
+      </statement>
+    </exercise>
+
+
+    
+
+    <exercise>
+      <introduction>
+        <p>
+          For each of the following, find the von Neumann value and optimal strategt for the
           payoff matrix.
         </p>
       </introduction>
@@ -113,6 +224,193 @@
         </statement>
       </task>
     </exercise>
+
+    <exercise>
+      <p>
+        For each exercise in <xref ref="ex-games"/>, determine the Von Neumann
+        value and the optimal strategy.
+      </p>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          For each of the following games of chance, determine the Von Nuemann
+          value for the game, and optimal strategies for both players.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Both players secretly flip a coin, they see their own result but not the other.
+            Suppose Heads is greater value than tails.
+          </p>
+          <p>
+            Rowan then has two choices.  He may <em>CALL</em>: both coins are revealed.
+            If Rowan wins, Colleen gives him $2, if Colleen wins, Rowan gives her $4.  If
+            both are the same, no money changes hands.  He may <em>BID</em>: Colleen then has
+            two choices.
+          </p>
+          <p>
+            Colleen may <em>FOLD</em>: and Rowan wins $4.  Or she may <em>SEE</em>: in
+            which case both coins are revealed, and the winner is awarded $10 from the loser.
+            If there is no winner, no money changes hands.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Each player adds $2 to the pot.  Then they roll a 4 sided dice in secret.
+            Each player knows their own results, but not the other's.
+          </p>
+          <p>
+            Rowan two options.  He may <em>FOLD</em>:  The pot goes to Colleen.  He may
+            <em>PLAY</em>: In which case he adds $5 to the pot.
+          </p>
+          <p>
+            Colleen then has two options.  She may <em>FOLD</em>:  The pot goes to Rowan.  She may
+            <em>PLAY</em>: In which case she adds $5 to the pot.
+          </p>
+          <p>
+            Then the results are revealed.  Whoever wins takes the pot.  If they are a tie,
+            then the pot is split between the players.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            There are 6 cards, 2 Jacks, 2 Queens and 2 Kings with Jack &lt; Queen &lt; King.
+            The players each place $1 in the pot.
+            Then, one card each is dealt to each player face down.  They may see their own card but not their opponenets.
+          </p>
+          <p>
+            Rowan now has three choices.  He may <em>FOLD</em>:  the pot goes to Colleen.
+            He may <em>CHECK</em>: the pot remains as is, or he may <em>RAISE</em>:
+            Rowan adds $2 to the pot.
+          </p>
+          <p>
+            If Rowan doesn't FOLD, Colleen also has three choices.  She may also
+            <em>FOLD</em>: The pot goes to Rown.  She may <em>SEE</em>: Colleen adds money
+            to the pot equal to what Rowan added (if any).  She may <em>SEE-RAISE</em>:
+            Colleen adds money to the pot equal to what Rowan added, and then they both add in an additional
+            $2.
+          </p>
+          <p>
+            If no one has folded at this point, the cards are revealed.  The pot goes to the winner.
+            If the cards are a tie, then the pot is split evenly between the players.
+          </p>
+
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove that if a reduced payoff matrix has multiple saddle points, they
+          have the same value.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider the payoff matrix  <me>\begin{bmatrix} x &amp; 0 \\ 0 &amp; y\end{bmatrix}.</me>
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find neccesary and sufficient conditions for this matrix to be reduced by
+            domination.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the Von Nuemann value and optimal strategies for each player for the game
+            above.  There may be multiple cases. 
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider the payoff matrix  <me>\begin{bmatrix} -x &amp; x+1 \\ x+1 &amp; -x-2\end{bmatrix}</me>
+          where <m>x &gt; 0</m>.
+        </p>
+      </introduction>
+      
+      <task>
+        <statement>
+          <p>
+            Find the Von Nuemann value and optimal strategies for each player for the game
+            above.  
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose <m>x</m> could be any value, when does this matrix reduce via domination?
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Find the Von Nuemann value and optimal strategies for each player for the game
+            above if <m>x</m> could be any value.  
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider the payoff matrix  <me>\begin{bmatrix} a &amp; c \\ d &amp; b\end{bmatrix}</me>
+          where <m> a &lt; b &lt; c &lt; d</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find the optimal solutions and the Von Nuemann value for the above game. (Without
+            loss of generality, we may assume <m>a,b,c,d</m> are positive, why?)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove that in a game with a two by two payoff matrix where the 
+            optimal solution for each player is a <em>pure strategy</em>, then
+            the matrix has a saddle point.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove via contradiction that in a game with a reduced <m>n\times n</m> payoff matrix where the 
+            optimal solution for each player is a <em>pure strategy</em>, then
+            the matrix has a saddle point.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    
 
 
       

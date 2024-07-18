@@ -63,7 +63,7 @@
         
       </p>
       <p>
-        The box here denotes that the bottom right 5 isn't currently being used by probably should be.
+        The box here denotes that the bottom right 5 isn't currently being used  but likely should be.
       </p>
       
     </introduction>
@@ -666,7 +666,7 @@
           shipments to <m>c_{23}</m>?
 
         </p>
-        <ol cols="2" markers="A.">
+        <ol cols="2" marker="A.">
           <li>
             <p>
               <m>c_{21}</m>
@@ -714,7 +714,7 @@
                 <m>\enclose{circle}{0}^{30}</m>
               </cell>
               <cell>
-                ?
+                <m>?</m>
               </cell>
               <cell right="medium">
                 <m>\enclose{circle}{0}^{10}</m>
@@ -728,13 +728,13 @@
                 <m>a_2</m>
               </cell>
               <cell>
-                <m>0</m>
+                <m>?</m>
               </cell>
               <cell>
                 <m>\enclose{circle}{0}^{50}</m>
               </cell>
               <cell right="medium">
-                <m>\enclose{circle}{-2}^{10}</m>
+                <m>\enclose{circle}{0}^{10}</m>
               </cell>
               <cell halign="left">
                 
@@ -748,10 +748,10 @@
                 <m>\enclose{circle}{0}^{10}</m>
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell halign="left">
                  
@@ -952,6 +952,52 @@
       </ol>
     </statement>
   </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the algorithm <xref ref="def-transportationalg"/>. Recall that
+        the objective function for the transportation problem is <m>f(\x)=\displaystyle \sum x_{ij}c_{ij}</m>,
+        and that the entries of the tableau produced in Step 3 are <m>c_{ij}-a_i-b_j</m>. 
+      </p>
+    </introduction>
+    <task>
+      <p>
+        Show that in step 5 the newly produced solution has a strictly lower objective value.
+      </p>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If instead of step 4, we selected an entry with a zero value, what would be true about the
+          resulting new solution?
+        </p>
+        <ol marker="A.">
+          <li>
+            <p>
+              The new solution has smaller objective value.
+            </p>
+          </li>
+          <li>
+            <p>
+              The new solution has greater objective value.
+            </p>
+          </li>
+          <li>
+            <p>
+              The new solution has the same objective value.
+            </p>
+          </li>
+          <li>
+            <p>
+              The relation of the value of the new solution to the original cannot
+              be determined in general.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </activity>
 
   <subsection xml:id="subsec-unbalanced">
     <title>Unbalnced Transportation Problems</title>

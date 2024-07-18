@@ -11,6 +11,7 @@
   <xi:include href="sec-vam.ptx" />
   <xi:include href="sec-transportalgorithm.ptx" />
   <xi:include href="sec-assignment.ptx" /> 
+  <xi:include href="sec-exercises.ptx" /> 
   
 
 </chapter>

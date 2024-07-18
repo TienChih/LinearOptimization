@@ -703,7 +703,7 @@
     <task>
       <statement>
         <p>
-          If <m>b>0</m>, used linear optimization methods to find the optimal mixed strategies for both players.
+          If <m>b>0</m>, use linear optimization methods to find the optimal mixed strategies for both players.
         </p>
       </statement>
     </task>
