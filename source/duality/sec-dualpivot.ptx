@@ -16,7 +16,7 @@
       <p>
         <tabular halign="center">
           <row>
-            <cell halign="right">
+            <cell halign="right" right="medium" bottom="medium">
             </cell>
             <cell bottom="medium">
               <m>x_1</m>
@@ -109,7 +109,7 @@
             <cell right="medium" bottom="medium">
               <m>d</m>
             </cell>
-            <cell halign="left">
+            <cell halign="left" bottom="medium">
               <m>=f</m>
             </cell>
           </row>
@@ -125,13 +125,17 @@
             <cell>
               <m>=s_m</m>
             </cell>
-            <cell>
+            <cell right="medium">
               <m>=g</m>
             </cell>
-            <cell halign="left">
+            <cell halign="left"  >
             </cell>
           </row>
         </tabular>
+      </p>
+      <p>
+        (The additional dividing lines in the top left and bottom right seperate the primal decision-slack
+        variables from the dual decision-slack vasriables.) 
       </p>
     </introduction>
     <task>
@@ -254,7 +258,7 @@
         <p>
           <tabular halign="center">
             <row>
-              <cell halign="right">
+              <cell halign="right"  right="medium" bottom="medium">
               </cell>
               <cell bottom="medium">
                 <m>x_1</m>
@@ -315,7 +319,7 @@
               <cell right="medium" bottom="medium">
                 <m>0</m>
               </cell>
-              <cell halign="left">
+              <cell halign="left" bottom="medium">
                 <m>=f</m>
               </cell>
             </row>
@@ -328,10 +332,10 @@
               <cell>
                 <m>=s_2</m>
               </cell>
-              <cell>
+              <cell right="medium">
                 <m>=g</m>
               </cell>
-              <cell halign="left">
+              <cell halign="left" >
               </cell>
             </row>
           </tabular>
@@ -354,7 +358,7 @@
         <p>
           <tabular halign="center">
             <row>
-              <cell halign="right">
+              <cell halign="right" bottom="medium" right="medium">
               </cell>
               <cell bottom="medium">
                 <m>x_1</m>
@@ -415,7 +419,7 @@
               <cell right="medium" bottom="medium">
                 <m>0</m>
               </cell>
-              <cell halign="left">
+              <cell halign="left" bottom="medium">
                 <m>=f</m>
               </cell>
             </row>
@@ -428,10 +432,11 @@
               <cell>
                 <m>=s_2</m>
               </cell>
-              <cell>
+              <cell right="medium">
                 <m>=g</m>
               </cell>
               <cell halign="left">
+                
               </cell>
             </row>
           </tabular>
@@ -540,7 +545,7 @@
       <p>
         <tabular halign="center">
           <row>
-            <cell halign="right">
+            <cell halign="right" bottom="medium" right="medium">
             </cell>
             <cell bottom="medium">
               <m>\ec{x_1} </m>
@@ -633,7 +638,7 @@
             <cell right="medium" bottom="medium">
               <m>0</m>
             </cell>
-            <cell halign="left">
+            <cell halign="left" bottom="medium">
               <m>=f</m>
             </cell>
           </row>
@@ -649,10 +654,10 @@
             <cell>
               <m>=s_3</m>
             </cell>
-            <cell>
+            <cell right="medium">
               <m>=g</m>
             </cell>
-            <cell halign="left">
+            <cell halign="left" >
             </cell>
           </row>
         </tabular>

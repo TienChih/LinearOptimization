@@ -484,7 +484,7 @@
         <p>
           <tabular halign="center">
             <row>
-              <cell halign="right">
+              <cell halign="right" bottom="medium" right="medium">
               </cell>
               <cell bottom="medium">
                 <m>\ec{v}</m>
@@ -659,7 +659,7 @@
               <cell right="medium" bottom="medium">
                 <m>0</m>
               </cell>
-              <cell halign="left">
+              <cell halign="left" bottom="medium">
                 <m>=f</m>
               </cell>
             </row>
@@ -681,7 +681,7 @@
               <cell>
                 <m>=s_n</m>
               </cell>
-              <cell>
+              <cell right="medium">
                 <m>=g</m>
               </cell>
               <cell halign="left">
@@ -742,7 +742,7 @@
       <p>
         <tabular halign="center">
           <row>
-            <cell halign="right">
+            <cell halign="right" bottom="medium" right="medium" >
             </cell>
             <cell bottom="medium">
               <m>\ec{v}</m>
@@ -873,7 +873,7 @@
             <cell right="medium" bottom="medium">
               <m>0</m>
             </cell>
-            <cell halign="left">
+            <cell halign="left" bottom="medium">
               <m>=f</m>
             </cell>
           </row>
@@ -892,7 +892,7 @@
             <cell>
               <m>=s_j</m>
             </cell>
-            <cell>
+            <cell right="medium">
               <m>=g</m>
             </cell>
             <cell halign="left">
@@ -915,7 +915,7 @@
         <p>
           <tabular halign="center">
             <row>
-              <cell halign="right">
+              <cell halign="right" bottom="medium" right="medium" >
               </cell>
               <cell bottom="medium">
                 <m>\ec{v}</m>
@@ -1046,7 +1046,7 @@
               <cell right="medium" bottom="medium">
                 <m>0</m>
               </cell>
-              <cell halign="left">
+              <cell halign="left" bottom="medium">
                 <m>=f</m>
               </cell>
             </row>
@@ -1065,7 +1065,7 @@
               <cell>
                 <m>=s_j</m>
               </cell>
-              <cell>
+              <cell right="medium">
                 <m>=g</m>
               </cell>
               <cell halign="left">
@@ -1083,7 +1083,7 @@
         <p>
           <tabular halign="center">
             <row>
-              <cell halign="right">
+              <cell halign="right" bottom="medium" right="medium">
               </cell>
               <cell bottom="medium">
                 <m>\ec{v}</m>
@@ -1214,7 +1214,7 @@
               <cell right="medium" bottom="medium">
                 <m>0</m>
               </cell>
-              <cell halign="left">
+              <cell halign="left" bottom="medium">
                 <m>=f</m>
               </cell>
             </row>
@@ -1233,7 +1233,7 @@
               <cell>
                 <m>=s_j</m>
               </cell>
-              <cell>
+              <cell right="medium">
                 <m>=g</m>
               </cell>
               <cell halign="left">
@@ -1247,7 +1247,7 @@
         <p>
         <tabular halign="center">
           <row>
-            <cell halign="right">
+            <cell halign="right" bottom="medium" right="medium">
             </cell>
             <cell bottom="medium">
               <m>t_i</m>
@@ -1378,7 +1378,7 @@
             <cell right="medium" bottom="medium">
               <m>D</m>
             </cell>
-            <cell halign="left">
+            <cell halign="left" bottom="medium">
               <m>=f</m>
             </cell>
           </row>
@@ -1397,7 +1397,7 @@
             <cell>
               <m>=\ec{u} </m>
             </cell>
-            <cell>
+            <cell right="medium">
               <m>=g</m>
             </cell>
             <cell halign="left">

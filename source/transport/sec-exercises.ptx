@@ -3,6 +3,12 @@
 <section xml:id="sec-exercisestransports" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems for <xref ref="ch-transport"/></title>
 
+  <sage>
+    <input>
+      
+    </input>
+  </sage>
+
   <exercises xml:id="exercises-transport">
     <exercise xml:id="ex-transport">
       <introduction>

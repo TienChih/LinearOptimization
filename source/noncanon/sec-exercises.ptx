@@ -3,6 +3,12 @@
 <section xml:id="sec-exercisesnoncanon" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems for <xref ref="ch-noncanon"/></title>
 
+  <sage>
+    <input>
+      
+    </input>         
+  </sage> 
+
   <exercises xml:id="exercises-noncanon">
     
 

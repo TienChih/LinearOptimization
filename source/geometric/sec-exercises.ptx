@@ -3,6 +3,12 @@
 <section xml:id="sec-exercisesgeometric" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems for <xref ref="ch-geometric"/></title>
 
+  <sage>
+    <input>
+      
+    </input>         
+  </sage>
+
   <exercises xml:id="exercises-geometric">
     <exercise>
       <introduction>
@@ -339,7 +345,11 @@
         those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.)
         <sage>
           <input>
-            A=matrix([[1,0,0,0,0],[0,1,0,0,0], [0,0,1,0,0],[0,0,0,1,0]])
+            A=matrix([
+            [1,0,0,0,0],
+            [0,1,0,0,0], 
+            [0,0,1,0,0],
+            [0,0,0,1,0]])
             print(A)
             print(" ")
             print(A.rref())

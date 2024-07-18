@@ -9,7 +9,7 @@
 
   <!-- include sections -->
   <xi:include href="sec-pivot.ptx" />
-  <xi:include href="sec-curious.ptx" />
+  <!--<xi:include href="sec-curious.ptx" />-->
   <xi:include href="sec-simplexmax.ptx" />
   <xi:include href="sec-simplexmin.ptx" /> 
   <xi:include href="sec-cycling.ptx" />

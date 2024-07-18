@@ -124,7 +124,7 @@
     <task>
       <statement>
         <p>
-          Write a (possibly noncanonical) linear minimization program that minimizes the cost
+          Write a (possibly noncanonical) linear minimization problem that minimizes the cost
           to ship these goods.
         </p>
       </statement>

@@ -3,6 +3,11 @@
 <section xml:id="sec-exercisesgames" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems for <xref ref="ch-games"/></title>
 
+  <sage>
+    <input>
+      
+    </input>         
+  </sage>
   <exercises xml:id="exercises-games">
 
     <exercise xml:id="ex-games">
@@ -175,7 +180,7 @@
     <exercise>
       <introduction>
         <p>
-          For each of the following, find the von Neumann value and optimal strategt for the
+          For each of the following, find the von Neumann value and optimal strategy for the
           payoff matrix.
         </p>
       </introduction>

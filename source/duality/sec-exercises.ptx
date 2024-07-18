@@ -2,7 +2,11 @@
 
 <section xml:id="sec-exercisesduality" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems for <xref ref="ch-duality"/></title>
-
+  <sage>
+    <input>
+      
+    </input>         
+  </sage> 
   <exercises xml:id="exercises-duality">
 
     <exercise>

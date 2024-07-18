@@ -3,6 +3,12 @@
 <section xml:id="sec-exercisessimplex" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems for <xref ref="ch-simplex"/></title>
 
+  <sage>
+    <input>
+      
+    </input>         
+  </sage> 
+
   <exercises xml:id="exercises-simplex">
     <exercise>
       <introduction>
