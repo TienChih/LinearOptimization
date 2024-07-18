@@ -168,15 +168,17 @@ true);
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Using Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -255,10 +257,10 @@ true);
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cycling"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.5</span><span class="space"> </span><span class="title">Cycling</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">Cycling</span>
 </h2>
 <article class="activity project-like" id="activity-cyclingexample"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-cyclingexample-1">
 <div class="para" id="activity-cyclingexample-1-1">Consider the following canonical maximization tableau:</div> <div class="para" id="activity-cyclingexample-1-2"><div class="tabular-box natural-width"><table class="tabular">
@@ -301,7 +303,7 @@ true);
 </table></div></div>
 </div>
 <article class="task exercise-like" id="activity-cyclingexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-cyclingexample-2-1-1">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.1">Definition 2.3.1</a>, and keep track of the variables.</div> <div class="para" id="activity-cyclingexample-2-1-2">
+<div class="para" id="activity-cyclingexample-2-1-1">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a>, and keep track of the variables.</div> <div class="para" id="activity-cyclingexample-2-1-2">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -527,7 +529,7 @@ true);
 </table></div>
 </div></article><article class="task exercise-like" id="activity-cyclingexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-cyclingexample-3-1-1">Compare your final tableau to the initial tableau.  Are there any similarities?</div></article></article><article class="activity project-like" id="sec-cycling-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-cycling-3-1"><div class="para logical" id="sec-cycling-3-1-1">
 <div class="para">Consider canonical linear programming problem: Maximzie <span class="process-math">\(f(x,y)=x+y\text{,}\)</span> subject to</div>
@@ -543,18 +545,18 @@ x,y \amp\geq0
 <article class="task exercise-like" id="sec-cycling-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-cycling-3-2-1-1">Consider a sequence of pivots swapping <span class="process-math">\((x, t_2)\text{,}\)</span> <span class="process-math">\((y, t_1)\)</span> <span class="process-math">\((t_1, y)\text{,}\)</span> <span class="process-math">\((t_2, x)\text{.}\)</span>  In each of these cases, what is the point of intersection?</div>
 <div class="solutions"><details id="sec-cycling-3-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-cycling-3-2-2-1"><iframe src="https://www.desmos.com/calculator/v6ryem5bpp" id="sec-cycling-3-2-2-1-1" width="600" height="600"></iframe></div></div></details></div></article></article><article class="definition definition-like" id="def-Cycling"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="def-Cycling-1-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.1">Definition 2.3.1</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em class="emphasis">Cycling</em>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+<div class="para" id="def-Cycling-1-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em class="emphasis">Cycling</em>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-degenerate-1-1">If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <em class="emphasis">degenerate</em> pivot.</div></article><div class="para" id="sec-cycling-6">Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate.  Fortunately, there is a solution to this issue.</div>
 <article class="theorem theorem-like" id="thm-BlandAnticycling"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Bland’s Anticycling Rules.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Bland’s Anticycling Rules.</span>
 </h3>
 <div class="para" id="thm-BlandAnticycling-2-1">List all variables, independent and dependent in the initial tableau.  Then consider the following rules:</div> <ol class="decimal">
-<li id="thm-BlandAnticycling-2-2-1"><div class="para" id="thm-BlandAnticycling-2-2-1-1">Whenever there is more than one possible choice for a pivot row according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.1">Definition 2.3.1</a>:  select the row corresponding to the variable closest to the front of the initial list.</div></li>
-<li id="thm-BlandAnticycling-2-2-2"><div class="para" id="thm-BlandAnticycling-2-2-2-1">Whenever there is more than one possible choice for a pivot column according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.1">Definition 2.3.1</a>:  select the column corresponding to the variable closest to the front of the initial list.</div></li>
+<li id="thm-BlandAnticycling-2-2-1"><div class="para" id="thm-BlandAnticycling-2-2-1-1">Whenever there is more than one possible choice for a pivot row according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a>:  select the row corresponding to the variable closest to the front of the initial list.</div></li>
+<li id="thm-BlandAnticycling-2-2-2"><div class="para" id="thm-BlandAnticycling-2-2-2-1">Whenever there is more than one possible choice for a pivot column according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a>:  select the column corresponding to the variable closest to the front of the initial list.</div></li>
 </ol> <div class="para" id="thm-BlandAnticycling-2-3">Then the Simplex Algorthm will not cycle.</div></article><details id="sec-cycling-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-cycling-8-1">For the sake of notation, we denote the initial tableau: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -891,9 +893,9 @@ c_r^*a_{rs}\lt 0.
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div></div> <div class="para" id="sec-cycling-8-13">which is a contradiction.</div></article></details><article class="activity project-like" id="sec-cycling-9"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-cycling-9-1-1">If we follow <a href="sec-cycling.html#thm-BlandAnticycling" class="xref" data-knowl="./knowl/xref/thm-BlandAnticycling.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.5.3: Bland’s Anticycling Rules">Theorem 2.5.3</a> then no basis is visited twice during the Simplex Algorithm.  Note that <span class="process-math">\(f\)</span> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?</div></article></section></div>
+<div class="para" id="sec-cycling-9-1-1">If we follow <a href="sec-cycling.html#thm-BlandAnticycling" class="xref" data-knowl="./knowl/xref/thm-BlandAnticycling.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.4.3: Bland’s Anticycling Rules">Theorem 2.4.3</a> then no basis is visited twice during the Simplex Algorithm.  Note that <span class="process-math">\(f\)</span> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-simplexmin.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simplexsage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

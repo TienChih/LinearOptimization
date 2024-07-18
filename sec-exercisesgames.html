@@ -86,7 +86,19 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -168,15 +180,17 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Using Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -257,6 +271,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercisesgames"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">5.4</span><span class="space"> </span><span class="title">Problems for Chapter 5</span>
 </h2>
+<pre id="sec-exercisesgames-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></pre>
 <section class="exercises" id="exercises-games"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
@@ -284,7 +300,7 @@ true);
 <div class="para" id="exercises-games-2-8-1-1"><span class="process-math">\(\begin{bmatrix} x &amp; 1 \\ 2 &amp; 3 \end{bmatrix}\)</span></div></article><article class="task exercise-like" id="exercises-games-2-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
 <div class="para" id="exercises-games-2-9-1-1"><span class="process-math">\(\begin{bmatrix} x &amp; 2 \\ 1 &amp; 3 \end{bmatrix}\)</span></div></article></article><article class="exercise exercise-like" id="exercises-games-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="para" id="exercises-games-3-1-1">Write out a reduced payoff matrix with exactly three saddle points.</div></article><article class="exercise exercise-like" id="exercises-games-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="introduction" id="exercises-games-4-1"><div class="para" id="exercises-games-4-1-1">For each of the following, find the von Neumann value and optimal strategt for the payoff matrix.</div></div>
+<div class="introduction" id="exercises-games-4-1"><div class="para" id="exercises-games-4-1-1">For each of the following, find the von Neumann value and optimal strategy for the payoff matrix.</div></div>
 <article class="task exercise-like" id="exercises-games-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-games-4-2-1-1"><span class="process-math">\(\begin{bmatrix} 0\amp 1 \amp 0 \amp -2 \amp -1\\
 3\amp 1 \amp 1 \amp -2 \amp 2\\

@@ -168,15 +168,17 @@ true);
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Using Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -255,10 +257,10 @@ true);
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-simplexmin"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.4</span><span class="space"> </span><span class="title">The Simplex Algorithm for Canonical Minimization</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">The Simplex Algorithm for Canonical Minimization</span>
 </h2>
 <article class="definition definition-like" id="def-negativetranspose"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-negativetranspose-1-1">Recall that the canonical minimization problem:</div> <div class="para logical" id="def-negativetranspose-1-2">
 <div class="displaymath process-math" id="def-negativetranspose-1-2-1">
@@ -386,19 +388,19 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article><article class="activity project-like" id="sec-simplexmin-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-simplexmin-3-1-1">Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.</div></article><div class="para" id="sec-simplexmin-4">This allows us to define a minimization algorithm.</div>
 <article class="definition definition-like" id="def-simplexmin"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-simplexmin-1-1">The Simplex Algorithm for Minimization Tableaus</div> <ol class="decimal">
 <li id="def-simplexmin-1-2-1"><div class="para" id="p-derived-def-simplexmin-1-2-1">TAKE the Negative Transpose.</div></li>
-<li id="def-simplexmin-1-2-2"><div class="para" id="p-derived-def-simplexmin-1-2-2">APPLY <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.2">Definition 2.3.2</a> .</div></li>
+<li id="def-simplexmin-1-2-2"><div class="para" id="p-derived-def-simplexmin-1-2-2">APPLY <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> .</div></li>
 </ol></article><article class="activity project-like" id="sec-simplexmin-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-simplexmin-6-1-1">Apply <a href="sec-simplexmin.html#def-simplexmin" class="xref" data-knowl="./knowl/xref/def-simplexmin.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.4.2">Definition 2.4.2</a> to the following minimization tableau:</div> <div class="para" id="sec-simplexmin-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="sec-simplexmin-6-1-1">Apply <a href="sec-simplexmin.html#def-simplexmin" class="xref" data-knowl="./knowl/xref/def-simplexmin.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.2">Definition 2.3.2</a> to the following minimization tableau:</div> <div class="para" id="sec-simplexmin-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>

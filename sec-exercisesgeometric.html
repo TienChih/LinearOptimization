@@ -180,15 +180,17 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Using Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -269,6 +271,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercisesgeometric"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Problems for Chapter 1</span>
 </h2>
+<pre id="sec-exercisesgeometric-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></pre>
 <section class="exercises" id="exercises-geometric"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
@@ -391,7 +395,11 @@ x,y, z, w\amp \geq  0.
 \end{align*}
 </div>
 </div>
-<div class="para" id="ex-6planes-2">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <pre id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([[1,0,0,0,0],[0,1,0,0,0], [0,0,1,0,0],[0,0,0,1,0]])
+<div class="para" id="ex-6planes-2">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <pre id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([
+[1,0,0,0,0],
+[0,1,0,0,0], 
+[0,0,1,0,0],
+[0,0,0,1,0]])
 print(A)
 print(" ")
 print(A.rref())

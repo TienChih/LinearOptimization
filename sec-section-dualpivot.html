@@ -180,15 +180,17 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-curious.html" class="internal"><span class="codenumber">2.2</span> <span class="title">A Curious Situation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.4</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Using Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -276,7 +278,7 @@ true);
 <div class="introduction" id="sec-section-dualpivot-3-1">
 <div class="para" id="sec-section-dualpivot-3-1-1">Noting that the dual variables <span class="process-math">\(y_i\)</span> are non-negative weights attached to the hyperplanes defined by <span class="process-math">\(t_i=0\text{,}\)</span> and the slack variables for the dual program <span class="process-math">\(s_j\)</span> are the weights associated with the planes <span class="process-math">\(x-x_j=0\text{,}\)</span> we can encode all this information in the <em class="emphasis">Primal-Dual Tucker Tableau</em>:</div> <div class="para" id="sec-section-dualpivot-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
@@ -313,17 +315,17 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_m\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div>
+</table></div></div> <div class="para" id="sec-section-dualpivot-3-1-3">(The additional dividing lines in the top left and bottom right seperate the primal decision-slack variables from the dual decision-slack vasriables.)</div>
 </div>
 <article class="task exercise-like" id="sec-section-dualpivot-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-section-dualpivot-3-2-1-1">Write out the sufficient conditions for the tableau to determine:</div> <ol class="upper-alpha">
@@ -342,7 +344,7 @@ true);
 <div class="introduction" id="sec-section-dualpivot-4-1"><div class="para" id="sec-section-dualpivot-4-1-1">Recall  <a href="sec-section-initial.html#activity-exampleart" class="xref" data-knowl="./knowl/xref/activity-exampleart.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.2.1">Activity 1.2.1</a>.</div></div>
 <article class="task exercise-like" id="sec-section-dualpivot-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-section-dualpivot-4-2-1-1">Record this information in a primal-dual tucker tableau.</div></article><article class="task exercise-like" id="sec-section-dualpivot-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-section-dualpivot-4-3-1-1">Apply the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.2">Definition 2.3.2</a> to this tableau.</div></article><article class="task exercise-like" id="sec-section-dualpivot-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-section-dualpivot-4-3-1-1">Apply the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to this tableau.</div></article><article class="task exercise-like" id="sec-section-dualpivot-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-section-dualpivot-4-4-1-1">Consider the dual solution.  What does that mean in the context of the time spent by the painter and the sculptor?</div></article></article><article class="activity project-like" id="sec-section-dualpivot-5"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
 </h3>
@@ -355,7 +357,7 @@ true);
 </ol></article><article class="task exercise-like" id="sec-section-dualpivot-5-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-section-dualpivot-5-2-1-1">Verify that the primal program is infeasible.</div> <div class="para" id="sec-section-dualpivot-5-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
@@ -380,20 +382,20 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article><article class="task exercise-like" id="sec-section-dualpivot-5-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-section-dualpivot-5-3-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.2">Definition 2.3.2</a> to determine the nature of the dual program.</div></article><article class="task exercise-like" id="sec-section-dualpivot-5-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-section-dualpivot-5-3-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual program.</div></article><article class="task exercise-like" id="sec-section-dualpivot-5-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-section-dualpivot-5-4-1-1">Verify that the primal program is infeasible.</div> <div class="para" id="sec-section-dualpivot-5-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
@@ -418,17 +420,17 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article><article class="task exercise-like" id="sec-section-dualpivot-5-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-section-dualpivot-5-5-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.3.2">Definition 2.3.2</a> to determine the nature of the dual program.</div></article></article><article class="activity project-like" id="sec-section-dualpivot-6"><h3 class="heading">
+<div class="para" id="sec-section-dualpivot-5-5-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual program.</div></article></article><article class="activity project-like" id="sec-section-dualpivot-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-section-dualpivot-6-1"><div class="para" id="sec-section-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual programs.</div></div>
@@ -461,7 +463,7 @@ true);
 <div class="para" id="sec-section-dualpivot-7-1-1">Solve the following non-canonical primal-dual problem:</div>
 <div class="para" id="sec-section-dualpivot-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_1} \)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
@@ -498,14 +500,14 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(s_2\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_3\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article><article class="task exercise-like" id="sec-section-dualpivot-7-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>

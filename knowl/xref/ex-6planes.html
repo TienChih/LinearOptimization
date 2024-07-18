@@ -38,7 +38,11 @@ x,y, z, w\amp \geq  0.
 \end{align*}
 </div>
 </div>
-<div class="para">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <pre id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([[1,0,0,0,0],[0,1,0,0,0], [0,0,1,0,0],[0,0,0,1,0]])
+<div class="para">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <pre id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([
+[1,0,0,0,0],
+[0,1,0,0,0], 
+[0,0,1,0,0],
+[0,0,0,1,0]])
 print(A)
 print(" ")
 print(A.rref())
