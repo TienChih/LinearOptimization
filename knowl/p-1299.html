@@ -11,9 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">For each vertex <span class="process-math">\(v_i\neq v_s, v_d\text{,}\)</span> <span class="process-math">\(\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}=1\text{.}\)</span>
-</div>
-<span class="incontext"><a href="sec-weighted.html#p-1299" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\textbf{Maximize: }  \displaystyle \sum_{i} x_{id}\\
+\textbf{Subject to: }  \sum_{i}x_{ij} - \sum_{i} x_{ji} \amp =  0, \text{for each vertex }v_j\\
+x_{ij}\amp \leq  c_{ij}, \text{for each edge} (v_i, v_j)\\
+x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
+\end{align*}
+</div></div>
+<span class="incontext"><a href="sec-maxflowmincut.html#p-1299" class="internal">in-context</a></span>
 </body>
 </html>

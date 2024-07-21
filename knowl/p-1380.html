@@ -9,37 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script>
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">
-<pre class="ptx-sagecell sagecell-sage" id="sage-40"><script type="text/x-sage">%display typeset
-A = (FIXME)
-b = (FIXME)
-c = (FIXME)
-P = InteractiveLPProblem(A, b, c,
- [FIXME], 
- constraint_type = [FIXME],
- variable_type = [FIXME],
- problem_type = FIXME)
-P
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-41"><script type="text/x-sage">print(P.optimal_solution())
-print(P.optimal_value())
-</script></pre>
+<div class="para">Maximize <span class="process-math">\(\displaystyle \sum_j w_{sj}x_{sj} \text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-branchbound.html#p-1380" class="internal">in-context</a></span>
+<span class="incontext"><a href="sec-weighted.html#p-1380" class="internal">in-context</a></span>
 </body>
 </html>

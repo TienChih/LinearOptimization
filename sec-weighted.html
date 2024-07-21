@@ -149,7 +149,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-integer.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercisesflow.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
@@ -257,6 +257,10 @@ true);
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Problems for Chapter 7</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -303,7 +307,7 @@ true);
 <div class="para" id="def-negativecycle-1-1">We define a <em class="emphasis">cycle</em> in a weighted network to be a path froma vertex <span class="process-math">\(v_x\)</span> to itself.  If the length of a cycle is negative, we call it a <em class="emphasis">negative cycle</em>.</div></article><article class="activity project-like" id="sec-weighted-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-weighted-7-1"><div class="para" id="sec-weighted-7-1-1">In this activity, we model the shortest path algorithm as a linear programming problem.  Assume <span class="process-math">\(N\)</span> is a weighted network with no negative cycles.  Let <span class="process-math">\(0\leq x_{ij}\leq 1\)</span> where <span class="process-math">\(x_{ij}=1\)</span> if <span class="process-math">\((v_i, v_j)\)</span> is in a shortest path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
+<div class="introduction" id="sec-weighted-7-1"><div class="para" id="sec-weighted-7-1-1">In this activity, we model the shortest path algorithm as a linear optimization problem.  Assume <span class="process-math">\(N\)</span> is a weighted network with no negative cycles.  Let <span class="process-math">\(0\leq x_{ij}\leq 1\)</span> where <span class="process-math">\(x_{ij}=1\)</span> if <span class="process-math">\((v_i, v_j)\)</span> is in a shortest path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="sec-weighted-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-weighted-7-2-1">What is the objective problem?</div>
@@ -346,7 +350,7 @@ true);
 </ol></article><article class="task exercise-like" id="sec-weighted-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-weighted-7-5-1-1">Why do we not need a constraint for <span class="process-math">\(v_s\text{?}\)</span>
 </div></article><article class="task exercise-like" id="sec-weighted-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-weighted-7-6-1-1">Model the shortest path problem in <a href="sec-weighted.html#exploration-path" class="xref" data-knowl="./knowl/xref/exploration-path.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.1">Exploration 7.3.1</a> as a linear programming problem and solve it:</div> <div class="para" id="sec-weighted-7-6-1-2">
+<div class="para" id="sec-weighted-7-6-1-1">Model the shortest path problem in <a href="sec-weighted.html#exploration-path" class="xref" data-knowl="./knowl/xref/exploration-path.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.1">Exploration 7.3.1</a> as a linear optimization problem and solve it:</div> <div class="para" id="sec-weighted-7-6-1-2">
 <pre id="sec-weighted-7-6-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
@@ -377,7 +381,17 @@ print(P.optimal_value())
 </div></article><article class="activity project-like" id="sec-weighted-10"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-weighted-10-1-1">Apply <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.4: Dijkstra’s Algorithm">Definition 7.3.4</a> to the shortest path problem in <a href="sec-weighted.html#exploration-path" class="xref" data-knowl="./knowl/xref/exploration-path.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.1">Exploration 7.3.1</a>.</div></article><article class="activity project-like" id="sec-weighted-11"><h3 class="heading">
+<div class="introduction" id="sec-weighted-10-1"><div class="para" id="sec-weighted-10-1-1">We revisit the shortest path problem from <a href="sec-weighted.html#exploration-path" class="xref" data-knowl="./knowl/xref/exploration-path.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.1">Exploration 7.3.1</a>.</div></div>
+<article class="task exercise-like" id="sec-weighted-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-weighted-10-2-1-1">Apply <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.4: Dijkstra’s Algorithm">Definition 7.3.4</a> to the network in this problem and label each vertex <span class="process-math">\(v_i\)</span> by <span class="process-math">\(\ell_i\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-weighted-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-weighted-10-3-1-1">What do each <span class="process-math">\(\ell_i\)</span> represent in terms of travel time?</div></article><article class="task exercise-like" id="sec-weighted-10-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-weighted-10-4-1-1">Consider <span class="process-math">\(\ell_3, \ell_4\)</span> and <span class="process-math">\(w_{35}, w_{45}\text{.}\)</span> Which vertex could be on a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{?}\)</span>
+</div></article><article class="task exercise-like" id="sec-weighted-10-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-weighted-10-5-1-1">Take your previous choice of vertex <span class="process-math">\(v_k\)</span> and repeat: look at the <span class="process-math">\(\ell_i\)</span> of it’s potential predecessors and <span class="process-math">\(w_{ik}\text{.}\)</span>  Recursively repeat until we reach <span class="process-math">\(v_0\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-weighted-10-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-weighted-10-6-1-1">What is the shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{?}\)</span>
+</div></article></article><article class="activity project-like" id="sec-weighted-11"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-weighted-11-1"><div class="para" id="sec-weighted-11-1-1">We prove that in <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.4: Dijkstra’s Algorithm">Definition 7.3.4</a>, <span class="process-math">\(\ell_i=d(v_s, v_i)\)</span> for each <span class="process-math">\(v_i\in R\)</span> via induction on <span class="process-math">\(|R|\text{.}\)</span>
@@ -409,18 +423,88 @@ print(P.optimal_value())
 </div></li>
 <li id="def-otheralgorithm-1-2-6"><div class="para" id="def-otheralgorithm-1-2-6-1">GOTO 2.</div></li>
 </ol> <div class="para" id="def-otheralgorithm-1-3">When the algorithm terminates, <span class="process-math">\(\ell_j = d(v_s, v_j)\text{,}\)</span> the length of the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
-</div></article><article class="exploration project-like" id="sec-weighted-14"><h3 class="heading">
+</div></article><article class="exploration project-like" id="exploration-shipping"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-weighted-14-1"><div class="para" id="sec-weighted-14-1-1">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs, and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
+<div class="introduction" id="exploration-shipping-1"><div class="para" id="exploration-shipping-1-1">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs (denoted <span class="process-math">\((c_{ij}, w_{ij})\)</span>), and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="sec-weighted-14-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-weighted-14-2-1-1">Find a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-weighted-14-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-weighted-14-3-1-1">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.3: Max Flow Algorithm">Definition 7.2.3</a>.</div></article><article class="task exercise-like" id="sec-weighted-14-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-weighted-14-4-1-1">Adjust capacities appropriately and remove any fuly capacitated edges.</div></article><article class="task exercise-like" id="sec-weighted-14-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-weighted-14-5-1-1">Repeat (a)-(c) until we have a flow of 10.</div></article><article class="task exercise-like" id="sec-weighted-14-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-weighted-14-6-1-1">Argue that this is not the lowest cost flow.</div></article></article><article class="definition definition-like" id="def-mincostflowalgorithm"><h3 class="heading">
+<article class="task exercise-like" id="exploration-shipping-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-shipping-2-1-1">Let’s find a single path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> along which we could ship goods at the lowest possible cost.  What criteria should we use to identitfy this path?</div> <ol class="upper-alpha cols2">
+<li id="exploration-shipping-2-1-2-1"><div class="para" id="exploration-shipping-2-1-2-1-1">Maximize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
+<li id="exploration-shipping-2-1-2-2"><div class="para" id="exploration-shipping-2-1-2-2-1">Minimize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
+<li id="exploration-shipping-2-1-2-3"><div class="para" id="exploration-shipping-2-1-2-3-1">Maximize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.</div></li>
+<li id="exploration-shipping-2-1-2-4"><div class="para" id="exploration-shipping-2-1-2-4-1">Minimize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.</div></li>
+</ol></article><article class="task exercise-like" id="exploration-shipping-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-shipping-3-1-1">Find a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
+</div></article><article class="task exercise-like" id="exploration-shipping-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-shipping-4-1-1">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.3: Max Flow Algorithm">Definition 7.2.3</a>.</div></article><article class="task exercise-like" id="exploration-shipping-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-shipping-5-1-1">Decrease capacities of any used edges by <span class="process-math">\(x_{ij}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="exploration-shipping-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="exploration-shipping-6-1-1">Repeat (a)-(c) until we have a flow of 10.</div></article><article class="task exercise-like" id="exploration-shipping-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="exploration-shipping-7-1-1">Argue that this is <em class="emphasis">not</em> the lowest cost flow.</div></article><article class="task exercise-like" id="exploration-shipping-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="exploration-shipping-8-1-1">Which of the following was an issue with how this problem was approached?</div> <ol class="upper-alpha">
+<li id="exploration-shipping-8-1-2-1"><div class="para" id="exploration-shipping-8-1-2-1-1">The original path chosen was too expensive.</div></li>
+<li id="exploration-shipping-8-1-2-2"><div class="para" id="exploration-shipping-8-1-2-2-1">The original path forced us into poor choices of future paths.</div></li>
+<li id="exploration-shipping-8-1-2-3"><div class="para" id="exploration-shipping-8-1-2-3-1">There was no mechanism to backtrack or adjust previous choices.</div></li>
+</ol></article></article><article class="activity project-like" id="sec-weighted-15"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-weighted-15-1"><div class="para" id="sec-weighted-15-1-1">We model the shipping problem in <a href="sec-weighted.html#exploration-shipping" class="xref" data-knowl="./knowl/xref/exploration-shipping.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.6">Exploration 7.3.6</a> as a linear optimization problem.  Let <span class="process-math">\(x_{ij}\)</span> denote the quantity in tons of goods shipped from <span class="process-math">\(v_i\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="sec-weighted-15-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-weighted-15-2-1-1">What is the objective function of this problem?</div> <ol class="upper-alpha cols2">
+<li id="sec-weighted-15-2-1-2-1"><div class="para" id="sec-weighted-15-2-1-2-1-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-2-1-2-2"><div class="para" id="sec-weighted-15-2-1-2-2-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}c_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-2-1-2-3"><div class="para" id="sec-weighted-15-2-1-2-3-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}w_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-2-1-2-4"><div class="para" id="sec-weighted-15-2-1-2-4-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-2-1-2-5"><div class="para" id="sec-weighted-15-2-1-2-5-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}c_{0j}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-2-1-2-6"><div class="para" id="sec-weighted-15-2-1-2-6-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}w_{0j}\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-weighted-15-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-weighted-15-3-1-1">For each <span class="process-math">\(ij\)</span> edge, there is a constraint for the shipping capacity of that edge.  What (in)equality represents that capacity?</div> <ol class="upper-alpha cols2">
+<li id="sec-weighted-15-3-1-2-1"><div class="para" id="sec-weighted-15-3-1-2-1-1"><span class="process-math">\(x_{ij}\leq w_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-3-1-2-2"><div class="para" id="sec-weighted-15-3-1-2-2-1"><span class="process-math">\(x_{ij}\geq w_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-3-1-2-3"><div class="para" id="sec-weighted-15-3-1-2-3-1"><span class="process-math">\(x_{ij}= w_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-3-1-2-4"><div class="para" id="sec-weighted-15-3-1-2-4-1"><span class="process-math">\(x_{ij}\leq c_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-3-1-2-5"><div class="para" id="sec-weighted-15-3-1-2-5-1"><span class="process-math">\(x_{ij}\geq c_{ij}\text{.}\)</span></div></li>
+<li id="sec-weighted-15-3-1-2-6"><div class="para" id="sec-weighted-15-3-1-2-6-1"><span class="process-math">\(x_{ij}= c_{ij}\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-weighted-15-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-weighted-15-4-1-1">For each vertex <span class="process-math">\(v_k\)</span> excluding the source and sink, what (in)equality represents the conservation of flow?</div> <ol class="upper-alpha cols2">
+<li id="sec-weighted-15-4-1-2-1"><div class="para" id="sec-weighted-15-4-1-2-1-1"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\leq 0\text{.}\)</span></div></li>
+<li id="sec-weighted-15-4-1-2-2"><div class="para" id="sec-weighted-15-4-1-2-2-1"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\geq 0\text{.}\)</span></div></li>
+<li id="sec-weighted-15-4-1-2-3"><div class="para" id="sec-weighted-15-4-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj} = 0\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-weighted-15-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-weighted-15-5-1-1">Let <span class="process-math">\(F\)</span> be the total amount of goods to be shipped, in this case <span class="process-math">\(F=10\text{.}\)</span>  What equality represents this constraint?</div> <ol class="upper-alpha cols2">
+<li id="sec-weighted-15-5-1-2-1"><div class="para" id="sec-weighted-15-5-1-2-1-1"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}c_{ij}= F\text{.}\)</span></div></li>
+<li id="sec-weighted-15-5-1-2-2"><div class="para" id="sec-weighted-15-5-1-2-2-1"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}w_{ij}= F\text{.}\)</span></div></li>
+<li id="sec-weighted-15-5-1-2-3"><div class="para" id="sec-weighted-15-5-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}=F\text{.}\)</span></div></li>
+<li id="sec-weighted-15-5-1-2-4"><div class="para" id="sec-weighted-15-5-1-2-4-1"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}= F\text{.}\)</span></div></li>
+<li id="sec-weighted-15-5-1-2-5"><div class="para" id="sec-weighted-15-5-1-2-5-1"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}c_{0j}=10\text{.}\)</span></div></li>
+<li id="sec-weighted-15-5-1-2-6"><div class="para" id="sec-weighted-15-5-1-2-6-1"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}w_{0j}=10\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-weighted-15-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-weighted-15-6-1-1">Write out the linear optimization problem modeling <a href="sec-weighted.html#exploration-shipping" class="xref" data-knowl="./knowl/xref/exploration-shipping.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.6">Exploration 7.3.6</a> and solve it.</div> <pre id="sec-weighted-15-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+A = (FIXME)
+b = (FIXME)
+c = (FIXME)
+P = InteractiveLPProblem(A, b, c,
+ [FIXME], 
+ constraint_type = [FIXME],
+ variable_type = [FIXME],
+ problem_type = FIXME)
+P
+</script></pre> <pre id="sec-weighted-15-6-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
+print(P.optimal_value())
+</script></pre></article></article><article class="activity project-like" id="sec-weighted-16"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-weighted-16-1"><div class="para" id="sec-weighted-16-1-1">We return to <a href="sec-weighted.html#exploration-shipping" class="xref" data-knowl="./knowl/xref/exploration-shipping.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.6">Exploration 7.3.6</a> with an adjustment to the procedure there to enable adjusting previously chosen paths.</div></div>
+<article class="task exercise-like" id="sec-weighted-16-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-weighted-16-2-1-1">Once again, find the shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{,}\)</span> and use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.3: Max Flow Algorithm">Definition 7.2.3</a>.</div></article><article class="task exercise-like" id="sec-weighted-16-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-weighted-16-3-1-1">Now in addition to decreasing the  capacities of used edges by <span class="process-math">\(x_{ij}\text{,}\)</span> add a backwards edge <span class="process-math">\(ji\)</span> with capacity <span class="process-math">\(x_{ij}\)</span> and negative weight <span class="process-math">\(-w_{ij}\text{.}\)</span>
+</div> <div class="para" id="sec-weighted-16-3-1-2">Pick any path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> that traverses a backwards negative edge. What does shipping along this path represent in terms of determining a new shipping procedure.</div> <div class="para" id="sec-weighted-16-3-1-3">Test your ideas out on a few different paths traversing negative edges.</div></article><article class="task exercise-like" id="sec-weighted-16-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-weighted-16-4-1-1">Find the shortest path along this adjusted graph and treat it as an <span class="process-math">\(\alpha\)</span>-path.</div></article><article class="task exercise-like" id="sec-weighted-16-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-weighted-16-5-1-1">What does this second chosen shortest path represent in terms of shipping goods?</div></article><article class="task exercise-like" id="sec-weighted-16-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-weighted-16-6-1-1">Have you now achieved a minimal cost flow shipping 10 tons of goods?</div></article></article><div class="para" id="sec-weighted-17">We now formalize this idea of adjusting previous choices to an algorithm:</div>
+<article class="definition definition-like" id="def-mincostflowalgorithm"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Minimum Cost Flow Algorithm.</span>
 </h3> <div class="para" id="def-mincostflowalgorithm-2-1">The steps for the <em class="emphasis">Minimum Cost Flow Algorithm</em> are as follows:</div> <ol class="decimal">
 <li id="def-mincostflowalgorithm-2-2-1"><div class="para" id="def-mincostflowalgorithm-2-2-1-1">INITIALIZE: Let <span class="process-math">\(N=(V, E)\)</span> be a weighted capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{,}\)</span> with no edges going into the source and no edges coming out of the sink.  We start with the zero flow <span class="process-math">\(x_{ij}=0\)</span> for each edge <span class="process-math">\((v_i, v_j)\text{.}\)</span>  Let <span class="process-math">\(F\)</span> be the desired total flow.</div></li>
@@ -452,7 +536,7 @@ q = \displaystyle \min_{(v_i, v_j) \in \alpha}\left\{ \min_{(v_i, v_j)\text{ for
 <li id="def-mincostflowalgorithm-2-2-7"><div class="para" id="def-mincostflowalgorithm-2-2-7-1">GOTO 2.</div></li>
 </ol></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-integer.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-maxflowmincut.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesflow.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

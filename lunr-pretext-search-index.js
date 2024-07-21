@@ -2071,9 +2071,9 @@ var ptx_lunr_docs = [
   "body": " Solve the following transportation problems:                                                                                                                                                                                                                                      "
 },
 {
-  "id": "exercises-transport-7",
+  "id": "ex-hoverbike",
   "level": "2",
-  "url": "sec-exercisestransports.html#exercises-transport-7",
+  "url": "sec-exercisestransports.html#ex-hoverbike",
   "type": "Exercise",
   "number": "6.4.7",
   "title": "",
@@ -2374,7 +2374,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.3",
   "title": "Weighted Graphs",
-  "body": " Weighted Graphs    Dr. Ayad is driving from her home to Fantasi college. The town is connected by a series of one way streets, each labled with the time it would take to traverse the road.   A Network Flow depicting several nodes and edges with weights.      What is the shortest amout of time needed for her to arrive at Fantasi College?    Is there a unique route she could take that minimizes this time?      A network is weighted if for each edge we assign (potentially negative!) weight .      Give a network , a path  from , is a sequence of consecutive edges where . We say that the length of is . We say that the distance from to , , is the length of a shortest path from to .      Consider the weighted network:   A network with negative weights.     What is the shortest path from to ? (You may repeat edges.)  What if we change ?   What is a reasonable condition for the shortest path to be well defined?      We define a cycle in a weighted network to be a path froma vertex to itself. If the length of a cycle is negative, we call it a negative cycle .      In this activity, we model the shortest path algorithm as a linear programming problem. Assume is a weighted network with no negative cycles. Let where if is in a shortest path from to .   What is the objective problem?   Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .     What inequality ensures that exactly one edge of the chosen edges is incident to ?     .     .     .     .     .     .      What inequality ensures that the chosen edges form a path?    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .      Why do we not need a constraint for ?    Model the shortest path problem in as a linear programming problem and solve it:        As was the case in previous examples, we introduce a less cumbersome method for finding these shortest paths.   Dijkstra's Algorithm   Let be a weighted network with only non-negative weights. Then Dijkstra's Shortest Path Algorithm is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let .    Let .    If : STOP.    For each , let .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      Apply to the shortest path problem in .      We prove that in , for each via induction on .    Verify that the statement is true when .    Prove that in step 3, if we select then is adjacent to a vertex in .    Let and consider as chosen in step 3. Show that is the shortest distance from to traversing only vertices in .    Suppose (by way of contradiction) that there was a shortest path from to where the length of . Show that there must be an edge in , ) so that .    Show that in this case that . (Invoke the induction hypothesis).    Show that the last statement produces a contradiction (why wasn't already chosen?)    Conclude that .    We present an alternative algorithm for when weights can be negative.    Let be a weighted network with no negative cycles. Then an algorithm to find shortest paths is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let .    Let .    If : STOP.    For each , let , if has a value changed by this process, remove from and add it to .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      Suppose a shipping company is moving goods through a series of transportation hubs via rail. The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair:  A Network Flow depicting several hubs with rails showing capacity and cost.   The pairs are (capacity, cost) pairs, and we are trying to ship 10 tons of goods from to .    Find a shortest path from to .    Use this as an -path as in .    Adjust capacities appropriately and remove any fuly capacitated edges.    Repeat (a)-(c) until we have a flow of 10.    Argue that this is not the lowest cost flow.     Minimum Cost Flow Algorithm   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply the shortest path algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.      "
+  "body": " Weighted Graphs    Dr. Ayad is driving from her home to Fantasi college. The town is connected by a series of one way streets, each labled with the time it would take to traverse the road.   A Network Flow depicting several nodes and edges with weights.      What is the shortest amout of time needed for her to arrive at Fantasi College?    Is there a unique route she could take that minimizes this time?      A network is weighted if for each edge we assign (potentially negative!) weight .      Give a network , a path  from , is a sequence of consecutive edges where . We say that the length of is . We say that the distance from to , , is the length of a shortest path from to .      Consider the weighted network:   A network with negative weights.     What is the shortest path from to ? (You may repeat edges.)  What if we change ?   What is a reasonable condition for the shortest path to be well defined?      We define a cycle in a weighted network to be a path froma vertex to itself. If the length of a cycle is negative, we call it a negative cycle .      In this activity, we model the shortest path algorithm as a linear optimization problem. Assume is a weighted network with no negative cycles. Let where if is in a shortest path from to .   What is the objective problem?   Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .     What inequality ensures that exactly one edge of the chosen edges is incident to ?     .     .     .     .     .     .      What inequality ensures that the chosen edges form a path?    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .      Why do we not need a constraint for ?    Model the shortest path problem in as a linear optimization problem and solve it:        As was the case in previous examples, we introduce a less cumbersome method for finding these shortest paths.   Dijkstra's Algorithm   Let be a weighted network with only non-negative weights. Then Dijkstra's Shortest Path Algorithm is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let .    Let .    If : STOP.    For each , let .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      We revisit the shortest path problem from .    Apply to the network in this problem and label each vertex by .    What do each represent in terms of travel time?    Consider and . Which vertex could be on a shortest path from to ?    Take your previous choice of vertex and repeat: look at the of it's potential predecessors and . Recursively repeat until we reach .    What is the shortest path from to ?      We prove that in , for each via induction on .    Verify that the statement is true when .    Prove that in step 3, if we select then is adjacent to a vertex in .    Let and consider as chosen in step 3. Show that is the shortest distance from to traversing only vertices in .    Suppose (by way of contradiction) that there was a shortest path from to where the length of . Show that there must be an edge in , ) so that .    Show that in this case that . (Invoke the induction hypothesis).    Show that the last statement produces a contradiction (why wasn't already chosen?)    Conclude that .    We present an alternative algorithm for when weights can be negative.    Let be a weighted network with no negative cycles. Then an algorithm to find shortest paths is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let .    Let .    If : STOP.    For each , let , if has a value changed by this process, remove from and add it to .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      Suppose a shipping company is moving goods through a series of transportation hubs via rail. The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair:  A Network Flow depicting several hubs with rails showing capacity and cost.   The pairs are (capacity, cost) pairs (denoted ), and we are trying to ship 10 tons of goods from to .    Let's find a single path from to along which we could ship goods at the lowest possible cost. What criteria should we use to identitfy this path?    Maximize along this path.    Minimize along this path.    Maximize along this path.    Minimize along this path.      Find a shortest path from to .    Use this as an -path as in .    Decrease capacities of any used edges by .    Repeat (a)-(c) until we have a flow of 10.    Argue that this is not the lowest cost flow.    Which of the following was an issue with how this problem was approached?    The original path chosen was too expensive.    The original path forced us into poor choices of future paths.    There was no mechanism to backtrack or adjust previous choices.        We model the shipping problem in as a linear optimization problem. Let denote the quantity in tons of goods shipped from to .    What is the objective function of this problem?     .     .     .     .     .     .      For each edge, there is a constraint for the shipping capacity of that edge. What (in)equality represents that capacity?     .     .     .     .     .     .      For each vertex excluding the source and sink, what (in)equality represents the conservation of flow?     .     .     .      Let be the total amount of goods to be shipped, in this case . What equality represents this constraint?     .     .     .     .     .     .      Write out the linear optimization problem modeling and solve it.        We return to with an adjustment to the procedure there to enable adjusting previously chosen paths.    Once again, find the shortest path from to , and use this as an -path as in .    Now in addition to decreasing the capacities of used edges by , add a backwards edge with capacity and negative weight .  Pick any path from to that traverses a backwards negative edge. What does shipping along this path represent in terms of determining a new shipping procedure.  Test your ideas out on a few different paths traversing negative edges.    Find the shortest path along this adjusted graph and treat it as an -path.    What does this second chosen shortest path represent in terms of shipping goods?    Have you now achieved a minimal cost flow shipping 10 tons of goods?    We now formalize this idea of adjusting previous choices to an algorithm:   Minimum Cost Flow Algorithm   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply the shortest path algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.      "
 },
 {
   "id": "exploration-path",
@@ -2428,7 +2428,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "7.3.3",
   "title": "",
-  "body": "  In this activity, we model the shortest path algorithm as a linear programming problem. Assume is a weighted network with no negative cycles. Let where if is in a shortest path from to .   What is the objective problem?   Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .     What inequality ensures that exactly one edge of the chosen edges is incident to ?     .     .     .     .     .     .      What inequality ensures that the chosen edges form a path?    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .      Why do we not need a constraint for ?    Model the shortest path problem in as a linear programming problem and solve it:       "
+  "body": "  In this activity, we model the shortest path algorithm as a linear optimization problem. Assume is a weighted network with no negative cycles. Let where if is in a shortest path from to .   What is the objective problem?   Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .     What inequality ensures that exactly one edge of the chosen edges is incident to ?     .     .     .     .     .     .      What inequality ensures that the chosen edges form a path?    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .      Why do we not need a constraint for ?    Model the shortest path problem in as a linear optimization problem and solve it:       "
 },
 {
   "id": "def-DijkstrasAlgorithm",
@@ -2446,7 +2446,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "7.3.4",
   "title": "",
-  "body": "  Apply to the shortest path problem in .   "
+  "body": "  We revisit the shortest path problem from .    Apply to the network in this problem and label each vertex by .    What do each represent in terms of travel time?    Consider and . Which vertex could be on a shortest path from to ?    Take your previous choice of vertex and repeat: look at the of it's potential predecessors and . Recursively repeat until we reach .    What is the shortest path from to ?   "
 },
 {
   "id": "sec-weighted-11",
@@ -2467,13 +2467,31 @@ var ptx_lunr_docs = [
   "body": "  Let be a weighted network with no negative cycles. Then an algorithm to find shortest paths is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let .    Let .    If : STOP.    For each , let , if has a value changed by this process, remove from and add it to .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .   "
 },
 {
-  "id": "sec-weighted-14",
+  "id": "exploration-shipping",
   "level": "2",
-  "url": "sec-weighted.html#sec-weighted-14",
+  "url": "sec-weighted.html#exploration-shipping",
   "type": "Exploration",
   "number": "7.3.6",
   "title": "",
-  "body": "  Suppose a shipping company is moving goods through a series of transportation hubs via rail. The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair:  A Network Flow depicting several hubs with rails showing capacity and cost.   The pairs are (capacity, cost) pairs, and we are trying to ship 10 tons of goods from to .    Find a shortest path from to .    Use this as an -path as in .    Adjust capacities appropriately and remove any fuly capacitated edges.    Repeat (a)-(c) until we have a flow of 10.    Argue that this is not the lowest cost flow.   "
+  "body": "  Suppose a shipping company is moving goods through a series of transportation hubs via rail. The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair:  A Network Flow depicting several hubs with rails showing capacity and cost.   The pairs are (capacity, cost) pairs (denoted ), and we are trying to ship 10 tons of goods from to .    Let's find a single path from to along which we could ship goods at the lowest possible cost. What criteria should we use to identitfy this path?    Maximize along this path.    Minimize along this path.    Maximize along this path.    Minimize along this path.      Find a shortest path from to .    Use this as an -path as in .    Decrease capacities of any used edges by .    Repeat (a)-(c) until we have a flow of 10.    Argue that this is not the lowest cost flow.    Which of the following was an issue with how this problem was approached?    The original path chosen was too expensive.    The original path forced us into poor choices of future paths.    There was no mechanism to backtrack or adjust previous choices.     "
+},
+{
+  "id": "sec-weighted-15",
+  "level": "2",
+  "url": "sec-weighted.html#sec-weighted-15",
+  "type": "Activity",
+  "number": "7.3.7",
+  "title": "",
+  "body": "  We model the shipping problem in as a linear optimization problem. Let denote the quantity in tons of goods shipped from to .    What is the objective function of this problem?     .     .     .     .     .     .      For each edge, there is a constraint for the shipping capacity of that edge. What (in)equality represents that capacity?     .     .     .     .     .     .      For each vertex excluding the source and sink, what (in)equality represents the conservation of flow?     .     .     .      Let be the total amount of goods to be shipped, in this case . What equality represents this constraint?     .     .     .     .     .     .      Write out the linear optimization problem modeling and solve it.     "
+},
+{
+  "id": "sec-weighted-16",
+  "level": "2",
+  "url": "sec-weighted.html#sec-weighted-16",
+  "type": "Activity",
+  "number": "7.3.8",
+  "title": "",
+  "body": "  We return to with an adjustment to the procedure there to enable adjusting previously chosen paths.    Once again, find the shortest path from to , and use this as an -path as in .    Now in addition to decreasing the capacities of used edges by , add a backwards edge with capacity and negative weight .  Pick any path from to that traverses a backwards negative edge. What does shipping along this path represent in terms of determining a new shipping procedure.  Test your ideas out on a few different paths traversing negative edges.    Find the shortest path along this adjusted graph and treat it as an -path.    What does this second chosen shortest path represent in terms of shipping goods?    Have you now achieved a minimal cost flow shipping 10 tons of goods?   "
 },
 {
   "id": "def-mincostflowalgorithm",
@@ -2483,6 +2501,132 @@ var ptx_lunr_docs = [
   "number": "7.3.6",
   "title": "Minimum Cost Flow Algorithm.",
   "body": " Minimum Cost Flow Algorithm   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply the shortest path algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.     "
+},
+{
+  "id": "sec-exercisesflow",
+  "level": "1",
+  "url": "sec-exercisesflow.html",
+  "type": "Section",
+  "number": "7.4",
+  "title": "Problems for Chapter 7",
+  "body": " Problems for     Consider the following capacitated network:  A Network Flow depicting several islands with bridges and carrying capacity.      Find for each vertex, and compute .   Classify each vertex as a source, sink and intermediate vertex.   Add two vertices and as few edges as possible to extend this flow to a flow with a unique source and unique sink    For each of the following capacitated networks, find the max-flow and min-cut on these networks as shown in .     A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.       Consider the max-flow min-cut problem (a).   Write out the non-canonical maximization problem which would compute the max-flow.   Record this problem in a Tucker tableau, then record the dual variable using to denote dual variables associated with vertex equality constraints and to denote the dual vairables for edge inequality constraint.  Verify that the max-flow and min-cut you found are feasible solutions to these problems (using the convention that if , if and if and otherwise.)  Argue that any cut corresponds to a feasible solution to this dual problem.   How can we tell both the flow and cut found in (a) are optimal? (Think duality.)    Over a month at a hospital many patients are need of blood transfusions. They had available blood from 47 donors with type A blood, 33 donors with type B blood, 46 donors with type AB and 44 donors with type O. There were 38 patients with type A blood, 39 patients with type B blood, 49 patients with type AB and 43 patients with type O. Type A patients can only receive type A or O, type B patients can receive only type B or O, type O patients can receive only type O, and type AB patients can receive any of the four types.   Construct a capacitated network which models the distributions of blood type from donors to patients with a unique source and sink, with no edges into the source or out of the sink.   Find a max-flow for this network.   Find a min-cut for this network.   If not all patients were able to recieve blood, explain the financial backers and hospital administrators, who may not have taken any math in awhile, why this was the case.   There's little a hospital can do about the blood types of incoming patients. If reaching out to potential donors, what blood types should be prioritized?   Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink. Let be a flow on this network with value then prove that    Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink.   Given an example for such that has non-unique max-flows.   Given an example for such that has non-unique min-cuts.   Let denote any max-flow for with value and denote any min-cut (not neccesarily produced by and ). Let be the cut generated via .  Prove that for any .   Let be two distinct max-flows on , and be the cuts produced by on with these flows respectively. Prove that .    For each of the following, find the shortest path from to using .     A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.      Consider (a). Model this problem as a linear optimization problem and solve.   Let be a weighted network with positive weights. For the following, prove or find a counterexample:   Let . Prove that the value of the shortest path from to is the sum of the value of the shortest path from to plus the value of the shortest path from to .   Suppose there was an edge going into , then fails.    For each of the following, find the minimum cost-flows for and . Interpret each ordered pair as (capacity,cost).     A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.      Model (a) as a linear optimization problem.  For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem.  For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem.   "
+},
+{
+  "id": "exercises-flow-1",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-1",
+  "type": "Exercise",
+  "number": "7.4.1",
+  "title": "",
+  "body": " Consider the following capacitated network:  A Network Flow depicting several islands with bridges and carrying capacity.      Find for each vertex, and compute .   Classify each vertex as a source, sink and intermediate vertex.   Add two vertices and as few edges as possible to extend this flow to a flow with a unique source and unique sink  "
+},
+{
+  "id": "ex-maxflowmincut",
+  "level": "2",
+  "url": "sec-exercisesflow.html#ex-maxflowmincut",
+  "type": "Exercise",
+  "number": "7.4.2",
+  "title": "",
+  "body": " For each of the following capacitated networks, find the max-flow and min-cut on these networks as shown in .     A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.     "
+},
+{
+  "id": "exercises-flow-3",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-3",
+  "type": "Exercise",
+  "number": "7.4.3",
+  "title": "",
+  "body": " Consider the max-flow min-cut problem (a).   Write out the non-canonical maximization problem which would compute the max-flow.   Record this problem in a Tucker tableau, then record the dual variable using to denote dual variables associated with vertex equality constraints and to denote the dual vairables for edge inequality constraint.  Verify that the max-flow and min-cut you found are feasible solutions to these problems (using the convention that if , if and if and otherwise.)  Argue that any cut corresponds to a feasible solution to this dual problem.   How can we tell both the flow and cut found in (a) are optimal? (Think duality.)  "
+},
+{
+  "id": "exercises-flow-4",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-4",
+  "type": "Exercise",
+  "number": "7.4.4",
+  "title": "",
+  "body": " Over a month at a hospital many patients are need of blood transfusions. They had available blood from 47 donors with type A blood, 33 donors with type B blood, 46 donors with type AB and 44 donors with type O. There were 38 patients with type A blood, 39 patients with type B blood, 49 patients with type AB and 43 patients with type O. Type A patients can only receive type A or O, type B patients can receive only type B or O, type O patients can receive only type O, and type AB patients can receive any of the four types.   Construct a capacitated network which models the distributions of blood type from donors to patients with a unique source and sink, with no edges into the source or out of the sink.   Find a max-flow for this network.   Find a min-cut for this network.   If not all patients were able to recieve blood, explain the financial backers and hospital administrators, who may not have taken any math in awhile, why this was the case.   There's little a hospital can do about the blood types of incoming patients. If reaching out to potential donors, what blood types should be prioritized?  "
+},
+{
+  "id": "exercises-flow-5",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-5",
+  "type": "Exercise",
+  "number": "7.4.5",
+  "title": "",
+  "body": "Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink. Let be a flow on this network with value then prove that  "
+},
+{
+  "id": "exercises-flow-6",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-6",
+  "type": "Exercise",
+  "number": "7.4.6",
+  "title": "",
+  "body": " Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink.   Given an example for such that has non-unique max-flows.   Given an example for such that has non-unique min-cuts.   Let denote any max-flow for with value and denote any min-cut (not neccesarily produced by and ). Let be the cut generated via .  Prove that for any .   Let be two distinct max-flows on , and be the cuts produced by on with these flows respectively. Prove that .  "
+},
+{
+  "id": "ex-shortestpath",
+  "level": "2",
+  "url": "sec-exercisesflow.html#ex-shortestpath",
+  "type": "Exercise",
+  "number": "7.4.7",
+  "title": "",
+  "body": " For each of the following, find the shortest path from to using .     A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.     "
+},
+{
+  "id": "exercises-flow-8",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-8",
+  "type": "Exercise",
+  "number": "7.4.8",
+  "title": "",
+  "body": "Consider (a). Model this problem as a linear optimization problem and solve. "
+},
+{
+  "id": "exercises-flow-9",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-9",
+  "type": "Exercise",
+  "number": "7.4.9",
+  "title": "",
+  "body": " Let be a weighted network with positive weights. For the following, prove or find a counterexample:   Let . Prove that the value of the shortest path from to is the sum of the value of the shortest path from to plus the value of the shortest path from to .   Suppose there was an edge going into , then fails.  "
+},
+{
+  "id": "ex-minflow",
+  "level": "2",
+  "url": "sec-exercisesflow.html#ex-minflow",
+  "type": "Exercise",
+  "number": "7.4.10",
+  "title": "",
+  "body": " For each of the following, find the minimum cost-flows for and . Interpret each ordered pair as (capacity,cost).     A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.        A Network Flow depicting several islands with bridges and carrying capacity.     "
+},
+{
+  "id": "exercises-flow-11",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-11",
+  "type": "Exercise",
+  "number": "7.4.11",
+  "title": "",
+  "body": "Model (a) as a linear optimization problem. "
+},
+{
+  "id": "exercises-flow-12",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-12",
+  "type": "Exercise",
+  "number": "7.4.12",
+  "title": "",
+  "body": "For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem. "
+},
+{
+  "id": "exercises-flow-13",
+  "level": "2",
+  "url": "sec-exercisesflow.html#exercises-flow-13",
+  "type": "Exercise",
+  "number": "7.4.13",
+  "title": "",
+  "body": "For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem. "
 },
 {
   "id": "sec-branchbound",

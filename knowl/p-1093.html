@@ -9,36 +9,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script>
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">
-<pre class="ptx-sagecell sagecell-sage" id="sage-32"><script type="text/x-sage">%display typeset
-A = (FIXME)
-b = (FIXME)
-c = (FIXME)
-P = InteractiveLPProblem(A, b, c,
- constraint_type = "==",
- variable_type = ">=",
- problem_type = "min")
-P
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-33"><script type="text/x-sage">print(P.optimal_solution())
-print(P.optimal_value())
-</script></pre>
-</div>
-<span class="incontext"><a href="sec-transportalgorithm.html#p-1093" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">We pick the row/column with the largest difference (so long as the associated supply/demand is positive), and the smallest entry in the row/column, <span class="process-math">\(c_{ij}\text{.}\)</span> By convention we circle this entry.</div>
+<span class="incontext"><a href="sec-vam.html#p-1093" class="internal">in-context</a></span>
 </body>
 </html>

@@ -31,7 +31,7 @@ sagecell.makeSagecell({
 <div class="para">Solve the following non-canonical primal-dual problem:</div>
 <div class="para"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_1} \)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
@@ -68,19 +68,19 @@ sagecell.makeSagecell({
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(s_2\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_3\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para">Enter the primal-program and use Sage to confirm the solution: <div class="para">
-<pre class="ptx-sagecell sagecell-sage" id="sage-23"><script type="text/x-sage">%display typeset
+<pre class="ptx-sagecell sagecell-sage" id="sage-26"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
 c = (FIXME)
@@ -90,15 +90,15 @@ P = InteractiveLPProblem(A, b, c,
  variable_type = [FIXME],
  problem_type = FIXME)
 P
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-24"><script type="text/x-sage">print(P.optimal_solution())
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-27"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
 </script></pre>
 </div>
 </div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para">Use sage to find the dual and solve it:</div> <pre class="ptx-sagecell sagecell-sage" id="sage-25"><script type="text/x-sage">%display typeset
+<div class="para">Use sage to find the dual and solve it:</div> <pre class="ptx-sagecell sagecell-sage" id="sage-28"><script type="text/x-sage">%display typeset
 D = P.dual()
 D
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-26"><script type="text/x-sage">print(D.optimal_solution())
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-29"><script type="text/x-sage">print(D.optimal_solution())
 print(D.optimal_value())
 </script></pre></article></article><span class="incontext"><a href="sec-section-dualpivot.html#activity-69" class="internal">in-context</a></span>
 </body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
+</h3>
+<div class="introduction"><div class="para">We model the shipping problem in <a href="" class="xref" data-knowl="./knowl/exploration-shipping.html" title="Exploration 7.3.6">Exploration 7.3.6</a> as a linear optimization problem.  Let <span class="process-math">\(x_{ij}\)</span> denote the quantity in tons of goods shipped from <span class="process-math">\(v_i\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">What is the objective function of this problem?</div> <ol class="upper-alpha cols2">
+<li><div class="para"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}c_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}w_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}c_{0j}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}w_{0j}\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">For each <span class="process-math">\(ij\)</span> edge, there is a constraint for the shipping capacity of that edge.  What (in)equality represents that capacity?</div> <ol class="upper-alpha cols2">
+<li><div class="para"><span class="process-math">\(x_{ij}\leq w_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_{ij}\geq w_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_{ij}= w_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_{ij}\leq c_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_{ij}\geq c_{ij}\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_{ij}= c_{ij}\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">For each vertex <span class="process-math">\(v_k\)</span> excluding the source and sink, what (in)equality represents the conservation of flow?</div> <ol class="upper-alpha cols2">
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\leq 0\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\geq 0\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj} = 0\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Let <span class="process-math">\(F\)</span> be the total amount of goods to be shipped, in this case <span class="process-math">\(F=10\text{.}\)</span>  What equality represents this constraint?</div> <ol class="upper-alpha cols2">
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}c_{ij}= F\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}w_{ij}= F\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}=F\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}= F\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}c_{0j}=10\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}w_{0j}=10\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">Write out the linear optimization problem modeling <a href="" class="xref" data-knowl="./knowl/exploration-shipping.html" title="Exploration 7.3.6">Exploration 7.3.6</a> and solve it.</div> <pre class="ptx-sagecell sagecell-sage" id="sage-44"><script type="text/x-sage">%display typeset
+A = (FIXME)
+b = (FIXME)
+c = (FIXME)
+P = InteractiveLPProblem(A, b, c,
+ [FIXME], 
+ constraint_type = [FIXME],
+ variable_type = [FIXME],
+ problem_type = FIXME)
+P
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-45"><script type="text/x-sage">print(P.optimal_solution())
+print(P.optimal_value())
+</script></pre></article></article><span class="incontext"><a href="sec-weighted.html#activity-103" class="internal">in-context</a></span>
+</body>
+</html>

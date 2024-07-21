@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span>
+</h4>
+<div class="introduction">
+<div class="para">Suppose we have a capacitated network with a unique fixed source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{.}\)</span>
+</div> <div class="para">We wish to define a maximization linear program with decision variables <span class="process-math">\(x_{ij}, v_i, v_j\in V\text{.}\)</span>
+</div>
+</div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">Define the objective function both in terms of variables <span class="process-math">\(x_{sj}\)</span> and <span class="process-math">\(x_{id}\text{.}\)</span>  Explain why these are equivalent (can you prove it?).</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">For each edge <span class="process-math">\((v_i, v_j)\text{,}\)</span> there is a natural inequality constraint for the decision variables associated with this edge.  What is this inequality?</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">For each vertex <span class="process-math">\(v_j\)</span> not our source or sink, there is an equality constraint for the decision variables associated with this vertex.  Which is this equality?</div> <ol class="upper-alpha cols2">
+<li><div class="para"><span class="process-math">\(\displaystyle \displaystyle \sum_{i}x_{ji} - \sum_{i}x_{sj}=0.\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \displaystyle \sum_{i}x_{ij} - \sum_{i}x_{jd}=0.\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \displaystyle \sum_{i}x_{ij}=0.\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \displaystyle \sum_{i}x_{ji}=0.\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \displaystyle \sum_{i}x_{ij} - \sum_{i}x_{ji}=0.\)</span></div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \displaystyle \sum_{i}x_{ij} + \sum_{i}x_{ji}=0.\)</span></div></li>
+</ol></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para">There is an additional type of inequality for this problem, what is it?</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para">Write out the primal max problem for <a href="" class="xref" data-knowl="./knowl/exploration-flow.html" title="Exploration 7.1.1">Exploration 7.1.1</a> as a non-canonical Tucker Tableau.</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para">Solve this problem:</div> <div class="para">
+<pre class="ptx-sagecell sagecell-sage" id="sage-40"><script type="text/x-sage">%display typeset
+A = (FIXME)
+b = (FIXME)
+c = (FIXME)
+P = InteractiveLPProblem(A, b, c,
+ [FIXME], 
+ constraint_type = [FIXME],
+ variable_type = [FIXME],
+ problem_type = FIXME)
+P
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-41"><script type="text/x-sage">print(P.optimal_solution())
+print(P.optimal_value())
+</script></pre>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para">Let <span class="process-math">\(\mu_i\)</span> denote the dual  variable for <a href="" class="xref" data-knowl="./knowl/exploration-flow.html" title="Exploration 7.1.1">Exploration 7.1.1</a> associated with vertex <span class="process-math">\(i\)</span> and let <span class="process-math">\(y_{ij}\)</span> denote the dual  variable associated with edge <span class="process-math">\((v_i, v_j)\text{.}\)</span>
+</div> <div class="para">Describe the dual min program.</div></article></article><span class="incontext"><a href="sec-networkflow.html#activity-92" class="internal">in-context</a></span>
+</body>
+</html>

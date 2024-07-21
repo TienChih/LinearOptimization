@@ -9,38 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script>
 </head>
 <body class="ignore-math">
 <article class="task exercise-like"><h4 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">7.3.3.e</span><span class="period">.</span>
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">6.4.a</span><span class="period">.</span>
 </h4>
-<div class="para">Model the shortest path problem in <a href="" class="xref" data-knowl="./knowl/exploration-path.html" title="Exploration 7.3.1">Exploration 7.3.1</a> as a linear programming problem and solve it:</div> <div class="para">
-<pre class="ptx-sagecell sagecell-sage" id="sage-36"><script type="text/x-sage">%display typeset
-A = (FIXME)
-b = (FIXME)
-c = (FIXME)
-P = InteractiveLPProblem(A, b, c,
- [FIXME], 
- constraint_type = [FIXME],
- variable_type = [FIXME],
- problem_type = FIXME)
-P
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-37"><script type="text/x-sage">print(P.optimal_solution())
-print(P.optimal_value())
-</script></pre>
-</div></article><span class="incontext"><a href="sec-weighted.html#task-528" class="internal">in-context</a></span>
+<div class="para">Consider an assignment problem where the cost of shipping from <span class="process-math">\(v_i\)</span> to <span class="process-math">\(v_j\)</span> is the weight on that edge if it exists and <span class="process-math">\(Z\)</span> otherwise.  Show that any solution to the assignment problem (not neccesarily optimal) is bijective with the set of possible unions of disjoint cycles on the network.</div></article><span class="incontext"><a href="sec-exercisestransports.html#task-528" class="internal">in-context</a></span>
 </body>
 </html>

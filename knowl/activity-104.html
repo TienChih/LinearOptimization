@@ -9,38 +9,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script>
 </head>
 <body class="ignore-math">
 <article class="activity project-like"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span>
 </h3>
-<div class="para">As the demand for meat pies skyrockets, Agnesi is now able to acquire 40 oz of floor a day, but now uses 10 oz of floor per meat pie to thicken the gravy.  She is able to sell these for 40 gp each. Use the branch and bound algorithm <a href="" class="xref" data-knowl="./knowl/def-branchbound.html" title="Definition 8.1.2">Definition 8.1.2</a> to found her new optimal production level.</div> <div class="para">
-<pre class="ptx-sagecell sagecell-sage" id="sage-42"><script type="text/x-sage">%display typeset
-A = (FIXME)
-b = (FIXME)
-c = (FIXME)
-P = InteractiveLPProblem(A, b, c,
- [FIXME], 
- constraint_type = [FIXME],
- variable_type = [FIXME],
- problem_type = FIXME)
-P
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-43"><script type="text/x-sage">print(P.optimal_solution())
-print(P.optimal_value())
-</script></pre>
-</div></article><span class="incontext"><a href="sec-branchbound.html#activity-104" class="internal">in-context</a></span>
+<div class="introduction"><div class="para">We return to <a href="" class="xref" data-knowl="./knowl/exploration-shipping.html" title="Exploration 7.3.6">Exploration 7.3.6</a> with an adjustment to the procedure there to enable adjusting previously chosen paths.</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Once again, find the shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{,}\)</span> and use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="" class="xref" data-knowl="./knowl/def-maxflowalgorithm.html" title="Definition 7.2.3: Max Flow Algorithm">Definition 7.2.3</a>.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Now in addition to decreasing the  capacities of used edges by <span class="process-math">\(x_{ij}\text{,}\)</span> add a backwards edge <span class="process-math">\(ji\)</span> with capacity <span class="process-math">\(x_{ij}\)</span> and negative weight <span class="process-math">\(-w_{ij}\text{.}\)</span>
+</div> <div class="para">Pick any path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> that traverses a backwards negative edge. What does shipping along this path represent in terms of determining a new shipping procedure.</div> <div class="para">Test your ideas out on a few different paths traversing negative edges.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Find the shortest path along this adjusted graph and treat it as an <span class="process-math">\(\alpha\)</span>-path.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">What does this second chosen shortest path represent in terms of shipping goods?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">Have you now achieved a minimal cost flow shipping 10 tons of goods?</div></article></article><span class="incontext"><a href="sec-weighted.html#activity-104" class="internal">in-context</a></span>
 </body>
 </html>

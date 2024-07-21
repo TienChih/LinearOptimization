@@ -31,7 +31,7 @@ sagecell.makeSagecell({
 <article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para">Write out a payoff matrix for this game. (Why is it <span class="process-math">\(6\times 7\text{?}\)</span>)</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para">Find the optimal solution for Colleen using Sage:</div> <div class="para">
-<pre class="ptx-sagecell sagecell-sage" id="sage-28"><script type="text/x-sage">%display typeset
+<pre class="ptx-sagecell sagecell-sage" id="sage-32"><script type="text/x-sage">%display typeset
 A = (FIX_ME)
 b = (FIX_ME)
 c = (FIX_ME)
@@ -40,14 +40,14 @@ P = InteractiveLPProblem(A, b, c,
  constraint_type = ["==", "<=", "<=", "<=", "<=", "<=", "<="],
  variable_type = ["", ">=", ">=", ">=", ">=", ">=", ">="])
 P
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-29"><script type="text/x-sage">print(P.optimal_solution())
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-33"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
 </script></pre>
 </div> <div class="para">Does the game favor Rowan or Colleen?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para">Use sage to find the optimal solution for Rowan:</div> <pre class="ptx-sagecell sagecell-sage" id="sage-30"><script type="text/x-sage">%display typeset
+<div class="para">Use sage to find the optimal solution for Rowan:</div> <pre class="ptx-sagecell sagecell-sage" id="sage-34"><script type="text/x-sage">%display typeset
 D = P.dual()
 D
-</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-31"><script type="text/x-sage">print(D.optimal_solution())
+</script></pre> <pre class="ptx-sagecell sagecell-sage" id="sage-35"><script type="text/x-sage">print(D.optimal_solution())
 print(D.optimal_value())
 </script></pre></article></article><span class="incontext"><a href="sec-vonneumann.html#activity-78" class="internal">in-context</a></span>
 </body>

@@ -11,9 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Add <span class="process-math">\(q\)</span> to each forward <span class="process-math">\(x_{ij}\)</span> in <span class="process-math">\(\alpha\text{,}\)</span> and subtract <span class="process-math">\(q\)</span> from each backwards <span class="process-math">\(x_{ij}\)</span> in <span class="process-math">\(\alpha\text{.}\)</span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Pick an <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> in <span class="process-math">\(N\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> such that:</div>
+<ul class="disc"><li>
+<div class="para">Each forward edge of <span class="process-math">\(P\)</span> satisfies <span class="process-math">\(x_{ij} \lt c_{ij}\text{.}\)</span>
 </div>
-<span class="incontext"><a href="sec-weighted.html#p-1350" class="internal">in-context</a></span>
+                  <div class="para">Eack backwards edge satisfies <span class="process-math">\(x_{ij} &gt;0\text{.}\)</span>
+</div>
+                </li></ul>
+<div class="para">(If no such <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> exists, GOTO 5)</div>
+</div>
+<span class="incontext"><a href="sec-maxflowmincut.html#p-1350" class="internal">in-context</a></span>
 </body>
 </html>
