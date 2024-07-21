@@ -1046,7 +1046,7 @@
       </p>
     </exercise>
 
-    <exercise>
+    <exercise >
       <introduction>
         <p>
           Solve the following transportation problems:
@@ -1306,7 +1306,7 @@
       </introduction>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="ex-hoverbike">
       <p>
         On the planet Zeltros, a luxury resort is preparing for a multi-day celebration they are hosting.
         One of the requested activities by the guests is hoverbike riding.  Over the three day event, they will require

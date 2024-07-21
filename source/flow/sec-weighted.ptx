@@ -34,16 +34,16 @@
             \node[mycircle,below right=of v3] (t) {$v_5$};
 
           \draw[->] (s) --node[above, sloped]{\tiny$3$} (v1);
-          \draw[->] (s) --node[above , sloped]{\tiny$13$} (v2);
+          \draw[->] (s) --node[below , sloped]{\tiny$13$} (v2);
           \draw[->] (v1.280) --node[above , sloped]{\tiny$12$} (v2.80);
           \draw[->] (v2.100) --node[above , sloped]{\tiny$6$} (v1.260);
           \draw[->] (v1)--node[above , sloped]{\tiny$4$}(v3);
           \draw[->] (v1)--node[above , sloped , pos=0.15 ]{\tiny$10$}(v4);
-          \draw[->] (v2)--node[above , sloped ]{\tiny$2$}(v4);
+          \draw[->] (v2)--node[below , sloped ]{\tiny$2$}(v4);
           \draw[->] (v4)--node[above , sloped]{\tiny$5$}(v3);
           \draw[->] (v3)--node[above , sloped]{\tiny$22$}(t);
           \draw[->] (v3)--node[above , sloped, pos=0.15]{\tiny$6$}(v2);
-          \draw[->] (v4)--node[above , sloped]{\tiny$8$}(t);
+          \draw[->] (v4)--node[below , sloped]{\tiny$8$}(t);
           \end{tikzpicture}
 
         </latex-image>
@@ -162,7 +162,7 @@
   <activity>
     <introduction>
       <p>
-        In this activity, we model the shortest path algorithm as a linear programming problem.  Assume <m>N</m> is a weighted network with no negative cycles.  Let <m>0\leq x_{ij}\leq 1</m>
+        In this activity, we model the shortest path algorithm as a linear optimization problem.  Assume <m>N</m> is a weighted network with no negative cycles.  Let <m>0\leq x_{ij}\leq 1</m>
         where <m>x_{ij}=1</m> if <m>(v_i, v_j)</m> is in a shortest path <m>P</m> from <m>v_s</m> to <m>v_d</m>.
       </p>
     </introduction>
@@ -291,7 +291,7 @@
     <task>
       <statement>
         <p>
-          Model the shortest path problem in <xref ref="exploration-path"/> as a linear programming problem and solve it:
+          Model the shortest path problem in <xref ref="exploration-path"/> as a linear optimization problem and solve it:
         </p>
         <p>
           <sage>
@@ -371,11 +371,49 @@
   </definition>
 
   <activity>
-    <statement>
+    <introduction>
       <p>
-        Apply <xref ref="def-DijkstrasAlgorithm"/> to the shortest path problem in <xref ref="exploration-path"/>.
+        We revisit the shortest path problem from <xref ref="exploration-path"/>.
       </p>
-    </statement>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Apply <xref ref="def-DijkstrasAlgorithm"/> to the network in this problem and label each vertex
+          <m>v_i</m> by <m>\ell_i</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What do each <m>\ell_i</m> represent in terms of travel time?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Consider <m>\ell_3, \ell_4</m> and <m>w_{35}, w_{45}</m>.
+          Which vertex could be on a shortest path from <m>v_0</m> to <m>v_5</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Take your previous choice of vertex <m>v_k</m> and repeat: look at the <m>\ell_i</m>
+          of it's potential predecessors and <m>w_{ik}</m>.  Recursively repeat until we reach <m>v_0</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is the shortest path from <m>v_0</m> to <m>v_5</m>?
+        </p>
+      </statement>
+    </task>
   </activity>
 
   <activity>
@@ -490,7 +528,7 @@
   </definition>
 
 
-  <exploration>
+  <exploration xml:id="exploration-shipping">
     <introduction>
       <p>
         Suppose a shipping company is moving goods through a series of
@@ -534,10 +572,40 @@
   
           </latex-image>
         </image> 
-        The pairs are (capacity, cost) pairs, and we are trying to ship 10 tons
+        The pairs are (capacity, cost) pairs (denoted <m>(c_{ij}, w_{ij})</m>), and we are trying to ship 10 tons
         of goods from <m>v_0</m> to <m>v_5</m>.
       </p>
     </introduction>
+    <task>
+      <statement>
+        <p>
+          Let's find a single path from <m>v_0</m> to <m>v_5</m> along which we could ship goods at the
+          lowest possible cost.  What criteria should we use to identitfy this path?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              Maximize <m>\displaystyle w_{ij}</m> along this path.
+            </p>
+          </li>
+          <li>
+            <p>
+              Minimize <m>\displaystyle w_{ij}</m> along this path.
+            </p>
+          </li>
+          <li>
+            <p>
+              Maximize <m>\displaystyle c_{ij}</m> along this path.
+            </p>
+          </li>
+          <li>
+            <p>
+              Minimize <m>\displaystyle c_{ij}</m> along this path.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
     <task>
       <statement>
         <p>
@@ -555,7 +623,7 @@
     <task>
       <statement>
         <p>
-          Adjust capacities appropriately and remove any fuly capacitated edges.
+          Decrease capacities of any used edges by <m>x_{ij}</m>.
         </p>
       </statement>
     </task>
@@ -569,11 +637,276 @@
     <task>
       <statement>
         <p>
-          Argue that this is not the lowest cost flow.
+          Argue that this is <em>not</em> the lowest cost flow.
         </p>
       </statement>
     </task>
-  </exploration> 
+    <task>
+      <statement>
+        <p>
+          Which of the following was an issue with how this problem was approached?
+        </p>
+        <ol marker="A.">
+          <li>
+            <p>
+              The original path chosen was too expensive.
+            </p>
+          </li>
+          <li>
+            <p>
+              The original path forced us into poor choices of future paths.
+            </p>
+          </li>
+          <li>
+            <p>
+              There was no mechanism to backtrack or adjust previous choices.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exploration>
+  
+  <activity>
+    <introduction>
+      <p>
+        We model the shipping problem in <xref ref="exploration-shipping"/> as a linear optimization
+        problem.  Let <m>x_{ij}</m> denote the quantity in tons of goods shipped from
+        <m>v_i</m> to <m>v_j</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What is the objective function of this problem?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>f(\x)=\displaystyle \sum_{i, j}x_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(\x)=\displaystyle \sum_{i, j}x_{ij}c_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(\x)=\displaystyle \sum_{i, j}x_{ij}w_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(\x)=\displaystyle \sum_{j}x_{0j}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(\x)=\displaystyle \sum_{j}x_{0j}c_{0j}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(\x)=\displaystyle \sum_{j}x_{0j}w_{0j}</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For each <m>ij</m> edge, there is a constraint for the shipping
+          capacity of that edge.  What (in)equality represents that capacity?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>x_{ij}\leq w_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_{ij}\geq w_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_{ij}= w_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_{ij}\leq c_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_{ij}\geq c_{ij}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_{ij}= c_{ij}</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For each vertex <m>v_k</m> excluding the source and sink, what (in)equality represents
+          the conservation of flow?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj} = 0</m>.
+            </p>
+          </li>
+          
+          
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>F</m> be the total amount of goods to be shipped, in 
+          this case <m>F=10</m>.  What equality represents this constraint?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\displaystyle \sum_{i, j}x_{ij}c_{ij}= F</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_{i, j}x_{ij}w_{ij}= F</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_{i, j}x_{ij}=F</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_{j}x_{0j}= F</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_{j}x_{0j}c_{0j}=10</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\displaystyle \sum_{j}x_{0j}w_{0j}=10</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Write out the linear optimization problem modeling <xref ref="exploration-shipping"/>
+          and solve it.
+        </p>
+        <sage>
+          <input>
+            %display typeset
+            A = (FIXME)
+            b = (FIXME)
+            c = (FIXME)
+            P = InteractiveLPProblem(A, b, c,
+             [FIXME], 
+             constraint_type = [FIXME],
+             variable_type = [FIXME],
+             problem_type = FIXME)
+            P
+          </input>         
+          </sage>
+          <sage>
+            <input>
+              print(P.optimal_solution())
+              print(P.optimal_value())
+            </input>         
+          </sage>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        We return to <xref ref="exploration-shipping"/> with an adjustment to the procedure there to 
+        enable adjusting previously chosen paths.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Once again, find the shortest path from <m>v_0</m> to <m>v_5</m>,
+          and use this as an <m>\alpha</m>-path as in <xref ref="def-maxflowalgorithm"/>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Now in addition to decreasing the  capacities of used edges by <m>x_{ij}</m>, add
+          a backwards edge <m>ji</m> with capacity <m>x_{ij}</m> and negative weight <m>-w_{ij}</m>.
+        </p>
+        <p>
+          Pick any path from <m>v_0</m> to <m>v_5</m> that traverses a backwards negative edge.  
+          What does shipping along this path represent in terms of determining a new shipping procedure.
+        </p>
+        <p>
+          Test your ideas out on a few different paths traversing negative edges.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find the shortest path along this adjusted graph and treat it as an <m>\alpha</m>-path.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What does this second chosen shortest path represent in terms of shipping goods?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Have you now achieved a minimal cost flow shipping 10 tons of goods?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    We now formalize this idea of adjusting previous choices to an algorithm:
+  </p>
 
   <definition xml:id="def-mincostflowalgorithm">
     <title>Minimum Cost Flow Algorithm</title>

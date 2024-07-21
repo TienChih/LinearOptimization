@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-exercisesflow" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Problems for <xref ref="ch-flow"/></title>
+
+  <sage>
+    <input>
+      
+    </input>         
+  </sage>
+  <exercises xml:id="exercises-flow">
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider the following capacitated network:
+          <image xml:id="flowexa">
+            <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+            <latex-image>
+              \begin{tikzpicture}[
+                  mycircle/.style={
+                    circle,
+                    draw=black,
+                    fill=gray,
+                    fill opacity = 0.3,
+                    text opacity=1,
+                    inner sep=0pt,
+                    minimum size=20pt,
+                    font=\small},
+                  myarrow/.style={-Stealth},
+                  node distance=0.6cm and 1.2cm
+                  ]
+                  \node[mycircle] (v3) {$v_3$};
+                  \node[mycircle,below =of v3] (v4) {$v_4$};
+                  \node[mycircle,above left =of v3] (v1) {$v_1$};
+                  \node[mycircle,below left =of v4] (v2) {$v_2$};
+                  \node[mycircle,  below left =0.2cm and 2.4cm of v3] (v0) {$v_s$};
+                  \node[mycircle,above right =of v3] (v5) {$v_5$};
+                  \node[mycircle,below right =of v4] (v6) {$v_6$};
+                  \node[mycircle,  below right =0.2cm and 2.4cm of v3] (v7) {$v_7$};
+                  
+                  \draw[->] (v0) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$6$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$5$} (v1);
+                  \draw[->] (v2) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$3$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$1$} (v0);
+                  \draw[->] (v0) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$5$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$3$} (v3);
+                  \draw[->] (v0) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$4$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$4$} (v4);              
+                  \draw[->] (v1.350) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$5$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$3$} (v3.120);
+                  \draw[->] (v3.140) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$5$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$1$} (v1.330);
+                  \draw[->] (v4) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$8$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$2$} (v2);
+                  \draw[->] (v1.10) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$8$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$5$} (v5.170);
+                  \draw[->] (v5.190) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$7$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$2$} (v1.350);
+                  \draw[->] (v3) --node[above, sloped, pos= 0.5, inner sep=0.5pt, ]{\tiny$4$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.5]{\tiny$3$} (v4);
+                  \draw[->] (v3.50) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$6$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$2$} (v5.210);
+                  \draw[->] (v5.230) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$4$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$3$} (v3.30);
+                  \draw[->] (v4.345) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$7$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$5$} (v6.145);
+                  \draw[->] (v6.165) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$7$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$3$} (v4.325);
+                  \draw[->] (v2) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$6$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$1$} (v6);
+                  \draw[->] (v6) --node[below, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$8$}node[below , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$6$} (v7);
+                  \draw[->] (v7) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$5$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$4$} (v5);
+                  \draw[->] (v3) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$5$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$4$} (v7);
+                  \draw[->] (v4) --node[above, sloped, pos= 0.35, inner sep=0.5pt, ]{\tiny$6$}node[above , inner sep=0.5pt, draw, circle, sloped, pos= 0.65]{\tiny$3$} (v7);
+                \end{tikzpicture}
+
+            </latex-image>
+          </image> 
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find <m>\varphi(v_i)</m> for each vertex, and compute <m>\displaystyle \sum_{i=1}^7\varphi(v_i)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Classify each vertex as a source, sink and intermediate vertex.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Add two vertices and as few edges as possible to extend this flow to a flow
+            with a unique source and unique sink
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-maxflowmincut">
+      <introduction>
+        <p>
+          For each of the following capacitated networks, find the max-flow and min-cut 
+          on these networks as shown in <xref ref="sec-maxflowmincut"/>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="flowexb">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v0) {$v_s$};
+              \node[mycircle,above right =of v0] (v1) {$v_1$};
+              \node[mycircle,below right =of v0] (v2) {$v_2$};
+              \node[mycircle,  right =of v1] (v3) {$v_3$};
+              \node[mycircle, right =of v2] (v4) {$v_4$};
+              \node[mycircle,below right =of v3] (v5) {$v_d$};
+
+               \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$7$} (v1);
+               \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$10$} (v2);
+               \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$5$} (v1);
+               \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v3);
+               \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, pos=0.3]{\tiny$12$} (v4);
+               \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, pos=0.3]{\tiny$10$} (v3);
+               \draw[->] (v2) --node[below, sloped, inner sep=0.5pt, ]{\tiny$4$} (v4);
+               \draw[->] (v3.290) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v4.70);
+               \draw[->] (v4.110) --node[above, sloped, inner sep=0.5pt, ]{\tiny$5$} (v3.250);
+               \draw[->] (v4) --node[below, sloped, inner sep=0.5pt, ]{\tiny$7$} (v5);
+               \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$8$} (v5);
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="flowexc">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v3) {$v_3$};
+              \node[mycircle,above left =of v3] (v1) {$v_1$};
+              \node[mycircle,below left =of v3] (v2) {$v_2$};
+              \node[mycircle,  below left =of v1] (v0) {$v_s$};
+              \node[mycircle,above right =of v3] (v4) {$v_4$};
+              \node[mycircle,below right =of v3] (v5) {$v_5$};
+              \node[mycircle,  below right =of v4] (v6) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$6$} (v1);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v3);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$3$} (v2);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v4);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v3);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v3);
+              \draw[->] (v2) --node[below, sloped, inner sep=0.5pt, ]{\tiny$4$} (v5);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v4);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v5);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v6);
+              \draw[->] (v4) --node[above, sloped, inner sep=0.5pt, ]{\tiny$5$} (v6);
+              \draw[->] (v5) --node[below, sloped, inner sep=0.5pt, ]{\tiny$2$} (v6);
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="flowexd">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v0) {$v_s$};
+              \node[mycircle,below left =of v0] (v1) {$v_1$};
+              \node[mycircle,  below right =of v0] (v2) {$v_2$};
+              \node[mycircle,above left =of v0] (v3) {$v_3$};
+              \node[mycircle,  above right =of v0] (v4) {$v_4$};
+              \node[mycircle,below right =of v1] (v10) {$v_d$};
+              \node[mycircle,above right =of v3] (v5) {$v_5$};
+              \node[mycircle,left =of v3] (v6) {$v_6$};
+              \node[mycircle,left =of v1] (v7) {$v_7$};
+              \node[mycircle,right =of v4] (v8) {$v_8$};
+              \node[mycircle,right =of v2] (v9) {$v_9$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v10);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$9$} (v1);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$7$} (v2);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$7$} (v4);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$15$} (v5);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$6$} (v3);
+              \draw[->] (v5) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v3);
+              \draw[->] (v5) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v4);
+              \draw[->] (v5) --node[above, sloped, inner sep=0.5pt, ]{\tiny$8$} (v6);
+              \draw[->] (v5) --node[above, sloped, inner sep=0.5pt, ]{\tiny$9$} (v8);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$7$} (v6);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$6$} (v7);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v1);
+              \draw[->] (v6) --node[below, sloped, inner sep=0.5pt, ]{\tiny$1$} (v7);
+              \draw[->] (v7) --node[below, sloped, inner sep=0.5pt, ]{\tiny$8$} (v1);
+              \draw[->] (v1) --node[below, sloped, inner sep=0.5pt, ]{\tiny$14$} (v10);
+              \draw[->] (v7) --node[below, sloped, inner sep=0.5pt, ]{\tiny$9$} (v10);              
+              \draw[->] (v4) --node[above, sloped, inner sep=0.5pt, ]{\tiny$9$} (v8);
+              \draw[->] (v4) --node[below, sloped, inner sep=0.5pt, ]{\tiny$3$} (v2);
+              \draw[->] (v8) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v9);
+              \draw[->] (v8) --node[above, sloped, inner sep=0.5pt, ]{\tiny$8$} (v2);
+               \draw[->] (v9) --node[below, sloped, inner sep=0.5pt, ]{\tiny$7$} (v2);
+               \draw[->] (v9) --node[below, sloped, inner sep=0.5pt, ]{\tiny$8$} (v10);
+               \draw[->] (v2) --node[below, sloped, inner sep=0.5pt, ]{\tiny$15$} (v10);
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="flowexe">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v0) {$v_s$};
+              \node[mycircle, above right =of v0] (v1) {$v_1$};
+              \node[mycircle, right =1cm of v0] (v2) {$v_2$};
+              \node[mycircle, below right =of v0] (v3) {$v_3$};
+              \node[mycircle, right =of v1] (v4) {$v_4$};
+              \node[mycircle, right =of v2] (v5) {$v_5$};
+              \node[mycircle, right =of v3] (v6) {$v_6$};
+              \node[mycircle, right =of v4] (v7) {$v_7$};
+              \node[mycircle, right =of v5] (v8) {$v_8$};
+              \node[mycircle, right =of v6] (v9) {$v_9$};
+              \node[mycircle, right =of v3] (v6) {$v_6$};
+              \node[mycircle, right =of v7] (v10) {$v_{10}$};
+              \node[mycircle, right =of v8] (v11) {$v_{11}$};
+              \node[mycircle, right =of v9] (v12) {$v_{12}$};
+              \node[mycircle, right =of v11] (vd) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$7$} (v1);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$8$} (v2);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$9$} (v3);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v4);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v5);
+              \draw[->] (v3) --node[below, sloped, inner sep=0.5pt, ]{\tiny$3$} (v6);
+              \draw[->] (v2) --node[below, sloped, inner sep=0.5pt, ]{\tiny$1$} (v1);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v3);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v4);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v5);
+              \draw[->] (v4) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v7);
+              \draw[->] (v5) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v8);
+              \draw[->] (v6) --node[below, sloped, inner sep=0.5pt, ]{\tiny$3$} (v9);
+              \draw[->] (v4) --node[below, sloped, inner sep=0.5pt, ]{\tiny$1$} (v5);
+              \draw[->] (v6) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v5);
+              \draw[->] (v4) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v8);
+              \draw[->] (v5) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v9);
+              \draw[->] (v7) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v8);
+              \draw[->] (v9) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v8);
+              \draw[->] (v7) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v10);
+              \draw[->] (v8) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v11);
+              \draw[->] (v9) --node[below, sloped, inner sep=0.5pt, ]{\tiny$4$} (v12);
+              \draw[->] (v8) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v10);
+              \draw[->] (v8) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v12);
+              \draw[->] (v11) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v10);
+              \draw[->] (v12) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v11);
+              \draw[->] (v10) --node[above, sloped, inner sep=0.5pt, ]{\tiny$9$} (vd);
+              \draw[->] (v11) --node[above, sloped, inner sep=0.5pt, ]{\tiny$8$} (vd);
+              \draw[->] (v12) --node[above, sloped, inner sep=0.5pt, ]{\tiny$7$} (vd);
+              
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Consider the max-flow min-cut problem <xref ref="ex-maxflowmincut"/> (a).
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Write out the non-canonical maximization problem which would
+            compute the max-flow.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Record this problem in a Tucker tableau, then record the 
+            dual variable using <m>\ec{\mu_i}</m> to denote dual variables associated with
+            vertex equality constraints and <m>y_{ij}</m> to denote the dual vairables for 
+            edge inequality constraint.  
+          </p>
+        </statement>
+      </task>
+      <task>
+        <p>
+          Verify that the max-flow and min-cut you found are feasible solutions to these problems
+          (using the convention that <m>\mu_k=0</m> if <m>v_k\in V_1</m>, <m>\mu_k=-1</m> if <m>v_k\in V_2</m> and
+          <m>y_{ij}=1</m> if <m>v_i\in V_1, v_j\in V_2</m> and <m>y_{ij}=0</m> otherwise.)
+        </p>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Argue that any cut corresponds to a feasible solution to this dual problem.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            How can we tell both the flow and cut found in <xref ref="ex-maxflowmincut"/> (a)
+            are optimal? (Think duality.)
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    
+
+    <exercise>
+      <introduction>
+        <p>
+          Over a month at a hospital many patients are need of blood transfusions.  They had available
+          blood from 47 donors with type A blood, 33 donors with type B blood, 46 donors with type AB and 44 donors with type O.
+          There were 38 patients with type A blood, 39 patients with type B blood, 49 patients with type AB and 43 patients with type O.
+          Type A patients can only receive type A or O, type B patients can receive only type B or O, type
+O patients can receive only type O, and type AB patients can receive any of the four types.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Construct a capacitated network which models the distributions of blood type from donors
+            to patients with a unique source and sink, with no edges into the source or out of the sink. 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find a max-flow for this network.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find a min-cut for this network.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If not all patients were able to recieve blood, explain the financial backers and hospital administrators, who may not have taken
+            any math in awhile, why this was the case.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            There's little a hospital can do about the blood types of incoming patients.
+            If reaching out to potential donors, what blood types should be prioritized?
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <p>
+        Let <m>N</m> be a capacitated network with a unique source and sink,
+          with no edges going into the source or out of the sink.  Let <m>x_{ij}</m> 
+          be a flow on this network with value <m>f</m> then prove that <me>f=\sum_{i\in V_1, j\in V_2}x_{ij}-\sum_{i\in V_1, j\in V_2}x_{ji}.</me>
+      </p>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Let <m>N</m> be a capacitated network with a unique source and sink,
+          with no edges going into the source or out of the sink.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Given an example for <m>N</m> such that <m>N</m> has non-unique
+            max-flows.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Given an example for <m>N</m> such that <m>N</m> has non-unique
+            min-cuts.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>x_{ij}</m> denote any max-flow for <m>N</m> with value <m>f</m> and  <m>(V_1, V_2)</m> denote any min-cut (not neccesarily produced by <m>x_{ij}</m> and <xref ref="def-mincutalgorithm"/>).  Let
+            <m>(V_1', V_2')</m> be the cut generated <m>x_{ij}</m> via <xref ref="def-mincutalgorithm"/>.
+          </p>
+          <p>
+            Prove that <m>x_{ij}=c_{ij}</m> for any <m>v_i\in V_1, v_j=V_2</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let <m>x_{ij}, x'_{ij}</m> be two distinct max-flows on <m>N</m>,
+            and <m>(V_1, V_2), (V'_1, V'_2)</m> be the cuts produced by <xref ref="def-mincutalgorithm"/> on
+            with these flows respectively.  Prove that <m>(V_1, V_2) = (V'_1, V'_2)</m>.
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise xml:id="ex-shortestpath">
+      <introduction>
+        <p>
+          For each of the following, find the shortest path from <m>v_s</m> to <m>v_d</m> using <xref ref="def-DijkstrasAlgorithm"/>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="shortpatha">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v2) {$v_2$};
+              \node[mycircle, above  =of v2] (v1) {$v_1$};
+              \node[mycircle, left = of v2] (v0) {$v_s$};
+              \node[mycircle, below  =of v2] (v3) {$v_3$};
+              \node[mycircle, right = of v2] (vd) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$6$} (v1);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v2);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$1$} (v3);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (vd);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (vd);
+              \draw[->] (v3) --node[below, sloped, inner sep=0.5pt, ]{\tiny$6$} (vd);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v1);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v3);
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="shortpathb">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v2) {$v_2$};
+              \node[mycircle, above left=of v2] (v0) {$v_s$};
+              \node[mycircle, below left =of v2] (v1) {$v_1$};
+              \node[mycircle, below right = of v2] (v3) {$v_3$};
+              \node[mycircle, above right  =of v2] (v4) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$5$} (v2);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v4);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$1$} (v1);
+              \draw[->] (v1) --node[below, sloped, inner sep=0.5pt, ]{\tiny$2$} (v3);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v2);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$-2$} (v3);
+              \draw[->] (v3) --node[below, sloped, inner sep=0.5pt, ]{\tiny$2$} (v4);
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="shortpathc">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v0) {$v_s$};
+              \node[mycircle, above right =of v0] (v1) {$v_1$};
+              \node[mycircle, below right = of v0] (v2) {$v_2$};
+              \node[mycircle, above right =of v1] (v3) {$v_3$};
+              \node[mycircle, below right =of v1] (v4) {$v_4$};
+              \node[mycircle, below right =of v2] (v5) {$v_5$};
+              \node[mycircle, below right = of v3] (v6) {$v_6$};
+              \node[mycircle, above right =of v5] (v7) {$v_7$};
+              \node[mycircle, below right = of v6] (v8) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$2$} (v1);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$2$} (v2);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v3);
+              \draw[->] (v1) --node[below, sloped, inner sep=0.5pt, ]{\tiny$3$} (v4);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$4$} (v4);
+              \draw[->] (v2) --node[below, sloped, inner sep=0.5pt, ]{\tiny$2$} (v5);
+              \draw[->] (v4) --node[above, sloped, inner sep=0.5pt, ]{\tiny$1$} (v6);
+              \draw[->] (v4) --node[below, sloped, inner sep=0.5pt, ]{\tiny$1$} (v7);
+              \draw[->] (v5) --node[below, sloped, inner sep=0.5pt, ]{\tiny$2$} (v7);
+              \draw[->] (v7) --node[below, sloped, inner sep=0.5pt, ]{\tiny$2$} (v8);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v6);
+              \draw[->] (v6) --node[above, sloped, inner sep=0.5pt, ]{\tiny$3$} (v8);
+            \end{tikzpicture}
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="shortpathd">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+            mycircle/.style={
+              circle,
+              draw=black,
+              fill=gray,
+              fill opacity = 0.3,
+              text opacity=1,
+              inner sep=0pt,
+              minimum size=20pt,
+              font=\small},
+            myarrow/.style={-Stealth},
+            node distance=0.6cm and 1.2cm
+            ]
+            \node[mycircle] (s) {$v_0$};
+            \node[mycircle,below right=of s] (v2) {$v_2$};
+            \node[mycircle,right=of v2] (v4) {$v_4$};
+            \node[mycircle,above right=of s] (v1) {$v_1$};
+            \node[mycircle,right=of v1] (v3) {$v_3$};
+            \node[mycircle,below right=of v3] (t) {$v_5$};
+
+          \draw[->] (s) --node[above, sloped]{\tiny$3$} (v1);
+          \draw[->] (s) --node[below , sloped]{\tiny$3$} (v2);
+          \draw[->] (v1.280) --node[above , sloped]{\tiny$5$} (v2.80);
+          \draw[->] (v2.100) --node[above , sloped]{\tiny$-3$} (v1.260);
+          \draw[->] (v1)--node[above , sloped]{\tiny$-1$}(v3);
+          \draw[->] (v1)--node[above , sloped , pos=0.15 ]{\tiny$-1$}(v4);
+          \draw[->] (v2)--node[below , sloped ]{\tiny$1$}(v4);
+          \draw[->] (v3)--node[above , sloped]{\tiny$2$}(t);
+          \draw[->] (v3)--node[above , sloped, pos=0.15]{\tiny$-2$}(v2);
+          \draw[->] (v4)--node[below , sloped]{\tiny$2$}(t);
+          \draw[->] (v4.80)--node[above , sloped]{\tiny$1$}(v3.280);
+          \draw[->] (v3.260)--node[above , sloped]{\tiny$1$}(v4.100);
+          \end{tikzpicture}
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+        <p>
+          Consider <xref ref="ex-shortestpath"/> (a).  Model this problem as a linear optimization problem and solve.
+        </p>
+      
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Let <m>N</m> be a weighted network with positive weights.  For the following, prove or
+          find a counterexample:
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>x,y,z\in V</m>.  Prove that the value of the shortest path from <m>x</m> to <m>z</m>
+            is the sum of the value of the shortest path from <m>x</m> to <m>y</m> plus the value of the shortest path from
+            <m>y</m> to <m>z</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose there was an edge going into <m>v_s</m>, then <xref ref="def-DijkstrasAlgorithm"/> fails.
+          </p>
+        </statement>
+      </task>
+
+    </exercise>
+
+    <exercise xml:id="ex-minflow">
+      <introduction>
+        <p>
+          For each of the following, find the minimum cost-flows for <m>F=8</m>
+          and <m>F=10</m>.  Interpret each ordered pair <m>(c_{ij}, w_{ij})</m> as
+          (capacity,cost).
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="minflowa">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v2) {$v_2$};
+              \node[mycircle, above left=of v2] (v0) {$v_s$};
+              \node[mycircle, below left =of v2] (v1) {$v_1$};
+              \node[mycircle, below right = of v2] (v3) {$v_3$};
+              \node[mycircle, above right  =of v2] (v4) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(7,4)$} (v2);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(6,1)$} (v4);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$(8,1)$} (v1);
+              \draw[->] (v1) --node[below, sloped, inner sep=0.5pt, ]{\tiny$(5,3)$} (v3);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(4,2)$} (v2);
+              \draw[->] (v3) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(3,2)$} (v2);
+              \draw[->] (v3) --node[below, sloped, inner sep=0.5pt, ]{\tiny$(5,2)$} (v4);
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="minflowb">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v2) {$v_2$};
+              \node[mycircle, below left=of v2] (v0) {$v_s$};
+              \node[mycircle, above left =of v2] (v1) {$v_1$};
+              \node[mycircle, below right = of v2] (v3) {$v_3$};
+              \node[mycircle, above right  =of v2] (v4) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(5,2)$} (v2);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(2,3)$} (v1);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$(5,1)$} (v3);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(3,1)$} (v4);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(2,2)$} (v1);
+              \draw[->] (v3) --node[below, sloped, inner sep=0.5pt, ]{\tiny$(4,1)$} (v4);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(3,1)$} (v3);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(3,3)$} (v4);
+              
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <image xml:id="minflowc">
+              <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
+              <latex-image>
+                \begin{tikzpicture}[
+              mycircle/.style={
+                circle,
+                draw=black,
+                fill=gray,
+                fill opacity = 0.3,
+                text opacity=1,
+                inner sep=0pt,
+                minimum size=20pt,
+                font=\small},
+              myarrow/.style={-Stealth},
+              node distance=0.6cm and 1.2cm
+              ]
+              \node[mycircle] (v2) {$v_2$};
+              \node[mycircle, above  =of v2] (v1) {$v_1$};
+              \node[mycircle, left = of v2] (v0) {$v_s$};
+              \node[mycircle, below  =of v2] (v3) {$v_3$};
+              \node[mycircle, right = of v2] (vd) {$v_d$};
+
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(2,4)$} (v1);
+              \draw[->] (v0) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(5,2)$} (v2);
+              \draw[->] (v0) --node[below, sloped, inner sep=0.5pt, ]{\tiny$(3,2)$} (v3);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(4,2)$} (vd);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(3,4)$} (vd);
+              \draw[->] (v3) --node[below, sloped, inner sep=0.5pt, ]{\tiny$(4,1)$} (vd);
+              \draw[->] (v2) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(1,3)$} (v3);
+              \draw[->] (v1) --node[above, sloped, inner sep=0.5pt, ]{\tiny$(1,1)$} (v2);
+            \end{tikzpicture}
+  
+              </latex-image>
+            </image> 
+          </p>
+        </statement>
+      </task>
+    </exercise>
+
+    <exercise>
+      <p>
+        Model <xref ref="ex-minflow"/> (a) as a linear optimization problem.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        For each problem in <xref ref="ex-transport"/>, draw a weighted capacitated network where the 
+        transportation problem may be solved by solving an appropriate min-cost flow problem.  State what the value 
+        <m>F</m> of the flow should be.  Do not solve the problem.
+      </p>
+    </exercise>
+
+    <exercise>
+      <p>
+        For each problem in <xref ref="ex-assignment"/>, draw a weighted capacitated network where the 
+        transportation problem may be solved by solving an appropriate min-cost flow problem.  State what the value 
+        <m>F</m> of the flow should be. Do not solve the problem.
+      </p>
+    </exercise>
+
+
+      
+    
+  </exercises>
+
+  
+  
+
+
+
+  
+
+</section>
