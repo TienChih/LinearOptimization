@@ -833,7 +833,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
         For each problem in <xref ref="ex-assignment"/>, draw a weighted capacitated network where the 
         transportation problem may be solved by solving an appropriate min-cost flow problem.  State what the value 
         <m>F</m> of the flow should be. Do not solve the problem.
-      </p>
+      </p> 
     </exercise>
 
 
