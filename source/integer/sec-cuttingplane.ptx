@@ -4,10 +4,44 @@
   <title>CuttingPlane Method</title>
 
 
-  <exploration xml:id="exploration-cut">
+  <exploration>
+      <p>
+        Recall <xref ref="exploration-meat"/>, and the question of making sandwiches and pies.
+      </p>
+      <p>
+          Define two additional inequalities such that the following are true:
+        </p>
+        <ol marker="A.">
+          <li>
+            <p>
+              No inequality eliminates any feasible integer solution of the original problem.
+            </p>
+          </li>
+          <li>
+            <p>
+              No boundary hyperplane is parallel to the objective function plane.
+            </p>
+          </li>
+          <li>
+            <p>
+              With the additional inequalities, the optimal solution to the linear relaxation
+              is the optimal integer solution previously found to <xref ref="exploration-meat"/>.
+            </p>
+          </li>
+        </ol>
+      
+  </exploration>
+
+  <p>
+    The boundary for these additional inequalities are reffered to as
+    <em>cutting hyperplanes</em>.  We wish to determine how to find such cutting
+    hyperplanes.
+  </p>
+
+  <activity xml:id="activity-cut">
     <introduction>
       <p>
-        In this exploration, we motivate the math behind the cutting plane method.
+        In this activity, we motivate the math behind the cutting plane method.
       </p>
       <p>
         Let <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> be a feasible solution of the relaxation
@@ -200,7 +234,7 @@
       </statement>
     </task>-->
 
-  </exploration>
+  </activity>
 
   <activity>
     <introduction>
@@ -296,7 +330,7 @@
       <statement>
         <p>
           Take the second row <m>x_2=b_2-a_{21}x_1-a_{22}x_2</m> and follow the procedure
-          in <xref ref="exploration-cut"/> to generate a new constraint <m>a_{31}t_1+a_{32}t_2\leq b_3</m>:
+          in <xref ref="activity-cut"/> to generate a new constraint <m>a_{31}t_1+a_{32}t_2\leq b_3</m>:
           <tabular halign="center">
             <row>
               <cell halign="left">
@@ -480,7 +514,7 @@
     <task>
       <statement>
         <p>
-          There is only one valid choice of row to generate a new constraint.  Follow the procedure in <xref ref="exploration-cut"/>
+          There is only one valid choice of row to generate a new constraint.  Follow the procedure in <xref ref="activity-cut"/>
           to generate a new constraint <m>a_{41}t_3+a_{42}t_2=b_4</m>
           <tabular halign="center">
             <row>
