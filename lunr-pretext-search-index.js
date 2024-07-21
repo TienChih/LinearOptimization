@@ -2707,23 +2707,32 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "CuttingPlane Method",
-  "body": " CuttingPlane Method    In this exploration, we motivate the math behind the cutting plane method.  Let be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                     Explain why the above equality is equivalent to     Show that for any feasible integeral solution of the left hand side off the equality in (2) is an integer.    Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.    For any integral solution, what is a non-negative integer upper bound for ?    Show that for any feasible integral solution to the relaxation of the integer programming problem.  We call the hyperplane a cutting-plane .    Show that if is non-integral, then by adding this constraint, the solution is no longer feasible.       We now apply this idea to an integer program.  Consider the integer programming problem:     Solve the relaxation of this integer program, and verify that this solution is not integral.                                                                     Take the second row and follow the procedure in to generate a new constraint :                                                                                     Using the fact that , describe this cutting plane in terms of .    Pivot of the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                     There is only one valid choice of row to generate a new constraint. Follow the procedure in to generate a new constraint                                                                                                      Using the fact that , express this new cutting plane in terms of .    Pivot on the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                                     Use either the or row to generate a new constraint .                                                                                                                     Using the fact that , express this new cutting plane in terms of .    Pivot on the entry and verify that the resulting basic solution is optimal and integral!                                                                                                                     Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag the objective plane onto the optimal solution to the integer program.      Gomory Cutting-Plane Algorithm   The Gomory cutting-plane algorithm for an optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer programming problem.    Solve the relaxation of the integer program. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non integral and for that row, construct the additional bound: .    GOTO 2.      "
+  "body": " CuttingPlane Method   Recall , and the question of making sandwiches and pies.  Define two additional inequalities such that the following are true:    No inequality eliminates any feasible integer solution of the original problem.    No boundary hyperplane is parallel to the objective function plane.    With the additional inequalities, the optimal solution to the linear relaxation is the optimal integer solution previously found to .     The boundary for these additional inequalities are reffered to as cutting hyperplanes . We wish to determine how to find such cutting hyperplanes.    In this activity, we motivate the math behind the cutting plane method.  Let be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                     Explain why the above equality is equivalent to     Show that for any feasible integeral solution of the left hand side off the equality in (2) is an integer.    Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.    For any integral solution, what is a non-negative integer upper bound for ?    Show that for any feasible integral solution to the relaxation of the integer programming problem.  We call the hyperplane a cutting-plane .    Show that if is non-integral, then by adding this constraint, the solution is no longer feasible.       We now apply this idea to an integer program.  Consider the integer programming problem:     Solve the relaxation of this integer program, and verify that this solution is not integral.                                                                     Take the second row and follow the procedure in to generate a new constraint :                                                                                     Using the fact that , describe this cutting plane in terms of .    Pivot of the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                     There is only one valid choice of row to generate a new constraint. Follow the procedure in to generate a new constraint                                                                                                      Using the fact that , express this new cutting plane in terms of .    Pivot on the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                                     Use either the or row to generate a new constraint .                                                                                                                     Using the fact that , express this new cutting plane in terms of .    Pivot on the entry and verify that the resulting basic solution is optimal and integral!                                                                                                                     Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag the objective plane onto the optimal solution to the integer program.      Gomory Cutting-Plane Algorithm   The Gomory cutting-plane algorithm for an optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer programming problem.    Solve the relaxation of the integer program. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non integral and for that row, construct the additional bound: .    GOTO 2.      "
 },
 {
-  "id": "exploration-cut",
+  "id": "sec-cuttingplane-2",
   "level": "2",
-  "url": "sec-cuttingplane.html#exploration-cut",
+  "url": "sec-cuttingplane.html#sec-cuttingplane-2",
   "type": "Exploration",
   "number": "8.2.1",
   "title": "",
-  "body": "  In this exploration, we motivate the math behind the cutting plane method.  Let be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                     Explain why the above equality is equivalent to     Show that for any feasible integeral solution of the left hand side off the equality in (2) is an integer.    Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.    For any integral solution, what is a non-negative integer upper bound for ?    Show that for any feasible integral solution to the relaxation of the integer programming problem.  We call the hyperplane a cutting-plane .    Show that if is non-integral, then by adding this constraint, the solution is no longer feasible.    "
+  "body": " Recall , and the question of making sandwiches and pies.  Define two additional inequalities such that the following are true:    No inequality eliminates any feasible integer solution of the original problem.    No boundary hyperplane is parallel to the objective function plane.    With the additional inequalities, the optimal solution to the linear relaxation is the optimal integer solution previously found to .    "
 },
 {
-  "id": "sec-cuttingplane-3",
+  "id": "activity-cut",
   "level": "2",
-  "url": "sec-cuttingplane.html#sec-cuttingplane-3",
+  "url": "sec-cuttingplane.html#activity-cut",
   "type": "Activity",
   "number": "8.2.2",
+  "title": "",
+  "body": "  In this activity, we motivate the math behind the cutting plane method.  Let be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                     Explain why the above equality is equivalent to     Show that for any feasible integeral solution of the left hand side off the equality in (2) is an integer.    Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.    For any integral solution, what is a non-negative integer upper bound for ?    Show that for any feasible integral solution to the relaxation of the integer programming problem.  We call the hyperplane a cutting-plane .    Show that if is non-integral, then by adding this constraint, the solution is no longer feasible.    "
+},
+{
+  "id": "sec-cuttingplane-5",
+  "level": "2",
+  "url": "sec-cuttingplane.html#sec-cuttingplane-5",
+  "type": "Activity",
+  "number": "8.2.3",
   "title": "",
   "body": "  We now apply this idea to an integer program.  Consider the integer programming problem:     Solve the relaxation of this integer program, and verify that this solution is not integral.                                                                     Take the second row and follow the procedure in to generate a new constraint :                                                                                     Using the fact that , describe this cutting plane in terms of .    Pivot of the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                     There is only one valid choice of row to generate a new constraint. Follow the procedure in to generate a new constraint                                                                                                      Using the fact that , express this new cutting plane in terms of .    Pivot on the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                                     Use either the or row to generate a new constraint .                                                                                                                     Using the fact that , express this new cutting plane in terms of .    Pivot on the entry and verify that the resulting basic solution is optimal and integral!                                                                                                                     Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag the objective plane onto the optimal solution to the integer program.    "
 },
@@ -2735,6 +2744,69 @@ var ptx_lunr_docs = [
   "number": "8.2.1",
   "title": "Gomory Cutting-Plane Algorithm.",
   "body": " Gomory Cutting-Plane Algorithm   The Gomory cutting-plane algorithm for an optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer programming problem.    Solve the relaxation of the integer program. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non integral and for that row, construct the additional bound: .    GOTO 2.     "
+},
+{
+  "id": "sec-exercisesinteger",
+  "level": "1",
+  "url": "sec-exercisesinteger.html",
+  "type": "Section",
+  "number": "8.3",
+  "title": "Problems for Chapter 8",
+  "body": " Problems for     For each of the linear optimization problems, solve the linear relaxation problem, then use the graphical method to find a solution if we restrict to integer values.               Prove or find a counterexample: Let be the solution to the linear relaxation to an integer optimization problem, such that has only integer coordinates. Then is a solution to the original integral problem.  Come up with 2 maximization problems, one two dimensional and one three dimensional, where only integer solutions are sensible, and explain why these problems should be integral problems. Then do the same for two minimization problems.   For each of the following integer optimization problems, find an integral solution using the branch and bound method, and using the cutting plane method.                                Solve the following integer programming problems.   A potter makes sculptures and bowls out of clay. It takes hours and pounds of clay to make a sculpture, hours and pounds of clay for a bowl. She has hours a week and pounds of clay with which to make things. She can sell sculptures for $ and bowl for $ . How much of each should she make to maximize revenue?   A man is preparing food for a party at his house, and is making sure there is enough. A chicken pot pie takes g of flour and g of chicken. He air and land wellington takes g of flour, of chicken and g of beef. Evidently he knows no other recipes. He has g of flour, g of chicken and g of beef. The pot pies feed 2 people, the wellington 8. How many of each should he make?   A family of 12 gnomes have three mines and from which to dig gems. A gnome digging in mine can dig up gems a week, gems a week in mine and gems a week in mine . They have a budget of 75 gold pieces a month for operating expenses. A gnome digging in mine has expenses of gp a month, gp a month in mine , and gp a month in mine . Due to size limitations, at most 5 gnomes can dig in mine . How should this family distribute the gnomes amongst the mines to maximize gem production?    What do you think would happen if the Gomory Plane Cutting algorithm was applied to a linear optimization problem where the relaxed problem achieved optimality, but the integral restriction had no solutions?   Test your conjecture on the following problem:       "
+},
+{
+  "id": "exercises-integer-1",
+  "level": "2",
+  "url": "sec-exercisesinteger.html#exercises-integer-1",
+  "type": "Exercise",
+  "number": "8.3.1",
+  "title": "",
+  "body": " For each of the linear optimization problems, solve the linear relaxation problem, then use the graphical method to find a solution if we restrict to integer values.              "
+},
+{
+  "id": "exercises-integer-2",
+  "level": "2",
+  "url": "sec-exercisesinteger.html#exercises-integer-2",
+  "type": "Exercise",
+  "number": "8.3.2",
+  "title": "",
+  "body": "Prove or find a counterexample: Let be the solution to the linear relaxation to an integer optimization problem, such that has only integer coordinates. Then is a solution to the original integral problem. "
+},
+{
+  "id": "exercises-integer-3",
+  "level": "2",
+  "url": "sec-exercisesinteger.html#exercises-integer-3",
+  "type": "Exercise",
+  "number": "8.3.3",
+  "title": "",
+  "body": "Come up with 2 maximization problems, one two dimensional and one three dimensional, where only integer solutions are sensible, and explain why these problems should be integral problems. Then do the same for two minimization problems. "
+},
+{
+  "id": "exercises-integer-4",
+  "level": "2",
+  "url": "sec-exercisesinteger.html#exercises-integer-4",
+  "type": "Exercise",
+  "number": "8.3.4",
+  "title": "",
+  "body": " For each of the following integer optimization problems, find an integral solution using the branch and bound method, and using the cutting plane method.                              "
+},
+{
+  "id": "exercises-integer-5",
+  "level": "2",
+  "url": "sec-exercisesinteger.html#exercises-integer-5",
+  "type": "Exercise",
+  "number": "8.3.5",
+  "title": "",
+  "body": " Solve the following integer programming problems.   A potter makes sculptures and bowls out of clay. It takes hours and pounds of clay to make a sculpture, hours and pounds of clay for a bowl. She has hours a week and pounds of clay with which to make things. She can sell sculptures for $ and bowl for $ . How much of each should she make to maximize revenue?   A man is preparing food for a party at his house, and is making sure there is enough. A chicken pot pie takes g of flour and g of chicken. He air and land wellington takes g of flour, of chicken and g of beef. Evidently he knows no other recipes. He has g of flour, g of chicken and g of beef. The pot pies feed 2 people, the wellington 8. How many of each should he make?   A family of 12 gnomes have three mines and from which to dig gems. A gnome digging in mine can dig up gems a week, gems a week in mine and gems a week in mine . They have a budget of 75 gold pieces a month for operating expenses. A gnome digging in mine has expenses of gp a month, gp a month in mine , and gp a month in mine . Due to size limitations, at most 5 gnomes can dig in mine . How should this family distribute the gnomes amongst the mines to maximize gem production?  "
+},
+{
+  "id": "exercises-integer-6",
+  "level": "2",
+  "url": "sec-exercisesinteger.html#exercises-integer-6",
+  "type": "Exercise",
+  "number": "8.3.6",
+  "title": "",
+  "body": " What do you think would happen if the Gomory Plane Cutting algorithm was applied to a linear optimization problem where the relaxed problem achieved optimality, but the integral restriction had no solutions?   Test your conjecture on the following problem:     "
 },
 {
   "id": "backmatter-2",

@@ -137,7 +137,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-branchbound.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-integer.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-branchbound.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-integer.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercisesinteger.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
@@ -256,6 +256,10 @@ true);
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -263,11 +267,19 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cuttingplane"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">8.2</span><span class="space"> </span><span class="title">CuttingPlane Method</span>
 </h2>
-<article class="exploration project-like" id="exploration-cut"><h3 class="heading">
+<article class="exploration project-like" id="sec-cuttingplane-2"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="exploration-cut-1">
-<div class="para" id="exploration-cut-1-1">In this exploration, we motivate the math behind the cutting plane method.</div> <div class="para" id="exploration-cut-1-2">Let <span class="process-math">\(x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*\)</span> be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the <span class="process-math">\(x_i\)</span> are basic (slack) variables and the <span class="process-math">\(x_j\)</span> are non-basic variables.</div> <div class="para logical" id="exploration-cut-1-3">
+<div class="para" id="sec-cuttingplane-2-1">Recall <a href="sec-branchbound.html#exploration-meat" class="xref" data-knowl="./knowl/xref/exploration-meat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.1.1">Exploration 8.1.1</a>, and the question of making sandwiches and pies.</div> <div class="para" id="sec-cuttingplane-2-2">Define two additional inequalities such that the following are true:</div> <ol class="upper-alpha">
+<li id="sec-cuttingplane-2-3-1"><div class="para" id="sec-cuttingplane-2-3-1-1">No inequality eliminates any feasible integer solution of the original problem.</div></li>
+<li id="sec-cuttingplane-2-3-2"><div class="para" id="sec-cuttingplane-2-3-2-1">No boundary hyperplane is parallel to the objective function plane.</div></li>
+<li id="sec-cuttingplane-2-3-3"><div class="para" id="sec-cuttingplane-2-3-3-1">With the additional inequalities, the optimal solution to the linear relaxation is the optimal integer solution previously found to <a href="sec-branchbound.html#exploration-meat" class="xref" data-knowl="./knowl/xref/exploration-meat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.1.1">Exploration 8.1.1</a>.</div></li>
+</ol></article><div class="para" id="sec-cuttingplane-3">The boundary for these additional inequalities are reffered to as <em class="emphasis">cutting hyperplanes</em>.  We wish to determine how to find such cutting hyperplanes.</div>
+<article class="activity project-like" id="activity-cut"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="activity-cut-1">
+<div class="para" id="activity-cut-1-1">In this activity, we motivate the math behind the cutting plane method.</div> <div class="para" id="activity-cut-1-2">Let <span class="process-math">\(x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*\)</span> be a feasible solution of the relaxation of a canonical integer programming maximization problem, where the <span class="process-math">\(x_i\)</span> are basic (slack) variables and the <span class="process-math">\(x_j\)</span> are non-basic variables.</div> <div class="para logical" id="activity-cut-1-3">
 <div class="para">We consider the constraint</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -318,20 +330,20 @@ x_i+\sum_j a_{ij}x_j=b_i.
 </table></div></div>
 </div>
 </div>
-<article class="task exercise-like" id="exploration-cut-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="exploration-cut-2-1-1">
+<article class="task exercise-like" id="activity-cut-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="activity-cut-2-1-1">
 <div class="para">Explain why the above equality is equivalent to</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x_i+\sum_j \lfloor a_{ij} \rfloor x_j - \lfloor b_i\rfloor =(b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j 
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="exploration-cut-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="exploration-cut-3-1-1">Show that for any feasible  integeral solution of the left hand side off the equality in (2) is an integer.</div></article><article class="task exercise-like" id="exploration-cut-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-cut-4-1-1">Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.</div></article><article class="task exercise-like" id="exploration-cut-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="exploration-cut-5-1-1">For any integral solution, what is a non-negative integer upper bound for <span class="process-math">\((b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j\text{?}\)</span>
-</div></article><article class="task exercise-like" id="exploration-cut-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para logical" id="exploration-cut-6-1-1">
+</div></article><article class="task exercise-like" id="activity-cut-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-cut-3-1-1">Show that for any feasible  integeral solution of the left hand side off the equality in (2) is an integer.</div></article><article class="task exercise-like" id="activity-cut-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-cut-4-1-1">Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.</div></article><article class="task exercise-like" id="activity-cut-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-cut-5-1-1">For any integral solution, what is a non-negative integer upper bound for <span class="process-math">\((b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j\text{?}\)</span>
+</div></article><article class="task exercise-like" id="activity-cut-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="activity-cut-6-1-1">
 <div class="para">Show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -339,14 +351,14 @@ x_i+\sum_j \lfloor a_{ij} \rfloor x_j - \lfloor b_i\rfloor =(b_i - \lfloor b_i \
 \end{equation*}
 </div>
 <div class="para">for any feasible integral solution to the relaxation of the integer programming problem.</div>
-</div> <div class="para" id="exploration-cut-6-1-2">We call the hyperplane <span class="process-math">\(\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j = (\lfloor b_i \rfloor - b_i)\)</span> a <em class="emphasis">cutting-plane</em>.</div></article><article class="task exercise-like" id="exploration-cut-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="exploration-cut-7-1-1">Show that if <span class="process-math">\(b_i\)</span> is non-integral, then by adding this constraint, the solution <span class="process-math">\(x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*\)</span> is no longer feasible.</div></article></article><article class="activity project-like" id="sec-cuttingplane-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
+</div> <div class="para" id="activity-cut-6-1-2">We call the hyperplane <span class="process-math">\(\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j = (\lfloor b_i \rfloor - b_i)\)</span> a <em class="emphasis">cutting-plane</em>.</div></article><article class="task exercise-like" id="activity-cut-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-cut-7-1-1">Show that if <span class="process-math">\(b_i\)</span> is non-integral, then by adding this constraint, the solution <span class="process-math">\(x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*\)</span> is no longer feasible.</div></article></article><article class="activity project-like" id="sec-cuttingplane-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-cuttingplane-3-1">
-<div class="para" id="sec-cuttingplane-3-1-1">We now apply this idea to an integer program.</div> <div class="para logical" id="sec-cuttingplane-3-1-2">
+<div class="introduction" id="sec-cuttingplane-5-1">
+<div class="para" id="sec-cuttingplane-5-1-1">We now apply this idea to an integer program.</div> <div class="para logical" id="sec-cuttingplane-5-1-2">
 <div class="para">Consider the integer programming problem:</div>
-<div class="displaymath process-math" id="sec-cuttingplane-3-1-2-1">
+<div class="displaymath process-math" id="sec-cuttingplane-5-1-2-1">
 \begin{align*}
 \textbf{Maximize: }  f(x_1, x_2) \amp = -x_1+5x_2\\
 \textbf{Subject to: }  3x_1+2x_2 \amp \leq 12\\
@@ -357,8 +369,8 @@ x_1, x_2 \text{are integers.} \amp
 </div>
 </div>
 </div>
-<article class="task exercise-like" id="sec-cuttingplane-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-cuttingplane-3-2-1-1">Solve the relaxation of this integer program, and verify that this solution is not integral. <div class="tabular-box natural-width"><table class="tabular">
+<article class="task exercise-like" id="sec-cuttingplane-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-cuttingplane-5-2-1-1">Solve the relaxation of this integer program, and verify that this solution is not integral. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
@@ -388,8 +400,8 @@ x_1, x_2 \text{are integers.} \amp
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-cuttingplane-3-3-1-1">Take the second row <span class="process-math">\(x_2=b_2-a_{21}x_1-a_{22}x_2\)</span> and follow the procedure in <a href="sec-cuttingplane.html#exploration-cut" class="xref" data-knowl="./knowl/xref/exploration-cut.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.2.1">Exploration 8.2.1</a> to generate a new constraint <span class="process-math">\(a_{31}t_1+a_{32}t_2\leq b_3\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-cuttingplane-5-3-1-1">Take the second row <span class="process-math">\(x_2=b_2-a_{21}x_1-a_{22}x_2\)</span> and follow the procedure in <a href="sec-cuttingplane.html#activity-cut" class="xref" data-knowl="./knowl/xref/activity-cut.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.2.2">Activity 8.2.2</a> to generate a new constraint <span class="process-math">\(a_{31}t_1+a_{32}t_2\leq b_3\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
@@ -426,10 +438,10 @@ x_1, x_2 \text{are integers.} \amp
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-cuttingplane-3-4-1-1">Using the fact that <span class="process-math">\(t_1=12-3x_1-2x_2, t_2=7+3x_1-2x_2\text{,}\)</span> describe this cutting plane <span class="process-math">\(a_{31}t_1+a_{32}t_2=b_3\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-cuttingplane-3-5-1-1">Pivot of the entry <span class="process-math">\(a_{31}\)</span> and verify that the resulting basic solution is optimal and non-integral. <div class="tabular-box natural-width"><table class="tabular">
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-cuttingplane-5-4-1-1">Using the fact that <span class="process-math">\(t_1=12-3x_1-2x_2, t_2=7+3x_1-2x_2\text{,}\)</span> describe this cutting plane <span class="process-math">\(a_{31}t_1+a_{32}t_2=b_3\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-cuttingplane-5-5-1-1">Pivot of the entry <span class="process-math">\(a_{31}\)</span> and verify that the resulting basic solution is optimal and non-integral. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
@@ -466,8 +478,8 @@ x_1, x_2 \text{are integers.} \amp
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-cuttingplane-3-6-1-1">There is only one valid choice of row to generate a new constraint.  Follow the procedure in <a href="sec-cuttingplane.html#exploration-cut" class="xref" data-knowl="./knowl/xref/exploration-cut.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.2.1">Exploration 8.2.1</a> to generate a new constraint <span class="process-math">\(a_{41}t_3+a_{42}t_2=b_4\)</span> <div class="tabular-box natural-width"><table class="tabular">
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-cuttingplane-5-6-1-1">There is only one valid choice of row to generate a new constraint.  Follow the procedure in <a href="sec-cuttingplane.html#activity-cut" class="xref" data-knowl="./knowl/xref/activity-cut.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.2.2">Activity 8.2.2</a> to generate a new constraint <span class="process-math">\(a_{41}t_3+a_{42}t_2=b_4\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
@@ -511,10 +523,10 @@ x_1, x_2 \text{are integers.} \amp
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="sec-cuttingplane-3-7-1-1">Using the fact that <span class="process-math">\(t_3=-\frac{3}{4}+\frac{1}{4}t_1+\frac{1}{4}t_2\text{,}\)</span> express this new cutting plane <span class="process-math">\(a_{41}t_3+a_{42}t_2=b_4\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="sec-cuttingplane-3-8-1-1">Pivot on the entry <span class="process-math">\(a_{42}\)</span> and verify that the resulting basic solution is optimal and non-integral. <div class="tabular-box natural-width"><table class="tabular">
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-cuttingplane-5-7-1-1">Using the fact that <span class="process-math">\(t_3=-\frac{3}{4}+\frac{1}{4}t_1+\frac{1}{4}t_2\text{,}\)</span> express this new cutting plane <span class="process-math">\(a_{41}t_3+a_{42}t_2=b_4\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="sec-cuttingplane-5-8-1-1">Pivot on the entry <span class="process-math">\(a_{42}\)</span> and verify that the resulting basic solution is optimal and non-integral. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
@@ -558,8 +570,8 @@ x_1, x_2 \text{are integers.} \amp
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="sec-cuttingplane-3-9-1-1">Use either the <span class="process-math">\(t_1\)</span> or <span class="process-math">\(t_2\)</span> row to generate a new constraint <span class="process-math">\(a_{51}t_3+a_{52}t_4\leq b_5\text{.}\)</span> <div class="tabular-box natural-width"><table class="tabular">
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="sec-cuttingplane-5-9-1-1">Use either the <span class="process-math">\(t_1\)</span> or <span class="process-math">\(t_2\)</span> row to generate a new constraint <span class="process-math">\(a_{51}t_3+a_{52}t_4\leq b_5\text{.}\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
@@ -610,10 +622,10 @@ x_1, x_2 \text{are integers.} \amp
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="sec-cuttingplane-3-10-1-1">Using the fact that <span class="process-math">\(t_4=-\frac{1}{3}+\frac{2}{3}s_3+\frac{2}{3}t_2\text{,}\)</span> express this new cutting plane <span class="process-math">\(a_{51}t_3+a_{52}t_4=b_5\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="sec-cuttingplane-3-11-1-1">Pivot on the <span class="process-math">\(a_{52}\)</span> entry and verify that the resulting basic solution is optimal <em class="emphasis">and</em> integral! <div class="tabular-box natural-width"><table class="tabular">
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="sec-cuttingplane-5-10-1-1">Using the fact that <span class="process-math">\(t_4=-\frac{1}{3}+\frac{2}{3}s_3+\frac{2}{3}t_2\text{,}\)</span> express this new cutting plane <span class="process-math">\(a_{51}t_3+a_{52}t_4=b_5\)</span> in terms of <span class="process-math">\(x_1, x_2\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para" id="sec-cuttingplane-5-11-1-1">Pivot on the <span class="process-math">\(a_{52}\)</span> entry and verify that the resulting basic solution is optimal <em class="emphasis">and</em> integral! <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_3\)</span></td>
@@ -664,8 +676,8 @@ x_1, x_2 \text{are integers.} \amp
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like" id="sec-cuttingplane-3-12"><h4 class="heading"><span class="codenumber">(k)</span></h4>
-<div class="para" id="sec-cuttingplane-3-12-1-1">Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag the objective plane onto the optimal solution to the integer program.</div> <iframe id="" width="600" height="750" src="sec-cuttingplane-3-12-1-2-if.html"></iframe></article></article><article class="definition definition-like" id="def-gomoryplane"><h3 class="heading">
+</div></article><article class="task exercise-like" id="sec-cuttingplane-5-12"><h4 class="heading"><span class="codenumber">(k)</span></h4>
+<div class="para" id="sec-cuttingplane-5-12-1-1">Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag the objective plane onto the optimal solution to the integer program.</div> <iframe id="" width="600" height="750" src="sec-cuttingplane-5-12-1-2-if.html"></iframe></article></article><article class="definition definition-like" id="def-gomoryplane"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Gomory Cutting-Plane Algorithm.</span>
 </h3> <div class="para" id="def-gomoryplane-2-1">The <em class="emphasis">Gomory cutting-plane</em> algorithm for an optimization problem is as follows:</div> <ol class="decimal">
 <li id="def-gomoryplane-2-2-1"><div class="para" id="def-gomoryplane-2-2-1-1">INITIALIZE: Begin with a canonical maximization integer programming problem.</div></li>
@@ -675,7 +687,7 @@ x_1, x_2 \text{are integers.} \amp
 <li id="def-gomoryplane-2-2-4"><div class="para" id="def-gomoryplane-2-2-4-1">GOTO 2.</div></li>
 </ol></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-branchbound.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-branchbound.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesinteger.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
