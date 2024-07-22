@@ -235,6 +235,43 @@
       </task>
     </exercise>
 
+    <exercise>
+      <introduction>
+        <p>
+          Consider a primal integral linear maximization problem 
+          with objective function <m>f</m> such that the integral problem
+          has an optimal solution <m>\x'</m>.  Then for each of the following find a counterexample.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            The linear relaxation of this primal problem also achieves optimality. (Think irrational numbers.)
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that the linear relaxation also achieves optimality at <m>\x''</m>,
+            then the integral dual to the original integral max problem must also achieve
+            an optimal solution.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose that the linear relaxation also achieves optimality at <m>\x''</m>
+            such that <m>f(\x')&lt; f(\x'')</m>.  Suppose the dual to the integral maximization problem achieved optimality at
+             <m>\y'</m>, and let <m>\y''</m> denote the dual to the relaxation.  Then <m>g(\y')&gt; g(\y'')</m> where
+            <m>g</m> is the objective function of the dual.
+          </p>
+        </statement>
+      </task>
+      
+    </exercise>
+
 
 
   </exercises>
