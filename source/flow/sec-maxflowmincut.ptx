@@ -371,7 +371,7 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
     <title>Algorithms for Max Flow and Min Cut</title>
 
 
-  <exploration xml:id="exploration-transportation">
+  <exploration xml:id="exploration-shipmentflow">
     <introduction>
       <p>
         Consider the following capacitated network with source <m>v_0</m> and sink <m>v_5</m>:

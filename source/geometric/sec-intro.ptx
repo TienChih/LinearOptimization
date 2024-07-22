@@ -148,18 +148,22 @@
         <p>
           Explain why for any constant <m>c</m> and <m>1\leq j\leq n</m>
 
-          <me>\det \left(\begin{array}{ccccc}
-            a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1(n-1)} &amp; 0  \\
-            a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2(n-1)} &amp; 0 \\
-            \vdots &amp; \vdots &amp;  \ddots &amp; \vdots &amp; \vdots \\
-            a_{(n-1)1} &amp; a_{(n-1)2} &amp;  \cdots &amp; a_{(n-1)(n-1)} &amp; 0  \\
-            0 &amp; 0 &amp;  \cdots &amp; 0 &amp; 1  \\
-            \end{array}\right) = \det\left(\begin{array}{cccc}
-            a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1(n-1)}  \\
-            a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2(n-1)}  \\
-            \vdots &amp; \vdots &amp;  \ddots &amp; \vdots  \\
-            a_{(n-1)1} &amp; a_{(n-1)2} &amp;  \cdots &amp; a_{(n-1)(n-1)}  \\
-            \end{array}\right)</me>
+          <md>
+            <mrow> \amp \det \left(\begin{array}{ccccc}
+              a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1(n-1)} &amp; 0  \\
+              a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2(n-1)} &amp; 0 \\
+              \vdots &amp; \vdots &amp;  \ddots &amp; \vdots &amp; \vdots \\
+              a_{(n-1)1} &amp; a_{(n-1)2} &amp;  \cdots &amp; a_{(n-1)(n-1)} &amp; 0  \\
+              0 &amp; 0 &amp;  \cdots &amp; 0 &amp; 1  \\
+              \end{array}\right)</mrow>
+              <mrow> =\amp \det\left(\begin{array}{cccc}
+                a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1(n-1)}  \\
+                a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2(n-1)}  \\
+                \vdots &amp; \vdots &amp;  \ddots &amp; \vdots  \\
+                a_{(n-1)1} &amp; a_{(n-1)2} &amp;  \cdots &amp; a_{(n-1)(n-1)}  \\
+                \end{array}\right) </mrow>
+              
+            </md>
             geometrically.
         </p>
       </statement>

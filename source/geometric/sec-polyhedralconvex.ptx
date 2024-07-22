@@ -11,12 +11,12 @@
         In <m>\mathbb{R}^3</m>, describe geometrically what the following represent.
 
       </p>
-      <hint>
+      <!--<hint>
         <p>
           <interactive iframe="https://www.math3d.org/F5HLWe9tj" width="100%" aspect="1:1"/>
         </p>
         
-      </hint>
+      </hint>-->
       
     </introduction>
     <task>
@@ -114,12 +114,12 @@
         <p>
           Let <m>P=(2,1,0), Q=(0, -3, 1)</m> Describe the set of points <m>\{t\cdot P+(1-t)\cdot Q : t\in [0,1]\}</m>.
         </p>
-        <hint>
+        <!--<hint>
           <p>
             <interactive iframe="https://www.desmos.com/3d/cee41aa90f" width="100%"  />
           </p>
           
-        </hint>
+        </hint>-->
       </statement>
     </task>
 
@@ -349,7 +349,7 @@
         
       </p>
         <p>
-          <interactive iframe="https://www.desmos.com/3d/2a07795f6e" width="100%" aspect="1:1"/>
+          <interactive iframe="https://www.desmos.com/3d/15yyp0qdym" width="100%" aspect="1:1"/>
         </p>
     </statement>
   </example>

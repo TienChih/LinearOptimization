@@ -27,6 +27,8 @@
      \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
      \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
     \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm}
+    
+    
 
 
   
