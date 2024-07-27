@@ -694,21 +694,39 @@
     <task>
       <statement>
         <p>
-          Consider a sequence of pivots swapping <m>(x, t_2)</m>, <m>(y, t_1)</m> <m>(t_1, y)</m>, <m>(t_2, x)</m>.  In each of these cases, what is the point of intersection?
+          Consider a sequence of pivots swapping <m>x\leftrightarrow t_2</m>, <m>y \leftrightarrow  t_1</m> <m>t_1 \leftrightarrow y</m>, <m>t_2 \leftrightarrow x</m>.  In each of these cases, what is the basic solution
+          recorded by the tableau?
         </p>
       </statement>
       <hint>
-        <p>
-          <interactive desmos="v6ryem5bpp"/>
-        </p>
-      </hint>
+        <image xml:id="degenerate">
+          <description>The feasible region with multiple lines intersecting the origin.</description>
+          <latex-image>
+            \begin{tikzpicture}
+                \draw[fill, blue, opacity=0.4] (0,0) -- (4/3,8/3) -- (8/3, 4/3)  -- (0,0);
+                \draw[very thick,->] (-1.5,0) -- (5.5,0);
+                \draw[very thick,->] (0,-1.5) -- (0, 5.5);
+                \foreach \x in {-1,...,5}\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\tiny $\mathbf{\x}$};
+                \foreach \y in {-1,...,5}\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\tiny $\mathbf{\y}$};
+                \draw[black, thick] (0,0) -- (4/3,8/3) -- (8/3,4/3) -- (0,0);
+                \draw[red, dashed, thick] (-1.5,-0.75) --node[below, sloped, pos=0.45]{\small $2x+y=0$} (5.5, 2.75);
+                \draw[teal, dashed, thick, pos=0.7] (-0.75,-1.5) --node[above left, sloped]{\small$x+2y=0$} (2.75, 5.5);
+                \draw[ fill] (0,0) node[above left]{\small$(0,0)$} circle (2pt); 
+                \draw[ fill] (4/3,8/3) node[ above right]{\small$(4/3,8/3)$} circle (2pt); 
+                \draw[ fill] (8/3,4/3) node[ right]{\small$(8/3,4/3)$} circle (2pt); 
+                
+              \end{tikzpicture}
+  
+            </latex-image>
+        </image> 
+        </hint>
     </task>
   </activity>
 
   <definition xml:id="def-Cycling">
     <statement>
       <p>
-        If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em>Cycling</em>.
+        If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em>cycling</em>.
       </p>
     </statement>
   </definition>

@@ -54,6 +54,12 @@
     
   </activity>
 
+  <p>
+    Note that we use the command <c>InteractiveLPProblem</c> rather than
+    <c>InteractiveLPProblemStandardForm</c> for general (potentially non-canonical) linear optimization problems.
+    Sage does not have a command for the Simplex Algorithm for <c>InteractiveLPProblem</c>.
+  </p>
+
   <activity>
     <statement>
       <p>

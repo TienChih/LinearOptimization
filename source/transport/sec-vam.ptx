@@ -313,7 +313,7 @@
                 1
               </cell>
               <cell right="medium">
-                <m>\enclose{circle}{2}</m>
+                <m>\ec{2}</m>
               </cell>
               <cell halign="left">
                 40 
@@ -398,7 +398,7 @@
                 1
               </cell>
               <cell right="medium">
-                <m>\enclose{circle}{2}^{20}</m>
+                <m>\ec{2}^{20}</m>
               </cell>
               <cell halign="left">
                 20 
@@ -496,7 +496,7 @@
                 1
               </cell>
               <cell right="medium">
-                <m>\enclose{circle}{2}^{20}</m>
+                <m>\ec{2}^{20}</m>
               </cell>
               <cell halign="left">
                 20 
@@ -593,7 +593,7 @@
                 1
               </cell>
               <cell right="medium">
-                <m>\enclose{circle}{2}^{20}</m>
+                <m>\ec{2}^{20}</m>
               </cell>
               <cell halign="left">
                 20 
@@ -607,7 +607,7 @@
                 9
               </cell>
               <cell>
-                <m>\enclose{circle}{4}</m>
+                <m>\ec{4}</m>
               </cell>
               <cell right="medium">
                 7
@@ -678,7 +678,7 @@
                 1
               </cell>
               <cell right="medium">
-                <m>\enclose{circle}{2}^{20}</m>
+                <m>\ec{2}^{20}</m>
               </cell>
               <cell halign="left">
                 20 
@@ -692,7 +692,7 @@
                 9
               </cell>
               <cell>
-                <m>\enclose{circle}{4}^{50}</m>
+                <m>\ec{4}^{50}</m>
               </cell>
               <cell right="medium">
                 7
@@ -777,13 +777,13 @@
                 1
               </cell>
               <cell>
-                <m>\enclose{circle}{2}^{20}</m>
+                <m>\ec{2}^{20}</m>
               </cell>
               <cell>
                 1
               </cell>
               <cell right="medium">
-                <m>\enclose{circle}{2}^{20}</m>
+                <m>\ec{2}^{20}</m>
               </cell>
               <cell halign="left">
                 0 
@@ -797,7 +797,7 @@
                 <m>\ec{9}^{10}</m>
               </cell>
               <cell>
-                <m>\enclose{circle}{4}^{50}</m>
+                <m>\ec{4}^{50}</m>
               </cell>
               <cell right="medium">
                 7
@@ -811,7 +811,7 @@
                 1
               </cell>
               <cell bottom="medium">
-                <m>\enclose{circle}{1}^{10}</m>
+                <m>\ec{1}^{10}</m>
               </cell>
               <cell bottom="medium">
                 2

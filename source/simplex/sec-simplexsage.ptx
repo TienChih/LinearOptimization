@@ -6,7 +6,7 @@
 
   
 
-  <exploration >
+  <exploration xml:id="exploration-sage">
     <statement>
       <p>
         Suppose we wanted to solve the following maximization problem by hand:
@@ -31,6 +31,21 @@
               <m>x_4</m>
             </cell>
             <cell bottom="medium">
+              <m>x_5</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_6</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_7</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_8</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_9</m>
+            </cell>
+            <cell bottom="medium">
               <m>-1</m>
             </cell>
             <cell halign="left">
@@ -40,16 +55,31 @@
             <cell halign="left" right="medium">
             </cell>
             <cell>
+              <m>9</m>
+            </cell>
+            <cell>
               <m>8</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell >
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell>
+              <m>6</m>
             </cell>
             <cell>
               <m>2</m>
             </cell>
             <cell>
-              <m>4</m>
+              <m>1</m>
             </cell>
             <cell right="medium">
-              <m>5</m>
+              <m>4</m>
             </cell>
             <cell right="medium">
               <m>3</m>
@@ -59,45 +89,74 @@
             </cell>
           </row>
           <row>
-            <cell halign="left"  right="medium">
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell>
+              <m>4</m>
             </cell>
             <cell >
-              <m>-4</m>
+              <m>4</m>
             </cell>
-            <cell >
-              <m>6</m>
-            </cell>
-            <cell >
-              <m>2</m>
-            </cell>
-            <cell right="medium" >
+            <cell>
               <m>7</m>
             </cell>
-            <cell right="medium" >
-              <m>4</m>
+            <cell>
+              <m>8</m>
+            </cell>
+            <cell>
+              <m>1</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
             </cell>
             <cell halign="left">
               <m>=-t_2</m>
             </cell>
           </row>
-          
           <row>
             <cell halign="left" right="medium">
             </cell>
-            <cell bottom="medium">
+            <cell>
+              <m>1</m>
+            </cell>
+            <cell>
+              <m>1</m>
+            </cell>
+            <cell>
               <m>2</m>
             </cell>
-            <cell bottom="medium">
-              <m>8</m>
+            <cell >
+              <m>5</m>
             </cell>
-            <cell bottom="medium">
+            <cell>
               <m>4</m>
             </cell>
-            <cell right="medium" bottom="medium">
-              <m>3</m>
+            <cell>
+              <m>5</m>
             </cell>
-            <cell right="medium" bottom="medium">
-              <m>2</m>
+            <cell>
+              <m>8</m>
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>4</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
             </cell>
             <cell halign="left">
               <m>=-t_3</m>
@@ -106,17 +165,255 @@
           <row>
             <cell halign="left" right="medium">
             </cell>
-            <cell bottom="medium">
+            <cell>
               <m>1</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell >
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell>
+              <m>7</m>
+            </cell>
+            <cell right="medium">
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>7</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_4</m>
+            </cell>
+          </row>
+
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>7</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell >
+              <m>8</m>
+            </cell>
+            <cell>
+              <m>9</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>4</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_5</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell >
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>8</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_6</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell>
+              <m>7</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell >
+              <m>4</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell>
+              <m>5</m>
+            </cell>
+            <cell right="medium">
+              <m>6</m>
+            </cell>
+            <cell right="medium">
+              <m>5</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_7</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>8</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell >
+              <m>4</m>
+            </cell>
+            <cell>
+              <m>3</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>2</m>
+            </cell>
+            <cell>
+              <m>6</m>
+            </cell>
+            <cell right="medium">
+              <m>2</m>
+            </cell>
+            <cell right="medium">
+              <m>8</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_8</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>7</m>
+            </cell>
+            <cell bottom="medium">
+              <m>7</m>
+            </cell>
+            <cell bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>6</m>
+            </cell>
+            <cell bottom="medium">
+              <m>5</m>
             </cell>
             <cell bottom="medium">
               <m>3</m>
             </cell>
             <cell bottom="medium">
-              <m>2</m>
+              <m>7</m>
+            </cell>
+            <cell bottom="medium">
+              <m>8</m>
             </cell>
             <cell right="medium" bottom="medium">
-              <m>1</m>
+              <m>7</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>3</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_9</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>7</m>
+            </cell>
+            <cell bottom="medium">
+              <m>7</m>
+            </cell>
+            <cell bottom="medium">
+              <m>2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>6</m>
+            </cell>
+            <cell bottom="medium">
+              <m>5</m>
+            </cell>
+            <cell bottom="medium">
+              <m>3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>7</m>
+            </cell>
+            <cell bottom="medium">
+              <m>8</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>7</m>
             </cell>
             <cell right="medium" bottom="medium">
               <m>0</m>
@@ -693,22 +990,22 @@
     </task>
   </activity>
 
-  <!--<activity>
+  <activity>
     <introduction>
       <p>
-        Look at the problem from <xref ref="activity-initialsage"/>.  
+        We can now tackle the problem posed in <xref ref="exploration-sage"/>.
       </p>
     </introduction>
     <task>
       <statement>
         <p>
-          Add a constraint so the problem is still feasible, but the origin is not.
+          Encode the problem into sage:
           <sage>
             <input>
               %display typeset
-              A = ([2, 1], [-2, 1], [3, 2], FIX_ME)
-              b = (5, 2, 12, FIX_ME)
-              c = (5,4)
+              A = (FIX_ME)
+              b = (FIX_ME)
+              c = (FIX_ME)
               P = InteractiveLPProblemStandardForm(A, b, c, )
               P
             </input>         
@@ -719,7 +1016,7 @@
     <task>
       <statement>
         <p>
-          Run the simplex method to see how it deals with the infeasible initial tableau:
+          We can run the simplex algorithm:
           <sage>
             <input>
               %display typeset
@@ -729,6 +1026,19 @@
         </p>
       </statement>
     </task>
-    
-  </activity>-->
+    <task>
+      <statement>
+        <p>
+          We can also just say what the solution is:
+          <sage>
+            <input>
+              print(P.optimal_solution())
+              print(P.optimal_value())
+            </input>         
+          </sage>
+        </p>
+      </statement>
+    </task>
+  </activity>
+  
 </section>

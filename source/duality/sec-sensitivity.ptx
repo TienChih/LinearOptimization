@@ -8,18 +8,18 @@
   <exploration xml:id="exploration-witch">
     <introduction>
       <p>
-        A witch named Agnesi<m>^*</m> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes
+        A witch named Agnesi is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes
         1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.
       </p>
       <p>
         Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts 
         of elixers and potions.
       </p>
-      <hint>
+      <!--<hint>
         <p>
-          The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi's iconic curve.
+          The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi&apos;s iconic curve.
         </p>
-      </hint>
+      </hint>-->
       
       
     </introduction>
