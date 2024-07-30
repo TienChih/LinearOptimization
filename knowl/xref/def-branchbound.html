@@ -14,7 +14,7 @@
 <article class="definition definition-like"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span>
 </h3>
-<div class="para">The <em class="emphasis">branch and bound</em> algorithm for solving an integer programming maximization problem is as follows:</div> <ol class="decimal">
+<div class="para">The <em class="emphasis">branch and bound</em> algorithm for solving an integer programming maximization problem is as follows:</div> <ol class="decimal" id="def-branchbound-1-2">
 <li><div class="para">INITIALIZE: Begin with a canonical maximization integer programming problem.</div></li>
 <li><div class="para">Solve the relaxation of the linear programming problem.  If the solution is integral STOP.</div></li>
 <li><div class="para">For some <span class="process-math">\(x_i^*\)</span> in the optimal solution found in the previous step, define two sub problems, one with additional constraint <span class="process-math">\(x_i\leq \lfloor x_i^*\rfloor\)</span> and <span class="process-math">\(x_i\geq \lceil x_i^*\rceil\)</span>

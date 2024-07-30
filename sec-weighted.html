@@ -117,6 +117,200 @@ sagecell.makeSagecell({
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
+#thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
+#thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
+#sec-section-convexity-25-4-1-2 { counter-set: sec-section-convexity-25-4-1-2 0; }
+#sec-section-convexity-25-4-1-2 > li::marker { content: ""counter(sec-section-convexity-25-4-1-2,upper-alpha)"."; }
+#sec-section-convexity-25-4-1-2 > li { counter-increment: sec-section-convexity-25-4-1-2; }
+#sec-section-convexity-25-5-1-2 { counter-set: sec-section-convexity-25-5-1-2 0; }
+#sec-section-convexity-25-5-1-2 > li::marker { content: ""counter(sec-section-convexity-25-5-1-2,upper-alpha)"."; }
+#sec-section-convexity-25-5-1-2 > li { counter-increment: sec-section-convexity-25-5-1-2; }
+#activity-maxslack-2-1-2 { counter-set: activity-maxslack-2-1-2 0; }
+#activity-maxslack-2-1-2 > li::marker { content: ""counter(activity-maxslack-2-1-2,upper-alpha)"."; }
+#activity-maxslack-2-1-2 > li { counter-increment: activity-maxslack-2-1-2; }
+#activity-maxslack-3-1-2 { counter-set: activity-maxslack-3-1-2 0; }
+#activity-maxslack-3-1-2 > li::marker { content: ""counter(activity-maxslack-3-1-2,decimal)"."; }
+#activity-maxslack-3-1-2 > li { counter-increment: activity-maxslack-3-1-2; }
+#sec-pivot-10-1-2 { counter-set: sec-pivot-10-1-2 0; }
+#sec-pivot-10-1-2 > li::marker { content: ""counter(sec-pivot-10-1-2,upper-alpha)"."; }
+#sec-pivot-10-1-2 > li { counter-increment: sec-pivot-10-1-2; }
+#def-pivot-1-2 { counter-set: def-pivot-1-2 0; }
+#def-pivot-1-2 > li::marker { content: ""counter(def-pivot-1-2,decimal)"."; }
+#def-pivot-1-2 > li { counter-increment: def-pivot-1-2; }
+#activity-tableaufeasible-2-1-2 { counter-set: activity-tableaufeasible-2-1-2 0; }
+#activity-tableaufeasible-2-1-2 > li::marker { content: ""counter(activity-tableaufeasible-2-1-2,upper-alpha)"."; }
+#activity-tableaufeasible-2-1-2 > li { counter-increment: activity-tableaufeasible-2-1-2; }
+#activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
+#activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
+#activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
+#activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
+#activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
+#activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
+#sec-simplexmax-4-5-1-4 { counter-set: sec-simplexmax-4-5-1-4 0; }
+#sec-simplexmax-4-5-1-4 > li::marker { content: ""counter(sec-simplexmax-4-5-1-4,upper-alpha)"."; }
+#sec-simplexmax-4-5-1-4 > li { counter-increment: sec-simplexmax-4-5-1-4; }
+#def-simplexcanonmaxbf-1-2 { counter-set: def-simplexcanonmaxbf-1-2 0; }
+#def-simplexcanonmaxbf-1-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-1-2,decimal)"."; }
+#def-simplexcanonmaxbf-1-2 > li { counter-increment: def-simplexcanonmaxbf-1-2; }
+#sec-simplexmax-11-6-1-2 { counter-set: sec-simplexmax-11-6-1-2 0; }
+#sec-simplexmax-11-6-1-2 > li::marker { content: ""counter(sec-simplexmax-11-6-1-2,upper-alpha)"."; }
+#sec-simplexmax-11-6-1-2 > li { counter-increment: sec-simplexmax-11-6-1-2; }
+#def-simplexmax-1-2 { counter-set: def-simplexmax-1-2 0; }
+#def-simplexmax-1-2 > li::marker { content: ""counter(def-simplexmax-1-2,decimal)"."; }
+#def-simplexmax-1-2 > li { counter-increment: def-simplexmax-1-2; }
+#def-simplexmin-1-2 { counter-set: def-simplexmin-1-2 0; }
+#def-simplexmin-1-2 > li::marker { content: ""counter(def-simplexmin-1-2,decimal)"."; }
+#def-simplexmin-1-2 > li { counter-increment: def-simplexmin-1-2; }
+#thm-BlandAnticycling-2-2 { counter-set: thm-BlandAnticycling-2-2 0; }
+#thm-BlandAnticycling-2-2 > li::marker { content: ""counter(thm-BlandAnticycling-2-2,decimal)"."; }
+#thm-BlandAnticycling-2-2 > li { counter-increment: thm-BlandAnticycling-2-2; }
+#exploration-sage-1-4 { counter-set: exploration-sage-1-4 0; }
+#exploration-sage-1-4 > li::marker { content: ""counter(exploration-sage-1-4,upper-alpha)"."; }
+#exploration-sage-1-4 > li { counter-increment: exploration-sage-1-4; }
+#unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
+#unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
+#unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
+#unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
+#unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
+#unconstrained-example-7-1-2 { counter-set: unconstrained-example-7-1-2 0; }
+#unconstrained-example-7-1-2 > li::marker { content: ""counter(unconstrained-example-7-1-2,upper-alpha)"."; }
+#unconstrained-example-7-1-2 > li { counter-increment: unconstrained-example-7-1-2; }
+#unconstrained-example-10-1-2 { counter-set: unconstrained-example-10-1-2 0; }
+#unconstrained-example-10-1-2 > li::marker { content: ""counter(unconstrained-example-10-1-2,upper-alpha)"."; }
+#unconstrained-example-10-1-2 > li { counter-increment: unconstrained-example-10-1-2; }
+#sec-unconstrained-5-1-2 { counter-set: sec-unconstrained-5-1-2 0; }
+#sec-unconstrained-5-1-2 > li::marker { content: ""counter(sec-unconstrained-5-1-2,decimal)"."; }
+#sec-unconstrained-5-1-2 > li { counter-increment: sec-unconstrained-5-1-2; }
+#sec-section-sensitivity-4-1-3 { counter-set: sec-section-sensitivity-4-1-3 0; }
+#sec-section-sensitivity-4-1-3 > li::marker { content: ""counter(sec-section-sensitivity-4-1-3,upper-alpha)"."; }
+#sec-section-sensitivity-4-1-3 > li { counter-increment: sec-section-sensitivity-4-1-3; }
+#thm-farkas-2-2 { counter-set: thm-farkas-2-2 0; }
+#thm-farkas-2-2 > li::marker { content: ""counter(thm-farkas-2-2,upper-alpha)"."; }
+#thm-farkas-2-2 > li { counter-increment: thm-farkas-2-2; }
+#cor-farkasv2-2-2 { counter-set: cor-farkasv2-2-2 0; }
+#cor-farkasv2-2-2 > li::marker { content: ""counter(cor-farkasv2-2-2,upper-alpha)"."; }
+#cor-farkasv2-2-2 > li { counter-increment: cor-farkasv2-2-2; }
+#sec-section-dualpivot-3-2-1-2 { counter-set: sec-section-dualpivot-3-2-1-2 0; }
+#sec-section-dualpivot-3-2-1-2 > li::marker { content: ""counter(sec-section-dualpivot-3-2-1-2,upper-alpha)"."; }
+#sec-section-dualpivot-3-2-1-2 > li { counter-increment: sec-section-dualpivot-3-2-1-2; }
+#sec-section-dualpivot-5-1-2 { counter-set: sec-section-dualpivot-5-1-2 0; }
+#sec-section-dualpivot-5-1-2 > li::marker { content: ""counter(sec-section-dualpivot-5-1-2,upper-alpha)"."; }
+#sec-section-dualpivot-5-1-2 > li { counter-increment: sec-section-dualpivot-5-1-2; }
+#sec-section-dualpivot-6-2-1-1-5 { counter-set: sec-section-dualpivot-6-2-1-1-5 0; }
+#sec-section-dualpivot-6-2-1-1-5 > li::marker { content: ""counter(sec-section-dualpivot-6-2-1-1-5,upper-alpha)"."; }
+#sec-section-dualpivot-6-2-1-1-5 > li { counter-increment: sec-section-dualpivot-6-2-1-1-5; }
+#sec-section-dualpivot-6-3-1-1-5 { counter-set: sec-section-dualpivot-6-3-1-1-5 0; }
+#sec-section-dualpivot-6-3-1-1-5 > li::marker { content: ""counter(sec-section-dualpivot-6-3-1-1-5,upper-alpha)"."; }
+#sec-section-dualpivot-6-3-1-1-5 > li { counter-increment: sec-section-dualpivot-6-3-1-1-5; }
+#exercises-duality-4-1-2 { counter-set: exercises-duality-4-1-2 0; }
+#exercises-duality-4-1-2 > li::marker { content: "("counter(exercises-duality-4-1-2,lower-alpha)")"; }
+#exercises-duality-4-1-2 > li { counter-increment: exercises-duality-4-1-2; }
+#activity-rowcol-2-1-3 { counter-set: activity-rowcol-2-1-3 0; }
+#activity-rowcol-2-1-3 > li::marker { content: ""counter(activity-rowcol-2-1-3,upper-alpha)"."; }
+#activity-rowcol-2-1-3 > li { counter-increment: activity-rowcol-2-1-3; }
+#activity-rowcol-4-1-2 { counter-set: activity-rowcol-4-1-2 0; }
+#activity-rowcol-4-1-2 > li::marker { content: ""counter(activity-rowcol-4-1-2,upper-alpha)"."; }
+#activity-rowcol-4-1-2 > li { counter-increment: activity-rowcol-4-1-2; }
+#activity-rowcol-5-1-3 { counter-set: activity-rowcol-5-1-3 0; }
+#activity-rowcol-5-1-3 > li::marker { content: ""counter(activity-rowcol-5-1-3,upper-alpha)"."; }
+#activity-rowcol-5-1-3 > li { counter-increment: activity-rowcol-5-1-3; }
+#activity-rowcol-7-1-2 { counter-set: activity-rowcol-7-1-2 0; }
+#activity-rowcol-7-1-2 > li::marker { content: ""counter(activity-rowcol-7-1-2,upper-alpha)"."; }
+#activity-rowcol-7-1-2 > li { counter-increment: activity-rowcol-7-1-2; }
+#sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
+#sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
+#sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
+#sec-vonneumann-2-2-1-2 { counter-set: sec-vonneumann-2-2-1-2 0; }
+#sec-vonneumann-2-2-1-2 > li::marker { content: ""counter(sec-vonneumann-2-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-2-2-1-2 > li { counter-increment: sec-vonneumann-2-2-1-2; }
+#sec-vonneumann-2-3-1-2 { counter-set: sec-vonneumann-2-3-1-2 0; }
+#sec-vonneumann-2-3-1-2 > li::marker { content: ""counter(sec-vonneumann-2-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-2-3-1-2 > li { counter-increment: sec-vonneumann-2-3-1-2; }
+#sec-chance-2-2-1-2 { counter-set: sec-chance-2-2-1-2 0; }
+#sec-chance-2-2-1-2 > li::marker { content: ""counter(sec-chance-2-2-1-2,upper-alpha)"."; }
+#sec-chance-2-2-1-2 > li { counter-increment: sec-chance-2-2-1-2; }
+#def-vam-1-2 { counter-set: def-vam-1-2 0; }
+#def-vam-1-2 > li::marker { content: ""counter(def-vam-1-2,decimal)"."; }
+#def-vam-1-2 > li { counter-increment: def-vam-1-2; }
+#activity-transportalgorithm-2-1-2 { counter-set: activity-transportalgorithm-2-1-2 0; }
+#activity-transportalgorithm-2-1-2 > li::marker { content: ""counter(activity-transportalgorithm-2-1-2,upper-alpha)"."; }
+#activity-transportalgorithm-2-1-2 > li { counter-increment: activity-transportalgorithm-2-1-2; }
+#activity-transportalgorithm-7-1-2 { counter-set: activity-transportalgorithm-7-1-2 0; }
+#activity-transportalgorithm-7-1-2 > li::marker { content: ""counter(activity-transportalgorithm-7-1-2,upper-alpha)"."; }
+#activity-transportalgorithm-7-1-2 > li { counter-increment: activity-transportalgorithm-7-1-2; }
+#def-transportationalg-1-2 { counter-set: def-transportationalg-1-2 0; }
+#def-transportationalg-1-2 > li::marker { content: ""counter(def-transportationalg-1-2,decimal)"."; }
+#def-transportationalg-1-2 > li { counter-increment: def-transportationalg-1-2; }
+#sec-transportalgorithm-5-3-1-2 { counter-set: sec-transportalgorithm-5-3-1-2 0; }
+#sec-transportalgorithm-5-3-1-2 > li::marker { content: ""counter(sec-transportalgorithm-5-3-1-2,upper-alpha)"."; }
+#sec-transportalgorithm-5-3-1-2 > li { counter-increment: sec-transportalgorithm-5-3-1-2; }
+#def-hungarian-1-2 { counter-set: def-hungarian-1-2 0; }
+#def-hungarian-1-2 > li::marker { content: ""counter(def-hungarian-1-2,decimal)"."; }
+#def-hungarian-1-2 > li { counter-increment: def-hungarian-1-2; }
+#subsec-maxflow-2-4-1-2 { counter-set: subsec-maxflow-2-4-1-2 0; }
+#subsec-maxflow-2-4-1-2 > li::marker { content: ""counter(subsec-maxflow-2-4-1-2,upper-alpha)"."; }
+#subsec-maxflow-2-4-1-2 > li { counter-increment: subsec-maxflow-2-4-1-2; }
+#def-maxflowalgorithm-2-2 { counter-set: def-maxflowalgorithm-2-2 0; }
+#def-maxflowalgorithm-2-2 > li::marker { content: ""counter(def-maxflowalgorithm-2-2,decimal)"."; }
+#def-maxflowalgorithm-2-2 > li { counter-increment: def-maxflowalgorithm-2-2; }
+#def-mincutalgorithm-2-2 { counter-set: def-mincutalgorithm-2-2 0; }
+#def-mincutalgorithm-2-2 > li::marker { content: ""counter(def-mincutalgorithm-2-2,decimal)"."; }
+#def-mincutalgorithm-2-2 > li { counter-increment: def-mincutalgorithm-2-2; }
+#sec-weighted-7-2-2 { counter-set: sec-weighted-7-2-2 0; }
+#sec-weighted-7-2-2 > li::marker { content: ""counter(sec-weighted-7-2-2,upper-alpha)"."; }
+#sec-weighted-7-2-2 > li { counter-increment: sec-weighted-7-2-2; }
+#sec-weighted-7-3-1-2 { counter-set: sec-weighted-7-3-1-2 0; }
+#sec-weighted-7-3-1-2 > li::marker { content: ""counter(sec-weighted-7-3-1-2,upper-alpha)"."; }
+#sec-weighted-7-3-1-2 > li { counter-increment: sec-weighted-7-3-1-2; }
+#sec-weighted-7-4-1-2 { counter-set: sec-weighted-7-4-1-2 0; }
+#sec-weighted-7-4-1-2 > li::marker { content: ""counter(sec-weighted-7-4-1-2,upper-alpha)"."; }
+#sec-weighted-7-4-1-2 > li { counter-increment: sec-weighted-7-4-1-2; }
+#def-DijkstrasAlgorithm-2-2 { counter-set: def-DijkstrasAlgorithm-2-2 0; }
+#def-DijkstrasAlgorithm-2-2 > li::marker { content: ""counter(def-DijkstrasAlgorithm-2-2,decimal)"."; }
+#def-DijkstrasAlgorithm-2-2 > li { counter-increment: def-DijkstrasAlgorithm-2-2; }
+#def-otheralgorithm-1-2 { counter-set: def-otheralgorithm-1-2 0; }
+#def-otheralgorithm-1-2 > li::marker { content: ""counter(def-otheralgorithm-1-2,decimal)"."; }
+#def-otheralgorithm-1-2 > li { counter-increment: def-otheralgorithm-1-2; }
+#exploration-shipping-2-1-2 { counter-set: exploration-shipping-2-1-2 0; }
+#exploration-shipping-2-1-2 > li::marker { content: ""counter(exploration-shipping-2-1-2,upper-alpha)"."; }
+#exploration-shipping-2-1-2 > li { counter-increment: exploration-shipping-2-1-2; }
+#exploration-shipping-8-1-2 { counter-set: exploration-shipping-8-1-2 0; }
+#exploration-shipping-8-1-2 > li::marker { content: ""counter(exploration-shipping-8-1-2,upper-alpha)"."; }
+#exploration-shipping-8-1-2 > li { counter-increment: exploration-shipping-8-1-2; }
+#sec-weighted-15-2-1-2 { counter-set: sec-weighted-15-2-1-2 0; }
+#sec-weighted-15-2-1-2 > li::marker { content: ""counter(sec-weighted-15-2-1-2,upper-alpha)"."; }
+#sec-weighted-15-2-1-2 > li { counter-increment: sec-weighted-15-2-1-2; }
+#sec-weighted-15-3-1-2 { counter-set: sec-weighted-15-3-1-2 0; }
+#sec-weighted-15-3-1-2 > li::marker { content: ""counter(sec-weighted-15-3-1-2,upper-alpha)"."; }
+#sec-weighted-15-3-1-2 > li { counter-increment: sec-weighted-15-3-1-2; }
+#sec-weighted-15-4-1-2 { counter-set: sec-weighted-15-4-1-2 0; }
+#sec-weighted-15-4-1-2 > li::marker { content: ""counter(sec-weighted-15-4-1-2,upper-alpha)"."; }
+#sec-weighted-15-4-1-2 > li { counter-increment: sec-weighted-15-4-1-2; }
+#sec-weighted-15-5-1-2 { counter-set: sec-weighted-15-5-1-2 0; }
+#sec-weighted-15-5-1-2 > li::marker { content: ""counter(sec-weighted-15-5-1-2,upper-alpha)"."; }
+#sec-weighted-15-5-1-2 > li { counter-increment: sec-weighted-15-5-1-2; }
+#def-mincostflowalgorithm-2-2 { counter-set: def-mincostflowalgorithm-2-2 0; }
+#def-mincostflowalgorithm-2-2 > li::marker { content: ""counter(def-mincostflowalgorithm-2-2,decimal)"."; }
+#def-mincostflowalgorithm-2-2 > li { counter-increment: def-mincostflowalgorithm-2-2; }
+#sec-branchbound-4-2-1-2 { counter-set: sec-branchbound-4-2-1-2 0; }
+#sec-branchbound-4-2-1-2 > li::marker { content: ""counter(sec-branchbound-4-2-1-2,upper-alpha)"."; }
+#sec-branchbound-4-2-1-2 > li { counter-increment: sec-branchbound-4-2-1-2; }
+#activity-meat1-2-1-2 { counter-set: activity-meat1-2-1-2 0; }
+#activity-meat1-2-1-2 > li::marker { content: ""counter(activity-meat1-2-1-2,upper-alpha)"."; }
+#activity-meat1-2-1-2 > li { counter-increment: activity-meat1-2-1-2; }
+#def-branchbound-1-2 { counter-set: def-branchbound-1-2 0; }
+#def-branchbound-1-2 > li::marker { content: ""counter(def-branchbound-1-2,decimal)"."; }
+#def-branchbound-1-2 > li { counter-increment: def-branchbound-1-2; }
+#sec-cuttingplane-2-3 { counter-set: sec-cuttingplane-2-3 0; }
+#sec-cuttingplane-2-3 > li::marker { content: ""counter(sec-cuttingplane-2-3,upper-alpha)"."; }
+#sec-cuttingplane-2-3 > li { counter-increment: sec-cuttingplane-2-3; }
+#def-gomoryplane-2-2 { counter-set: def-gomoryplane-2-2 0; }
+#def-gomoryplane-2-2 > li::marker { content: ""counter(def-gomoryplane-2-2,decimal)"."; }
+#def-gomoryplane-2-2 > li { counter-increment: def-gomoryplane-2-2; }
+</style>
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -155,7 +349,7 @@ true);
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
     \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
     \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
-   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm}
+   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -315,7 +509,7 @@ true);
 </div></div>
 <article class="task exercise-like" id="sec-weighted-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-weighted-7-2-1">What is the objective problem?</div>
-<ol class="upper-alpha cols2">
+<ol class="upper-alpha cols2" id="sec-weighted-7-2-2">
 <li id="sec-weighted-7-2-2-1"><div class="para" id="sec-weighted-7-2-2-1-1">Maximize <span class="process-math">\(\displaystyle \sum_i w_{it}x_{it} \text{.}\)</span>
 </div></li>
 <li id="sec-weighted-7-2-2-2"><div class="para" id="sec-weighted-7-2-2-2-1">Maximize <span class="process-math">\(\displaystyle \sum_j w_{sj}x_{sj} \text{.}\)</span>
@@ -330,7 +524,7 @@ true);
 </div></li>
 </ol></article><article class="task exercise-like" id="sec-weighted-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-weighted-7-3-1-1">What inequality ensures that  exactly one edge of the chosen edges is incident to <span class="process-math">\(v_d\text{?}\)</span>
-</div> <ol class="upper-alpha cols2">
+</div> <ol class="upper-alpha cols2" id="sec-weighted-7-3-1-2">
 <li id="sec-weighted-7-3-1-2-1"><div class="para" id="sec-weighted-7-3-1-2-1-1"><span class="process-math">\(\displaystyle \sum_i x_{id} \leq 1\text{.}\)</span></div></li>
 <li id="sec-weighted-7-3-1-2-2"><div class="para" id="sec-weighted-7-3-1-2-2-1"><span class="process-math">\(\displaystyle \sum_i x_{id} \geq 1\text{.}\)</span></div></li>
 <li id="sec-weighted-7-3-1-2-3"><div class="para" id="sec-weighted-7-3-1-2-3-1"><span class="process-math">\(\displaystyle \sum_i x_{id} = 1\text{.}\)</span></div></li>
@@ -338,7 +532,7 @@ true);
 <li id="sec-weighted-7-3-1-2-5"><div class="para" id="sec-weighted-7-3-1-2-5-1"><span class="process-math">\(\displaystyle \sum_i x_{id} \geq 0\text{.}\)</span></div></li>
 <li id="sec-weighted-7-3-1-2-6"><div class="para" id="sec-weighted-7-3-1-2-6-1"><span class="process-math">\(\displaystyle \sum_i x_{id} = 0\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="sec-weighted-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-weighted-7-4-1-1">What inequality ensures that the chosen edges form a path?</div> <ol class="upper-alpha cols2">
+<div class="para" id="sec-weighted-7-4-1-1">What inequality ensures that the chosen edges form a path?</div> <ol class="upper-alpha cols2" id="sec-weighted-7-4-1-2">
 <li id="sec-weighted-7-4-1-2-1"><div class="para" id="sec-weighted-7-4-1-2-1-1">For each vertex <span class="process-math">\(v_i\neq v_s, v_d\text{,}\)</span> <span class="process-math">\(\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}=1\text{.}\)</span>
 </div></li>
 <li id="sec-weighted-7-4-1-2-2"><div class="para" id="sec-weighted-7-4-1-2-2-1">For each vertex <span class="process-math">\(v_i\neq v_s, v_d\text{,}\)</span> <span class="process-math">\(\displaystyle \sum_{j} x_{ji} - \sum_{j} x_{ij}\leq 1\text{.}\)</span>
@@ -371,7 +565,7 @@ print(P.optimal_value())
 </div></article></article><div class="para" id="sec-weighted-8">As was the case in previous examples, we introduce a less cumbersome method for finding these shortest paths.</div>
 <article class="definition definition-like" id="def-DijkstrasAlgorithm"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Dijkstra’s Algorithm.</span>
-</h3> <div class="para" id="def-DijkstrasAlgorithm-2-1">Let <span class="process-math">\(N\)</span> be a weighted network with only non-negative weights.  Then <em class="emphasis">Dijkstra’s Shortest Path Algorithm</em> is as follows:</div> <ol class="decimal">
+</h3> <div class="para" id="def-DijkstrasAlgorithm-2-1">Let <span class="process-math">\(N\)</span> be a weighted network with only non-negative weights.  Then <em class="emphasis">Dijkstra’s Shortest Path Algorithm</em> is as follows:</div> <ol class="decimal" id="def-DijkstrasAlgorithm-2-2">
 <li id="def-DijkstrasAlgorithm-2-2-1"><div class="para" id="def-DijkstrasAlgorithm-2-2-1-1">INITIALIZE: Let <span class="process-math">\(R=\{v_s\}\)</span> and let <span class="process-math">\(T=V\backslash R\text{.}\)</span>  Label <span class="process-math">\(\ell_s=0\text{,}\)</span> <span class="process-math">\(\ell_i = w_{si}\)</span> if <span class="process-math">\(w_{si}\)</span> exists, <span class="process-math">\(\infty\)</span> otherwise.</div></li>
 <li id="def-DijkstrasAlgorithm-2-2-2"><div class="para" id="def-DijkstrasAlgorithm-2-2-2-1">Let <span class="process-math">\(\ell_k=\displaystyle \min_{i\in T} \ell_i\text{.}\)</span>
 </div></li>
@@ -416,7 +610,7 @@ print(P.optimal_value())
 <article class="definition definition-like" id="def-otheralgorithm"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="def-otheralgorithm-1-1">Let <span class="process-math">\(N\)</span> be a weighted network with no negative cycles.  Then an algorithm to find shortest paths is as follows:</div> <ol class="decimal">
+<div class="para" id="def-otheralgorithm-1-1">Let <span class="process-math">\(N\)</span> be a weighted network with no negative cycles.  Then an algorithm to find shortest paths is as follows:</div> <ol class="decimal" id="def-otheralgorithm-1-2">
 <li id="def-otheralgorithm-1-2-1"><div class="para" id="def-otheralgorithm-1-2-1-1">INITIALIZE: Let <span class="process-math">\(R=\{v_s\}\)</span> and let <span class="process-math">\(T=V\backslash R\text{.}\)</span>  Label <span class="process-math">\(\ell_s=0\text{,}\)</span> <span class="process-math">\(\ell_i = w_{si}\)</span> if <span class="process-math">\(w_{si}\)</span> exists, <span class="process-math">\(\infty\)</span> otherwise.</div></li>
 <li id="def-otheralgorithm-1-2-2"><div class="para" id="def-otheralgorithm-1-2-2-1">Let <span class="process-math">\(\ell_k=\displaystyle \min_{i\in T} \ell_i\text{.}\)</span>
 </div></li>
@@ -433,7 +627,7 @@ print(P.optimal_value())
 <div class="introduction" id="exploration-shipping-1"><div class="para" id="exploration-shipping-1-1">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs (denoted <span class="process-math">\((c_{ij}, w_{ij})\)</span>), and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="exploration-shipping-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-shipping-2-1-1">Let’s find a single path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> along which we could ship goods at the lowest possible cost.  What criteria should we use to identitfy this path?</div> <ol class="upper-alpha cols2">
+<div class="para" id="exploration-shipping-2-1-1">Let’s find a single path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> along which we could ship goods at the lowest possible cost.  What criteria should we use to identitfy this path?</div> <ol class="upper-alpha cols2" id="exploration-shipping-2-1-2">
 <li id="exploration-shipping-2-1-2-1"><div class="para" id="exploration-shipping-2-1-2-1-1">Maximize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
 <li id="exploration-shipping-2-1-2-2"><div class="para" id="exploration-shipping-2-1-2-2-1">Minimize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
 <li id="exploration-shipping-2-1-2-3"><div class="para" id="exploration-shipping-2-1-2-3-1">Maximize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.</div></li>
@@ -446,7 +640,7 @@ print(P.optimal_value())
 </div></article><article class="task exercise-like" id="exploration-shipping-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="exploration-shipping-6-1-1">Repeat (a)-(c) until we have a flow of 10.</div></article><article class="task exercise-like" id="exploration-shipping-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="exploration-shipping-7-1-1">Argue that this is <em class="emphasis">not</em> the lowest cost flow.</div></article><article class="task exercise-like" id="exploration-shipping-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="exploration-shipping-8-1-1">Which of the following was an issue with how this problem was approached?</div> <ol class="upper-alpha">
+<div class="para" id="exploration-shipping-8-1-1">Which of the following was an issue with how this problem was approached?</div> <ol class="upper-alpha" id="exploration-shipping-8-1-2">
 <li id="exploration-shipping-8-1-2-1"><div class="para" id="exploration-shipping-8-1-2-1-1">The original path chosen was too expensive.</div></li>
 <li id="exploration-shipping-8-1-2-2"><div class="para" id="exploration-shipping-8-1-2-2-1">The original path forced us into poor choices of future paths.</div></li>
 <li id="exploration-shipping-8-1-2-3"><div class="para" id="exploration-shipping-8-1-2-3-1">There was no mechanism to backtrack or adjust previous choices.</div></li>
@@ -456,7 +650,7 @@ print(P.optimal_value())
 <div class="introduction" id="sec-weighted-15-1"><div class="para" id="sec-weighted-15-1-1">We model the shipping problem in <a href="sec-weighted.html#exploration-shipping" class="xref" data-knowl="./knowl/xref/exploration-shipping.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.6">Exploration 7.3.6</a> as a linear optimization problem.  Let <span class="process-math">\(x_{ij}\)</span> denote the quantity in tons of goods shipped from <span class="process-math">\(v_i\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="sec-weighted-15-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-weighted-15-2-1-1">What is the objective function of this problem?</div> <ol class="upper-alpha cols2">
+<div class="para" id="sec-weighted-15-2-1-1">What is the objective function of this problem?</div> <ol class="upper-alpha cols2" id="sec-weighted-15-2-1-2">
 <li id="sec-weighted-15-2-1-2-1"><div class="para" id="sec-weighted-15-2-1-2-1-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}\text{.}\)</span></div></li>
 <li id="sec-weighted-15-2-1-2-2"><div class="para" id="sec-weighted-15-2-1-2-2-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}c_{ij}\text{.}\)</span></div></li>
 <li id="sec-weighted-15-2-1-2-3"><div class="para" id="sec-weighted-15-2-1-2-3-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{i, j}x_{ij}w_{ij}\text{.}\)</span></div></li>
@@ -464,7 +658,7 @@ print(P.optimal_value())
 <li id="sec-weighted-15-2-1-2-5"><div class="para" id="sec-weighted-15-2-1-2-5-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}c_{0j}\text{.}\)</span></div></li>
 <li id="sec-weighted-15-2-1-2-6"><div class="para" id="sec-weighted-15-2-1-2-6-1"><span class="process-math">\(f(\x)=\displaystyle \sum_{j}x_{0j}w_{0j}\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="sec-weighted-15-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-weighted-15-3-1-1">For each <span class="process-math">\(ij\)</span> edge, there is a constraint for the shipping capacity of that edge.  What (in)equality represents that capacity?</div> <ol class="upper-alpha cols2">
+<div class="para" id="sec-weighted-15-3-1-1">For each <span class="process-math">\(ij\)</span> edge, there is a constraint for the shipping capacity of that edge.  What (in)equality represents that capacity?</div> <ol class="upper-alpha cols2" id="sec-weighted-15-3-1-2">
 <li id="sec-weighted-15-3-1-2-1"><div class="para" id="sec-weighted-15-3-1-2-1-1"><span class="process-math">\(x_{ij}\leq w_{ij}\text{.}\)</span></div></li>
 <li id="sec-weighted-15-3-1-2-2"><div class="para" id="sec-weighted-15-3-1-2-2-1"><span class="process-math">\(x_{ij}\geq w_{ij}\text{.}\)</span></div></li>
 <li id="sec-weighted-15-3-1-2-3"><div class="para" id="sec-weighted-15-3-1-2-3-1"><span class="process-math">\(x_{ij}= w_{ij}\text{.}\)</span></div></li>
@@ -472,12 +666,12 @@ print(P.optimal_value())
 <li id="sec-weighted-15-3-1-2-5"><div class="para" id="sec-weighted-15-3-1-2-5-1"><span class="process-math">\(x_{ij}\geq c_{ij}\text{.}\)</span></div></li>
 <li id="sec-weighted-15-3-1-2-6"><div class="para" id="sec-weighted-15-3-1-2-6-1"><span class="process-math">\(x_{ij}= c_{ij}\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="sec-weighted-15-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-weighted-15-4-1-1">For each vertex <span class="process-math">\(v_k\)</span> excluding the source and sink, what (in)equality represents the conservation of flow?</div> <ol class="upper-alpha cols2">
+<div class="para" id="sec-weighted-15-4-1-1">For each vertex <span class="process-math">\(v_k\)</span> excluding the source and sink, what (in)equality represents the conservation of flow?</div> <ol class="upper-alpha cols2" id="sec-weighted-15-4-1-2">
 <li id="sec-weighted-15-4-1-2-1"><div class="para" id="sec-weighted-15-4-1-2-1-1"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\leq 0\text{.}\)</span></div></li>
 <li id="sec-weighted-15-4-1-2-2"><div class="para" id="sec-weighted-15-4-1-2-2-1"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj}\geq 0\text{.}\)</span></div></li>
 <li id="sec-weighted-15-4-1-2-3"><div class="para" id="sec-weighted-15-4-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i}x_{ik}-\sum_{j}x_{kj} = 0\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="sec-weighted-15-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-weighted-15-5-1-1">Let <span class="process-math">\(F\)</span> be the total amount of goods to be shipped, in this case <span class="process-math">\(F=10\text{.}\)</span>  What equality represents this constraint?</div> <ol class="upper-alpha cols2">
+<div class="para" id="sec-weighted-15-5-1-1">Let <span class="process-math">\(F\)</span> be the total amount of goods to be shipped, in this case <span class="process-math">\(F=10\text{.}\)</span>  What equality represents this constraint?</div> <ol class="upper-alpha cols2" id="sec-weighted-15-5-1-2">
 <li id="sec-weighted-15-5-1-2-1"><div class="para" id="sec-weighted-15-5-1-2-1-1"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}c_{ij}= F\text{.}\)</span></div></li>
 <li id="sec-weighted-15-5-1-2-2"><div class="para" id="sec-weighted-15-5-1-2-2-1"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}w_{ij}= F\text{.}\)</span></div></li>
 <li id="sec-weighted-15-5-1-2-3"><div class="para" id="sec-weighted-15-5-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i, j}x_{ij}=F\text{.}\)</span></div></li>
@@ -510,13 +704,13 @@ print(P.optimal_value())
 <div class="para" id="sec-weighted-16-6-1-1">Have you now achieved a minimal cost flow shipping 10 tons of goods?</div></article></article><div class="para" id="sec-weighted-17">We now formalize this idea of adjusting previous choices to an algorithm:</div>
 <article class="definition definition-like" id="def-mincostflowalgorithm"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Minimum Cost Flow Algorithm.</span>
-</h3> <div class="para" id="def-mincostflowalgorithm-2-1">The steps for the <em class="emphasis">Minimum Cost Flow Algorithm</em> are as follows:</div> <ol class="decimal">
+</h3> <div class="para" id="def-mincostflowalgorithm-2-1">The steps for the <em class="emphasis">Minimum Cost Flow Algorithm</em> are as follows:</div> <ol class="decimal" id="def-mincostflowalgorithm-2-2">
 <li id="def-mincostflowalgorithm-2-2-1"><div class="para" id="def-mincostflowalgorithm-2-2-1-1">INITIALIZE: Let <span class="process-math">\(N=(V, E)\)</span> be a weighted capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{,}\)</span> with no edges going into the source and no edges coming out of the sink.  We start with the zero flow <span class="process-math">\(x_{ij}=0\)</span> for each edge <span class="process-math">\((v_i, v_j)\text{.}\)</span>  Let <span class="process-math">\(F\)</span> be the desired total flow.</div></li>
 <li id="def-mincostflowalgorithm-2-2-2"><div class="para" id="def-mincostflowalgorithm-2-2-2-1">If <span class="process-math">\(\displaystyle \varphi(v_d)=\sum_{i} x_{id}=F\text{,}\)</span> STOP, we have reached a total flow of <span class="process-math">\(F\text{.}\)</span>
 </div></li>
 <li id="def-mincostflowalgorithm-2-2-3"><div class="para logical" id="def-mincostflowalgorithm-2-2-3-1">
 <div class="para">Form a weighted network <span class="process-math">\(N'=(V', E')\)</span> as follows:</div>
-<ul class="disc">
+<ul class="disc" id="def-mincostflowalgorithm-2-2-3-1-2">
 <li id="def-mincostflowalgorithm-2-2-3-1-2-1"><div class="para" id="def-mincostflowalgorithm-2-2-3-1-2-1-1">Let <span class="process-math">\(V'=V\)</span>
 </div></li>
 <li id="def-mincostflowalgorithm-2-2-3-1-2-2"><div class="para" id="def-mincostflowalgorithm-2-2-3-1-2-2-1">Let <span class="process-math">\((v_i, v_j)\in E'\)</span> if and only if <span class="process-math">\(x_{ij}\lt c_{ij}\text{.}\)</span>  Let <span class="process-math">\(w'_{ij}=w_{ij}\text{.}\)</span>
