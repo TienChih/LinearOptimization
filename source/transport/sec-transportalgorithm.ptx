@@ -1037,13 +1037,13 @@
                   Warehouse 1
                 </cell>
                 <cell>
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell>
-                  <dollar />3/ton
+                  $3/ton
                 </cell>
                 <cell right="medium">
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell halign="left">
                   35 tons
@@ -1054,13 +1054,13 @@
                   Warehouse 2
                 </cell>
                 <cell>
-                  <dollar />6/ton
+                  $6/ton
                 </cell>
                 <cell>
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell right="medium">
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell halign="left">
                   45 tons
@@ -1071,13 +1071,13 @@
                   Warehouse 3
                 </cell>
                 <cell bottom="medium">
-                  <dollar />4/ton
+                  $4/ton
                 </cell>
                 <cell bottom="medium">
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell halign="left" bottom="medium">
                   15 tons
@@ -1137,13 +1137,13 @@
                   Warehouse 1
                 </cell>
                 <cell>
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell>
-                  <dollar />3/ton
+                  $3/ton
                 </cell>
                 <cell >
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell right="medium">
                   ?
@@ -1157,13 +1157,13 @@
                   Warehouse 2
                 </cell>
                 <cell>
-                  <dollar />6/ton
+                  $6/ton
                 </cell>
                 <cell>
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell >
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell right="medium">
                   ?
@@ -1177,13 +1177,13 @@
                   Warehouse 3
                 </cell>
                 <cell bottom="medium">
-                  <dollar />4/ton
+                  $4/ton
                 </cell>
                 <cell bottom="medium">
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell bottom="medium">
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell right="medium" bottom="medium">
                   ?
@@ -1247,13 +1247,13 @@
                   Warehouse 1
                 </cell>
                 <cell>
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell>
-                  <dollar />3/ton
+                  $3/ton
                 </cell>
                 <cell right="medium">
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell halign="left">
                   35 tons
@@ -1264,13 +1264,13 @@
                   Warehouse 2
                 </cell>
                 <cell>
-                  <dollar />6/ton
+                  $6/ton
                 </cell>
                 <cell>
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell right="medium">
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell halign="left">
                   45 tons
@@ -1281,13 +1281,13 @@
                   Warehouse 3
                 </cell>
                 <cell bottom="medium">
-                  <dollar />4/ton
+                  $4/ton
                 </cell>
                 <cell bottom="medium">
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell halign="left" bottom="medium">
                   15 tons
@@ -1346,13 +1346,13 @@
                   Warehouse 1
                 </cell>
                 <cell>
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell>
-                  <dollar />3/ton
+                  $3/ton
                 </cell>
                 <cell right="medium">
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell halign="left">
                   35 tons
@@ -1363,13 +1363,13 @@
                   Warehouse 2
                 </cell>
                 <cell>
-                  <dollar />6/ton
+                  $6/ton
                 </cell>
                 <cell>
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell right="medium">
-                  <dollar />5/ton
+                  $5/ton
                 </cell>
                 <cell halign="left">
                   45 tons
@@ -1380,13 +1380,13 @@
                   Warehouse 3
                 </cell>
                 <cell >
-                  <dollar />4/ton
+                  $4/ton
                 </cell>
                 <cell >
-                  <dollar />2/ton
+                  $2/ton
                 </cell>
                 <cell right="medium" >
-                  <dollar />1/ton
+                  $1/ton
                 </cell>
                 <cell halign="left" >
                   15 tons
