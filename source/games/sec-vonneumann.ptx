@@ -89,7 +89,7 @@
       <p>
         Let <m>\q'</m> denote a fixed column strategy, and let 
         <m>v=\displaystyle \max_{1\leq i\leq n}A_{(i)}\q'</m>, and let
-        <m>u=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q</m>
+        <m>u=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q'</m>
       </p>
     </introduction>
     <task>
