@@ -302,14 +302,15 @@
         </tabular>
       </p>
       <p>
-        Note that each <m>x_3, t_3, x_2, t_1=0</m> for this tableau.  
+        Note that this tableau records a basic solution where
+         <m>x_3, t_3, x_2, t_1=0</m>.  
       </p>
       
     </introduction>
     <task>
       <statement>
         <p>
-          Why is this tableau feasible?
+          Why is the basic solution feasible?
         </p>
       </statement>
     </task>
