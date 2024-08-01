@@ -691,7 +691,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "The Simplex Algorithm for Canonical Minimization",
-  "body": " The Simplex Algorithm for Canonical Minimization    Recall that the canonical minimization problem:   Where .  This problem may be recorded in the following tableau:                                                                                                                                           The negative transpose of this tableau is:                                                                                                                                            Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.    This allows us to define a minimization algorithm.    The Simplex Algorithm for Minimization Tableaus   TAKE the Negative Transpose.  APPLY .       Apply to the following minimization tableau:                                                                                   "
+  "body": " The Simplex Algorithm for Canonical Minimization    Recall that the canonical minimization problem:   Where .  This problem may be recorded in the following tableau:                                                                                                                                           The negative transpose of this tableau is:                                                                                                                                            Show that this negative transpose of a canonical minimization tableau encodes a problem that has the same feasible region and optimal solution as the original minimization problem.    This allows us to define a minimization algorithm.    The Simplex Algorithm for Minimization Tableaus   TAKE the Negative Transpose.  APPLY .       Apply to the following minimization tableau:                                                                                   "
 },
 {
   "id": "def-negativetranspose",
@@ -709,7 +709,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "2.3.1",
   "title": "",
-  "body": "  Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.   "
+  "body": "  Show that this negative transpose of a canonical minimization tableau encodes a problem that has the same feasible region and optimal solution as the original minimization problem.   "
 },
 {
   "id": "def-simplexmin",
