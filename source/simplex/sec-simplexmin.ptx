@@ -308,7 +308,8 @@
   <activity>
     <statement>
       <p>
-        Show that this negative transpose of a canonical minimization tableau has the same feasible region and optimal solution as the original minimization problem.
+        Show that this negative transpose of a canonical minimization tableau 
+        encodes a problem that has the same feasible region and optimal solution as the original minimization problem.
       </p>
     </statement>
   </activity>
