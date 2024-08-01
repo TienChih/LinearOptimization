@@ -4,7 +4,18 @@
   <title>Geometric Linear Optimization</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> 
+      The purpose of this chapter is to establish the geometric intuition that
+      undergird the approach we take to this material throughout the course.  In 
+      <xref ref="sec-intro"/>, we revisit some ideas from Linear Algebra and explore
+      the connection between algebraic operations and geometric interpretations.  This is
+      <em>not</em> meant to serve as a review of Linear Algebra prerequisites, but as a
+      warm up that centers the geometric intuition.  In <xref ref="sec-initial"/>, we give
+      some examples of problems we wish to address in this course and show how we may interpret
+      them geometrically.  In <xref ref="sec-polyhedralconvex"/>, we describe the geometric
+      notions which will be most useful to us throughout the course, and give formal and intuitive
+      descriptions of these ideas.
+    </p>
   </introduction>
 
   <!-- include sections -->

@@ -1,0 +1,25 @@
+
+<graph xmin="-1" ymin="-1" xmax="7" ymax="7">
+  <polygon vertices="(0,0) (0, 6.5) (2,6) (16/3, 8/3) (6,0)" filled draggable="false" styleNumber="4"/>
+  <point name="u" styleNumber="5">
+      (0,0)
+    <constraints>
+      <attractTo threshold="1"><point>(0,0)</point></attractTo>
+      <attractTo threshold="1"><point>(0,6.5)</point></attractTo>
+      <attractTo threshold="1"><point>(2,6)</point></attractTo>
+      <attractTo threshold="1"><point>(16/3, 8/3)</point></attractTo>
+      <attractTo threshold="1"><point>(6,0)</point></attractTo>
+    </constraints>
+  </point>
+  <m draggable="false" anchor="($u.x+1,$u.y+1)">
+      $u
+    </m>
+
+  <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
+</graph>
+<p>
+  <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
+</p>
+<p>
+  <m>f($u.x, $u.y)= <number>$c1*$u.x+$c2*$u.y</number></m>.
+</p>
