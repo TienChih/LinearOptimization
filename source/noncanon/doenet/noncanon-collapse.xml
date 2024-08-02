@@ -1,14 +1,17 @@
-<graph xmin="-1" ymin="-1" xmax="8" ymax="8">
-  <polygon vertices="(0,0) (0, 2.5) (100,77.5) (100,0)" filled draggable="false" styleNumber="4"/>
+<graph xmin="-5" ymin="-10" xmax="25" ymax="15">
+  <polygon vertices="(-20,22) (19, -4)  (-20,3.8)" filled draggable="false" styleNumber="4"/>
   <point name="u" styleNumber="5">
       (0,0)
     <constraints>
       <attractTo threshold="1"><point>(0,0)</point></attractTo>
-      <attractTo threshold="1"><point>(0,2.5)</point></attractTo>
+      <attractTo threshold="1"><point>(19,-4)</point></attractTo>
+      <attractTo threshold="1"><point>(13,0)</point></attractTo>
+      <attractTo threshold="1"><point>(0,8+2/3)</point></attractTo>
+      <attractTo threshold="1"><point>(0,-0.2)</point></attractTo>
     </constraints>
   </point>
   <m draggable="false" anchor="($u.x+1,$u.y+1)">
-      $u
+      f$u = <number>$c1*$u.x+$c2*$u.y</number>
     </m>
 
   <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 

@@ -994,7 +994,7 @@
             <md>
               <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   </mrow>
               <mrow>\textbf{Subject to: }  x+2y+3z&amp;  \leq  6</mrow>
-              <mrow> 4x-7y&amp; \leq  28</mrow>
+              <mrow> 4x-7y&amp; =  28</mrow>
               <mrow> x, y, z&amp; \geq  0</mrow>
             </md>
   

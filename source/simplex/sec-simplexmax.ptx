@@ -464,9 +464,9 @@
           <p>
             <interactive  platform="doenetml" width="100%" >
               <slate surface="doenetml">
-                <xi:include parse="text" href="doenet/simplex-multipleintersections.xml"/>
+                <xi:include parse="text" href="doenet/simplex-unbounded.xml"/>
               </slate>
-                      </interactive>
+            </interactive>
           </p>
           <p>
             It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?
