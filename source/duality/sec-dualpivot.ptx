@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-dualpivot" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-dualpivot" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Tucker Tableau's, Pivots and Duality</title>
 
   <p> In this section, we examine pivoting with primal-dual tableau's. </p>
@@ -9,7 +9,7 @@
     <introduction>
       <p>
         Noting that the dual variables <m>y_i</m> are non-negative weights attached
-        to the hyperplanes defined by <m>t_i=0</m>, and the slack variables for the dual program
+        to the hyperplanes defined by <m>t_i=0</m>, and the slack variables for the dual problem
         <m>s_j</m> are the weights associated with the planes <m>x-x_j=0</m>, we can encode all this information in the
         <em>Primal-Dual Tucker Tableau</em>:
       </p>
@@ -146,42 +146,42 @@
         <ol marker="A." >
           <li>
             <p>
-              The primal program is feasible.
+              The primal problem is feasible.
             </p>
           </li>
           <li>
             <p>
-              The dual program is feasible.
+              The dual problem is feasible.
             </p>
           </li>
           <li>
             <p>
-              A feasible primal program is unbounded above.
+              The feasible primal problem is unbounded above.
             </p>
           </li>
           <li>
             <p>
-              A feasible dual program is unbounded below.
+              The feasible dual problem is unbounded below.
             </p>
           </li>
           <li>
             <p>
-              A  primal program is infeasible.
+              The  primal problem is infeasible.
             </p>
           </li>
           <li>
             <p>
-              A dual program is infeasible.
+              The dual problem is infeasible.
             </p>
           </li>
           <li>
             <p>
-              The primal program has a feasible basic solution.
+              The primal problem has a feasible basic solution.
             </p>
           </li>
           <li>
             <p>
-              The dual program has a feasible basic solution.
+              The dual problem has a feasible basic solution.
             </p>
           </li>
         </ol>
@@ -230,22 +230,22 @@
   <activity>
     <task>
       <p>
-        If a primal program is infeasible, what <em>could</em> be true of the dual program?
+        If a primal problem is infeasible, what <em>could</em> be true of the dual program?
       </p>
       <ol marker="A." >
         <li>
           <p>
-            The dual program has an optimal solution.
+            The dual problem has an optimal solution.
           </p>
         </li>
         <li>
           <p>
-            The dual program is unbounded below.
+            The dual problem is unbounded below.
           </p>
         </li>
         <li>
           <p>
-            The dual program is infeasible.
+            The dual problem is infeasible.
           </p>
         </li>
       </ol>
@@ -253,7 +253,7 @@
     <task>
       <statement>
         <p>
-          Verify that the primal program is infeasible.
+          Verify that the primal problem is infeasible.
         </p>
         <p>
           <tabular halign="center">
@@ -353,7 +353,7 @@
     <task>
       <statement>
         <p>
-          Verify that the primal program is infeasible.
+          Verify that the primal problem is infeasible.
         </p>
         <p>
           <tabular halign="center">
@@ -666,7 +666,7 @@
     <task>
       <statement>
         <p>
-          Enter the primal-program and use Sage to confirm the solution:
+          Enter the primal-problem and use Sage to confirm the solution:
           <p>
             <sage>
               <input>

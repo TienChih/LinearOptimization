@@ -1,0 +1,87 @@
+<graph xmin="-2" ymin="-2" xmax="16" ymax="16">
+  <polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/>
+  <point name="u1" styleNumber="5" draggable="false">
+    (0,0)
+  </point>              
+  <line name="line1" slope="-3/2" through="$u1"  styleNumber="6"/> 
+  <lineSegment name="segment1" endpoints="$u1 ($u1.x+3,$u1.y+2)" styleNumber="6"/>            
+  <line name="line1a" slope="-1*$c11/$c12" through="$u1" styleNumber="2"/> 
+  <lineSegment name="segment1a" endpoints="$u1 ($u1.x-1*$c11, $u1.y-1*$c12)" styleNumber="2"/>                        
+  <point name="u2" styleNumber="5" draggable="false">
+    (0,14)
+  </point>            
+  <line name="line2" slope="-3/2" through="$u2"  styleNumber="6"/> 
+  <lineSegment name="segment2" endpoints="$u2 ($u2.x+3,$u2.y+2)" styleNumber="6"/>            
+  <line name="line2a" slope="-(-1*$c21 +$c22*1)/$c22" through="$u2" styleNumber="2"/> 
+  <lineSegment name="segment2a" endpoints="$u2 ($u2.x-1*$c21 +$c22*1, $u2.y+1*$c22)" styleNumber="2"/>                      
+  <point name="u3" styleNumber="5" draggable="false">
+    (10,4)
+  </point>            
+  <line name="line3" slope="-3/2" through="$u3"  styleNumber="6"/> 
+  <lineSegment name="segment3" endpoints="$u3 ($u3.x+3,$u3.y+2)" styleNumber="6"/>            
+  <line name="line3a" slope="-(1*$c31+3*$c32)/(1*$c31+1*$c32)" through="$u3" styleNumber="2"/> 
+  <lineSegment name="segment3a" endpoints="$u3 ($u3.x+1*$c31+3*$c32, $u3.y+1*$c31+1*$c32)" styleNumber="2"/>            
+  <point name="u4" styleNumber="5" draggable="false">
+    (34/3,0)
+  </point>            
+  <line name="line4" slope="-3/2" through="$u4"  styleNumber="6"/> 
+  <lineSegment name="segment4" endpoints="$u4 ($u4.x+3,$u4.y+2)" styleNumber="6"/>            
+  <line name="line4a" slope="-(3*$c42)/(-1*$c41+1*$c42)" through="$u4" styleNumber="2"/> 
+  <lineSegment name="segment4a" endpoints="$u4 ($u4.x+3*$c42, $u4.y-1*$c41+1*$c42)" styleNumber="2"/>                        
+  <point name="u" styleNumber="3">
+  (0,0)
+  <constraints>
+    <attractTo threshold="1"><point>(0,0)</point></attractTo>
+    <attractTo threshold="1"><point>(0, 14)</point></attractTo>
+    <attractTo threshold="1"><point>(10,4)</point></attractTo>
+    <attractTo threshold="1"><point>(34/3,0)</point></attractTo>
+  </constraints>
+  </point>
+              <m draggable="false" anchor="($u.x+0.5,$u.y+0.7)">
+                  f$u = <number>3*$u.x+2*$u.y</number>
+                </m>
+            
+              <line name="line" through="$u $u+(-2, 3)" styleNumber="3"/> 
+              
+</graph>
+<p>
+  <m>\begin{bmatrix} 3 \\ 2\end{bmatrix} =</m> <mathInput name="c11"/> <m>\begin{bmatrix} -1 \\ 0\end{bmatrix}+</m><mathInput name="c12"/> <m>\begin{bmatrix} 0 \\ -1\end{bmatrix}</m>,
+</p>
+<p>  
+  <m>\begin{bmatrix} 3 \\ 2\end{bmatrix} =</m> <mathInput name="c21"/> <m>\begin{bmatrix} -1 \\ 0\end{bmatrix}+</m><mathInput name="c22"/> <m>\begin{bmatrix} 1 \\ 1\end{bmatrix}</m>.
+</p>
+<p>
+  <m>\begin{bmatrix} 3 \\ 2\end{bmatrix} =</m> <mathInput name="c31"/> <m>\begin{bmatrix} 1 \\ 1\end{bmatrix}+</m><mathInput name="c32"/> <m>\begin{bmatrix} 3 \\ 1\end{bmatrix}</m>,
+</p>
+<p>
+  <m>\begin{bmatrix} 3 \\ 2\end{bmatrix} =</m> <mathInput name="c41"/> <m>\begin{bmatrix} 0 \\ -1\end{bmatrix}+</m><mathInput name="c42"/> <m>\begin{bmatrix} 3 \\ 1\end{bmatrix}</m>.
+</p>
+            
+<answer>
+  <award>
+    <when>
+      $c11=-3 and $c12=-2 and -1*$c21 +$c22*1
+    </when>
+  </award>
+</answer>            
+<answer>
+  <award>
+    <when>
+      $c21=-1 and $c22=2
+    </when>
+  </award>
+</answer>            
+<answer>
+  <award>
+    <when>
+      $c31=3/2 and $c32=1/2
+    </when>
+  </award>
+</answer>
+<answer>
+  <award>
+    <when>
+      $c41=-1 and $c42=1
+    </when>
+  </award>
+</answer>

@@ -1,0 +1,22 @@
+<graph xmin="-2" ymin="-2" xmax="16" ymax="16">
+  <polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/>                    
+  <point name="u" styleNumber="5">
+  (0,0)
+  <constraints>
+    <attractTo threshold="1"><point>(0,0)</point></attractTo>
+    <attractTo threshold="1"><point>(0, 14)</point></attractTo>
+    <attractTo threshold="1"><point>(10,4)</point></attractTo>
+    <attractTo threshold="1"><point>(34/3,0)</point></attractTo>
+  </constraints>
+  </point>
+    <m draggable="false" anchor="($u.x+1,$u.y+1)">
+      f$u = <number>$c1*$u.x+$c2*$u.y</number>
+    </m>
+  <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/>   
+</graph>
+<p>
+  <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
+</p>
+<p>
+  <m>f($u.x, $u.y)= <number>$c1*$u.x+$c2*$u.y</number></m>.
+</p>

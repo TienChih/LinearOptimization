@@ -23,7 +23,7 @@
     <task>
       <statement>
         <p>
-          What are some differences between this linear program and previous examples of linear programs?
+          What are some differences between this linear optimization problem and previous examples of linear programs?
         </p>
       </statement>
     </task>
@@ -31,7 +31,7 @@
     <task>
       <statement>
         <p>
-          We can record the program with the following tableau, we denote the variables which can be negative by circling them:
+          We can record the problem with the following tableau, we denote the variables which can be negative by circling them:
           
         </p>
         <p>
@@ -389,7 +389,7 @@
     <task>
       <statement>
         <p>
-          We can record the program as follows:
+          We can record the problem as follows:
           
            
            

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-dualitytheory" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-dualitytheory" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Duality Theory</title>
 
   <p> In this section, we establish the theoretical underpinnings of duality. </p>
@@ -402,7 +402,7 @@
     <statement>
       <p>
         Given a pair of primal max-dual min programs, the primal max problem as an optimal solution 
-        <m>\x^*</m> if and only if the dual min program has an optimal solution <m>\y^*</m>.  Moreover,
+        <m>\x^*</m> if and only if the dual min problem has an optimal solution <m>\y^*</m>.  Moreover,
         <m>f(\x^*)=g(\y^*)</m>.
       </p>
     </statement>

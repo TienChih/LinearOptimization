@@ -4,7 +4,19 @@
   <title>Duality</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+      One of the fundamental ideas of linear optimization is that of duality.  We saw a precursor
+      to this idea in both <xref ref="activity-widget"/> and <xref ref="activity-insurance"/>.
+      The same initial scenario produces both a maximization and a minimization problem.  What does
+      this mean, why does this occur, and what are the relations between these problems?
+    </p>
+    <p>
+      In this chapter, we define and explore the notion of duality in linear optimization.  In <xref ref="sec-sensitivity"/>
+      we give a geometric and algebraic interpretation of dual variables and the dual problem.  In <xref ref="sec-dualitytheory"/>, 
+      we use geometric reasoning to guide proofs of powerful duality results connecting the primal and dual problems.  Finally, in
+      <xref ref="sec-dualpivot"/>, we show how the simplex pivot from <xref ref="ch-simplex"/> applies geometrically and computationally
+      to the dual problem, and show how Tucker tableaus encode the dual problem.
+    </p>
   </introduction>
 
   <!-- include sections -->

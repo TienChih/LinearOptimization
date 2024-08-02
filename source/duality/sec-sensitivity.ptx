@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-section-sensitivity" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-sensitivity" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Sensitivity Analysis</title>
 
   <p> In this section, we begin to assign values to our bounds. </p>
@@ -17,7 +17,7 @@
       </p>
       <!--<hint>
         <p>
-          The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi&apos;s iconic curve.
+          The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi's iconic curve.
         </p>
       </hint>-->
       
@@ -28,12 +28,14 @@
         <p>
          Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.
         </p>
-      </statement>
-      <hint>
-        <p>
-          <interactive desmos="ktuonhl1nh"/>
-        </p>
-      </hint>
+
+      <interactive  platform="doenetml" width="100%" >
+        <slate surface="doenetml">
+          <xi:include parse="text" href="doenet/duality-potion.xml"/>
+        </slate>
+      </interactive>
+    </statement>
+
     </task>
 
     <task>
@@ -48,7 +50,7 @@
     <task>
       <statement>
         <p>
-         Recompute this linear program with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs.  Which provides the greater increase in revenue?
+         Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs.  Which provides the greater increase in revenue?
          Is this consistent with what you thought earlier?
         </p>
       </statement>
@@ -479,45 +481,9 @@
         </p>
         <interactive  platform="doenetml" width="100%" aspect="3:4">
           <slate surface="doenetml">
-            &lt;graph xmin="-2" ymin="4" xmax="12" ymax="18"&gt;
-              &lt;polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/&gt;
-              
-
-
-              &lt;point name="u" styleNumber="5" draggable="false"&gt;
-                  (0,14)
-              &lt;/point&gt;
-
-              &lt;line name="line" slope="-3/2" through="$u"  styleNumber="6"/&gt; 
-              &lt;lineSegment name="segment" endpoints="$u ($u.x+3,$u.y+2)" styleNumber="6"/&gt;
-
-              &lt;line name="linea" slope="-(-1*$c1 +$c2*1)/$c2" through="$u" styleNumber="2"/&gt; 
-              &lt;lineSegment name="segmenta" endpoints="$u ($u.x-1*$c1 +$c2*1, $u.y+1*$c2)" styleNumber="2"/&gt;
-
-
-              
-
-
-              
-            &lt;/graph&gt;
-            &lt;slider from="-5" to="5" initialValue="0" name="c1" width="300" step="0.2" showValue="true" showTicks="true"/&gt; &lt;slider from="-5" to="5" initialValue="0" name="c2" width="300" step="0.2" showValue="true" showTicks="true"/&gt;
-            &lt;p&gt;
-              &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =$c1 
-            \begin{bmatrix} -1 \\ 0\end{bmatrix}+$c2 \begin{bmatrix} 1 \\ 1\end{bmatrix}&lt;/m&gt;.
-            &lt;/p&gt;
-
-
-
-
-            &lt;answer&gt;
-              &lt;award&gt;
-                &lt;when&gt;
-                  $c1=-1 and $c2=2
-                &lt;/when&gt;
-              &lt;/award&gt;
-            &lt;/answer&gt;
+            <xi:include parse="text" href="doenet/duality-coefficients.xml"/>
           </slate>
-                  </interactive>
+        </interactive>
       </statement>
     </task>
 
@@ -531,116 +497,9 @@
         <p>
           <interactive  platform="doenetml" width="100%" aspect="3:4">
             <slate surface="doenetml">
-              &lt;graph xmin="-2" ymin="-2" xmax="16" ymax="16"&gt;
-              &lt;polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/&gt;
-              &lt;point name="u1" styleNumber="5" draggable="false"&gt;
-                  (0,0)
-              &lt;/point&gt;
-              
-              &lt;line name="line1" slope="-3/2" through="$u1"  styleNumber="6"/&gt; 
-              &lt;lineSegment name="segment1" endpoints="$u1 ($u1.x+3,$u1.y+2)" styleNumber="6"/&gt;
-            
-              &lt;line name="line1a" slope="-1*$c11/$c12" through="$u1" styleNumber="2"/&gt; 
-              &lt;lineSegment name="segment1a" endpoints="$u1 ($u1.x-1*$c11, $u1.y-1*$c12)" styleNumber="2"/&gt;
-            
-            
-              &lt;point name="u2" styleNumber="5" draggable="false"&gt;
-                  (0,14)
-              &lt;/point&gt;
-            
-              &lt;line name="line2" slope="-3/2" through="$u2"  styleNumber="6"/&gt; 
-              &lt;lineSegment name="segment2" endpoints="$u2 ($u2.x+3,$u2.y+2)" styleNumber="6"/&gt;
-            
-              &lt;line name="line2a" slope="-(-1*$c21 +$c22*1)/$c22" through="$u2" styleNumber="2"/&gt; 
-              &lt;lineSegment name="segment2a" endpoints="$u2 ($u2.x-1*$c21 +$c22*1, $u2.y+1*$c22)" styleNumber="2"/&gt;
-            
-            
-              &lt;point name="u3" styleNumber="5" draggable="false"&gt;
-                  (10,4)
-              &lt;/point&gt;
-            
-              &lt;line name="line3" slope="-3/2" through="$u3"  styleNumber="6"/&gt; 
-              &lt;lineSegment name="segment3" endpoints="$u3 ($u3.x+3,$u3.y+2)" styleNumber="6"/&gt;
-            
-              &lt;line name="line3a" slope="-(1*$c31+3*$c32)/(1*$c31+1*$c32)" through="$u3" styleNumber="2"/&gt; 
-              &lt;lineSegment name="segment3a" endpoints="$u3 ($u3.x+1*$c31+3*$c32, $u3.y+1*$c31+1*$c32)" styleNumber="2"/&gt;
-            
-              &lt;point name="u4" styleNumber="5" draggable="false"&gt;
-                  (34/3,0)
-              &lt;/point&gt;
-            
-              &lt;line name="line4" slope="-3/2" through="$u4"  styleNumber="6"/&gt; 
-              &lt;lineSegment name="segment4" endpoints="$u4 ($u4.x+3,$u4.y+2)" styleNumber="6"/&gt;
-            
-              &lt;line name="line4a" slope="-(3*$c42)/(-1*$c41+1*$c42)" through="$u4" styleNumber="2"/&gt; 
-              &lt;lineSegment name="segment4a" endpoints="$u4 ($u4.x+3*$c42, $u4.y-1*$c41+1*$c42)" styleNumber="2"/&gt;
-            
-            
-              &lt;point name="u" styleNumber="3"&gt;
-                  (0,0)
-                &lt;constraints&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,0)&lt;/point&gt;&lt;/attractTo&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(0, 14)&lt;/point&gt;&lt;/attractTo&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(10,4)&lt;/point&gt;&lt;/attractTo&gt;
-                  &lt;attractTo threshold="1"&gt;&lt;point&gt;(34/3,0)&lt;/point&gt;&lt;/attractTo&gt;
-                &lt;/constraints&gt;
-              &lt;/point&gt;
-              &lt;m draggable="false" anchor="($u.x+0.5,$u.y+0.7)"&gt;
-                  f$u = &lt;number&gt;3*$u.x+2*$u.y&lt;/number&gt;
-                &lt;/m&gt;
-            
-              &lt;line name="line" through="$u $u+(-2, 3)" styleNumber="3"/&gt; 
-            
-            
-              
-            &lt;/graph&gt;
-            &lt;p&gt;
-              &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c11"/&gt; &lt;m&gt;\begin{bmatrix} -1 \\ 0\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c12"/&gt; &lt;m&gt;\begin{bmatrix} 0 \\ -1\end{bmatrix}&lt;/m&gt;,
-              &lt;/p&gt;
-              &lt;p&gt;  
-              &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c21"/&gt; &lt;m&gt;\begin{bmatrix} -1 \\ 0\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c22"/&gt; &lt;m&gt;\begin{bmatrix} 1 \\ 1\end{bmatrix}&lt;/m&gt;.
-            &lt;/p&gt;
-            &lt;p&gt;
-              &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c31"/&gt; &lt;m&gt;\begin{bmatrix} 1 \\ 1\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c32"/&gt; &lt;m&gt;\begin{bmatrix} 3 \\ 1\end{bmatrix}&lt;/m&gt;,
-              &lt;/p&gt;
-              &lt;p&gt;
-              &lt;m&gt;\begin{bmatrix} 3 \\ 2\end{bmatrix} =&lt;/m&gt; &lt;mathInput name="c41"/&gt; &lt;m&gt;\begin{bmatrix} 0 \\ -1\end{bmatrix}+&lt;/m&gt;&lt;mathInput name="c42"/&gt; &lt;m&gt;\begin{bmatrix} 3 \\ 1\end{bmatrix}&lt;/m&gt;.
-            &lt;/p&gt;
-            
-            &lt;answer&gt;
-              &lt;award&gt;
-                &lt;when&gt;
-                  $c11=-3 and $c12=-2 and -1*$c21 +$c22*1
-                &lt;/when&gt;
-              &lt;/award&gt;
-              
-            &lt;/answer&gt;
-            
-            &lt;answer&gt;
-              &lt;award&gt;
-                &lt;when&gt;
-                  $c21=-1 and $c22=2
-                &lt;/when&gt;
-              &lt;/award&gt;
-            &lt;/answer&gt;
-            
-            &lt;answer&gt;
-              &lt;award&gt;
-                &lt;when&gt;
-                  $c31=3/2 and $c32=1/2
-                &lt;/when&gt;
-              &lt;/award&gt;
-            &lt;/answer&gt;
-            
-            &lt;answer&gt;
-              &lt;award&gt;
-                &lt;when&gt;
-                  $c41=-1 and $c42=1
-                &lt;/when&gt;
-              &lt;/award&gt;
-            &lt;/answer&gt;
+              <xi:include parse="text" href="doenet/duality-morecoefficients.xml"/>
             </slate>
-                    </interactive>
+          </interactive>
         </p>
       </statement>
     </task>
@@ -842,7 +701,7 @@
     </p>
 
     <p>
-      The <em>dual minimization program</em>  is aritculated as follows: 
+      The <em>dual minimization problem</em>  is aritculated as follows: 
     </p>
 
     <p>

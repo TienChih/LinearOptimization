@@ -1,0 +1,14 @@
+<graph xmin="-2" ymin="4" xmax="12" ymax="18">
+  <polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/>
+  <point name="u" styleNumber="5" draggable="false">
+  (0,14)
+  </point>
+  <line name="line" slope="-3/2" through="$u"  styleNumber="6"/> 
+  <lineSegment name="segment" endpoints="$u ($u.x+3,$u.y+2)" styleNumber="6"/>
+  <line name="linea" slope="-(-1*$c1 +$c2*1)/$c2" through="$u" styleNumber="2"/> 
+  <lineSegment name="segmenta" endpoints="$u ($u.x-1*$c1 +$c2*1, $u.y+1*$c2)" styleNumber="2"/>
+</graph>
+<slider from="-5" to="5" initialValue="0" name="c1" width="300" step="0.2" showValue="true" showTicks="true"/> <slider from="-5" to="5" initialValue="0" name="c2" width="300" step="0.2" showValue="true" showTicks="true"/>
+<p>
+  <m>\begin{bmatrix} 3 \\ 2\end{bmatrix} =$c1 \begin{bmatrix} -1 \\ 0\end{bmatrix}+$c2 \begin{bmatrix} 1 \\ 1\end{bmatrix}</m>.
+</p>
