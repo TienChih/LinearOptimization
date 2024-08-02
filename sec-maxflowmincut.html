@@ -106,6 +106,15 @@ window.MathJax = {
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 <style>
+#thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
+#thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
+#thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
+#sec-polyhedralconvex-25-4-1-2 { counter-set: sec-polyhedralconvex-25-4-1-2 0; }
+#sec-polyhedralconvex-25-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-25-4-1-2,upper-alpha)"."; }
+#sec-polyhedralconvex-25-4-1-2 > li { counter-increment: sec-polyhedralconvex-25-4-1-2; }
+#sec-polyhedralconvex-25-5-1-2 { counter-set: sec-polyhedralconvex-25-5-1-2 0; }
+#sec-polyhedralconvex-25-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-25-5-1-2,upper-alpha)"."; }
+#sec-polyhedralconvex-25-5-1-2 > li { counter-increment: sec-polyhedralconvex-25-5-1-2; }
 #activity-maxslack-2-1-2 { counter-set: activity-maxslack-2-1-2 0; }
 #activity-maxslack-2-1-2 > li::marker { content: ""counter(activity-maxslack-2-1-2,upper-alpha)"."; }
 #activity-maxslack-2-1-2 > li { counter-increment: activity-maxslack-2-1-2; }
@@ -127,15 +136,15 @@ window.MathJax = {
 #activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
 #activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
 #activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
-#sec-simplexmax-4-5-1-4 { counter-set: sec-simplexmax-4-5-1-4 0; }
-#sec-simplexmax-4-5-1-4 > li::marker { content: ""counter(sec-simplexmax-4-5-1-4,upper-alpha)"."; }
-#sec-simplexmax-4-5-1-4 > li { counter-increment: sec-simplexmax-4-5-1-4; }
+#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
+#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
 #def-simplexcanonmaxbf-1-2 { counter-set: def-simplexcanonmaxbf-1-2 0; }
 #def-simplexcanonmaxbf-1-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-1-2,decimal)"."; }
 #def-simplexcanonmaxbf-1-2 > li { counter-increment: def-simplexcanonmaxbf-1-2; }
-#sec-simplexmax-11-6-1-2 { counter-set: sec-simplexmax-11-6-1-2 0; }
-#sec-simplexmax-11-6-1-2 > li::marker { content: ""counter(sec-simplexmax-11-6-1-2,upper-alpha)"."; }
-#sec-simplexmax-11-6-1-2 > li { counter-increment: sec-simplexmax-11-6-1-2; }
+#subsec-infeasiblemaximization-3-6-1-2 { counter-set: subsec-infeasiblemaximization-3-6-1-2 0; }
+#subsec-infeasiblemaximization-3-6-1-2 > li::marker { content: ""counter(subsec-infeasiblemaximization-3-6-1-2,upper-alpha)"."; }
+#subsec-infeasiblemaximization-3-6-1-2 > li { counter-increment: subsec-infeasiblemaximization-3-6-1-2; }
 #def-simplexmax-1-2 { counter-set: def-simplexmax-1-2 0; }
 #def-simplexmax-1-2 > li::marker { content: ""counter(def-simplexmax-1-2,decimal)"."; }
 #def-simplexmax-1-2 > li { counter-increment: def-simplexmax-1-2; }
@@ -339,124 +348,142 @@ true);
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">1</span> <span class="title">The Simplex Algorithm</span></a></div>
+<div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometric Linear Optimization</span></a></div>
 <ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-polyhedralconvex.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Using Sage</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Problems for Chapter 1</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">2</span> <span class="title">Noncanonical Problems</span></a></div>
+<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-basicfeasible" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Basic Feasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-infeasiblemaximization" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Basic Infeasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-simplexmin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">3</span> <span class="title">Duality</span></a></div>
+<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">3</span> <span class="title">Noncanonical Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Duality Theory</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">4</span> <span class="title">Zero-Sum Games</span></a></div>
+<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Min-Max Games</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">4.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Games of Chance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">5</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">5.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Transportation Algorithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">6</span> <span class="title">Network Flows</span></a></div>
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">7</span> <span class="title">Network Flows</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section active">
-<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Problems for Chapter 7</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">7</span> <span class="title">Integer Programming</span></a></div>
+<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">7.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Problems for Chapter 7</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-maxflowmincut"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.2</span><span class="space"> </span><span class="title">Max Flow - Min Cut</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.2</span><span class="space"> </span><span class="title">Max Flow - Min Cut</span>
 </h2>
 <article class="exploration project-like" id="sec-maxflowmincut-2"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-maxflowmincut-2-1"><div class="para" id="sec-maxflowmincut-2-1-1">Recall <a href="sec-networkflow.html#exploration-flow" class="internal" title="Exploration 6.1.1">Exploration 6.1.1</a>.  Suppose that we wish to install a toll booth on these bridges so that each person going to <span class="process-math">\(v_5\)</span> pays a toll at least once. The cost of installing a toll booth on a bridge is proportional to it’s capacity.</div></div>
+<div class="introduction" id="sec-maxflowmincut-2-1"><div class="para" id="sec-maxflowmincut-2-1-1">Recall <a href="sec-networkflow.html#exploration-flow" class="xref" data-knowl="./knowl/xref/exploration-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.1.1">Exploration 7.1.1</a>.  Suppose that we wish to install a toll booth on these bridges so that each person going to <span class="process-math">\(v_5\)</span> pays a toll at least once. The cost of installing a toll booth on a bridge is proportional to it’s capacity.</div></div>
 <article class="task exercise-like" id="sec-maxflowmincut-2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-maxflowmincut-2-2-1-1">Find three different ways to install these booths, and find what you believe is the cheapest way to do so.</div></article></article><article class="definition definition-like" id="def-cut"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-cut-1-1">Given a capacitated network <span class="process-math">\(N\text{,}\)</span> a <em class="emphasis">cut</em> of <span class="process-math">\(N\)</span> is a partition of the vertex set into non-empty subsets <span class="process-math">\(C=(V_1, V_2)\text{,}\)</span> where <span class="process-math">\(V=V_1\sqcup V_2, v_s\in V_1, v_d\in V_2\text{.}\)</span>
 </div> <div class="para" id="def-cut-1-2">The <em class="emphasis">capacity</em> of a cut <span class="process-math">\(C\)</span> is the sum <span class="process-math">\(\displaystyle \sum_{v_i\in V_1, v_j\in V_2} c_{ij}\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-cutflow"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="activity-cutflow-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-cutflow-1-1">From <a href="sec-networkflow.html#exploration-flow" class="internal" title="Exploration 6.1.1">Exploration 6.1.1</a>, find three different cuts and their capacities.</div></article><article class="task exercise-like" id="activity-cutflow-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-cutflow-1-1">From <a href="sec-networkflow.html#exploration-flow" class="xref" data-knowl="./knowl/xref/exploration-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.1.1">Exploration 7.1.1</a>, find three different cuts and their capacities.</div></article><article class="task exercise-like" id="activity-cutflow-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-cutflow-2-1">What cut do you think minimizes the capacity, how does this compare to your conjectured max flow for this problem?</div></article></article><article class="activity project-like" id="activity-dualflow"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-dualflow-1">
 <div class="para" id="activity-dualflow-1-1">Consider the primal maximization program for a max flow problem for a capacitated network with unique source <span class="process-math">\(v_s\)</span> and unique sink <span class="process-math">\(v_d\text{:}\)</span>
@@ -502,10 +529,10 @@ y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 </div> <div class="para" id="activity-dualflow-5-1-5">Can any cut of <span class="process-math">\(N\)</span> be modeled this way?</div></article><article class="task exercise-like" id="activity-dualflow-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-dualflow-6-1-1">What is the capacity of the above cut?  How does that relate to the dual program?</div></article><article class="task exercise-like" id="activity-dualflow-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-dualflow-7-1-1">Prove that the maximum flow through a network is bounded above by the minimum cut capacity.</div></article></article><article class="activity project-like" id="sec-maxflowmincut-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-maxflowmincut-6-1">
-<div class="para" id="sec-maxflowmincut-6-1-1">We explore a way of generating potential minimum cuts using a maximum flow.</div> <div class="para" id="sec-maxflowmincut-6-1-2">Recall <a href="sec-networkflow.html#exploration-flow" class="internal" title="Exploration 6.1.1">Exploration 6.1.1</a> and your proposed maximum flow <span class="process-math">\(f'\text{.}\)</span>
+<div class="para" id="sec-maxflowmincut-6-1-1">We explore a way of generating potential minimum cuts using a maximum flow.</div> <div class="para" id="sec-maxflowmincut-6-1-2">Recall <a href="sec-networkflow.html#exploration-flow" class="xref" data-knowl="./knowl/xref/exploration-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.1.1">Exploration 7.1.1</a> and your proposed maximum flow <span class="process-math">\(f'\text{.}\)</span>
 </div>
 </div>
 <article class="task exercise-like" id="sec-maxflowmincut-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
@@ -518,7 +545,7 @@ y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 </div></article><article class="task exercise-like" id="sec-maxflowmincut-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-maxflowmincut-6-3-1-1">Let <span class="process-math">\(V_2':=V\backslash V_1'\text{.}\)</span>  What is the cut capacity of <span class="process-math">\((V_1', V_2')\text{?}\)</span>
 </div></article></article><article class="activity project-like" id="activity-maxflowmincutproof"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-maxflowmincutproof-1"><div class="para" id="activity-maxflowmincutproof-1-1">We now prove that the minimum cut capacity is equal to the maximum flow.</div></div>
 <article class="task exercise-like" id="activity-maxflowmincutproof-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
@@ -550,33 +577,33 @@ q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_
 <div class="para" id="activity-maxflowmincutproof-7-1-1">Explain why <span class="process-math">\(f''\)</span> has a greater value than <span class="process-math">\(f'\text{.}\)</span>  Why must <span class="process-math">\(v_d\not \in V_1'\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-maxflowmincutproof-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para" id="activity-maxflowmincutproof-8-1-1">Define <span class="process-math">\(V_2' = V\backslash V_1'\text{.}\)</span>  Prove that for any <span class="process-math">\(v_i\in V_1', v_j\in V_2'\text{,}\)</span> we have that <span class="process-math">\(x_{ij}'=c_{ij}, x_{ji}=0\text{.}\)</span>
-</div> <div class="para" id="activity-maxflowmincutproof-8-1-2">(Not neccesary for this proof, but to tie things in, if <span class="process-math">\(x_{ij'}=c_{ij}\text{,}\)</span> what does that say about <span class="process-math">\(y_{ij}\)</span> from the dual program in <a href="sec-maxflowmincut.html#activity-dualflow" class="internal" title="Activity 6.2.3">Activity 6.2.3</a>?  If <span class="process-math">\(x_{ij}'\lt c_{ij}\text{,}\)</span>  what does that say about <span class="process-math">\(y_{ij}\text{?}\)</span>  )</div></article><article class="task exercise-like" id="activity-maxflowmincutproof-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-maxflowmincutproof-9-1-1">Use <a href="sec-maxflowmincut.html#activity-cutflow" class="internal" title="Activity 6.2.2">Activity 6.2.2</a> to show that the value of <span class="process-math">\(f'\)</span> is equal to the cut capacity of <span class="process-math">\((V_1', V_2')\text{.}\)</span> (Proving the result!)</div></article><article class="task exercise-like" id="activity-maxflowmincutproof-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-maxflowmincutproof-10-1-1">Going back to <a href="sec-maxflowmincut.html#activity-dualflow" class="internal" title="Activity 6.2.3">Activity 6.2.3</a> if we let <span class="process-math">\(\mu_i=0\)</span> for <span class="process-math">\(v_i\in V_1'\)</span> and <span class="process-math">\(\mu_j=-1\)</span> for <span class="process-math">\(v_j\in V_2'\text{,}\)</span> what is the value of the dual min objective?</div></article></article><article class="theorem theorem-like" id="thm-maxflowmincut"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
+</div> <div class="para" id="activity-maxflowmincutproof-8-1-2">(Not neccesary for this proof, but to tie things in, if <span class="process-math">\(x_{ij'}=c_{ij}\text{,}\)</span> what does that say about <span class="process-math">\(y_{ij}\)</span> from the dual program in <a href="sec-maxflowmincut.html#activity-dualflow" class="xref" data-knowl="./knowl/xref/activity-dualflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 7.2.3">Activity 7.2.3</a>?  If <span class="process-math">\(x_{ij}'\lt c_{ij}\text{,}\)</span>  what does that say about <span class="process-math">\(y_{ij}\text{?}\)</span>  )</div></article><article class="task exercise-like" id="activity-maxflowmincutproof-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="activity-maxflowmincutproof-9-1-1">Use <a href="sec-maxflowmincut.html#activity-cutflow" class="xref" data-knowl="./knowl/xref/activity-cutflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 7.2.2">Activity 7.2.2</a> to show that the value of <span class="process-math">\(f'\)</span> is equal to the cut capacity of <span class="process-math">\((V_1', V_2')\text{.}\)</span> (Proving the result!)</div></article><article class="task exercise-like" id="activity-maxflowmincutproof-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="activity-maxflowmincutproof-10-1-1">Going back to <a href="sec-maxflowmincut.html#activity-dualflow" class="xref" data-knowl="./knowl/xref/activity-dualflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 7.2.3">Activity 7.2.3</a> if we let <span class="process-math">\(\mu_i=0\)</span> for <span class="process-math">\(v_i\in V_1'\)</span> and <span class="process-math">\(\mu_j=-1\)</span> for <span class="process-math">\(v_j\in V_2'\text{,}\)</span> what is the value of the dual min objective?</div></article></article><article class="theorem theorem-like" id="thm-maxflowmincut"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="thm-maxflowmincut-1-1">Let <span class="process-math">\(N = (V, E)\)</span> be a capacitated directed network with unique fixed source and unique fixed sink, no edges into the source, and no edges out of the sink. Then the value of the maximalflow from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> is equal to the minimal cut capacity in <span class="process-math">\(N\text{.}\)</span>
 </div></article><article class="activity project-like" id="sec-maxflowmincut-9"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.6</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-maxflowmincut-9-1-1">Suppose we had a non-optimal flow <span class="process-math">\(f\text{,}\)</span> how could we adopt the procedure in <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="internal" title="Activity 6.2.5">Activity 6.2.5</a> to obtain a better flow?</div></article><section class="subsection" id="subsec-flowcutalgorithms"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="space"> </span><span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span>
+<div class="para" id="sec-maxflowmincut-9-1-1">Suppose we had a non-optimal flow <span class="process-math">\(f\text{,}\)</span> how could we adopt the procedure in <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="xref" data-knowl="./knowl/xref/activity-maxflowmincutproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 7.2.5">Activity 7.2.5</a> to obtain a better flow?</div></article><section class="subsection" id="subsec-flowcutalgorithms"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="space"> </span><span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span>
 </h3>
 <article class="exploration project-like" id="exploration-shipmentflow"><h4 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.2.7</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="exploration-shipmentflow-1">
 <div class="para" id="exploration-shipmentflow-1-1">Consider the following capacitated network with source <span class="process-math">\(v_0\)</span> and sink <span class="process-math">\(v_5\text{:}\)</span>
-</div> <div class="para" id="exploration-shipmentflow-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exploration-maxflowalg.svg" role="img" class="contained" alt="A network with multiple sources and sinks."></div></div> <div class="para" id="exploration-shipmentflow-1-3">Recall the procedure to produce improved flows in <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="internal" title="Activity 6.2.5">Activity 6.2.5</a>.</div>
+</div> <div class="para" id="exploration-shipmentflow-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exploration-maxflowalg.svg" role="img" class="contained" alt="A network with multiple sources and sinks."></div></div> <div class="para" id="exploration-shipmentflow-1-3">Recall the procedure to produce improved flows in <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="xref" data-knowl="./knowl/xref/activity-maxflowmincutproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 7.2.5">Activity 7.2.5</a>.</div>
 </div>
 <article class="task exercise-like" id="exploration-shipmentflow-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exploration-shipmentflow-2-1-1">Begin with the zero-flow. <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exploration-zeroflow.svg" role="img" class="contained" alt="A network with multiple sources and sinks."></div>
-</div> <div class="para" id="exploration-shipmentflow-2-1-2">Consider the <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(v_0v_2v_4v_5\text{.}\)</span>  Apply <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="internal" title="Activity 6.2.5">Activity 6.2.5</a> (d) to this path.  What is <span class="process-math">\(q\text{?}\)</span>
+</div> <div class="para" id="exploration-shipmentflow-2-1-2">Consider the <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(v_0v_2v_4v_5\text{.}\)</span>  Apply <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="xref" data-knowl="./knowl/xref/activity-maxflowmincutproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 7.2.5">Activity 7.2.5</a> (d) to this path.  What is <span class="process-math">\(q\text{?}\)</span>
 </div></article><article class="task exercise-like" id="exploration-shipmentflow-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exploration-shipmentflow-3-1-1">Adjust the flow on edges by <span class="process-math">\(q\)</span> appropriately.  Explain why we need not consider the edge <span class="process-math">\(v_2v_4\)</span> for any future <span class="process-math">\(\alpha\)</span>-paths.</div></article><article class="task exercise-like" id="exploration-shipmentflow-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="exploration-shipmentflow-4-1-1">Pick another <span class="process-math">\(\alpha\)</span>-path where <span class="process-math">\(q&gt;0\)</span> and repeat until we achieve a maximum flow.</div> <details id="exploration-shipmentflow-4-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exploration-alphapathfilled.svg" role="img" class="contained" alt="A network with multiple sources and sinks."></div></div></details></article><article class="task exercise-like" id="exploration-shipmentflow-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="exploration-shipmentflow-5-1-1">Use the maximum flow and the argument in <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="internal" title="Activity 6.2.5">Activity 6.2.5</a>  to find a minimum cut.</div></article></article><article class="definition definition-like" id="def-maxflowalgorithm"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Max Flow Algorithm.</span>
+<div class="para" id="exploration-shipmentflow-5-1-1">Use the maximum flow and the argument in <a href="sec-maxflowmincut.html#activity-maxflowmincutproof" class="xref" data-knowl="./knowl/xref/activity-maxflowmincutproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 7.2.5">Activity 7.2.5</a>  to find a minimum cut.</div></article></article><article class="definition definition-like" id="def-maxflowalgorithm"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Max Flow Algorithm.</span>
 </h4> <div class="para" id="def-maxflowalgorithm-2-1">We describe an algorithm to find the maximum flow for <span class="process-math">\(N\text{,}\)</span>  a capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{:}\)</span>
 </div> <ol class="decimal" id="def-maxflowalgorithm-2-2">
 <li id="def-maxflowalgorithm-2-2-1"><div class="para" id="def-maxflowalgorithm-2-2-1-1">INITIALIZE: We begin with any feasible flow <span class="process-math">\(f\)</span> (including the zero flow.)</div></li>
@@ -605,10 +632,10 @@ q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_
 </li>
 <li id="def-maxflowalgorithm-2-2-5"><div class="para" id="def-maxflowalgorithm-2-2-5-1">STOP.  The flow is now optimal.</div></li>
 </ol></article><article class="activity project-like" id="subsec-flowcutalgorithms-5"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.8</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-flowcutalgorithms-5-1">Prove that the Max Flow Algorithm <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="internal" title="Definition 6.2.3: Max Flow Algorithm">Definition 6.2.3</a> terminates at a maximum flow.</div></article><article class="definition definition-like" id="def-mincutalgorithm"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Min Cut Algorithm.</span>
+<div class="para" id="subsec-flowcutalgorithms-5-1">Prove that the Max Flow Algorithm <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.3: Max Flow Algorithm">Definition 7.2.3</a> terminates at a maximum flow.</div></article><article class="definition definition-like" id="def-mincutalgorithm"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Min Cut Algorithm.</span>
 </h4> <div class="para" id="def-mincutalgorithm-2-1">We describe an algorithm to find the minimum for <span class="process-math">\(N\text{,}\)</span>  a capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{:}\)</span>
 </div> <ol class="decimal" id="def-mincutalgorithm-2-2">
 <li id="def-mincutalgorithm-2-2-1"><div class="para" id="def-mincutalgorithm-2-2-1-1">INITIALIZE: We begin with a maximum flow <span class="process-math">\(f'\)</span> and <span class="process-math">\(V_1=\{v_s\}\text{.}\)</span>

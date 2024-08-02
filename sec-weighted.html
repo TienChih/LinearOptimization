@@ -118,6 +118,15 @@ sagecell.makeSagecell({
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 <style>
+#thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
+#thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
+#thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
+#sec-polyhedralconvex-25-4-1-2 { counter-set: sec-polyhedralconvex-25-4-1-2 0; }
+#sec-polyhedralconvex-25-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-25-4-1-2,upper-alpha)"."; }
+#sec-polyhedralconvex-25-4-1-2 > li { counter-increment: sec-polyhedralconvex-25-4-1-2; }
+#sec-polyhedralconvex-25-5-1-2 { counter-set: sec-polyhedralconvex-25-5-1-2 0; }
+#sec-polyhedralconvex-25-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-25-5-1-2,upper-alpha)"."; }
+#sec-polyhedralconvex-25-5-1-2 > li { counter-increment: sec-polyhedralconvex-25-5-1-2; }
 #activity-maxslack-2-1-2 { counter-set: activity-maxslack-2-1-2 0; }
 #activity-maxslack-2-1-2 > li::marker { content: ""counter(activity-maxslack-2-1-2,upper-alpha)"."; }
 #activity-maxslack-2-1-2 > li { counter-increment: activity-maxslack-2-1-2; }
@@ -139,15 +148,15 @@ sagecell.makeSagecell({
 #activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
 #activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
 #activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
-#sec-simplexmax-4-5-1-4 { counter-set: sec-simplexmax-4-5-1-4 0; }
-#sec-simplexmax-4-5-1-4 > li::marker { content: ""counter(sec-simplexmax-4-5-1-4,upper-alpha)"."; }
-#sec-simplexmax-4-5-1-4 > li { counter-increment: sec-simplexmax-4-5-1-4; }
+#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
+#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
 #def-simplexcanonmaxbf-1-2 { counter-set: def-simplexcanonmaxbf-1-2 0; }
 #def-simplexcanonmaxbf-1-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-1-2,decimal)"."; }
 #def-simplexcanonmaxbf-1-2 > li { counter-increment: def-simplexcanonmaxbf-1-2; }
-#sec-simplexmax-11-6-1-2 { counter-set: sec-simplexmax-11-6-1-2 0; }
-#sec-simplexmax-11-6-1-2 > li::marker { content: ""counter(sec-simplexmax-11-6-1-2,upper-alpha)"."; }
-#sec-simplexmax-11-6-1-2 > li { counter-increment: sec-simplexmax-11-6-1-2; }
+#subsec-infeasiblemaximization-3-6-1-2 { counter-set: subsec-infeasiblemaximization-3-6-1-2 0; }
+#subsec-infeasiblemaximization-3-6-1-2 > li::marker { content: ""counter(subsec-infeasiblemaximization-3-6-1-2,upper-alpha)"."; }
+#subsec-infeasiblemaximization-3-6-1-2 > li { counter-increment: subsec-infeasiblemaximization-3-6-1-2; }
 #def-simplexmax-1-2 { counter-set: def-simplexmax-1-2 0; }
 #def-simplexmax-1-2 > li::marker { content: ""counter(def-simplexmax-1-2,decimal)"."; }
 #def-simplexmax-1-2 > li { counter-increment: def-simplexmax-1-2; }
@@ -351,109 +360,127 @@ true);
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">1</span> <span class="title">The Simplex Algorithm</span></a></div>
+<div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometric Linear Optimization</span></a></div>
 <ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-polyhedralconvex.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Using Sage</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Problems for Chapter 1</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">2</span> <span class="title">Noncanonical Problems</span></a></div>
+<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-basicfeasible" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Basic Feasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-infeasiblemaximization" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Basic Infeasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-simplexmin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">3</span> <span class="title">Duality</span></a></div>
+<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">3</span> <span class="title">Noncanonical Problems</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Duality Theory</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">4</span> <span class="title">Zero-Sum Games</span></a></div>
+<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Min-Max Games</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">4.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Games of Chance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">5</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">5.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Transportation Algorithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">6</span> <span class="title">Network Flows</span></a></div>
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">7</span> <span class="title">Network Flows</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Problems for Chapter 7</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">7</span> <span class="title">Integer Programming</span></a></div>
+<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">7.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Problems for Chapter 7</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-weighted"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.3</span><span class="space"> </span><span class="title">Weighted Graphs</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.3</span><span class="space"> </span><span class="title">Weighted Graphs</span>
 </h2>
 <article class="exploration project-like" id="exploration-path"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="exploration-path-1">
 <div class="para" id="exploration-path-1-1">Dr. Ayad is driving from her home to Fantasi college.  The town is connected by a series of one way streets, each labled with the time it would take to traverse the road.</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/traffic.svg" role="img" class="contained" alt="A Network Flow depicting several nodes and edges with weights."></div>
@@ -461,15 +488,15 @@ true);
 <article class="task exercise-like" id="exploration-path-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="exploration-path-2-1-1">What is the shortest amout of time needed for her to arrive at Fantasi College?</div></article><article class="task exercise-like" id="exploration-path-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="exploration-path-3-1-1">Is there a unique route she could take that minimizes this time?</div></article></article><article class="definition definition-like" id="def-weightedgraph"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-weightedgraph-1-1">A network is <em class="emphasis">weighted</em> if for each edge <span class="process-math">\((v_i, v_j)\in E\)</span> we assign (potentially negative!) weight <span class="process-math">\(w_{ij}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-path"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-path-1-1">Give a network <span class="process-math">\(N\text{,}\)</span> a <em class="emphasis">path</em> <span class="process-math">\(P\)</span> from <span class="process-math">\(v_x\text{,}\)</span> <span class="process-math">\(v_y\)</span> is a sequence of consecutive edges <span class="process-math">\((v_{a_0}, v_{a_1}), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})\)</span> where <span class="process-math">\(v_{a_0}=v_x, v_{a_k}=v_y\text{.}\)</span>  We say that the <em class="emphasis">length</em> of <span class="process-math">\(P\)</span> is <span class="process-math">\(\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}\text{.}\)</span>   We say that the <em class="emphasis">distance</em> from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{,}\)</span> <span class="process-math">\(d(v_x, v_y)\text{,}\)</span> is the length of a shortest path from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{.}\)</span>
 </div></article><article class="activity project-like" id="sec-weighted-5"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-weighted-5-1">
 <div class="para" id="sec-weighted-5-1-1">Consider the weighted network:</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/negativecycle.svg" role="img" class="contained" alt="A network with negative weights."></div>
@@ -479,10 +506,10 @@ true);
 <div class="para" id="sec-weighted-5-3-1">What if we change <span class="process-math">\(w_{23}=-1\text{?}\)</span>
 </div></article><article class="task exercise-like" id="sec-weighted-5-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-weighted-5-4-1-1">What is a reasonable condition for the shortest path to be well defined?</div></article></article><article class="definition definition-like" id="def-negativecycle"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-negativecycle-1-1">We define a <em class="emphasis">cycle</em> in a weighted network to be a path froma vertex <span class="process-math">\(v_x\)</span> to itself.  If the length of a cycle is negative, we call it a <em class="emphasis">negative cycle</em>.</div></article><article class="activity project-like" id="sec-weighted-7"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-weighted-7-1"><div class="para" id="sec-weighted-7-1-1">In this activity, we model the shortest path algorithm as a linear optimization problem.  Assume <span class="process-math">\(N\)</span> is a weighted network with no negative cycles.  Let <span class="process-math">\(0\leq x_{ij}\leq 1\)</span> where <span class="process-math">\(x_{ij}=1\)</span> if <span class="process-math">\((v_i, v_j)\)</span> is in a shortest path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
 </div></div>
@@ -527,7 +554,7 @@ true);
 </ol></article><article class="task exercise-like" id="sec-weighted-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-weighted-7-5-1-1">Why do we not need a constraint for <span class="process-math">\(v_s\text{?}\)</span>
 </div></article><article class="task exercise-like" id="sec-weighted-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-weighted-7-6-1-1">Model the shortest path problem in <a href="sec-weighted.html#exploration-path" class="internal" title="Exploration 6.3.1">Exploration 6.3.1</a> as a linear optimization problem and solve it:</div> <div class="para" id="sec-weighted-7-6-1-2">
+<div class="para" id="sec-weighted-7-6-1-1">Model the shortest path problem in <a href="sec-weighted.html#exploration-path" class="xref" data-knowl="./knowl/xref/exploration-path.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.1">Exploration 7.3.1</a> as a linear optimization problem and solve it:</div> <div class="para" id="sec-weighted-7-6-1-2">
 <pre id="sec-weighted-7-6-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
@@ -543,7 +570,7 @@ print(P.optimal_value())
 </script></pre>
 </div></article></article><div class="para" id="sec-weighted-8">As was the case in previous examples, we introduce a less cumbersome method for finding these shortest paths.</div>
 <article class="definition definition-like" id="def-DijkstrasAlgorithm"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Dijkstra’s Algorithm.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Dijkstra’s Algorithm.</span>
 </h3> <div class="para" id="def-DijkstrasAlgorithm-2-1">Let <span class="process-math">\(N\)</span> be a weighted network with only non-negative weights.  Then <em class="emphasis">Dijkstra’s Shortest Path Algorithm</em> is as follows:</div> <ol class="decimal" id="def-DijkstrasAlgorithm-2-2">
 <li id="def-DijkstrasAlgorithm-2-2-1"><div class="para" id="def-DijkstrasAlgorithm-2-2-1-1">INITIALIZE: Let <span class="process-math">\(R=\{v_s\}\)</span> and let <span class="process-math">\(T=V\backslash R\text{.}\)</span>  Label <span class="process-math">\(\ell_s=0\text{,}\)</span> <span class="process-math">\(\ell_i = w_{si}\)</span> if <span class="process-math">\(w_{si}\)</span> exists, <span class="process-math">\(\infty\)</span> otherwise.</div></li>
 <li id="def-DijkstrasAlgorithm-2-2-2"><div class="para" id="def-DijkstrasAlgorithm-2-2-2-1">Let <span class="process-math">\(\ell_k=\displaystyle \min_{i\in T} \ell_i\text{.}\)</span>
@@ -556,11 +583,11 @@ print(P.optimal_value())
 <li id="def-DijkstrasAlgorithm-2-2-6"><div class="para" id="def-DijkstrasAlgorithm-2-2-6-1">GOTO 2.</div></li>
 </ol> <div class="para" id="def-DijkstrasAlgorithm-2-3">When the algorithm terminates, <span class="process-math">\(\ell_j = d(v_s, v_j)\text{,}\)</span> the length of the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
 </div></article><article class="activity project-like" id="sec-weighted-10"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-weighted-10-1"><div class="para" id="sec-weighted-10-1-1">We revisit the shortest path problem from <a href="sec-weighted.html#exploration-path" class="internal" title="Exploration 6.3.1">Exploration 6.3.1</a>.</div></div>
+<div class="introduction" id="sec-weighted-10-1"><div class="para" id="sec-weighted-10-1-1">We revisit the shortest path problem from <a href="sec-weighted.html#exploration-path" class="xref" data-knowl="./knowl/xref/exploration-path.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.1">Exploration 7.3.1</a>.</div></div>
 <article class="task exercise-like" id="sec-weighted-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-weighted-10-2-1-1">Apply <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="internal" title="Definition 6.3.4: Dijkstra’s Algorithm">Definition 6.3.4</a> to the network in this problem and label each vertex <span class="process-math">\(v_i\)</span> by <span class="process-math">\(\ell_i\text{.}\)</span>
+<div class="para" id="sec-weighted-10-2-1-1">Apply <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.4: Dijkstra’s Algorithm">Definition 7.3.4</a> to the network in this problem and label each vertex <span class="process-math">\(v_i\)</span> by <span class="process-math">\(\ell_i\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-weighted-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-weighted-10-3-1-1">What do each <span class="process-math">\(\ell_i\)</span> represent in terms of travel time?</div></article><article class="task exercise-like" id="sec-weighted-10-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-weighted-10-4-1-1">Consider <span class="process-math">\(\ell_3, \ell_4\)</span> and <span class="process-math">\(w_{35}, w_{45}\text{.}\)</span> Which vertex could be on a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{?}\)</span>
@@ -569,9 +596,9 @@ print(P.optimal_value())
 </div></article><article class="task exercise-like" id="sec-weighted-10-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="sec-weighted-10-6-1-1">What is the shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{?}\)</span>
 </div></article></article><article class="activity project-like" id="sec-weighted-11"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-weighted-11-1"><div class="para" id="sec-weighted-11-1-1">We prove that in <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="internal" title="Definition 6.3.4: Dijkstra’s Algorithm">Definition 6.3.4</a>, <span class="process-math">\(\ell_i=d(v_s, v_i)\)</span> for each <span class="process-math">\(v_i\in R\)</span> via induction on <span class="process-math">\(|R|\text{.}\)</span>
+<div class="introduction" id="sec-weighted-11-1"><div class="para" id="sec-weighted-11-1-1">We prove that in <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.4: Dijkstra’s Algorithm">Definition 7.3.4</a>, <span class="process-math">\(\ell_i=d(v_s, v_i)\)</span> for each <span class="process-math">\(v_i\in R\)</span> via induction on <span class="process-math">\(|R|\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="sec-weighted-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-weighted-11-2-1-1">Verify that the statement is true when <span class="process-math">\(|R|=1\text{.}\)</span>
@@ -587,7 +614,7 @@ print(P.optimal_value())
 <div class="para" id="sec-weighted-11-8-1-1">Conclude that <span class="process-math">\(d(v_s, v_k)=\ell_k\text{.}\)</span>
 </div></article></article><div class="para" id="sec-weighted-12">We present an alternative algorithm for when weights can be negative.</div>
 <article class="definition definition-like" id="def-otheralgorithm"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-otheralgorithm-1-1">Let <span class="process-math">\(N\)</span> be a weighted network with no negative cycles.  Then an algorithm to find shortest paths is as follows:</div> <ol class="decimal" id="def-otheralgorithm-1-2">
 <li id="def-otheralgorithm-1-2-1"><div class="para" id="def-otheralgorithm-1-2-1-1">INITIALIZE: Let <span class="process-math">\(R=\{v_s\}\)</span> and let <span class="process-math">\(T=V\backslash R\text{.}\)</span>  Label <span class="process-math">\(\ell_s=0\text{,}\)</span> <span class="process-math">\(\ell_i = w_{si}\)</span> if <span class="process-math">\(w_{si}\)</span> exists, <span class="process-math">\(\infty\)</span> otherwise.</div></li>
@@ -601,7 +628,7 @@ print(P.optimal_value())
 <li id="def-otheralgorithm-1-2-6"><div class="para" id="def-otheralgorithm-1-2-6-1">GOTO 2.</div></li>
 </ol> <div class="para" id="def-otheralgorithm-1-3">When the algorithm terminates, <span class="process-math">\(\ell_j = d(v_s, v_j)\text{,}\)</span> the length of the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
 </div></article><article class="exploration project-like" id="exploration-shipping"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.3.6</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="exploration-shipping-1"><div class="para" id="exploration-shipping-1-1">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs (denoted <span class="process-math">\((c_{ij}, w_{ij})\)</span>), and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
 </div></div>
@@ -614,7 +641,7 @@ print(P.optimal_value())
 </ol></article><article class="task exercise-like" id="exploration-shipping-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="exploration-shipping-3-1-1">Find a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
 </div></article><article class="task exercise-like" id="exploration-shipping-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-shipping-4-1-1">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="internal" title="Definition 6.2.3: Max Flow Algorithm">Definition 6.2.3</a>.</div></article><article class="task exercise-like" id="exploration-shipping-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-shipping-4-1-1">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.3: Max Flow Algorithm">Definition 7.2.3</a>.</div></article><article class="task exercise-like" id="exploration-shipping-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="exploration-shipping-5-1-1">Decrease capacities of any used edges by <span class="process-math">\(x_{ij}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="exploration-shipping-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="exploration-shipping-6-1-1">Repeat (a)-(c) until we have a flow of 10.</div></article><article class="task exercise-like" id="exploration-shipping-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
@@ -624,9 +651,9 @@ print(P.optimal_value())
 <li id="exploration-shipping-8-1-2-2"><div class="para" id="exploration-shipping-8-1-2-2-1">The original path forced us into poor choices of future paths.</div></li>
 <li id="exploration-shipping-8-1-2-3"><div class="para" id="exploration-shipping-8-1-2-3-1">There was no mechanism to backtrack or adjust previous choices.</div></li>
 </ol></article></article><article class="activity project-like" id="sec-weighted-15"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.7</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-weighted-15-1"><div class="para" id="sec-weighted-15-1-1">We model the shipping problem in <a href="sec-weighted.html#exploration-shipping" class="internal" title="Exploration 6.3.6">Exploration 6.3.6</a> as a linear optimization problem.  Let <span class="process-math">\(x_{ij}\)</span> denote the quantity in tons of goods shipped from <span class="process-math">\(v_i\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
+<div class="introduction" id="sec-weighted-15-1"><div class="para" id="sec-weighted-15-1-1">We model the shipping problem in <a href="sec-weighted.html#exploration-shipping" class="xref" data-knowl="./knowl/xref/exploration-shipping.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.6">Exploration 7.3.6</a> as a linear optimization problem.  Let <span class="process-math">\(x_{ij}\)</span> denote the quantity in tons of goods shipped from <span class="process-math">\(v_i\)</span> to <span class="process-math">\(v_j\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="sec-weighted-15-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-weighted-15-2-1-1">What is the objective function of this problem?</div> <ol class="upper-alpha cols2" id="sec-weighted-15-2-1-2">
@@ -658,7 +685,7 @@ print(P.optimal_value())
 <li id="sec-weighted-15-5-1-2-5"><div class="para" id="sec-weighted-15-5-1-2-5-1"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}c_{0j}=10\text{.}\)</span></div></li>
 <li id="sec-weighted-15-5-1-2-6"><div class="para" id="sec-weighted-15-5-1-2-6-1"><span class="process-math">\(\displaystyle \sum_{j}x_{0j}w_{0j}=10\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="sec-weighted-15-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-weighted-15-6-1-1">Write out the linear optimization problem modeling <a href="sec-weighted.html#exploration-shipping" class="internal" title="Exploration 6.3.6">Exploration 6.3.6</a> and solve it.</div> <pre id="sec-weighted-15-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para" id="sec-weighted-15-6-1-1">Write out the linear optimization problem modeling <a href="sec-weighted.html#exploration-shipping" class="xref" data-knowl="./knowl/xref/exploration-shipping.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.6">Exploration 7.3.6</a> and solve it.</div> <pre id="sec-weighted-15-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
 c = (FIXME)
@@ -671,18 +698,18 @@ P
 </script></pre> <pre id="sec-weighted-15-6-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
 </script></pre></article></article><article class="activity project-like" id="sec-weighted-16"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.8</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-weighted-16-1"><div class="para" id="sec-weighted-16-1-1">We return to <a href="sec-weighted.html#exploration-shipping" class="internal" title="Exploration 6.3.6">Exploration 6.3.6</a> with an adjustment to the procedure there to enable adjusting previously chosen paths.</div></div>
+<div class="introduction" id="sec-weighted-16-1"><div class="para" id="sec-weighted-16-1-1">We return to <a href="sec-weighted.html#exploration-shipping" class="xref" data-knowl="./knowl/xref/exploration-shipping.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.3.6">Exploration 7.3.6</a> with an adjustment to the procedure there to enable adjusting previously chosen paths.</div></div>
 <article class="task exercise-like" id="sec-weighted-16-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-weighted-16-2-1-1">Once again, find the shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{,}\)</span> and use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="internal" title="Definition 6.2.3: Max Flow Algorithm">Definition 6.2.3</a>.</div></article><article class="task exercise-like" id="sec-weighted-16-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-weighted-16-2-1-1">Once again, find the shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{,}\)</span> and use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.3: Max Flow Algorithm">Definition 7.2.3</a>.</div></article><article class="task exercise-like" id="sec-weighted-16-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-weighted-16-3-1-1">Now in addition to decreasing the  capacities of used edges by <span class="process-math">\(x_{ij}\text{,}\)</span> add a backwards edge <span class="process-math">\(ji\)</span> with capacity <span class="process-math">\(x_{ij}\)</span> and negative weight <span class="process-math">\(-w_{ij}\text{.}\)</span>
 </div> <div class="para" id="sec-weighted-16-3-1-2">Pick any path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> that traverses a backwards negative edge. What does shipping along this path represent in terms of determining a new shipping procedure.</div> <div class="para" id="sec-weighted-16-3-1-3">Test your ideas out on a few different paths traversing negative edges.</div></article><article class="task exercise-like" id="sec-weighted-16-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-weighted-16-4-1-1">Find the shortest path along this adjusted graph and treat it as an <span class="process-math">\(\alpha\)</span>-path.</div></article><article class="task exercise-like" id="sec-weighted-16-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-weighted-16-5-1-1">What does this second chosen shortest path represent in terms of shipping goods?</div></article><article class="task exercise-like" id="sec-weighted-16-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="sec-weighted-16-6-1-1">Have you now achieved a minimal cost flow shipping 10 tons of goods?</div></article></article><div class="para" id="sec-weighted-17">We now formalize this idea of adjusting previous choices to an algorithm:</div>
 <article class="definition definition-like" id="def-mincostflowalgorithm"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Minimum Cost Flow Algorithm.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Minimum Cost Flow Algorithm.</span>
 </h3> <div class="para" id="def-mincostflowalgorithm-2-1">The steps for the <em class="emphasis">Minimum Cost Flow Algorithm</em> are as follows:</div> <ol class="decimal" id="def-mincostflowalgorithm-2-2">
 <li id="def-mincostflowalgorithm-2-2-1"><div class="para" id="def-mincostflowalgorithm-2-2-1-1">INITIALIZE: Let <span class="process-math">\(N=(V, E)\)</span> be a weighted capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{,}\)</span> with no edges going into the source and no edges coming out of the sink.  We start with the zero flow <span class="process-math">\(x_{ij}=0\)</span> for each edge <span class="process-math">\((v_i, v_j)\text{.}\)</span>  Let <span class="process-math">\(F\)</span> be the desired total flow.</div></li>
 <li id="def-mincostflowalgorithm-2-2-2"><div class="para" id="def-mincostflowalgorithm-2-2-2-1">If <span class="process-math">\(\displaystyle \varphi(v_d)=\sum_{i} x_{id}=F\text{,}\)</span> STOP, we have reached a total flow of <span class="process-math">\(F\text{.}\)</span>
