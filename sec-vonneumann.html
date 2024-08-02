@@ -118,15 +118,6 @@ sagecell.makeSagecell({
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 <style>
-#thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
-#thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
-#thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-section-convexity-25-4-1-2 { counter-set: sec-section-convexity-25-4-1-2 0; }
-#sec-section-convexity-25-4-1-2 > li::marker { content: ""counter(sec-section-convexity-25-4-1-2,upper-alpha)"."; }
-#sec-section-convexity-25-4-1-2 > li { counter-increment: sec-section-convexity-25-4-1-2; }
-#sec-section-convexity-25-5-1-2 { counter-set: sec-section-convexity-25-5-1-2 0; }
-#sec-section-convexity-25-5-1-2 > li::marker { content: ""counter(sec-section-convexity-25-5-1-2,upper-alpha)"."; }
-#sec-section-convexity-25-5-1-2 > li { counter-increment: sec-section-convexity-25-5-1-2; }
 #activity-maxslack-2-1-2 { counter-set: activity-maxslack-2-1-2 0; }
 #activity-maxslack-2-1-2 > li::marker { content: ""counter(activity-maxslack-2-1-2,upper-alpha)"."; }
 #activity-maxslack-2-1-2 > li { counter-increment: activity-maxslack-2-1-2; }
@@ -360,121 +351,109 @@ true);
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometric Linear Optimization</span></a></div>
+<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">1</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-convexity.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Problems for Chapter 1</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">1.6</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
+<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">2</span> <span class="title">Noncanonical Problems</span></a></div>
 <ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexmin.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Cycling</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Using Sage</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Problems for Chapter 2</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">3</span> <span class="title">Noncanonical Problems</span></a></div>
+<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">3</span> <span class="title">Duality</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-constrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Variables</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">4</span> <span class="title">Zero-Sum Games</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Min-Max Games</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">4.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Games of Chance</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">5</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">5.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Transportation Algorithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">7</span> <span class="title">Network Flows</span></a></div>
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">6</span> <span class="title">Network Flows</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Max Flow-Min Cut AlgorithmsAlgorithms for Max Flow and Min Cut</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Weighted Graphs</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Problems for Chapter 7</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
+<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">7</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">7.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Problems for Chapter 7</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-vonneumann"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.2</span><span class="space"> </span><span class="title">VonNeumann Minimax Theorem</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">VonNeumann Minimax Theorem</span>
 </h2>
 <article class="activity project-like" id="sec-vonneumann-2"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-vonneumann-2-1">
 <div class="para" id="sec-vonneumann-2-1-1">Let <span class="process-math">\(A\)</span> be a payoff matrix and <span class="process-math">\(\p, \q\)</span> represent the strategies of the row and column players respectively, with feasible regions <span class="process-math">\(F_\p, F_\q\text{.}\)</span>
@@ -494,7 +473,7 @@ true);
 <li id="sec-vonneumann-2-3-1-2-3"><div class="para" id="sec-vonneumann-2-3-1-2-3-1"><span class="process-math">\(\displaystyle \displaystyle \min_{\p \in F_{\p}} \sum_{j=1}^m \p^\top A^{(j)}\q_j\)</span></div></li>
 <li id="sec-vonneumann-2-3-1-2-4"><div class="para" id="sec-vonneumann-2-3-1-2-4-1"><span class="process-math">\(\displaystyle \displaystyle \max_{\p \in F_{\p}} \sum_{ij=1}^m \p^\top A^{(j)}\q_j\)</span></div></li>
 </ol></article></article><article class="activity project-like" id="sec-vonneumann-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-vonneumann-3-1">
 <div class="para" id="sec-vonneumann-3-1-1">We prove an interesting way to think of the optimal strategies.</div> <div class="para" id="sec-vonneumann-3-1-2">Let <span class="process-math">\(\q'\)</span> denote a fixed column strategy, and let <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}A_{(i)}\q'\text{,}\)</span> and let <span class="process-math">\(u=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q'\)</span>
@@ -510,7 +489,7 @@ true);
 <div class="para" id="sec-vonneumann-3-5-1-1">Why must <span class="process-math">\(v\leq u\text{?}\)</span>
 </div></article><article class="task exercise-like" id="sec-vonneumann-3-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="sec-vonneumann-3-6-1-1">What have we proven?</div></article></article><article class="activity project-like" id="sec-vonneumann-4"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-vonneumann-4-1">
 <div class="para" id="sec-vonneumann-4-1-1">We now prove a characterization theorem about the optimal solutions for both the row and column player.</div> <div class="para" id="sec-vonneumann-4-1-2">Suppose we have a payoff matrix <span class="process-math">\(A\)</span> where every entry is positive.  In other words, after each round Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Rowan’s strategy here is to take Colleen for as much money as he can and Colleen’s strategy is to minimize her losses.</div> <div class="para" id="sec-vonneumann-4-1-3">(We’ll ignore the obvious question of why Colleen would be willing to play this game.)</div>
@@ -607,13 +586,13 @@ true);
 <div class="para" id="sec-vonneumann-4-8-1-1">Repeat tasks (b)-(c) for Rowan’s strategy, where <span class="process-math">\(\tilde{p}_i = \frac{p_i}{\ec{u}}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-vonneumann-4-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="sec-vonneumann-4-9-1-1">Compare Rowan and Colleen’s problems with the <span class="process-math">\(\tilde{p}_i, \tilde{q}_j\text{.}\)</span>  Show that these problems are dual problems to each other.  Which is the primal max and which is the dual min?</div></article><article class="task exercise-like" id="sec-vonneumann-4-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="sec-vonneumann-4-10-1-1">What does the Strong Duality Theorem <a href="sec-section-dualitytheory.html#thm-strongduality" class="xref" data-knowl="./knowl/xref/thm-strongduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.7: The Strong Duality Theorem">Theorem 4.2.7</a> say about the optimal solutions to both problems?  What in turn, does that say about <span class="process-math">\(\tilde{u}, \tilde{v}\text{?}\)</span>
+<div class="para" id="sec-vonneumann-4-10-1-1">What does the Strong Duality Theorem <a href="sec-section-dualitytheory.html#thm-strongduality" class="internal" title="Theorem 3.2.7: The Strong Duality Theorem">Theorem 3.2.7</a> say about the optimal solutions to both problems?  What in turn, does that say about <span class="process-math">\(\tilde{u}, \tilde{v}\text{?}\)</span>
 </div></article><article class="task exercise-like" id="sec-vonneumann-4-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
 <div class="para" id="sec-vonneumann-4-11-1-1">We’re still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at Rowan.  To balance things out, Rowan has to pay Colleen $5 after each round.  Would this fact change anything about Rowan and Collen’s strategies?</div> <div class="para" id="sec-vonneumann-4-11-1-2">Say it was $<span class="process-math">\(r\text{,}\)</span> would that make any difference?</div></article><article class="task exercise-like" id="sec-vonneumann-4-12"><h4 class="heading"><span class="codenumber">(k)</span></h4>
 <div class="para" id="sec-vonneumann-4-12-1-1">Let <span class="process-math">\(\p, \q\)</span> denote any strategy for Rowan and Colleen.  Let <span class="process-math">\(E\)</span> denote a <span class="process-math">\(n\times m\)</span> matrix with all 1’s. Show that <span class="process-math">\(\p^\top(rE)\q=r\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-vonneumann-4-13"><h4 class="heading"><span class="codenumber">(l)</span></h4>
 <div class="para" id="sec-vonneumann-4-13-1-1">Show that for fixed strategies <span class="process-math">\(\p', \q'\)</span> and not fixed strategies <span class="process-math">\(\p, \q\)</span> that <span class="process-math">\(\p^\top (A+rE)q'\)</span> is maximized when <span class="process-math">\(\p^\top A \q'\)</span> is maximized and <span class="process-math">\(\p'^\top (A+rE)q\)</span> is minimized when <span class="process-math">\(\p'^\top A \q\)</span> is minimized.</div></article></article><article class="theorem theorem-like" id="thm-vonneumann"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">VonNeumann’s Minimax Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">VonNeumann’s Minimax Theorem.</span>
 </h3>
 <div class="para" id="thm-vonneumann-2-1">Let <span class="process-math">\(A\)</span> be a payoff matrix and <span class="process-math">\(\p, \q\)</span> represent the strategies of the row and column players respectively, with feasible regions <span class="process-math">\(F_\p, F_\q\text{.}\)</span> Also let <span class="process-math">\(A_{(i)}\)</span> denote the <span class="process-math">\(i\)</span>th row of a matrix <span class="process-math">\(A\)</span> and let <span class="process-math">\(A^{(j)}\)</span> denote the <span class="process-math">\(j\)</span>th column of <span class="process-math">\(A\text{.}\)</span>
 </div> <div class="para logical" id="thm-vonneumann-2-2">
@@ -624,7 +603,7 @@ true);
 \end{equation*}
 </div>
 </div></article><article class="activity project-like" id="sec-vonneumann-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-vonneumann-6-1"><div class="para" id="sec-vonneumann-6-1-1">Consider the payoff matrix <span class="process-math">\(A=\begin{bmatrix} 1 \amp 0 \\ 1\amp 2 \end{bmatrix}\)</span>
 </div></div>
@@ -632,8 +611,8 @@ true);
 <div class="para" id="sec-vonneumann-6-2-1-1">Find the optimal strategy <span class="process-math">\(\q'\)</span> for Colleen in this game, and the game value <span class="process-math">\(v\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-vonneumann-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-vonneumann-6-3-1-1">Find a strategy <span class="process-math">\(\p\)</span> for Rowan so that <span class="process-math">\(\p^TA\q'=v\text{,}\)</span> but <span class="process-math">\(\p\)</span> is not the optimal strategy.</div></article><article class="task exercise-like" id="sec-vonneumann-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-vonneumann-6-4-1-1">What does this say about <a href="sec-vonneumann.html#thm-vonneumann" class="xref" data-knowl="./knowl/xref/thm-vonneumann.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.2.1: VonNeumann’s Minimax Theorem">Theorem 5.2.1</a>?</div></article></article><article class="activity project-like" id="sec-vonneumann-7"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
+<div class="para" id="sec-vonneumann-6-4-1-1">What does this say about <a href="sec-vonneumann.html#thm-vonneumann" class="internal" title="Theorem 4.2.1: VonNeumann’s Minimax Theorem">Theorem 4.2.1</a>?</div></article></article><article class="activity project-like" id="sec-vonneumann-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-vonneumann-7-1"><div class="para" id="sec-vonneumann-7-1-1">In a simplified game of battleship played on a two <span class="process-math">\(2\times 3\)</span> board, Colleen selects two consecutive squares on the board to place her ship.  Rowan then picks one of six squares to fire at.  If he hits, he gets a point, otherwise Colleen gets a point.</div></div>
 <article class="task exercise-like" id="sec-vonneumann-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>

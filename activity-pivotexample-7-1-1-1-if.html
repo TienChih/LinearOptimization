@@ -93,42 +93,36 @@ window.MathJax = {
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/doenet-standalone-test@0.6.0/dist/style.css">
 <script onload="onLoad()" type="module" src="https://cdn.jsdelivr.net/npm/doenet-standalone-test@0.6.0/dist/doenet-standalone.min.js"></script><script>function onLoad() {window.renderDoenetToContainer(document.querySelector(".doenetml-applet"))}</script>
 </head>
-<body class="ptx-content ignore-math" id="changeme"><div style="width:600px; height:600px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div class="doenetml-applet">
+<body class="ptx-content ignore-math" id="changeme"><div style="width:600px; height:615px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div class="doenetml-applet">
 <div class="doenetml-loading" style="text-align:center">
 <p><img src="https://www.doenet.org/Doenet_Logo_Frontpage.png"></p>
 <p>Waiting on the page to load...</p>
 </div>
 <script type="text/doenetml">
-              
               <graph xmin="-2" ymin="-2" xmax="15" ymax="15">
-              <polygon vertices="(0,0) (8, 4) (10,10) (2,14)" filled draggable="false" styleNumber="4"/>
-              <point name="u" styleNumber="5">
-                  (0,0)
-                <constraints>
-                  <attractTo threshold="1"><point>(0,0)</point></attractTo>
-                  <attractTo threshold="1"><point>(8,4)</point></attractTo>
-                  <attractTo threshold="1"><point>(10,10)</point></attractTo>
-                  <attractTo threshold="1"><point>(2, 14)</point></attractTo>
-                </constraints>
-              </point>
-              <m draggable="false" anchor="($u.x+1,$u.y+1)">
-                  f$u = = <number>$c1*$u.x+$c2*$u.y</number>
-                </m>
-            
-              <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
-            </graph>
-            <p>
-              <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
-            </p>
-            
-            
-            <answer>
-              <award>
-                <when>
-                  $u = (10, 10) and $c1=5 and $c2=-1 
-                </when>
-              </award>
-            </answer>
+  <polygon vertices="(0,0) (8, 4) (10,10) (2,14)" filled draggable="false" styleNumber="4"/>
+  <point name="u" styleNumber="5">
+      (0,0)
+    <constraints>
+      <attractTo threshold="1"><point>(0,0)</point></attractTo>
+      <attractTo threshold="1"><point>(8,4)</point></attractTo>
+      <attractTo threshold="1"><point>(10,10)</point></attractTo>
+      <attractTo threshold="1"><point>(2, 14)</point></attractTo>
+    </constraints>
+  </point>
+  <m draggable="false" anchor="($u.x+1,$u.y+1)">
+      f$u = <number>$c1*$u.x+$c2*$u.y</number>
+    </m>
+
+  <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
+</graph>
+<p>
+  <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
+</p>
+<p>
+  <m>f($u.x, $u.y)= <number>$c1*$u.x+$c2*$u.y</number></m>.
+</p>
+
             </script>
 </div></div></body>
 </html>
