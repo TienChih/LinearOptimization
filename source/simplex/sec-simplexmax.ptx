@@ -3,391 +3,520 @@
 <section xml:id="sec-simplexmax" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Simplex Algorithm for Canonical Maximization</title>
 
-
-  <activity xml:id="activity-tableaufeasible">
-    <task>
-      <p>
-        Consider the following  tableau:
-        
-      </p>
-      <p>
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              <m>x_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>t_3</m>
-            </cell>
-            <cell bottom="medium">
-              <m>t_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_4</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>2</m>
-            </cell>
-            <cell>
-              <m>4</m>
-            </cell>
-            <cell>
-              <m>6</m>
-            </cell>
-            <cell right="medium">
-              <m>5</m>
-            </cell>
-            <cell right="medium">
-              <m>3</m>
-            </cell>
-            <cell halign="left">
-              <m>=-x_4</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>-3</m>
-            </cell>
-            <cell>
-              <m>0</m>
-            </cell>
-            <cell>
-              <m>\frac{2}{3}</m>
-            </cell>
-            <cell right="medium">
-              <m>-2</m>
-            </cell>
-            <cell right="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-              <m>=-x_2</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>\frac{17}{4}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>4</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>\frac{2}{3}</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>-2</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_3</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>5</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>3</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>-244</m>
-            </cell>
-            <cell halign="left">
-              <m>=f</m>
-            </cell>
-          </row>
-        </tabular>
-      </p>
-      <p>
-        Note that each <m>x_1, t_3, t_1, x_4=0</m> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?
-      </p>
-      
-    </task>
-    <task>
-      <statement>
-        <p>
-          Which of the following is a sufficient condition for a Tucker Tableau to correspond to a feasible solution?
-        </p>
-        <ol marker="A." cols="2">
-          <li>
-            <p>
-              Some of the <m>c_j\leq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              All of the <m>c_j\leq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Some of the <m>c_j\geq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              All of the <m>c_j\geq 0</m>.
-            </p>
-          </li>
-  
-          <li>
-            <p>
-              Some of the <m>b_i\leq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              All of the <m>b_i\leq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Some of the <m>b_i\geq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              All of the <m>b_i\geq 0</m>.
-            </p>
-          </li>
-        </ol>
-      </statement>
-        
-    </task>
-
-  </activity>
-
-  <activity xml:id="activity-tableaubounded">
-    <introduction>
-      <p>
-        Consider the following  tableau:
-        
-      </p>
-      <p>
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              <m>x_3</m>
-            </cell>
-            <cell bottom="medium">
-              <m>t_3</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>t_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>-4</m>
-            </cell>
-            <cell>
-              <m>25</m>
-            </cell>
-            <cell>
-              <m>-3</m>
-            </cell>
-            <cell right="medium">
-              <m>2</m>
-            </cell>
-            <cell right="medium">
-              <m>18</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_2</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>-1</m>
-            </cell>
-            <cell>
-              <m>2</m>
-            </cell>
-            <cell>
-              <m>2</m>
-            </cell>
-            <cell right="medium">
-              <m>-1</m>
-            </cell>
-            <cell right="medium">
-              <m>22</m>
-            </cell>
-            <cell halign="left">
-              <m>=-x_1</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>-2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>10</m>
-            </cell>
-            <cell halign="left">
-              <m>=-x_4</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>1</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>-156</m>
-            </cell>
-            <cell halign="left">
-              <m>=f</m>
-            </cell>
-          </row>
-        </tabular>
-      </p>
-      <p>
-        Note that this tableau records a basic solution where
-         <m>x_3, t_3, x_2, t_1=0</m>.  
-      </p>
-      
-    </introduction>
-    <task>
-      <statement>
-        <p>
-          Why is the basic solution feasible?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Which of the following <m>x_3, t_3, t_1, x_2</m> could we increase from zero to increase our objective function value?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          If we increase <m>t_1</m> to 5, are all our inequalities satisfied?  What about 10? 100?
-        </p>
-      </statement>
-    </task>  
-
-    <task>
-      <statement>
-        <p>
-          If we increase <m>x_3</m> to 5, are all our inequalities satisfied?  What about 10? 100?
-        </p>
-      </statement>
-    </task>  
-
-    <task>
-      <statement>
-        <p>
-          What is the largest value we could increase <m>t_1</m> while satisfying our 3 inequalities?  What about <m>x_3</m>?
-        </p>
-      </statement>
-    </task>  
-
-    <task>
-      <statement>
-        <p>
-          Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.
-        </p>
-        <ol marker="A." cols="2">
-          <li>
-            <p>
-              All of the <m>a_{ij}\leq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column.
-            </p>
-          </li>
-          <li>
-            <p>
-              All of the <m>c_j\leq 0</m>.
-            </p>
-          </li>
-  
-          <li>
-            <p>
-              All of the <m>b_i\leq 0</m>.
-            </p>
-          </li>
-          
-        </ol>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
+  <subsection xml:id="subsec-basicfeasible">
+    <title>Basic Feasible Maximization</title>
+    <activity xml:id="activity-tableaufeasible">
+      <task>
         <p>
           Consider the following  tableau:
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_4</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell>
+                <m>4</m>
+              </cell>
+              <cell>
+                <m>6</m>
+              </cell>
+              <cell right="medium">
+                <m>5</m>
+              </cell>
+              <cell right="medium">
+                <m>3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_4</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>\frac{2}{3}</m>
+              </cell>
+              <cell right="medium">
+                <m>-2</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>\frac{17}{4}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>\frac{2}{3}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>5</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-244</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Note that each <m>x_1, t_3, t_1, x_4=0</m> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?
+        </p>
+        
+      </task>
+      <task>
+        <statement>
+          <p>
+            Which of the following is a sufficient condition for a Tucker Tableau to correspond to a feasible solution?
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                Some of the <m>c_j\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                All of the <m>c_j\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Some of the <m>c_j\geq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                All of the <m>c_j\geq 0</m>.
+              </p>
+            </li>
+    
+            <li>
+              <p>
+                Some of the <m>b_i\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                All of the <m>b_i\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Some of the <m>b_i\geq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                All of the <m>b_i\geq 0</m>.
+              </p>
+            </li>
+          </ol>
+        </statement>
+          
+      </task>
+  
+    </activity>
+  
+    <activity xml:id="activity-tableaubounded">
+      <introduction>
+        <p>
+          Consider the following  tableau:
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-4</m>
+              </cell>
+              <cell>
+                <m>25</m>
+              </cell>
+              <cell>
+                <m>-3</m>
+              </cell>
+              <cell right="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>18</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell>
+                <m>2</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>22</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>10</m>
+              </cell>
+              <cell halign="left">
+                <m>=-x_4</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-156</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          Note that this tableau records a basic solution where
+           <m>x_3, t_3, x_2, t_1=0</m>.  
+        </p>
+        
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Why is the basic solution feasible?
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          <p>
+            Which of the following <m>x_3, t_3, t_1, x_2</m> could we increase from zero to increase our objective function value?
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          <p>
+            If we increase <m>t_1</m> to 5, are all our inequalities satisfied?  What about 10? 100?
+          </p>
+        </statement>
+      </task>  
+  
+      <task>
+        <statement>
+          <p>
+            If we increase <m>x_3</m> to 5, are all our inequalities satisfied?  What about 10? 100?
+          </p>
+        </statement>
+      </task>  
+  
+      <task>
+        <statement>
+          <p>
+            What is the largest value we could increase <m>t_1</m> while satisfying our 3 inequalities?  What about <m>x_3</m>?
+          </p>
+        </statement>
+      </task>  
+  
+      <task>
+        <statement>
+          <p>
+            Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded feasible region.
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                All of the <m>a_{ij}\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row.
+              </p>
+            </li>
+            <li>
+              <p>
+                There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column.
+              </p>
+            </li>
+            <li>
+              <p>
+                All of the <m>c_j\leq 0</m>.
+              </p>
+            </li>
+    
+            <li>
+              <p>
+                All of the <m>b_i\leq 0</m>.
+              </p>
+            </li>
+            
+          </ol>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          <p>
+            Consider the following  tableau:
+          </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>12</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>-3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>10</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>-4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            Our previous discussion leads us to believe that <m>x_1</m> may be increased as much as we please, and our two inequalities will remain satisfied.  Yet consider a sketch of the region and function:
+  
+          </p>
+          <p>
+            <interactive  platform="doenetml" width="100%" >
+              <slate surface="doenetml">
+                <xi:include parse="text" href="doenet/simplex-multipleintersections.xml"/>
+              </slate>
+                      </interactive>
+          </p>
+          <p>
+            It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          <p>
+            Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                All of the <m>a_{ij}\leq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i>0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i \lt 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j>0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j\lt 0</m>.
+              </p>
+            </li>
+            
+          </ol>
+        </statement>
+      </task>
+  
+    </activity>
+  
+    <activity>
+      <introduction>
+        <p>
+          Consider the canonical maximization problem and basic solution encoded by the following tableau:
+          
         </p>
         <p>
           <tabular halign="center">
@@ -410,13 +539,13 @@
               <cell halign="left" right="medium">
               </cell>
               <cell>
-                <m>-2</m>
-              </cell>
-              <cell right="medium">
                 <m>1</m>
               </cell>
               <cell right="medium">
-                <m>12</m>
+                <m>4</m>
+              </cell>
+              <cell right="medium">
+                <m>26</m>
               </cell>
               <cell halign="left">
                 <m>=-t_1</m>
@@ -425,14 +554,14 @@
             <row>
               <cell halign="left" right="medium">
               </cell>
-              <cell bottom="medium">
-                <m>-3</m>
+              <cell>
+                <m>2</m>
               </cell>
-              <cell right="medium" bottom="medium">
-                <m>4</m>
+              <cell right="medium">
+                <m>3</m>
               </cell>
-              <cell right="medium" bottom="medium">
-                <m>10</m>
+              <cell right="medium">
+                <m>22</m>
               </cell>
               <cell halign="left">
                 <m>=-t_2</m>
@@ -442,10 +571,26 @@
               <cell halign="left" right="medium">
               </cell>
               <cell bottom="medium">
-                <m>-4</m>
+                <m>4</m>
               </cell>
               <cell right="medium" bottom="medium">
                 <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>24</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_3</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>8</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>7</m>
               </cell>
               <cell right="medium" bottom="medium">
                 <m>0</m>
@@ -456,235 +601,1147 @@
             </row>
           </tabular>
         </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Let's say we wanted to increase <m>x_2</m> from 0.  What is the largest we could increase <m>x_2</m> to while satisfying all 3 inequalities?
+          </p>
+          
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Consider a sketch of our feasible region:
+            
+            <image xml:id="whichpivot">
+              <description>The feasible region for a canonical maximization problem.</description>
+              <latex-image>
+                \begin{tikzpicture}[scale=0.2] 
+                \draw[fill, blue, opacity=0.4] (0,0) -- (0,6.5) -- (2, 6) -- (5,4) -- (6,0) -- (0,0);
+                \draw[very thick,->] (-1.5,0) -- (30,0);
+                \draw[very thick,->] (0,-1.5) -- (0,30);
+                \draw[black, thick] (0,0) -- (0,6.5) -- (2,6) -- (5,4) -- (6,0)-- (0,0);         
+                \draw[red, dashed, thick] (-1,8) --node[above, sloped, pos= 0.7]{\tiny $2x+3y=22$} (12.5, -1);          
+                \draw[purple, dashed, thick] (-1,6.75) --node[above, sloped, pos= 0.5]{\tiny $x+4y=26$} (30, -1);
+                \draw[orange, dashed, thick] (-1,28) --node[above, sloped, pos= 0.3]{\tiny $4x+y=24$} (6.25, -1);
+                \draw[ fill] (0,0) node[below left]{\tiny $(0,0)$} circle (6pt); 
+                \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
+                \draw[ fill] (0,22/3) node[ left]{\tiny $(0,22/3)$} circle (6pt); 
+                \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
+                \draw[ fill] (0,24) node[ left]{\tiny $(0,24)$} circle (6pt);  
+                \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
+                \draw[ fill] (11,0) node[ below]{\tiny $(11,0)$} circle (6pt); 
+                \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
+                \draw[ fill] (26,0) node[ below]{\tiny $(26,0)$} circle (6pt);  
+            
+            \end{tikzpicture}
+      
+                </latex-image>
+            </image> 
+          </p>
+          <p>
+            We could choose to pivot <m>x_2</m> (<m>y</m> in the sketch) with either <m>t_1, t_2, t_3</m>.  Only one of these would result in a feasible solution.  Looking graphically, which is it?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What's the connection between the two above tasks?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For a canonical linear program and basic solution encoded by a Tucker tableau:
+            
+          </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_m</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>a_{11}</m>
+                </cell>
+                <cell>
+                  <m>a_{12}</m>
+                </cell>
+                <cell>
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium">
+                  <m>a_{1m}</m>
+                </cell>
+                <cell right="medium">
+                  <m>b_1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>a_{21}</m>
+                </cell>
+                <cell>
+                  <m>a_{22}</m>
+                </cell>
+                <cell>
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium">
+                  <m>a_{2m}</m>
+                </cell>
+                <cell right="medium">
+                  <m>b_2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>\vdots</m>
+                </cell>
+                <cell>
+                  <m>\vdots</m>
+                </cell>
+                <cell>
+                  <m>\ddots</m>
+                </cell>
+                <cell right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell right="medium">
+                  <m>\vdots</m>
+                </cell>
+                <cell halign="left">
+                  <m>\vdots</m>
+                </cell>
+              </row>
+              
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>a_{n1}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>a_{n2}</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>a_{nm}</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>b_n</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_n</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>c_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>c_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>\cdots</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>c_m</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>d</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+              If we pivot in column <m>j</m>, which row <m>i</m> should we choose?
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                Any row <m>i</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Any <m>i</m> as long as <m>a_{ij}>0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The row <m>i</m> where <m>\frac{b_i}{a_{ij}}</m> is minimized.
+              </p>
+            </li>
+            <li>
+              <p>
+                The row <m>i</m> where <m>\frac{c_j}{a_{ij}}</m> is minimized.
+              </p>
+            </li>
+  
+            <li>
+              <p>
+                The row <m>i</m> where <m>\frac{b_i}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The row <m>i</m> where <m>\frac{c_j}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
+              </p>
+            </li>
+            
+          </ol>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Based on the observations above, what should be the pivot entry for the following tableau?
+  
+           
+          </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>10</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>-4</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>8</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+    </activity>
+  
+    <activity>
+      <introduction>
         <p>
-          Our previous discussion leads us to believe that <m>x_1</m> may be increased as much as we please, and our two inequalities will remain satisfied.  Yet consider a sketch of the region and function:
-
+          For each of the following tableaus, determine what if any of the following are true:
+          <ul>
+            <li>
+              <p>
+                The tableau corresponds to an infeasible solution.
+              </p>
+            </li>
+            <li>
+              <p>
+                The tableau records a basic optimal solution.
+              </p>
+            </li>
+            <li>
+              <p>
+                The tableau tells us the feasible region is unbounded.
+              </p>
+            </li>
+            <li>
+              <p>
+                The tableau tells us the objective function is unbounded.
+              </p>
+            </li>
+          </ul>
+          If a tableau is feasible but not optimal, determine the legit pivot points
         </p>
-        <p>
-          <interactive  platform="doenetml" width="100%" >
-            <slate surface="doenetml">
-              &lt;graph xmin="-1" ymin="-1" xmax="8" ymax="8"&gt;
-  &lt;polygon vertices="(0,0) (0, 2.5) (100,77.5) (100,0)" filled draggable="false" styleNumber="4"/&gt;
-  &lt;point name="u" styleNumber="5"&gt;
-      (0,0)
-    &lt;constraints&gt;
-      &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,0)&lt;/point&gt;&lt;/attractTo&gt;
-      &lt;attractTo threshold="1"&gt;&lt;point&gt;(0,2.5)&lt;/point&gt;&lt;/attractTo&gt;
-    &lt;/constraints&gt;
-  &lt;/point&gt;
-  &lt;m draggable="false" anchor="($u.x+1,$u.y+1)"&gt;
-      $u
-    &lt;/m&gt;
-
-  &lt;line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/&gt; 
-&lt;/graph&gt;
-&lt;p&gt;
-  &lt;m&gt;f(x_1, x_2) =&lt;/m&gt; &lt;mathInput name="c1"/&gt; &lt;m&gt;x_1+&lt;/m&gt;&lt;mathInput name="c2"/&gt; &lt;m&gt;x_2&lt;/m&gt;.
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;m&gt;f($u.x, $u.y)= &lt;number&gt;$c1*$u.x+$c2*$u.y&lt;/number&gt;&lt;/m&gt;.
-&lt;/p&gt;
-
-&lt;answer&gt;
-  &lt;award&gt;
-    &lt;when&gt;
-      $u = (0,2.5) and $c1=-4 and $c2=1
-    &lt;/when&gt;
-  &lt;/award&gt;
-&lt;/answer&gt;
-            </slate>
-                    </interactive>
-        </p>
-        <p>
-          It turns out this system still achieves a maximum solution.  Why does this not contradict our previous work?
-        </p>
-      </statement>
-    </task>
-
-    <task>
+      </introduction>
+      <task>
+        <statement>
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-5</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+  
+      </task>
+  
+      <task>
+        <statement>
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>-3</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>5</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>5</m>
+                </cell>
+                <cell>
+                  <m>-3</m>
+                </cell>
+                <cell right="medium">
+                  <m>8</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>6</m>
+                </cell>
+                <cell>
+                  <m>-3</m>
+                </cell>
+                <cell right="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>-4</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>17</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+         
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>-4</m>
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>0</m>
+                </cell>
+                <cell>
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-34</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>-2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>-1</m>
+                </cell>
+                <cell>
+                  <m>-3</m>
+                </cell>
+                <cell right="medium">
+                  <m>8</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-5</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>9</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+         
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell>
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>6</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>4</m>
+                </cell>
+                <cell>
+                  <m>-3</m>
+                </cell>
+                <cell right="medium">
+                  <m>-3</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-54</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="right">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>0</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell right="medium">
+                  <m>8</m>
+                </cell>
+                <cell right="medium">
+                  <m>6</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="right" right="medium">
+                  
+                </cell>
+                <cell bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-23</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+    </activity>
+  
+    <p>
+      With all this, we finally may define our <em>Simplex Algorithm for Maximum Basic
+        Feasible Tableaus</em>.
+    </p>
+  
+    <definition xml:id="def-simplexcanonmaxbf">
       <statement>
         <p>
-          Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
+          The Simplex Algorithm for Maximum Basic Feasible Tableaus
         </p>
-        <ol marker="A." cols="2">
-          <li>
-            <p>
-              All of the <m>a_{ij}\leq 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i>0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i \lt 0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j>0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j\lt 0</m>.
-            </p>
-          </li>
-          
+        <ol>
+            <li>Ensure that each <m>b_i\geq 0</m>, that is that the solution is feasible. </li>
+            <li>IF every <m>c_j\leq 0</m>: STOP the current solution is optimal.  </li>
+            <li>PICK a column <m>j</m> such that <m>c_j > 0</m>.  </li>
+            <li>IF each <m>a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 </m>: STOP the objective function is unbounded. </li>
+            <li>PICK a row <m>i</m>  that minimizes <m>\left\{ b_i/a_{ij}: a_{ij} > 0 \right\}</m>.</li>
+            <li>PIVOT on <m>a_{ij}</m>. </li>
+            <li>GOTO 1.</li>
         </ol>
       </statement>
-    </task>
-
-  </activity>
-
-  <activity>
-    <introduction>
-      <p>
-        Consider the canonical maximization problem and basic solution encoded by the following tableau:
-        
-      </p>
-      <p>
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              <m>x_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>1</m>
-            </cell>
-            <cell right="medium">
-              <m>4</m>
-            </cell>
-            <cell right="medium">
-              <m>26</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_1</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>2</m>
-            </cell>
-            <cell right="medium">
-              <m>3</m>
-            </cell>
-            <cell right="medium">
-              <m>22</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_2</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>4</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>1</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>24</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_3</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>8</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>7</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=f</m>
-            </cell>
-          </row>
-        </tabular>
-      </p>
-    </introduction>
-    <task>
-      <statement>
-        <p>
-          Let's say we wanted to increase <m>x_2</m> from 0.  What is the largest we could increase <m>x_2</m> to while satisfying all 3 inequalities?
-        </p>
-        
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Consider a sketch of our feasible region:
-          
-          <image xml:id="whichpivot">
-            <description>The feasible region for a canonical maximization problem.</description>
-            <latex-image>
-              \begin{tikzpicture}[scale=0.2] 
-              \draw[fill, blue, opacity=0.4] (0,0) -- (0,6.5) -- (2, 6) -- (5,4) -- (6,0) -- (0,0);
-              \draw[very thick,->] (-1.5,0) -- (30,0);
-              \draw[very thick,->] (0,-1.5) -- (0,30);
-              \draw[black, thick] (0,0) -- (0,6.5) -- (2,6) -- (5,4) -- (6,0)-- (0,0);         
-              \draw[red, dashed, thick] (-1,8) --node[above, sloped, pos= 0.7]{\tiny $2x+3y=22$} (12.5, -1);          
-              \draw[purple, dashed, thick] (-1,6.75) --node[above, sloped, pos= 0.5]{\tiny $x+4y=26$} (30, -1);
-              \draw[orange, dashed, thick] (-1,28) --node[above, sloped, pos= 0.3]{\tiny $4x+y=24$} (6.25, -1);
-              \draw[ fill] (0,0) node[below left]{\tiny $(0,0)$} circle (6pt); 
-              \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
-              \draw[ fill] (0,22/3) node[ left]{\tiny $(0,22/3)$} circle (6pt); 
-              \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
-              \draw[ fill] (0,24) node[ left]{\tiny $(0,24)$} circle (6pt);  
-              \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
-              \draw[ fill] (11,0) node[ below]{\tiny $(11,0)$} circle (6pt); 
-              \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
-              \draw[ fill] (26,0) node[ below]{\tiny $(26,0)$} circle (6pt);  
-          
-          \end{tikzpicture}
+    </definition>
     
-              </latex-image>
-          </image> 
-        </p>
-        <p>
-          We could choose to pivot <m>x_2</m> (<m>y</m> in the sketch) with either <m>t_1, t_2, t_3</m>.  Only one of these would result in a feasible solution.  Looking graphically, which is it?
-        </p>
-      </statement>
-    </task>
-    <task>
+    <activity>
       <statement>
+  
         <p>
-          What's the connection between the two above tasks?
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          For a canonical linear program and basic solution encoded by a Tucker tableau:
-          
+          Recall the canonical tableau
         </p>
         <p>
           <tabular halign="center">
@@ -822,1827 +1879,531 @@
           </tabular>
         </p>
         <p>
-            If we pivot in column <m>j</m>, which row <m>i</m> should we choose?
-        </p>
-        <ol marker="A." cols="2">
-          <li>
-            <p>
-              Any row <m>i</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Any <m>i</m> as long as <m>a_{ij}>0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The row <m>i</m> where <m>\frac{b_i}{a_{ij}}</m> is minimized.
-            </p>
-          </li>
-          <li>
-            <p>
-              The row <m>i</m> where <m>\frac{c_j}{a_{ij}}</m> is minimized.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              The row <m>i</m> where <m>\frac{b_i}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              The row <m>i</m> where <m>\frac{c_j}{a_{ij}}</m> is minimized of of the rows where <m>a_{ij}>0</m>.
-            </p>
-          </li>
-          
-        </ol>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Based on the observations above, what should be the pivot entry for the following tableau?
-
-         
-        </p>
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="left">
-              </cell>
-              <cell bottom="medium">
-                <m>x_1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>3</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell right="medium">
-                <m>10</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_1</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>-4</m>
-              </cell>
-              <cell right="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium">
-                <m>8</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_2</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>5</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_3</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
+          Suppose that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m> 
         </p>
       </statement>
-    </task>
-  </activity>
-
-  <activity>
-    <introduction>
-      <p>
-        For each of the following tableaus, determine what if any of the following are true:
-        <ul>
-          <li>
-            <p>
-              The tableau corresponds to an infeasible solution.
-            </p>
-          </li>
-          <li>
-            <p>
-              The tableau records a basic optimal solution.
-            </p>
-          </li>
-          <li>
-            <p>
-              The tableau tells us the feasible region is unbounded.
-            </p>
-          </li>
-          <li>
-            <p>
-              The tableau tells us the objective function is unbounded.
-            </p>
-          </li>
-        </ul>
-        If a tableau is feasible but not optimal, determine the legit pivot points
-      </p>
-    </introduction>
-    <task>
-      <statement>
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>2</m>
-              </cell>
-              <cell>
-                <m>2</m>
-              </cell>
-              <cell right="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>4</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-5</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-
-    </task>
-
-    <task>
-      <statement>
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>-3</m>
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium">
-                <m>5</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>5</m>
-              </cell>
-              <cell>
-                <m>-3</m>
-              </cell>
-              <cell right="medium">
-                <m>8</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>4</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>3</m>
-              </cell>
-              <cell>
-                <m>4</m>
-              </cell>
-              <cell right="medium">
-                <m>-1</m>
-              </cell>
-              <cell right="medium">
-                <m>2</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>6</m>
-              </cell>
-              <cell>
-                <m>-3</m>
-              </cell>
-              <cell right="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium">
-                <m>1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>4</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>-4</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>17</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-       
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>-4</m>
-              </cell>
-              <cell>
-                <m>3</m>
-              </cell>
-              <cell right="medium">
-                <m>-2</m>
-              </cell>
-              <cell right="medium">
-                <m>2</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>0</m>
-              </cell>
-              <cell>
-                <m>-1</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell right="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>4</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>5</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-34</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell>
-                <m>-1</m>
-              </cell>
-              <cell right="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium">
-                <m>-2</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>-1</m>
-              </cell>
-              <cell>
-                <m>-3</m>
-              </cell>
-              <cell right="medium">
-                <m>8</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-5</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>9</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-       
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>3</m>
-              </cell>
-              <cell>
-                <m>-2</m>
-              </cell>
-              <cell right="medium">
-                <m>6</m>
-              </cell>
-              <cell right="medium">
-                <m>3</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>4</m>
-              </cell>
-              <cell>
-                <m>-3</m>
-              </cell>
-              <cell right="medium">
-                <m>-3</m>
-              </cell>
-              <cell right="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>5</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-4</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-54</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>?</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>0</m>
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell>
-                <m>2</m>
-              </cell>
-              <cell>
-                <m>2</m>
-              </cell>
-              <cell right="medium">
-                <m>8</m>
-              </cell>
-              <cell right="medium">
-                <m>6</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell halign="left">
-                <m>=-?</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                
-              </cell>
-              <cell bottom="medium">
-                <m>5</m>
-              </cell>
-              <cell bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-4</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-23</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-  </activity>
-
-  <p>
-    With all this, we finally may define our <em>Simplex Algorithm for Maximum Basic
-      Feasible Tableaus</em>.
-  </p>
-
-  <definition xml:id="def-simplexcanonmaxbf">
-    <statement>
-      <p>
-        The Simplex Algorithm for Maximum Basic Feasible Tableaus
-      </p>
-      <ol>
-          <li>Ensure that each <m>b_i\geq 0</m>, that is that the solution is feasible. </li>
-          <li>IF every <m>c_j\leq 0</m>: STOP the current solution is optimal.  </li>
-          <li>PICK a column <m>j</m> such that <m>c_j > 0</m>.  </li>
-          <li>IF each <m>a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 </m>: STOP the objective function is unbounded. </li>
-          <li>PICK a row <m>i</m>  that minimizes <m>\left\{ b_i/a_{ij}: a_{ij} > 0 \right\}</m>.</li>
-          <li>PIVOT on <m>a_{ij}</m>. </li>
-          <li>GOTO 1.</li>
-      </ol>
-    </statement>
-  </definition>
+    </activity>
   
-  <activity>
-    <statement>
-
-      <p>
-        Recall the canonical tableau
-      </p>
-      <p>
-        <tabular halign="center">
-          <row>
-            <cell halign="left">
-            </cell>
-            <cell bottom="medium">
-              <m>x_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell bottom="medium">
-              <m>x_m</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>a_{11}</m>
-            </cell>
-            <cell>
-              <m>a_{12}</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{1m}</m>
-            </cell>
-            <cell right="medium">
-              <m>b_1</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_1</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>a_{21}</m>
-            </cell>
-            <cell>
-              <m>a_{22}</m>
-            </cell>
-            <cell>
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{2m}</m>
-            </cell>
-            <cell right="medium">
-              <m>b_2</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_2</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\vdots</m>
-            </cell>
-            <cell>
-              <m>\ddots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell right="medium">
-              <m>\vdots</m>
-            </cell>
-            <cell halign="left">
-              <m>\vdots</m>
-            </cell>
-          </row>
+    <activity>
+      <introduction>
+        <statement>
+          <p>
+            Apply <xref ref="def-simplexcanonmaxbf"/> to the following tableaus.
+          </p>
+        </statement>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>8</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>10</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>30</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>50</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
           
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>a_{n1}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>a_{n2}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>a_{nm}</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>b_n</m>
-            </cell>
-            <cell halign="left">
-              <m>=-t_n</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="left" right="medium">
-            </cell>
-            <cell bottom="medium">
-              <m>c_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>c_2</m>
-            </cell>
-            <cell bottom="medium">
-              <m>\cdots</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>c_m</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>d</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-        </tabular>
-      </p>
-      <p>
-        Suppose that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m> 
-      </p>
-    </statement>
-  </activity>
-
-  <activity>
-    <introduction>
-      <statement>
-        <p>
-          Apply <xref ref="def-simplexcanonmaxbf"/> to the following tableaus.
-        </p>
-      </statement>
-    </introduction>
-    <task>
-      <statement>
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="left">
-              </cell>
-              <cell bottom="medium">
-                <m>x_1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>2</m>
-              </cell>
-              <cell right="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>8</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_1</m>
-              </cell>
-            </row>
-            
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>10</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_2</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>30</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>50</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="left">
-              </cell>
-              <cell bottom="medium">
-                <m>x_1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>-1</m>
-              </cell>
-              <cell right="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_1</m>
-              </cell>
-            </row>
-            
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_2</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    
-
-    <task>
-      <statement>
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="left">
-              </cell>
-              <cell bottom="medium">
-                <m>x_1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_3</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_4</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium">
-                <m>1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_1</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>0</m>
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>0</m>
-              </cell>
-              <cell right="medium">
-                <m>4</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_2</m>
-              </cell>
-            </row>
-            
-            
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_3</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-  </activity>
-
-  <activity>
-    <introduction>
-      <p>
-        Each of the following tableaus records  the origin as a basic solution, which is not feasible.
-        Determine geometrically which of these tableau record a problem which has an optimal solution.  Then answer the follow-up questions.
-      </p>
-    </introduction>
-
-    <task>
-      <statement>
-        
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="left">
-              </cell>
-              <cell bottom="medium">
-                <m>x_1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>-2</m>
-              </cell>
-              <cell right="medium">
-                <m>-1</m>
-              </cell>
-              <cell right="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_1</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>5</m>
-              </cell>
-              <cell right="medium">
-                <m>15</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_2</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>2</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>18</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_3</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>5</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        
-
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="left">
-              </cell>
-              <cell bottom="medium">
-                <m>x_1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>-2</m>
-              </cell>
-              <cell right="medium">
-                <m>3</m>
-              </cell>
-              <cell right="medium">
-                <m>1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_1</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell>
-                <m>2</m>
-              </cell>
-              <cell right="medium">
-                <m>-6</m>
-              </cell>
-              <cell right="medium">
-                <m>-5</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_2</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>5</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>7</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_3</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>5</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left">
-                <m>=f</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          If <m>b_{i^*}\lt 0</m>, what should be true about <m>a_{ij^*}</m> so that <m>b_{i^*}</m> is positive afterwards?
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Consider the inequality <m>2x_1-3x_2-4x_3\leq -5</m>.  Is there a solution which satisfies this where each <m>x_i\geq 0</m>?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Consider the inequality <m>5x_1+x_2+2x_3\leq -10</m>.  Is there a solution which satisfies this where each <m>x_i\geq 0</m>?
-        </p>
-      </statement>
-    </task>
-  </activity>
-
-  <activity>
-    <introduction>
-      <p>
-        We now want to concoct a scheme to turn all the <m>b_i</m> non-negative, if possible.
-
-      </p>
-      <p>
-        Consider the tableau: 
-
-        
-         
-      </p>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
       
-      <p>
-        <tabular halign="center">
-          <row>
-            <cell halign="right">
-            </cell>
-            <cell bottom="medium">
-              <m>?</m>
-            </cell>
-            <cell bottom="medium">
-              <m>?</m>
-            </cell>
-            <cell bottom="medium">
-              <m>?</m>
-            </cell>
-            <cell bottom="medium">
-              <m>-1</m>
-            </cell>
-            <cell halign="left">
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              
-            </cell>
-            <cell>
-              <m>a_{11}</m>
-            </cell>
-            <cell>
-              <m>a_{12}</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{13}</m>
-            </cell>
-            <cell right="medium">
-              <m>b_1</m>
-            </cell>
-            <cell halign="left">
-              <m>=-?</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              
-            </cell>
-            <cell>
-              <m>a_{21}</m>
-            </cell>
-            <cell>
-              <m>a_{22}</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{23}</m>
-            </cell>
-            <cell right="medium">
-              <m>b_2</m>
-            </cell>
-            <cell halign="left">
-              <m>=-?</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              
-            </cell>
-            <cell>
-              <m>a_{31}</m>
-            </cell>
-            <cell>
-              <m>a_{32}</m>
-            </cell>
-            <cell right="medium">
-              <m>a_{33}</m>
-            </cell>
-            <cell right="medium">
-              <m>b_3</m>
-            </cell>
-            <cell halign="left">
-              <m>=-?</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              
-            </cell>
-            <cell bottom="medium">
-              <m>a_{41}</m>
-            </cell>
-            <cell bottom="medium">
-              <m>a_{42}</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>a_{43}</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>b_4</m>
-            </cell>
-            <cell halign="left">
-              <m>=-?</m>
-            </cell>
-          </row>
-          <row>
-            <cell halign="right" right="medium">
-              
-            </cell>
-            <cell bottom="medium">
-              <m>c_1</m>
-            </cell>
-            <cell bottom="medium">
-              <m>c_2</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>c_3</m>
-            </cell>
-            <cell right="medium" bottom="medium">
-              <m>0</m>
-            </cell>
-            <cell halign="left">
-              <m>=f</m>
-            </cell>
-          </row>
-        </tabular>
-      </p>
-      <p>
-        Suppose that <m>b_2\lt 0, b_3, b_4>0</m>. We want to turn <m>b_2</m> positive while making sure <m>b_3, b_4</m> stay positive.
-      </p>
-    </introduction>
-    <task>
-      <statement>
-        <p>
-          Suppose each <m>a_{2j}\geq 0</m>, what can we say about the associated problem?
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Let's then say <m>a_{22}\lt 0</m>.  If we pivot on <m>a_{22}</m> do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Let's then say <m>a_{32} >  0</m>.  If we pivot on <m>a_{32}</m>  do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Let's then say <m>a_{42} \lt  0</m>.  If we pivot on <m>a_{42}</m>  do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Who should we pivot on?
-        </p>
-        <ol marker="A." >
-          <li>
-            <p>
-              Any <m>a_{2k}, k\geq 2</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              All of the <m>a_{2k}, k\geq 2</m> such that <m>b_k/a_{2k}</m> is minimized.
-            </p>
-          </li>
-          <li>
-            <p>
-              All of the <m>a_{2k}, k\geq 2</m> such that if <m>k>2</m> then <m>a_{2k}>0</m> and <m>b_k/a_{2k}</m> is minimized.
-            </p>
-          </li> 
+  
+      <task>
+        <statement>
           
-        </ol>
-      </statement>
-    </task>
-    <task>
-      <statement>
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_3</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_4</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>0</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              
+              
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+    </activity>
+  </subsection>
+  
+  <subsection xml:id="subsec-infeasiblemaximization">
+    <title>Basic Infeasible Maximization</title>
+    <activity>
+      <introduction>
         <p>
-          Note that we have no idea if <m>b_1</m> is positive or negative before we started, much less after.  Why don't we care?
+          Each of the following tableaus records  the origin as a basic solution, which is not feasible.
+          Determine geometrically which of these tableau record a problem which has an optimal solution.  Then answer the follow-up questions.
         </p>
-      </statement>
-    </task>
-  </activity>
-
-  <p>With this, we may define our algorithm for potentiall non-feasible tableau</p>
-
-  <definition xml:id="def-simplexmax">
-    <statement>
-      <p>
-        The Simplex Algorithm for Maximum Tableaus
-      </p>
-      <ol>
-        <li>IF each <m>b_i\geq 0</m>, GOTO 8. </li>
-        <li>PICK the largest <m>i</m> such that <m>b_i\lt 0</m>.  </li>
-        <li>IF  <m>a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 </m>: STOP the problem in infeasible. </li>
-        <li>PICK a column <m>j</m>  such that <m>a_{ij} \lt 0</m> .</li>
-        <li>PICK a row <m>p\geq i</m> so that <m>\displaystyle \min_{k>i}\left(\{b_i/a_{ij}\} \cup \{b_k/a_{kj}:a_{kj}>0\} \right)=b_p/a_{pj}</m>.</li>
-        <li>PIVOT on <m>a_{pj}</m>. </li>
-        <li>GOTO 1.</li>
-        <li>APPLY <xref ref="def-simplexcanonmaxbf"/> .</li>
-
-    </ol>
-    </statement>
-  </definition>
-
-  <activity>
-    <introduction>
-      <p>
-        Apply <xref ref="def-simplexmax" /> to the following tableau:
-      </p>
-    </introduction>
-    <task>
-      <statement>
+      </introduction>
+  
+      <task>
+        <statement>
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium">
+                  <m>15</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>18</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          
+  
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>2</m>
+                </cell>
+                <cell right="medium">
+                  <m>-6</m>
+                </cell>
+                <cell right="medium">
+                  <m>-5</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>7</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_3</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For the one problem where the origin is not feasible, but the problem has an optimal solution, what pivot would result in a feasible solution?
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          <p>
+            If <m>b_{i^*}\lt 0</m>, what should be true about <m>a_{ij^*}</m> so that <m>b_{i^*}</m> is positive afterwards?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Consider the inequality <m>2x_1-3x_2-4x_3\leq -5</m>.  Is there a solution which satisfies this where each <m>x_i\geq 0</m>?
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          <p>
+            Consider the inequality <m>5x_1+x_2+2x_3\leq -10</m>.  Is there a solution which satisfies this where each <m>x_i\geq 0</m>?
+          </p>
+        </statement>
+      </task>
+    </activity>
+  
+    <activity>
+      <introduction>
+        <p>
+          We now want to concoct a scheme to turn all the <m>b_i</m> non-negative, if possible.
+  
+        </p>
+        <p>
+          Consider the tableau: 
+  
+          
+           
+        </p>
         
         <p>
           <tabular halign="center">
             <row>
-              <cell halign="left">
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>?</m>
@@ -2656,47 +2417,98 @@
               <cell halign="left">
               </cell>
             </row>
-            
             <row>
-              <cell halign="left" right="medium">
+              <cell halign="right" right="medium">
+                
               </cell>
               <cell>
-                <m>-1</m>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
               </cell>
               <cell right="medium">
-                <m>-2</m>
+                <m>a_{13}</m>
               </cell>
               <cell right="medium">
-                <m>-3</m>
+                <m>b_1</m>
               </cell>
               <cell halign="left">
                 <m>=-?</m>
               </cell>
             </row>
             <row>
-              <cell halign="left" right="medium">
+              <cell halign="right" right="medium">
+                
               </cell>
-              <cell bottom="medium">
-                <m>1</m>
+              <cell>
+                <m>a_{21}</m>
               </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
+              <cell>
+                <m>a_{22}</m>
               </cell>
-              <cell right="medium" bottom="medium">
-                <m>2</m>
+              <cell right="medium">
+                <m>a_{23}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_2</m>
               </cell>
               <cell halign="left">
                 <m>=-?</m>
               </cell>
             </row>
             <row>
-              <cell halign="left" right="medium">
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell>
+                <m>a_{31}</m>
+              </cell>
+              <cell>
+                <m>a_{32}</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{33}</m>
+              </cell>
+              <cell right="medium">
+                <m>b_3</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
               </cell>
               <cell bottom="medium">
-                <m>2</m>
+                <m>a_{41}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{42}</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>-4</m>
+                <m>a_{43}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>b_4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-?</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                
+              </cell>
+              <cell bottom="medium">
+                <m>c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_3</m>
               </cell>
               <cell right="medium" bottom="medium">
                 <m>0</m>
@@ -2707,22 +2519,450 @@
             </row>
           </tabular>
         </p>
-      </statement>
-    </task>
-
-    <task>
+        <p>
+          Suppose that <m>b_2\lt 0, b_3, b_4>0</m>. We want to turn <m>b_2</m> positive while making sure <m>b_3, b_4</m> stay positive.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Suppose each <m>a_{2j}\geq 0</m>, what can we say about the associated problem?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let's then say <m>a_{22}\lt 0</m>.  If we pivot on <m>a_{22}</m> do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let's then say <m>a_{32} >  0</m>.  If we pivot on <m>a_{32}</m>  do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Let's then say <m>a_{42} \lt  0</m>.  If we pivot on <m>a_{42}</m>  do  <m>b_2, b_3, b_4</m> increase or decrease?  Are any now guaranteed to be positive or negative?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Who should we pivot on?
+          </p>
+          <ol marker="A." >
+            <li>
+              <p>
+                Any <m>a_{2k}, k\geq 2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                All of the <m>a_{2k}, k\geq 2</m> such that <m>b_k/a_{2k}</m> is minimized.
+              </p>
+            </li>
+            <li>
+              <p>
+                All of the <m>a_{2k}, k\geq 2</m> such that if <m>k>2</m> then <m>a_{2k}>0</m> and <m>b_k/a_{2k}</m> is minimized.
+              </p>
+            </li> 
+            
+          </ol>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Note that we have no idea if <m>b_1</m> is positive or negative before we started, much less after.  Why don't we care?
+          </p>
+        </statement>
+      </task>
+    </activity>
+  
+    <p>With this, we may define our algorithm for potentiall non-feasible tableau</p>
+  
+    <definition xml:id="def-simplexmax">
       <statement>
-        
+        <p>
+          The Simplex Algorithm for Maximum Tableaus
+        </p>
+        <ol>
+          <li>IF each <m>b_i\geq 0</m>, GOTO 8. </li>
+          <li>PICK the largest <m>i</m> such that <m>b_i\lt 0</m>.  </li>
+          <li>IF  <m>a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 </m>: STOP the problem in infeasible. </li>
+          <li>PICK a column <m>j</m>  such that <m>a_{ij} \lt 0</m> .</li>
+          <li>PICK a row <m>p\geq i</m> so that <m>\displaystyle \min_{k>i}\left(\{b_i/a_{ij}\} \cup \{b_k/a_{kj}:a_{kj}>0\} \right)=b_p/a_{pj}</m>.</li>
+          <li>PIVOT on <m>a_{pj}</m>. </li>
+          <li>GOTO 1.</li>
+          <li>APPLY <xref ref="def-simplexcanonmaxbf"/> .</li>
+  
+      </ol>
+      </statement>
+    </definition>
+  
+    <activity>
+      <introduction>
+        <p>
+          Apply <xref ref="def-simplexmax" /> to the following tableau:
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>-1</m>
+                </cell>
+                <cell right="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>-3</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>-4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+  
+      <task>
+        <statement>
+          
+          <p>
+            <tabular halign="center">
+              <row>
+                <cell halign="left">
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>?</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>-3</m>
+                </cell>
+                <cell right="medium">
+                  <m>-2</m>
+                </cell>
+                <cell right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell>
+                  <m>3</m>
+                </cell>
+                <cell right="medium">
+                  <m>5</m>
+                </cell>
+                <cell right="medium">
+                  <m>20</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-?</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>3</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>4</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m>0</m>
+                </cell>
+                <cell halign="left">
+                  <m>=f</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </statement>
+      </task>
+    </activity>
+  </subsection>
+
+  
+
+
+  <subsection xml:id="subsec-simplexmin" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>The Simplex Algorithm for Canonical Minimization</title>
+  
+  
+    
+  
+    <definition xml:id="def-negativetranspose">
+      <statement>
+        <p>
+          Recall that the canonical minimization problem: 
+        </p>
+        <p>
+          <md>
+            <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
+            <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
+            <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
+            <mrow> \vdots \amp   \vdots</mrow>
+            <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
+            <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+          </md>
+          Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>.
+        </p>
+        <p>  
+          This problem may be recorded in the following tableau:
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>x_1</m>
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1m}</m>
+              </cell>
+              <cell right="medium">
+                <m>c_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>x_2</m>
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2m}</m>
+              </cell>
+              <cell right="medium">
+                <m>c_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>x_n</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>b_m</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>d</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>=t_1</m>
+              </cell>
+              <cell>
+                <m>=t_2</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell>
+                <m>=t_m</m>
+              </cell>
+              <cell>
+                <m>=g</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+        <p>
+          The <em>negative transpose</em> of this tableau is:
+          
+        </p>
         <p>
           <tabular halign="center">
             <row>
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m>?</m>
+                <m>x_1</m>
               </cell>
               <cell bottom="medium">
-                <m>?</m>
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_n</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -2734,71 +2974,234 @@
               <cell halign="left" right="medium">
               </cell>
               <cell>
-                <m>-3</m>
+                <m>-a_{11}</m>
+              </cell>
+              <cell>
+                <m>-a_{21}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
               </cell>
               <cell right="medium">
-                <m>-2</m>
+                <m>-a_{n1}</m>
               </cell>
               <cell right="medium">
-                <m>-1</m>
+                <m>-b_1</m>
               </cell>
               <cell halign="left">
-                <m>=-?</m>
+                <m>=-t_1</m>
               </cell>
             </row>
             <row>
               <cell halign="left" right="medium">
               </cell>
               <cell>
-                <m>3</m>
+                <m>-a_{12}</m>
+              </cell>
+              <cell>
+                <m>-a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
               </cell>
               <cell right="medium">
-                <m>5</m>
+                <m>-a_{n2}</m>
               </cell>
               <cell right="medium">
+                <m>-b_2</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-a_{1m}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-a_{2m}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-b_n</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-c_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-c_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-c_m</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-d</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+        </p>
+      </statement>
+    </definition>
+  
+    <activity>
+      <statement>
+        <p>
+          Show that this negative transpose of a canonical minimization tableau 
+          encodes a problem that has the same feasible region and optimal solution as the original minimization problem.
+        </p>
+      </statement>
+    </activity>
+  
+    <p>This allows us to define a minimization algorithm.</p>
+  
+    <definition xml:id="def-simplexmin">
+      <statement>
+        <p>
+          The Simplex Algorithm for Minimization Tableaus
+        </p>
+        <ol>
+          <li>TAKE the Negative Transpose. </li>
+          <li>APPLY <xref ref="def-simplexmax"/> .</li>
+  
+      </ol>
+      </statement>
+    </definition>
+  
+    <activity>
+      <statement>
+        <p>
+          Apply <xref ref="def-simplexmin"/> to the following minimization tableau:
+          
+        </p>
+        <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>x_1</m>
+              </cell>
+              <cell>
                 <m>20</m>
               </cell>
+              <cell right="medium">
+                <m>25</m>
+              </cell>
+              <cell right="medium">
+                <m>300</m>
+              </cell>
               <cell halign="left">
-                <m>=-?</m>
               </cell>
             </row>
             <row>
-              <cell halign="left" right="medium">
+              <cell halign="right" right="medium">
+                <m>x_2</m>
               </cell>
               <cell bottom="medium">
-                <m>2</m>
+                <m>40</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>20</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>500</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1000</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>800</m>
               </cell>
               <cell right="medium" bottom="medium">
                 <m>0</m>
               </cell>
-              <cell right="medium" bottom="medium">
-                <m>4</m>
-              </cell>
               <cell halign="left">
-                <m>=-?</m>
               </cell>
             </row>
             <row>
-              <cell halign="left" right="medium">
+              <cell halign="right">
               </cell>
-              <cell bottom="medium">
-                <m>3</m>
+              <cell>
+                <m>=t_1</m>
               </cell>
-              <cell right="medium" bottom="medium">
-                <m>4</m>
+              <cell>
+                <m>=t_2</m>
               </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
+              <cell>
+                <m>=g</m>
               </cell>
               <cell halign="left">
-                <m>=f</m>
               </cell>
             </row>
           </tabular>
         </p>
       </statement>
-    </task>
-  </activity>
+    </activity>
+  
+  
+  
+    
+  
+  </subsection>
 
   
 

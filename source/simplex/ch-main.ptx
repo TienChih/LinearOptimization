@@ -4,14 +4,33 @@
   <title>The Simplex Algorithm</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+      So, we saw that in lower dimensions, one can use geometric reasoning to
+      find and interpret the optimal solution to a linear optimization problem.  However,
+      this intuition easily breaks down in higher dimensions.  Moreover, 
+      brute force examination of potential corner points proves to be a massive and overwhelming
+      approach to finding optimal solutions.  Is there any way we can leverage this intuition built
+      in lower dimensions to develop a systematic way to identify the optimal corner point?
+    </p>
+    <p>
+      In this chapter, we develop an algorithm, the Simplex Algorithm, which allows us to
+      solve linear optimization problems in <xref ref="sec-pivot"/>, we determine
+       the rules for a simplex pivot
+      and interpret this operation computationally, algebraiacally and
+      geometrically.  In <xref ref="sec-simplexmax"/>, we discover the conditions for
+      an appropriate pivot which preserves feasibility, as well as how to handle basic solutions
+      which are infeasible, and minimization problems.  In <xref ref="sec-cycling"/>, we discuss
+      Cycling, and how to avoid it with Bland's Anticycling Rules.  Finally in <xref ref="sec-simplexsage"/>,
+      we show how the programming language Sage may be used to remove some of the computational tedium of solving
+      these problems.
+    </p>
   </introduction>
 
   <!-- include sections -->
   <xi:include href="sec-pivot.ptx" />
   <!--<xi:include href="sec-curious.ptx" />-->
   <xi:include href="sec-simplexmax.ptx" />
-  <xi:include href="sec-simplexmin.ptx" /> 
+  <!--<xi:include href="sec-simplexmin.ptx" /> -->
   <xi:include href="sec-cycling.ptx" />
   <xi:include href="sec-simplexsage.ptx" /> 
   <xi:include href="sec-exercises.ptx" /> 
