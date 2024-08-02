@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Assignment Problem and Hungarian Algorithm</title>
+<title>Tucker Tableau’s, Pivots and Duality</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,7 +86,19 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -331,7 +343,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercisestransports.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-dualitytheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-duality.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercisesduality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
@@ -394,12 +406,12 @@ true);
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
@@ -418,15 +430,15 @@ true);
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalnced Transportation Problems</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
@@ -464,197 +476,273 @@ true);
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-assignment"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.3</span><span class="space"> </span><span class="title">The Assignment Problem and Hungarian Algorithm</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-dualpivot"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Tucker Tableau’s, Pivots and Duality</span>
 </h2>
-<article class="exploration project-like" id="exploration-assignment"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
+<div class="para" id="sec-dualpivot-2">In this section, we examine pivoting with primal-dual tableau’s.</div>
+<article class="activity project-like" id="sec-dualpivot-3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="exploration-assignment-1">
-<div class="para" id="exploration-assignment-1-1">Supose we have 3 jobs and 3 contractors, and we wish to assign jobs to contractors at the minimum price. How can we distribute the jobs amongst the contractors? (Costs are in thousands of dollars)</div> <div class="para" id="exploration-assignment-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="introduction" id="sec-dualpivot-3-1">
+<div class="para" id="sec-dualpivot-3-1-1">Noting that the dual variables <span class="process-math">\(y_i\)</span> are non-negative weights attached to the hyperplanes defined by <span class="process-math">\(t_i=0\text{,}\)</span> and the slack variables for the dual problem <span class="process-math">\(s_j\)</span> are the weights associated with the planes <span class="process-math">\(x-x_j=0\text{,}\)</span> we can encode all this information in the <em class="emphasis">Primal-Dual Tucker Tableau</em>:</div> <div class="para" id="sec-dualpivot-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">Job 1</td>
-<td class="c m b2 r0 l0 t0 lines">Job 2</td>
-<td class="c m b2 r0 l0 t0 lines">Job 3</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
+<td class="r m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines">Contractor 1</td>
-<td class="c m b0 r0 l0 t0 lines">10</td>
-<td class="c m b0 r0 l0 t0 lines">9</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="l m b0 r0 l0 t0 lines">?</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Contractor 2</td>
-<td class="c m b0 r0 l0 t0 lines">9</td>
-<td class="c m b0 r0 l0 t0 lines">9</td>
-<td class="c m b0 r2 l0 t0 lines">10</td>
-<td class="l m b0 r0 l0 t0 lines">?</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Contractor 3</td>
-<td class="c m b2 r0 l0 t0 lines">10</td>
-<td class="c m b2 r0 l0 t0 lines">7</td>
-<td class="c m b2 r2 l0 t0 lines">9</td>
-<td class="l m b2 r0 l0 t0 lines">?</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines">?</td>
-</tr>
-</table></div></div>
-</div>
-<article class="task exercise-like" id="exploration-assignment-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-assignment-2-1-1">What are the “supply” and “demand” of each job and contractor?</div></article><article class="task exercise-like" id="exploration-assignment-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="exploration-assignment-3-1-1">Use VAM <a href="sec-vam.html#def-vam" class="xref" data-knowl="./knowl/xref/def-vam.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.2">Definition 6.1.2</a> and the Transportation Algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.1">Definition 6.2.1</a> to solve this problem.</div></article><article class="task exercise-like" id="exploration-assignment-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-assignment-4-1-1">Could there have been an easier way to approach this problem?</div></article></article><article class="definition definition-like" id="def-assignmentproblem"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
-</h3>
-<div class="para" id="def-assignmentproblem-1-1">An <em class="emphasis">assignment problem</em> is a transportation problem where the supply and demands are all 1.</div></article><div class="para" id="sec-assignment-4">Note that in <a href="sec-assignment.html#exploration-assignment" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 6.3.1">Exploration 6.3.1</a>, while we were able to solve this as a transportation problem, the restriction to supplies and demands of 1 ought to yield a simpler way to find a solution.</div>
-<article class="definition definition-like" id="def-permutation"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
-</h3>
-<div class="para" id="def-permutation-1-1">Let <span class="process-math">\(T\)</span> be a tableau for a balanced assignment problem. A <em class="emphasis">permutation set of zeroes</em> is a subset of zero cells for <span class="process-math">\(T\)</span> so that each row and column contains exactly one zero cell.</div></article><article class="activity project-like" id="sec-assignment-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="sec-assignment-6-1">
-<div class="para" id="sec-assignment-6-1-1">We explore some features of the assignment tableau that can help shed light on what an appropriate algorithm would look like.</div> <div class="para" id="sec-assignment-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{13}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_n\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_n\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_n\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_m\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para" id="sec-dualpivot-3-1-3">(The additional dividing lines in the top left and bottom right seperate the primal decision-slack variables from the dual decision-slack vasriables.)</div>
+</div>
+<article class="task exercise-like" id="sec-dualpivot-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-dualpivot-3-2-1-1">Write out the sufficient conditions for the tableau to determine:</div> <ol class="upper-alpha" id="sec-dualpivot-3-2-1-2">
+<li id="sec-dualpivot-3-2-1-2-1"><div class="para" id="sec-dualpivot-3-2-1-2-1-1">The primal problem is feasible.</div></li>
+<li id="sec-dualpivot-3-2-1-2-2"><div class="para" id="sec-dualpivot-3-2-1-2-2-1">The dual problem is feasible.</div></li>
+<li id="sec-dualpivot-3-2-1-2-3"><div class="para" id="sec-dualpivot-3-2-1-2-3-1">The feasible primal problem is unbounded above.</div></li>
+<li id="sec-dualpivot-3-2-1-2-4"><div class="para" id="sec-dualpivot-3-2-1-2-4-1">The feasible dual problem is unbounded below.</div></li>
+<li id="sec-dualpivot-3-2-1-2-5"><div class="para" id="sec-dualpivot-3-2-1-2-5-1">The  primal problem is infeasible.</div></li>
+<li id="sec-dualpivot-3-2-1-2-6"><div class="para" id="sec-dualpivot-3-2-1-2-6-1">The dual problem is infeasible.</div></li>
+<li id="sec-dualpivot-3-2-1-2-7"><div class="para" id="sec-dualpivot-3-2-1-2-7-1">The primal problem has a feasible basic solution.</div></li>
+<li id="sec-dualpivot-3-2-1-2-8"><div class="para" id="sec-dualpivot-3-2-1-2-8-1">The dual problem has a feasible basic solution.</div></li>
+</ol></article><article class="task exercise-like" id="sec-dualpivot-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-dualpivot-3-3-1-1">Are any of these identical?</div></article></article><article class="activity project-like" id="sec-dualpivot-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-dualpivot-4-1"><div class="para" id="sec-dualpivot-4-1-1">Recall  <a href="sec-initial.html#activity-exampleart" class="xref" data-knowl="./knowl/xref/activity-exampleart.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.2.1">Activity 1.2.1</a>.</div></div>
+<article class="task exercise-like" id="sec-dualpivot-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-dualpivot-4-2-1-1">Record this information in a primal-dual tucker tableau.</div></article><article class="task exercise-like" id="sec-dualpivot-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-dualpivot-4-3-1-1">Apply the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to this tableau.</div></article><article class="task exercise-like" id="sec-dualpivot-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-dualpivot-4-4-1-1">Consider the dual solution.  What does that mean in the context of the time spent by the painter and the sculptor?</div></article></article><article class="activity project-like" id="sec-dualpivot-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="sec-dualpivot-5-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-dualpivot-5-1-1">If a primal problem is infeasible, what <em class="emphasis">could</em> be true of the dual program?</div>
+<ol class="upper-alpha" id="sec-dualpivot-5-1-2">
+<li id="sec-dualpivot-5-1-2-1"><div class="para" id="sec-dualpivot-5-1-2-1-1">The dual problem has an optimal solution.</div></li>
+<li id="sec-dualpivot-5-1-2-2"><div class="para" id="sec-dualpivot-5-1-2-2-1">The dual problem is unbounded below.</div></li>
+<li id="sec-dualpivot-5-1-2-3"><div class="para" id="sec-dualpivot-5-1-2-3-1">The dual problem is infeasible.</div></li>
+</ol></article><article class="task exercise-like" id="sec-dualpivot-5-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-dualpivot-5-2-1-1">Verify that the primal problem is infeasible.</div> <div class="para" id="sec-dualpivot-5-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{23}\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="sec-dualpivot-5-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-dualpivot-5-3-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual program.</div></article><article class="task exercise-like" id="sec-dualpivot-5-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-dualpivot-5-4-1-1">Verify that the primal problem is infeasible.</div> <div class="para" id="sec-dualpivot-5-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{31}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{32}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{33}\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div>
-</div>
-<article class="task exercise-like" id="sec-assignment-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-6-2-1-1">If we multiply each entry by <span class="process-math">\(2\text{,}\)</span> would that change our optimal solution? What about by <span class="process-math">\(-1\text{?}\)</span>  What values <span class="process-math">\(k\)</span> could I multiply the tableau by to preserve the optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-assignment-6-3-1-1">If we add or subtract <span class="process-math">\(2\)</span> from each entry, does it change the optimal solution? What about <span class="process-math">\(n\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-assignment-6-4-1-1">Suppose we had an optimal solution to the assignment problem. Explain why adding <span class="process-math">\(k\)</span> to each entry in a row does not change the optimal solution.</div>
-<div class="solutions"><details id="sec-assignment-6-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-assignment-6-4-2-1">How would this compare to solving the original problem and adding <span class="process-math">\(k\)</span> to the cost?</div></div></details></div></article><article class="task exercise-like" id="sec-assignment-6-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-assignment-6-5-1-1">What would change if we did this to a different row?  A column?</div></article><article class="task exercise-like" id="sec-assignment-6-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-assignment-6-6-1-1">Suppose I subtracted the smallest value in each row from every entry of that row.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-6-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="sec-assignment-6-7-1-1">Suppose I subtracted the smallest value in each column from every entry of that column.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-6-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="sec-assignment-6-8-1-1">If we had a tableau with all rational values, how could I change this to a tableau of all integer values with the same optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-6-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="sec-assignment-6-9-1-1">If we had a tableau with all integer values, how could I change this to a tableau of all non-negative integer values with the same optimal solution?</div></article></article><article class="definition definition-like" id="def-hungarian"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
+</table></div></div></article><article class="task exercise-like" id="sec-dualpivot-5-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-dualpivot-5-5-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual program.</div></article></article><article class="activity project-like" id="sec-dualpivot-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="def-hungarian-1-1">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an <span class="process-math">\(n\times n\)</span> assignment tableau <span class="process-math">\(T\text{.}\)</span>
-</div> <ol class="decimal" id="def-hungarian-1-2">
-<li id="def-hungarian-1-2-1">
-<div class="para" id="def-hungarian-1-2-1-1">IF the entries of <span class="process-math">\(T\)</span> are rational but not all integeral, <span class="process-math">\(a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}&gt;0 \text{:}\)</span>
-</div>
-<div class="para" id="def-hungarian-1-2-1-2">THEN multiply each entry of <span class="process-math">\(T\)</span> by the lowest common multiple of the denominators, <span class="process-math">\(\displaystyle \underset{ i, j}{\lcm} q_{ij}\text{.}\)</span>
-</div>
-</li>
-<li id="def-hungarian-1-2-2">
-<div class="para" id="def-hungarian-1-2-2-1">IF the entries of <span class="process-math">\(T\)</span> are not all non-negative:</div>
-<div class="para" id="def-hungarian-1-2-2-2">THEN add to every entry of <span class="process-math">\(T\)</span> the smallest value of <span class="process-math">\(T\text{,}\)</span> <span class="process-math">\(\displaystyle \min_{i,j}a_{ij}\text{.}\)</span>
-</div>
-</li>
-<li id="def-hungarian-1-2-3"><div class="para" id="def-hungarian-1-2-3-1">Subtract from each row the smallest entry in that row.</div></li>
-<li id="def-hungarian-1-2-4"><div class="para" id="def-hungarian-1-2-4-1">Subtract from each column the smallest entry in that column.</div></li>
-<li id="def-hungarian-1-2-5">
-<div class="para" id="def-hungarian-1-2-5-1">IF <span class="process-math">\(T\)</span> has a permutation set of zeroes:</div>
-<div class="para" id="def-hungarian-1-2-5-2">STOP</div>
-</li>
-<li id="def-hungarian-1-2-6">
-<div class="para" id="def-hungarian-1-2-6-1">Draw a <em class="alert">minimum</em><span class="process-math">\(^*\)</span> number of lines through <span class="process-math">\(T\)</span> covering an entire row or column such that all <span class="process-math">\(0\)</span>’s are covered.</div>
-<details id="def-hungarian-1-2-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="def-hungarian-1-2-6-2-1">
-<span class="process-math">\(* \Rightarrow\)</span><em class="alert">minimum</em><span class="process-math">\(\Leftarrow\text{.}\)</span>
-</div></div></details>
-</li>
-<li id="def-hungarian-1-2-7"><div class="para" id="def-hungarian-1-2-7-1">Let <span class="process-math">\(M\)</span> be the value of the smallest uncovered entry.  Subtract all uncovered entries by <span class="process-math">\(M\text{,}\)</span> and add <span class="process-math">\(M\)</span> to the entries corresponding to intersections of the lines.</div></li>
-<li id="def-hungarian-1-2-8"><div class="para" id="def-hungarian-1-2-8-1">GOTO 5.</div></li>
-</ol></article><article class="activity project-like" id="sec-assignment-8"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
+<div class="introduction" id="sec-dualpivot-6-1"><div class="para" id="sec-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual programs.</div></div>
+<article class="task exercise-like" id="sec-dualpivot-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-dualpivot-6-2-1-1">
+<div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(x_j\)</span> were allowed to be be any value including negative values, What must be true about <span class="process-math">\(s_j\text{?}\)</span>  (If <span class="process-math">\(x_j\)</span> is unconstrained, what can we say about the hyperplane <span class="process-math">\(-x_j=0\)</span> as a bounding hyperplane?)</div>
+<ol class="upper-alpha cols2" id="sec-dualpivot-6-2-1-1-5">
+<li id="sec-dualpivot-6-2-1-1-5-1"><div class="para" id="sec-dualpivot-6-2-1-1-5-1-1">
+<span class="process-math">\(s_j\)</span> could be any value as well.</div></li>
+<li id="sec-dualpivot-6-2-1-1-5-2"><div class="para" id="sec-dualpivot-6-2-1-1-5-2-1"><span class="process-math">\(s_j\geq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-2-1-1-5-3"><div class="para" id="sec-dualpivot-6-2-1-1-5-3-1"><span class="process-math">\(s_j\leq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-2-1-1-5-4"><div class="para" id="sec-dualpivot-6-2-1-1-5-4-1"><span class="process-math">\(s_j=0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-2-1-1-5-5"><div class="para" id="sec-dualpivot-6-2-1-1-5-5-1"><span class="process-math">\(s_j\neq 0\text{.}\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="sec-dualpivot-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-dualpivot-6-3-1-1">
+<div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(t_i=0\text{.}\)</span> What must be true about <span class="process-math">\(y_i\text{?}\)</span>  (If we increase <span class="process-math">\(b_i\)</span> can we predict if that helps or hurts <span class="process-math">\(f\text{?}\)</span> Does it matter?)</div>
+<ol class="upper-alpha cols2" id="sec-dualpivot-6-3-1-1-5">
+<li id="sec-dualpivot-6-3-1-1-5-1"><div class="para" id="sec-dualpivot-6-3-1-1-5-1-1">
+<span class="process-math">\(y_i\)</span> could be any value as well.</div></li>
+<li id="sec-dualpivot-6-3-1-1-5-2"><div class="para" id="sec-dualpivot-6-3-1-1-5-2-1"><span class="process-math">\(y_i\geq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-3-1-1-5-3"><div class="para" id="sec-dualpivot-6-3-1-1-5-3-1"><span class="process-math">\(y_i\leq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-3-1-1-5-4"><div class="para" id="sec-dualpivot-6-3-1-1-5-4-1"><span class="process-math">\(y_i=0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-3-1-1-5-5"><div class="para" id="sec-dualpivot-6-3-1-1-5-5-1"><span class="process-math">\(y_i\neq 0\text{.}\)</span></div></li>
+</ol>
+</div></article></article><article class="activity project-like" id="sec-dualpivot-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="sec-assignment-8-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-8-1-1-1">In step 6 of <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.3">Definition 6.3.3</a>, suppose we draw <span class="process-math">\(k\)</span> lines.  Could <span class="process-math">\(k\)</span> be greater than <span class="process-math">\(n\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-8-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-assignment-8-2-1-1">Suppose that the zeroes of the tableau in a given step do <em class="emphasis">not</em> form a permutation set of zeroes.  Show that <span class="process-math">\(k&lt;n\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-8-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-assignment-8-3-1-1">What would it mean if <span class="process-math">\(k=n\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-8-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-assignment-8-4-1-1">Show that step 7 is equivalent to subtracting <span class="process-math">\(M\)</span> from each uncovered row, and adding <span class="process-math">\(M\)</span> to each covered column.  (Or subtracting <span class="process-math">\(M\)</span> from each uncovered column, and adding <span class="process-math">\(M\)</span> to each covered row.)</div></article><article class="task exercise-like" id="sec-assignment-8-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-assignment-8-5-1-1">Why does step 7 not change the optimal assignment?</div></article></article><article class="activity project-like" id="sec-assignment-9"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-assignment-9-1-1">Use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.3">Definition 6.3.3</a> to solve the problem from <a href="sec-assignment.html#exploration-assignment" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 6.3.1">Exploration 6.3.1</a>.</div></article><article class="activity project-like" id="sec-assignment-10"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="sec-assignment-10-1">
-<div class="para" id="sec-assignment-10-1-1">Suppose 4 students are picking 4 research topics.  The four topics are to be distributed one each amongst the four students. They rated the topics on a scale of 1-10.</div> <div class="para" id="sec-assignment-10-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<article class="task exercise-like" id="sec-dualpivot-7-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-dualpivot-7-1-1">Solve the following non-canonical primal-dual problem:</div>
+<div class="para" id="sec-dualpivot-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">Topic 1</td>
-<td class="c m b2 r0 l0 t0 lines">Topic 2</td>
-<td class="c m b2 r0 l0 t0 lines">Topic 3</td>
-<td class="c m b2 r0 l0 t0 lines">Topic 4</td>
+<td class="r m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{x_1} \)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines">Student 1</td>
-<td class="c m b0 r0 l0 t0 lines">6</td>
-<td class="c m b0 r0 l0 t0 lines">9</td>
-<td class="c m b0 r0 l0 t0 lines">10</td>
-<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{y_1}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-0\)</span></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines">Student 2</td>
-<td class="c m b0 r0 l0 t0 lines">2</td>
-<td class="c m b0 r0 l0 t0 lines">8</td>
-<td class="c m b0 r0 l0 t0 lines">9</td>
-<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines">Student 3</td>
-<td class="c m b0 r0 l0 t0 lines">7</td>
-<td class="c m b0 r0 l0 t0 lines">7</td>
-<td class="c m b0 r0 l0 t0 lines">8</td>
-<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines">Student 4</td>
-<td class="c m b2 r0 l0 t0 lines">6</td>
-<td class="c m b2 r0 l0 t0 lines">8</td>
-<td class="c m b2 r0 l0 t0 lines">9</td>
-<td class="c m b2 r2 l0 t0 lines">8</td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div></div> <div class="para" id="sec-assignment-10-1-3">We want to maximize the total “enjoyment”.</div>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(s_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></article><article class="task exercise-like" id="sec-dualpivot-7-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-dualpivot-7-2-1-1">Enter the primal-problem and use Sage to confirm the solution: <div class="para" id="sec-dualpivot-7-2-1-1-1">
+<pre id="sec-dualpivot-7-2-1-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+A = (FIXME)
+b = (FIXME)
+c = (FIXME)
+P = InteractiveLPProblem(A, b, c,
+ [FIXME], 
+ constraint_type = [FIXME],
+ variable_type = [FIXME],
+ problem_type = FIXME)
+P
+</script></pre> <pre id="sec-dualpivot-7-2-1-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
+print(P.optimal_value())
+</script></pre>
 </div>
-<article class="task exercise-like" id="sec-assignment-10-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-10-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article><article class="task exercise-like" id="sec-assignment-10-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-assignment-10-3-1-1">After converting, use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.3">Definition 6.3.3</a> to solve the problem.</div></article></article></section></div>
+</div></article><article class="task exercise-like" id="sec-dualpivot-7-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-dualpivot-7-3-1-1">Use sage to find the dual and solve it:</div> <pre id="sec-dualpivot-7-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+D = P.dual()
+D
+</script></pre> <pre id="sec-dualpivot-7-3-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(D.optimal_solution())
+print(D.optimal_value())
+</script></pre></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisestransports.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-dualitytheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesduality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
