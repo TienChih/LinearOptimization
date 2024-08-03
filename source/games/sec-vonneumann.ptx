@@ -3,6 +3,40 @@
 <section xml:id="sec-vonneumann" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>VonNeumann Minimax Theorem</title>
 
+  <exploration xml:id="exploration-vonneuman">
+    <p>
+      Consider the tableau in <xref ref="task-gametableau"/> and the associated
+      primal-dual problems.  Which of the following could possibly be true for these
+      problems?
+    </p>
+    <ol marker="A.">
+      <li>
+        <p>
+          Both primal and dual problem achieve optimality.
+        </p>
+      </li>
+      <li>
+        <p>
+          The primal problem is unbounded and the dual problem is infeasible.
+        </p>
+      </li>
+      <li>
+        <p>
+          The primal problem is infeasible and the dual problem is unbounded.
+        </p>
+      </li>
+      <li>
+        <p>
+          Both problems are infeasible.
+        </p>
+      </li>
+    </ol>
+  </exploration>
+
+  <p>
+    It would be very bad if either problem were infeasible or unbounded!
+    It would be good to show that this is not the case.
+  </p>
 
   <activity>
     <introduction>
@@ -132,6 +166,8 @@
     </task>
   </activity>
 
+  
+
 
 
   <activity>
@@ -174,7 +210,7 @@
                 <m>q_1</m>
               </cell>
               <cell bottom="medium">
-                <m>q_1</m>
+                <m>q_2</m>
               </cell>
               <cell bottom="medium">
                 <m>\cdots</m>
@@ -471,13 +507,15 @@
       <statement>
         <p>
           Show that for fixed strategies <m>\p', \q'</m> and not fixed strategies <m>\p, \q</m> that
-          <m>\p^\top (A+rE)q'</m> is maximized when <m>\p^\top A \q'</m> is maximized and 
-          <m>\p'^\top (A+rE)q</m> is minimized when <m>\p'^\top A \q</m> is minimized.
+          <m>\p^\top (A+rE)\q'</m> is maximized when <m>\p^\top A \q'</m> is maximized and 
+          <m>\p'^\top (A+rE)\q</m> is minimized when <m>\p'^\top A \q</m> is minimized.
         </p>
       </statement>
     </task>
 
   </activity>
+
+  
 
 
   <theorem xml:id="thm-vonneumann">
@@ -490,10 +528,16 @@
       </p>
       <p>
         Then, there are optimal strategies <m>\p', \q'</m> such that:
-        <me>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q = \displaystyle \min_{1\leq i\leq n}A_{(i)}\q = \p'^\top A\q' = \max_{1\leq j\leq m}\p^\top A^{(m)} = \max_{\p \in F_{\p}} \p^\top A\q'.</me>
+        <me>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q = \displaystyle \min_{1\leq i\leq n}A_{(i)}\q = \p'^\top A\q' = \max_{1\leq j\leq m}\p^\top A^{(j)} = \max_{\p \in F_{\p}} \p^\top A\q'.</me>
       </p>
     </statement>
   </theorem>
+
+  <activity>
+    <p>
+      Revist <xref ref="exploration-vonneuman"/>.  Has your answer adjusted at all?
+    </p>
+  </activity>
 
   <activity>
     <introduction>

@@ -173,31 +173,31 @@ basic variables. Determine if the following are TRUE or FALSE:
       <task>
         <statement>
           <p>
-            Prove that if the primal program is infeasible, and the dual program
-            is feasible, then the dual program is unbounded below.  (Use <xref ref="cor-farkasv2"/>.)
+            Prove that if the primal problem is infeasible, and the dual problem
+            is feasible, then the dual problem is unbounded below.  (Use <xref ref="cor-farkasv2"/>.)
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Prove that if the dual program is infeasible, and the primal program
-            is feasible, then the primal program is unbounded above.  (Use (a).)
+            Prove that if the dual problem is infeasible, and the primal problem
+            is feasible, then the primal problem is unbounded above.  (Use (a).)
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Prove that if the primal (dual) program is feasible and unbounded above (below),
-            then the dual (primal) program is infeasible.
+            Prove that if the primal (dual) problem is feasible and unbounded above (below),
+            then the dual (primal) problem is infeasible.
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            Find a primal-dual linear program where both the primal and dual problems are infeasible.
+            Find a primal-dual linear problem where both the primal and dual problems are infeasible.
           </p>
         </statement>
       </task>
@@ -220,7 +220,7 @@ basic variables. Determine if the following are TRUE or FALSE:
       <task>
         <statement>
           <p>
-            State the dual canonical minimization linear programming problem.
+            State the dual canonical minimization linear optimization problem.
           </p>
         </statement>
       </task>

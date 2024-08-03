@@ -9,7 +9,7 @@
   <activity>
     <introduction>
       <p>
-        Say we want to solve the non-canonical linear program:
+        Say we want to solve the non-canonical linear optimization problem:
         <p>
           <md>
             <mrow>\textbf{Minimize: }  f(\mathbf{x}) = 3x+y+2z</mrow>

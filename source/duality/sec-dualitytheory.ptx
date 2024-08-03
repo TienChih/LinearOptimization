@@ -96,7 +96,7 @@
   <proposition xml:id="prop-weakduality">
     <statement>
       <p>
-        For a primal maximization linear programming problem with objective function <m>f</m> and dual objective <m>g</m>,
+        For a primal maximization problem with objective function <m>f</m> and dual objective <m>g</m>,
         we have that <me>f\leq g</me>
       </p>
       <p>
@@ -108,7 +108,7 @@
 
   <p>
     We have now that if <m>f=g</m> for a pair of feasible solutions, then we have optimality
-    for both programs.  It would be good to prove that this is an if or only if statement.
+    for both problems.  It would be good to prove that this is an if or only if statement.
   </p>
 
   <theorem xml:id="thm-hyperplaneseperation">
@@ -223,7 +223,7 @@
   </activity>
 
   <p>
-    We now introduce a key idea which will tie together the primal and dual programs.
+    We now introduce a key idea which will tie together the primal and dual problems.
   </p>
 
   <definition xml:id="def-cone">
@@ -401,7 +401,7 @@
     <title>The Strong Duality Theorem</title>
     <statement>
       <p>
-        Given a pair of primal max-dual min programs, the primal max problem as an optimal solution 
+        Given a pair of primal max-dual min problems, the primal max problem as an optimal solution 
         <m>\x^*</m> if and only if the dual min problem has an optimal solution <m>\y^*</m>.  Moreover,
         <m>f(\x^*)=g(\y^*)</m>.
       </p>

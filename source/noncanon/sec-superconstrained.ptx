@@ -7,7 +7,7 @@
   <activity xml:id="super-constrained-geometry">
     <introduction>
       <p>
-        Suppose we wanted to solve the linear program:
+        Suppose we wanted to solve the linear optimization problem:
 
           <md>
             <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+y+z  &amp;   </mrow>
@@ -989,7 +989,7 @@
     <statement>
       <p>
         <p>
-          Solve the linear program:
+          Solve the linear optimization problem:
   
             <md>
               <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   </mrow>
@@ -1007,7 +1007,7 @@
   <activity>
     <introduction>
       <p>
-          Consider the linear program:
+          Consider the linear optimization problem:
   
             <md>
               <mrow>\textbf{Maximize: }  f(\mathbf{x})= 2x+y-2z  &amp;   </mrow>
@@ -1295,7 +1295,7 @@
   <activity>
     <statement>
       <p>
-          Solve the linear program:
+          Solve the linear optimization problem:
   
             <md>
               <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   </mrow>
@@ -1317,7 +1317,7 @@
   <activity>
     <statement>
       <p>
-          Solve the linear program:
+          Solve the linear optimization problem:
   
             <md>
               <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+2y+z  &amp;   </mrow>

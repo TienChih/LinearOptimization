@@ -7,7 +7,7 @@
   <activity xml:id="unconstrained-geometry">
     <introduction>
       <p>
-        Suppose we wanted to solve the linear program:
+        Suppose we wanted to solve the linear optimization problem:
 
           <md>
             <mrow>\textbf{Maximize: }  f(\mathbf{x})= 3x+2y  &amp;   </mrow>
@@ -23,7 +23,7 @@
     <task>
       <statement>
         <p>
-          What are some differences between this linear optimization problem and previous examples of linear programs?
+          What are some differences between this linear optimization problem and previous examples of optimization problems?
         </p>
       </statement>
     </task>
@@ -364,7 +364,7 @@
   <definition xml:id="def-unconstrained">
     <statement>
       <p>
-        In a linear program, a variable which can be potentially negative is called an <em>unconstrained</em> variable.
+        In a linear optimization problem, a variable which can be potentially negative is called an <em>unconstrained</em> variable.
       </p>
     </statement>
   </definition>
@@ -374,7 +374,7 @@
   <activity xml:id="unconstrained-example">
     <introduction>
       <p>
-        Suppose we wanted to solve the linear program:
+        Suppose we wanted to solve the linear optimization problem:
 
           <md>
             <mrow>\textbf{Maximize: }  f(\mathbf{x})= 5x+4y  &amp;   </mrow>
@@ -975,7 +975,7 @@
   <activity>
     <statement>
       <p>
-        Solve the linear program:
+        Solve the linear optimization problem:
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+3y  &amp;   </mrow>
           <mrow>\textbf{Subject to: }  x+2y&amp;  \leq  10</mrow>

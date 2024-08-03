@@ -4,7 +4,27 @@
   <title>Zero-Sum Games</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+      We begin the first of several chapters on applications of
+      linear optimization beyond the more straight forward examples
+      we've seen so far, further highlighting the power and versatility
+      of this theory.  This particular chapter is about competitive
+      <em>zero-sum</em> games.  Two players playing against each other
+      in some game with finite choices may find that the efficacy of a choice
+      depends on their opponents choice.  A good choice in one scenario may be
+      a poor choice in another.  Moreover, if one always makes the same choices,
+      your opponent may be able to anticipate this move, so it makes sense to
+      vary your choices.  How should one vary them, and how might your opponent vary theirs?  Questions like this are
+      part of an area of mathematics called <em>game theory</em>.
+      
+    </p>
+    <p>
+      In <xref ref="sec-minmaxgames"/>, we describe these games and propose
+      a scheme to solve for the optimal strategy for both players.  In 
+      <xref ref="sec-vonneumann"/>, we prove that this strategy is valid and that
+      optimal strategies exist.  Then in <xref ref="sec-chance"/> we see how to apply
+      these principles to games with random components.
+    </p>
   </introduction>
 
   <!-- include sections -->

@@ -308,42 +308,42 @@
     <task>
       <statement>
         <p>
-          Suppose that Rowan pursues a <em>mixed strategy</em> a probability distribution of their choices <m>P</m>
-          where <me>P^\top  = \begin{bmatrix} p_1 \\ p_2 \\ \vdots \\ p_n\end{bmatrix}, p_i\geq 0, \displaystyle \sum_{i=1}^n p_i=1.</me>
+          Suppose that Rowan pursues a <em>mixed strategy</em> a probability distribution of their choices <m>\p</m>
+          where <me>\p^\top  = \begin{bmatrix} p_1 \\ p_2 \\ \vdots \\ p_n\end{bmatrix}, p_i\geq 0, \displaystyle \sum_{i=1}^n p_i=1.</me>
         </p>
         <p>
-          If Colleen chooses column <m>j</m> as her strategy, what is <m>E_j(P)</m> the expected value of Rowan's earnings?
+          If Colleen chooses column <m>j</m> as her strategy, what is <m>E_j(\p)</m> the expected value of Rowan's earnings?
         </p>
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>E_j(P) = \displaystyle \sum_{i=1}^n a_{ij}</m>.
+              <m>E_j(\p) = \displaystyle \sum_{i=1}^n a_{ij}</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>E_j(P) = \displaystyle \sum_{i=1}^n p_i</m>.
+              <m>E_j(\p) = \displaystyle \sum_{i=1}^n p_i</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>E_j(P) = \displaystyle \sum_{i=1}^n a_{ij}p_i</m>.
+              <m>E_j(\p) = \displaystyle \sum_{i=1}^n a_{ij}p_i</m>.
             </p>
           </li>
 
           <li>
             <p>
-              <m>E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}</m>.
+              <m>E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n p_i</m>.
+              <m>E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n p_i</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}p_i</m>.
+              <m>E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}p_i</m>.
             </p>
           </li>
           
@@ -354,36 +354,36 @@
     <task>
       <statement>
         <p>
-          If Colleen somehow figures out Rowan's strategy <m>P</m>, which column <m>j</m> should she choose?
+          If Colleen somehow figures out Rowan's strategy <m>\p</m>, which column <m>j</m> should she choose?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Rowan is aware that Colleen is a sharp player can likely figure out <m>P</m>.  How then should he choose his strategy?
-          <m>P</m>?
+          Rowan is aware that Colleen is a sharp player can likely figure out <m>\p</m>.  How then should he choose his strategy?
+          <m>\p</m>?
         </p>
         <ol marker="A." cols="2">
           <li>
             <p>
-              Maximize <m>u=\displaystyle \max_{1\leq j\leq m}E_j(P)</m>.
+              Maximize <m>u=\displaystyle \max_{1\leq j\leq m}E_j(\p)</m>.
             </p>
           </li>
           <li>
             <p>
-              Maximize <m>u=\displaystyle \min_{1\leq j\leq m}E_j(P)</m>.
+              Maximize <m>u=\displaystyle \min_{1\leq j\leq m}E_j(\p)</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Minimize <m>u=\displaystyle \max_{1\leq j\leq m}E_j(P)</m>.
+              Minimize <m>u=\displaystyle \max_{1\leq j\leq m}E_j(\p)</m>.
             </p>
           </li>
           <li>
             <p>
-              Minimize <m>u=\displaystyle \min_{1\leq j\leq m}E_j(P)</m>.
+              Minimize <m>u=\displaystyle \min_{1\leq j\leq m}E_j(\p)</m>.
             </p>
           </li>
           
@@ -394,41 +394,41 @@
     <task>
       <statement>
         <p>
-          At the exact same time, Colleen is pursuing her own mixed strategy <m>Q</m>: <me>Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0, \displaystyle \sum_{j=1}^m q_j=1.</me>
+          At the exact same time, Colleen is pursuing her own mixed strategy <m>\q</m>: <me>\q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0, \displaystyle \sum_{j=1}^m q_j=1.</me>
         </p>
         <p>
-          If Rowan chooses row <m>i</m> as his strategy, what is <m>F_i(Q)</m> the expected value of Colleen's losses?
+          If Rowan chooses row <m>i</m> as his strategy, what is <m>F_i(\q)</m> the expected value of Colleen's losses?
         </p>
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}</m>.
+              <m>F_i(\q) = \displaystyle \sum_{j=1}^m a_{ij}</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>F_i(Q) = \displaystyle \sum_{j=1}^m q_j</m>.
+              <m>F_i(\q) = \displaystyle \sum_{j=1}^m q_j</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
+              <m>F_i(\q) = \displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
             </p>
           </li>
 
           <li>
             <p>
-              <m>F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}</m>.
+              <m>F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j</m>.
+              <m>F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
+              <m>F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
             </p>
           </li>
 
@@ -439,36 +439,36 @@
     <task>
       <statement>
         <p>
-          If Rowan somehow figures out Colleen's strategy <m>Q</m>, which row <m>i</m> should he choose?
+          If Rowan somehow figures out Colleen's strategy <m>\q</m>, which row <m>i</m> should he choose?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Colleen is also aware that Rowan is a sharp player can likely figure out <m>Q</m>.  How then should she choose her strategy?
-          <m>Q</m>?
+          Colleen is also aware that Rowan is a sharp player can likely figure out <m>\q</m>.  How then should she choose her strategy?
+          <m>\q</m>?
         </p>
         <ol marker="A." cols="2">
           <li>
             <p>
-              Maximize <m>v=\displaystyle \max_{1\leq i\leq n}F_i(Q)</m>.
+              Maximize <m>v=\displaystyle \max_{1\leq i\leq n}F_i(\q)</m>.
             </p>
           </li>
           <li>
             <p>
-              Maximize <m>v=\displaystyle \min_{1\leq i\leq n}F_i(Q)</m>.
+              Maximize <m>v=\displaystyle \min_{1\leq i\leq n}F_i(\q)</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Minimize <m>v=\displaystyle \max_{1\leq i\leq n}F_i(Q)</m>.
+              Minimize <m>v=\displaystyle \max_{1\leq i\leq n}F_i(\q)</m>.
             </p>
           </li>
           <li>
             <p>
-              Minimize <m>v=\displaystyle \min_{1\leq i\leq n}F_i(Q)</m>.
+              Minimize <m>v=\displaystyle \min_{1\leq i\leq n}F_i(\q)</m>.
             </p>
           </li>
           
@@ -476,10 +476,10 @@
         </ol>
       </statement>
     </task>
-    <task>
+    <task xml:id="task-gametableau">
       <statement>
         <p>
-          Consider the primal-dual program encoded by the tableau:
+          Consider the primal-dual problems encoded by the tableau:
         </p>
         <p>
           <tabular halign="center">
@@ -1448,7 +1448,7 @@
       <statement>
         <p>
           After we delete the appropriate rows and columns, what could be said about the 
-          resulting primal dual program?
+          resulting primal-dual problems?
         </p>
       </statement>
     </task>

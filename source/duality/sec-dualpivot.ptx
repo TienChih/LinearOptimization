@@ -230,7 +230,7 @@
   <activity>
     <task>
       <p>
-        If a primal problem is infeasible, what <em>could</em> be true of the dual program?
+        If a primal problem is infeasible, what <em>could</em> be true of the dual problem?
       </p>
       <ol marker="A." >
         <li>
@@ -346,7 +346,7 @@
       <statement>
         <p>
           Take the negative transpose, then use the Simplex Algorithm 
-          <xref ref="def-simplexmax"/> to determine the nature of the dual program.
+          <xref ref="def-simplexmax"/> to determine the nature of the dual problem.
         </p>
       </statement>
     </task>
@@ -447,7 +447,7 @@
       <statement>
         <p>
           Take the negative transpose, then use the Simplex Algorithm 
-          <xref ref="def-simplexmax"/> to determine the nature of the dual program.
+          <xref ref="def-simplexmax"/> to determine the nature of the dual problem.
         </p>
       </statement>
     </task>
@@ -458,7 +458,7 @@
   <activity>
     <introduction>
       <p>
-        We now consider unconstrained and equality constrained primal-dual programs.
+        We now consider unconstrained and equality constrained primal-dual problems.
       </p>
     </introduction>
     <task>
