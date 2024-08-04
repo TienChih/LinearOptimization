@@ -4,7 +4,21 @@
   <title>Integer Programming</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> 
+      Thus far, we have been exploring problems where the solution
+      space consists of real-valued vectors.  However, in some contexts, like in
+      <xref ref="ch-transport"/> and <xref ref="ch-flow"/>, it is sensible
+      to imagine that fractional or irrational solutions may not make sense in the
+      real-world contexts of those problems.  It's also not a stretch to imagine 
+      more classical production-type problems where only integral units would be possible.
+    </p>
+    <p>
+      In the cases where real valued and integer valued optimal solutions may differ, some care
+      must be taken to solve for the optimal integer valued solution.  In 
+      <xref ref="sec-branchbound"/>, we explore one potential algorithm which is algebraically
+      driven, and in <xref ref="sec-cuttingplane"/>, we discuss an alternative algorithm which is
+      geometrically focused.
+    </p>
   </introduction>
 
   <!-- include sections -->

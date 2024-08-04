@@ -12,9 +12,9 @@
     </p>
     <p>
       In this chapter, we define and explore the notion of duality in linear optimization.  In <xref ref="sec-sensitivity"/>
-      we give a geometric and algebraic interpretation of dual variables and the dual problem.  In <xref ref="sec-dualitytheory"/>, 
+      we give a geometric and algebraic interpretation of dual variables and the dual problem.  In <xref ref="sec-dualitytheory"/> 
       we use geometric reasoning to guide proofs of powerful duality results connecting the primal and dual problems.  Finally, in
-      <xref ref="sec-dualpivot"/>, we show how the simplex pivot from <xref ref="ch-simplex"/> applies geometrically and computationally
+      <xref ref="sec-dualpivot"/> we show how the simplex pivot from <xref ref="ch-simplex"/> applies geometrically and computationally
       to the dual problem, and show how Tucker tableaus encode the dual problem.
     </p>
   </introduction>

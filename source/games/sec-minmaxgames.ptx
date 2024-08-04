@@ -225,13 +225,13 @@
         Consider the payoff matrix for a game between Rowan and Colleen.
       </p>
       <p>
-        <tabular halign="center">
+        <tabular halign="center" >
           <row>
             <cell halign="left">
             </cell>
             <cell halign="left" bottom="medium">
             </cell>
-            <cell colspan="2" bottom="medium">
+            <cell colspan="3" bottom="medium">
               Colleen
             </cell>
             <cell halign="left" bottom="medium">
@@ -249,13 +249,16 @@
             <cell>
               <m>\cdots</m>
             </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
             <cell right="medium">
               <m>a_{1m}</m>
             </cell>
           </row>
           <row>
             <cell halign="left" right="medium">
-              Rowan
+              
             </cell>
             <cell>
               <m>a_{21}</m>
@@ -266,8 +269,31 @@
             <cell>
               <m>\cdots</m>
             </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
             <cell right="medium">
               <m>a_{2m}</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+              Rowan
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
             </cell>
           </row>
           <row>
@@ -278,6 +304,9 @@
             </cell>
             <cell>
               <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
             </cell>
             <cell>
               <m>\ddots</m>
@@ -294,6 +323,9 @@
             </cell>
             <cell bottom="medium">
               <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>

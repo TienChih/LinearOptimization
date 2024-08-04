@@ -9,10 +9,10 @@
       and all bounds are inequalities.  However, what would happen if we relaxed, or strengthened these conditions?
     </p>
     <p>
-      In this chapter, we explore non-canonical optimization problems.  In <xref ref="sec-unconstrained"/>, we consider 
+      In this chapter, we explore non-canonical optimization problems.  In <xref ref="sec-unconstrained"/> we consider 
       the possibility of potentially negative decision variables, and explore the algebraic and geometric interpretations of
-      this phonomena.  In <xref ref="sec-constrained"/>, we do the same for bounds defined by equality conditions, rather than 
-      inequalities.  In <xref ref="sec-noncanonsage"/>, we show how to encode and solve non-canonical linear optimization using Sage.
+      this phonomena.  In <xref ref="sec-constrained"/> we do the same for bounds defined by equality conditions, rather than 
+      inequalities.  In <xref ref="sec-noncanonsage"/> we show how to encode and solve non-canonical linear optimization using Sage.
     </p>
   </introduction>
 

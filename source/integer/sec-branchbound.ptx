@@ -19,7 +19,7 @@
       <statement>
         <p>
           Agnesi wishes to be able to produce sandwiches and pies in a way
-          to maximize her income.  Set up this problem as a linear programming problem and solve.
+          to maximize her income.  Set up this problem as a linear optimization problem and solve.
         </p>
         <p>
           <sage>
@@ -346,12 +346,12 @@
   <definition xml:id="def-intergerprogra">
     <statement>
       <p>
-        A linear programming problem where all solutions must be integers is called an
-        <em>integer programming problem</em>.
+        A linear optimization problem where all solutions must be integers is called an
+        <em>integer optimization problem</em>.
       </p>
       <p>
         If the condition that solutions be integers are relaxed, this is called the <em>relaxation</em>
-        of the integer programming problem.
+        of the integer optimization problem.
       </p>
     </statement>
   </definition>
@@ -361,7 +361,7 @@
       <statement>
         <p>
           Come up with three realistic optimization problems who are best modeled
-          by an integer programming problem.  You do not need to work out all the details
+          by an integer optimization problem.  You do not need to work out all the details
           or solve the problems.
         </p>
       </statement>
@@ -369,37 +369,37 @@
     <task>
       <statement>
         <p>
-          Consider an integer programming maximization problem whose relaxation
+          Consider an integer optimization maximization problem whose relaxation
           achieves an optimal solution.  Which of the following are true about the 
-          integer program?
+          integer optimization problem?
         </p>
         <ol marker="A.">
           <li>
             <p>
-              The integer program achieves an optimal solution that is equal to
+              The integer  problem achieves an optimal solution that is equal to
               the optimal solution of the relaxation.
             </p>
           </li>
           <li>
             <p>
-              The integer program achieves an optimal solution that is less than to
+              The integer  problem achieves an optimal solution that is less than to
               the optimal solution of the relaxation.
             </p>
           </li>
           <li>
             <p>
-              The integer program achieves an optimal solution that is greater than to
+              The integer  problem achieves an optimal solution that is greater than to
               the optimal solution of the relaxation.
             </p>
           </li>
           <li>
             <p>
-              The integer program is infeasible.
+              The integer  problem is infeasible.
             </p>
           </li>
           <li>
             <p>
-              The integer program is unbounded above.
+              The integer  problem is unbounded above.
             </p>
           </li>
         </ol>
@@ -411,10 +411,10 @@
     <introduction>
       <p>
         The <em>branch and bound</em> method is a way to systematically add bounds to a
-        linear programming problem to ensure the solution is integral.
+        linear optimization problem to ensure the solution is integral.
       </p>
       <p>
-        We examine the integer programming problem from <xref ref="exploration-meat"/>, and it's relaxation.
+        We examine the integer optimization problem from <xref ref="exploration-meat"/>, and it's relaxation.
       </p>
     </introduction>
     <task>
@@ -473,7 +473,7 @@
       <statement>
         <p>
           Let us consider the additional constraint <m>x_1\leq 4</m>.  Solve the resulting general
-          linear programming problem:
+          linear optimization problem:
         </p>
         <p>
           <sage>
@@ -745,18 +745,18 @@
   <definition xml:id="def-branchbound">
     <statement>
       <p>
-        The <em>branch and bound</em> algorithm for solving an integer programming maximization problem
+        The <em>branch and bound</em> algorithm for solving an integer optimization maximization problem
         is as follows:
       </p>
       <ol>
         <li>
           <p>
-            INITIALIZE: Begin with a canonical maximization integer programming problem.
+            INITIALIZE: Begin with a canonical maximization integer optimization problem.
           </p>
         </li>
         <li>
           <p>
-            Solve the relaxation of the linear programming problem.  If the solution is
+            Solve the relaxation of the linear optimization problem.  If the solution is
             integral STOP.
           </p>
         </li>

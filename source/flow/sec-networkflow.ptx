@@ -262,7 +262,7 @@
           and sink <m>v_d</m>.
         </p>
         <p>
-          We wish to define a maximization linear program with decision variables <m>x_{ij}, v_i, v_j\in V</m>.
+          We wish to define a maximization linear optimization problem with decision variables <m>x_{ij}, v_i, v_j\in V</m>.
         </p>
       </introduction>
       <task>
@@ -374,7 +374,7 @@
             and let <m>y_{ij}</m> denote the dual  variable associated with edge <m>(v_i, v_j)</m>.
           </p>
           <p>
-            Describe the dual min program.
+            Describe the dual min problem.
           </p>
         </statement>
       </task>

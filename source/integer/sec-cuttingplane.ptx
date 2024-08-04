@@ -45,7 +45,7 @@
       </p>
       <p>
         Let <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> be a feasible solution of the relaxation
-        of a canonical integer programming maximization problem, where the <m>x_i</m> are basic (slack) variables
+        of a canonical integer maximization problem, where the <m>x_i</m> are basic (slack) variables
         and the <m>x_j</m> are non-basic variables.
       </p>
       <p>
@@ -188,7 +188,7 @@
         <p>
           Show that 
           <me>  \sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)</me>
-          for any feasible integral solution to the relaxation of the integer programming problem.
+          for any feasible integral solution to the relaxation of the integer optimization problem.
         </p>
         <p>
           We call the hyperplane <m>\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j = (\lfloor b_i \rfloor - b_i)</m>
@@ -239,10 +239,10 @@
   <activity>
     <introduction>
       <p>
-        We now apply this idea to an integer program.  
+        We now apply this idea to an integer problem.  
       </p>
       <p>
-        Consider the integer programming problem:
+        Consider the integer optimization problem:
         <md>
           <mrow>\textbf{Maximize: }  f(x_1, x_2) \amp = -x_1+5x_2</mrow>
           <mrow>\textbf{Subject to: }  3x_1+2x_2 \amp \leq 12</mrow>
@@ -256,7 +256,7 @@
     <task>
       <statement>
         <p>
-          Solve the relaxation of this integer program, and verify that this solution is not integral.
+          Solve the relaxation of this integer problem, and verify that this solution is not integral.
         
           <tabular halign="center">
             <row>
@@ -980,7 +980,7 @@
       <statement>
         <p>
           Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag
-          the objective plane onto the optimal solution to the integer program.
+          the objective plane onto the optimal solution to the integer problem.
         </p>
         <interactive platform="doenetml" width="100%" aspect="4:5">
           <slate surface="doenetml">
@@ -1090,12 +1090,12 @@
       <ol>
         <li>
           <p>
-            INITIALIZE: Begin with a canonical maximization integer programming problem.
+            INITIALIZE: Begin with a canonical maximization integer optimization problem.
           </p>
         </li>
         <li>
           <p>
-            Solve the relaxation of the integer program.  If all the resulting <m>b_i</m> are integral STOP: you
+            Solve the relaxation of the integer problem.  If all the resulting <m>b_i</m> are integral STOP: you
             have found an optimal integral solution.
           </p>
         </li>

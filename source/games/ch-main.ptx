@@ -19,9 +19,9 @@
       
     </p>
     <p>
-      In <xref ref="sec-minmaxgames"/>, we describe these games and propose
+      In <xref ref="sec-minmaxgames"/> we describe these games and propose
       a scheme to solve for the optimal strategy for both players.  In 
-      <xref ref="sec-vonneumann"/>, we prove that this strategy is valid and that
+      <xref ref="sec-vonneumann"/> we prove that this strategy is valid and that
       optimal strategies exist.  Then in <xref ref="sec-chance"/> we see how to apply
       these principles to games with random components.
     </p>

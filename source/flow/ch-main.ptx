@@ -4,7 +4,21 @@
   <title>Network Flows</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+      In this chapter, we focus on flows through directed graphs called
+      <em>networks</em>.  While graph theory is an enormous area of math
+      (in which I work), we are particularly interested in optimization problems
+      on weighted and or capacitated networks, such as maximizing the flow through
+      a network with limited capacity, or finding a path minimizing the distance between
+      nodes.
+    </p>
+    <p>
+      In <xref ref="sec-networkflow"/> we explore maximal flows through capacitated
+      networks and model this problem with linear optimization.  In <xref ref="sec-maxflowmincut"/>
+      we discuss the dual problem, connect it to <em>cuts</em> in the network, and discuss algorithms
+      which solve both problems.  In <xref ref="sec-weighted"/> we shift
+      our attention to weighted networks, and examine shortest paths and minimum cost flows.
+    </p>
   </introduction>
 
   <!-- include sections -->

@@ -14,13 +14,13 @@
     </p>
     <p>
       In this chapter, we develop an algorithm, the Simplex Algorithm, which allows us to
-      solve linear optimization problems in <xref ref="sec-pivot"/>, we determine
+      solve linear optimization problems in <xref ref="sec-pivot"/> we determine
        the rules for a simplex pivot
       and interpret this operation computationally, algebraiacally and
-      geometrically.  In <xref ref="sec-simplexmax"/>, we discover the conditions for
+      geometrically.  In <xref ref="sec-simplexmax"/> we discover the conditions for
       an appropriate pivot which preserves feasibility, as well as how to handle basic solutions
-      which are infeasible, and minimization problems.  In <xref ref="sec-cycling"/>, we discuss
-      Cycling, and how to avoid it with Bland's Anticycling Rules.  Finally in <xref ref="sec-simplexsage"/>,
+      which are infeasible, and minimization problems.  In <xref ref="sec-cycling"/> we discuss
+      Cycling, and how to avoid it with Bland's Anticycling Rules.  Finally in <xref ref="sec-simplexsage"/>
       we show how the programming language Sage may be used to remove some of the computational tedium of solving
       these problems.
     </p>
