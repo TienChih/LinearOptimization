@@ -223,12 +223,15 @@ sagecell.makeSagecell({
 #sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
 #sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
 #sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
-#sec-vonneumann-2-2-1-2 { counter-set: sec-vonneumann-2-2-1-2 0; }
-#sec-vonneumann-2-2-1-2 > li::marker { content: ""counter(sec-vonneumann-2-2-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-2-1-2 > li { counter-increment: sec-vonneumann-2-2-1-2; }
-#sec-vonneumann-2-3-1-2 { counter-set: sec-vonneumann-2-3-1-2 0; }
-#sec-vonneumann-2-3-1-2 > li::marker { content: ""counter(sec-vonneumann-2-3-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-3-1-2 > li { counter-increment: sec-vonneumann-2-3-1-2; }
+#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
+#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
+#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
+#sec-vonneumann-4-2-1-2 { counter-set: sec-vonneumann-4-2-1-2 0; }
+#sec-vonneumann-4-2-1-2 > li::marker { content: ""counter(sec-vonneumann-4-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-2-1-2 > li { counter-increment: sec-vonneumann-4-2-1-2; }
+#sec-vonneumann-4-3-1-2 { counter-set: sec-vonneumann-4-3-1-2 0; }
+#sec-vonneumann-4-3-1-2 > li::marker { content: ""counter(sec-vonneumann-4-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-3-1-2 > li { counter-increment: sec-vonneumann-4-3-1-2; }
 #sec-chance-2-2-1-2 { counter-set: sec-chance-2-2-1-2 0; }
 #sec-chance-2-2-1-2 > li::marker { content: ""counter(sec-chance-2-2-1-2,upper-alpha)"."; }
 #sec-chance-2-2-1-2 > li { counter-increment: sec-chance-2-2-1-2; }
@@ -431,7 +434,7 @@ true);
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
@@ -512,10 +515,10 @@ true);
 </ol></article><article class="exercise exercise-like" id="ex-duality"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="introduction" id="ex-duality-1"><div class="para" id="ex-duality-1-1">Consider <a href="sec-dualitytheory.html#cor-farkasv2" class="xref" data-knowl="./knowl/xref/cor-farkasv2.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 4.2.6: The Farkas Lemma v2">Corollary 4.2.6</a>.</div></div>
 <article class="task exercise-like" id="ex-duality-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="ex-duality-2-1-1">Prove that if the primal program is infeasible, and the dual program is feasible, then the dual program is unbounded below.  (Use <a href="sec-dualitytheory.html#cor-farkasv2" class="xref" data-knowl="./knowl/xref/cor-farkasv2.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 4.2.6: The Farkas Lemma v2">Corollary 4.2.6</a>.)</div></article><article class="task exercise-like" id="ex-duality-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="ex-duality-3-1-1">Prove that if the dual program is infeasible, and the primal program is feasible, then the primal program is unbounded above.  (Use (a).)</div></article><article class="task exercise-like" id="ex-duality-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="ex-duality-4-1-1">Prove that if the primal (dual) program is feasible and unbounded above (below), then the dual (primal) program is infeasible.</div></article><article class="task exercise-like" id="ex-duality-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="ex-duality-5-1-1">Find a primal-dual linear program where both the primal and dual problems are infeasible.</div></article></article><article class="exercise exercise-like" id="exercises-duality-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="ex-duality-2-1-1">Prove that if the primal problem is infeasible, and the dual problem is feasible, then the dual problem is unbounded below.  (Use <a href="sec-dualitytheory.html#cor-farkasv2" class="xref" data-knowl="./knowl/xref/cor-farkasv2.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 4.2.6: The Farkas Lemma v2">Corollary 4.2.6</a>.)</div></article><article class="task exercise-like" id="ex-duality-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-duality-3-1-1">Prove that if the dual problem is infeasible, and the primal problem is feasible, then the primal problem is unbounded above.  (Use (a).)</div></article><article class="task exercise-like" id="ex-duality-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-duality-4-1-1">Prove that if the primal (dual) problem is feasible and unbounded above (below), then the dual (primal) problem is infeasible.</div></article><article class="task exercise-like" id="ex-duality-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ex-duality-5-1-1">Find a primal-dual linear problem where both the primal and dual problems are infeasible.</div></article></article><article class="exercise exercise-like" id="exercises-duality-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-duality-6-1">
 <div class="para" id="exercises-duality-6-1-1">Consider the canonical maximization linear optimization problem below:</div> <div class="para logical" id="exercises-duality-6-1-2"><div class="displaymath process-math" id="exercises-duality-6-1-2-1">
 \begin{align*}
@@ -527,7 +530,7 @@ x,y\amp \geq  0
 </div></div>
 </div>
 <article class="task exercise-like" id="exercises-duality-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="exercises-duality-6-2-1-1">State the dual canonical minimization linear programming problem.</div></article><article class="task exercise-like" id="exercises-duality-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-duality-6-2-1-1">State the dual canonical minimization linear optimization problem.</div></article><article class="task exercise-like" id="exercises-duality-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-duality-6-3-1-1">Sketch the constraint sets for both problems above.</div></article><article class="task exercise-like" id="exercises-duality-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="exercises-duality-6-4-1-1">Solve both problems above by applying the simplex algorithm to a dual tableau. Indicate the movement in both constraint set diagrams exhibited by the basic solutions of successive tableaus.</div></article><article class="task exercise-like" id="exercises-duality-6-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="exercises-duality-6-5-1-1">Is complementary slackness exhibited in the solutions above? Why or why not?</div></article></article><article class="exercise exercise-like" id="exercises-duality-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>

@@ -223,12 +223,15 @@ sagecell.makeSagecell({
 #sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
 #sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
 #sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
-#sec-vonneumann-2-2-1-2 { counter-set: sec-vonneumann-2-2-1-2 0; }
-#sec-vonneumann-2-2-1-2 > li::marker { content: ""counter(sec-vonneumann-2-2-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-2-1-2 > li { counter-increment: sec-vonneumann-2-2-1-2; }
-#sec-vonneumann-2-3-1-2 { counter-set: sec-vonneumann-2-3-1-2 0; }
-#sec-vonneumann-2-3-1-2 > li::marker { content: ""counter(sec-vonneumann-2-3-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-3-1-2 > li { counter-increment: sec-vonneumann-2-3-1-2; }
+#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
+#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
+#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
+#sec-vonneumann-4-2-1-2 { counter-set: sec-vonneumann-4-2-1-2 0; }
+#sec-vonneumann-4-2-1-2 > li::marker { content: ""counter(sec-vonneumann-4-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-2-1-2 > li { counter-increment: sec-vonneumann-4-2-1-2; }
+#sec-vonneumann-4-3-1-2 { counter-set: sec-vonneumann-4-3-1-2 0; }
+#sec-vonneumann-4-3-1-2 > li::marker { content: ""counter(sec-vonneumann-4-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-3-1-2 > li { counter-increment: sec-vonneumann-4-3-1-2; }
 #sec-chance-2-2-1-2 { counter-set: sec-chance-2-2-1-2 0; }
 #sec-chance-2-2-1-2 > li::marker { content: ""counter(sec-chance-2-2-1-2,upper-alpha)"."; }
 #sec-chance-2-2-1-2 > li { counter-increment: sec-chance-2-2-1-2; }
@@ -431,7 +434,7 @@ true);
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
@@ -563,7 +566,7 @@ true);
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines" colspan="2">Colleen</td>
+<td class="c m b2 r0 l0 t0 lines" colspan="3">Colleen</td>
 <td class="l m b2 r0 l0 t0 lines"></td>
 </tr>
 <tr>
@@ -571,19 +574,30 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r2 l0 t0 lines">Rowan</td>
+<td class="l m b0 r2 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">Rowan</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 </tr>
@@ -592,67 +606,68 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
 </tr>
 </table></div></div>
 </div>
 <article class="task exercise-like" id="activity-rowcol-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="activity-rowcol-2-1-1">
-<div class="para">Suppose that Rowan pursues a <em class="emphasis">mixed strategy</em> a probability distribution of their choices <span class="process-math">\(P\)</span> where</div>
+<div class="para">Suppose that Rowan pursues a <em class="emphasis">mixed strategy</em> a probability distribution of their choices <span class="process-math">\(\p\)</span> where</div>
 <div class="displaymath process-math">
 \begin{equation*}
-P^\top  = \begin{bmatrix} p_1 \\ p_2 \\ \vdots \\ p_n\end{bmatrix}, p_i\geq 0, \displaystyle \sum_{i=1}^n p_i=1.
+\p^\top  = \begin{bmatrix} p_1 \\ p_2 \\ \vdots \\ p_n\end{bmatrix}, p_i\geq 0, \displaystyle \sum_{i=1}^n p_i=1.
 \end{equation*}
 </div>
-</div> <div class="para" id="activity-rowcol-2-1-2">If Colleen chooses column <span class="process-math">\(j\)</span> as her strategy, what is <span class="process-math">\(E_j(P)\)</span> the expected value of Rowan’s earnings?</div> <ol class="upper-alpha cols2" id="activity-rowcol-2-1-3">
-<li id="activity-rowcol-2-1-3-1"><div class="para" id="activity-rowcol-2-1-3-1-1"><span class="process-math">\(E_j(P) = \displaystyle \sum_{i=1}^n a_{ij}\text{.}\)</span></div></li>
-<li id="activity-rowcol-2-1-3-2"><div class="para" id="activity-rowcol-2-1-3-2-1"><span class="process-math">\(E_j(P) = \displaystyle \sum_{i=1}^n p_i\text{.}\)</span></div></li>
-<li id="activity-rowcol-2-1-3-3"><div class="para" id="activity-rowcol-2-1-3-3-1"><span class="process-math">\(E_j(P) = \displaystyle \sum_{i=1}^n a_{ij}p_i\text{.}\)</span></div></li>
-<li id="activity-rowcol-2-1-3-4"><div class="para" id="activity-rowcol-2-1-3-4-1"><span class="process-math">\(E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}\text{.}\)</span></div></li>
-<li id="activity-rowcol-2-1-3-5"><div class="para" id="activity-rowcol-2-1-3-5-1"><span class="process-math">\(E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n p_i\text{.}\)</span></div></li>
-<li id="activity-rowcol-2-1-3-6"><div class="para" id="activity-rowcol-2-1-3-6-1"><span class="process-math">\(E_j(P) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}p_i\text{.}\)</span></div></li>
+</div> <div class="para" id="activity-rowcol-2-1-2">If Colleen chooses column <span class="process-math">\(j\)</span> as her strategy, what is <span class="process-math">\(E_j(\p)\)</span> the expected value of Rowan’s earnings?</div> <ol class="upper-alpha cols2" id="activity-rowcol-2-1-3">
+<li id="activity-rowcol-2-1-3-1"><div class="para" id="activity-rowcol-2-1-3-1-1"><span class="process-math">\(E_j(\p) = \displaystyle \sum_{i=1}^n a_{ij}\text{.}\)</span></div></li>
+<li id="activity-rowcol-2-1-3-2"><div class="para" id="activity-rowcol-2-1-3-2-1"><span class="process-math">\(E_j(\p) = \displaystyle \sum_{i=1}^n p_i\text{.}\)</span></div></li>
+<li id="activity-rowcol-2-1-3-3"><div class="para" id="activity-rowcol-2-1-3-3-1"><span class="process-math">\(E_j(\p) = \displaystyle \sum_{i=1}^n a_{ij}p_i\text{.}\)</span></div></li>
+<li id="activity-rowcol-2-1-3-4"><div class="para" id="activity-rowcol-2-1-3-4-1"><span class="process-math">\(E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}\text{.}\)</span></div></li>
+<li id="activity-rowcol-2-1-3-5"><div class="para" id="activity-rowcol-2-1-3-5-1"><span class="process-math">\(E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n p_i\text{.}\)</span></div></li>
+<li id="activity-rowcol-2-1-3-6"><div class="para" id="activity-rowcol-2-1-3-6-1"><span class="process-math">\(E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}p_i\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="activity-rowcol-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-rowcol-3-1-1">If Colleen somehow figures out Rowan’s strategy <span class="process-math">\(P\text{,}\)</span> which column <span class="process-math">\(j\)</span> should she choose?</div></article><article class="task exercise-like" id="activity-rowcol-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-rowcol-4-1-1">Rowan is aware that Colleen is a sharp player can likely figure out <span class="process-math">\(P\text{.}\)</span>  How then should he choose his strategy? <span class="process-math">\(P\text{?}\)</span>
+<div class="para" id="activity-rowcol-3-1-1">If Colleen somehow figures out Rowan’s strategy <span class="process-math">\(\p\text{,}\)</span> which column <span class="process-math">\(j\)</span> should she choose?</div></article><article class="task exercise-like" id="activity-rowcol-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-rowcol-4-1-1">Rowan is aware that Colleen is a sharp player can likely figure out <span class="process-math">\(\p\text{.}\)</span>  How then should he choose his strategy? <span class="process-math">\(\p\text{?}\)</span>
 </div> <ol class="upper-alpha cols2" id="activity-rowcol-4-1-2">
-<li id="activity-rowcol-4-1-2-1"><div class="para" id="activity-rowcol-4-1-2-1-1">Maximize <span class="process-math">\(u=\displaystyle \max_{1\leq j\leq m}E_j(P)\text{.}\)</span>
+<li id="activity-rowcol-4-1-2-1"><div class="para" id="activity-rowcol-4-1-2-1-1">Maximize <span class="process-math">\(u=\displaystyle \max_{1\leq j\leq m}E_j(\p)\text{.}\)</span>
 </div></li>
-<li id="activity-rowcol-4-1-2-2"><div class="para" id="activity-rowcol-4-1-2-2-1">Maximize <span class="process-math">\(u=\displaystyle \min_{1\leq j\leq m}E_j(P)\text{.}\)</span>
+<li id="activity-rowcol-4-1-2-2"><div class="para" id="activity-rowcol-4-1-2-2-1">Maximize <span class="process-math">\(u=\displaystyle \min_{1\leq j\leq m}E_j(\p)\text{.}\)</span>
 </div></li>
-<li id="activity-rowcol-4-1-2-3"><div class="para" id="activity-rowcol-4-1-2-3-1">Minimize <span class="process-math">\(u=\displaystyle \max_{1\leq j\leq m}E_j(P)\text{.}\)</span>
+<li id="activity-rowcol-4-1-2-3"><div class="para" id="activity-rowcol-4-1-2-3-1">Minimize <span class="process-math">\(u=\displaystyle \max_{1\leq j\leq m}E_j(\p)\text{.}\)</span>
 </div></li>
-<li id="activity-rowcol-4-1-2-4"><div class="para" id="activity-rowcol-4-1-2-4-1">Minimize <span class="process-math">\(u=\displaystyle \min_{1\leq j\leq m}E_j(P)\text{.}\)</span>
+<li id="activity-rowcol-4-1-2-4"><div class="para" id="activity-rowcol-4-1-2-4-1">Minimize <span class="process-math">\(u=\displaystyle \min_{1\leq j\leq m}E_j(\p)\text{.}\)</span>
 </div></li>
 </ol></article><article class="task exercise-like" id="activity-rowcol-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para logical" id="activity-rowcol-5-1-1">
-<div class="para">At the exact same time, Colleen is pursuing her own mixed strategy <span class="process-math">\(Q\text{:}\)</span>
+<div class="para">At the exact same time, Colleen is pursuing her own mixed strategy <span class="process-math">\(\q\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
-Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0, \displaystyle \sum_{j=1}^m q_j=1.
+\q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0, \displaystyle \sum_{j=1}^m q_j=1.
 \end{equation*}
 </div>
-</div> <div class="para" id="activity-rowcol-5-1-2">If Rowan chooses row <span class="process-math">\(i\)</span> as his strategy, what is <span class="process-math">\(F_i(Q)\)</span> the expected value of Colleen’s losses?</div> <ol class="upper-alpha cols2" id="activity-rowcol-5-1-3">
-<li id="activity-rowcol-5-1-3-1"><div class="para" id="activity-rowcol-5-1-3-1-1"><span class="process-math">\(F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
-<li id="activity-rowcol-5-1-3-2"><div class="para" id="activity-rowcol-5-1-3-2-1"><span class="process-math">\(F_i(Q) = \displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
-<li id="activity-rowcol-5-1-3-3"><div class="para" id="activity-rowcol-5-1-3-3-1"><span class="process-math">\(F_i(Q) = \displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
-<li id="activity-rowcol-5-1-3-4"><div class="para" id="activity-rowcol-5-1-3-4-1"><span class="process-math">\(F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
-<li id="activity-rowcol-5-1-3-5"><div class="para" id="activity-rowcol-5-1-3-5-1"><span class="process-math">\(F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
-<li id="activity-rowcol-5-1-3-6"><div class="para" id="activity-rowcol-5-1-3-6-1"><span class="process-math">\(F_i(Q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
+</div> <div class="para" id="activity-rowcol-5-1-2">If Rowan chooses row <span class="process-math">\(i\)</span> as his strategy, what is <span class="process-math">\(F_i(\q)\)</span> the expected value of Colleen’s losses?</div> <ol class="upper-alpha cols2" id="activity-rowcol-5-1-3">
+<li id="activity-rowcol-5-1-3-1"><div class="para" id="activity-rowcol-5-1-3-1-1"><span class="process-math">\(F_i(\q) = \displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
+<li id="activity-rowcol-5-1-3-2"><div class="para" id="activity-rowcol-5-1-3-2-1"><span class="process-math">\(F_i(\q) = \displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
+<li id="activity-rowcol-5-1-3-3"><div class="para" id="activity-rowcol-5-1-3-3-1"><span class="process-math">\(F_i(\q) = \displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
+<li id="activity-rowcol-5-1-3-4"><div class="para" id="activity-rowcol-5-1-3-4-1"><span class="process-math">\(F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
+<li id="activity-rowcol-5-1-3-5"><div class="para" id="activity-rowcol-5-1-3-5-1"><span class="process-math">\(F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
+<li id="activity-rowcol-5-1-3-6"><div class="para" id="activity-rowcol-5-1-3-6-1"><span class="process-math">\(F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="activity-rowcol-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-rowcol-6-1-1">If Rowan somehow figures out Colleen’s strategy <span class="process-math">\(Q\text{,}\)</span> which row <span class="process-math">\(i\)</span> should he choose?</div></article><article class="task exercise-like" id="activity-rowcol-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-rowcol-7-1-1">Colleen is also aware that Rowan is a sharp player can likely figure out <span class="process-math">\(Q\text{.}\)</span>  How then should she choose her strategy? <span class="process-math">\(Q\text{?}\)</span>
+<div class="para" id="activity-rowcol-6-1-1">If Rowan somehow figures out Colleen’s strategy <span class="process-math">\(\q\text{,}\)</span> which row <span class="process-math">\(i\)</span> should he choose?</div></article><article class="task exercise-like" id="activity-rowcol-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-rowcol-7-1-1">Colleen is also aware that Rowan is a sharp player can likely figure out <span class="process-math">\(\q\text{.}\)</span>  How then should she choose her strategy? <span class="process-math">\(\q\text{?}\)</span>
 </div> <ol class="upper-alpha cols2" id="activity-rowcol-7-1-2">
-<li id="activity-rowcol-7-1-2-1"><div class="para" id="activity-rowcol-7-1-2-1-1">Maximize <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
+<li id="activity-rowcol-7-1-2-1"><div class="para" id="activity-rowcol-7-1-2-1-1">Maximize <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}F_i(\q)\text{.}\)</span>
 </div></li>
-<li id="activity-rowcol-7-1-2-2"><div class="para" id="activity-rowcol-7-1-2-2-1">Maximize <span class="process-math">\(v=\displaystyle \min_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
+<li id="activity-rowcol-7-1-2-2"><div class="para" id="activity-rowcol-7-1-2-2-1">Maximize <span class="process-math">\(v=\displaystyle \min_{1\leq i\leq n}F_i(\q)\text{.}\)</span>
 </div></li>
-<li id="activity-rowcol-7-1-2-3"><div class="para" id="activity-rowcol-7-1-2-3-1">Minimize <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
+<li id="activity-rowcol-7-1-2-3"><div class="para" id="activity-rowcol-7-1-2-3-1">Minimize <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}F_i(\q)\text{.}\)</span>
 </div></li>
-<li id="activity-rowcol-7-1-2-4"><div class="para" id="activity-rowcol-7-1-2-4-1">Minimize <span class="process-math">\(v=\displaystyle \min_{1\leq i\leq n}F_i(Q)\text{.}\)</span>
+<li id="activity-rowcol-7-1-2-4"><div class="para" id="activity-rowcol-7-1-2-4-1">Minimize <span class="process-math">\(v=\displaystyle \min_{1\leq i\leq n}F_i(\q)\text{.}\)</span>
 </div></li>
-</ol></article><article class="task exercise-like" id="activity-rowcol-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="activity-rowcol-8-1-1">Consider the primal-dual program encoded by the tableau:</div> <div class="para" id="activity-rowcol-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
+</ol></article><article class="task exercise-like" id="task-gametableau"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="task-gametableau-1-1">Consider the primal-dual problems encoded by the tableau:</div> <div class="para" id="task-gametableau-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{v}\)</span></td>
@@ -733,7 +748,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-rowcol-8-1-3">Write out both the primal and dual problems encoded by this tableau.  (Including all equalities, inequalities, and the objective functions)</div></article><article class="task exercise-like" id="activity-rowcol-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+</table></div></div> <div class="para" id="task-gametableau-1-3">Write out both the primal and dual problems encoded by this tableau.  (Including all equalities, inequalities, and the objective functions)</div></article><article class="task exercise-like" id="activity-rowcol-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="activity-rowcol-9-1-1">What primal constraint does the first row represent?  How does it relate to Colleen’s strategy?</div></article><article class="task exercise-like" id="activity-rowcol-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
 <div class="para" id="activity-rowcol-10-1-1">What primal constraint do the next <span class="process-math">\(n\)</span> rows represent?  How does it relate to Colleen’s strategy?</div></article><article class="task exercise-like" id="activity-rowcol-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
 <div class="para" id="activity-rowcol-11-1-1">What is the primal objective function?  How does it relate to Colleen’s strategy?</div></article><article class="task exercise-like" id="activity-rowcol-12"><h4 class="heading"><span class="codenumber">(k)</span></h4>
@@ -1015,7 +1030,7 @@ Q  = \begin{bmatrix} q_1 \amp q_2 \amp \cdots \amp q_m \end{bmatrix}, q_j\geq 0,
 </ol></article><article class="task exercise-like" id="sec-minmaxgames-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-minmaxgames-6-4-1-1">What is <span class="process-math">\(D\text{?}\)</span>  What are <span class="process-math">\(\ec{u}, \ec{v}\text{?}\)</span>
 </div></article><article class="task exercise-like" id="sec-minmaxgames-6-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-minmaxgames-6-5-1-1">After we delete the appropriate rows and columns, what could be said about the resulting primal dual program?</div></article><article class="task exercise-like" id="sec-minmaxgames-6-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-minmaxgames-6-5-1-1">After we delete the appropriate rows and columns, what could be said about the resulting primal-dual problems?</div></article><article class="task exercise-like" id="sec-minmaxgames-6-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="sec-minmaxgames-6-6-1-1">Would it make a difference if we pivoted by <span class="process-math">\(**\)</span> first then <span class="process-math">\(*\text{?}\)</span>
 </div></article></article><article class="activity project-like" id="sec-minmaxgames-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>

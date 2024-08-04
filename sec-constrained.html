@@ -211,12 +211,15 @@ window.MathJax = {
 #sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
 #sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
 #sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
-#sec-vonneumann-2-2-1-2 { counter-set: sec-vonneumann-2-2-1-2 0; }
-#sec-vonneumann-2-2-1-2 > li::marker { content: ""counter(sec-vonneumann-2-2-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-2-1-2 > li { counter-increment: sec-vonneumann-2-2-1-2; }
-#sec-vonneumann-2-3-1-2 { counter-set: sec-vonneumann-2-3-1-2 0; }
-#sec-vonneumann-2-3-1-2 > li::marker { content: ""counter(sec-vonneumann-2-3-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-3-1-2 > li { counter-increment: sec-vonneumann-2-3-1-2; }
+#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
+#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
+#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
+#sec-vonneumann-4-2-1-2 { counter-set: sec-vonneumann-4-2-1-2 0; }
+#sec-vonneumann-4-2-1-2 > li::marker { content: ""counter(sec-vonneumann-4-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-2-1-2 > li { counter-increment: sec-vonneumann-4-2-1-2; }
+#sec-vonneumann-4-3-1-2 { counter-set: sec-vonneumann-4-3-1-2 0; }
+#sec-vonneumann-4-3-1-2 > li::marker { content: ""counter(sec-vonneumann-4-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-3-1-2 > li { counter-increment: sec-vonneumann-4-3-1-2; }
 #sec-chance-2-2-1-2 { counter-set: sec-chance-2-2-1-2 0; }
 #sec-chance-2-2-1-2 > li::marker { content: ""counter(sec-chance-2-2-1-2,upper-alpha)"."; }
 #sec-chance-2-2-1-2 > li { counter-increment: sec-chance-2-2-1-2; }
@@ -419,7 +422,7 @@ true);
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
@@ -471,7 +474,7 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="super-constrained-geometry-1"><div class="para logical" id="super-constrained-geometry-1-1">
-<div class="para">Suppose we wanted to solve the linear program:</div>
+<div class="para">Suppose we wanted to solve the linear optimization problem:</div>
 <div class="displaymath process-math" id="super-constrained-geometry-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x})= x+y+z  &amp;   \\
@@ -857,7 +860,7 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-constrained-4-1-1"><div class="para logical" id="sec-constrained-4-1-1-1">
-<div class="para">Solve the linear program:</div>
+<div class="para">Solve the linear optimization problem:</div>
 <div class="displaymath process-math" id="sec-constrained-4-1-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   \\
@@ -870,7 +873,7 @@ x, y, z&amp; \geq  0
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-constrained-5-1"><div class="para logical" id="sec-constrained-5-1-1">
-<div class="para">Consider the linear program:</div>
+<div class="para">Consider the linear optimization problem:</div>
 <div class="displaymath process-math" id="sec-constrained-5-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x})= 2x+y-2z  &amp;   \\
@@ -989,7 +992,7 @@ x, y, z&amp; \geq  0
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="sec-constrained-6-1-1">
-<div class="para">Solve the linear program:</div>
+<div class="para">Solve the linear optimization problem:</div>
 <div class="displaymath process-math" id="sec-constrained-6-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   \\
@@ -1003,7 +1006,7 @@ x, y, z&amp; \geq  0
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="sec-constrained-7-1-1">
-<div class="para">Solve the linear program:</div>
+<div class="para">Solve the linear optimization problem:</div>
 <div class="displaymath process-math" id="sec-constrained-7-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x})= x+2y+z  &amp;   \\

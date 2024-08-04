@@ -15,7 +15,7 @@
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
 </h3>
 <div class="introduction">
-<div class="para">Consider the primal maximization program for a max flow problem for a capacitated network with unique source <span class="process-math">\(v_s\)</span> and unique sink <span class="process-math">\(v_d\text{:}\)</span>
+<div class="para">Consider the primal maximization problem for a max flow problem for a capacitated network with unique source <span class="process-math">\(v_s\)</span> and unique sink <span class="process-math">\(v_d\text{:}\)</span>
 </div> <div class="para logical"><div class="displaymath process-math">
 \begin{align*}
 \textbf{Maximize: }  \displaystyle \sum_{i} x_{id}\\
@@ -26,7 +26,7 @@ x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 </div></div>
 </div>
 <article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para">Consider the dual program for this problem where <span class="process-math">\(\mu_{j}\)</span> is the unconstrained dual variable for the vertex equality constraint and the <span class="process-math">\(y_{ij}\)</span> is the dual variable for the capacity constraint.  Verify that this program may be written as</div> <div class="para logical">
+<div class="para">Consider the dual problem for this maximization problem where <span class="process-math">\(\mu_{j}\)</span> is the unconstrained dual variable for the vertex equality constraint and the <span class="process-math">\(y_{ij}\)</span> is the dual variable for the capacity constraint.  Verify that this problem may be written as</div> <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
 \textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}\\
@@ -56,7 +56,7 @@ y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 </div> <div class="para">For <span class="process-math">\(v_i, v_j\in V_2\text{,}\)</span> what is <span class="process-math">\(y_{ij}\text{?}\)</span>
 </div> <div class="para">For <span class="process-math">\(v_i\in V_1, v_j\in V_2\text{,}\)</span> what is <span class="process-math">\(y_{ij}\text{?}\)</span>
 </div> <div class="para">Can any cut of <span class="process-math">\(N\)</span> be modeled this way?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para">What is the capacity of the above cut?  How does that relate to the dual program?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">What is the capacity of the above cut?  How does that relate to the dual problem?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para">Prove that the maximum flow through a network is bounded above by the minimum cut capacity.</div></article></article><span class="incontext"><a class="internal" href="sec-maxflowmincut.html#activity-dualflow">in-context</a></span>
 </body>
 </html>

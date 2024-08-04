@@ -223,12 +223,15 @@ sagecell.makeSagecell({
 #sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
 #sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
 #sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
-#sec-vonneumann-2-2-1-2 { counter-set: sec-vonneumann-2-2-1-2 0; }
-#sec-vonneumann-2-2-1-2 > li::marker { content: ""counter(sec-vonneumann-2-2-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-2-1-2 > li { counter-increment: sec-vonneumann-2-2-1-2; }
-#sec-vonneumann-2-3-1-2 { counter-set: sec-vonneumann-2-3-1-2 0; }
-#sec-vonneumann-2-3-1-2 > li::marker { content: ""counter(sec-vonneumann-2-3-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-3-1-2 > li { counter-increment: sec-vonneumann-2-3-1-2; }
+#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
+#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
+#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
+#sec-vonneumann-4-2-1-2 { counter-set: sec-vonneumann-4-2-1-2 0; }
+#sec-vonneumann-4-2-1-2 > li::marker { content: ""counter(sec-vonneumann-4-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-2-1-2 > li { counter-increment: sec-vonneumann-4-2-1-2; }
+#sec-vonneumann-4-3-1-2 { counter-set: sec-vonneumann-4-3-1-2 0; }
+#sec-vonneumann-4-3-1-2 > li::marker { content: ""counter(sec-vonneumann-4-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-3-1-2 > li { counter-increment: sec-vonneumann-4-3-1-2; }
 #sec-chance-2-2-1-2 { counter-set: sec-chance-2-2-1-2 0; }
 #sec-chance-2-2-1-2 > li::marker { content: ""counter(sec-chance-2-2-1-2,upper-alpha)"."; }
 #sec-chance-2-2-1-2 > li { counter-increment: sec-chance-2-2-1-2; }
@@ -431,7 +434,7 @@ true);
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
@@ -557,7 +560,7 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="sec-dualpivot-5-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-dualpivot-5-1-1">If a primal problem is infeasible, what <em class="emphasis">could</em> be true of the dual program?</div>
+<div class="para" id="sec-dualpivot-5-1-1">If a primal problem is infeasible, what <em class="emphasis">could</em> be true of the dual problem?</div>
 <ol class="upper-alpha" id="sec-dualpivot-5-1-2">
 <li id="sec-dualpivot-5-1-2-1"><div class="para" id="sec-dualpivot-5-1-2-1-1">The dual problem has an optimal solution.</div></li>
 <li id="sec-dualpivot-5-1-2-2"><div class="para" id="sec-dualpivot-5-1-2-2-1">The dual problem is unbounded below.</div></li>
@@ -600,7 +603,7 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article><article class="task exercise-like" id="sec-dualpivot-5-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-dualpivot-5-3-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual program.</div></article><article class="task exercise-like" id="sec-dualpivot-5-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-dualpivot-5-3-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual problem.</div></article><article class="task exercise-like" id="sec-dualpivot-5-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-dualpivot-5-4-1-1">Verify that the primal problem is infeasible.</div> <div class="para" id="sec-dualpivot-5-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b2 r2 l0 t0 lines"></td>
@@ -638,10 +641,10 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div></article><article class="task exercise-like" id="sec-dualpivot-5-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-dualpivot-5-5-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual program.</div></article></article><article class="activity project-like" id="sec-dualpivot-6"><h3 class="heading">
+<div class="para" id="sec-dualpivot-5-5-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual problem.</div></article></article><article class="activity project-like" id="sec-dualpivot-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-dualpivot-6-1"><div class="para" id="sec-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual programs.</div></div>
+<div class="introduction" id="sec-dualpivot-6-1"><div class="para" id="sec-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual problems.</div></div>
 <article class="task exercise-like" id="sec-dualpivot-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="sec-dualpivot-6-2-1-1">
 <div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(x_j\)</span> were allowed to be be any value including negative values, What must be true about <span class="process-math">\(s_j\text{?}\)</span>  (If <span class="process-math">\(x_j\)</span> is unconstrained, what can we say about the hyperplane <span class="process-math">\(-x_j=0\)</span> as a bounding hyperplane?)</div>

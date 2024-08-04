@@ -223,12 +223,15 @@ sagecell.makeSagecell({
 #sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
 #sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
 #sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
-#sec-vonneumann-2-2-1-2 { counter-set: sec-vonneumann-2-2-1-2 0; }
-#sec-vonneumann-2-2-1-2 > li::marker { content: ""counter(sec-vonneumann-2-2-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-2-1-2 > li { counter-increment: sec-vonneumann-2-2-1-2; }
-#sec-vonneumann-2-3-1-2 { counter-set: sec-vonneumann-2-3-1-2 0; }
-#sec-vonneumann-2-3-1-2 > li::marker { content: ""counter(sec-vonneumann-2-3-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-3-1-2 > li { counter-increment: sec-vonneumann-2-3-1-2; }
+#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
+#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
+#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
+#sec-vonneumann-4-2-1-2 { counter-set: sec-vonneumann-4-2-1-2 0; }
+#sec-vonneumann-4-2-1-2 > li::marker { content: ""counter(sec-vonneumann-4-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-2-1-2 > li { counter-increment: sec-vonneumann-4-2-1-2; }
+#sec-vonneumann-4-3-1-2 { counter-set: sec-vonneumann-4-3-1-2 0; }
+#sec-vonneumann-4-3-1-2 > li::marker { content: ""counter(sec-vonneumann-4-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-3-1-2 > li { counter-increment: sec-vonneumann-4-3-1-2; }
 #sec-chance-2-2-1-2 { counter-set: sec-chance-2-2-1-2 0; }
 #sec-chance-2-2-1-2 > li::marker { content: ""counter(sec-chance-2-2-1-2,upper-alpha)"."; }
 #sec-chance-2-2-1-2 > li { counter-increment: sec-chance-2-2-1-2; }
@@ -431,7 +434,7 @@ true);
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
@@ -530,7 +533,7 @@ true);
 </h4>
 <div class="introduction" id="subsec-maxflow-2-1">
 <div class="para" id="subsec-maxflow-2-1-1">Suppose we have a capacitated network with a unique fixed source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{.}\)</span>
-</div> <div class="para" id="subsec-maxflow-2-1-2">We wish to define a maximization linear program with decision variables <span class="process-math">\(x_{ij}, v_i, v_j\in V\text{.}\)</span>
+</div> <div class="para" id="subsec-maxflow-2-1-2">We wish to define a maximization linear optimization problem with decision variables <span class="process-math">\(x_{ij}, v_i, v_j\in V\text{.}\)</span>
 </div>
 </div>
 <article class="task exercise-like" id="subsec-maxflow-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -562,7 +565,7 @@ print(P.optimal_value())
 </script></pre>
 </div></article><article class="task exercise-like" id="subsec-maxflow-2-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
 <div class="para" id="subsec-maxflow-2-8-1-1">Let <span class="process-math">\(\mu_i\)</span> denote the dual  variable for <a href="sec-networkflow.html#exploration-flow" class="xref" data-knowl="./knowl/xref/exploration-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.1.1">Exploration 7.1.1</a> associated with vertex <span class="process-math">\(i\)</span> and let <span class="process-math">\(y_{ij}\)</span> denote the dual  variable associated with edge <span class="process-math">\((v_i, v_j)\text{.}\)</span>
-</div> <div class="para" id="subsec-maxflow-2-8-1-2">Describe the dual min program.</div></article></article></section></section></div>
+</div> <div class="para" id="subsec-maxflow-2-8-1-2">Describe the dual min problem.</div></article></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-flow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-maxflowmincut.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

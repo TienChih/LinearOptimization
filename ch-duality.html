@@ -223,12 +223,15 @@ sagecell.makeSagecell({
 #sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
 #sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
 #sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
-#sec-vonneumann-2-2-1-2 { counter-set: sec-vonneumann-2-2-1-2 0; }
-#sec-vonneumann-2-2-1-2 > li::marker { content: ""counter(sec-vonneumann-2-2-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-2-1-2 > li { counter-increment: sec-vonneumann-2-2-1-2; }
-#sec-vonneumann-2-3-1-2 { counter-set: sec-vonneumann-2-3-1-2 0; }
-#sec-vonneumann-2-3-1-2 > li::marker { content: ""counter(sec-vonneumann-2-3-1-2,upper-alpha)"."; }
-#sec-vonneumann-2-3-1-2 > li { counter-increment: sec-vonneumann-2-3-1-2; }
+#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
+#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
+#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
+#sec-vonneumann-4-2-1-2 { counter-set: sec-vonneumann-4-2-1-2 0; }
+#sec-vonneumann-4-2-1-2 > li::marker { content: ""counter(sec-vonneumann-4-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-2-1-2 > li { counter-increment: sec-vonneumann-4-2-1-2; }
+#sec-vonneumann-4-3-1-2 { counter-set: sec-vonneumann-4-3-1-2 0; }
+#sec-vonneumann-4-3-1-2 > li::marker { content: ""counter(sec-vonneumann-4-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-4-3-1-2 > li { counter-increment: sec-vonneumann-4-3-1-2; }
 #sec-chance-2-2-1-2 { counter-set: sec-chance-2-2-1-2 0; }
 #sec-chance-2-2-1-2 > li::marker { content: ""counter(sec-chance-2-2-1-2,upper-alpha)"."; }
 #sec-chance-2-2-1-2 > li { counter-increment: sec-chance-2-2-1-2; }
@@ -431,7 +434,7 @@ true);
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation/Assignment Problem</span></a></div>
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
 <li class="toc-item toc-section">
@@ -479,7 +482,7 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-duality"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">4</span><span class="space"> </span><span class="title">Duality</span>
 </h2>
-<section class="introduction" id="ch-duality-2"><div class="para" id="ch-duality-2-1">One of the fundamental ideas of linear optimization is that of duality.  We saw a precursor to this idea in both <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.3">Activity 2.1.3</a> and <a href="sec-pivot.html#activity-insurance" class="xref" data-knowl="./knowl/xref/activity-insurance.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.7">Activity 2.1.7</a>. The same initial scenario produces both a maximization and a minimization problem.  What does this mean, why does this occur, and what are the relations between these problems?</div> <div class="para" id="ch-duality-2-2">In this chapter, we define and explore the notion of duality in linear optimization.  In <a href="sec-sensitivity.html" class="internal" title="Section 4.1: Sensitivity Analysis">Section 4.1</a> we give a geometric and algebraic interpretation of dual variables and the dual problem.  In <a href="sec-dualitytheory.html" class="internal" title="Section 4.2: Duality Theory">Section 4.2</a>, we use geometric reasoning to guide proofs of powerful duality results connecting the primal and dual problems.  Finally, in <a href="sec-dualpivot.html" class="internal" title="Section 4.3: Tucker Tableau’s, Pivots and Duality">Section 4.3</a>, we show how the simplex pivot from <a href="ch-simplex.html" class="internal" title="Chapter 2: The Simplex Algorithm">Chapter 2</a> applies geometrically and computationally to the dual problem, and show how Tucker tableaus encode the dual problem.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-duality-2"><div class="para" id="ch-duality-2-1">One of the fundamental ideas of linear optimization is that of duality.  We saw a precursor to this idea in both <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.3">Activity 2.1.3</a> and <a href="sec-pivot.html#activity-insurance" class="xref" data-knowl="./knowl/xref/activity-insurance.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.7">Activity 2.1.7</a>. The same initial scenario produces both a maximization and a minimization problem.  What does this mean, why does this occur, and what are the relations between these problems?</div> <div class="para" id="ch-duality-2-2">In this chapter, we define and explore the notion of duality in linear optimization.  In <a href="sec-sensitivity.html" class="internal" title="Section 4.1: Sensitivity Analysis">Section 4.1</a> we give a geometric and algebraic interpretation of dual variables and the dual problem.  In <a href="sec-dualitytheory.html" class="internal" title="Section 4.2: Duality Theory">Section 4.2</a> we use geometric reasoning to guide proofs of powerful duality results connecting the primal and dual problems.  Finally, in <a href="sec-dualpivot.html" class="internal" title="Section 4.3: Tucker Tableau’s, Pivots and Duality">Section 4.3</a> we show how the simplex pivot from <a href="ch-simplex.html" class="internal" title="Chapter 2: The Simplex Algorithm">Chapter 2</a> applies geometrically and computationally to the dual problem, and show how Tucker tableaus encode the dual problem.</div></section><nav class="summary-links"><ul>
 <li><a href="sec-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></li>
 <li><a href="sec-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></li>
 <li><a href="sec-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></li>
