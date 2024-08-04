@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<preface>
+  <title>Our goals</title>
+
+<p> 
+  This is an inquiry-learning based textbook on introductory linear
+  optimization.  Linear optimization, or linear programming, is a common
+  but not ubiquitos course at the undergraduate level, with somewhat
+  divergent goals and approaches.  There are numerous texts for linear optimization,
+  so it what is it that this book offers that others do not?
+</p> 
+
+<p>
+  Linear optimization as a course serves a variety of disciplines,
+  and can be taught in a number of different approaches.  In a math
+  curriculum, while it has linear algebra as a pre-requisite, it generally
+  lies in the mid-high tier level of courses, prior to classes like abstract
+  algebra and real analysis, but past calculus and linear algebra.  This is
+  a subject rich with both beautiful mathematics, as well as numerous applications
+  to economics, computer science, operations research, sociology and other 
+  areas.  So this course is an excellent choice for a variety of students,
+  and can serve the needs of many.
+</p>
+
+<p> 
+  The presentation of linear optimization can be computation or theory focused, and both approaches would generally
+  be an extention of a linear algebra course which also generally has those two flavors.
+  Either way, the material is often presented in a way that is very technical from a linear algebraiac stand-point.
+  For a student, learning the algorithms, techniques, theorems and proofs can be
+  overwhelming.  There are numerous, technically intricate arguments, and
+  the complexity of the associated algebra can subsume the intuition behind this
+  material, and render much of the content opaque.
+</p>
+
+<p>
+  I had a similar experience working with linear optimization as a 
+  graduate student, and having never taken an undergraduate linear optimization
+  course, found myself having to play <q>catch-up</q>.  It didn't help
+  that different text and resources presented the content in very different ways,
+  and so unpacking the algorithms and theorems was a challenge.  I
+  was never satisfied with the idea that it was sufficient to memorize
+  an algorithm or even prove the theorems, what I was looking for was an intuitive
+  way to think about this subject, in a way that makes the results intuitive,
+  natural, even expected.
+</p> 
+  
+<p>
+  What helped me then was recontextualizing all of the key ideas of linear optimization
+  in geometric terms.  By centering the geometry underlying each scenario, the 
+  we can allow our intuition to guide things forward, and the flow of the material proceeds
+  naturally.  So this book begins with geometric realizations, translating that
+  geometry into linear algebra, and proceeding from there to computations, but each theorem, formula
+  and computation can be understood on this level.
+</p>
+
+<p>
+  Something that this approach allows is an easier entry-point for students.
+  With geometric motivation, students have an easier time anticipating and predicting
+  what may be true, and then this intuition can then be formalized with the appropriate statements and proofs.
+  A friend from graduate school, Dr. Michael Severino, is an avid rock climber and gave the
+  analogy that in mathematics, intuition was knowing where on the cliff to
+  grab next, and rigor was the rope keeping you from falling.  This book aims to present
+  both intuition and rigor in a way that lets all students propel to the top of this cliff.
+</p>
+
+<p>
+  Presenting the content with this framework lends itself well to teaching
+  this course in an inquiry based manner.  Numerous studies have been done 
+  showing the efficacy of inquiry learning, and the longer term understanding
+  students develop from learning this way.  I have taught numerous courses in an
+  inquiry based manner, and have authored inquiry learning materials, and the key to succesful course is appropriate scafolding.
+  Presenting the right mixture of intuitive exploration, rigorous argumentation, and text
+  or instructor intervention.
+</p>
+
+<p>
+  As of the writing of this text, there is a
+  renaissance of open source technology tools aimed at visualizing, computing or
+  demonstrating mathematical ideas in accesible, interactive ways. Use of this technology can
+  greatly enhance the ability for students to visualize and intuit the ideas being presented in a class,
+  or side-step tedious computations, so that students can focus their attention and time on the conceptual
+  principles of a course.
+</p>
+
+<p>
+  These are the thoughts that I had in mind when I was first asked to teach linear optimization at Oxford College
+  of Emory University.  Oxford College is a small, teaching-focused, liberal arts college of Emory University of about 950 students.  We teach
+  first and second year students who, upon completing Oxford's liberal arts curriculum, proceed to Atlanta to complete their
+  bachelor degrees.  Given the inquiry driven principles of the college, and all of the above thoughts, I decided to teach
+  this class in an inquiry manner, incorporating the ideas I've written about, and through the semester wrote a set of inquiry learning
+  materials, which serves of the basis of the document you are currently reading.
+</p>
+
+
+
+<p> 
+  Given the principles which informed my design choices, and the ways in which a text for an inquiry based course differs substantially
+  from a more traditional textbook, there are some things to keep in mind as you go through this text:
+
+<ul>
+  <li>
+    <p> <em> This book is written with the assumption that
+  students have taken a linear algebra course.</em> Linear algebra is the
+  language in which we discuss the content of this course.  There is some variation in
+  how linear algebra is presented, just as there is variation in linear optimization
+  presentations.  For anyone requiring a quick review of linear algebra or an
+  approach to linear algebra is that this geometry forward, I highly recommend Dr. David
+  Austin's <em>Understanding Linear Algebra</em> <url href="https://understandinglinearalgebra.org/home.html" />.
+  This book was motivated by very similar thoughts to the one's I had, and are thereby goverened by
+  similar philosophies.
+   </p>
+
+  </li>
+
+  <li>
+    <p> <em> This book is presented as a collection of explorations and activities meant to be
+    done by the students in class.</em> The initial explorations and activities are generally more motivational, followed by 
+    activities meant to rigorously crytsalize the intuition students develop throughout a lesson.  Later activities reinforce these ideas or place them
+    in the broader context of the course.
+    </p> 
+    <p>
+      These activities are meant to be done in
+      groups by the students, giving them the oppourtunity to discuss their ideas, let their intuition guide them, and develop their own reasoning skills.
+      I recommend groups of about 4-6, but this is not set in stone, and it should be possible for someone to work on their own, or even self-study with this text.
+      After discussing within their groups, the class comes together to discuss as a single entity.
+      I recommend eaves dropping on group conversations to ensure active participation and equitable practices within groups.  It may be
+      neccesary to nudge students torward or away from a direction, or to highlight specific things they, or another group said, but as much as
+      possible, try to place agency with the students' hands.  Students are far better motivated when they take ownership of their own learning.
+    </p>
+    <p>
+      It is highly recommended that between classes, students review the activities done in class, and rewrite them to be more cohesive.
+      Frequently, activities will be broken down into a sequence of parts or tasks, each of which represents grabbing a new hand hold on the
+      cliff or adjusting the harness to prevent falling (hopefully I am using this metaphor correctly, I am not a rock climber).
+    </p>
+    <p>
+      Another thing to keep in mind is timing.  One challenge of inquiry learning is the amount of time needed to cover content appropriately.
+      By taking a more active role in student discussions, one can help accelerate the process without overtaking the course.  However, I
+      recommend that one does so sparingly.
+    </p>
+    <p>
+      The end of each chapter presents a few exercises that are applications of the material learned, or extensions of those concepts.
+      There is a mix of computational, applied and theoretical problems, and some proof writing will be expected.
+    </p> 
+  </li>
+
+  
+
+  <li>
+    <p>
+      In the html version of this book, there will be numerous Doenet activities and Sage cells embedded throughout, there is also embedded
+      desmos for 3d visualizations.  Print and pdf versions of this text will contain QR codes linking to these activities.  The use of technology
+      can greatly enhance geomtric intuition, or eliminate tedium from computations.  Hand computations are a part of the class, and students will
+      be expected to be able to explain and perform them.  However, the focus of this text is ever on the concepts of this course, and modeling a problem
+      is almost always a more important skill than computing a solution.  
+
+    </p>
+    <p>
+      There are also practical elements to computing solution by code: in class where time is a premium,
+      executing an algorithm with potentially dozens of steps is often a poor use of that limited resource, and in practice, students who go into
+      industry would be working on problems of tremendous scope, far beyond what could be done by hand.  Even for students who pursue theoretical mathematics,
+      the intuition and proofs are a far better focus than hand computation.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <em>As always, we anchor everything in this course with geometric reasoning, and use this reasoning to bolster the algebraic
+      aspects of this material.</em>. Students who find themselves confused or lost in the midst of algebraic weeds, should retreat
+      and consider the situation from a geometric point of view.  It can be natural for practical linear optimization problems to take
+      place in hundreds, maybe thousands of dimensions, but two and three dimensions gives us all the intuition we need.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <em>I chose presentations and conventions which best support student intuition.</em> Frustratingly, just about every linear
+      optimization text seems to have their own convention and notation when it comes to recording and presenting data.  This book
+      follows Dr. James Strayer's <em>Linear Programming and it's Applications</em> as being, in my opinion, the most natural, intuitive, and compact
+      of the innumerable variations.
+    </p>
+  </li>
+
+  
+</ul>
+</p>
+
+<p>
+  <em>Linear Optimization: A Geometric Inquiry Course</em> was a labor of love.
+  I hope that this book serves your needs as an instructor, student, or curious scholar.
+  This book can be used as a stand-alone text or supplement another text, with some adjustment.
+  The content of this course is liscenced by Creative Commons, and so please feel free to 
+  create variations for this material that best suits your needs.
+</p>
+
+  
+</preface>
+
+
