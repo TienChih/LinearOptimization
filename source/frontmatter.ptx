@@ -14,6 +14,11 @@
       <today />
     </date>
   </titlepage>
+  <dedication>
+    <p>
+      For Tara, Byron and Max
+    </p>
+  </dedication>
 
   <colophon>
 
@@ -27,9 +32,14 @@
 
     <copyright>
       <year>2024</year>
-      <holder>You</holder>
-      <shortlicense> This work is licensed under the Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="https://creativecommons.org/licenses/by-nc-sa/4.0/" visual="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CreativeCommons.org</url>
+      <holder>Tien Chih</holder>
+      <minilicense>CC BY-NC-SA 4.0 License</minilicense>
+      <shortlicense>  This work is licensed under the Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="https://creativecommons.org/licenses/by-nc-sa/4.0/" visual="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CreativeCommons.org</url>
+        <sidebyside width="25%"> 
+          <image source="images/creativecommons.png" />
+        </sidebyside>
       </shortlicense>
+      
     </copyright>
   </colophon>
 

@@ -8,11 +8,12 @@
       
     </input>         
   </sage> 
+   
 
   <exercises xml:id="exercises-noncanon">
     
 
-    <exercise xml:id="ex-noncanon">
+   <exercise xml:id="ex-nc">
       <introduction>
         <p>
           Solve each of the noncanonicallinear programming problems below. If a linear
@@ -187,7 +188,7 @@
         <statement>
           <p>
             A noncanonical linear programming problem with more unconstrained independent
-variables than constraints has unbounded objective function.  (As in  <xref ref="ex-noncanon"/> (J))
+variables than constraints has unbounded objective function.  (As in  <xref ref="ex-nc"/> (J))
           </p>
         </statement>
       </task>
@@ -195,7 +196,7 @@ variables than constraints has unbounded objective function.  (As in  <xref ref=
         <statement>
           <p>
             A noncanonicallinear programming problem with more equations of constraint
-than independent variables is infeasible.  (As in  <xref ref="ex-noncanon"/> (K))
+than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
           </p>
         </statement>
       </task>
@@ -279,7 +280,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-noncanon"/> (K)
       </p>
     </exercise>
 
-    <exercise xml:id="ex-unconstrained">
+    <exercise xml:id="ex-uc">
       <introduction>
         <p>
           Another method method for transforming a linear optimization problem with
@@ -401,7 +402,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-noncanon"/> (K)
 
     <exercise>
       <p>
-        Use the methods presented in <xref ref="ex-unconstrained"/> and <xref ref="ex-superconstrained"/>
+        Use the methods presented in <xref ref="ex-uc"/> and <xref ref="ex-superconstrained"/>
         to solve:
       </p>
       <p>
@@ -417,15 +418,20 @@ than independent variables is infeasible.  (As in  <xref ref="ex-noncanon"/> (K)
 
     <exercise>
       <p>
-        What are some pros and cons of the methods presented in <xref ref="ex-unconstrained"/> and <xref ref="ex-superconstrained"/>?
+        What are some pros and cons of the methods presented in <xref ref="ex-uc"/> and <xref ref="ex-superconstrained"/>?
       </p>
     </exercise>
+    
+    
+   
     
 
 
       
     
   </exercises>
+
+   
 
   
   
