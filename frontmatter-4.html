@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Our goals</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Linear Optimization">
+<meta property="book:author" content="Tien Chih">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
+#thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
+#thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
+#sec-polyhedralconvex-28-4-1-2 { counter-set: sec-polyhedralconvex-28-4-1-2 0; }
+#sec-polyhedralconvex-28-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-4-1-2,upper-alpha)"."; }
+#sec-polyhedralconvex-28-4-1-2 > li { counter-increment: sec-polyhedralconvex-28-4-1-2; }
+#sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
+#sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
+#sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
+#activity-maxslack-2-1-2 { counter-set: activity-maxslack-2-1-2 0; }
+#activity-maxslack-2-1-2 > li::marker { content: ""counter(activity-maxslack-2-1-2,upper-alpha)"."; }
+#activity-maxslack-2-1-2 > li { counter-increment: activity-maxslack-2-1-2; }
+#activity-maxslack-3-1-2 { counter-set: activity-maxslack-3-1-2 0; }
+#activity-maxslack-3-1-2 > li::marker { content: ""counter(activity-maxslack-3-1-2,decimal)"."; }
+#activity-maxslack-3-1-2 > li { counter-increment: activity-maxslack-3-1-2; }
+#sec-pivot-10-1-2 { counter-set: sec-pivot-10-1-2 0; }
+#sec-pivot-10-1-2 > li::marker { content: ""counter(sec-pivot-10-1-2,upper-alpha)"."; }
+#sec-pivot-10-1-2 > li { counter-increment: sec-pivot-10-1-2; }
+#def-pivot-2-2 { counter-set: def-pivot-2-2 0; }
+#def-pivot-2-2 > li::marker { content: ""counter(def-pivot-2-2,decimal)"."; }
+#def-pivot-2-2 > li { counter-increment: def-pivot-2-2; }
+#activity-tableaufeasible-2-1-2 { counter-set: activity-tableaufeasible-2-1-2 0; }
+#activity-tableaufeasible-2-1-2 > li::marker { content: ""counter(activity-tableaufeasible-2-1-2,upper-alpha)"."; }
+#activity-tableaufeasible-2-1-2 > li { counter-increment: activity-tableaufeasible-2-1-2; }
+#activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
+#activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
+#activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
+#activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
+#activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
+#activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
+#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
+#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
+#def-simplexcanonmaxbf-3-2 { counter-set: def-simplexcanonmaxbf-3-2 0; }
+#def-simplexcanonmaxbf-3-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-3-2,decimal)"."; }
+#def-simplexcanonmaxbf-3-2 > li { counter-increment: def-simplexcanonmaxbf-3-2; }
+#subsec-infeasiblemaximization-3-6-1-2 { counter-set: subsec-infeasiblemaximization-3-6-1-2 0; }
+#subsec-infeasiblemaximization-3-6-1-2 > li::marker { content: ""counter(subsec-infeasiblemaximization-3-6-1-2,upper-alpha)"."; }
+#subsec-infeasiblemaximization-3-6-1-2 > li { counter-increment: subsec-infeasiblemaximization-3-6-1-2; }
+#def-simplexmax-3-2 { counter-set: def-simplexmax-3-2 0; }
+#def-simplexmax-3-2 > li::marker { content: ""counter(def-simplexmax-3-2,decimal)"."; }
+#def-simplexmax-3-2 > li { counter-increment: def-simplexmax-3-2; }
+#def-simplexmin-3-2 { counter-set: def-simplexmin-3-2 0; }
+#def-simplexmin-3-2 > li::marker { content: ""counter(def-simplexmin-3-2,decimal)"."; }
+#def-simplexmin-3-2 > li { counter-increment: def-simplexmin-3-2; }
+#thm-BlandAnticycling-5-2 { counter-set: thm-BlandAnticycling-5-2 0; }
+#thm-BlandAnticycling-5-2 > li::marker { content: ""counter(thm-BlandAnticycling-5-2,decimal)"."; }
+#thm-BlandAnticycling-5-2 > li { counter-increment: thm-BlandAnticycling-5-2; }
+#exploration-sage-1-4 { counter-set: exploration-sage-1-4 0; }
+#exploration-sage-1-4 > li::marker { content: ""counter(exploration-sage-1-4,upper-alpha)"."; }
+#exploration-sage-1-4 > li { counter-increment: exploration-sage-1-4; }
+#unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
+#unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
+#unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
+#unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
+#unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
+#unconstrained-example-7-1-2 { counter-set: unconstrained-example-7-1-2 0; }
+#unconstrained-example-7-1-2 > li::marker { content: ""counter(unconstrained-example-7-1-2,upper-alpha)"."; }
+#unconstrained-example-7-1-2 > li { counter-increment: unconstrained-example-7-1-2; }
+#unconstrained-example-10-1-2 { counter-set: unconstrained-example-10-1-2 0; }
+#unconstrained-example-10-1-2 > li::marker { content: ""counter(unconstrained-example-10-1-2,upper-alpha)"."; }
+#unconstrained-example-10-1-2 > li { counter-increment: unconstrained-example-10-1-2; }
+#sec-unconstrained-7-1-2 { counter-set: sec-unconstrained-7-1-2 0; }
+#sec-unconstrained-7-1-2 > li::marker { content: ""counter(sec-unconstrained-7-1-2,decimal)"."; }
+#sec-unconstrained-7-1-2 > li { counter-increment: sec-unconstrained-7-1-2; }
+#sec-sensitivity-4-1-3 { counter-set: sec-sensitivity-4-1-3 0; }
+#sec-sensitivity-4-1-3 > li::marker { content: ""counter(sec-sensitivity-4-1-3,upper-alpha)"."; }
+#sec-sensitivity-4-1-3 > li { counter-increment: sec-sensitivity-4-1-3; }
+#sec-sensitivity-8-3-1-1-2 { counter-set: sec-sensitivity-8-3-1-1-2 0; }
+#sec-sensitivity-8-3-1-1-2 > li::marker { content: ""counter(sec-sensitivity-8-3-1-1-2,upper-alpha)"."; }
+#sec-sensitivity-8-3-1-1-2 > li { counter-increment: sec-sensitivity-8-3-1-1-2; }
+#thm-farkas-3-2 { counter-set: thm-farkas-3-2 0; }
+#thm-farkas-3-2 > li::marker { content: ""counter(thm-farkas-3-2,upper-alpha)"."; }
+#thm-farkas-3-2 > li { counter-increment: thm-farkas-3-2; }
+#cor-farkasv2-3-2 { counter-set: cor-farkasv2-3-2 0; }
+#cor-farkasv2-3-2 > li::marker { content: ""counter(cor-farkasv2-3-2,upper-alpha)"."; }
+#cor-farkasv2-3-2 > li { counter-increment: cor-farkasv2-3-2; }
+#sec-dualpivot-3-2-1-2 { counter-set: sec-dualpivot-3-2-1-2 0; }
+#sec-dualpivot-3-2-1-2 > li::marker { content: ""counter(sec-dualpivot-3-2-1-2,upper-alpha)"."; }
+#sec-dualpivot-3-2-1-2 > li { counter-increment: sec-dualpivot-3-2-1-2; }
+#sec-dualpivot-5-1-2 { counter-set: sec-dualpivot-5-1-2 0; }
+#sec-dualpivot-5-1-2 > li::marker { content: ""counter(sec-dualpivot-5-1-2,upper-alpha)"."; }
+#sec-dualpivot-5-1-2 > li { counter-increment: sec-dualpivot-5-1-2; }
+#sec-dualpivot-6-2-1-1-5 { counter-set: sec-dualpivot-6-2-1-1-5 0; }
+#sec-dualpivot-6-2-1-1-5 > li::marker { content: ""counter(sec-dualpivot-6-2-1-1-5,upper-alpha)"."; }
+#sec-dualpivot-6-2-1-1-5 > li { counter-increment: sec-dualpivot-6-2-1-1-5; }
+#sec-dualpivot-6-3-1-1-5 { counter-set: sec-dualpivot-6-3-1-1-5 0; }
+#sec-dualpivot-6-3-1-1-5 > li::marker { content: ""counter(sec-dualpivot-6-3-1-1-5,upper-alpha)"."; }
+#sec-dualpivot-6-3-1-1-5 > li { counter-increment: sec-dualpivot-6-3-1-1-5; }
+#exercises-duality-4-1-2 { counter-set: exercises-duality-4-1-2 0; }
+#exercises-duality-4-1-2 > li::marker { content: "("counter(exercises-duality-4-1-2,lower-alpha)")"; }
+#exercises-duality-4-1-2 > li { counter-increment: exercises-duality-4-1-2; }
+#activity-rowcol-2-1-3 { counter-set: activity-rowcol-2-1-3 0; }
+#activity-rowcol-2-1-3 > li::marker { content: ""counter(activity-rowcol-2-1-3,upper-alpha)"."; }
+#activity-rowcol-2-1-3 > li { counter-increment: activity-rowcol-2-1-3; }
+#activity-rowcol-4-1-2 { counter-set: activity-rowcol-4-1-2 0; }
+#activity-rowcol-4-1-2 > li::marker { content: ""counter(activity-rowcol-4-1-2,upper-alpha)"."; }
+#activity-rowcol-4-1-2 > li { counter-increment: activity-rowcol-4-1-2; }
+#activity-rowcol-5-1-3 { counter-set: activity-rowcol-5-1-3 0; }
+#activity-rowcol-5-1-3 > li::marker { content: ""counter(activity-rowcol-5-1-3,upper-alpha)"."; }
+#activity-rowcol-5-1-3 > li { counter-increment: activity-rowcol-5-1-3; }
+#activity-rowcol-7-1-2 { counter-set: activity-rowcol-7-1-2 0; }
+#activity-rowcol-7-1-2 > li::marker { content: ""counter(activity-rowcol-7-1-2,upper-alpha)"."; }
+#activity-rowcol-7-1-2 > li { counter-increment: activity-rowcol-7-1-2; }
+#sec-minmaxgames-6-3-1-2 { counter-set: sec-minmaxgames-6-3-1-2 0; }
+#sec-minmaxgames-6-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-6-3-1-2,upper-alpha)"."; }
+#sec-minmaxgames-6-3-1-2 > li { counter-increment: sec-minmaxgames-6-3-1-2; }
+#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
+#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
+#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
+#sec-vonneumann-6-2-1-2 { counter-set: sec-vonneumann-6-2-1-2 0; }
+#sec-vonneumann-6-2-1-2 > li::marker { content: ""counter(sec-vonneumann-6-2-1-2,upper-alpha)"."; }
+#sec-vonneumann-6-2-1-2 > li { counter-increment: sec-vonneumann-6-2-1-2; }
+#sec-vonneumann-6-3-1-2 { counter-set: sec-vonneumann-6-3-1-2 0; }
+#sec-vonneumann-6-3-1-2 > li::marker { content: ""counter(sec-vonneumann-6-3-1-2,upper-alpha)"."; }
+#sec-vonneumann-6-3-1-2 > li { counter-increment: sec-vonneumann-6-3-1-2; }
+#sec-chance-3-2-1-2 { counter-set: sec-chance-3-2-1-2 0; }
+#sec-chance-3-2-1-2 > li::marker { content: ""counter(sec-chance-3-2-1-2,upper-alpha)"."; }
+#sec-chance-3-2-1-2 > li { counter-increment: sec-chance-3-2-1-2; }
+#def-vam-4-2 { counter-set: def-vam-4-2 0; }
+#def-vam-4-2 > li::marker { content: ""counter(def-vam-4-2,decimal)"."; }
+#def-vam-4-2 > li { counter-increment: def-vam-4-2; }
+#activity-transportalgorithm-2-1-2 { counter-set: activity-transportalgorithm-2-1-2 0; }
+#activity-transportalgorithm-2-1-2 > li::marker { content: ""counter(activity-transportalgorithm-2-1-2,upper-alpha)"."; }
+#activity-transportalgorithm-2-1-2 > li { counter-increment: activity-transportalgorithm-2-1-2; }
+#activity-transportalgorithm-7-1-2 { counter-set: activity-transportalgorithm-7-1-2 0; }
+#activity-transportalgorithm-7-1-2 > li::marker { content: ""counter(activity-transportalgorithm-7-1-2,upper-alpha)"."; }
+#activity-transportalgorithm-7-1-2 > li { counter-increment: activity-transportalgorithm-7-1-2; }
+#def-transportationalg-3-2 { counter-set: def-transportationalg-3-2 0; }
+#def-transportationalg-3-2 > li::marker { content: ""counter(def-transportationalg-3-2,decimal)"."; }
+#def-transportationalg-3-2 > li { counter-increment: def-transportationalg-3-2; }
+#sec-transportalgorithm-5-3-1-2 { counter-set: sec-transportalgorithm-5-3-1-2 0; }
+#sec-transportalgorithm-5-3-1-2 > li::marker { content: ""counter(sec-transportalgorithm-5-3-1-2,upper-alpha)"."; }
+#sec-transportalgorithm-5-3-1-2 > li { counter-increment: sec-transportalgorithm-5-3-1-2; }
+#def-hungarian-3-2 { counter-set: def-hungarian-3-2 0; }
+#def-hungarian-3-2 > li::marker { content: ""counter(def-hungarian-3-2,decimal)"."; }
+#def-hungarian-3-2 > li { counter-increment: def-hungarian-3-2; }
+#subsec-maxflow-3-4-1-2 { counter-set: subsec-maxflow-3-4-1-2 0; }
+#subsec-maxflow-3-4-1-2 > li::marker { content: ""counter(subsec-maxflow-3-4-1-2,upper-alpha)"."; }
+#subsec-maxflow-3-4-1-2 > li { counter-increment: subsec-maxflow-3-4-1-2; }
+#def-maxflowalgorithm-4-2 { counter-set: def-maxflowalgorithm-4-2 0; }
+#def-maxflowalgorithm-4-2 > li::marker { content: ""counter(def-maxflowalgorithm-4-2,decimal)"."; }
+#def-maxflowalgorithm-4-2 > li { counter-increment: def-maxflowalgorithm-4-2; }
+#def-mincutalgorithm-4-2 { counter-set: def-mincutalgorithm-4-2 0; }
+#def-mincutalgorithm-4-2 > li::marker { content: ""counter(def-mincutalgorithm-4-2,decimal)"."; }
+#def-mincutalgorithm-4-2 > li { counter-increment: def-mincutalgorithm-4-2; }
+#sec-weighted-7-2-2 { counter-set: sec-weighted-7-2-2 0; }
+#sec-weighted-7-2-2 > li::marker { content: ""counter(sec-weighted-7-2-2,upper-alpha)"."; }
+#sec-weighted-7-2-2 > li { counter-increment: sec-weighted-7-2-2; }
+#sec-weighted-7-3-1-2 { counter-set: sec-weighted-7-3-1-2 0; }
+#sec-weighted-7-3-1-2 > li::marker { content: ""counter(sec-weighted-7-3-1-2,upper-alpha)"."; }
+#sec-weighted-7-3-1-2 > li { counter-increment: sec-weighted-7-3-1-2; }
+#sec-weighted-7-4-1-2 { counter-set: sec-weighted-7-4-1-2 0; }
+#sec-weighted-7-4-1-2 > li::marker { content: ""counter(sec-weighted-7-4-1-2,upper-alpha)"."; }
+#sec-weighted-7-4-1-2 > li { counter-increment: sec-weighted-7-4-1-2; }
+#def-DijkstrasAlgorithm-4-2 { counter-set: def-DijkstrasAlgorithm-4-2 0; }
+#def-DijkstrasAlgorithm-4-2 > li::marker { content: ""counter(def-DijkstrasAlgorithm-4-2,decimal)"."; }
+#def-DijkstrasAlgorithm-4-2 > li { counter-increment: def-DijkstrasAlgorithm-4-2; }
+#def-otheralgorithm-4-2 { counter-set: def-otheralgorithm-4-2 0; }
+#def-otheralgorithm-4-2 > li::marker { content: ""counter(def-otheralgorithm-4-2,decimal)"."; }
+#def-otheralgorithm-4-2 > li { counter-increment: def-otheralgorithm-4-2; }
+#exploration-shipping-2-1-2 { counter-set: exploration-shipping-2-1-2 0; }
+#exploration-shipping-2-1-2 > li::marker { content: ""counter(exploration-shipping-2-1-2,upper-alpha)"."; }
+#exploration-shipping-2-1-2 > li { counter-increment: exploration-shipping-2-1-2; }
+#exploration-shipping-8-1-2 { counter-set: exploration-shipping-8-1-2 0; }
+#exploration-shipping-8-1-2 > li::marker { content: ""counter(exploration-shipping-8-1-2,upper-alpha)"."; }
+#exploration-shipping-8-1-2 > li { counter-increment: exploration-shipping-8-1-2; }
+#sec-weighted-15-2-1-2 { counter-set: sec-weighted-15-2-1-2 0; }
+#sec-weighted-15-2-1-2 > li::marker { content: ""counter(sec-weighted-15-2-1-2,upper-alpha)"."; }
+#sec-weighted-15-2-1-2 > li { counter-increment: sec-weighted-15-2-1-2; }
+#sec-weighted-15-3-1-2 { counter-set: sec-weighted-15-3-1-2 0; }
+#sec-weighted-15-3-1-2 > li::marker { content: ""counter(sec-weighted-15-3-1-2,upper-alpha)"."; }
+#sec-weighted-15-3-1-2 > li { counter-increment: sec-weighted-15-3-1-2; }
+#sec-weighted-15-4-1-2 { counter-set: sec-weighted-15-4-1-2 0; }
+#sec-weighted-15-4-1-2 > li::marker { content: ""counter(sec-weighted-15-4-1-2,upper-alpha)"."; }
+#sec-weighted-15-4-1-2 > li { counter-increment: sec-weighted-15-4-1-2; }
+#sec-weighted-15-5-1-2 { counter-set: sec-weighted-15-5-1-2 0; }
+#sec-weighted-15-5-1-2 > li::marker { content: ""counter(sec-weighted-15-5-1-2,upper-alpha)"."; }
+#sec-weighted-15-5-1-2 > li { counter-increment: sec-weighted-15-5-1-2; }
+#def-mincostflowalgorithm-4-2 { counter-set: def-mincostflowalgorithm-4-2 0; }
+#def-mincostflowalgorithm-4-2 > li::marker { content: ""counter(def-mincostflowalgorithm-4-2,decimal)"."; }
+#def-mincostflowalgorithm-4-2 > li { counter-increment: def-mincostflowalgorithm-4-2; }
+#sec-branchbound-4-2-1-2 { counter-set: sec-branchbound-4-2-1-2 0; }
+#sec-branchbound-4-2-1-2 > li::marker { content: ""counter(sec-branchbound-4-2-1-2,upper-alpha)"."; }
+#sec-branchbound-4-2-1-2 > li { counter-increment: sec-branchbound-4-2-1-2; }
+#activity-meat1-2-1-2 { counter-set: activity-meat1-2-1-2 0; }
+#activity-meat1-2-1-2 > li::marker { content: ""counter(activity-meat1-2-1-2,upper-alpha)"."; }
+#activity-meat1-2-1-2 > li { counter-increment: activity-meat1-2-1-2; }
+#def-branchbound-1-2 { counter-set: def-branchbound-1-2 0; }
+#def-branchbound-1-2 > li::marker { content: ""counter(def-branchbound-1-2,decimal)"."; }
+#def-branchbound-1-2 > li { counter-increment: def-branchbound-1-2; }
+#sec-cuttingplane-2-3 { counter-set: sec-cuttingplane-2-3 0; }
+#sec-cuttingplane-2-3 > li::marker { content: ""counter(sec-cuttingplane-2-3,upper-alpha)"."; }
+#sec-cuttingplane-2-3 > li { counter-increment: sec-cuttingplane-2-3; }
+#def-gomoryplane-2-2 { counter-set: def-gomoryplane-2-2 0; }
+#def-gomoryplane-2-2 > li::marker { content: ""counter(def-gomoryplane-2-2,decimal)"."; }
+#def-gomoryplane-2-2 > li { counter-increment: def-gomoryplane-2-2; }
+</style>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-geometric.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+   
+   \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
+    \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
+    \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter contains-active">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface active"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Our goals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometric Linear Optimization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-polyhedralconvex.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-basicfeasible" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Basic Feasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-infeasiblemaximization" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Basic Infeasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-simplexmin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Using Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">3</span> <span class="title">Noncanonical Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-superconstrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Bounds</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Problems for Chapter 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Problems for Chapter 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalanced Transportation Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Problems for Chapter 6</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">7</span> <span class="title">Network Flows</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Algorithms for Max Flow and Min Cut</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Problems for Chapter 7</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="preface" id="frontmatter-4"><h2 class="heading hide-type">
+<span class="type">Preface</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Our goals</span>
+</h2>
+<div class="para" id="frontmatter-4-2">This is an inquiry-learning based textbook on introductory linear optimization.  Linear optimization, or linear programming, is a common but not ubiquitous course at the undergraduate level, with somewhat divergent goals and approaches.  There are numerous texts for linear optimization, so it what is it that this book offers that others do not?</div>
+<div class="para" id="frontmatter-4-3">Linear optimization as a course serves a variety of disciplines, and can be taught in a number of different approaches.  In a math curriculum, while it has linear algebra as a pre-requisite, it generally lies in the mid-high tier level of courses, prior to classes like abstract algebra and real analysis, but past calculus and linear algebra.  This is a subject rich with both beautiful mathematics, as well as numerous applications to economics, computer science, operations research, sociology and other areas.  So this course is an excellent choice for a variety of students, and can serve the needs of many.</div>
+<div class="para" id="frontmatter-4-4">The presentation of linear optimization can be computation or theory focused, and both approaches would generally be an extention of a linear algebra course which also generally has those two flavors. Either way, the material is often presented in a way that is very technical from a linear algebraiac stand-point. For a student, learning the algorithms, techniques, theorems and proofs can be overwhelming.  There are numerous, technically intricate arguments, and the complexity of the associated algebra can subsume the intuition behind this material, and render much of the content opaque.</div>
+<div class="para" id="frontmatter-4-5">I had a similar experience working with linear optimization as a graduate student, and having never taken an undergraduate linear optimization course, found myself having to play “catch-up”.  It didn’t help that different text and resources presented the content in very different ways, and so unpacking the algorithms and theorems was a challenge.  I was never satisfied with the idea that it was sufficient to memorize an algorithm or even prove the theorems, what I was looking for was an intuitive way to think about this subject, in a way that makes the results intuitive, natural, even expected.</div>
+<div class="para" id="frontmatter-4-6">What helped me then was recontextualizing all of the key ideas of linear optimization in geometric terms.  By centering the geometry underlying each scenario, the we can allow our intuition to guide things forward, and the flow of the material proceeds naturally.  So this book begins with geometric realizations, translating that geometry into linear algebra, and proceeding from there to computations, but each theorem, formula and computation can be understood on this level.</div>
+<div class="para" id="frontmatter-4-7">Something that this approach allows is an easier entry-point for students. With geometric motivation, students have an easier time anticipating and predicting what may be true, and then this intuition can then be formalized with the appropriate statements and proofs. A friend from graduate school, Dr. Michael Severino, is an avid rock climber and gave the analogy that in mathematics, intuition was knowing where on the cliff to grab next, and rigor was the rope keeping you from falling.  This book aims to present both intuition and rigor in a way that lets all students propel to the top of this cliff.</div>
+<div class="para" id="frontmatter-4-8">Presenting the content with this framework lends itself well to teaching this course in an inquiry based manner.  Numerous studies have been done showing the efficacy of inquiry learning, and the longer term understanding students develop from learning this way.  I have taught numerous courses in an inquiry based manner, and have authored inquiry learning materials, and the key to succesful course is appropriate scafolding. Presenting the right mixture of intuitive exploration, rigorous argumentation, and text or instructor intervention.</div>
+<div class="para" id="frontmatter-4-9">As of the writing of this text, there is a renaissance of open source technology tools aimed at visualizing, computing or demonstrating mathematical ideas in accesible, interactive ways. Use of this technology can greatly enhance the ability for students to visualize and intuit the ideas being presented in a class, or side-step tedious computations, so that students can focus their attention and time on the conceptual principles of a course.</div>
+<div class="para" id="frontmatter-4-10">These are the thoughts that I had in mind when I was first asked to teach linear optimization at Oxford College of Emory University.  Oxford College is a small, teaching-focused, liberal arts college of Emory University of about 950 students.  We teach first and second year students who, upon completing Oxford’s liberal arts curriculum, proceed to Atlanta to complete their bachelor degrees.  Given the inquiry driven principles of the college, and all of the above thoughts, I decided to teach this class in an inquiry manner, incorporating the ideas I’ve written about, and through the semester wrote a set of inquiry learning materials, which serves of the basis of the document you are currently reading.</div>
+<div class="para logical" id="frontmatter-4-11">
+<div class="para">Given the principles which informed my design choices, and the ways in which a text for an inquiry based course differs substantially from a more traditional textbook, there are some things to keep in mind as you go through this text:</div>
+<ul class="disc" id="frontmatter-4-11-1">
+<li id="frontmatter-4-11-1-1"><div class="para" id="frontmatter-4-11-1-1-1">
+<em class="emphasis">This book is written with the assumption that students have taken a linear algebra course.</em> Linear algebra is the language in which we discuss the content of this course.  There is some variation in how linear algebra is presented, just as there is variation in linear optimization presentations.  For anyone requiring a quick review of linear algebra or an approach to linear algebra is that this geometry forward, I highly recommend Dr. David Austin’s <em class="emphasis">Understanding Linear Algebra</em> <a class="external" href="https://understandinglinearalgebra.org/home.html" target="_blank"><code class="code-inline tex2jax_ignore">https://understandinglinearalgebra.org/home.html</code></a>. This book was motivated by very similar thoughts to the one’s I had, and are thereby goverened by similar philosophies.</div></li>
+<li id="frontmatter-4-11-1-2">
+<div class="para" id="frontmatter-4-11-1-2-1">
+<em class="emphasis">This book is presented as a collection of explorations and activities meant to be done by the students in class.</em> The initial explorations and activities are generally more motivational, followed by activities meant to rigorously crytsalize the intuition students develop throughout a lesson.  Later activities reinforce these ideas or place them in the broader context of the course.</div>
+<div class="para" id="frontmatter-4-11-1-2-2">These activities are meant to be done in groups by the students, giving them the oppourtunity to discuss their ideas, let their intuition guide them, and develop their own reasoning skills. I recommend groups of about 4-6, but this is not set in stone, and it should be possible for someone to work on their own, or even self-study with this text. After discussing within their groups, the class comes together to discuss as a single entity. I recommend eaves dropping on group conversations to ensure active participation and equitable practices within groups.  It may be neccesary to nudge students torward or away from a direction, or to highlight specific things they, or another group said, but as much as possible, try to place agency with the students’ hands.  Students are far better motivated when they take ownership of their own learning.</div>
+<div class="para" id="frontmatter-4-11-1-2-3">It is highly recommended that between classes, students review the activities done in class, and rewrite them to be more cohesive. Frequently, activities will be broken down into a sequence of parts or tasks, each of which represents grabbing a new hand hold on the cliff or adjusting the harness to prevent falling (hopefully I am using this metaphor correctly, I am not a rock climber).</div>
+<div class="para" id="frontmatter-4-11-1-2-4">Another thing to keep in mind is timing.  One challenge of inquiry learning is the amount of time needed to cover content appropriately. By taking a more active role in student discussions, one can help accelerate the process without overtaking the course.  However, I recommend that one does so sparingly.</div>
+<div class="para" id="frontmatter-4-11-1-2-5">The end of each chapter presents a few exercises that are applications of the material learned, or extensions of those concepts. There is a mix of computational, applied and theoretical problems, and some proof writing will be expected.</div>
+</li>
+<li id="frontmatter-4-11-1-3">
+<div class="para" id="frontmatter-4-11-1-3-1">
+<em class="emphasis">Interactive technological tools are deployed throughout the text.</em>  In the html version of this book, there will be numerous Doenet activities and Sage cells embedded throughout, there is also embedded desmos for 3d visualizations.  Print and pdf versions of this text will contain QR codes linking to these activities.  The use of technology can greatly enhance geomtric intuition, or eliminate tedium from computations.  Hand computations are a part of the class, and students will be expected to be able to explain and perform them.  However, the focus of this text is ever on the concepts of this course, and modeling a problem is almost always a more important skill than computing a solution.</div>
+<div class="para" id="frontmatter-4-11-1-3-2">There are also practical elements to computing solution by code: in class where time is a premium, executing an algorithm with potentially dozens of steps is often a poor use of that limited resource, and in practice, students who go into industry would be working on problems of tremendous scope, far beyond what could be done by hand.  Even for students who pursue theoretical mathematics, the intuition and proofs are a far better focus than hand computation.</div>
+</li>
+<li id="frontmatter-4-11-1-4"><div class="para" id="frontmatter-4-11-1-4-1">
+<em class="emphasis">As always, we anchor everything in this course with geometric reasoning, and use this reasoning to bolster the algebraic aspects of this material.</em> Students who find themselves confused or lost in the midst of algebraic weeds, should retreat and consider the situation from a geometric point of view.  It can be natural for practical linear optimization problems to take place in hundreds, maybe thousands of dimensions, but two and three dimensions gives us all the intuition we need.</div></li>
+<li id="frontmatter-4-11-1-5"><div class="para" id="frontmatter-4-11-1-5-1">
+<em class="emphasis">I chose presentations and conventions which best support student intuition.</em> Frustratingly, just about every linear optimization text seems to have their own convention and notation when it comes to recording and presenting data.  This book follows Dr. James Strayer’s <em class="emphasis">Linear Programming and it’s Applications</em> as being, in my opinion, the most natural, intuitive, and compact of the innumerable variations.</div></li>
+</ul>
+</div>
+<div class="para" id="frontmatter-4-12">
+<em class="emphasis">Linear Optimization: A Geometric Inquiry Course</em> was a labor of love. I hope that this book serves your needs as an instructor, student, or curious scholar. This book can be used as a stand-alone text or supplement another text, with some adjustment. The content of this course is liscenced by Creative Commons, and so please feel free to create variations for this material that best suits your needs.</div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="frontmatter-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-geometric.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

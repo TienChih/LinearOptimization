@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h3> <div class="para logical">
+<div class="para">We can rewrite</div>
+<div class="displaymath process-math">
+\begin{align*}
+\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d\\
+\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1\\
+a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_n+t_2\amp =  b_2\\
+\vdots \amp   \vdots\\
+a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n +t_m \amp =  b_n\\
+x_1, x_2, \ldots, x_m\amp \geq  0
+\end{align*}
+</div>
+<div class="para">as</div>
+<div class="displaymath process-math">
+\begin{align*}
+\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d\\
+\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m  -b_1\amp =  -t_1\\
+a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n-b_2\amp =  -t_2\\
+\vdots \amp   \vdots\\
+a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n -b_n \amp =  -t_n\\
+x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0
+\end{align*}
+</div>
+<div class="para">Which may be recorded by the <em class="emphasis">Tucker Tableau</em>:</div>
+</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_n\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_n\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div> <div class="para">The variables at the top are called the <em class="emphasis">decision variables</em> or <em class="emphasis">independent variables</em>, the variables on the side are the <em class="emphasis">slack variables</em>, <em class="emphasis">basis variables</em> or <em class="emphasis">basic variables</em>.</div> <div class="para">The <em class="emphasis">basic solution</em> recorded by a Tucker Tableau is the solution where each decision variable has the value zero.</div></article><span class="incontext"><a class="internal" href="sec-pivot.html#def-tuckertableau">in-context</a></span>
+</body>
+</html>
