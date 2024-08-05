@@ -124,8 +124,8 @@
   <definition xml:id="def-canonicalproblems">
     <statement>
       <p>
-        <idx>linear programming problem, canonical maximization</idx>
-        The <em>Canonical Maximazation Linear Programming Problem</em> is the problem:
+        <idx>linear optimization problem, canonical maximization</idx>
+        The <em>Canonical Maximazation Linear Optimization Problem</em> is the problem:
         
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
@@ -139,8 +139,8 @@
       </p>
 
       <p>
-        <idx>linear programming problem, canonical minimization</idx>
-        The <em>Canonical Minimization Linear Programming Problem</em> is the problem:
+        <idx>linear optimization problem, canonical minimization</idx>
+        The <em>Canonical Minimization Linear Optimization Problem</em> is the problem:
         
         <md>
           <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>

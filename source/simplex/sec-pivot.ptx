@@ -22,8 +22,10 @@
         </md>
       </p>
       <p>
-        <idx>slack variables</idx>
-        <idx>decision variables</idx>
+        <idx>slack variable</idx>
+        <idx>decision variable</idx>
+        <idx>variable, slack</idx>
+        <idx>variable, decision</idx>
         Note that we may rewrite this as a system of equalities by introducing the <em>slack variables</em> <m>t_i</m>. 
         We will refer to the <m>x_j</m> as <em>decision variables</em>. 
       </p>
@@ -143,15 +145,15 @@
 
   <definition xml:id="def-tuckertableau">
     <idx>Tucker tableau</idx>
-    <idx>slack variables</idx>
-    <idx>basic variables</idx>
-    <idx>decision variables</idx>
-    <idx>independent variables</idx>
+    <idx>slack variable</idx>
+    <idx>basic variable</idx>
+    <idx>decision variable</idx>
+    <idx>independent variable</idx>
     <idx>tableau, Tucker</idx>
-    <idx>variables, slack</idx>
-    <idx>variables, basic</idx>
-    <idx>variables, decision</idx>
-    <idx>variables, independent</idx>
+    <idx>variable, slack</idx>
+    <idx>variable, basic</idx>
+    <idx>variable, decision</idx>
+    <idx>variable, independent</idx>
     <idx>basic solution</idx>
     <idx>solution, basic</idx>
     <statement>

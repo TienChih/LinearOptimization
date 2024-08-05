@@ -689,9 +689,9 @@
 
   <definition xml:id="definition-dual">
     <idx>dual problem</idx>
-    <idx>linear programming problem, dual minimization</idx>
-    <idx>dual variables</idx>
-    <idx>variables, dual</idx>
+    <idx>linear optimization problem, dual minimization</idx>
+    <idx>dual variable</idx>
+    <idx>variable, dual</idx>
     <p>
       Recall the canonical maximization problem:
 
