@@ -72,6 +72,8 @@
   </exploration>
 
   <definition xml:id="def-weightedgraph">
+    <idx>weighted network</idx>
+    <idx>network, weighted</idx>
     <statement>
      
       <p>
@@ -83,6 +85,9 @@
   </definition>
 
   <definition xml:id="def-path">
+    <idx>path</idx>
+    <idx>length</idx>
+    <idx>distance</idx>
     <statement>
       <p>
         Give a network <m>N</m>, a <em>path</em> <m>P</m> from <m>v_x</m>, <m>v_y</m> is a sequence of consecutive edges <m>(v_{a_0}, v_{a_1}), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})</m>
@@ -150,6 +155,9 @@
   </activity>
 
   <definition xml:id="def-negativecycle">
+    <idx>cycle</idx>
+    <idx>negative cycle</idx>
+    <idx>cycle, negative</idx> 
     <statement>
       <p>
         We define a <em> cycle</em> in a weighted network to be a path froma vertex <m>v_x</m> to itself.  If the length of a cycle is negative,
@@ -324,7 +332,9 @@
   </p>
 
   <definition xml:id="def-DijkstrasAlgorithm">
-    <title>Dijkstra's Algorithm</title>
+    <title>Dijkstra's Shortest Path Algorithm</title>
+    <idx>Dijkstra's shortest path algorithm</idx>
+    <idx>algorithm, Dijkstra's shortest path</idx>
     
     
     <statement>
@@ -482,7 +492,9 @@
   </p>
 
   <definition xml:id="def-otheralgorithm">
-    
+    <title>Shortest Path Algorithm</title>
+    <idx>shortest path algorithm</idx>
+    <idx>algorithm, shortest path</idx>
     
     <statement>
       <p>
@@ -910,6 +922,8 @@
 
   <definition xml:id="def-mincostflowalgorithm">
     <title>Minimum Cost Flow Algorithm</title>
+    <idx>minimum cost flow algorithm</idx>
+    <idx>algorithm, minimum cost flow</idx>
     <statement>
       <p>
         The steps for the <em>Minimum Cost Flow Algorithm</em> are as follows:

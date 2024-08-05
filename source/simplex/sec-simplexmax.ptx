@@ -1721,6 +1721,8 @@
     </p>
   
     <definition xml:id="def-simplexcanonmaxbf">
+      <idx>simplex algorithm: maximum basic feasible</idx>
+      <idx>algorithm, simplex: maximum basic feasible</idx>
       <statement>
         <p>
           The Simplex Algorithm for Maximum Basic Feasible Tableaus
@@ -2588,6 +2590,8 @@
     <p>With this, we may define our algorithm for potentiall non-feasible tableau</p>
   
     <definition xml:id="def-simplexmax">
+      <idx>simplex algorithm: maximum</idx>
+      <idx>algorithm, simplex: maximum</idx>
       <statement>
         <p>
           The Simplex Algorithm for Maximum Tableaus
@@ -2787,6 +2791,7 @@
     
   
     <definition xml:id="def-negativetranspose">
+      <idx>negative transpose</idx>
       <statement>
         <p>
           Recall that the canonical minimization problem: 
@@ -3097,6 +3102,8 @@
     <p>This allows us to define a minimization algorithm.</p>
   
     <definition xml:id="def-simplexmin">
+      <idx>simplex algorithm: minimum</idx>
+      <idx>algorithm, simplex: minimum</idx>
       <statement>
         <p>
           The Simplex Algorithm for Minimization Tableaus

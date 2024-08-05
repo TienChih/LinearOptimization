@@ -2,6 +2,8 @@
 
 <section xml:id="sec-unconstrained" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Unconstrained Variables</title>
+  <idx>unconstrained variable</idx>
+  <idx>variable, unconstrained</idx>
 
 
   <activity xml:id="unconstrained-geometry">

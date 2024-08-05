@@ -5,7 +5,7 @@
 
   <p> In this section, we establish the theoretical underpinnings of duality. </p>
 
-  <definition>
+  <notation>
     <statement>
       <p>
         Recall the primal maximization problem <xref ref="activity-maxslack"/>, and the corresponding
@@ -31,7 +31,7 @@
         <m>\mathbf{y}\in \mathbb{R}^n</m> subject to <me> \mathbf{y}^{\top}A\geq c^{\top}, \mathbf{y}\geq 0.</me>
       </p>
     </statement>
-  </definition>
+  </notation>
 
   <activity xml:id="activity-weakduality">
     <introduction>
@@ -94,6 +94,8 @@
   </p>
 
   <proposition xml:id="prop-weakduality">
+    <idx>weak duality theorem</idx>
+    <idx>theorem, weak duality</idx>
     <statement>
       <p>
         For a primal maximization problem with objective function <m>f</m> and dual objective <m>g</m>,
@@ -113,6 +115,8 @@
 
   <theorem xml:id="thm-hyperplaneseperation">
     <title>Hyperplane Seperation Theorem</title>
+    <idx>hyperplane seperation theorem</idx>
+    <idx>theorem, hyperplane seperation</idx>
     
     
     <statement>
@@ -227,6 +231,7 @@
   </p>
 
   <definition xml:id="def-cone">
+    <idx>cone</idx>
     <statement>
       <p>
         Let <m>S\subseteq \R^n</m>.  We call the <em>cone</em> of <m>S</m>,
@@ -263,6 +268,7 @@
   </activity>
 
   <theorem xml:id="thm-farkas">
+    <idx>Farkas lemma</idx>
     <title>The Farkas Lemma</title>
     
     
@@ -372,7 +378,7 @@
 
   <corollary xml:id="cor-farkasv2">
     <title>The Farkas Lemma v2</title>
-    
+    <idx>Farkas lemma</idx>
     
     <statement>
       <p>
@@ -399,6 +405,8 @@
 
   <theorem xml:id="thm-strongduality">
     <title>The Strong Duality Theorem</title>
+    <idx>strong duality theorem</idx>
+    <idx>theorem, strong duality</idx>
     <statement>
       <p>
         Given a pair of primal max-dual min problems, the primal max problem as an optimal solution 
@@ -531,9 +539,10 @@
   </activity>
 
   <definition xml:id="def-complementaryslackness">
+    <idx>complementary slackness</idx>
     <statement>
       <p>
-        Variables <m>\x, \y, \vs, \vt </m> are said to exhibit <em>complementary slackness</em> if 
+        Feasible variables <m>\x, \y, \vs, \vt </m> are said to exhibit <em>complementary slackness</em> if 
           <m>\vs^\top\x=0, \y^\top\vt=0</m>.
           
       </p>

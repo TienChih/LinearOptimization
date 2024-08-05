@@ -22,6 +22,7 @@
   </exploration>
 
   <definition xml:id="def-cut">
+    <idx>cut</idx>
     <statement>
       <p>
         Given a capacitated network <m>N</m>, a <em>cut</em> of <m>N</m> is
@@ -346,6 +347,9 @@
   </activity>
 
   <theorem xml:id="thm-maxflowmincut">
+    <idx>max flow-min cut theorem</idx>
+    <idx>theorem, max flow-min cut</idx>
+    <title>Max Flow-Min Cut</title>
     <statement>
       <p>
         Let <m>N = (V, E)</m> be a capacitated
@@ -367,7 +371,6 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
 
 
   <subsection xml:id="subsec-flowcutalgorithms">
-    <title>Max Flow-Min Cut Algorithms</title>
     <title>Algorithms for Max Flow and Min Cut</title>
 
 
@@ -554,6 +557,8 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
 
   <definition xml:id="def-maxflowalgorithm">
     <title>Max Flow Algorithm</title>
+    <idx>max flow algorithm</idx>
+    <idx>algorithm, max flow</idx>
     
     
     <statement>
@@ -615,6 +620,8 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
 
   <definition xml:id="def-mincutalgorithm">
     <title>Min Cut Algorithm</title>
+    <idx>min cut algorithm</idx>
+    <idx>algorithm, min cut</idx>
     
     
     <statement>

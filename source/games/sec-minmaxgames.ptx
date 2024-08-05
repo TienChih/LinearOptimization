@@ -204,6 +204,8 @@
   </exploration>
 
   <definition xml:id="def-payoff">
+    <idx>payoff matrix</idx>
+    <idx>domination</idx>
     <statement>
       <p>
         In a two-player zero-sum game, where the row player has <m>n</m> choices and the column player has <m>m</m> choices, the
@@ -765,6 +767,7 @@
   </activity>  
 
   <definition xml:id="def-saddlepoint">
+    <idx>saddle point</idx>
     <statement>
       <p>
         Suppose that the reduced payoff matrix had an entry <m>a_{ij}</m>

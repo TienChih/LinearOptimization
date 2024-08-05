@@ -8,18 +8,14 @@
   <exploration xml:id="exploration-witch">
     <introduction>
       <p>
-        A witch named Agnesi is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes
+        The witch Agnesi<fn>The name Agnesi was chosen by my Spring 2024 class who knew her from her eponymous curve.</fn> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes
         1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.
       </p>
       <p>
         Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts 
         of elixers and potions.
       </p>
-      <!--<hint>
-        <p>
-          The name Agnesi was chosen by popular consensus in my Math 346 Spring 2024 class, due to Maria Agnesi's iconic curve.
-        </p>
-      </hint>-->
+      
       
       
     </introduction>
@@ -71,7 +67,7 @@
   <activity>
     <statement>
       <p>
-        In both <xref ref="exploration-witch"/> and <xref ref="activity-insurance"/> we esentially explore the idea of assigning values
+        In both <xref ref="exploration-witch"/> and <xref ref="activity-insurance"/> we essentially explore the idea of assigning values
         somehow to the bounds of a maximization problem.  
       </p>
       <p>
@@ -113,7 +109,7 @@
     
   </activity>
 
-  <activity>
+  <activity xml:id="activity-coefficients">
     <introduction>
       <p>
         From <xref ref="exploration-witch"/>, letting <m>x_1</m> denote the number of healing elixers,
@@ -163,7 +159,7 @@
           </latex-image>
       </image> 
     </introduction>
-    <task>
+    <!--<task>
       <statement>
         <p>
           For any <m>k\in \mathbb{R}</m>, the objective plane is <m>3x_1+2x_2=k</m> with normal vector <m> \begin{bmatrix}3\\2 \end{bmatrix}</m>. 
@@ -172,7 +168,7 @@
           For each extreme point in the feasible region, express the normal vector for the objective plane as a linear combination of the normal vectors of the planes whose intersect at said point. 
         </p>
       </statement>
-    </task>
+    </task>-->
     <!--<task>
       <statement>
         <p>
@@ -477,7 +473,7 @@
 
         </p>
         <p>
-          Drag sliders for <m>c_1, c_2</m> so that <me>\begin{bmatrix} 3 \\ 2 \end{bmatrix} = c_1\begin{bmatrix} -1 \\ 0 \end{bmatrix}+c_2 \begin{bmatrix} 1 \\ 1 \end{bmatrix}.</me>
+          Drag sliders for <m>y_1, y_2</m> so that <me>\begin{bmatrix} 3 \\ 2 \end{bmatrix} = y_1\begin{bmatrix} -1 \\ 0 \end{bmatrix}+y_2 \begin{bmatrix} 1 \\ 1 \end{bmatrix}.</me>
         </p>
         <interactive  platform="doenetml" width="100%" aspect="3:4">
           <slate surface="doenetml">
@@ -491,8 +487,9 @@
       <statement>
         <p>
           For each extreme point, express <m>\begin{bmatrix}3 \\ 2\end{bmatrix} </m> as a linear combination of the normal vectors of the corresponding hyperplanes.
-          Then, for each tableau computed above, look at their basic solutions.  Which point is it, and how are these coefficients reflected in
-          the tableau?
+          Then, for each tableau computed above, look at their basic solutions.  What point corresponds to each basic solution,
+           and how are these coefficients reflected in
+          each tableau?
         </p>
         <p>
           <interactive  platform="doenetml" width="100%" aspect="3:4">
@@ -506,8 +503,16 @@
     <task>
       <statement>
         <p>
+          For each extreme point in the feasible region, consider the bounding planes who intersect at that point.  If you traverse in the direction of the normal vectors from the extreme point, does the objective function increase or decrease?  How does this connect to the coefficients we just found?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
           For which extreme points are the normal vector of the objective plane a linear combination
-          of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about those extreme points? 
+          of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about those extreme points?
+          Is there anything noteworthy about the corresponding tableau? 
         </p>
       </statement>
     </task>
@@ -683,6 +688,10 @@
   </activity>
 
   <definition xml:id="definition-dual">
+    <idx>dual problem</idx>
+    <idx>linear programming problem, dual minimization</idx>
+    <idx>dual variables</idx>
+    <idx>variables, dual</idx>
     <p>
       Recall the canonical maximization problem:
 
@@ -714,8 +723,76 @@
         <mrow> y_1, y_2, \ldots, y_n\amp \geq  0</mrow>
       </md>
     </p>
+    <p>
+      We refer to the <m>y_i</m> as <em>dual variables</em>.
+    </p>
 
   </definition>
+
+  <activity>
+    <introduction>
+      <p>
+        Recall Agnesi's business <xref ref="exploration-witch"/>,
+        and the coefficient computations done in <xref ref="activity-coefficients"/>.
+      </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Following <xref ref="definition-dual"/>, write out the dual 
+            problem to the maximization problem described
+            in <xref ref="exploration-witch"/>. 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <p>
+              Which of the following best represent the dual variables <m>y_1, y_2</m> in this context?
+            </p>
+            <ol marker="A.">
+              <li>
+                <p>
+                  The quantity of newt eyes and frogs.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The value of newt eyes and frogs.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The quantity of healing elixers and poisons.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The value of healing elixers and poisons.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For each inequality in our dual problem,
+            articulate what those inequalities represent in this context.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Describe the dual objective function in this context.
+          </p>
+        </statement>
+      </task>
+      
+  </activity>
 
   
   

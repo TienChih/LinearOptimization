@@ -902,6 +902,8 @@
   </activity>
 
   <definition xml:id="def-transportationalg">
+    <idx>transportation algorithm</idx>
+    <idx>algorithm, transportation</idx>
     <statement>
       <p>
         To summarize, the transportation algorithm is as follows:
@@ -1000,9 +1002,11 @@
   </activity>
 
   <subsection xml:id="subsec-unbalanced">
-    <title>Unbalnced Transportation Problems</title>
+    <title>Unbalanced Transportation Problems</title>
 
     <activity xml:id="activity-unbalanced">
+      <idx>transportation problem, unbalanced</idx>
+      <idx>unbalanced transportion problem</idx>
       <introduction>
         <p>
           We now consider the case of <em>unbalanced</em> transportation problems,

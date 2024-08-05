@@ -980,6 +980,19 @@ solutions of successive tableaus.
     </exercise>
 
     <exercise>
+      <idx>complementary slackness theorem</idx>
+      <idx>theorem, complementary slackness</idx>
+      <p>
+        Prove that feasible solutions <m>\x, \y</m>, with
+        slack variables <m>\vs, \vt</m> exhibt complementary slackness
+        if and only if <m>\x, \y</m> are optimal.
+      </p>
+      <p>
+        (This fact is commonly known as the <em>Complementary Slackness Theorem</em>.)
+      </p>
+    </exercise>
+
+    <exercise>
       <introduction>
         <p>
           Solve the following non-cononical primal-dual problems:

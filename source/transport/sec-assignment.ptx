@@ -130,6 +130,7 @@
 
 
   <definition xml:id="def-assignmentproblem">
+    <idx>assignment problem</idx>
     <statement>
       <p>
         An <em>assignment problem</em> is a transportation problem
@@ -145,6 +146,7 @@
   </p>
 
   <definition xml:id="def-permutation">
+    <idx>permutation set of zeroes</idx>
     <statement>
       <p>
         Let <m>T</m> be a tableau for a balanced assignment problem.
@@ -301,6 +303,8 @@
   </activity>
 
   <definition xml:id="def-hungarian">
+    <idx>Hungarian algorithm</idx>
+    <idx>algorithm, Hungarian</idx>
     <statement>
       <p>
         We state here the steps of the <em>Hungarian Algorithm</em>.  We start with an <m>n\times n</m>
@@ -415,7 +419,7 @@
   <activity>
     <statement>
       <p>
-        Use the Hungarian Algorithm <xref ref="def-hungarian"/> to solve
+        Use the Hungarian algorithm <xref ref="def-hungarian"/> to solve
         the problem from <xref ref="exploration-assignment"/>.
       </p>
     </statement>
@@ -531,7 +535,7 @@
     <task>
       <statement>
         <p>
-          After converting, use the Hungarian Algorithm <xref ref="def-hungarian"/> to solve
+          After converting, use the Hungarian algorithm <xref ref="def-hungarian"/> to solve
           the problem.
         </p>
       </statement>

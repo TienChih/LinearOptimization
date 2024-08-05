@@ -73,6 +73,12 @@
 
 
   <definition xml:id="def-directedgraph">
+    <idx>directed graph</idx>
+    <idx>network</idx>
+    <idx>graph, directed</idx>
+    <idx>capacitated network</idx>
+    <idx>network, capacitated</idx>
+    <idx>flow</idx>
     <statement>
       <p>
         A <em>directed graph</em> or <em>network</em> is a pair <m>D=(V, E)</m> where <m>V</m> is a set of
@@ -103,6 +109,11 @@
   </note>
 
   <definition xml:id="def-netinput">
+    <idx>flow, net input</idx>
+    <idx>net input flow</idx>
+    <idx>source</idx>
+    <idx>sink</idx>
+    <idx>intermediary vertex</idx>
     <statement>
       <p>
         For any vertex <m>v_j</m>, the <em>net input flow</em> at vertex <m>v_j</m>
@@ -142,6 +153,8 @@
   </activity>
 
   <theorem xml:id="thm-conservation">
+    <idx>conservation of flow</idx>
+    <idx>theorem, conservation of flow</idx>
     <title>Conservation of Flow</title>
     <statement>
       <p>
@@ -254,6 +267,7 @@
   </observation>
 
   <subsection xml:id="subsec-maxflow">
+    <idx>maximum flow problem</idx>
     <title>Max Flow</title>
     <activity>
       <introduction>

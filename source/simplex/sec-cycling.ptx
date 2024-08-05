@@ -724,6 +724,7 @@
   </activity>
 
   <definition xml:id="def-Cycling">
+    <idx>cycling</idx>
     <statement>
       <p>
         If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em>cycling</em>.
@@ -732,6 +733,7 @@
   </definition>
 
   <definition xml:id="def-degenerate">
+    <idx>degenerate</idx>
     <statement>
       <p>
         If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <em>degenerate</em> pivot.
@@ -744,6 +746,9 @@
   </p>
 
   <theorem xml:id="thm-BlandAnticycling">
+    <idx>Bland's anticycling rules</idx>
+    <idx>anticycling</idx>
+    <idx>theorem, Bland's anticycling</idx>
     <title>Bland's Anticycling Rules</title>
     
     

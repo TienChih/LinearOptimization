@@ -2,6 +2,9 @@
 
 <chapter xml:id="ch-games" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Zero-Sum Games</title>
+  <idx>game theory</idx>
+  <idx>games, zero-sum</idx>
+  <idx>zero-sum games</idx>
 
   <introduction>
     <p>

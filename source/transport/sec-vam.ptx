@@ -2,6 +2,7 @@
 
 <section xml:id="sec-vam" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>A Transportation problem and VAM</title>
+  <idx>transportation problem</idx>
 
 
   <exploration xml:id="exploration-transportation">
@@ -132,6 +133,8 @@
   </exploration>
 
   <definition xml:id="def-balanced">
+    <idx>transportation problem, balanced</idx>
+    <idx>balanced transportation problem</idx>
     <statement>
       <p>
         A transportation problem where the total demand and the total supply
@@ -270,6 +273,8 @@
           </tabular>
         </p>
         <p>
+          <idx>transportation tableau</idx>
+          <idx>tableau, transportation</idx>
           A table like this is called a <em>transportation tableau</em>.
         </p>
         <p>
@@ -857,6 +862,9 @@
   </activity>
 
   <definition xml:id="def-vam">
+    <idx>Vogel advanced-start method</idx>
+    <idx>VAM</idx>
+    <idx>algorithm, VAM</idx>
     <statement>
       <p>
         To summarise the <em>Vogel Advanced-Start Method </em> or <em>VAM</em> method of producing a feasible solution to the transportation problem

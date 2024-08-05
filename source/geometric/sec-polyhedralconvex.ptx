@@ -128,6 +128,7 @@
   <definition xml:id="def-segment">
     <statement>
       <p>
+        <idx>line segment</idx>
         Given <m>\mathbf{P}, \mathbf{Q}\in \mathbb{R}^n</m>, we call the set <m>\{t\cdot \mathbf{P}+(1-t)\cdot \mathbf{Q} : t\in [0,1]\}</m> the
         <em>line segment</em> between <m>\mathbf{P}</m> and <m>\mathbf{Q}</m>.
       </p>
@@ -137,6 +138,7 @@
   <definition xml:id="def-convex">
     <statement>
       <p>
+        <idx>convex</idx>
         Let <m>S\subseteq \mathbf{R}^n</m>, we say that <m>S</m> is <em>convex</em> if given any <m>\mathbf{P}, \mathbf{Q}\in S</m>,
         <m>S</m> also contains the line segment between <m>\mathbf{P}, \mathbf{Q}</m>.
       </p>
@@ -281,7 +283,7 @@
   <activity>
     <task>
       <p>
-        Prove why the feasible region of a canonical linear programming problem is convex.
+        Prove that the feasible region of a canonical linear programming problem is convex.
       </p>
     </task>
   </activity>
@@ -289,6 +291,7 @@
   <definition xml:id="def-polyhedralconvex">
     <statement>
       <p>
+        <idx>convex, polyhedral</idx>
         A convex set <m>S</m> that is equal to a finite intersection
         of half-spaces (defined by either strict or non-strict inequalities) is <em>polyhedral convex</em>.
       </p>
@@ -328,6 +331,7 @@
   <definition xml:id="def-norm">
     <statement>
       <p>
+        <idx>norm</idx>
         Given <m>\mathbf{x}</m> in we define the <em>norm</em> of <m>\mathbf{x}</m> to be <me>\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+\cdots x_n^2}.</me>
       </p>
     </statement>
@@ -336,6 +340,7 @@
   <definition xml:id="def-ball">
     <statement>
       <p>
+        <idx>ball</idx>
         Given <m>\mathbf{x}</m> in we define the <em>closed ball</em> of radius <m>r</m> centered at <m>\mathbf{x}</m> to be <me>\bar{B}(\mathbf{x}, r):=\{\mathbf{y}:\|\mathbf{x}-\mathbf{y}\|\leq r\}.</me>
       </p>
       <p>
@@ -355,6 +360,7 @@
   <definition xml:id="def-bounded">
     <statement>
       <p>
+        <idx>bounded</idx>
         A set <m>S</m> is bounded if there is a <m>r\geq 0</m> such that  <m>S\subseteq \bar{B}(\mathbf{0}, r)</m>.
       </p>
     </statement>
@@ -427,6 +433,8 @@
   <definition xml:id="def-extremepoint"> 
     <statement>
       <p>
+        <idx>extreme point</idx>
+        <idx>corner point</idx>
         Let <m>S\subseteq \mathbb{R}^n</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <em>extreme point</em> of <m>S</m> if there are no 
         <m>\mathbf{x}, \mathbf{y}\in S</m> so that <m>\mathbf{e}\in \{t\cdot \mathbf{x}+(1-t)\cdot \mathbf{y} : t\in [0,1]\}</m>.
       </p>
@@ -465,6 +473,28 @@
     </task>
   </activity>
 
+  <p>
+    We present the following theorems without proof (at the moment).  At least
+    one of these should seem familiar from calculus.
+  </p>
+
+  <theorem xml:id="thm-evt">
+    <idx>Extreme Value Theorem</idx>
+    <title>Extreme Value Theorem</title>
+    <statement>
+      <p>
+        If <m>S\subseteq \mathbb{R}^n</m> is a closed and bounded region, and
+        <m>f:S\to \mathbb{R}</m> is a continuous function.  Then there are
+        <m>\x_1, \x_2\in S</m> such that <m>f(\x_1)\geq f(\x)</m> and <m>f(\x_2)\leq f(\x)</m>
+        for every <m>\x\in S</m>.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    (We will assume without proof that linear functions <m>f:\mathbb{R}^n\to \mathbb{R}</m>
+  are continuous, and that the feasible region of a linear optimization problem is always closed.)
+  </p>
+  
   <theorem xml:id="thm-boundedextreme">
     <statement>
       <p>

@@ -22,7 +22,10 @@
         </md>
       </p>
       <p>
-        Note that we may rewrite this as a system of equalities by introducing the <em>slack variables</em> <m>t_i</m>.
+        <idx>slack variables</idx>
+        <idx>decision variables</idx>
+        Note that we may rewrite this as a system of equalities by introducing the <em>slack variables</em> <m>t_i</m>. 
+        We will refer to the <m>x_j</m> as <em>decision variables</em>. 
       </p>
 
       <p>
@@ -42,6 +45,7 @@
     <task>
       <statement>
         <p>
+          
           What must be true about the slack variables <m>t_i</m>?
         </p>
         <ol marker="A.">
@@ -103,7 +107,7 @@
       </p>
       <p>
         <md>
-          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
+          <mrow>\textbf{Minimize: }  g(\mathbf{y}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
@@ -125,6 +129,11 @@
           <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
         </md>
       </p>
+      <p>
+        
+       In this case, we refer to the <m>s_j</m> as the  <em>slack variables</em>,
+       and the <m>x_i</m> as <em>decision variables</em>. 
+      </p>
     </statement>
   </observation>
 
@@ -133,6 +142,18 @@
   </p>
 
   <definition xml:id="def-tuckertableau">
+    <idx>Tucker tableau</idx>
+    <idx>slack variables</idx>
+    <idx>basic variables</idx>
+    <idx>decision variables</idx>
+    <idx>independent variables</idx>
+    <idx>tableau, Tucker</idx>
+    <idx>variables, slack</idx>
+    <idx>variables, basic</idx>
+    <idx>variables, decision</idx>
+    <idx>variables, independent</idx>
+    <idx>basic solution</idx>
+    <idx>solution, basic</idx>
     <statement>
       <p>
         We can rewrite
@@ -930,9 +951,10 @@
   </activity>
 
   <definition xml:id="def-pivot">
+    <idx>pivot</idx>
     <statement>
       <p>
-        The following is the algorithm for a <em>pivot transformation</em>:
+        The following is the procedure for a <em>pivot transformation</em>:
 
       </p>
       <ol>

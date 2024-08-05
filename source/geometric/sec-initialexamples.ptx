@@ -37,6 +37,7 @@
       <statement>
         <p>
           Treating <m>x_1</m> as <m>x</m> and <m>x_2</m> as <m>y</m>, sketch the region on the cartesian plane satisfying all the above inequalities.
+          We will refer to this as the <em>feasible region</em>.
         </p>
         
         
@@ -123,7 +124,9 @@
   <definition xml:id="def-canonicalproblems">
     <statement>
       <p>
+        <idx>linear programming problem, canonical maximization</idx>
         The <em>Canonical Maximazation Linear Programming Problem</em> is the problem:
+        
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
@@ -136,7 +139,9 @@
       </p>
 
       <p>
+        <idx>linear programming problem, canonical minimization</idx>
         The <em>Canonical Minimization Linear Programming Problem</em> is the problem:
+        
         <md>
           <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
           <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
@@ -150,14 +155,30 @@
     </statement>
   </definition>
 
+  <note xml:id="note-canon">
+    <idx>canonical</idx>
+    <p>
+      <em>Canonical</em> in this context refers to the fact that
+      for both of the above problems, the <m>x_i</m> are non-negative,
+      and each bound is an inequality.
+    </p>
+    <p>
+      (In <xref ref="ch-noncanon"/>, we discuss <em>noncanonical</em>
+      linear optimization problems, where these conditions ay fail.)
+    </p>
+  </note>
+
   <definition xml:id="def-objectivefunction">
     <statement>
       <p>
+        <idx>objective function</idx>
         <m>f,g</m> above are called <em>objective functions</em>.
       </p>
     </statement>
   </definition>
   <definition xml:id="def-feasiblesolution">
+    <idx>feasible solution</idx>
+    <idx>solution, feasible</idx>
     <statement>
       <p>
         Any point <m>\mathbf{x} = (cx_1, x_2, \ldots, x_n)</m> satisfying either of the above set of inequalities are called <em>feasible solutions</em>.
@@ -165,6 +186,8 @@
     </statement>
   </definition>
   <definition xml:id="def-optimialsolution">
+    <idx>optimal solution</idx>
+    <idx>solution, optimal</idx>
     <statement>
       <p>
         Any feasible solution <m>\mathbf{x}</m> which maximizes (minimizes) the objective function is called an  <em>optimal solution</em>.

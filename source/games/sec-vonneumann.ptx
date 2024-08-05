@@ -2,6 +2,8 @@
 
 <section xml:id="sec-vonneumann" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>VonNeumann Minimax Theorem</title>
+  <idx>VonNeumann minimax theorem</idx>
+  <idx>theorem, VonNeumann minimax</idx>
 
   <exploration xml:id="exploration-vonneuman">
     <p>
