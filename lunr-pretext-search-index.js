@@ -1798,7 +1798,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Problems for Chapter 5",
-  "body": " Problems for     For the following games, write out the payoff matrix and the reduced matrix after domination.   Rowan has a 3 of hearts, 4 of spades, 9 of spades and 10 of hearts. Collen has a 5 of spades, 6 of hearts, 7 of hearts and 8 of spades.  Each player selects a card without revealing it, and both players flip their cards over at the same time. If the suits are the same, then Rowan wins the sum of the two card values. Otherwise, Colleen wins that sum.   The same as (A) but reverse the payoff conditions for Rowan and Colleen.   Rowan picks an even integer from 1-6, and Colleen picks an odd integer from 1-6. If the difference is less than 3, the player who played the bigger number wins the sum of the two values. Otherwise the player who played the smaller number wins the sum of the two values.   Rowan picks an integer from 1-3. Colleen picks two guesses which may be the same. Colleen reveals their guesses one at a time. If they guess correctly, they win $ equal to the value of their other guess. If they do not guess correctly, Rowan wins $ equal to the sum of both guesses.  Colonel Blotto  Colonel Rowan is attacking a town defended by Colonel Colleen. Rowan has three regiments and Colleen has four. There are two routes to the town. Rowan and select any number of regiments to attack along each route, up to a total of three and Colleen can likewise assign her four regiments along either route, neither knowing beforehand the other's strategy.  Along each route, whatever side has a greater number of regiments wins points equal to the number of regiments sent by the opposing side (as they capture those units). Furthermore, if Rowan wins along either route, he captures the town also worth one point.  Morra  Rowan and Colleen each simultaneously hold up one or two fingers and shouts a guess for the total number of fingers held. If either Rowan or Colleen guess correctly, then they collect $ from their opponent equal to this number of fingers. If they both guess correctly or both guess incorrectly, then no money changes hands.    For each of the following payoff matrices, determine if there is a value of so that the matrix has a saddle point. If so, determine the value(s) of and the saddle point(s).                                    Write out a reduced payoff matrix with exactly three saddle points.    For each of the following, find the von Neumann value and optimal strategy for the payoff matrix.                   For each exercise in , determine the Von Neumann value and the optimal strategy.   For each of the following games of chance, determine the Von Nuemann value for the game, and optimal strategies for both players.   Both players secretly flip a coin, they see their own result but not the other. Suppose Heads is greater value than tails.  Rowan then has two choices. He may CALL : both coins are revealed. If Rowan wins, Colleen gives him $2, if Colleen wins, Rowan gives her $4. If both are the same, no money changes hands. He may BID : Colleen then has two choices.  Colleen may FOLD : and Rowan wins $4. Or she may SEE : in which case both coins are revealed, and the winner is awarded $10 from the loser. If there is no winner, no money changes hands.   Each player adds $2 to the pot. Then they roll a 4 sided dice in secret. Each player knows their own results, but not the other's.  Rowan two options. He may FOLD : The pot goes to Colleen. He may PLAY : In which case he adds $5 to the pot.  Colleen then has two options. She may FOLD : The pot goes to Rowan. She may PLAY : In which case she adds $5 to the pot.  Then the results are revealed. Whoever wins takes the pot. If they are a tie, then the pot is split between the players.   There are 6 cards, 2 Jacks, 2 Queens and 2 Kings with Jack < Queen < King. The players each place $1 in the pot. Then, one card each is dealt to each player face down. They may see their own card but not their opponenets.  Rowan now has three choices. He may FOLD : the pot goes to Colleen. He may CHECK : the pot remains as is, or he may RAISE : Rowan adds $2 to the pot.  If Rowan doesn't FOLD, Colleen also has three choices. She may also FOLD : The pot goes to Rown. She may SEE : Colleen adds money to the pot equal to what Rowan added (if any). She may SEE-RAISE : Colleen adds money to the pot equal to what Rowan added, and then they both add in an additional $2.  If no one has folded at this point, the cards are revealed. The pot goes to the winner. If the cards are a tie, then the pot is split evenly between the players.    Prove that if a reduced payoff matrix has multiple saddle points, they have the same value.    Consider the payoff matrix    Find neccesary and sufficient conditions for this matrix to be reduced by domination.   Find the Von Nuemann value and optimal strategies for each player for the game above. There may be multiple cases.    Consider the payoff matrix where .   Find the Von Nuemann value and optimal strategies for each player for the game above.   Suppose could be any value, when does this matrix reduce via domination?   Find the Von Nuemann value and optimal strategies for each player for the game above if could be any value.    Consider the payoff matrix where .   Find the optimal solutions and the Von Nuemann value for the above game. (Without loss of generality, we may assume are positive, why?)   Prove that in a game with a two by two payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.   Prove via contradiction that in a game with a reduced payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.    "
+  "body": " Problems for     For the following games, write out the payoff matrix and the reduced matrix after domination.   Rowan has a 3 of hearts (❤️), 4 of spades (♠️), 9 of spades (♠️) and 10 of hearts (❤️). Collen has a 5 of spades (♠️), 6 of hearts (❤️), 7 of hearts (❤️) and 8 of spades (♠️).  Each player selects a card without revealing it, and both players flip their cards over at the same time. If the suits are the same, then Rowan wins the sum of the two card values. Otherwise, Colleen wins that sum.   The same as (A) but reverse the payoff conditions for Rowan and Colleen.   Rowan picks an even integer from 1-6, and Colleen picks an odd integer from 1-6. If the difference is less than 3, the player who played the bigger number wins the sum of the two values. Otherwise the player who played the smaller number wins the sum of the two values.   Rowan picks an integer from 1-3. Colleen picks two guesses which may be the same. Colleen reveals their guesses one at a time. If they guess correctly, they win $ equal to the value of their other guess. If they do not guess correctly, Rowan wins $ equal to the sum of both guesses.  Colonel Blotto  Colonel Rowan is attacking a town defended by Colonel Colleen. Rowan has three regiments and Colleen has four. There are two routes to the town. Rowan and select any number of regiments to attack along each route, up to a total of three and Colleen can likewise assign her four regiments along either route, neither knowing beforehand the other's strategy.  Along each route, whatever side has a greater number of regiments wins points equal to the number of regiments sent by the opposing side (as they capture those units). Furthermore, if Rowan wins along either route, he captures the town also worth one point.  Morra  Rowan and Colleen each simultaneously hold up one or two fingers and shouts a guess for the total number of fingers held. If either Rowan or Colleen guess correctly, then they collect $ from their opponent equal to this number of fingers. If they both guess correctly or both guess incorrectly, then no money changes hands.    For each of the following payoff matrices, determine if there is a value of so that the matrix has a saddle point. If so, determine the value(s) of and the saddle point(s).                                    Write out a reduced payoff matrix with exactly three saddle points.    For each of the following, find the von Neumann value and optimal strategy for the payoff matrix.                   For each exercise in , determine the Von Neumann value and the optimal strategy.   For each of the following games of chance, determine the Von Nuemann value for the game, and optimal strategies for both players.   Both players secretly flip a coin, they see their own result but not the other. Suppose Heads is greater value than tails.  Rowan then has two choices. He may CALL : both coins are revealed. If Rowan wins, Colleen gives him $2, if Colleen wins, Rowan gives her $4. If both are the same, no money changes hands. He may BID : Colleen then has two choices.  Colleen may FOLD : and Rowan wins $4. Or she may SEE : in which case both coins are revealed, and the winner is awarded $10 from the loser. If there is no winner, no money changes hands.   Each player adds $2 to the pot. Then they roll a 4 sided dice in secret. Each player knows their own results, but not the other's.  Rowan two options. He may FOLD : The pot goes to Colleen. He may PLAY : In which case he adds $5 to the pot.  Colleen then has two options. She may FOLD : The pot goes to Rowan. She may PLAY : In which case she adds $5 to the pot.  Then the results are revealed. Whoever wins takes the pot. If they are a tie, then the pot is split between the players.   There are 6 cards, 2 Jacks, 2 Queens and 2 Kings with Jack < Queen < King. The players each place $1 in the pot. Then, one card each is dealt to each player face down. They may see their own card but not their opponenets.  Rowan now has three choices. He may FOLD : the pot goes to Colleen. He may CHECK : the pot remains as is, or he may RAISE : Rowan adds $2 to the pot.  If Rowan doesn't FOLD, Colleen also has three choices. She may also FOLD : The pot goes to Rown. She may SEE : Colleen adds money to the pot equal to what Rowan added (if any). She may SEE-RAISE : Colleen adds money to the pot equal to what Rowan added, and then they both add in an additional $2.  If no one has folded at this point, the cards are revealed. The pot goes to the winner. If the cards are a tie, then the pot is split evenly between the players.    Prove that if a reduced payoff matrix has multiple saddle points, they have the same value.    Consider the payoff matrix    Find neccesary and sufficient conditions for this matrix to be reduced by domination.   Find the Von Nuemann value and optimal strategies for each player for the game above. There may be multiple cases.    Consider the payoff matrix where .   Find the Von Nuemann value and optimal strategies for each player for the game above.   Suppose could be any value, when does this matrix reduce via domination?   Find the Von Nuemann value and optimal strategies for each player for the game above if could be any value.    Consider the payoff matrix where .   Find the optimal solutions and the Von Nuemann value for the above game. (Without loss of generality, we may assume are positive, why?)   Prove that in a game with a two by two payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.   Prove via contradiction that in a game with a reduced payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.    "
 },
 {
   "id": "ex-games",
@@ -1807,7 +1807,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.4.1",
   "title": "",
-  "body": " For the following games, write out the payoff matrix and the reduced matrix after domination.   Rowan has a 3 of hearts, 4 of spades, 9 of spades and 10 of hearts. Collen has a 5 of spades, 6 of hearts, 7 of hearts and 8 of spades.  Each player selects a card without revealing it, and both players flip their cards over at the same time. If the suits are the same, then Rowan wins the sum of the two card values. Otherwise, Colleen wins that sum.   The same as (A) but reverse the payoff conditions for Rowan and Colleen.   Rowan picks an even integer from 1-6, and Colleen picks an odd integer from 1-6. If the difference is less than 3, the player who played the bigger number wins the sum of the two values. Otherwise the player who played the smaller number wins the sum of the two values.   Rowan picks an integer from 1-3. Colleen picks two guesses which may be the same. Colleen reveals their guesses one at a time. If they guess correctly, they win $ equal to the value of their other guess. If they do not guess correctly, Rowan wins $ equal to the sum of both guesses.  Colonel Blotto  Colonel Rowan is attacking a town defended by Colonel Colleen. Rowan has three regiments and Colleen has four. There are two routes to the town. Rowan and select any number of regiments to attack along each route, up to a total of three and Colleen can likewise assign her four regiments along either route, neither knowing beforehand the other's strategy.  Along each route, whatever side has a greater number of regiments wins points equal to the number of regiments sent by the opposing side (as they capture those units). Furthermore, if Rowan wins along either route, he captures the town also worth one point.  Morra  Rowan and Colleen each simultaneously hold up one or two fingers and shouts a guess for the total number of fingers held. If either Rowan or Colleen guess correctly, then they collect $ from their opponent equal to this number of fingers. If they both guess correctly or both guess incorrectly, then no money changes hands.  "
+  "body": " For the following games, write out the payoff matrix and the reduced matrix after domination.   Rowan has a 3 of hearts (❤️), 4 of spades (♠️), 9 of spades (♠️) and 10 of hearts (❤️). Collen has a 5 of spades (♠️), 6 of hearts (❤️), 7 of hearts (❤️) and 8 of spades (♠️).  Each player selects a card without revealing it, and both players flip their cards over at the same time. If the suits are the same, then Rowan wins the sum of the two card values. Otherwise, Colleen wins that sum.   The same as (A) but reverse the payoff conditions for Rowan and Colleen.   Rowan picks an even integer from 1-6, and Colleen picks an odd integer from 1-6. If the difference is less than 3, the player who played the bigger number wins the sum of the two values. Otherwise the player who played the smaller number wins the sum of the two values.   Rowan picks an integer from 1-3. Colleen picks two guesses which may be the same. Colleen reveals their guesses one at a time. If they guess correctly, they win $ equal to the value of their other guess. If they do not guess correctly, Rowan wins $ equal to the sum of both guesses.  Colonel Blotto  Colonel Rowan is attacking a town defended by Colonel Colleen. Rowan has three regiments and Colleen has four. There are two routes to the town. Rowan and select any number of regiments to attack along each route, up to a total of three and Colleen can likewise assign her four regiments along either route, neither knowing beforehand the other's strategy.  Along each route, whatever side has a greater number of regiments wins points equal to the number of regiments sent by the opposing side (as they capture those units). Furthermore, if Rowan wins along either route, he captures the town also worth one point.  Morra  Rowan and Colleen each simultaneously hold up one or two fingers and shouts a guess for the total number of fingers held. If either Rowan or Colleen guess correctly, then they collect $ from their opponent equal to this number of fingers. If they both guess correctly or both guess incorrectly, then no money changes hands.  "
 },
 {
   "id": "exercises-games-2",
@@ -2879,6 +2879,213 @@ var ptx_lunr_docs = [
   "number": "8.3.7",
   "title": "",
   "body": " Consider a primal integral linear maximization problem with objective function such that the integral problem has an optimal solution . Then for each of the following find a counterexample.   The linear relaxation of this primal problem also achieves optimality. (Think irrational numbers.)   Suppose that the linear relaxation also achieves optimality at , then the integral dual to the original integral max problem must also achieve an optimal solution.   Suppose that the linear relaxation also achieves optimality at such that . Suppose the dual to the integral maximization problem achieved optimality at , and let denote the dual to the relaxation. Then where is the objective function of the dual.  "
+},
+{
+  "id": "sec-covermatch",
+  "level": "1",
+  "url": "sec-covermatch.html",
+  "type": "Section",
+  "number": "9.1",
+  "title": "Coverings and Matchings of Graphs",
+  "body": " Coverings and Matchings of Graphs   Coverings and matchings on graphs are an integral part of the study of graph theory with numerous applications. A full exploration would be more appropriate for a graph theory or combinatorics course. However, to highlight some of the ways that linear optimization can be applied here, examine the relationship between primal and dual problems, observe some limitations, and consider a case where we can employ linear optimization to solve problems without concern.     Consider the following undirected graph .  An undirected graph.        matching A matching is a collection of edges such that no two edges in are incident to the same vertex. Let denote the size of the largest possible matching(s) There is, too my knowledge, no standard notation for the size of a maximum matching for . This is the proposed notation from Dr. Mark Kayll of the University of Montana, since the looks like a matching 🥴. .  What is ? How can we be sure this is true?    Find for :  An undirected graph.         Let be a graph with vertices , and be any matching on . For each edge let such that if , then , otherwise .  We now construct a canonical maximization problem which can help compute a maximum matching.    For each vertex , write an inequality to ensure that is a matching.    Given the above constraints, do we need another constraint to ensure that ?    Find a linear objective function to compute .    State the maximization linear optimization problem for computing the maximum matching of a graph . We well refer to this problem as the matching primal problem .    Consider from . Label each vertex and write out a Tucker tableau for the linear optimization problem for computing the maximum matching.    Solve the above optimization problem:    What do you notice?    Consider from . Label each vertex and write out a Tucker Tableau for the linear optimization problem for computing the maximum matching.    Solve the above optimization problem:    What do you notice?      Consider the general maximization problem constructed in .    Prove that any graph and matching (maximum or not) corresponds to a feasible solution for this problem where if and otherwise.    Let be the maximum value of the objective function for this problem. What can be said about the relationship between and ?                   No general relationship exists between and .    Prove your claim.      Consider the general maximization problem constructed in . We now consider it's dual problem.    Let denote the dual variable corresponding to the primal constraint for vertex . What is the dual objective function in terms of ?    For each edge , there is a dual constraint, state this dual constraint. (Hint: in the original Tucker Tableau, when would an entry in the column be a zero, and when would it be a one?)    State the dual minimization problem to the primal maximum matching problem. We will refer to this problem as the dual covering problem .    Suppose we restrict to only integer values, give an interpretation for the dual min problem (Hint: each corresponds to a vertex . Would take on any values besides 0 or 1)?       vertex cover, vertex covering  cover, covering Given a graph , a vertex cover or is a colection of vertices such that for any edge either or (possibly both) are in .  Let denote the size of the smallest vertex cover This is fairly standard. .    Find for from,     Find for from,     For each vertex , let if and otherwise. Show this is a feasible solution to the dual problem found in for . Is it optimal?    Since we solved the matching problem for in , use Sage to solve the dual problem    What do we notice?    We solved the matching maximixation problem for in , use Sage to solve the dual problem    What do we notice?      Consider the general dual minimization problem constructed in .    Prove that any graph and cover (minimum or not) corresponds to a feasible solution for this problem where if and otherwise.    Let be the minimum value of the objective function for this problem. What can be said about the relationship between and ?                   No general relationship exists between and .    Prove your claim.    What can be said about the relationship between and ?                   No general relationship exists between and .    Prove your claim.     Königs Theorem and Bipartite Graphs   As mentioned above, a full discussion of covers and matchings, while fascinating, would be beyond the scope of this text. We will restrict ourselves to a specific family of graphs.     A graph is said to be bipartite, if its vertices may be partitioned into two disjoint sets, where there are no edges between vertices in the same .      Is from bipartite?    Is from bipartite?    Which of the following are bipartite?      An undirected graph.         An undirected graph.         An undirected graph.         An undirected graph.          Prove that if a graph is bipartite, then it must not contain an odd length cycle The coverse is also true, but we will leave that alone. .   We now consider coverings and matchings on only bipartite graphs.   For the graphs in , find . What do you notice? Is there any difference in the results for bipartite and non-bipartite graphs?     Consider the general linear optimization problems found in and     Show that if the primal matching problem has an optimal solution consisting of only integer values, then it corresponds to a maximum matching.    Show that if the dual covering problem has an optimal solution consisting of only integer values, then it corresponds to a minimum cover.    We now consider a general bipartite graph , and we suppose the primal matching problem has an optimal solution with potentially fractional values. We will explore how we can convert this solution into an integral valued optimal solution.    Let be a bipartite graph, and let be an optimal solution to the primal matching problem from .  Suppose there were a collection of edges for which the corresponding had fractional values, such that these fractional edges formed a cycle . Without loss of generality, we may label the vertices so that for , and have an edge between them, and have fractional values.  To make notation bearable, we'll understand that .    Why must be even?    Suppose we construct a new solution by replacing with when is odd, with when is even, and leaving every edge not part of the same. What value for would guarantee that at least one of the new is an integer?                     Show that .    Show that for any vertex  not a part of , the bound corresponding to is still satisfied by .    Show that for any vertex part of , the bound corresponding to is still satisfied by .    Show that .    When comparing and , which solution has fewer integer values?     has fewer integer values.     has fewer integer values.     have the same number of integer values.    This cannot be determined.        Let be a bipartite graph, and let be an optimal solution to the primal matching problem from .  Suppose there were no collection of edges for which the corresponding had fractional values, such that these fractional edges formed a cycle. Let form a maximal path where has fractional value.  Note that are the endpoints of .    Since is maximal, any edges not a part of this path incident to must be assigned an integer value. What must this value be?    Suppose we construct a new solution by replacing with when is odd, with when is even, and leaving every edge not part of the same. What value for would guarantee that at least one of the new is an integer?                     Show that .    Show that for any vertex  not a part of , the bound corresponding to is still satisfied by .    Show that for any vertex part of , the bound corresponding to is still satisfied by .    Show that . Why does this imply ?    When comparing and , which solution has fewer integer values?     has fewer integer values.     has fewer integer values.     have the same number of integer values.    This cannot be determined.      We now switch our attention to covers. Suppose the dual covering problem has an optimal solution with potentially fractional values. We will explore how we can convert this solution into an integral valued optimal solution.    Let be a bipartite graph, and let be an optimal solution to the dual covering problem from .  Let be the set of vertices where has a fractional value for all . Without loss of generality, suppose .    Let denote the complement of . We may partition into four sets: , Let edges of be partitioned into four sets as follows:    denotes edges incident to vertices in and .     denotes edges incident to vertices in and .     denotes edges incident to vertices in and .     denotes edges incident to vertices in and .      A bipartite graph with partitioned vertices and edges.    Recall that each vertex in is assigned a fractional value less than 1. For any edge in , where , what can we say about ?    Recall that without loss of generality, . Suppose we generate    Suppose we construct a new solution by replacing with when , with when , and leaving every vertex not in the same. What value for would guarantee that at least one of the new is an integer, and ?                               For each edge in , show that the corresponding constraint is still satisfied.    For each edge in , show that the corresponding constraint is still satisfied.    For each edge in , show that the corresponding constraint is still satisfied.    For each edge in , show that the corresponding constraint is still satisfied.    Show that . Why does this imply ?    When comparing and , which solution has fewer integer values?     has fewer integer values.     has fewer integer values.     have the same number of integer values.    This cannot be determined.      We are finally ready to state our main result, König's Theorem.   König's theorem  theorem, König's  König's Theorem   Let be a bipartite graph. Then .      Use , , , and to prove .     "
+},
+{
+  "id": "exploration-matching",
+  "level": "2",
+  "url": "sec-covermatch.html#exploration-matching",
+  "type": "Exploration",
+  "number": "9.1.1",
+  "title": "",
+  "body": "  Consider the following undirected graph .  An undirected graph.        matching A matching is a collection of edges such that no two edges in are incident to the same vertex. Let denote the size of the largest possible matching(s) There is, too my knowledge, no standard notation for the size of a maximum matching for . This is the proposed notation from Dr. Mark Kayll of the University of Montana, since the looks like a matching 🥴. .  What is ? How can we be sure this is true?    Find for :  An undirected graph.      "
+},
+{
+  "id": "activity-maxmatch",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-maxmatch",
+  "type": "Activity",
+  "number": "9.1.2",
+  "title": "",
+  "body": "  Let be a graph with vertices , and be any matching on . For each edge let such that if , then , otherwise .  We now construct a canonical maximization problem which can help compute a maximum matching.    For each vertex , write an inequality to ensure that is a matching.    Given the above constraints, do we need another constraint to ensure that ?    Find a linear objective function to compute .    State the maximization linear optimization problem for computing the maximum matching of a graph . We well refer to this problem as the matching primal problem .    Consider from . Label each vertex and write out a Tucker tableau for the linear optimization problem for computing the maximum matching.    Solve the above optimization problem:    What do you notice?    Consider from . Label each vertex and write out a Tucker Tableau for the linear optimization problem for computing the maximum matching.    Solve the above optimization problem:    What do you notice?   "
+},
+{
+  "id": "sec-covermatch-5",
+  "level": "2",
+  "url": "sec-covermatch.html#sec-covermatch-5",
+  "type": "Activity",
+  "number": "9.1.3",
+  "title": "",
+  "body": "  Consider the general maximization problem constructed in .    Prove that any graph and matching (maximum or not) corresponds to a feasible solution for this problem where if and otherwise.    Let be the maximum value of the objective function for this problem. What can be said about the relationship between and ?                   No general relationship exists between and .    Prove your claim.   "
+},
+{
+  "id": "activity-mincover",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-mincover",
+  "type": "Activity",
+  "number": "9.1.4",
+  "title": "",
+  "body": "  Consider the general maximization problem constructed in . We now consider it's dual problem.    Let denote the dual variable corresponding to the primal constraint for vertex . What is the dual objective function in terms of ?    For each edge , there is a dual constraint, state this dual constraint. (Hint: in the original Tucker Tableau, when would an entry in the column be a zero, and when would it be a one?)    State the dual minimization problem to the primal maximum matching problem. We will refer to this problem as the dual covering problem .    Suppose we restrict to only integer values, give an interpretation for the dual min problem (Hint: each corresponds to a vertex . Would take on any values besides 0 or 1)?   "
+},
+{
+  "id": "sec-covermatch-7",
+  "level": "2",
+  "url": "sec-covermatch.html#sec-covermatch-7",
+  "type": "Activity",
+  "number": "9.1.5",
+  "title": "",
+  "body": "   vertex cover, vertex covering  cover, covering Given a graph , a vertex cover or is a colection of vertices such that for any edge either or (possibly both) are in .  Let denote the size of the smallest vertex cover This is fairly standard. .    Find for from,     Find for from,     For each vertex , let if and otherwise. Show this is a feasible solution to the dual problem found in for . Is it optimal?    Since we solved the matching problem for in , use Sage to solve the dual problem    What do we notice?    We solved the matching maximixation problem for in , use Sage to solve the dual problem    What do we notice?   "
+},
+{
+  "id": "sec-covermatch-8",
+  "level": "2",
+  "url": "sec-covermatch.html#sec-covermatch-8",
+  "type": "Activity",
+  "number": "9.1.6",
+  "title": "",
+  "body": "  Consider the general dual minimization problem constructed in .    Prove that any graph and cover (minimum or not) corresponds to a feasible solution for this problem where if and otherwise.    Let be the minimum value of the objective function for this problem. What can be said about the relationship between and ?                   No general relationship exists between and .    Prove your claim.    What can be said about the relationship between and ?                   No general relationship exists between and .    Prove your claim.   "
+},
+{
+  "id": "def-bipartite",
+  "level": "2",
+  "url": "sec-covermatch.html#def-bipartite",
+  "type": "Definition",
+  "number": "9.1.1",
+  "title": "",
+  "body": "  A graph is said to be bipartite, if its vertices may be partitioned into two disjoint sets, where there are no edges between vertices in the same .   "
+},
+{
+  "id": "activity-bp",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-bp",
+  "type": "Activity",
+  "number": "9.1.7",
+  "title": "",
+  "body": "  Is from bipartite?    Is from bipartite?    Which of the following are bipartite?      An undirected graph.         An undirected graph.         An undirected graph.         An undirected graph.        "
+},
+{
+  "id": "subsec-Konigs-5",
+  "level": "2",
+  "url": "sec-covermatch.html#subsec-Konigs-5",
+  "type": "Activity",
+  "number": "9.1.8",
+  "title": "",
+  "body": " Prove that if a graph is bipartite, then it must not contain an odd length cycle The coverse is also true, but we will leave that alone. .  "
+},
+{
+  "id": "subsec-Konigs-7",
+  "level": "2",
+  "url": "sec-covermatch.html#subsec-Konigs-7",
+  "type": "Activity",
+  "number": "9.1.9",
+  "title": "",
+  "body": " For the graphs in , find . What do you notice? Is there any difference in the results for bipartite and non-bipartite graphs?  "
+},
+{
+  "id": "activity-covermatcheq",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-covermatcheq",
+  "type": "Activity",
+  "number": "9.1.10",
+  "title": "",
+  "body": "  Consider the general linear optimization problems found in and     Show that if the primal matching problem has an optimal solution consisting of only integer values, then it corresponds to a maximum matching.    Show that if the dual covering problem has an optimal solution consisting of only integer values, then it corresponds to a minimum cover.   "
+},
+{
+  "id": "activity-cyclefrac",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-cyclefrac",
+  "type": "Activity",
+  "number": "9.1.11",
+  "title": "",
+  "body": "  Let be a bipartite graph, and let be an optimal solution to the primal matching problem from .  Suppose there were a collection of edges for which the corresponding had fractional values, such that these fractional edges formed a cycle . Without loss of generality, we may label the vertices so that for , and have an edge between them, and have fractional values.  To make notation bearable, we'll understand that .    Why must be even?    Suppose we construct a new solution by replacing with when is odd, with when is even, and leaving every edge not part of the same. What value for would guarantee that at least one of the new is an integer?                     Show that .    Show that for any vertex  not a part of , the bound corresponding to is still satisfied by .    Show that for any vertex part of , the bound corresponding to is still satisfied by .    Show that .    When comparing and , which solution has fewer integer values?     has fewer integer values.     has fewer integer values.     have the same number of integer values.    This cannot be determined.     "
+},
+{
+  "id": "activity-pathfrac",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-pathfrac",
+  "type": "Activity",
+  "number": "9.1.12",
+  "title": "",
+  "body": "  Let be a bipartite graph, and let be an optimal solution to the primal matching problem from .  Suppose there were no collection of edges for which the corresponding had fractional values, such that these fractional edges formed a cycle. Let form a maximal path where has fractional value.  Note that are the endpoints of .    Since is maximal, any edges not a part of this path incident to must be assigned an integer value. What must this value be?    Suppose we construct a new solution by replacing with when is odd, with when is even, and leaving every edge not part of the same. What value for would guarantee that at least one of the new is an integer?                     Show that .    Show that for any vertex  not a part of , the bound corresponding to is still satisfied by .    Show that for any vertex part of , the bound corresponding to is still satisfied by .    Show that . Why does this imply ?    When comparing and , which solution has fewer integer values?     has fewer integer values.     has fewer integer values.     have the same number of integer values.    This cannot be determined.     "
+},
+{
+  "id": "activity-coverfrac",
+  "level": "2",
+  "url": "sec-covermatch.html#activity-coverfrac",
+  "type": "Activity",
+  "number": "9.1.13",
+  "title": "",
+  "body": "  Let be a bipartite graph, and let be an optimal solution to the dual covering problem from .  Let be the set of vertices where has a fractional value for all . Without loss of generality, suppose .    Let denote the complement of . We may partition into four sets: , Let edges of be partitioned into four sets as follows:    denotes edges incident to vertices in and .     denotes edges incident to vertices in and .     denotes edges incident to vertices in and .     denotes edges incident to vertices in and .      A bipartite graph with partitioned vertices and edges.    Recall that each vertex in is assigned a fractional value less than 1. For any edge in , where , what can we say about ?    Recall that without loss of generality, . Suppose we generate    Suppose we construct a new solution by replacing with when , with when , and leaving every vertex not in the same. What value for would guarantee that at least one of the new is an integer, and ?                               For each edge in , show that the corresponding constraint is still satisfied.    For each edge in , show that the corresponding constraint is still satisfied.    For each edge in , show that the corresponding constraint is still satisfied.    For each edge in , show that the corresponding constraint is still satisfied.    Show that . Why does this imply ?    When comparing and , which solution has fewer integer values?     has fewer integer values.     has fewer integer values.     have the same number of integer values.    This cannot be determined.     "
+},
+{
+  "id": "thm-Konigs",
+  "level": "2",
+  "url": "sec-covermatch.html#thm-Konigs",
+  "type": "Theorem",
+  "number": "9.1.2",
+  "title": "König’s Theorem.",
+  "body": " König's theorem  theorem, König's  König's Theorem   Let be a bipartite graph. Then .   "
+},
+{
+  "id": "subsec-Konigs-16",
+  "level": "2",
+  "url": "sec-covermatch.html#subsec-Konigs-16",
+  "type": "Activity",
+  "number": "9.1.14",
+  "title": "",
+  "body": "  Use , , , and to prove .   "
+},
+{
+  "id": "sec-sudoku",
+  "level": "1",
+  "url": "sec-sudoku.html",
+  "type": "Section",
+  "number": "9.2",
+  "title": "Sudoku",
+  "body": " Sudoku  sudoku   In this section, we explore a curious application of linear programming. Solving sudokus!     Consider the following sudoku puzzle:   A sudoku puzzle.    Note that the rules for sudoku are that we fill in each entry with an integer so that:   Each row contains exactly one of each number.    Each column contains exactly one of each number.    Each  block contains exactly one of each number.       Solve the above sudoku if you feel like it.     We consider the standard sudokus like the one above an order 3 sudoku: we have  blocks , each with entries. Potential values range from through . Other orders are also possible.   More sudokus may be found at https:\/\/www.websudoku.com\/     Consider a general order sudoku puzzle. We want to define a linear maximization problem that solves a given puzzle. Let is a solution has value in entry (measured from the bottom left), and otherwise.    For the th entry, write a linear equality constraint which ensures a value is chosen.    For row , write 9 equality conditions so that this row contains one of each entry.    For column , write 9 equality conditions so that this column contains one of each entry.    For an arbitrary block, write 9 equality conditions so that this block contains one of each entry.    Now consider the sudoku puzzle from . How could we write out appropriate equality conditions fixing each entry?    Are there any other constraints we need?    What should the objective function be? (Does it matter?)    Obviously, this would be an absolutely absurdly large problem to even fully write out, much less solve. We consider something simpler.    Consider the following order 2 sudoku puzzle:   An order 2 sudoku puzzle.      Following , write out the linear optimization problem which would compute the solved puzzle.    If you really want to, solve this problem (there are 64 decision variables so...):      This provides an oppourtunity for an enteprising student to engage in some further exploration.   Write effecient code in Sage where one inputs a matrix representing a sudoku puzzle (with maybe 0's for blank entries), and the code produces the appropriate linear optimization problem and solves it.  For more advanced or experienced coders, generalize this to allow the order of the sudoku puzzle to be a parameter.   "
+},
+{
+  "id": "exploration-sudoku",
+  "level": "2",
+  "url": "sec-sudoku.html#exploration-sudoku",
+  "type": "Exploration",
+  "number": "9.2.1",
+  "title": "",
+  "body": "  Consider the following sudoku puzzle:   A sudoku puzzle.    Note that the rules for sudoku are that we fill in each entry with an integer so that:   Each row contains exactly one of each number.    Each column contains exactly one of each number.    Each  block contains exactly one of each number.       Solve the above sudoku if you feel like it.   "
+},
+{
+  "id": "sec-sudoku-5",
+  "level": "2",
+  "url": "sec-sudoku.html#sec-sudoku-5",
+  "type": "Remark",
+  "number": "9.2.1",
+  "title": "",
+  "body": " We consider the standard sudokus like the one above an order 3 sudoku: we have  blocks , each with entries. Potential values range from through . Other orders are also possible.  "
+},
+{
+  "id": "activity-order3sudoku",
+  "level": "2",
+  "url": "sec-sudoku.html#activity-order3sudoku",
+  "type": "Activity",
+  "number": "9.2.2",
+  "title": "",
+  "body": "  Consider a general order sudoku puzzle. We want to define a linear maximization problem that solves a given puzzle. Let is a solution has value in entry (measured from the bottom left), and otherwise.    For the th entry, write a linear equality constraint which ensures a value is chosen.    For row , write 9 equality conditions so that this row contains one of each entry.    For column , write 9 equality conditions so that this column contains one of each entry.    For an arbitrary block, write 9 equality conditions so that this block contains one of each entry.    Now consider the sudoku puzzle from . How could we write out appropriate equality conditions fixing each entry?    Are there any other constraints we need?    What should the objective function be? (Does it matter?)   "
+},
+{
+  "id": "sec-sudoku-9",
+  "level": "2",
+  "url": "sec-sudoku.html#sec-sudoku-9",
+  "type": "Activity",
+  "number": "9.2.3",
+  "title": "",
+  "body": "  Consider the following order 2 sudoku puzzle:   An order 2 sudoku puzzle.      Following , write out the linear optimization problem which would compute the solved puzzle.    If you really want to, solve this problem (there are 64 decision variables so...):     "
+},
+{
+  "id": "sec-sudoku-11",
+  "level": "2",
+  "url": "sec-sudoku.html#sec-sudoku-11",
+  "type": "Project",
+  "number": "9.2.4",
+  "title": "",
+  "body": " Write effecient code in Sage where one inputs a matrix representing a sudoku puzzle (with maybe 0's for blank entries), and the code produces the appropriate linear optimization problem and solves it.  For more advanced or experienced coders, generalize this to allow the order of the sudoku puzzle to be a parameter.  "
 },
 {
   "id": "backmatter-2",
