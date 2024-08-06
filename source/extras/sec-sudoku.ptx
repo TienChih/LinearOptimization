@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-sudoku" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sudoku</title>
+  <idx>sudoku</idx>
+  <introduction>
+    <p>
+      In this section, we explore a curious application
+      of linear programming.  Solving sudokus!
+    </p>
+  </introduction>
+
+  <exploration xml:id="exploration-sudoku">
+    <introduction>
+      <p>
+        Consider the following sudoku puzzle:
+      </p>
+      <image xml:id="sudoku">
+        <shortdescription>A sudoku puzzle.</shortdescription>
+        <latex-image>
+          \begin{tikzpicture}
+            \foreach \x in {0,...,9}{
+              \draw (\x+0.5,+0.5) -- (\x+0.5,9+0.5);
+              \draw (0.5,\x+0.5) -- (9.5,\x+0.5);
+            }
+
+            \foreach \x in {0,...,3}{
+                \draw[ultra thick] (3*\x+0.5,+0.5) -- (3*\x+0.5,9+0.5);
+                \draw[ultra thick] (0.5,3*\x+0.5) -- (9.5,3*\x+0.5);
+            }
+            \node at (1,4){$3$};
+            \node at (1,5){$5$};
+            \node at (1,9){$6$};
+            \node at (2,1){$8$};
+            \node at (2,2){$6$};
+            \node at (2,4){$7$};
+            \node at (2,7){$3$};
+            \node at (3,4){$1$};
+            \node at (3,5){$9$};
+            \node at (3,6){$6$};
+            \node at (3,7){$8$};
+            \node at (3,8){$7$};
+            \node at (4,1){$6$};
+            \node at (4,2){$2$};
+            \node at (4,3){$5$};
+            \node at (4,5){$7$};
+            \node at (4,7){$9$};
+            \node at (5,4){$7$};
+            \node at (5,7){$2$};
+            \node at (6,3){$9$};
+            \node at (6,5){$2$};
+            \node at (6,7){$7$};
+            \node at (6,8){$1$};
+            \node at (6,9){$4$};
+            \node at (7,2){$1$};
+            \node at (7,3){$8$};
+            \node at (7,4){$5$};
+            \node at (7,5){$6$};
+            \node at (7,6){$7$};
+            \node at (8,3){$4$};
+            \node at (8,6){$9$};
+            \node at (8,8){$2$};
+            \node at (8,9){$1$};
+            \node at (9,1){$9$};
+            \node at (9,4){$1$};
+            \node at (9,6){$4$};
+          \end{tikzpicture}
+        </latex-image>
+        
+      </image>
+      <p>
+        Note that the rules for sudoku are that we fill in each
+        entry with an integer <m>1-9</m> so that:
+        <ul>
+          <li>
+            <p>
+              Each row contains exactly one of each number.
+            </p>
+          </li>
+          <li>
+            <p>
+              Each column contains exactly one of each number.
+            </p>
+          </li>
+          <li>
+            <p>
+              Each <m>3\times 3</m> <q>block</q> contains exactly one of each number.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Solve the above sudoku if you feel like it.
+        </p>
+      </statement>
+    </task>
+    
+  </exploration>
+
+  <remark>
+    <p>
+      We consider the standard sudokus like the one above an
+      <em>order 3</em> sudoku: we have <m>3\times 3</m>  <q>blocks</q>,
+      each with <m>3\times 3</m> entries.  Potential values range from
+      <m>1</m> through <m>3^2</m>.  Other orders are also possible.
+    </p>
+  </remark>
+
+  <p>
+    More sudokus may be found at <url ref="https://www.websudoku.com/">https://www.websudoku.com/</url>
+  </p>
+
+  <activity xml:id="activity-order3sudoku">
+    <introduction>
+      <p>
+        Consider a general order <m>3</m> sudoku puzzle.  We want to define
+        a linear maximization problem that solves a given puzzle.  Let
+        <m>x_{ijk}=1</m> is a solution has value <m>k</m> in entry <m>i, j</m>
+        (measured from the bottom left), and <m>x_{ijk}=0</m> otherwise.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          For the <m>i,j</m>th entry, write a linear equality
+          constraint which ensures a value is chosen.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For row <m>i</m>, write 9 equality conditions so that this row contains one of each entry.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For column <m>j</m>, write 9 equality conditions so that this column contains one of each entry.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          For an arbitrary block, write 9 equality conditions so that this block contains one of each entry.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Now consider the sudoku puzzle from <xref ref="exploration-sudoku"/>.
+          How could we write out appropriate equality conditions fixing each entry?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Are there any other constraints we need?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What should the objective function be?  (Does it matter?)
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    Obviously, this would be an absolutely absurdly large problem to even fully write out,
+    much less solve.  We consider something simpler.
+  </p>
+
+  <activity>
+    <introduction>
+      <p>
+        Consider the following order 2 sudoku puzzle:
+      </p>
+      <image xml:id="sudokusmall">
+        <shortdescription>An order 2 sudoku puzzle.</shortdescription>
+        <latex-image>
+          \begin{tikzpicture}
+            \foreach \x in {0,...,4}{
+              \draw (\x+0.5,+0.5) -- (\x+0.5,4+0.5);
+              \draw (0.5,\x+0.5) -- (4.5,\x+0.5);
+            }
+  
+            \foreach \x in {0,...,2}{
+                \draw[ultra thick] (2*\x+0.5,+0.5) -- (2*\x+0.5,4+0.5);
+                \draw[ultra thick] (0.5,2*\x+0.5) -- (4.5,2*\x+0.5);
+            }
+            \node at (2,2){$2$};
+            \node at (2,4){$3$};
+            \node at (4,3){$2$};
+            \node at (4,4){$1$};
+          \end{tikzpicture}
+        </latex-image>
+        
+      </image>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Following <xref ref="activity-order3sudoku"/>, write
+          out the linear optimization problem which would compute the solved
+          puzzle.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          If you <em>really</em> want to, solve this problem (there are 64 decision variables so...):
+
+          <sage>
+            <input>
+              %display typeset
+              A = (FIXME)
+              b = (FIXME)
+              c = (FIXME)
+              P = InteractiveLPProblem(A, b, c,
+               [FIXME], 
+               constraint_type = [FIXME],
+               variable_type = "",
+               problem_type = FIXME)
+              P
+            </input>         
+            </sage>
+            <sage>
+              <input>
+                print(P.optimal_solution())
+                print(P.optimal_value())
+              </input>         
+            </sage>
+        </p>
+      </statement>
+    </task>
+    
+    
+  </activity>
+
+  <p>
+    This provides an oppourtunity for an enteprising student
+    to engage in some further exploration.
+  </p>
+
+  <project>
+    <p>
+      Write  <em>effecient</em> code in Sage where one
+      inputs a <m>9\times 9</m> matrix representing a sudoku puzzle
+      (with maybe 0's for blank entries), and the code produces the
+      appropriate linear optimization problem and solves it.
+    </p>
+    <p>
+      For more advanced or experienced coders, generalize this to allow the <c>order</c>
+      of the sudoku puzzle to be a parameter.
+    </p>
+  </project>
+
+  
+
+  
+
+  
+
+</section>

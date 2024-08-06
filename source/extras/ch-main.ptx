@@ -4,11 +4,25 @@
   <title>Extra Topics</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+      This is a chapter on random applications of linear optimization
+      that are not generally a standard part of the undergraduate course, but
+      are fun and nifty extensions.  There is a good chance that anyone 
+      taking or teaching a class on linear optimization will not be able to cover
+      these topics.  However, for a class who finds the time, as independent
+      reading for an ambitious or curious student, or fodder for projects or
+      exploration, these can provide some insight into the vast array of problems
+      to which the theory from this course may be applied.
+    </p>
+    <p>
+      In <xref ref="sec-covermatch"/>, we discuss
+      graph matchings and coverings using linear optimization.
+    </p>
   </introduction>
 
   <!-- include sections -->
   <xi:include href="sec-covermatch.ptx" />
+  <xi:include href="sec-sudoku.ptx" />
   
 
 </chapter>

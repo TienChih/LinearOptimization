@@ -2,32 +2,39 @@
 
 <section xml:id="sec-covermatch" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Coverings and Matchings of Graphs</title>
-
+  <introduction>
+    <p>
+      Coverings and matchings on graphs are an integral part of the study
+      of graph theory with numerous applications.  A full exploration would be
+      more appropriate for a graph theory or combinatorics course.  However,
+      to highlight some of the ways that linear optimization can be applied here,
+      examine the relationship between primal and dual problems, observe some limitations,
+      and consider a case where we can employ linear optimization to
+      solve problems without concern.
+    </p>
+  </introduction>
 
   <exploration xml:id="exploration-matching">
     <introduction>
       <p>
-        Consider the following graph <m>G</m>.
+        Consider the following undirected graph <m>G</m>.
         <image xml:id="exploration-graph">
           <shortdescription>An undirected graph.</shortdescription>
           <latex-image>
             \begin{tikzpicture}
-            \foreach \x in {-2,...,2}{
+            
+            \draw (0,0)--(2,0);
+            \draw (0,1)--(2,1);
+            \foreach \x in {0,...,2}{
+                \draw (\x, 0)--(\x, 1);
                 \draw[fill, black] (\x,1) circle (2pt);
                 \draw[fill, black] (\x,0) circle (2pt);
             };
-            \foreach \x in {-1,...,1}{
-                \draw (2*\x, 0) -- (2*\x,1);
-            };
 
-            \foreach \x in {0,...,1}{
-                \draw (-2+3*\x, 0) -- (-2+3*\x+1,1);
-                \draw (-2+3*\x, 0) -- (-2+3*\x+1,0);
-                \draw (-2+3*\x, 1) -- (-2+3*\x+1,1);
-                \draw (-2+3*\x, 1) -- (-2+3*\x+1,0);
-                \draw (-1+2*\x, 0) -- (0,\x);
-                \draw (-1+2*\x, 1) -- (0,\x);
-            };
+            \draw (1, 1)--(2,0);
+            \draw[fill, black] (1.5,0.5) circle (2pt);
+            
+            
               
         \end{tikzpicture}
           </latex-image>
@@ -39,9 +46,13 @@
     <task>
       <statement>
         <p>
+          <idx>matching</idx>
           A <em>matching</em> is a collection of edges <m>M</m> such that no two
           edges in <m>M</m> are incident to the same vertex.  Let <m>\Xi(G)</m>
-          denote the size of the largest possible matching(s).
+          denote the size of the largest possible matching(s)
+          <fn>There is, too my knowledge, no standard notation for the size of a maximum matching for 
+            <m>G</m>.  This is the proposed notation from Dr. Mark Kayll of the University of Montana,
+          since the <m>\Xi</m> looks like a matching 🥴.</fn>.
         </p>
         <p>
           What is <m>\Xi(G)</m>?  How can we be sure this is true?
@@ -57,19 +68,21 @@
             <shortdescription>An undirected graph.</shortdescription>
             <latex-image>
               \begin{tikzpicture}
-            \foreach \x in {0,...,2}{
-                \draw[fill, black] ({0.5*sin(\x*120)}, {0.5*cos(\x*120)}) circle (2pt);
-                \draw[fill, black] ({1*sin(\x*120)}, {1*cos(\x*120)}) circle (2pt);
-                \draw[fill, black] ({1*sin(\x*120+25)}, {1*cos(\x*120+25)}) circle (2pt);
-                \draw[fill, black] ({1*sin(\x*120-25)}, {1*cos(\x*120-25)}) circle (2pt);
-                \draw[fill, black] ({1.5*sin(\x*120)}, {1.5*cos(\x*120)}) circle (2pt);
-
-                \draw (0,0)--({0.5*sin(\x*120)}, {0.5*cos(\x*120)}) -- ({1*sin(\x*120+25)}, {1*cos(\x*120+25)}) --({1*sin(\x*120)}, {1*cos(\x*120)})--({1*sin(\x*120-25)}, {1*cos(\x*120-25)}) --({1.5*sin(\x*120)}, {1.5*cos(\x*120)}) -- ({1*sin(\x*120+25)}, {1*cos(\x*120+25)});
-                \draw ({1*sin(\x*120)}, {1*cos(\x*120)}) -- ({1.5*sin(\x*120)}, {1.5*cos(\x*120)});
-                \draw ({0.5*sin(\x*120)}, {0.5*cos(\x*120)}) -- ({1*sin(\x*120-25)}, {1*cos(\x*120-25)}); 
-            };
-            \draw[fill, black] (0,0) circle (2pt);
-        \end{tikzpicture}
+            
+              \draw (0,0)--(2,0);
+              \draw (0,1)--(2,1);
+              \foreach \x in {0,...,2}{
+                  \draw (\x, 0)--(\x, 1);
+                  \draw[fill, black] (\x,1) circle (2pt);
+                  \draw[fill, black] (\x,0) circle (2pt);
+              };
+  
+              \draw (1, 1) -- (2,0);
+              \draw (0,0) -- (1,1);
+              \draw (0,1) -- (1,0);
+              \draw[fill, black] (0.5,0.5) circle (2pt);
+              
+              \end{tikzpicture}
             </latex-image>
             
           </image>
@@ -77,22 +90,20 @@
       </statement>
     </task>
 
-    <task>
-      <statement>
-        <p>
-          What are some differences you notice between the matchings for <m>G</m> and <m>H</m>?
-        </p>
-      </statement>
-    </task>
+    
     
   </exploration>
 
   <activity xml:id="activity-maxmatch">
     <introduction>
       <p>
-        Let <m>G</m> be a graph with vertices <m>v_1, \ldots, v_n</m>.
+        Let <m>G</m> be a graph with vertices <m>v_1, \ldots, v_n</m>, and <m>M</m> be any matching on <m>G</m>.
         For each edge <m>v_iv_j</m> let <m>x_{ij}\in [0,1]</m> such that if <m>v_iv_j\in M</m>,
         then <m>x_{ij}=1</m>, otherwise <m>x_{ij}=0</m>.
+      </p>
+      <p>
+        We now construct a canonical maximization problem which can help compute a 
+        maximum matching.
       </p>
     </introduction>
     <task>
@@ -119,22 +130,23 @@
     <task>
       <statement>
         <p>
-          State the maximization linear programming problem for computing the maximum matching of a graph <m>G</m>.
+          State the maximization linear optimization problem for computing the maximum matching of a graph <m>G</m>.
+          We well refer to this problem as the <em>matching primal problem</em>.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Consider <m>G</m> from <xref ref="exploration-matching"/>.  Label each vertex and write out a Tucker Tableau
-          for the linear programming problem for computing the maximum matching.
+          Consider <m>G</m> from <xref ref="exploration-matching"/>.  Label each vertex and write out a Tucker tableau
+          for the linear optimization problem for computing the maximum matching.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Solve the above programming problem:
+          Solve the above optimization problem:
         </p>
         <sage>
           <input>
@@ -163,14 +175,14 @@
       <statement>
         <p>
           Consider <m>H</m> from <xref ref="exploration-matching"/>.  Label each vertex and write out a Tucker Tableau
-          for the linear programming problem for computing the maximum matching.
+          for the linear optimization problem for computing the maximum matching.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Solve the above programming problem:
+          Solve the above optimization problem:
         </p>
         <sage>
           <input>
@@ -198,11 +210,63 @@
     
   </activity>
 
+  <activity>
+    <introduction>
+      <p>
+        Consider the general maximization problem constructed in <xref ref="activity-maxmatch"/>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Prove that any graph <m>G</m> and matching <m>M</m> (maximum or not) corresponds to a feasible solution for this problem
+          where <m>x_{ij}=1</m> if <m>v_iv_j\in M</m> and <m>x_{ij}=0</m> otherwise.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>f(\x^*)</m> be the maximum value of the objective function
+          for this problem.  What can be said about the relationship between
+          <m>f(\x^*)</m> and <m>\Xi(G)</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>f(\x^*)\leq \Xi(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(\x^*)\geq \Xi(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f(\x^*)= \Xi(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              No general relationship exists between 
+              <m>f(\x^*)</m> and <m>\Xi(G)</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Prove your claim.
+        </p>
+        
+      </statement>
+    </task>
+  </activity>
+
   <activity xml:id="activity-mincover">
     <introduction>
       <p>
-        Consider the maximizations problems you found in <xref ref="activity-maxmatch"/>,
-        both the specific ones and the particular ones.
+        Consider the general maximization problem constructed in <xref ref="activity-maxmatch"/>.
+        We now consider it's dual problem.
       </p>
     </introduction>
     <task>
@@ -224,7 +288,8 @@
     <task>
       <statement>
         <p>
-          State the dual minimization program to the primal maximum matching problem.
+          State the dual minimization problem to the primal maximum matching problem.
+          We will refer to this problem as the <em>dual covering problem</em>.
         </p>
       </statement>
     </task>
@@ -243,12 +308,14 @@
   <activity>
     <introduction>
       <p>
-        Given a graph <m>G</m>, a <em>vertex cover</em> is a colection of vertices <m>U</m>
+        <idx>vertex cover, vertex covering</idx>
+        <idx>cover, covering</idx>
+        Given a graph <m>G</m>, a <em>vertex cover</em> or <m>cover</m> is a colection of vertices <m>U</m>
         such that for any edge <m>v_iv_j</m> either <m>v_i</m> or <m>v_j</m> (possibly both)
         are in <m>U</m>.
       </p>
       <p>
-        Let <m>\tau(G)</m> denote the size of the smallest vertex cover.
+        Let <m>\tau(G)</m> denote the size of the smallest vertex cover <fn>This is fairly standard.</fn>.
       </p>
     </introduction>
     <task>
@@ -268,14 +335,9 @@
     <task>
       <statement>
         <p>
-          For each vertex <m>v_i</m>, let <m>y_i=1</m> if <m>v_i\in U</m> and <m>y_i=0</m> otherwise. Write out a minimization problem for computing <m>\tau(G)</m> for a general graph <m>G</m>.
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          How does this compare to the problem you found in <xref ref="activity-mincover"/>?
+          For each vertex <m>v_i</m>, let <m>y_i=1</m> if <m>v_i\in U</m> and <m>y_i=0</m> otherwise.
+          Show this is a feasible solution to the dual problem found in <xref ref="activity-mincover"/> for <m>G</m>.
+          Is it optimal?
         </p>
       </statement>
     </task>
@@ -306,7 +368,7 @@
     <task>
       <statement>
         <p>
-          We <q>solved</q> the matching problem for <m>H</m> in <xref ref="exploration-matching"/>, use
+          We <q>solved</q> the matching maximixation problem for <m>H</m> in <xref ref="exploration-matching"/>, use
           Sage to solve the dual problem
         </p>
         <sage>
@@ -330,30 +392,756 @@
   </activity>
 
   <activity>
-    <statement>
+    <introduction>
       <p>
-        Consider the maximum matching and minimum covering problems.  What does duality tell
-        us about these problems?
+        Consider the general dual minimization problem constructed in <xref ref="activity-mincover"/>.
       </p>
-      <ol marker="A." cols="3">
-        <li>
-          <p>
-            <m>\Xi(G)\leq \tau(G)</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>\Xi(G)\geq \tau(G)</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>\Xi(G) = \tau(G)</m>.
-          </p>
-        </li>
-      </ol>
-    </statement>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Prove that any graph <m>G</m> and cover <m>U</m> (minimum or not) corresponds to a feasible solution for this problem
+          where <m>y_{i}=1</m> if <m>v_i\in U</m> and <m>y_i=0</m> otherwise.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>g(\y^*)</m> be the minimum value of the objective function
+          for this problem.  What can be said about the relationship between
+          <m>g(\y^*)</m> and <m>\tau(G)</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>g(\y^*)\leq \tau(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g(\y^*)\geq \tau(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g(\y^*)= \tau(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              No general relationship exists between 
+              <m>g(\y^*)</m> and <m>\tau(G)</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Prove your claim.
+        </p>
+        
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What can be said about the relationship between <m>\Xi(G)</m>
+          and <m>\tau(G)</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>\Xi(G)\leq \tau(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\Xi(G)\geq \tau(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\Xi(G)= \tau(G)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              No general relationship exists between 
+              <m>\Xi(G)</m> and <m>\tau(G)</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+          Prove your claim.
+        </p>
+      </statement>
+    </task>
   </activity>
+
+  <subsection xml:id="subsec-Konigs">
+    <title>Königs Theorem and Bipartite Graphs</title>
+
+    <introduction>
+      <p>
+        As mentioned above, a full discussion of covers and matchings,
+        while fascinating, would be beyond the scope of this text.
+        We will restrict ourselves to a specific family of graphs.
+      </p>
+    </introduction>
+
+    <definition xml:id="def-bipartite">
+      <statement>
+        <p>
+          A graph <m>G</m> is said to be bipartite, if its
+          vertices <m>V</m> may be partitioned into two disjoint sets,
+          <m>V_1, V_2</m> where there are no edges between vertices in the 
+          same <m>V_i</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <activity xml:id="activity-bp">
+      <task>
+        <statement>
+          <p>
+            Is <m>G</m> from <xref ref="exploration-matching"/>
+            bipartite?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>H</m> from <xref ref="exploration-matching"/>
+            bipartite?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Which of the following are bipartite?
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                <image xml:id="bp1">
+                  <shortdescription>An undirected graph.</shortdescription>
+                  <latex-image>
+                    \begin{tikzpicture}[every node/.style={draw,circle,fill}]
+                    \graph[clockwise, radius=2cm] {subgraph C_n [n=6,name=A]};
+                    
+                    \end{tikzpicture}
+                  </latex-image>
+                  
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                <image xml:id="nbp1">
+                  <shortdescription>An undirected graph.</shortdescription>
+                  <latex-image>
+                    \begin{tikzpicture}[every node/.style={draw,circle,fill}]
+                    \graph[clockwise, radius=2cm] {subgraph C_n [n=7,name=A]};
+                    
+                    \end{tikzpicture}
+                  </latex-image>
+                  
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                <image xml:id="nbp2">
+                  <shortdescription>An undirected graph.</shortdescription>
+                  <latex-image>
+                    \begin{tikzpicture}[every node/.style={draw,circle,fill}]
+                    \graph[clockwise, radius=2cm] {subgraph K_n [n=4,name=A]};
+                    
+                    \end{tikzpicture}
+                  </latex-image>
+                  
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                <image xml:id="bp2">
+                  <shortdescription>An undirected graph.</shortdescription>
+                  <latex-image>
+                    \begin{tikzpicture}[every node/.style={draw,circle,fill}]
+                    \graph[clockwise, radius=2cm] {subgraph K_nm [m=4, n=3,name=A]};
+                    
+                    \end{tikzpicture}
+                  </latex-image>
+                  
+                </image>
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+      
+    </activity>
+
+    <activity>
+      <p>
+        Prove that if a graph is bipartite, then it must <em>not</em>
+        contain an odd length cycle <fn>The coverse is also true, but we will leave that alone.</fn>.
+      </p>
+    </activity>
+
+    <p>
+      We now consider coverings and matchings on only bipartite graphs.
+    </p>
+
+    <activity>
+      <p>
+        For the graphs in <xref ref="activity-bp"/>,
+        find <m>\Xi, \tau</m>.  What do you notice?
+        Is there any difference in the results for bipartite
+        and non-bipartite graphs?
+      </p>
+    </activity>
+
+    <activity xml:id="activity-covermatcheq">
+      <introduction>
+        <p>
+          Consider the general linear optimization problems found in 
+          <xref ref="activity-maxmatch"/> and <xref ref="activity-mincover"/>
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Show that if the primal matching problem
+            has an
+            optimal solution <m>\x^*</m> consisting of only integer values,
+            then it corresponds to a maximum matching.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that if the dual covering problem
+            has an
+            optimal solution <m>\y^*</m> consisting of only integer values,
+            then it corresponds to a minimum cover.
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+
+    <p>
+      We now consider a general bipartite graph <m>G</m>, and we suppose
+      the primal matching problem has an optimal solution <m>\x^*</m>
+      with potentially fractional values.  We will explore how we can convert
+      this solution into an integral valued optimal solution.
+    </p>
+
+    
+    <activity xml:id="activity-cyclefrac">
+      <introduction>
+        <p>
+          Let <m>G</m> be a bipartite graph, and let <m>\x^*</m> be
+          an optimal solution to the primal matching problem
+          from <xref ref="activity-maxmatch"/>.
+        </p>
+        <p>
+          Suppose there were a collection of edges for which the 
+          corresponding <m>x_{ij}^*</m> had fractional values, such that these
+          fractional edges formed a cycle <m>C</m>.  Without loss of generality,
+          we may label the vertices  <m>v_1, v_2, \ldots v_k</m> so that for
+          <m>1\leq i \leq k-1</m>, <m>v_iv_{i+1}</m> and <m>v_kv_1</m> have an edge 
+          between them, and <m>x_{i,i+1}^*, x_{k,1}^*</m> have fractional values.
+        </p>
+        <p>
+          To make notation bearable, we'll understand that <m>v_{k+1}=v_1</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Why must <m>k</m> be even?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose we construct a new solution <m>\x'</m> by replacing
+            <m>x_{i,i+1}^*</m> with <m>x_{i,i+1}^*-\epsilon</m> when <m>i</m> is odd,
+            with <m>x_{i,i+1}^*+\epsilon</m> when <m>i</m> is even, and leaving every
+            edge not part of <m>C</m> the same.  What value for
+            <m>\epsilon</m> would guarantee that at least one of the new <m>x'_{i,i+1}</m> is
+            an integer?
+          </p>
+          <ol marker="A.">
+            <li>
+              <p>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} </m>
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+      
+      <task>
+        <statement>
+          <p>
+            Show that <m>\x'\geq 0</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that for any vertex <m>v_j</m> <em>not</em> a part
+            of <m>C</m>, the bound corresponding to <m>v_j</m>
+            is still satisfied by <m>\x'</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that for any vertex <m>v_i</m>  part
+            of <m>C</m>, the bound corresponding to <m>v_i</m>
+            is still satisfied by <m>\x'</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that <m>f(\x') = f(\x^*)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            When comparing <m>\x^*</m> and <m>\x'</m>, which solution
+            has fewer integer values?
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>\x^*</m> has fewer integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\x'</m> has fewer integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\x^*, \x'</m> have the same number of integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                This cannot be determined.
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+    </activity>
+
+
+    <activity xml:id="activity-pathfrac">
+      <introduction>
+        <p>
+          Let <m>G</m> be a bipartite graph, and let <m>\x^*</m> be
+          an optimal solution to the primal matching problem
+          from <xref ref="activity-maxmatch"/>.
+        </p>
+        <p>
+          Suppose there were <em>no</em> collection of edges for which the 
+          corresponding <m>x_{ij}^*</m> had fractional values, such that these
+          fractional edges formed a cycle.  Let <m>v_1, v_2, \ldots v_k</m>
+          form a maximal path <m>P</m> where <m>x^*_{i,i+1}, 1\leq i\leq k-1</m> has fractional
+          value.
+        </p>
+        <p>
+          Note that <m>v_1, v_k</m> are the endpoints of <m>P</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Since <m>P</m> is maximal, any edges not a part of this path
+            incident to <m>v_1, v_k</m> must be assigned an integer value.
+            What must this value be?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Suppose we construct a new solution <m>\x'</m> by replacing
+            <m>x_{i,i+1}^*</m> with <m>x_{i,i+1}^*-\epsilon</m> when <m>i</m> is odd,
+            with <m>x_{i,i+1}^*+\epsilon</m> when <m>i</m> is even, and leaving every
+            edge not part of <m>P</m> the same.  What value for
+            <m>\epsilon</m> would guarantee that at least one of the new <m>x'_{i,i+1}</m> is
+            an integer?
+          </p>
+          <ol marker="A.">
+            <li>
+              <p>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} </m>
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+      
+      <task>
+        <statement>
+          <p>
+            Show that <m>\x'\geq 0</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that for any vertex <m>v_j</m> <em>not</em> a part
+            of <m>P</m>, the bound corresponding to <m>v_j</m>
+            is still satisfied by <m>\x'</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that for any vertex <m>v_i</m>  part
+            of <m>P</m>, the bound corresponding to <m>v_i</m>
+            is still satisfied by <m>\x'</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that <m>f(\x') \geq f(\x^*)</m>.  Why does
+            this imply <m>f(\x') = f(\x^*)</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            When comparing <m>\x^*</m> and <m>\x'</m>, which solution
+            has fewer integer values?
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>\x^*</m> has fewer integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\x'</m> has fewer integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\x^*, \x'</m> have the same number of integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                This cannot be determined.
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+    </activity>
+
+    <p>
+      We now switch our attention to covers.  Suppose
+      the dual covering problem has an optimal solution <m>\y^*</m>
+      with potentially fractional values.  We will explore how we can convert
+      this solution into an integral valued optimal solution.
+    </p>
+
+    <activity xml:id="activity-coverfrac">
+      <introduction>
+        <p>
+          Let <m>G</m> be a bipartite graph, and let <m>\y^*</m> be
+          an optimal solution to the dual covering problem
+          from <xref ref="activity-mincover"/>.
+        </p>
+        <p>
+          Let <m>F\subseteq V</m> be the set of vertices where <m>x^*_i</m>
+          has a fractional value for all <m>v_i\in F</m>.  Without loss of generality,
+          suppose <m>V_1\cap F\geq V_2\cap F</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>F^c</m> denote the complement of <m>F</m>.  We may partition
+            <m>V(G)</m> into four sets: <m>F\cap V_1, F\cap V_2, F^c\cap V_1, F^c\cap V_2</m>,
+            Let edges of <m>G</m> be partitioned into four sets as follows:
+            <ul>
+              <li>
+                <p>
+                  <m>E_1</m> denotes edges incident to vertices in <m>F^c\cap V_1</m> and
+                  <m>F^c\cap V_2</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>E_2</m> denotes edges incident to vertices in <m>F\cap V_1</m> and
+                  <m>F\cap V_2</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>E_3</m> denotes edges incident to vertices in <m>F^c\cap V_1</m> and
+                  <m>F\cap V_2</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>E_4</m> denotes edges incident to vertices in <m>F\cap V_1</m> and
+                  <m>F^c\cap V_2</m>.
+                </p>
+              </li>
+            </ul> 
+          </p>
+          <image xml:id="edgetypes">
+            <shortdescription>A bipartite graph with partitioned vertices and edges.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}
+                \node[circle, minimum size=1cm, draw=black] (A) at (0,0.6) {};
+                \node[circle, minimum size=1cm, draw=black] (B) at (0,-0.6) {};
+                \draw (-0.7,-1.4)--(0.7,-1.4)--(0.7,1.4)--(-0.7,1.4)--(-0.7,-1.4);
+
+                \draw[fill, blue] (0, 0.6) circle (2pt);
+                \draw[fill, blue] (0.25, 0.35) circle (2pt);
+                \draw[fill, blue] (-0.25, 0.35) circle (2pt);
+                \draw[fill, blue] (0.25, 0.85) circle (2pt);
+                \draw[fill, blue] (-0.25, 0.85) circle (2pt);
+
+                \draw[fill, red] (0, -0.35) circle (2pt);
+                \draw[fill, red] (0.25, -0.7) circle (2pt);
+                \draw[fill, red] (-0.25, -0.7) circle (2pt);
+
+                \node[circle, minimum size=1cm, draw=black] (C) at (2,0.6) {};
+                \node[circle, minimum size=1cm, draw=black] (D) at (2,-0.6) {};
+                \draw (2-0.7,-1.4)--(2+0.7,-1.4)--(2+0.7,1.4)--(2-0.7,1.4)--(2-0.7,-1.4);
+
+                \draw[fill, blue] (2.25, 0.35) circle (2pt);
+                \draw[fill, blue] (2-0.25, 0.35) circle (2pt);
+                \draw[fill, blue] (2.25, 0.85) circle (2pt);
+                \draw[fill, blue] (2-0.25, 0.85) circle (2pt);
+
+                \draw[fill, red] (2.25, -0.35) circle (2pt);
+                \draw[fill, red] (2-0.25, -0.35) circle (2pt);
+                \draw[fill, red] (2.25, -0.85) circle (2pt);
+                \draw[fill, red] (2-0.25, -0.85) circle (2pt);
+
+                \node at (0, 1.25){\tiny $F\cap V_1$};
+                \node at (0, -1.25){\tiny $F^c\cap V_1$};
+                \node at (2, 1.25){\tiny $F\cap V_2$};
+                \node at (2, -1.25){\tiny $F^c\cap V_2$};
+                \node at (0, -1.6){\small $V_1$};
+                \node at (2, -1.6){\small $V_2$};
+
+                \draw[dashed] (A)--node[above]{\tiny$E_2$}(C);
+                \draw[dashed] (A)--node[above, sloped, pos=0.8]{\tiny$E_4$}(D);
+                \draw[dashed] (B)--node[sloped, above, pos=0.2]{\tiny$E_3$}(C);
+                \draw[dashed] (B)--node[below]{\tiny$E_1$}(D);
+              \end{tikzpicture}
+            </latex-image>
+            
+          </image>
+          <p>
+            Recall that each vertex <m>v_i</m> in <m>F</m> is assigned a fractional value
+            <m>y_i</m> less than 1.  For any edge <m>v_iv_j</m> in <m>G</m>,
+            where <m>v_j\not\in F</m>, what can we say about <m>y_j</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Recall that without loss of generality, <m>|F\cap V_1|\geq |F\cap V_2|</m>.
+            Suppose we generate
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Suppose we construct a new solution <m>\y'</m> by replacing
+            <m>y_i^*</m> with <m>y_i^*-\epsilon</m> when <m>v_i\in F\cap V_1</m>,
+            with <m>y_{i}^*+\epsilon</m> when <m>v_i\in F\cap V_2</m>, and leaving every
+            vertex not in  <m>F</m> the same.  What value for
+            <m>\epsilon</m> would guarantee that at least one of the new <m>y'_i</m> is
+            an integer, and <m>\y'\geq 0</m>?
+          </p>
+          <ol marker="A.">
+            <li>
+              <p>
+                <m>\epsilon = \min \{y^*_i: v_i\in V(G)\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon = \min \{y^*_i: v_i\in V_1\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon = \min \{y^*_i: v_i\in V_2\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon = \min \{y^*_i: v_i\in F\cap V_1\} </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\epsilon = \min \{y^*_i: v_i\in F\cap V_2\} </m>
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For each edge in <m>E_1</m>, show that the corresponding constraint
+            is still satisfied.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For each edge in <m>E_2</m>, show that the corresponding constraint
+            is still satisfied.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For each edge in <m>E_3</m>, show that the corresponding constraint
+            is still satisfied.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            For each edge in <m>E_4</m>, show that the corresponding constraint
+            is still satisfied.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that <m>g(\y')\leq g(\y^*)</m>.  Why
+            does this imply <m>g(\y') = g(\y^*)</m>? 
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            When comparing <m>\y^*</m> and <m>\y'</m>, which solution
+            has fewer integer values?
+          </p>
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>\y^*</m> has fewer integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\y'</m> has fewer integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\y^*, \y'</m> have the same number of integer values.
+              </p>
+            </li>
+            <li>
+              <p>
+                This cannot be determined.
+              </p>
+            </li>
+          </ol>
+        </statement>
+      </task>
+    </activity>
+
+    <p>
+      We are finally ready to state our main result,
+      König's Theorem.
+    </p>
+
+    <theorem xml:id="thm-Konigs">
+      <idx>König's theorem</idx>
+      <idx>theorem, König's</idx>
+      <title>König's Theorem</title>
+      <statement>
+        <p>
+          Let <m>G</m> be a bipartite graph.  Then
+          <m>\Xi(G)=\tau(G)</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <activity>
+      <statement>
+        <p>
+          Use <xref ref="activity-covermatcheq"/>, <xref ref="activity-cyclefrac"/>, <xref ref="activity-pathfrac"/>,
+          and <xref ref="activity-coverfrac"/> to prove <xref ref="thm-Konigs"/>.
+        </p>
+      </statement>
+    </activity>
+    
+
+
+    
+  </subsection>
 
   
 

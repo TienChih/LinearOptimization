@@ -68,7 +68,7 @@
   <latex-image-preamble>\usepackage{tikz, pgfplots}
     \usetikzlibrary{positioning,matrix,arrows}
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
-    \usetikzlibrary{decorations.markings} 
+    \usetikzlibrary{decorations.markings, graphs, graphs.standard} 
   </latex-image-preamble>
 
   
