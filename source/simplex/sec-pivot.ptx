@@ -3,7 +3,13 @@
 <section xml:id="sec-pivot" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Canonical Programs and the Simplex Pivot</title>
 
-  <p> We begin the process of establishing an algorithm. </p>
+  <introduction>
+    <p>
+      In this section, we use our geometric intuition to develop an algebraic operation, a <em>simplex pivot</em>
+      which will be the key operation in solving linear optimization problems.  We give both a geometric and algebraic understanding
+      of this operation.
+    </p>
+  </introduction>
 
   <activity xml:id="activity-maxslack">
     <introduction>

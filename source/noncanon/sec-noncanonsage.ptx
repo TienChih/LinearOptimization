@@ -3,7 +3,12 @@
 <section xml:id="sec-noncanonsage" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Solving NonCanonical Problems with Sage</title>
 
-
+  <introduction>
+    <p>
+      In <xref ref="sec-simplexsage"/>, we showed how to use Sage to solve canonical linear optimization problems
+      with the simplex algorithm.  In this section, we use Sage to solve noncanonical problems.
+    </p>
+  </introduction>
   
 
   <activity>

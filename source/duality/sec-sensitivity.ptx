@@ -3,7 +3,12 @@
 <section xml:id="sec-sensitivity" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Sensitivity Analysis</title>
 
-  <p> In this section, we begin to assign values to our bounds. </p>
+  <introduction>
+    <p>
+      In this section, we begin the exploration of what duality means.  We assign natural meanings to dual variables and the dual problem.
+      One perspective to keep in mind this section is the role of bounds and objective function in the primal problem, and how they change here.
+    </p>
+  </introduction>
 
   <exploration xml:id="exploration-witch">
     <introduction>

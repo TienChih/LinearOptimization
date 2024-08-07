@@ -3,6 +3,12 @@
 <section xml:id="sec-cuttingplane" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>CuttingPlane Method</title>
 
+  <introduction>
+    <p>
+      We continue our journey through integer optimization, and examine a second method to solve these
+      problems which is geometrically oriented.
+    </p>
+  </introduction>
 
   <exploration>
       <p>

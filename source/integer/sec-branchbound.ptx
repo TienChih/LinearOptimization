@@ -3,6 +3,12 @@
 <section xml:id="sec-branchbound" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Branch and Bound Method</title>
 
+  <introduction>
+    <p>
+      We begin motivating integer optimization problem, and explore an algebraiacally centered method for solving them.
+    </p>
+  </introduction>
+
 
   <exploration xml:id="exploration-meat">
     <introduction>

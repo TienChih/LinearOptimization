@@ -3,6 +3,11 @@
 <section xml:id="sec-networkflow" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Directed Graphs and Network Flow</title>
 
+  <introduction>
+    <p>
+      In this section, we introduce capacitated networks and flows.
+    </p>
+  </introduction>
 
   <exploration xml:id="exploration-flow">
     <introduction>

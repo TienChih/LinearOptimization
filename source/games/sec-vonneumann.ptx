@@ -5,6 +5,13 @@
   <idx>VonNeumann minimax theorem</idx>
   <idx>theorem, VonNeumann minimax</idx>
 
+  <introduction>
+    <p>
+      In this section, show that the linear optimization scheme from <xref ref="sec-minmaxgames"/> gives us exactly what we want
+      by proving VonNeuman's Theorem.
+    </p>
+  </introduction>
+
   <exploration xml:id="exploration-vonneuman">
     <p>
       Consider the tableau in <xref ref="task-gametableau"/> and the associated

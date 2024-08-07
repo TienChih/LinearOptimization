@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<frontmatter xml:id="preface" xmlns:xi="http://www.w3.org/2001/XInclude">
+-->
+  <preface>
+    <title>A note on inquiry learning</title>
+
+    <p>
+      The four pillars of Inquiry Learning are the cornerstone around which this text was built.
+      For those who wish to learn now, I highly reccomend Dr. Dana Ernst's blog on this
+      subject <url href="https://danaernst.com/resources/inquiry-based-learning/">https://danaernst.com/resources/inquiry-based-learning/</url>
+    </p>
+
+    
+
+    <p>
+      Some care must be taken to ensure that the class flows in a productive way,
+      and that students are equitably engaged, and are given agency to take ownership of their
+      own learning.  Some judicious instructor intervention may occasionally be neccesary,
+      but this text facilitates a student centered, deep and engaging learning experience.
+    </p>
+
+    <p>
+      While it may be possible for a student to work through this text on their own,
+      it is designed to facilitate discussion between students, and between the class and the
+      instructor.  There is truly where this material come to life.
+    </p>
+    <image source="images/IBL.png" width="60%">
+      <shortdescription>Class engaged together in an activity.</shortdescription>
+    </image>
+
+    <p>
+      I highly recommend, if possible, projecting the html version of this text on
+      a screen, and for students to use whatever computing devices they have available,
+      to access this text, use the provided tools, and collaborate on working through this material.
+    </p>
+
+    <p>
+      Best wishes to everyone reading this text on your grand adventure through
+      linear optimization!
+    </p>
+
+    
+  </preface>

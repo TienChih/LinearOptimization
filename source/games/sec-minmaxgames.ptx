@@ -3,6 +3,12 @@
 <section xml:id="sec-minmaxgames" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Min-Max Games</title>
 
+  <introduction>
+    <p>
+      In this section, we introduce zero-sum games, some basic strategies for approaching them, and highlight a connection
+      to linear optimization.
+    </p>
+  </introduction>
 
   <exploration xml:id="exploration-evenodd">
     <introduction>

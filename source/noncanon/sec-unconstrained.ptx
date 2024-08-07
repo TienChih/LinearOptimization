@@ -4,7 +4,12 @@
   <title>Unconstrained Variables</title>
   <idx>unconstrained variable</idx>
   <idx>variable, unconstrained</idx>
-
+  <introduction>
+    <p>
+      Recall that canonical problems have non-negative variables and inequality bounds.
+      In this section, we consider linear optimization problems with potentially negative variables.
+    </p>
+  </introduction>
 
   <activity xml:id="unconstrained-geometry">
     <introduction>

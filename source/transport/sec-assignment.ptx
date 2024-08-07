@@ -3,6 +3,12 @@
 <section xml:id="sec-assignment" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Assignment Problem and Hungarian Algorithm</title>
 
+  <introduction>
+    <p>
+      We consider the assignment problem, where each source and sink have supply and demand 1, and an alternative algorithm
+      to solve these sort of problems.
+    </p>
+  </introduction>
 
   <exploration xml:id="exploration-assignment">
     <introduction>

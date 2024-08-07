@@ -3,6 +3,12 @@
 <section xml:id="sec-weighted" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Weighted Graphs</title>
 
+  <introduction>
+    <p>
+      We now pivot to <em>weighted</em> networks and consider some natural optimization problems to pose about them.
+    </p>
+  </introduction>
+
 
   <exploration xml:id="exploration-path">
     <introduction>

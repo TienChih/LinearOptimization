@@ -44,5 +44,7 @@
   </colophon>
 
   <xi:include href="./preface.ptx" />
+  <xi:include href="./print-note.ptx" />
+  <xi:include href="./ibl-note.ptx" /> 
 </frontmatter>
 

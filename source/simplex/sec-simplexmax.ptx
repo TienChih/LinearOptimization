@@ -3,6 +3,13 @@
 <section xml:id="sec-simplexmax" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Simplex Algorithm for Canonical Maximization</title>
 
+  <introduction>
+    <p>
+      Having established the pivot in <xref ref="sec-pivot"/>, we use geometry to determine where to pivot to find optimal solutions.
+      We also discuss how to address potential obstacles.
+    </p>
+  </introduction>
+
   <subsection xml:id="subsec-basicfeasible">
     <title>Basic Feasible Maximization</title>
     <activity xml:id="activity-tableaufeasible">

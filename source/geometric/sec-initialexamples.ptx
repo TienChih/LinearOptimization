@@ -3,7 +3,14 @@
 <section xml:id="sec-initial" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Initial Examples</title>
 
-  <p> Here we begin with some initial examples motivating the sort of problems we will study. </p>
+  <introduction>
+    <p>
+      Here we begin with some initial examples motivating the sort of problems we will study. We define the central problems
+      around which the course will revolve.
+    </p>
+  </introduction>
+
+  
 
   <activity xml:id="activity-exampleart">
     <introduction>

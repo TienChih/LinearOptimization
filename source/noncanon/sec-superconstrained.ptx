@@ -4,6 +4,11 @@
   <title>Super Constrained Bounds</title>
   <idx>equality constraint</idx>
 
+  <introduction>
+    <p>
+      In this section, we consider linear optimization problems with equality bounds.
+    </p>
+  </introduction>
 
   <activity xml:id="super-constrained-geometry">
     <introduction>

@@ -3,7 +3,11 @@
 <section xml:id="sec-polyhedralconvex" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Polyhedral Convextiy</title>
 
-  <p> In this section, we establish the geometric notions which underlie our work. </p>
+  <introduction>
+    <p> In this section, we establish the fundamental geometric notions which underlie our work. </p>
+  </introduction>
+
+  
 
   <activity xml:id="activity-planes">
     <introduction>

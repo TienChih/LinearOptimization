@@ -2,8 +2,10 @@
 
 <section xml:id="sec-dualitytheory" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Duality Theory</title>
-
-  <p> In this section, we establish the theoretical underpinnings of duality. </p>
+  <introduction>
+    <p> In this section, we establish the theoretical underpinnings of duality. This is a proof heavy section.</p>
+  </introduction>
+  
 
   <notation>
     <statement>

@@ -3,6 +3,12 @@
 <section xml:id="sec-transportalgorithm" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Transportation Algorithm</title>
 
+  <introduction>
+    <p>
+      We show how we can take a feasible transportation solution (say from <xref ref="sec-vam"/>), and from there produce an
+      optimal solution.
+    </p>
+  </introduction>
 
   <exploration>
     <introduction>

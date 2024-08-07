@@ -4,6 +4,12 @@
   <title>A Transportation problem and VAM</title>
   <idx>transportation problem</idx>
 
+  <introduction>
+    <p>
+      We introduce the transportation problem, consider it's connection to linear optimization, and show an algorithm
+      that produces a (maybe not optimal) solution.
+    </p>
+  </introduction>
 
   <exploration xml:id="exploration-transportation">
     <introduction>

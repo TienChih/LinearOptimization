@@ -4,7 +4,12 @@
   <title>Using Sage</title>
 
 
-  
+  <introduction>
+    <p>
+      In practice, most linear algebra computations are done with computers.  The presence of tedious technical operations
+      and algorithmic thinking should suggest the same can be done here.
+    </p>
+  </introduction>
 
   <exploration xml:id="exploration-sage">
     <statement>

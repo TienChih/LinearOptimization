@@ -4,6 +4,12 @@
   <title>Games of Chance</title>
   <idx>games of chance</idx>
 
+  <introduction>
+    <p>
+      For games with random components, such as gambling, we can still apply our techniques.  This requires some work, and we
+      explore how to do so.
+    </p>
+  </introduction>
 
   <activity>
     <introduction>

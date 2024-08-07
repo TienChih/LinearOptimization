@@ -2,8 +2,12 @@
 
 <section xml:id="sec-dualpivot" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Tucker Tableau's, Pivots and Duality</title>
-
-  <p> In this section, we examine pivoting with primal-dual tableau's. </p>
+  <introduction>
+    <p> In this section, we examine pivoting with primal-dual tableau's. We will compare (in a good way!) to what we did in
+      <xref ref="sec-pivot"/>.
+    </p>
+  </introduction>
+  
 
   <activity>
     <introduction>

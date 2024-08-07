@@ -3,6 +3,13 @@
 <section xml:id="sec-maxflowmincut" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Max Flow - Min Cut</title>
 
+  <introduction>
+    <p>
+      In this section, we consider an algorithm which solves for the maximum flow.  We also discuss
+      <em>cuts</em>, and show how duality connects flows and cuts.
+    </p>
+  </introduction>
+
 
   <exploration>
     <introduction>

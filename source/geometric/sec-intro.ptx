@@ -3,7 +3,12 @@
 <section xml:id="sec-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>A Brief Geometric Review of Linear Algebra</title>
 
-
+  <introduction>
+    <p>
+      In this introductory section, we do not begin linear optimization.  Instead, we recall a few concepts from
+      Linear Algebra, and examine them through a geometric lense, setting the stage for our mindset going forward.
+    </p>
+  </introduction>
   
 
   <activity xml:id="activity-null">

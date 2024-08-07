@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<frontmatter xml:id="preface" xmlns:xi="http://www.w3.org/2001/XInclude">
+-->
+  <preface>
+    <title>A note on the print version</title>
+
+    <p>
+      This book aims to develop readers' ability to reason about
+      linear optimization concepts, and to facilitate thinking and intuition.
+      Several technological tools are deployed to this effect, to enhance
+      geometric reasoning, bypass tedious arithmetic computations, or both.
+      These include embedded Sage cells with executable code, Doenet activities,
+      and Desmos graphs.
+    </p>
+
+    
+
+    <p>
+      <!--
+      The online version of this book has many embedded Sage cells
+      that allow readers to perform computations from within the
+      book.
+      -->
+      Sage is introduced as
+      a platform for performing many computations
+      since it is freely available and its syntax mirrors common
+      mathematical notation. Print readers may access Sage online through
+      <url href="https://sagecell.sagemath.org/">.</url>
+    </p>
+
+    <p>
+      Throughout the book, Sage cells appear in various places to
+      encourage readers to use Sage to complete some relevant
+      computation.  In the print version, these may appear with some
+      pre-populated code, such as the one below, that you will want to
+      copy into an online Sage cell.
+      <sage>
+	<input>
+A = matrix([[1,2], [2,1]])
+	</input>
+      </sage>
+      Some activities call for the students to determine the appropriate parameters which would allow Sage to solve the
+      question at hand.  In these cases, <c>FIXME</c> or similar place holders are placed within the code, and meant to be edited out
+      in favor of the correct entries
+      <sage>
+        <input>
+    A = matrix(FIXME)
+    rref(A)
+        </input>
+          </sage>
+      Empty cells appear as shown below and are included to indicate
+      part of an exercise or activity that is meant to be completed in
+      Sage. 
+      <sage>
+	<input>
+
+	</input>
+      </sage>
+    </p>
+
+    <p>
+        For other interactive components to activities, the pdf and print versions of this text will contain links and QR codes to a standalone
+        version of the activity, so that readers with an appropriate device may follow along the flow of the course.
+    </p>
+
+    <p>
+        In this section, I provide two additional such interactives.  One is a Desmos linear optimization visualizer and solver for
+        two dimensional problems:
+        <interactive desmos="rwbqdwjfht" width="100%"/>
+        The other is a Desmos 3d version of this interactive for three dimensions.
+        <interactive iframe="https://www.desmos.com/3d/15yyp0qdym" width="100%" />
+        These tools can help you visualize and solve small dimensional problems and can be very helpful for beginners.
+    </p>
+
+    <p>
+      There will be an upcoming interactive provided when it is ready 😉.
+    </p>
+
+    
+  </preface>
