@@ -393,10 +393,11 @@ true);
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Our goals</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Our goals</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -529,7 +530,10 @@ true);
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="appendix.html" class="internal"><span class="codenumber">A</span> <span class="title">Review Material</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probreview.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Probability Theory Review</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
@@ -826,9 +830,9 @@ x,y \amp\geq0
 <div class="para" id="sec-cycling-4-2-1-1">Consider a sequence of pivots swapping <span class="process-math">\(x\leftrightarrow t_2\text{,}\)</span> <span class="process-math">\(y \leftrightarrow  t_1\)</span> <span class="process-math">\(t_1 \leftrightarrow y\text{,}\)</span> <span class="process-math">\(t_2 \leftrightarrow x\text{.}\)</span>  In each of these cases, what is the basic solution recorded by the tableau?</div>
 <div class="solutions"><details id="sec-cycling-4-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/degenerate.svg" role="img" class="contained" alt="The feasible region with multiple lines intersecting the origin."></div></div></details></div></article></article><article class="definition definition-like" id="def-Cycling"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
-</h3> <div class="para" id="def-Cycling-2-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em class="emphasis">cycling</em>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">
+</h3> <div class="para" id="def-Cycling-2-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <dfn class="terminology">cycling</dfn>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
-</h3> <div class="para" id="def-degenerate-2-1">If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <em class="emphasis">degenerate</em> pivot.</div></article><div class="para" id="sec-cycling-7">Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate.  Fortunately, there is a solution to this issue.</div>
+</h3> <div class="para" id="def-degenerate-2-1">If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <dfn class="terminology">degenerate</dfn> pivot.</div></article><div class="para" id="sec-cycling-7">Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate.  Fortunately, there is a solution to this issue.</div>
 <article class="theorem theorem-like" id="thm-BlandAnticycling"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Bland’s Anticycling Rules.</span>
 </h3>
@@ -890,7 +894,7 @@ x,y \amp\geq0
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div> and order the variables in the associated way.  Suppose we follow Bland’s rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) <span class="process-math">\(B_1\to B_2\to \cdots B_\ell \to B_1\text{.}\)</span> We call a variable <span class="process-math">\(x_j\)</span> <em class="emphasis">fickle</em> if <span class="process-math">\(x_j\)</span> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.</div> <div class="para" id="sec-cycling-9-2">Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if <span class="process-math">\(x_j\)</span> is fickle, <span class="process-math">\(x_j=0\)</span> for each basic solution during the cycle.</div> <div class="para" id="sec-cycling-9-3">Since the number of variables is finite, the set of fickle variables is also finite, and let <span class="process-math">\(x_t\)</span> denote the fickle variable with largest subscript.  Suppose that <span class="process-math">\(x_t \in B_i, x_t\not\in B_{i+1}\)</span> (why must such a <span class="process-math">\(B_i\)</span> exist?). Denote the entering variable from <span class="process-math">\(B_i\to B_{i+1}\)</span> with <span class="process-math">\(x_s\text{.}\)</span> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+</table></div> and order the variables in the associated way.  Suppose we follow Bland’s rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) <span class="process-math">\(B_1\to B_2\to \cdots B_\ell \to B_1\text{.}\)</span> We call a variable <span class="process-math">\(x_j\)</span> <dfn class="terminology">fickle</dfn> if <span class="process-math">\(x_j\)</span> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.</div> <div class="para" id="sec-cycling-9-2">Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?). So if <span class="process-math">\(x_j\)</span> is fickle, <span class="process-math">\(x_j=0\)</span> for each basic solution during the cycle.</div> <div class="para" id="sec-cycling-9-3">Since the number of variables is finite, the set of fickle variables is also finite, and let <span class="process-math">\(x_t\)</span> denote the fickle variable with largest subscript.  Suppose that <span class="process-math">\(x_t \in B_i, x_t\not\in B_{i+1}\)</span> (why must such a <span class="process-math">\(B_i\)</span> exist?). Denote the entering variable from <span class="process-math">\(B_i\to B_{i+1}\)</span> with <span class="process-math">\(x_s\text{.}\)</span> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width middle" style="width:50%;"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -977,7 +981,7 @@ x,y \amp\geq0
 </table></div>
 </div></div> Note that <span class="process-math">\(x_s\)</span> must also be fickle (why?) and so <span class="process-math">\(s\lt t\text{.}\)</span>
 </div> <div class="para logical" id="sec-cycling-9-4">
-<div class="para">We call the <em class="emphasis">dictionary</em> for a basis the system of equations corresponding to that basis.  So the dictionary for <span class="process-math">\(B_i\)</span> is <span class="process-math">\(D_i\)</span> which we can write as:</div>
+<div class="para">We call the <dfn class="terminology">dictionary</dfn> for a basis the system of equations corresponding to that basis.  So the dictionary for <span class="process-math">\(B_i\)</span> is <span class="process-math">\(D_i\)</span> which we can write as:</div>
 <div class="displaymath process-math" id="sec-cycling-9-4-4">
 \begin{align*}
 x_k \amp = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_i.\\

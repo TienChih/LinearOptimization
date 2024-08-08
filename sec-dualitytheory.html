@@ -393,10 +393,11 @@ true);
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Our goals</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Our goals</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -529,7 +530,10 @@ true);
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="appendix.html" class="internal"><span class="codenumber">A</span> <span class="title">Review Material</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probreview.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Probability Theory Review</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
@@ -604,7 +608,7 @@ f(\x')=g(\y')
 <div class="para" id="sec-dualitytheory-10-11-1-1">Why is the last statement a contradiction?</div></article></article><div class="para" id="sec-dualitytheory-11">We now introduce a key idea which will tie together the primal and dual problems.</div>
 <article class="definition definition-like" id="def-cone"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
-</h3> <div class="para" id="def-cone-2-1">Let <span class="process-math">\(S\subseteq \R^n\text{.}\)</span>  We call the <em class="emphasis">cone</em> of <span class="process-math">\(S\text{,}\)</span> denoted <span class="process-math">\(\cone(S)\)</span> to be the set <span class="process-math">\(\cone(S):=\left\{\displaystyle \sum_{i=1}^m u_i\mathbf{s}_i: u_i\in \R, u_i\geq 0, \mathbf{s}_i\in S \right\}\text{.}\)</span>
+</h3> <div class="para" id="def-cone-2-1">Let <span class="process-math">\(S\subseteq \R^n\text{.}\)</span>  We call the <dfn class="terminology">cone</dfn> of <span class="process-math">\(S\text{,}\)</span> denoted <span class="process-math">\(\cone(S)\)</span> to be the set <span class="process-math">\(\cone(S):=\left\{\displaystyle \sum_{i=1}^m u_i\mathbf{s}_i: u_i\in \R, u_i\geq 0, \mathbf{s}_i\in S \right\}\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-cone"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
 </h3>
@@ -684,7 +688,7 @@ f(\x')=g(\y')
 <div class="para" id="sec-dualitytheory-19-4-1-1">If <span class="process-math">\(\x_*, \y_*\)</span> are feasible optimal solutions with slack variables <span class="process-math">\(\vt_*, \vs_*\text{,}\)</span> what must be true about <span class="process-math">\(\x_*^\top\vs_* + \y_*^\top\vt_*\text{?}\)</span>
 </div></article></article><article class="definition definition-like" id="def-complementaryslackness"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
-</h3> <div class="para" id="def-complementaryslackness-2-1">Feasible variables <span class="process-math">\(\x, \y, \vs, \vt \)</span> are said to exhibit <em class="emphasis">complementary slackness</em> if <span class="process-math">\(\vs^\top\x=0, \y^\top\vt=0\text{.}\)</span>
+</h3> <div class="para" id="def-complementaryslackness-2-1">Feasible variables <span class="process-math">\(\x, \y, \vs, \vt \)</span> are said to exhibit <dfn class="terminology">complementary slackness</dfn> if <span class="process-math">\(\vs^\top\x=0, \y^\top\vt=0\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-sensitivity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-dualpivot.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

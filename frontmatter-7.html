@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Transportation Algorithm</title>
+<title>A note on inquiry learning</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,19 +86,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -385,7 +373,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-vam.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-assignment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="frontmatter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="frontmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-geometric.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
@@ -401,15 +389,15 @@ true);
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
-<li class="toc-item toc-frontmatter">
+<li class="toc-item toc-frontmatter contains-active">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Dedication</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Our goals</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
+<li class="toc-item toc-preface active"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -483,11 +471,11 @@ true);
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalanced Transportation Problems</span></a></div></li></ul>
 </li>
@@ -552,574 +540,18 @@ true);
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-transportalgorithm"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.2</span><span class="space"> </span><span class="title">The Transportation Algorithm</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="preface" id="frontmatter-7"><h2 class="heading hide-type">
+<span class="type">Preface</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">A note on inquiry learning</span>
 </h2>
-<section class="introduction" id="sec-transportalgorithm-2"><div class="para" id="sec-transportalgorithm-2-1">We show how we can take a feasible transportation solution (say from <a href="sec-vam.html" class="internal" title="Section 6.1: A Transportation problem and VAM">Section 6.1</a>), and from there produce an optimal solution.</div></section><article class="exploration project-like" id="sec-transportalgorithm-3"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="sec-transportalgorithm-3-1">
-<div class="para" id="sec-transportalgorithm-3-1-1">Consider a transportation tableau:</div> <div class="para" id="sec-transportalgorithm-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{5}^{20}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{5}^{30}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{8}^{10}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\eb{5}^{0}\)</span></td>
-<td class="l m b2 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">0</td>
-<td class="c m b0 r2 l0 t0 lines">0</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div> <div class="para" id="sec-transportalgorithm-3-1-3">The box here denotes that the bottom right 5 isn’t currently being used  but likely should be.</div>
+<div class="para" id="frontmatter-7-2">The four pillars of Inquiry Learning are the cornerstone around which this text was built. For those who wish to learn now, I highly reccomend Dr. Dana Ernst’s blog on this subject <a class="external" href="https://danaernst.com/resources/inquiry-based-learning/" target="_blank">https://danaernst.com/resources/inquiry-based-learning/</a><details class="ptx-footnote" aria-live="polite" id="frontmatter-7-2-2"><summary class="ptx-footnote__number" title="Footnote 0.0.4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-7-2-2"><code class="code-inline tex2jax_ignore">danaernst.com/resources/inquiry-based-learning/</code></div></details>
 </div>
-<article class="task exercise-like" id="sec-transportalgorithm-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-transportalgorithm-3-2-1-1">It is clear that we should shift some of warehouse 2’s shipments to market 2 to reduce costs. Why isn’t this a valid transportation tableau?</div> <div class="para" id="sec-transportalgorithm-3-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{5}^{20}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{5}^{30}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{8}^{0}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\eb{5}^{10}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="task exercise-like" id="sec-transportalgorithm-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-transportalgorithm-3-3-1-1">How should we adjust these values to have a valid tableau?</div> <div class="para" id="sec-transportalgorithm-3-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{5}^{?}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{5}^{?}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{8}^{0}\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\eb{5}^{10}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="task exercise-like" id="sec-transportalgorithm-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-transportalgorithm-3-4-1-1">How about this one?</div> <div class="para" id="sec-transportalgorithm-3-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{*}^{13}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{*}^{15}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{*}^{7}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{*}^{12}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{*}^{5}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\eb{*}^0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">?</td>
-<td class="c m b2 r0 l0 t0 lines">?</td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{*}^9\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\ec{*}^6 \)</span></td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">0</td>
-<td class="c m b0 r0 l0 t0 lines">0</td>
-<td class="c m b0 r0 l0 t0 lines">0</td>
-<td class="c m b0 r0 l0 t0 lines">0</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article></article><article class="activity project-like" id="activity-transportalgorithm"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="activity-transportalgorithm-1">
-<div class="para" id="activity-transportalgorithm-1-1">Recall the transportation tableau obtained in <a href="sec-vam.html#activity-vamexample" class="xref" data-knowl="./knowl/xref/activity-vamexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 6.1.2">Activity 6.1.2</a>:</div> <div class="para" id="activity-transportalgorithm-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">1</td>
-<td class="c m b2 r0 l0 t0 lines">1</td>
-<td class="c m b2 r0 l0 t0 lines">5</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">1</td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{2}^{20}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines">1</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{2}^{20}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">3</td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{9}^{10}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{4}^{50}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines">7</td>
-<td class="l m b0 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">1</td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{1}^{10}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines">2</td>
-<td class="c m b2 r2 l0 t0 lines">9</td>
-<td class="l m b2 r0 l0 t0 lines">0</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">0</td>
-<td class="c m b0 r0 l0 t0 lines">0</td>
-<td class="c m b0 r2 l0 t0 lines">0</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div> <div class="para" id="activity-transportalgorithm-1-3">Note that this tableau corresponds to a basic feasible solution for the original minimization problem.</div>
-</div>
-<article class="task exercise-like" id="activity-transportalgorithm-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-transportalgorithm-2-1-1">If this solution is not optimal, what should the next step be?</div> <ol class="upper-alpha" id="activity-transportalgorithm-2-1-2">
-<li id="activity-transportalgorithm-2-1-2-1"><div class="para" id="activity-transportalgorithm-2-1-2-1-1">Pick a variable to exit the basis which increases the objective function and make the smallest change.</div></li>
-<li id="activity-transportalgorithm-2-1-2-2"><div class="para" id="activity-transportalgorithm-2-1-2-2-1">Pick a variable to exit the basis which decreases the objective function and make the smallest change.</div></li>
-<li id="activity-transportalgorithm-2-1-2-3"><div class="para" id="activity-transportalgorithm-2-1-2-3-1">Pick a variable to exit the basis which increases the objective function and make the biggest change.</div></li>
-<li id="activity-transportalgorithm-2-1-2-4"><div class="para" id="activity-transportalgorithm-2-1-2-4-1">Pick a variable to exit the basis which decreases the objective function and make the biggest change.</div></li>
-</ol></article><article class="task exercise-like" id="activity-transportalgorithm-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-transportalgorithm-3-1-1">Select column values <span class="process-math">\(b_i\)</span> and row values <span class="process-math">\(a_j\)</span> so that each circled value is the sum of row and column values <span class="process-math">\(b_i+c_j\text{.}\)</span>
-</div> <div class="para" id="activity-transportalgorithm-3-1-2">(We can think of these as analogous to the shadow costs associated with the warehouse/market bounds)</div> <div class="para" id="activity-transportalgorithm-3-1-3"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{2}^{20}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines">1</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{2}^{20}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{9}^{10}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{4}^{50}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines">7</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_3\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{1}^{10}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines">2</td>
-<td class="c m b2 r2 l0 t0 lines">9</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-transportalgorithm-4-1-1">Replace each entry of the tableau <span class="process-math">\(c_{ij}\)</span> with <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>  What does this measure?  What does it mean if each entry is non-negative?</div></article><article class="task exercise-like" id="activity-transportalgorithm-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-transportalgorithm-5-1-1">Pick a <span class="process-math">\(c_{ij}\lt 0\)</span>
-</div> <div class="para" id="activity-transportalgorithm-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{20}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines">?</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{0}^{20}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{10}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{50}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\eb{-2}^{0}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_3\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{10}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines">?</td>
-<td class="c m b2 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-transportalgorithm-6-1-1">Pick  circled entries <span class="process-math">\(c_{k \ell}\)</span> so that they with the boxed <span class="process-math">\(c_{ij}\)</span> form a <dfn class="terminology">cycle</dfn>, that is each of these entries shares a row with exactly one another of the entries, and a column with another of the entries.</div></article><article class="task exercise-like" id="activity-transportalgorithm-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-transportalgorithm-7-1-1">Based on the discussion in (a), which entry should transfer their shipments to <span class="process-math">\(c_{23}\text{?}\)</span>
-</div> <ol class="upper-alpha cols2" id="activity-transportalgorithm-7-1-2">
-<li id="activity-transportalgorithm-7-1-2-1"><div class="para" id="activity-transportalgorithm-7-1-2-1-1"><span class="process-math">\(\displaystyle c_{21}\)</span></div></li>
-<li id="activity-transportalgorithm-7-1-2-2"><div class="para" id="activity-transportalgorithm-7-1-2-2-1"><span class="process-math">\(\displaystyle c_{13}\)</span></div></li>
-</ol> <div class="para" id="activity-transportalgorithm-7-1-3">How do the other entries in the cycle adjust?</div></article><article class="task exercise-like" id="activity-transportalgorithm-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="activity-transportalgorithm-8-1-1">Remove the basis entry which is no longer being used, and recompute the <span class="process-math">\(a_i, b_j\)</span> with the new basis.</div> <div class="para" id="activity-transportalgorithm-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(b_3\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{30}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{0}^{10}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_2\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{50}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{0}^{10}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(a_3\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{0}^{10}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-transportalgorithm-9-1-1">Verify that none of the entries are non negative.  Why do we now terminate?</div> <div class="para" id="activity-transportalgorithm-9-1-2">We then replace the entries with the original entries</div> <div class="para" id="activity-transportalgorithm-9-1-3"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{2}^{30}\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{2}^{10}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ec{4}^{50}\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\ec{7}^{10}\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\ec{1}^{10}\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(9\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-transportalgorithm-10-1-1">Use Sage to confirm the solution: <div class="para" id="activity-transportalgorithm-10-1-1-1">
-<pre id="activity-transportalgorithm-10-1-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
-A = (FIXME)
-b = (FIXME)
-c = (FIXME)
-P = InteractiveLPProblem(A, b, c,
- constraint_type = "==",
- variable_type = ">=",
- problem_type = "min")
-P
-</script></pre> <pre id="activity-transportalgorithm-10-1-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
-print(P.optimal_value())
-</script></pre>
-</div>
-</div></article></article><article class="definition definition-like" id="def-transportationalg"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
-</h3> <div class="para" id="def-transportationalg-3-1">To summarize, the transportation algorithm is as follows:</div> <ol class="decimal" id="def-transportationalg-3-2">
-<li id="def-transportationalg-3-2-1">
-<div class="para" id="def-transportationalg-3-2-1-1">We begin with a feasible transportation tableau, probably via VAM <a href="sec-vam.html#def-vam" class="xref" data-knowl="./knowl/xref/def-vam.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.2">Definition 6.1.2</a>.</div>
-<div class="para" id="def-transportationalg-3-2-1-2">We then associate with each row an unknown <span class="process-math">\(a_i\)</span> and each column a <span class="process-math">\(b_j\text{.}\)</span>
-</div>
-</li>
-<li id="def-transportationalg-3-2-2"><div class="para" id="def-transportationalg-3-2-2-1">We (by convention) let <span class="process-math">\(b_1=0\)</span> and select values <span class="process-math">\(a_i, b_j\)</span> so that for each basis entry <span class="process-math">\(c_{ij}\)</span> we have that <span class="process-math">\(c_{ij} = a_i+b_j\text{.}\)</span>
-</div></li>
-<li id="def-transportationalg-3-2-3"><div class="para" id="def-transportationalg-3-2-3-1">Replace every entry <span class="process-math">\(c_{ij}\)</span> with <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>
-</div></li>
-<li id="def-transportationalg-3-2-4">
-<div class="para" id="def-transportationalg-3-2-4-1">If there is a negative entry <span class="process-math">\(c_{k\ell}\)</span> box this entry and select basis entries so that they, along with the boxed entry, form a cycle.</div>
-<div class="para" id="def-transportationalg-3-2-4-2">If each entry is non-negative, GOTO 6.</div>
-</li>
-<li id="def-transportationalg-3-2-5">
-<div class="para" id="def-transportationalg-3-2-5-1">Shift shipments appropriately along the cycle so that <span class="process-math">\(c_{k\ell}\)</span> has a positive shipping quantity, and one of the selected basis entries has a zero shipping quantity.</div>
-<div class="para" id="def-transportationalg-3-2-5-2">Then GOTO 2.</div>
-</li>
-<li id="def-transportationalg-3-2-6"><div class="para" id="def-transportationalg-3-2-6-1">Replace each cost entry with the costs from step 1 and terminate.</div></li>
-</ol></article><article class="activity project-like" id="sec-transportalgorithm-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
-</h3>
-<div class="introduction" id="sec-transportalgorithm-6-1"><div class="para" id="sec-transportalgorithm-6-1-1">Consider the algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.1">Definition 6.2.1</a>. Recall that the objective function for the transportation problem is <span class="process-math">\(f(\x)=\displaystyle \sum x_{ij}c_{ij}\text{,}\)</span> and that the entries of the tableau produced in Step 3 are <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>
-</div></div>
-<article class="task exercise-like" id="sec-transportalgorithm-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-transportalgorithm-6-2-1">Show that in step 5 the newly produced solution has a strictly lower objective value.</div></article><article class="task exercise-like" id="sec-transportalgorithm-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-transportalgorithm-6-3-1-1">If instead of step 4, we selected an entry with a zero value, what would be true about the resulting new solution?</div> <ol class="upper-alpha" id="sec-transportalgorithm-6-3-1-2">
-<li id="sec-transportalgorithm-6-3-1-2-1"><div class="para" id="sec-transportalgorithm-6-3-1-2-1-1">The new solution has smaller objective value.</div></li>
-<li id="sec-transportalgorithm-6-3-1-2-2"><div class="para" id="sec-transportalgorithm-6-3-1-2-2-1">The new solution has greater objective value.</div></li>
-<li id="sec-transportalgorithm-6-3-1-2-3"><div class="para" id="sec-transportalgorithm-6-3-1-2-3-1">The new solution has the same objective value.</div></li>
-<li id="sec-transportalgorithm-6-3-1-2-4"><div class="para" id="sec-transportalgorithm-6-3-1-2-4-1">The relation of the value of the new solution to the original cannot be determined in general.</div></li>
-</ol></article></article><section class="subsection" id="subsec-unbalanced"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="space"> </span><span class="title">Unbalanced Transportation Problems</span>
-</h3>
-<article class="activity project-like" id="activity-unbalanced"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
-</h4>
-<div class="introduction" id="activity-unbalanced-3"><div class="para" id="activity-unbalanced-3-1">We now consider the case of <dfn class="terminology">unbalanced</dfn> transportation problems, where the demand and supply are unequal.</div></div>
-<article class="task exercise-like" id="activity-unbalanced-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="activity-unbalanced-4-1-1">Suppose we had the following transportation problem:</div> <div class="para" id="activity-unbalanced-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">Market 1</td>
-<td class="c m b2 r0 l0 t0 lines">Market 2</td>
-<td class="c m b2 r0 l0 t0 lines">Market 3</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 1</td>
-<td class="c m b0 r0 l0 t0 lines">$5/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$3/ton</td>
-<td class="c m b0 r2 l0 t0 lines">$1/ton</td>
-<td class="l m b0 r0 l0 t0 lines">35 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 2</td>
-<td class="c m b0 r0 l0 t0 lines">$6/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b0 r2 l0 t0 lines">$5/ton</td>
-<td class="l m b0 r0 l0 t0 lines">45 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 3</td>
-<td class="c m b2 r0 l0 t0 lines">$4/ton</td>
-<td class="c m b2 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b2 r2 l0 t0 lines">$1/ton</td>
-<td class="l m b2 r0 l0 t0 lines">15 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">30 tons</td>
-<td class="c m b0 r0 l0 t0 lines">20 tons</td>
-<td class="c m b0 r2 l0 t0 lines">40 tons</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div> <div class="para" id="activity-unbalanced-4-1-3">Suppose we satisfy all the demand in a way that minimizes costs. What would be the remaining result?</div></article><article class="task exercise-like" id="activity-unbalanced-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="activity-unbalanced-5-1-1">Suppose we “ship” the excess supply to a phatom market:</div> <div class="para" id="activity-unbalanced-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">Market 1</td>
-<td class="c m b2 r0 l0 t0 lines">Market 2</td>
-<td class="c m b2 r0 l0 t0 lines">Market 3</td>
-<td class="c m b2 r0 l0 t0 lines">“Market”</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 1</td>
-<td class="c m b0 r0 l0 t0 lines">$5/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$3/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$1/ton</td>
-<td class="c m b0 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines">35 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 2</td>
-<td class="c m b0 r0 l0 t0 lines">$6/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$5/ton</td>
-<td class="c m b0 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines">45 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 3</td>
-<td class="c m b2 r0 l0 t0 lines">$4/ton</td>
-<td class="c m b2 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b2 r0 l0 t0 lines">$1/ton</td>
-<td class="c m b2 r2 l0 t0 lines">?</td>
-<td class="l m b2 r0 l0 t0 lines">15 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">30 tons</td>
-<td class="c m b0 r0 l0 t0 lines">20 tons</td>
-<td class="c m b0 r0 l0 t0 lines">40 tons</td>
-<td class="c m b0 r2 l0 t0 lines">?</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div> <div class="para" id="activity-unbalanced-5-1-3">How much is shipped to the “Market”?  How much does it cost to “ship” from each warehouse to “Market”?</div></article><article class="task exercise-like" id="activity-unbalanced-6"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="activity-unbalanced-6-1-1">Suppose we had the following transportation problem:</div> <div class="para" id="activity-unbalanced-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">Market 1</td>
-<td class="c m b2 r0 l0 t0 lines">Market 2</td>
-<td class="c m b2 r0 l0 t0 lines">Market 3</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 1</td>
-<td class="c m b0 r0 l0 t0 lines">$5/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$3/ton</td>
-<td class="c m b0 r2 l0 t0 lines">$1/ton</td>
-<td class="l m b0 r0 l0 t0 lines">35 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 2</td>
-<td class="c m b0 r0 l0 t0 lines">$6/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b0 r2 l0 t0 lines">$5/ton</td>
-<td class="l m b0 r0 l0 t0 lines">45 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 3</td>
-<td class="c m b2 r0 l0 t0 lines">$4/ton</td>
-<td class="c m b2 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b2 r2 l0 t0 lines">$1/ton</td>
-<td class="l m b2 r0 l0 t0 lines">15 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">30 tons</td>
-<td class="c m b0 r0 l0 t0 lines">50 tons</td>
-<td class="c m b0 r2 l0 t0 lines">40 tons</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div> <div class="para" id="activity-unbalanced-6-1-3">Suppose we exhaust all the supply in a way that minimizes costs. What would be the remaining result?</div></article><article class="task exercise-like" id="activity-unbalanced-7"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="activity-unbalanced-7-1-1">Suppose we have a phantom “Warehouse” that “filled” the outstanding demand.</div> <div class="para" id="activity-unbalanced-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines">Market 1</td>
-<td class="c m b2 r0 l0 t0 lines">Market 2</td>
-<td class="c m b2 r0 l0 t0 lines">Market 3</td>
-<td class="c m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 1</td>
-<td class="c m b0 r0 l0 t0 lines">$5/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$3/ton</td>
-<td class="c m b0 r2 l0 t0 lines">$1/ton</td>
-<td class="l m b0 r0 l0 t0 lines">35 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 2</td>
-<td class="c m b0 r0 l0 t0 lines">$6/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b0 r2 l0 t0 lines">$5/ton</td>
-<td class="l m b0 r0 l0 t0 lines">45 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">Warehouse 3</td>
-<td class="c m b0 r0 l0 t0 lines">$4/ton</td>
-<td class="c m b0 r0 l0 t0 lines">$2/ton</td>
-<td class="c m b0 r2 l0 t0 lines">$1/ton</td>
-<td class="l m b0 r0 l0 t0 lines">15 tons</td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines">“Warehouse”</td>
-<td class="c m b2 r0 l0 t0 lines">?</td>
-<td class="c m b2 r0 l0 t0 lines">?</td>
-<td class="c m b2 r2 l0 t0 lines">?</td>
-<td class="l m b2 r0 l0 t0 lines">?</td>
-</tr>
-<tr>
-<td class="r m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines">30 tons</td>
-<td class="c m b0 r0 l0 t0 lines">50 tons</td>
-<td class="c m b0 r2 l0 t0 lines">40 tons</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div> <div class="para" id="activity-unbalanced-7-1-3">How much additional “supply” is needed?  How much would it cost to ship this “supply” from “Warehouse” to the markets?</div></article><article class="task exercise-like" id="activity-unbalanced-8"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="activity-unbalanced-8-1-1">Describe a general procedure for solving unbalanced transportation problems.</div></article></article></section></section></div>
+<div class="para" id="frontmatter-7-3">Some care must be taken to ensure that the class flows in a productive way, and that students are equitably engaged, and are given agency to take ownership of their own learning.  Some judicious instructor intervention may occasionally be neccesary, but this text facilitates a student centered, deep and engaging learning experience.</div>
+<div class="para" id="frontmatter-7-4">While it may be possible for a student to work through this text on their own, it is designed to facilitate discussion between students, and between the class and the instructor.  There is truly where this material come to life.</div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/IBL.png" class="contained" alt="Class engaged together in an activity."></div>
+<div class="para" id="frontmatter-7-6">I highly recommend, if possible, projecting the html version of this text on a screen, and for students to use whatever computing devices they have available, to access this text, use the provided tools, and collaborate on working through this material.</div>
+<div class="para" id="frontmatter-7-7">Best wishes to everyone reading this text on your grand adventure through linear optimization!</div></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-vam.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-assignment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="frontmatter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-geometric.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

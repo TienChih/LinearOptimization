@@ -393,10 +393,11 @@ true);
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Our goals</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Our goals</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -529,7 +530,10 @@ true);
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="appendix.html" class="internal"><span class="codenumber">A</span> <span class="title">Review Material</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probreview.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Probability Theory Review</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
@@ -546,8 +550,8 @@ true);
 <article class="task exercise-like" id="sec-maxflowmincut-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-maxflowmincut-3-2-1-1">Find three different ways to install these booths, and find what you believe is the cheapest way to do so.</div></article></article><article class="definition definition-like" id="def-cut"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
-</h3> <div class="para" id="def-cut-2-1">Given a capacitated network <span class="process-math">\(N\text{,}\)</span> a <em class="emphasis">cut</em> of <span class="process-math">\(N\)</span> is a partition of the vertex set into non-empty subsets <span class="process-math">\(C=(V_1, V_2)\text{,}\)</span> where <span class="process-math">\(V=V_1\sqcup V_2, v_s\in V_1, v_d\in V_2\text{.}\)</span>
-</div> <div class="para" id="def-cut-2-2">The <em class="emphasis">capacity</em> of a cut <span class="process-math">\(C\)</span> is the sum <span class="process-math">\(\displaystyle \sum_{v_i\in V_1, v_j\in V_2} c_{ij}\text{.}\)</span>
+</h3> <div class="para" id="def-cut-2-1">Given a capacitated network <span class="process-math">\(N\text{,}\)</span> a <dfn class="terminology">cut</dfn> of <span class="process-math">\(N\)</span> is a partition of the vertex set into non-empty subsets <span class="process-math">\(C=(V_1, V_2)\text{,}\)</span> where <span class="process-math">\(V=V_1\sqcup V_2, v_s\in V_1, v_d\in V_2\text{.}\)</span>
+</div> <div class="para" id="def-cut-2-2">The <dfn class="terminology">capacity</dfn> of a cut <span class="process-math">\(C\)</span> is the sum <span class="process-math">\(\displaystyle \sum_{v_i\in V_1, v_j\in V_2} c_{ij}\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-cutflow"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
 </h3>
@@ -630,8 +634,8 @@ y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 </ul>
 <div class="para">and repeating until we stabilize, why must we eventually stabilize?</div>
 </div></article><article class="task exercise-like" id="activity-maxflowmincutproof-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-maxflowmincutproof-4-1-1">Show that for any <span class="process-math">\(v_k\)</span> in <span class="process-math">\(V'_1\text{,}\)</span> there is an <em class="emphasis"><span class="process-math">\(\alpha\)</span>-path</em> <span class="process-math">\(P\text{:}\)</span> a sequence of vertices starting <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_k\text{,}\)</span> where between <span class="process-math">\(v_{i}, v_j\)</span> either <span class="process-math">\((v_i, v_j), (v_j, v_i)\in E\text{.}\)</span>
-</div> <div class="para" id="activity-maxflowmincutproof-4-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/alpha-path.svg" role="img" class="contained" alt="An \(\alpha\)-path."></div></div> <div class="para" id="activity-maxflowmincutproof-4-1-3">We would call the edges <span class="process-math">\((v_i, v_j)\)</span> to be <em class="emphasis">forward edges</em> and <span class="process-math">\((v_j, v_i)\)</span> <em class="emphasis">backwards edges</em> of <span class="process-math">\(P\text{.}\)</span>
+<div class="para" id="activity-maxflowmincutproof-4-1-1">Show that for any <span class="process-math">\(v_k\)</span> in <span class="process-math">\(V'_1\text{,}\)</span> there is an <dfn class="terminology"><span class="process-math">\(\alpha\)</span>-path</dfn> <span class="process-math">\(P\text{:}\)</span> a sequence of vertices starting <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_k\text{,}\)</span> where between <span class="process-math">\(v_{i}, v_j\)</span> either <span class="process-math">\((v_i, v_j), (v_j, v_i)\in E\text{.}\)</span>
+</div> <div class="para" id="activity-maxflowmincutproof-4-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/alpha-path.svg" role="img" class="contained" alt="An \(\alpha\)-path."></div></div> <div class="para" id="activity-maxflowmincutproof-4-1-3">We would call the edges <span class="process-math">\((v_i, v_j)\)</span> to be <dfn class="terminology">forward edges</dfn> and <span class="process-math">\((v_j, v_i)\)</span> <dfn class="terminology">backwards edges</dfn> of <span class="process-math">\(P\text{.}\)</span>
 </div></article><article class="task exercise-like" id="activity-maxflowmincutproof-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-maxflowmincutproof-5-1-1">Suppose (by way of contradiction) that <span class="process-math">\(v_d\in V_1'\text{.}\)</span> There is by (c) an <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
 </div> <div class="para logical" id="activity-maxflowmincutproof-5-1-2">

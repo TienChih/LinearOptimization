@@ -405,10 +405,11 @@ true);
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Our goals</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Our goals</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -541,7 +542,10 @@ true);
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="appendix.html" class="internal"><span class="codenumber">A</span> <span class="title">Review Material</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probreview.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Probability Theory Review</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
@@ -561,10 +565,10 @@ true);
 <div class="para" id="exploration-path-2-1-1">What is the shortest amout of time needed for her to arrive at Fantasi College?</div></article><article class="task exercise-like" id="exploration-path-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="exploration-path-3-1-1">Is there a unique route she could take that minimizes this time?</div></article></article><article class="definition definition-like" id="def-weightedgraph"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
-</h3> <div class="para" id="def-weightedgraph-3-1">A network is <em class="emphasis">weighted</em> if for each edge <span class="process-math">\((v_i, v_j)\in E\)</span> we assign (potentially negative!) weight <span class="process-math">\(w_{ij}\text{.}\)</span>
+</h3> <div class="para" id="def-weightedgraph-3-1">A network is <dfn class="terminology">weighted</dfn> if for each edge <span class="process-math">\((v_i, v_j)\in E\)</span> we assign (potentially negative!) weight <span class="process-math">\(w_{ij}\text{.}\)</span>
 </div></article><article class="definition definition-like" id="def-path"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
-</h3> <div class="para" id="def-path-4-1">Give a network <span class="process-math">\(N\text{,}\)</span> a <em class="emphasis">path</em> <span class="process-math">\(P\)</span> from <span class="process-math">\(v_x\text{,}\)</span> <span class="process-math">\(v_y\)</span> is a sequence of consecutive edges <span class="process-math">\((v_{a_0}, v_{a_1}), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})\)</span> where <span class="process-math">\(v_{a_0}=v_x, v_{a_k}=v_y\text{.}\)</span>  We say that the <em class="emphasis">length</em> of <span class="process-math">\(P\)</span> is <span class="process-math">\(\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}\text{.}\)</span>   We say that the <em class="emphasis">distance</em> from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{,}\)</span> <span class="process-math">\(d(v_x, v_y)\text{,}\)</span> is the length of a shortest path from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{.}\)</span>
+</h3> <div class="para" id="def-path-4-1">Give a network <span class="process-math">\(N\text{,}\)</span> a <dfn class="terminology">path</dfn> <span class="process-math">\(P\)</span> from <span class="process-math">\(v_x\text{,}\)</span> <span class="process-math">\(v_y\)</span> is a sequence of consecutive edges <span class="process-math">\((v_{a_0}, v_{a_1}), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})\)</span> where <span class="process-math">\(v_{a_0}=v_x, v_{a_k}=v_y\text{.}\)</span>  We say that the <dfn class="terminology">length</dfn> of <span class="process-math">\(P\)</span> is <span class="process-math">\(\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}\text{.}\)</span>   We say that the <dfn class="terminology">distance</dfn> from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{,}\)</span> <span class="process-math">\(d(v_x, v_y)\text{,}\)</span> is the length of a shortest path from <span class="process-math">\(v_x\)</span> to <span class="process-math">\(v_y\text{.}\)</span>
 </div></article><article class="activity project-like" id="sec-weighted-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
 </h3>
@@ -577,7 +581,7 @@ true);
 </div></article><article class="task exercise-like" id="sec-weighted-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-weighted-6-4-1-1">What is a reasonable condition for the shortest path to be well defined?</div></article></article><article class="definition definition-like" id="def-negativecycle"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
-</h3> <div class="para" id="def-negativecycle-4-1">We define a <em class="emphasis">cycle</em> in a weighted network to be a path froma vertex <span class="process-math">\(v_x\)</span> to itself.  If the length of a cycle is negative, we call it a <em class="emphasis">negative cycle</em>.</div></article><article class="activity project-like" id="sec-weighted-8"><h3 class="heading">
+</h3> <div class="para" id="def-negativecycle-4-1">We define a <dfn class="terminology">cycle</dfn> in a weighted network to be a path froma vertex <span class="process-math">\(v_x\)</span> to itself.  If the length of a cycle is negative, we call it a <dfn class="terminology">negative cycle</dfn>.</div></article><article class="activity project-like" id="sec-weighted-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-weighted-8-1"><div class="para" id="sec-weighted-8-1-1">In this activity, we model the shortest path algorithm as a linear optimization problem.  Assume <span class="process-math">\(N\)</span> is a weighted network with no negative cycles.  Let <span class="process-math">\(0\leq x_{ij}\leq 1\)</span> where <span class="process-math">\(x_{ij}=1\)</span> if <span class="process-math">\((v_i, v_j)\)</span> is in a shortest path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
