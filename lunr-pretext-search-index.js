@@ -3517,7 +3517,7 @@ var ptx_lunr_docs = [
   "type": "Appendix",
   "number": "B",
   "title": "Simplex Pivoter",
-  "body": " Simplex Pivoter     "
+  "body": " Simplex Pivoter  Instructions for use are as follows:   First, enter in the number of variables and the number of bounds (the sizes of respectively.)    In the cells generated below, fill in the entries.    In the tableau generated below, click on an entry to pivot on that entry.        "
 },
 {
   "id": "backmatter-4",
