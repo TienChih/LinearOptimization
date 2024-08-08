@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+td, th {
+  table-layout:auto;
+  width: 75px;
+}
+input {
+  width: 50px;
+}
+</style>
+
+<script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+<script>
+var dataTable;
+var clickX = -1;
+var clickY = -1;
+var northBorder;
+var southBorder;
+var eastBorder;
+var westBorder;
+
+function stateTableUpdates() {
+  testX = document.getElementById("selNumCol").value;
+  testY = document.getElementById("selNumRow").value;
+  
+  document.getElementById("Error").innerHTML = "Pre function";
+  if (!(isNaturalNumber(testX) && isNaturalNumber(testY))) {
+  	document.getElementById("Error").innerHTML = "Please enter positive whole numbers";
+    return;
+  }
+  document.getElementById("Error").innerHTML = testX + ", " + testY;
+  // Prep arrays
+  createInputTable (testX, testY);
+}
+
+function resetPage() {
+	resetMe = document.getElementById("selNumCol");
+	resetMe.value = 0;
+	resetMe = document.getElementById("selNumRow");
+	resetMe.value = 0;
+	resetMe = document.getElementById("InputTable");
+	resetMe.innerHTML = "";
+	resetMe = document.getElementById("ResultTable");
+	resetMe.innerHTML = "";
+	clickX = -1;
+	clickY = -1;
+}
+function createInputTable(x, y) {
+  var tbl = document.getElementById("InputTable");
+  tbl.innerHTML = "";
+  // Create header
+  var row;
+  var cell;
+  var cellText;
+	clickX = -1;
+	clickY = -1;
+	
+	for (var i = 1; i <= y; i++) {
+		row = document.createElement("tr");
+		for (var j = 1; j <= x; j++) {
+			cell = document.createElement("td");
+			cellText = document.createElement("input");
+			cellText.id = "InputTable|a|" + i + "|" + j;
+			cellText.onchange = function(){textChanged(this.id);};
+			cellText.value = 0;
+			cell.appendChild(cellText);
+			row.appendChild(cell);
+		}
+		
+		cell = document.createElement("td");
+		cellText = document.createElement("input");
+		cellText.id = "InputTable|b|" + i;
+		cellText.onchange = function(){textChanged(this.id);};
+		cellText.value = 0;
+		cell.appendChild(cellText);
+		cell.style = "border-left: 3px solid black";
+		row.appendChild(cell);
+		tbl.appendChild(row);
+	}
+	row = document.createElement("tr");
+	for (var j = 1; j <= x; j++) {
+		cell = document.createElement("td");
+		cellText = document.createElement("input");
+		cellText.id = "InputTable|c|" + j;
+		cellText.onchange = function(){textChanged(this.id);};
+		cellText.value = 0;
+		cell.appendChild(cellText);
+		cell.style = "border-top: 3px solid black";
+		row.appendChild(cell);
+	}
+	
+	cell = document.createElement("td");
+	cellText = document.createElement("input");
+	cellText.id = "InputTable|d";
+	cellText.onchange = function(){textChanged(this.id);};
+	cellText.value = 0;
+	cell.appendChild(cellText);
+	cell.style = "border-left: 3px solid black;border-top: 3px solid black";
+	row.appendChild(cell);
+	tbl.appendChild(row);
+	
+
+}
+
+function isNaturalNumber(str) {
+    var n = Math.floor(Number(str));
+    return n !== Infinity && String(n) === str && n > 0;
+}
+
+function textChanged(idInput) {
+  document.getElementById("Error").innerHTML = "Value Changed:" + idInput;
+  populateBorders();
+  populateDataTable();
+  populateResultTable();
+}
+
+function populateBorders() {
+
+  valX = Number(document.getElementById("selNumCol").value);
+  valY = Number(document.getElementById("selNumRow").value);
+
+  northBorder = [];
+  southBorder = [];
+  for (var j = 1; j <= (valX); j++) {
+    northBorder.push("x" + j);
+	southBorder.push("s" + j);
+  }
+  northBorder.push("-1");
+  southBorder.push("=g");
+  
+  eastBorder = [];
+  westBorder = [];
+  for (var i = 1; i <= valY; i++) {
+    westBorder.push("y" + i);
+	eastBorder.push("-t" + i);
+  }
+  westBorder.push("-1");
+  eastBorder.push("=f");
+}
+
+function textClicked(idInput) {
+	var splitInput = idInput.split("|");
+	clickY = Number(splitInput[1]);
+	clickX = Number(splitInput[2]);
+  
+	valX = Number(document.getElementById("selNumCol").value);
+	valY = Number(document.getElementById("selNumRow").value);
+	document.getElementById("Error").innerHTML = "Value Clicked:a" + clickY + "," + clickX;
+	if (dataTable[clickY-1][clickX-1] == 0) {
+		return;
+	}
+	var newTable = []
+	var newRow;
+	for (var i = 0; i <= valY; i++) {
+		newRow = [];
+		for (var j = 0; j <= valX; j++) {
+			newRow.push(transformValue(i + 1, j + 1));
+		}
+		newTable.push(newRow);
+	}
+	dataTable = newTable;
+	//Also, if you click on the 5, the x2,t2 should swap, as well as y2, s2
+	var swap
+	swap = northBorder[clickX-1];
+	northBorder[clickX-1] = eastBorder[clickY-1];
+	eastBorder[clickY-1] = swap;
+	
+	swap = southBorder[clickX-1];
+	southBorder[clickX-1] = westBorder[clickY-1];
+	westBorder[clickY-1] = swap;
+	
+	
+	populateResultTable();
+}
+
+
+function populateDataTable() {
+	dataTable = [];
+	var dataRow;
+	valX = Number(document.getElementById("selNumCol").value);
+	valY = Number(document.getElementById("selNumRow").value);
+	for (var i = 1; i <= valY; i++) {
+		dataRow = [];
+		for (var j = 1; j <= valX; j++) {
+			dataRow.push(math.fraction(document.getElementById("InputTable|a|" + i + "|" + j).value));
+		}
+		dataRow.push(math.fraction(document.getElementById("InputTable|b|" + i ).value));
+		dataTable.push(dataRow);
+	}
+	dataRow = [];
+	for (var j = 1; j <= valX; j++) {
+		dataRow.push(math.fraction(document.getElementById("InputTable|c|" + j).value));
+	}
+	for (var k = 1; k <= valY; k++) { //Populate extra cols
+		dataRow.push(math.fraction(0));
+	}
+	dataRow.push(math.fraction(document.getElementById("InputTable|d").value));
+	
+	dataTable.push(dataRow);
+}
+function transformValue(transY, transX) {
+// the row should be all divided by p (besides the one you click).
+	if ((transY == clickY) && (transX == clickX)) {
+		return math.divide(1,dataTable[clickY-1][clickX-1])
+	}
+	if (transX == clickX && transY != clickY) {
+		return math.multiply(-1, math.divide(dataTable[transY-1][transX-1],dataTable[clickY-1][clickX-1]));
+	} else if (transY == clickY) { // The column should be divided by -p (besides the one you click)
+		return math.multiply(1,
+		                     math.divide(dataTable[transY-1][transX-1],dataTable[clickY-1][clickX-1])
+							);
+	} else {
+	//Everyone else q is (pq-rs)/p where r is in the same column as p and row as q, and s is in the same row as p and column of q.
+		p = dataTable[clickY-1][clickX-1];
+		q = dataTable[transY-1][transX-1];
+		r = dataTable[clickY-1][transX-1];
+		s = dataTable[transY-1][clickX-1];
+		return math.divide(math.subtract(math.multiply(p,
+		                                               q),
+						                 math.multiply(r,
+										               s)),
+		                   p);
+	}
+}
+
+function betterPrint(printMe) {
+	if (math.equal(printMe, math.round(printMe))) {
+		return math.format(math.number(printMe));
+	} else {
+		return math.format(printMe);
+	}
+}
+
+function populateResultTable() {
+	
+	var tbl = document.getElementById("ResultTable");
+	tbl.innerHTML = "";
+  
+	var row;
+	var cell;
+	var cellText;
+	var process;
+	valX = Number(document.getElementById("selNumCol").value);
+	valY = Number(document.getElementById("selNumRow").value);
+	process = (clickX > 0) && (clickY > 0) && (dataTable[clickY-1][clickX-1] != 0);
+	try {
+  // Create header  
+	row = document.createElement("tr");
+	
+	cell = document.createElement("th");
+	cell.innerHTML = "";
+	row.appendChild(cell);
+	for (var j = 1; j <= (valX); j++) {
+		cell = document.createElement("th");
+		cell.innerHTML = northBorder[j-1];
+		row.appendChild(cell);
+	}
+	
+	cell = document.createElement("th");
+	cell.innerHTML = northBorder[valX];
+	row.appendChild(cell);
+	
+	tbl.appendChild(row);
+	// Main Body
+	for (var i = 1; i <= valY; i++) {
+		row = document.createElement("tr");
+	
+		cell = document.createElement("th");
+		cell.innerHTML = westBorder[i-1];
+		row.appendChild(cell);
+		
+		for (var j = 1; j <= (valX); j++) {
+			cell = document.createElement("td");
+			cell.innerHTML = betterPrint(dataTable[i-1][j-1]);
+			cell.id = "ResultTable|" + i + "|" + j;
+			cell.onclick = function(){textClicked(this.id);};
+			if (j == 1) {
+				cell.style.borderLeft = "3px solid black";
+			}
+			if (i == 1) {
+				cell.style.borderTop = "3px solid black";
+			}
+			row.appendChild(cell);
+		}
+		
+		cell = document.createElement("td");
+		cell.innerHTML = betterPrint(dataTable[i-1][valX]);
+		cell.style.borderLeft = "3px solid black";
+		cell.style.borderRight = "3px solid black";
+		if (i == 1) {
+			cell.style.borderTop = "3px solid black";
+		}
+		row.appendChild(cell);
+		
+		cell = document.createElement("th");
+		cell.innerHTML = eastBorder[i-1];
+		row.appendChild(cell);
+		
+		tbl.appendChild(row);
+	}
+	
+	// Footer 1
+	
+	row = document.createElement("tr");
+	
+	cell = document.createElement("th");
+	cell.innerHTML = westBorder[valY];
+	row.appendChild(cell);
+	
+	for (var j = 1; j <= (valX); j++) {
+		cell = document.createElement("td");
+		cell.innerHTML = betterPrint(dataTable[valY][j-1]);
+		if (j == 1) {
+			cell.style.borderLeft = "3px solid black";
+		}
+		cell.style.borderTop = "3px solid black";
+		cell.style.borderBottom = "3px solid black";
+		row.appendChild(cell);
+	}
+	
+	cell = document.createElement("td");
+	cell.innerHTML = betterPrint(dataTable[valY][valX]);
+	cell.style.border = "3px solid black"
+	row.appendChild(cell);
+	tbl.appendChild(row);
+	
+	cell = document.createElement("th");
+	cell.innerHTML = eastBorder[valY];
+	row.appendChild(cell);
+	
+	
+	tbl.appendChild(row);
+	
+	// Footer 2
+	
+	row = document.createElement("tr");
+	
+	cell = document.createElement("th");
+	cell.innerHTML = ""
+	row.appendChild(cell);
+	
+	for (var j = 1; j <= (valX); j++) {
+		cell = document.createElement("th");
+		cell.innerHTML = southBorder[j-1];
+		row.appendChild(cell);
+	}
+	
+	cell = document.createElement("th");
+	cell.innerHTML = southBorder[valX]
+	row.appendChild(cell);
+	
+	cell = document.createElement("th");
+	cell.innerHTML = ""
+	row.appendChild(cell);
+	
+	tbl.appendChild(row);
+	
+	} catch (err) {
+	tbl.innerHTML = "";
+	document.getElementById("Error").innerHTML = err;
+	}
+	
+}
+</script>
+</head>
+<body>
+
+Columns:<input type="number" id="selNumCol" onchange="stateTableUpdates()" list="xval"/>
+Rows: <input type="number" id="selNumRow" onchange="stateTableUpdates()" list="yval"/>
+<button onclick="resetPage()">Reset</button>
+<datalist id="xval">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+</datalist>
+<datalist id="yval">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+</datalist>
+
+<p id="Error"></p>
+<table id="InputTable">
+ 
+</table>
+<table id="ResultTable">
+ 
+</table>
+
+</body>
+</html> 
