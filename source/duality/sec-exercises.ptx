@@ -9,7 +9,12 @@
   </sage> 
 
   <p component="html">
-    A link to the simplex pivoter may be found here: <xref ref="simplexpivoter"/>.
+    The simplex pivoter may be found here:
+    <hint>
+      <p>
+        <interactive iframe="Tienv2.html" width="100%" />
+      </p>
+    </hint>
   </p>
   
   <exercises xml:id="exercises-duality">
