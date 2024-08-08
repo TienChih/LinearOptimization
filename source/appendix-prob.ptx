@@ -189,7 +189,7 @@ hist(numpoison)
     <example>
         <statement>
           <p>
-        Recall <xref ref="ex-apple"/>.  The expected value of poisoned apples would be <me>E(X)=0\cdot\frac{35}{210}+1\cdot\frac{=105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.</me>
+        Recall <xref ref="ex-apple"/>.  The expected value of poisoned apples would be <me>E(X)=0\cdot\frac{35}{210}+1\cdot\frac{105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.</me>
       </p>
 
       <p>
