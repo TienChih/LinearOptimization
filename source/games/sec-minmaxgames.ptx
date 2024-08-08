@@ -215,14 +215,14 @@
     <statement>
       <p>
         In a two-player zero-sum game, where the row player has <m>n</m> choices and the column player has <m>m</m> choices, the
-         <em>payoff matrix</em> is a matrix which records in each row and column the net payoff to the row player (this choice is purely
+         <term>payoff matrix</term> is a matrix which records in each row and column the net payoff to the row player (this choice is purely
          by convention, but we will stick to it.)
       </p>
       <p>
         If a row <m>i</m> has entries that are strictly greater than or equal to the entries of another row <m>j</m>, 
-        then we say that row <m>i</m> <em>dominates</em> row <m>j</m>.  We then may delete row <m>j</m> since there is now reason the row player would
+        then we say that row <m>i</m> <term>dominates</term> row <m>j</m>.  We then may delete row <m>j</m> since there is now reason the row player would
         choose <m>j</m>.  Similarly, if column <m>i</m> is less than or equal to column <m>j</m>, column <m>i</m> 
-        <em>dominates</em> column <m>j</m> and we may delete column <m>j</m>.
+        <term>dominates</term> column <m>j</m> and we may delete column <m>j</m>.
       </p>
     </statement>
   </definition>
@@ -348,7 +348,7 @@
     <task>
       <statement>
         <p>
-          Suppose that Rowan pursues a <em>mixed strategy</em> a probability distribution of their choices <m>\p</m>
+          Suppose that Rowan pursues a <term>mixed strategy</term> a probability distribution of their choices <m>\p</m>
           where <me>\p^\top  = \begin{bmatrix} p_1 \\ p_2 \\ \vdots \\ p_n\end{bmatrix}, p_i\geq 0, \displaystyle \sum_{i=1}^n p_i=1.</me>
         </p>
         <p>
@@ -942,7 +942,7 @@
         </tabular>
       </p>
       <p>
-        Such an entry <m>a_{ij}</m> is called a <em>saddle point</em>.
+        Such an entry <m>a_{ij}</m> is called a <term>saddle point</term>.
       </p>
     </statement>
   </definition>

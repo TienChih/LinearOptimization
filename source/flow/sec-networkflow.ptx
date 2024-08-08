@@ -86,16 +86,16 @@
     <idx>flow</idx>
     <statement>
       <p>
-        A <em>directed graph</em> or <em>network</em> is a pair <m>D=(V, E)</m> where <m>V</m> is a set of
+        A <term>directed graph</term> or <term>network</term> is a pair <m>D=(V, E)</m> where <m>V</m> is a set of
         vertices and <m>E</m> is a set of ordered pairs of distinct elements of <m>V</m>.
       </p>
       <p>
-        A network is <em>capacitated</em> if for each edge <m>(v_i, v_j)\in E</m>
+        A network is <term>capacitated</term> if for each edge <m>(v_i, v_j)\in E</m>
         we assign a non negative capacity <m>c_{ij}</m>.  (If there is no edge from <m>v_i</m> to 
         <m>v_j</m>, we may equivalently say that <m>c_{ij}=0</m>.)
       </p>
       <p>
-        A <em>flow</em> assigned to a capacitated network is an assignment to each edge
+        A <term>flow</term> assigned to a capacitated network is an assignment to each edge
         <m>(v_i, v_j)\in E</m>, a value <m>x_{ij}</m> such that <m>0\leq x_{ij}\leq c_{ij}</m>.
         (If there is no edge from <m>v_i</m> to <m>v_j</m>, what must <m>x_{ij}</m> be?)
       </p>
@@ -121,17 +121,17 @@
     <idx>intermediary vertex</idx>
     <statement>
       <p>
-        For any vertex <m>v_j</m>, the <em>net input flow</em> at vertex <m>v_j</m>
+        For any vertex <m>v_j</m>, the <term>net input flow</term> at vertex <m>v_j</m>
         is <m>\varphi(v_j)=\displaystyle \sum_{i} x_{ij} - \sum_{i} x_{ji}</m>
       </p>
       <p>
-        If <m>\varphi(v_j)\lt 0</m> then we say <m>v_j</m> is called a <em>source</em>.
+        If <m>\varphi(v_j)\lt 0</m> then we say <m>v_j</m> is called a <term>source</term>.
       </p>
       <p>
-        If <m>\varphi(v_j) > 0</m> then we say <m>v_j</m> is called a <em>sink</em>.
+        If <m>\varphi(v_j) > 0</m> then we say <m>v_j</m> is called a <term>sink</term>.
       </p>
       <p>
-        If <m>\varphi(v_j) = 0</m> then we say <m>v_j</m> is called an <em>intermediary vertex</em>.
+        If <m>\varphi(v_j) = 0</m> then we say <m>v_j</m> is called an <term>intermediary vertex</term>.
       </p>
     </statement>
   </definition>

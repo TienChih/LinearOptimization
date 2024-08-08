@@ -731,7 +731,7 @@
     <idx>cycling</idx>
     <statement>
       <p>
-        If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <em>cycling</em>.
+        If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <term>cycling</term>.
       </p>
     </statement>
   </definition>
@@ -740,7 +740,7 @@
     <idx>degenerate</idx>
     <statement>
       <p>
-        If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <em>degenerate</em> pivot.
+        If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <term>degenerate</term> pivot.
       </p>
     </statement>
   </definition>
@@ -918,7 +918,7 @@
       </tabular>
        and order the variables in the associated way.  Suppose we follow Bland's rules and still have cycling.
        That is, there is a sequence of pivots and bases (set of basic variables) <m>B_1\to B_2\to \cdots B_\ell \to B_1</m>.
-       We call a variable <m>x_j</m> <em>fickle</em> if <m>x_j</m> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.
+       We call a variable <m>x_j</m> <term>fickle</term> if <m>x_j</m> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.
 
     </p>
     <p>
@@ -1127,7 +1127,7 @@
        Note that <m>x_s</m> must also be fickle (why?) and so <m>s\lt t</m>.
     </p>
     <p>
-      We call the <em>dictionary</em> for a basis the system of equations corresponding to that basis.  So the dictionary for <m>B_i</m> is <m>D_i</m>
+      We call the <term>dictionary</term> for a basis the system of equations corresponding to that basis.  So the dictionary for <m>B_i</m> is <m>D_i</m>
       which we can write as:
       
 

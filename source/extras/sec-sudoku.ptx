@@ -103,7 +103,7 @@
   <remark>
     <p>
       We consider the standard sudokus like the one above an
-      <em>order 3</em> sudoku: we have <m>3\times 3</m>  <q>blocks</q>,
+      <term>order</term> sudoku: we have <m>3\times 3</m>  <q>blocks</q>,
       each with <m>3\times 3</m> entries.  Potential values range from
       <m>1</m> through <m>3^2</m>.  Other orders are also possible.
     </p>

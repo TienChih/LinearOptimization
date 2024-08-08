@@ -83,7 +83,7 @@
     <statement>
      
       <p>
-        A network is <em>weighted</em> if for each edge <m>(v_i, v_j)\in E</m>
+        A network is <term>weighted</term> if for each edge <m>(v_i, v_j)\in E</m>
         we assign (potentially negative!) weight <m>w_{ij}</m>. 
       </p>
       
@@ -96,9 +96,9 @@
     <idx>distance</idx>
     <statement>
       <p>
-        Give a network <m>N</m>, a <em>path</em> <m>P</m> from <m>v_x</m>, <m>v_y</m> is a sequence of consecutive edges <m>(v_{a_0}, v_{a_1}), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})</m>
-        where <m>v_{a_0}=v_x, v_{a_k}=v_y</m>.  We say that the <em>length</em> of <m>P</m> is <m>\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}</m>.   We say that the
-        <em>distance</em> from <m>v_x</m> to <m>v_y</m>, <m>d(v_x, v_y)</m>, is the length of a shortest path from <m>v_x</m> to <m>v_y</m>.
+        Give a network <m>N</m>, a <term>path</term> <m>P</m> from <m>v_x</m>, <m>v_y</m> is a sequence of consecutive edges <m>(v_{a_0}, v_{a_1}), \ldots (v_{a_i}, v_{a_{i+1}}),\ldots, (v_{a_{k-1}}, v_{a_k})</m>
+        where <m>v_{a_0}=v_x, v_{a_k}=v_y</m>.  We say that the <term>length</term> of <m>P</m> is <m>\displaystyle \sum_{i=0}^{k-1}w_{a_ia_{i+1}}</m>.   We say that the
+        <term>distance</term> from <m>v_x</m> to <m>v_y</m>, <m>d(v_x, v_y)</m>, is the length of a shortest path from <m>v_x</m> to <m>v_y</m>.
       </p>
     </statement>
   </definition>
@@ -166,8 +166,8 @@
     <idx>cycle, negative</idx> 
     <statement>
       <p>
-        We define a <em> cycle</em> in a weighted network to be a path froma vertex <m>v_x</m> to itself.  If the length of a cycle is negative,
-        we call it a <em>negative cycle</em>.
+        We define a <term> cycle</term> in a weighted network to be a path froma vertex <m>v_x</m> to itself.  If the length of a cycle is negative,
+        we call it a <term>negative cycle</term>.
       </p>
     </statement>
   </definition>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<appendix xml:id="appendix">
-    <title>Review Material</title> 
+
     
     
     <section xml:id="sec-lareview">
@@ -665,4 +664,3 @@
         
     </section>    
         
-</appendix>

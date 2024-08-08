@@ -660,7 +660,7 @@
       <statement>
         <p>
           Pick  circled entries <m>c_{k \ell}</m> so that they with the 
-          boxed <m>c_{ij}</m> form a <em>cycle</em>, that is each of these entries shares a row with exactly one another of the entries,
+          boxed <m>c_{ij}</m> form a <term>cycle</term>, that is each of these entries shares a row with exactly one another of the entries,
           and a column with another of the entries.
         </p>
       </statement>
@@ -1015,7 +1015,7 @@
       <idx>unbalanced transportion problem</idx>
       <introduction>
         <p>
-          We now consider the case of <em>unbalanced</em> transportation problems,
+          We now consider the case of <term>unbalanced</term> transportation problems,
           where the demand and supply are unequal.
         </p>
       </introduction>

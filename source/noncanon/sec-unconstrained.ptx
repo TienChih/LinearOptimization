@@ -371,7 +371,7 @@
   <definition xml:id="def-unconstrained">
     <statement>
       <p>
-        In a linear optimization problem, a variable which can be potentially negative is called an <em>unconstrained</em> variable.
+        In a linear optimization problem, a variable which can be potentially negative is called an <term>unconstrained</term> variable.
       </p>
     </statement>
   </definition>
@@ -639,7 +639,7 @@
     <task>
       <statement>
         <p>
-          Why is this point <em>NOT</em> optimal?
+          Why is this point <em>not</em> optimal?
         </p>
       </statement>
     </task>
@@ -812,7 +812,7 @@
     <task>
       <statement>
         <p>
-          Why is the resulting tableau <em>NOT</em> infeasible?
+          Why is the resulting tableau <em>not</em> infeasible?
         </p>
       </statement>
     </task>

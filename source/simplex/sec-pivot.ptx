@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      In this section, we use our geometric intuition to develop an algebraic operation, a <em>simplex pivot</em>
+      In this section, we use our geometric intuition to develop an algebraic operation, a <term>simplex pivot</term>
       which will be the key operation in solving linear optimization problems.  We give both a geometric and algebraic understanding
       of this operation.
     </p>
@@ -32,8 +32,8 @@
         <idx>decision variable</idx>
         <idx>variable, slack</idx>
         <idx>variable, decision</idx>
-        Note that we may rewrite this as a system of equalities by introducing the <em>slack variables</em> <m>t_i</m>. 
-        We will refer to the <m>x_j</m> as <em>decision variables</em>. 
+        Note that we may rewrite this as a system of equalities by introducing the <term>slack variables</term> <m>t_i</m>. 
+        We will refer to the <m>x_j</m> as <term>decision variables</term>. 
       </p>
 
       <p>
@@ -139,8 +139,8 @@
       </p>
       <p>
         
-       In this case, we refer to the <m>s_j</m> as the  <em>slack variables</em>,
-       and the <m>x_i</m> as <em>decision variables</em>. 
+       In this case, we refer to the <m>s_j</m> as the  <term>slack variables</term>,
+       and the <m>x_i</m> as <term>decision variables</term>. 
       </p>
     </statement>
   </observation>
@@ -182,7 +182,7 @@
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n -b_n \amp =  -t_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0</mrow>
         </md>
-        Which may be recorded by the <em>Tucker Tableau</em>:
+        Which may be recorded by the <term>Tucker Tableau</term>:
         
       </p>
       <p>
@@ -321,10 +321,10 @@
         </tabular>
       </p>
       <p>
-        The variables at the top are called the <em>decision variables</em> or <em>independent variables</em>, the variables on the side are the <em>slack variables</em>, <em>basis variables</em> or <em>basic variables</em>.
+        The variables at the top are called the <term>decision variables</term> or <term>independent variables</term>, the variables on the side are the <term>slack variables</term>, <term>basis variables</term> or <term>basic variables</term>.
       </p>
       <p>
-        The <em>basic solution</em> recorded by a Tucker Tableau is the solution where each decision variable has
+        The <term>basic solution</term> recorded by a Tucker Tableau is the solution where each decision variable has
         the value zero.
       </p>
     </statement>
@@ -962,7 +962,7 @@
     <idx>pivot</idx>
     <statement>
       <p>
-        The following is the procedure for a <em>pivot transformation</em>:
+        The following is the procedure for a <term>pivot transformation</term>:
 
       </p>
       <ol>

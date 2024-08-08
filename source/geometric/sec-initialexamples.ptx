@@ -44,7 +44,7 @@
       <statement>
         <p>
           Treating <m>x_1</m> as <m>x</m> and <m>x_2</m> as <m>y</m>, sketch the region on the cartesian plane satisfying all the above inequalities.
-          We will refer to this as the <em>feasible region</em>.
+          We will refer to this as the <term>feasible region</term>.
         </p>
         
         
@@ -132,7 +132,7 @@
     <statement>
       <p>
         <idx>linear optimization problem, canonical maximization</idx>
-        The <em>Canonical Maximazation Linear Optimization Problem</em> is the problem:
+        The <term>Canonical Maximazation Linear Optimization Problem</term> is the problem:
         
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
@@ -147,7 +147,7 @@
 
       <p>
         <idx>linear optimization problem, canonical minimization</idx>
-        The <em>Canonical Minimization Linear Optimization Problem</em> is the problem:
+        The <term>Canonical Minimization Linear Optimization Problem</term> is the problem:
         
         <md>
           <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
@@ -165,13 +165,13 @@
   <note xml:id="note-canon">
     <idx>canonical</idx>
     <p>
-      <em>Canonical</em> in this context refers to the fact that
+      <term>Canonical</term> in this context refers to the fact that
       for both of the above problems, the <m>x_i</m> are non-negative,
       and each bound is an inequality.
     </p>
     <p>
       (In <xref ref="ch-noncanon"/>, we discuss <em>noncanonical</em>
-      linear optimization problems, where these conditions ay fail.)
+      linear optimization problems, where these conditions may fail.)
     </p>
   </note>
 
@@ -179,7 +179,7 @@
     <statement>
       <p>
         <idx>objective function</idx>
-        <m>f,g</m> above are called <em>objective functions</em>.
+        <m>f,g</m> above are called <term>objective functions</term>.
       </p>
     </statement>
   </definition>
@@ -188,7 +188,7 @@
     <idx>solution, feasible</idx>
     <statement>
       <p>
-        Any point <m>\mathbf{x} = (cx_1, x_2, \ldots, x_n)</m> satisfying either of the above set of inequalities are called <em>feasible solutions</em>.
+        Any point <m>\mathbf{x} = (cx_1, x_2, \ldots, x_n)</m> satisfying either of the above set of inequalities are called <term>feasible solutions</term>.
       </p>
     </statement>
   </definition>
@@ -197,7 +197,7 @@
     <idx>solution, optimal</idx>
     <statement>
       <p>
-        Any feasible solution <m>\mathbf{x}</m> which maximizes (minimizes) the objective function is called an  <em>optimal solution</em>.
+        Any feasible solution <m>\mathbf{x}</m> which maximizes (minimizes) the objective function is called an  <term>optimal solution</term>.
       </p>
     </statement>
   </definition>

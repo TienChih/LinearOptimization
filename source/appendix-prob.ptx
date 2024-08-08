@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+    
+    
+    <section xml:id="sec-probreview">
+    <title>Probability Theory Review</title>
+    <introduction>
+        <p>
+            This is an extremely brief <q>review</q> of the limited probability
+            theory we utilize in <xref ref="ch-games"/>.  It's not even
+            particularly fair to call this a review, since probability is not
+            a prerequisite to this course.  However, the limited amount we use
+            is fairly straightforward and intuitive.
+        </p>
+        <p>
+            If a more thorough treatment is needed, then depending on your goals,
+            there are good options available.  For someone looking to explore
+            some elementary probability theory, the introductory statistics textbook
+              <url href="https://www.openintro.org/book/os/"> <q>OpenIntro Statistics</q></url> by David Diez, Christopher Barr, and Mine Çetinkaya-Rundel
+            does a good job presenting this material.  It also is an excellent introducotry statistics
+            text with labs and data available.  For a calculus-based, theory heavy treatment
+            of this text, I recommend <url href="https://www.markhuberdatascience.org/probability-textbook"> <q>Probability: Lecture and Labs</q></url>.
+        </p>
+    </introduction>
+
+    <definition xml:id="def-basicprob">
+        <statement>
+            <p>In probability, an <term>experiment</term> is an  occurrence with a
+                measurable result. Each instance of an experiment is  a <term>trial</term>. The possible results of
+                each trial are called <term>outcomes</term>. The set of all possible outcomes for an experiment is the
+                <term>sample space</term> for that experiment. </p>
+        </statement>
+    </definition>
+
+    <definition xml:id="def-prob">
+        <statement>
+          <p>
+            Given an experiment with sample space <m>S</m>:
+            <ul>
+              <li> An <term>event</term> <m>A</m> is a subset of <m>S</m>.</li>
+              <li> <em>If</em> each outcome in the sample space is equally likely, then the <term>probability</term> of <m>A</m>, denoted <m>P(A)</m> is <me>P(A)=\frac{|A|}{|S|}.</me>
+            </li>
+          </ul>
+        </p>
+      </statement>
+      </definition>
+
+      <remark>
+        <p>
+          But what does it mean for an event <m>A</m> to have probability <m>P(A)</m>?  It means that if I repeat the experiment over and over, the proportion of them where <m>A</m> is true should be <m>P(A)</m>.
+        </p>
+        <p>
+        So if I roll a die over and over, the proportion of them that give me a 6 over time should be <m>\frac{1}{6}</m>.  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:
+        </p>  
+        <sage language="r">
+              <input>
+                n=10000
+      
+      sixes=0
+      Sixvec&lt;-vector(length = 0)
+      
+      for (i in 1:n){
+        roll=sample(1:6,1,replace=TRUE)
+        if (roll==1){
+          sixes=sixes+1
+        }
+      Sixvec&lt;-c(Sixvec, sixes/i)  
+      }
+      
+      plot(Sixvec, type="l", ylim=c(0,1))
+      abline(h=1/6, col="red", lty=2)
+              </input>
+              <output>
+              </output>
+            </sage>
+      
+      </remark>
+
+      <definition xml:id="def-rv">
+        <statement>
+          <p>
+            A <term>random variable</term> is a function from sample space to an outcome set.
+            For our purposes, this set of outcomes will always be <m>\mathbb{R}</m>.
+          </p>
+        </statement>
+     </definition> 
+
+
+     <p>
+        A <term>probability distribution</term> is, roughly speaking, a complete description of a random variable and the likelihood of each output.  In the case of random variables with a finite number of possible outputs a <term>probability distribution table</term> is a convenient way of presenting this information.
+    </p>
+
+    <remark>
+        <statement>
+          <p>
+            To check if something is a valid probability distribution, for any possible outcome <m>x</m> of <m>X</m> we must have:
+            <ul>
+              <li><m>0\leq P(X=x)\leq1</m>.  This ensures all outcomes are valid probabilities.</li>
+              <li><m>\sum P(X=x)=1</m>.  The sum of the probabilities of all outcomes should be 100% of the outcomes</li>
+             </ul>
+          </p>
+       </statement>
+      </remark>   
+
+      <example xml:id="ex-apple">
+        <title>Poisoned apples</title>
+        <statement>
+          <p>
+        Snow White has a basket of 10 apples, 3 are poisoned.  She is going to pick 4 apples at random to eat for some reason.  Let <m>X</m> denote the number of poisoned apples she eats. 
+      </p>
+        <p>
+        The probability distribution for <m>X</m> would be:
+        <me>
+        \begin{array}{|c|cccc|}
+        \hline
+        x \amp 0 \amp 1 \amp 2 \amp 3 \\
+        \hline
+        P(X=x) \amp \frac{{3\choose 0}{7\choose 4}}{ {10\choose 4} } \amp \frac{{3\choose 1}{7\choose 3}}{ {10\choose 4} } \amp \frac{{3\choose 2}{7\choose 2}}{ {10\choose 4} } \amp\frac{{3\choose 3}{7\choose 1}}{ {10\choose 4} }\\
+        \hline
+        \end{array}
+      </me>
+      
+      equivalently:
+      
+      <me>
+        \begin{array}{|c|cccc|}
+        \hline
+        x \amp 0 \amp 1 \amp 2 \amp 3 \\
+        \hline
+        P(X=x) \amp \frac{35}{210}\amp \frac{105}{210} \amp \frac{63}{210} \amp \frac{7}{210}\\
+        \hline
+        \end{array}
+      </me>
+
+      or:
+      
+      <me>
+        \begin{array}{|c|cccc|}
+        \hline
+        x \amp 0 \amp 1 \amp 2 \amp 3 \\
+        \hline
+        P(X=x) \amp \approx 0.1667\amp 0.5 \amp 0.3 \amp \approx 0.0333\\
+        \hline
+        \end{array}
+      </me>
+      
+      </p>
+
+      <p>
+        This can be seen by the following R simulation:
+        <sage language="r">
+          <input>
+            n=1000
+poison = 3
+notpoison = 7
+eat = 4
+
+numpoison = rep(0, n)
+poisonvec = rep(c(1),each=poison)
+notpoisonvec = rep(c(0),each=notpoison)
+applevec = c(poisonvec, notpoisonvec)
+
+for(i in 1:n){
+  numpoison[i] = sum(sample(applevec, eat, replace = FALSE))  
+}
+hist(numpoison)
+          </input>
+          <output>
+          </output>
+        </sage>
+      </p>
+    </statement>
+
+      </example>
+
+      <definition xml:id="def-expectation">
+        <p>
+      Given a finite random variable  <m>X</m>, it's <term>expected value</term> is the predicted average outcome of experiments, and is computed: <me>E(X)=\sum P(X=x)\cdot x.</me>
+    </p>
+    
+   
+    </definition>
+
+    <p>
+      Note that the <q>Expected Value</q> may not be a value we actually expect, that is, may not be one of the outcomes, just an average outcome. We think of this as the outcomes of <m>X</m>, weighted by their likelihood, so the more likely outcomes contribute more than the less likely ones.
+    </p>  
+      
+    <example>
+        <statement>
+          <p>
+        Recall <xref ref="ex-apple"/>.  The expected value of poisoned apples would be <me>E(X)=0\cdot\frac{35}{210}+1\cdot\frac{=105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.</me>
+      </p>
+
+      <p>
+        We can compute the mean of the previously simulated number of poisoned apples
+        and visualize it:
+        <sage language="r">
+          <input>
+            hist(numpoison)
+avgpoison = mean(numpoison)
+abline(v = avgpoison, lwd = 2, lty = 2, col = "red")
+print(avgpoison)
+          </input>
+          <output>
+          </output>
+        </sage>
+      </p>
+      <p>
+        Be sure to run the simulation in <xref ref="ex-apple"/> first!
+      </p>  
+      
+    </statement>
+      </example>
+        
+    </section>    
+        

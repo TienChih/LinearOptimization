@@ -353,10 +353,10 @@
     <statement>
       <p>
         A linear optimization problem where all solutions must be integers is called an
-        <em>integer optimization problem</em>.
+        <term>integer optimization problem</term>.
       </p>
       <p>
-        If the condition that solutions be integers are relaxed, this is called the <em>relaxation</em>
+        If the condition that solutions be integers are relaxed, this is called the <term>relaxation</term>
         of the integer optimization problem.
       </p>
     </statement>

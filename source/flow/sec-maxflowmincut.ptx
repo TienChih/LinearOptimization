@@ -32,11 +32,11 @@
     <idx>cut</idx>
     <statement>
       <p>
-        Given a capacitated network <m>N</m>, a <em>cut</em> of <m>N</m> is
+        Given a capacitated network <m>N</m>, a <term>cut</term> of <m>N</m> is
         a partition of the vertex set into non-empty subsets <m>C=(V_1, V_2)</m>, where <m>V=V_1\sqcup V_2, v_s\in V_1, v_d\in V_2</m>.
       </p>
       <p>
-        The <em>capacity</em> of a cut <m>C</m> is the sum <m>\displaystyle \sum_{v_i\in V_1, v_j\in V_2} c_{ij}</m>.
+        The <term>capacity</term> of a cut <m>C</m> is the sum <m>\displaystyle \sum_{v_i\in V_1, v_j\in V_2} c_{ij}</m>.
       </p>
     </statement>
   </definition>
@@ -247,7 +247,7 @@
       <statement> 
         <p>
           Show that for any <m>v_k</m> in <m>V'_1</m>, there is an
-          <em><m>\alpha</m>-path</em> <m>P</m>: a sequence of vertices starting <m>v_s</m> to <m>v_k</m>, where
+          <term><m>\alpha</m>-path</term> <m>P</m>: a sequence of vertices starting <m>v_s</m> to <m>v_k</m>, where
           between <m>v_{i}, v_j</m> either <m>(v_i, v_j), (v_j, v_i)\in E</m>.
         </p>
         <p>
@@ -285,8 +285,8 @@
           </image>
         </p>
         <p>
-          We would call the edges <m>(v_i, v_j)</m> to be <em>forward edges</em> and <m>(v_j, v_i)</m>
-          <em>backwards edges</em> of <m>P</m>.
+          We would call the edges <m>(v_i, v_j)</m> to be <term>forward edges</term> and <m>(v_j, v_i)</m>
+          <term>backwards edges</term> of <m>P</m>.
         </p>
       </statement>
     </task>

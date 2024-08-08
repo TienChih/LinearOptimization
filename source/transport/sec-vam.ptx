@@ -144,7 +144,7 @@
     <statement>
       <p>
         A transportation problem where the total demand and the total supply
-        are the same is a <em>balanced</em> transportation problem.
+        are the same is a <term>balanced</term> transportation problem.
       </p>
     </statement>
   </definition>
@@ -281,7 +281,7 @@
         <p>
           <idx>transportation tableau</idx>
           <idx>tableau, transportation</idx>
-          A table like this is called a <em>transportation tableau</em>.
+          A table like this is called a <term>transportation tableau</term>.
         </p>
         <p>
           Ideally we would always want to move everything with the cheapest available option.
@@ -915,7 +915,7 @@
         <li>
           <p>
             Once <m>m+n-1</m> entries are circled and all supply/demand is exhausted, we terminate.  The circled entries
-            are called the <em>basis</em> of the tableau.
+            are called the <term>basis</term> of the tableau.
           </p>
         </li>
       </ol>

@@ -47,7 +47,7 @@
       <statement>
         <p>
           <idx>matching</idx>
-          A <em>matching</em> is a collection of edges <m>M</m> such that no two
+          A <term>matching</term> is a collection of edges <m>M</m> such that no two
           edges in <m>M</m> are incident to the same vertex.  Let <m>\Xi(G)</m>
           denote the size of the largest possible matching(s)
           <fn>There is, too my knowledge, no standard notation for the size of a maximum matching for 
@@ -131,7 +131,7 @@
       <statement>
         <p>
           State the maximization linear optimization problem for computing the maximum matching of a graph <m>G</m>.
-          We well refer to this problem as the <em>matching primal problem</em>.
+          We well refer to this problem as the <term>matching primal problem</term>.
         </p>
       </statement>
     </task>
@@ -289,7 +289,7 @@
       <statement>
         <p>
           State the dual minimization problem to the primal maximum matching problem.
-          We will refer to this problem as the <em>dual covering problem</em>.
+          We will refer to this problem as the <term>dual covering problem</term>.
         </p>
       </statement>
     </task>
@@ -310,7 +310,7 @@
       <p>
         <idx>vertex cover, vertex covering</idx>
         <idx>cover, covering</idx>
-        Given a graph <m>G</m>, a <em>vertex cover</em> or <m>cover</m> is a colection of vertices <m>U</m>
+        Given a graph <m>G</m>, a <term>vertex cover</term> or <m>cover</m> is a colection of vertices <m>U</m>
         such that for any edge <m>v_iv_j</m> either <m>v_i</m> or <m>v_j</m> (possibly both)
         are in <m>U</m>.
       </p>

@@ -715,7 +715,7 @@
     </p>
 
     <p>
-      The <em>dual minimization problem</em>  is aritculated as follows: 
+      The <term>dual minimization problem</term>  is aritculated as follows: 
     </p>
 
     <p>
@@ -729,7 +729,7 @@
       </md>
     </p>
     <p>
-      We refer to the <m>y_i</m> as <em>dual variables</em>.
+      We refer to the <m>y_i</m> as <term>dual variables</term>.
     </p>
 
   </definition>

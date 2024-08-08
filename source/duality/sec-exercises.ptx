@@ -988,7 +988,7 @@ solutions of successive tableaus.
         if and only if <m>\x, \y</m> are optimal.
       </p>
       <p>
-        (This fact is commonly known as the <em>Complementary Slackness Theorem</em>.)
+        (This fact is commonly known as the <term>Complementary Slackness Theorem</term>.)
       </p>
     </exercise>
 

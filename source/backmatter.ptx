@@ -14,7 +14,14 @@
 
   <!-- <appendix> <title>List of Symbols</title> <notation-list/> </appendix> -->
   
-  <xi:include href="./appendix-la.ptx" />
+  <appendix xml:id="appendix">
+    <title>Review Material</title> 
+    <xi:include href="./appendix-la.ptx" />
+    <xi:include href="./appendix-prob.ptx" />
+  </appendix>
+
+
+  
   <index> <title>Index</title> <index-list/> </index>
 
   <colophon>

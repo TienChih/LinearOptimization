@@ -134,7 +134,7 @@
       <p>
         <idx>line segment</idx>
         Given <m>\mathbf{P}, \mathbf{Q}\in \mathbb{R}^n</m>, we call the set <m>\{t\cdot \mathbf{P}+(1-t)\cdot \mathbf{Q} : t\in [0,1]\}</m> the
-        <em>line segment</em> between <m>\mathbf{P}</m> and <m>\mathbf{Q}</m>.
+        <term>line segment</term> between <m>\mathbf{P}</m> and <m>\mathbf{Q}</m>.
       </p>
     </statement>
   </definition>
@@ -143,7 +143,7 @@
     <statement>
       <p>
         <idx>convex</idx>
-        Let <m>S\subseteq \mathbf{R}^n</m>, we say that <m>S</m> is <em>convex</em> if given any <m>\mathbf{P}, \mathbf{Q}\in S</m>,
+        Let <m>S\subseteq \mathbf{R}^n</m>, we say that <m>S</m> is <term>convex</term> if given any <m>\mathbf{P}, \mathbf{Q}\in S</m>,
         <m>S</m> also contains the line segment between <m>\mathbf{P}, \mathbf{Q}</m>.
       </p>
     </statement>
@@ -297,7 +297,7 @@
       <p>
         <idx>convex, polyhedral</idx>
         A convex set <m>S</m> that is equal to a finite intersection
-        of half-spaces (defined by either strict or non-strict inequalities) is <em>polyhedral convex</em>.
+        of half-spaces (defined by either strict or non-strict inequalities) is <term>polyhedral convex</term>.
       </p>
     </statement>
   </definition>
@@ -336,7 +336,7 @@
     <statement>
       <p>
         <idx>norm</idx>
-        Given <m>\mathbf{x}</m> in we define the <em>norm</em> of <m>\mathbf{x}</m> to be <me>\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+\cdots x_n^2}.</me>
+        Given <m>\mathbf{x}</m> in we define the <term>norm</term> of <m>\mathbf{x}</m> to be <me>\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+\cdots x_n^2}.</me>
       </p>
     </statement>
   </definition>
@@ -345,10 +345,10 @@
     <statement>
       <p>
         <idx>ball</idx>
-        Given <m>\mathbf{x}</m> in we define the <em>closed ball</em> of radius <m>r</m> centered at <m>\mathbf{x}</m> to be <me>\bar{B}(\mathbf{x}, r):=\{\mathbf{y}:\|\mathbf{x}-\mathbf{y}\|\leq r\}.</me>
+        Given <m>\mathbf{x}</m> in we define the <term>closed ball</term> of radius <m>r</m> centered at <m>\mathbf{x}</m> to be <me>\bar{B}(\mathbf{x}, r):=\{\mathbf{y}:\|\mathbf{x}-\mathbf{y}\|\leq r\}.</me>
       </p>
       <p>
-        The <em>open ball</em> centered at <m>\mathbf{x}</m> with radius <m>r</m> is similarly defined.  What do you think it is?
+        The <term>open ball</term> centered at <m>\mathbf{x}</m> with radius <m>r</m> is similarly defined.  What do you think it is?
       </p>
     </statement>
   </definition>
@@ -439,7 +439,7 @@
       <p>
         <idx>extreme point</idx>
         <idx>corner point</idx>
-        Let <m>S\subseteq \mathbb{R}^n</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <em>extreme point</em> of <m>S</m> if there are no 
+        Let <m>S\subseteq \mathbb{R}^n</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <term>extreme point</term> of <m>S</m> if there are no 
         <m>\mathbf{x}, \mathbf{y}\in S</m> so that <m>\mathbf{e}\in \{t\cdot \mathbf{x}+(1-t)\cdot \mathbf{y} : t\in [0,1]\}</m>.
       </p>
       <p>

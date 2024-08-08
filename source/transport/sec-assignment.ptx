@@ -139,7 +139,7 @@
     <idx>assignment problem</idx>
     <statement>
       <p>
-        An <em>assignment problem</em> is a transportation problem
+        An <term>assignment problem</term> is a transportation problem
         where the supply and demands are all 1.
       </p>
     </statement>
@@ -156,7 +156,7 @@
     <statement>
       <p>
         Let <m>T</m> be a tableau for a balanced assignment problem.
-        A <em>permutation set of zeroes</em> is a subset of zero cells for <m>T</m>
+        A <term>permutation set of zeroes</term> is a subset of zero cells for <m>T</m>
         so that each row and column contains exactly one zero cell.
       </p>
     </statement>
