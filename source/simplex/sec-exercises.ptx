@@ -9,6 +9,10 @@
     </input>         
   </sage> 
 
+  <p component="html">
+    A link to the simplex pivoter may be found here: <xref ref="simplexpivoter"/>.
+  </p>
+
   <exercises xml:id="exercises-simplex">
     <exercise>
       <introduction>

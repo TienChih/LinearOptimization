@@ -74,8 +74,11 @@ A = matrix([[1,2], [2,1]])
     </p>
 
     <p>
-      There will be an upcoming interactive provided when it is ready 😉.
+      There is also a handy simplex pivoting tool provided
+      in <xref ref="simplexpivoter"/> to simplify computations
+      for higher dimension problems.
     </p>
+    
 
     
   </preface>
