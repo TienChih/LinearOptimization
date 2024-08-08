@@ -3106,18 +3106,306 @@ var ptx_lunr_docs = [
   "body": " Write effecient code in Sage where one inputs a matrix representing a sudoku puzzle (with maybe 0's for blank entries), and the code produces the appropriate linear optimization problem and solves it.  For more advanced or experienced coders, generalize this to allow the order of the sudoku puzzle to be a parameter.  "
 },
 {
-  "id": "backmatter-2",
+  "id": "sec-lareview",
   "level": "1",
-  "url": "backmatter-2.html",
+  "url": "sec-lareview.html",
+  "type": "Section",
+  "number": "A.1",
+  "title": "Linear Algebra Review",
+  "body": " Linear Algebra Review   This is an extremely brief review of linear algebra. It is understood that linear algebra is a pre-requisite for this course. However, everyone needs refreshers or a reference for specifics from time to time.  If a more thorough treatment is needed, then there are numerous linear algebra texts, and many that are OERs like this text.  Understanding Linear Algebra by David Austin is an excellent text with a focus on developing geometric intuition, and less so on formal proofs. For a more theory oriented text,  Linear Algebra by Jim Hefferon is an excellent choice.     A real-valued matrix is a rectangular array of the form Also denoted is a matrix, denoting that has rows and columns. We note that is the entry of in row , column .       matrices are also reffered to as vectors : This is the convention we use, with vectors being column matrices. Some texts default to row vectors.      Given a matrix , we define the transpose of denoted as or              Given two matrices of the same dimensions , we define their sum entrywise, that is: .             Given matrices , we define their product to be .              Note that this dry and technical presentation fails to capture even an iota of the beautiful and deep theory this operation is meant to encapsulate. Nor is it meant to. Please see the aforementioned texts for a deeper and richer discussion.    Given a matrix and real number , we define the scalar product to be .             We denote the zero matrix as or if the dimensions are clear from context.      For matrices , and scalars , assuming appropriate dimensions, the following hold.     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .         is a square matrix . The entries where are the diagonal of . If when , then is a diagonal matrix .      The identity matrix  is the diagonal square matrix where the diagonal entriies are all .      For a matrix, .      For a matrix, we say is invertible if there exists a matrix such that . We usual call the inverse of and denote it .      If is an invertible square matrix, then is unique.     If then , one can check this.   Note that not every matrix is invertible. For example is not invertible.    Let a set be equipped with operations and a scalar product. Let and be scalars. Then is a vector space if it satisfies the following axioms:     Associativity of vector addition : .     Commutativity of vector addition : .     Identity element of vector addition : there exists a vector called the zero vector such that .     Inverse elements of vector addition : for each vector , there exists a vector called the additive inverse of such that .    Compatibility of scalar multiplication with real multiplication: .     Identity element of scalar multiplication : .     Distributivity of scalar multiplication with respect to vector addition : .     Distributivity of scalar multiplication with respect to field addition : .      There are a wide variety of interesting vector spaces spanning across all subfields of math. However, for our puposes, we will stick to boring ol' .    Let be a vector space, then is a subspace of if it is also a vector space, with the same operations.      Let be a vector space, then is a subspace of , if is non-empty, and if for any and scalars , we have that .    In , the set forms a subspace of .    Let be a vector space and . Then a linear combination of these vectors is a sum:       Let be a vector space and . Then the span of defined   If we say that  spans  .     The set spans .     Let be a vector space and . Then is linearly independent if the equation if and only if each =0.  Otherwise, is dependent.     Since so is dependent.   is linearly independent.     Let be a vector space.    Any superset of a spanning set of is also a spaning set.    Any subset of a linearly independent set of vectors in is also linearly independent.        Let be a vector space and . Then is a basis of if for any , always has a unique solution.      Let be a vector space. A spaning, linearly indendent subset of is a basis of .      is a basis for .   "
+},
+{
+  "id": "def-matrix",
+  "level": "2",
+  "url": "sec-lareview.html#def-matrix",
+  "type": "Definition",
+  "number": "A.1.1",
+  "title": "",
+  "body": "  A real-valued matrix is a rectangular array of the form Also denoted is a matrix, denoting that has rows and columns. We note that is the entry of in row , column .   "
+},
+{
+  "id": "def-vector",
+  "level": "2",
+  "url": "sec-lareview.html#def-vector",
+  "type": "Definition",
+  "number": "A.1.2",
+  "title": "",
+  "body": "   matrices are also reffered to as vectors : This is the convention we use, with vectors being column matrices. Some texts default to row vectors.   "
+},
+{
+  "id": "def-transpose",
+  "level": "2",
+  "url": "sec-lareview.html#def-transpose",
+  "type": "Definition",
+  "number": "A.1.3",
+  "title": "",
+  "body": "  Given a matrix , we define the transpose of denoted as or    "
+},
+{
+  "id": "sec-lareview-6",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-6",
+  "type": "Example",
+  "number": "A.1.4",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "def-matrixsum",
+  "level": "2",
+  "url": "sec-lareview.html#def-matrixsum",
+  "type": "Definition",
+  "number": "A.1.5",
+  "title": "",
+  "body": "  Given two matrices of the same dimensions , we define their sum entrywise, that is: .   "
+},
+{
+  "id": "sec-lareview-8",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-8",
+  "type": "Example",
+  "number": "A.1.6",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "def-matrixproduct",
+  "level": "2",
+  "url": "sec-lareview.html#def-matrixproduct",
+  "type": "Definition",
+  "number": "A.1.7",
+  "title": "",
+  "body": "  Given matrices , we define their product to be .   "
+},
+{
+  "id": "sec-lareview-10",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-10",
+  "type": "Example",
+  "number": "A.1.8",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "def-scalarproduct",
+  "level": "2",
+  "url": "sec-lareview.html#def-scalarproduct",
+  "type": "Definition",
+  "number": "A.1.9",
+  "title": "",
+  "body": "  Given a matrix and real number , we define the scalar product to be .   "
+},
+{
+  "id": "sec-lareview-13",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-13",
+  "type": "Example",
+  "number": "A.1.10",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "def-zeromatrix",
+  "level": "2",
+  "url": "sec-lareview.html#def-zeromatrix",
+  "type": "Definition",
+  "number": "A.1.11",
+  "title": "",
+  "body": "  We denote the zero matrix as or if the dimensions are clear from context.   "
+},
+{
+  "id": "thm-matrixoperation",
+  "level": "2",
+  "url": "sec-lareview.html#thm-matrixoperation",
+  "type": "Theorem",
+  "number": "A.1.12",
+  "title": "",
+  "body": "  For matrices , and scalars , assuming appropriate dimensions, the following hold.     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .     .     "
+},
+{
+  "id": "def-squarematrix",
+  "level": "2",
+  "url": "sec-lareview.html#def-squarematrix",
+  "type": "Definition",
+  "number": "A.1.13",
+  "title": "",
+  "body": "   is a square matrix . The entries where are the diagonal of . If when , then is a diagonal matrix .   "
+},
+{
+  "id": "def-identitymatrix",
+  "level": "2",
+  "url": "sec-lareview.html#def-identitymatrix",
+  "type": "Definition",
+  "number": "A.1.14",
+  "title": "",
+  "body": "  The identity matrix  is the diagonal square matrix where the diagonal entriies are all .   "
+},
+{
+  "id": "thm-identity",
+  "level": "2",
+  "url": "sec-lareview.html#thm-identity",
+  "type": "Theorem",
+  "number": "A.1.15",
+  "title": "",
+  "body": "  For a matrix, .   "
+},
+{
+  "id": "def-matrixinverse",
+  "level": "2",
+  "url": "sec-lareview.html#def-matrixinverse",
+  "type": "Definition",
+  "number": "A.1.16",
+  "title": "",
+  "body": "  For a matrix, we say is invertible if there exists a matrix such that . We usual call the inverse of and denote it .   "
+},
+{
+  "id": "thm-matrixinv",
+  "level": "2",
+  "url": "sec-lareview.html#thm-matrixinv",
+  "type": "Theorem",
+  "number": "A.1.17",
+  "title": "",
+  "body": "  If is an invertible square matrix, then is unique.   "
+},
+{
+  "id": "sec-lareview-21",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-21",
+  "type": "Example",
+  "number": "A.1.18",
+  "title": "",
+  "body": " If then , one can check this.  "
+},
+{
+  "id": "def-vectorspace",
+  "level": "2",
+  "url": "sec-lareview.html#def-vectorspace",
+  "type": "Definition",
+  "number": "A.1.19",
+  "title": "",
+  "body": "  Let a set be equipped with operations and a scalar product. Let and be scalars. Then is a vector space if it satisfies the following axioms:     Associativity of vector addition : .     Commutativity of vector addition : .     Identity element of vector addition : there exists a vector called the zero vector such that .     Inverse elements of vector addition : for each vector , there exists a vector called the additive inverse of such that .    Compatibility of scalar multiplication with real multiplication: .     Identity element of scalar multiplication : .     Distributivity of scalar multiplication with respect to vector addition : .     Distributivity of scalar multiplication with respect to field addition : .     "
+},
+{
+  "id": "def-subspace",
+  "level": "2",
+  "url": "sec-lareview.html#def-subspace",
+  "type": "Definition",
+  "number": "A.1.20",
+  "title": "",
+  "body": "  Let be a vector space, then is a subspace of if it is also a vector space, with the same operations.   "
+},
+{
+  "id": "thm-subspace",
+  "level": "2",
+  "url": "sec-lareview.html#thm-subspace",
+  "type": "Theorem",
+  "number": "A.1.21",
+  "title": "",
+  "body": "  Let be a vector space, then is a subspace of , if is non-empty, and if for any and scalars , we have that .   "
+},
+{
+  "id": "sec-lareview-27",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-27",
+  "type": "Example",
+  "number": "A.1.22",
+  "title": "",
+  "body": "In , the set forms a subspace of . "
+},
+{
+  "id": "def-linearcombination",
+  "level": "2",
+  "url": "sec-lareview.html#def-linearcombination",
+  "type": "Definition",
+  "number": "A.1.23",
+  "title": "",
+  "body": "  Let be a vector space and . Then a linear combination of these vectors is a sum:    "
+},
+{
+  "id": "def-span",
+  "level": "2",
+  "url": "sec-lareview.html#def-span",
+  "type": "Definition",
+  "number": "A.1.24",
+  "title": "",
+  "body": "  Let be a vector space and . Then the span of defined   If we say that  spans  .   "
+},
+{
+  "id": "sec-lareview-30",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-30",
+  "type": "Example",
+  "number": "A.1.25",
+  "title": "",
+  "body": " The set spans .  "
+},
+{
+  "id": "def-independence",
+  "level": "2",
+  "url": "sec-lareview.html#def-independence",
+  "type": "Definition",
+  "number": "A.1.26",
+  "title": "",
+  "body": "  Let be a vector space and . Then is linearly independent if the equation if and only if each =0.  Otherwise, is dependent.   "
+},
+{
+  "id": "sec-lareview-32",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-32",
+  "type": "Example",
+  "number": "A.1.27",
+  "title": "",
+  "body": " Since so is dependent.   is linearly independent.  "
+},
+{
+  "id": "thm-indyspan",
+  "level": "2",
+  "url": "sec-lareview.html#thm-indyspan",
+  "type": "Theorem",
+  "number": "A.1.28",
+  "title": "",
+  "body": "  Let be a vector space.    Any superset of a spanning set of is also a spaning set.    Any subset of a linearly independent set of vectors in is also linearly independent.     "
+},
+{
+  "id": "def-basis",
+  "level": "2",
+  "url": "sec-lareview.html#def-basis",
+  "type": "Definition",
+  "number": "A.1.29",
+  "title": "",
+  "body": "  Let be a vector space and . Then is a basis of if for any , always has a unique solution.   "
+},
+{
+  "id": "thm-basisindyspan",
+  "level": "2",
+  "url": "sec-lareview.html#thm-basisindyspan",
+  "type": "Theorem",
+  "number": "A.1.30",
+  "title": "",
+  "body": "  Let be a vector space. A spaning, linearly indendent subset of is a basis of .   "
+},
+{
+  "id": "sec-lareview-36",
+  "level": "2",
+  "url": "sec-lareview.html#sec-lareview-36",
+  "type": "Example",
+  "number": "A.1.31",
+  "title": "",
+  "body": "  is a basis for .  "
+},
+{
+  "id": "backmatter-3",
+  "level": "1",
+  "url": "backmatter-3.html",
   "type": "Index",
   "number": "",
   "title": "Index",
   "body": " Index   "
 },
 {
-  "id": "backmatter-3",
+  "id": "backmatter-4",
   "level": "1",
-  "url": "backmatter-3.html",
+  "url": "backmatter-4.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",
