@@ -22,6 +22,29 @@
 
   <appendix xml:id="simplexpivoter">
     <title>Simplex Pivoter</title>
+    <p> 
+      Instructions for use are as follows:
+      <ul>
+        <li>
+          <p>
+            First, enter in the number of variables and the number of bounds
+            (the sizes of <m>\vc, \vb</m> respectively.)
+          </p>
+        </li>
+        <li>
+          <p>
+            In the cells generated below, fill in the entries.
+          </p>
+        </li>
+        <li>
+          <p>
+            In the tableau generated below, click on an entry to pivot on
+            that entry.
+          </p>
+        </li>
+      </ul>
+      
+    </p> 
     <p>
       <interactive iframe="Tienv2.html" width="100%" />
     </p>
