@@ -23,36 +23,36 @@
   <macros component="html"> \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
     <!--\DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} -->
     \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
-    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
+    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
      \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
      \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
     \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
-    
+    \DeclareMathOperator{\span}{span}
   </macros>
   
 
   <macros component="print"> \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
       <!--\DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} -->
       \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
-      \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
+      \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}  \newcommand{\z}{\mathbf z}
        \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
        \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
       \DeclareMathOperator{\lcm}{lcm}
       \newcommand*\ec[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt] (char) {$#1$};}}
    \newcommand*\eb[1]{\tikz[baseline=(char.base)]{\node[shape=rectangle,draw,inner sep=1pt] (char) {$#1$};}}
-      
+   \DeclareMathOperator{\span}{span}
     </macros>
 
     <macros component="tex"> \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
       <!--\DeclareMathOperator{\null}{null} \DeclareMathOperator{\det}{det} -->
       \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
-      \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}
+      \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y}  \newcommand{\z}{\mathbf z}
        \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
        \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
       \DeclareMathOperator{\lcm}{lcm}
       \newcommand*\ec[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt] (char) {$#1$};}}
    \newcommand*\eb[1]{\tikz[baseline=(char.base)]{\node[shape=rectangle,draw,inner sep=1pt] (char) {$#1$};}}
-      
+   \DeclareMathOperator{\span}{span}
     </macros>
     
   

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appendix xml:id="appendix">
+    <title>Review Material</title> 
+    
+    
+    <section xml:id="sec-lareview">
+    <title>Linear Algebra Review</title>
+    <introduction>
+        <p>
+            This is an extremely brief review of linear algebra.  It is understood that linear algebra
+            is a pre-requisite for this course.  However, everyone needs refreshers or a reference for
+            specifics from time to time.
+        </p>
+        <p>
+            If a more thorough treatment is needed, then there are numerous linear algebra texts, and many that are OERs
+            like this text.   <url href="https://understandinglinearalgebra.org/home.html"> <q>Understanding Linear Algebra</q></url> by David Austin is an excellent text with a focus on developing geometric
+            intuition, and less so on formal proofs.  For a more theory oriented text, <url href="https://hefferon.net/linearalgebra/"> <q>Linear Algebra</q></url> by Jim Hefferon is an excellent choice.
+        </p>
+    </introduction>
+        <definition xml:id="def-matrix">
+            <statement>
+                <p>
+                    A real-valued <em>matrix</em> is a rectangular array of the form
+                    <me>A=\begin{bmatrix}
+                        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1m}\\
+                        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2m}\\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+                        a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nm}\\
+                        \end{bmatrix}
+                    </me>
+                    Also denoted <m>A=[a_{ij}]_{n\times m}</m> is a <m>n\times m</m> matrix,
+                    denoting that <m>A</m> has <m>n</m> rows and <m>m</m> columns.  We note that
+                    <m>a_{ij}</m> is the entry of <m>A</m> in row <m>i</m>, column <m>j</m>.
+                </p>
+                
+            </statement>
+        </definition>
+
+        <definition xml:id="def-vector">
+            <statement>
+                <p>
+                    <m>n\times 1</m> matrices are also reffered to as <em>vectors</em>:
+                        <me>\x = \begin{bmatrix}x_1 \\ x_2 \\ \vdots \\ x_n\end{bmatrix}.</me>
+                        This is the convention we use, with vectors being column matrices.
+                        Some texts default to row vectors.
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-transpose">
+            <statement>
+                <p>
+                    Given a <m>n\times m</m> matrix <m>A</m>, we define the <em>transpose</em>
+                    of <m>A</m> denoted <m>A^\top</m> as <m>A=[a_{ij}]_{n\times m}^\top = [a_{ji}]_{m\times n}</m>
+                    or
+                    <me>\begin{bmatrix}
+                        a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1m}\\
+                        a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2m}\\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+                        a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nm}\\
+                        \end{bmatrix}^\top =
+                        \begin{bmatrix}
+                        a_{11} &amp; a_{21} &amp; \cdots &amp; a_{n1}\\
+                        a_{12} &amp; a_{22} &amp; \cdots &amp; a_{n2}\\
+                        \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+                        a_{1m} &amp; a_{2m} &amp; \cdots &amp; a_{nm}\\
+                        \end{bmatrix}
+
+                    </me>
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <statement>
+                <p>
+                    <me>
+                    \begin{bmatrix}
+                    1 &amp; -2 &amp; 3\\
+                    0 &amp; 5 &amp; 6
+                    \end{bmatrix}^\top
+                    =
+                    \begin{bmatrix}
+                    1 &amp; 0\\
+                    -2 &amp; 5\\
+                    3 &amp; 6
+                    \end{bmatrix}
+                    </me>
+                </p>
+            </statement>
+        </example>
+        <definition xml:id="def-matrixsum">
+            <statement>
+                <p>
+                    Given two matrices of the same dimensions
+                    <m>A=[a_{ij}]_{n\times m}, B=[b_{ij}]_{n\times m}</m>,
+                    we define their <em>sum</em> entrywise, that is: <m>A+B=[a_{ij}+b_{ij}]_{n\times m}</m>.
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <statement>
+                <p>
+                    <md>
+                        <mrow>\begin{bmatrix}
+                            1 &amp; -2 &amp; 3\\
+                            0 &amp; 5 &amp; 6
+                            \end{bmatrix}
+                            +
+                            \begin{bmatrix}
+                            4 &amp; 7 &amp; 0\\
+                            -8 &amp; 2 &amp; -4
+                            \end{bmatrix} \amp =
+                            \begin{bmatrix}
+                            1+4 &amp; -2+7 &amp; 3+0\\
+                            0+(-8) &amp; 5+2 &amp; 6+(-4)
+                            \end{bmatrix}
+                        </mrow>
+                        <mrow> 
+                            \amp =
+                            \begin{bmatrix}
+                            5 &amp; 5 &amp; 3\\
+                            -8 &amp; 7 &amp; 2
+                            \end{bmatrix}
+                        </mrow>
+                    
+                    </md>
+                </p>
+            </statement>
+        </example>
+        <definition xml:id="def-matrixproduct">
+            <statement>
+                <p>
+                    Given matrices <m>A=[a_{ij}]_{n\times m}, B=[b_{ij}]_{m\times \ell}</m>,
+                    we define their <em>product</em> to be <m>AB =[c_{ij}]_{n\times \ell}= [\sum_{k=1}^m a_{ik}b_{kj}]_{n\times \ell}</m>.
+                </p>
+            </statement>
+        </definition>
+
+        <example>
+            <statement>
+                <p>
+                    <md>
+                        <mrow>
+                             \amp 
+                             \begin{bmatrix}
+                            4 &amp; 7 &amp; 0\\
+                            -8 &amp; 2 &amp; -4
+                            \end{bmatrix}
+                            \begin{bmatrix}
+                            1 &amp; 0\\
+                            -2 &amp; 5\\
+                            3 &amp; 6
+                            \end{bmatrix}
+                        </mrow>
+                        <mrow>
+                            
+                             \amp =
+                            \begin{bmatrix}
+                            4(1)+7(-2)+0(3) &amp; 4(0)+7(5)+0(6)\\
+                            -8(1)+2(-2)+(-4)(3) &amp; -8(0)+2(5)+(-4)(6)
+                            \end{bmatrix}
+                        </mrow>
+                        <mrow> 
+                            \amp =
+                            \begin{bmatrix}
+                            5 &amp; 5 &amp; 3\\
+                            -8 &amp; 7 &amp; 2
+                            \end{bmatrix}
+                        </mrow>
+                    
+                    </md>
+                </p>
+
+                <p>
+                    <md>
+                        <mrow>
+                             \amp 
+                             \begin{bmatrix}
+                            1 &amp; 0\\
+                            -2 &amp; 5\\
+                            3 &amp; 6
+                            \end{bmatrix}
+                             \begin{bmatrix}
+                            4 &amp; 7 &amp; 0\\
+                            -8 &amp; 2 &amp; -4
+                            \end{bmatrix}                            
+                        </mrow>
+                        <mrow>
+                            
+                             \amp =
+                            \begin{bmatrix}
+                            1(4)+0(-8) &amp; 1(7)+0(2) &amp; 1(0)+0(-4)\\
+                            (-2)(4)+5(-8) &amp; (-2)(7)+5(2) &amp; (-2)(0)+5(-4)\\
+                            3(4)+6(-8) &amp; 3(7)+6(2) &amp; 3(0)+6(-4) 
+                            \end{bmatrix}
+                        </mrow>
+                        <mrow> 
+                            \amp =
+                            \begin{bmatrix}
+                            4 &amp; 7 &amp; 0 \\
+                            -48 &amp; -4 &amp; -20 \\
+                            -36 &amp; 33 &amp; -24 
+                            \end{bmatrix}
+                        </mrow>
+                    
+                    </md>
+                </p>
+            </statement>
+        </example>
+        <p>
+            Note that this dry and technical presentation fails to capture even an iota
+            of the beautiful and deep theory this operation is meant to encapsulate.  Nor is it meant to.
+            Please see the aforementioned texts for a deeper and richer discussion.
+        </p>
+
+
+        <definition xml:id="def-scalarproduct">
+            <statement>
+                <p>
+                    Given a matrix <m>A=[a_{ij}]_{n\times m}</m> and real number <m>c</m>,
+                    we define the <em>scalar product</em> to be <m>cA = [ca_{ij}]_{n\times m}</m>.
+                </p>
+            </statement>
+        </definition>
+
+        <example>
+            <statement>
+                <p>
+                    <md>
+                        
+                        
+                        <mrow> 
+                            3\begin{bmatrix}
+                            1 &amp; 0\\
+                            -2 &amp; 5\\
+                            3 &amp; 6
+                            \end{bmatrix}
+                            \amp =
+                            \begin{bmatrix}
+                            3(1) &amp; 3(0)\\
+                            3(-2) &amp; 3(5)\\
+                            3(3) &amp; 3(6)
+                            \end{bmatrix}
+                        </mrow>
+
+                        <mrow>
+                            
+                            \amp =
+                           \begin{bmatrix}
+                           3 &amp; 0\\
+                            -6 &amp; 15\\
+                            9 &amp; 18
+                           \end{bmatrix}
+                       </mrow>
+                    
+                    </md>
+                </p>
+
+                
+            </statement>
+        </example>
+
+
+        <definition xml:id="def-zeromatrix">
+            <statement>
+                <p>
+                    We denote the <em>zero matrix</em> as <m>\mathbf{0}_{n\times m}:=[0]_{n\times m}</m>
+                    or <m>\mathbf{0}</m> if the dimensions are clear from context.
+                </p>
+            </statement>
+        </definition>
+
+        <theorem xml:id="thm-matrixoperation">
+            <statement>
+                <p>
+                    For matrices <m>A, B, C, D</m>, and scalars <m>c,d</m>, assuming appropriate dimensions, the following hold.
+                </p>
+                <ul cols="2">
+                    <li>
+                        <p>
+                            <m>A+B=B+A</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(A+B)+C=A+(B+C)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>c(A+B)+C=cA+cB</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(c+d)A = cA + dA</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(cd)A=c(dA)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>1A=A</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>0A = \mathbf{0}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>A+\mathbf{0} = \mathbf{0}+A = A</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>A+(-A)=(-A)+A=0</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(AB)C=A(BC)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>A(B+C)=AB+AC</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(A+B)C=AC+BC</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>c(AB)=A(cB)=(cA)B</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>\mathbf{0}A=A\mathbf{0}</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(A^\top)^\top=A</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(A+B)^\top = A^\top +B^\top</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(cA)^\top =c(A^\top)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>(AB)^\top = B^\top A^\top</m>.
+                        </p>
+                    </li>
+                </ul>
+            </statement>
+        </theorem>
+
+        <definition xml:id="def-squarematrix">
+            <statement>
+                <p>
+                    <m>A=[a_{ij}]_{n\times n}</m> is a <em>square matrix</em>.
+                    The entries where <m>i=j</m> are the <em>diagonal</em> of <m>A</m>.
+                    If <m>a_{ij}=0</m> when <m>i\neq j</m>, then <m>A</m> is a <em>diagonal matrix</em>.
+                </p>
+            </statement>
+        </definition>
+        <definition xml:id="def-identitymatrix">
+            <statement>
+                <p>
+                    The <em>identity matrix</em> <m>I_n</m> is the <m>n\times n</m> diagonal
+                    square matrix where the diagonal entriies are all <m>1</m>.
+                </p>
+            </statement>
+        </definition>
+        
+        <theorem xml:id="thm-identity">
+            <statement>
+                <p>
+                    For <m>A</m> a <m>n\times n</m> matrix, <m>A I_n=I_nA=A</m>.
+                </p>
+            </statement>
+        </theorem>
+        
+        <definition xml:id="def-matrixinverse">
+            <statement>
+                <p>
+                    For <m>A</m> a <m>n\times n</m> matrix, we say <m>A</m>
+                    is invertible if there exists a <m>n\times n</m> matrix
+                    <m>B</m> such that <m>AB=BA=I_n</m>.  We usual call <m>B</m>
+                    the <em>inverse</em> of <m>A</m> and denote it <m>A^{-1}</m>.
+                </p>
+            </statement>
+        </definition>
+
+        <theorem xml:id="thm-matrixinv">
+            <statement>
+                <p>
+                    If <m>A</m> is an invertible square matrix, then <m>A^{-1}</m> is unique.
+                </p>
+            </statement>
+        </theorem>
+
+        <example>
+            <p>
+                If <m>A=\begin{bmatrix} 3 &amp; -1 \\ -2 &amp; 4\end{bmatrix}</m>
+                then <m>A^{-1} = \begin{bmatrix} \frac{2}{5} &amp; \frac{1}{10} \\ \frac{1}{5} &amp; \frac{3}{10}\end{bmatrix}</m>,
+                one can check this.
+            </p>
+        </example>
+
+        <p>
+            Note that not every matrix is invertible. For example 
+            <m> \begin{bmatrix} 3 &amp; -1 \\ -6 &amp; 2\end{bmatrix}</m> is not invertible.
+        </p>
+
+        <definition xml:id="def-vectorspace">
+            <statement>
+                <p>
+                    Let a set <m>V</m> be  equipped with  operations <m>+</m>
+                    and a scalar product.  Let <m>\x, \y, \z \in V</m> and  <m>a,b</m> be scalars. Then <m>V</m>
+                     is a <em>vector space</em> if it satisfies the following axioms:
+                     
+                </p>
+                <ol> 
+                    <li>
+                        <p>
+                            <em>Associativity of vector addition</em>:
+                            <m>(\x + \y)+\z=\x+(\y+\z)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Commutativity of vector addition</em>:
+                            <m>\x + \y = \y+\x</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Identity element of vector addition</em>:
+                            there exists a vector <m>\mathbf{0}</m> called the
+                            <em>zero vector</em> such that 
+                            <m>\mathbf{0} + \x = \x + \mathbf{0} = \x</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Inverse elements of vector addition</em>:
+                            for each vector <m>\x</m>, there exists a vector <m>-\x</m> called the
+                            <em>additive inverse</em> of <m>\x</m> such that 
+                            <m>-\x + \x = \x + (-\x) = \mathbf{0}</m>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Compatibility of scalar multiplication with real multiplication:                            
+                            <m>(ab)\x = a(b\x)</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Identity element of scalar multiplication</em>:                            
+                            <m>1\x = \x</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Distributivity of scalar multiplication with respect to vector addition</em>:                            
+                            <m>a(\x+\y)=a\x+a\y</m>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Distributivity of scalar multiplication with respect to field addition	</em>:                            
+                            <m>(a+b)\x=a\x+b\x</m>.
+                        </p>
+                    </li>
+                    
+                </ol>
+            </statement>
+        </definition>
+        <p>
+            There are a wide variety of interesting vector spaces
+            spanning across all subfields of math.  However, for our puposes,
+            we will stick to boring ol' <m>\mathbb{R}^n</m>.
+        </p>
+
+        <definition xml:id="def-subspace">
+            <statement>
+                <p>
+                   Let <m>V</m> be a vector space, then <m>W\subseteq V</m> is a 
+                   subspace of <m>V</m> if it is also a vector space, with the same operations. 
+                </p>
+            </statement>
+        </definition>
+
+        <theorem xml:id="thm-subspace">
+            <statement>
+                <p>
+                    Let <m>V</m> be a vector space, then <m>W\subseteq V</m> is a 
+                   subspace of <m>V</m>, if <m>W</m> is non-empty, and if for any
+                   <m>\p, \q\in W</m> and scalars <m>a,b</m>, we have that <m>a\p+b\q\in W</m>.
+                </p>
+            </statement>
+        </theorem>
+
+        <example>
+            In <m>\mathbb{R}^4</m>, the set <me>W = \left\{ \begin{bmatrix}
+                u \\ 0 \\ w \\ 0 \end{bmatrix}: u,v\in \mathbb{R}\right\}</me>
+                forms a subspace of  <m>\mathbb{R}^4</m>.
+        </example>
+        
+        <definition xml:id="def-linearcombination">
+            <statement>
+                <p>
+                    Let <m>V</m> be a vector space and <m>S\subseteq V</m>. Then a
+                    <em> linear combination</em> of these vectors is a sum:
+                    <me>\sum a_i\vs_i, \text{ where } a_i\in \mathbb{R}, \vs_i\in S  </me>
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-span"> 
+            <statement>
+                <p>
+                    Let <m>V</m> be a vector space and <m>S\subseteq V</m>.
+                    Then the <em>span</em> of <m>S</m> defined 
+                    <me>\span(S)=\left\{ \sum a_i\vs_i: a_i\in \mathbb{R}, \vs_i\in S \right\}.</me>
+                </p>
+                <p> 
+                    If <m>\span(S)=V</m> we say that <m>S</m> 
+                    <em>spans</em> <m>V</m>.
+                </p>
+            </statement>
+        </definition>
+
+        <example>
+            <p>
+                The set
+                <me>S =  \left\{ \begin{bmatrix}
+                    1 \\ 2 \\ 3  \end{bmatrix}, \begin{bmatrix}
+                    2 \\ 5 \\ -4  \end{bmatrix},
+                    \begin{bmatrix}
+                    3 \\ 1 \\ 2  \end{bmatrix},
+                    \begin{bmatrix}
+                    2 \\ -3 \\ 19  \end{bmatrix}
+                    \right\}</me>
+                    spans <m>\mathbb{R}^3</m>.
+            </p>
+        </example>
+        
+        <definition xml:id="def-independence">
+            <statement>
+                <p>
+                    Let <m>V</m> be a vector space and <m>S\subseteq V</m>.
+                    Then <m>S</m> is <em>linearly independent</em> if the equation
+                    <me>\sum_{\vs\in S}a_i\vs_i=\mathbf{0}</me> if and only if each <m>a_i</m>=0.
+                </p>
+                <p>
+                    Otherwise, <m>S</m> is dependent.
+                </p>
+            </statement>
+        </definition>
+        <example>
+            <p>
+                Since 
+                <me>3\begin{bmatrix}
+                    1 \\ 2 \\ 3  \end{bmatrix}+(-2)\begin{bmatrix}
+                    2 \\ 5 \\ -4  \end{bmatrix} +(1)
+                    \begin{bmatrix}
+                    3 \\ 1 \\ 2  \end{bmatrix}+(1)
+                    \begin{bmatrix}
+                    2 \\ -3 \\ 19  \end{bmatrix}= 
+                    \begin{bmatrix}
+                    0 \\ 0 \\ 0  \end{bmatrix}</me>
+                    so <m> \left\{ \begin{bmatrix} 
+                        1 \\ 2 \\ 3  \end{bmatrix}, \begin{bmatrix}
+                        2 \\ 5 \\ -4  \end{bmatrix},
+                        \begin{bmatrix}
+                        3 \\ 1 \\ 2  \end{bmatrix},
+                        \begin{bmatrix}
+                        2 \\ -3 \\ 19  \end{bmatrix}
+                        \right\}</m> is dependent.
+            </p>
+            <p>
+                <m>  \left\{ \begin{bmatrix}
+                    1 \\ 2 \\ 3  \end{bmatrix}, \begin{bmatrix}
+                    2 \\ 5 \\ -4  \end{bmatrix},
+                    \begin{bmatrix}
+                    3 \\ 1 \\ 2  \end{bmatrix}
+                    \right\}</m> is linearly independent.
+            </p>
+        </example>
+
+        <theorem xml:id="thm-indyspan">
+            <statement>
+                <p>
+                    Let <m>V</m> be a vector space.
+                </p>
+                <ol>
+                    <li>
+                        <p>
+                            Any superset of a spanning set of <m>V</m> is also a spaning set.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Any subset of a linearly independent set of vectors in <m>V</m>  is also linearly
+                            independent.
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+        </theorem>
+
+        <definition xml:id="def-basis">
+            <statement>
+                <p>
+                    Let <m>V</m> be a vector space and <m>B\subseteq V</m>. 
+                    Then <m>B</m> is a <em>basis</em> of <m>V</m> if for any
+                    <m>\x\in V</m>, 
+                    <me>\sum_{\vb\in B}a_i\vb_i=\mathbf{x}</me>
+                    always has a unique solution.
+
+                </p>
+            </statement>
+        </definition>
+        
+        <theorem xml:id="thm-basisindyspan">
+            <statement>
+                <p>
+                    Let <m>V</m> be a vector space.  A spaning, linearly indendent subset of <m>V</m>
+                     is a basis of <m>V</m>.
+                </p>
+            </statement>
+        </theorem>
+
+        <example>
+            <p>
+                <me> \left\{   \begin{bmatrix}
+                    1 \\ 2 \\ 3  \end{bmatrix}, \begin{bmatrix}
+                    2 \\ 5 \\ -4  \end{bmatrix},
+                    \begin{bmatrix}
+                    3 \\ 1 \\ 2  \end{bmatrix}
+                    \right\}</me>
+                    is a basis for <m>\mathbb{R}^3</m>.
+            </p>
+        </example>
+        
+    </section>    
+        
+</appendix>
