@@ -1471,6 +1471,16 @@
 
   </activity>
 
+  <remark>
+    <p>
+      One may observe, this pivot operation is not difficult,
+      but rather tedious, and it is easy to make a minor error that derails this process.
+      Doing multiple pivots in a row compounds this issue.  It is like a more tedious version of
+      row reduction and Gaussian elimination.  Thus an interactive pivoter
+      has been provided in <xref ref="simplexpivoter"/>.  Hopefully this improves everyone's lives.
+    </p>
+  </remark>
+
   <subsection xml:id="sec-curious" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>A Curious Situation</title>
   
