@@ -522,7 +522,7 @@
 
         <example>
             In <m>\mathbb{R}^4</m>, the set <me>W = \left\{ \begin{bmatrix}
-                u \\ 0 \\ w \\ 0 \end{bmatrix}: u,v\in \mathbb{R}\right\}</me>
+                u \\ 0 \\ w \\ 0 \end{bmatrix}: u,w\in \mathbb{R}\right\}</me>
                 forms a subspace of  <m>\mathbb{R}^4</m>.
         </example>
         
