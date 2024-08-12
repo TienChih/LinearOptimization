@@ -45,9 +45,18 @@
       </ul>
       
     </p> 
-    <p>
+
+
+    <p >
       <interactive iframe="Tienv2.html" width="100%" />
-    </p>
+    </p >
+
+    <!--<p>
+      <image source="images/pivot" width="10%" />
+        <shortdescription>QR code for simplex pivoter</shortdescription>
+      </image>
+      <url href="https://tienchih.github.io/LinearOptimization/simplexpivoter.html">https://tienchih.github.io/LinearOptimization/simplexpivoter.html</url>
+    </p>-->
     
     
   </appendix>

@@ -563,9 +563,9 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
   </exploration>
 
   <definition xml:id="def-maxflowalgorithm">
-    <title>Max Flow Algorithm</title>
-    <idx>max flow algorithm</idx>
-    <idx>algorithm, max flow</idx>
+    <title>Ford-Fulkerson Algorithm</title>
+    <idx>Ford-Fulkerson algorithm</idx>
+    <idx>algorithm, Ford-Fulkerson</idx>
     
     
     <statement>
@@ -621,7 +621,7 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
 
   <activity>
     <p>
-      Prove that the Max Flow Algorithm <xref ref="def-maxflowalgorithm"/> terminates at a maximum flow.
+      Prove that the Ford-Fulkerson Algorithm <xref ref="def-maxflowalgorithm"/> terminates at a maximum flow.
     </p>
   </activity>
 

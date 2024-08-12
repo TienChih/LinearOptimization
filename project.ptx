@@ -3,6 +3,6 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" publication="../publication/publication.ptx"/>
-    <target name="print" format="pdf" publication="../publication/publicationprint.ptx" />
+    <target name="print" format="pdf"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" />
   </targets>
 </project>

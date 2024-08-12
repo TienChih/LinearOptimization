@@ -40,7 +40,7 @@
       \DeclareMathOperator{\lcm}{lcm}
       \newcommand*\ec[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt] (char) {$#1$};}}
    \newcommand*\eb[1]{\tikz[baseline=(char.base)]{\node[shape=rectangle,draw,inner sep=1pt] (char) {$#1$};}}
-   \DeclareMathOperator{\span}{span}
+   
     </macros>
 
     <macros component="tex"> \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
@@ -52,7 +52,7 @@
       \DeclareMathOperator{\lcm}{lcm}
       \newcommand*\ec[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt] (char) {$#1$};}}
    \newcommand*\eb[1]{\tikz[baseline=(char.base)]{\node[shape=rectangle,draw,inner sep=1pt] (char) {$#1$};}}
-   \DeclareMathOperator{\span}{span}
+   
     </macros>
     
   

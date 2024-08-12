@@ -52,7 +52,7 @@
           denote the size of the largest possible matching(s)
           <fn>There is, too my knowledge, no standard notation for the size of a maximum matching for 
             <m>G</m>.  This is the proposed notation from Dr. Mark Kayll of the University of Montana,
-          since the <m>\Xi</m> looks like a matching 🥴.</fn>.
+          since the <m>\Xi</m> looks like a matching.</fn>.
         </p>
         <p>
           What is <m>\Xi(G)</m>?  How can we be sure this is true?
