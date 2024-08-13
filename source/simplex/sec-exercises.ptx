@@ -1287,9 +1287,9 @@
 
     <exercise>
       <p>
-        For each problem in <xref ref="ex-solvesimplex"/>
-        Sketch the feasible region and label the extreme points
-        traversed by the simplex algorithm in order.
+        For each problem in <xref ref="ex-solvesimplex"/>, 
+        sketch the feasible region and label the extreme points
+        traversed by the Simplex Algorithm in order.
       </p>
     </exercise>
 
@@ -1338,7 +1338,7 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
     <exercise>
       <p>
         The canonical programming problem below potentially cycles (due to H.W. Kuhn.). 
-        Solve the problem by using the simplex algorithm with Bland anti-cycling rules.
+        Solve the problem by using the Simplex Algorithm with Bland anti-cycling rules.
       </p>
       <p>
         <tabular halign="center">

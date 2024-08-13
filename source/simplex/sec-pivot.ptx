@@ -24,7 +24,7 @@
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n</mrow>
-          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0.</mrow>
         </md>
       </p>
       <p>
@@ -43,7 +43,7 @@
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m +t_n \amp =  b_n</mrow>
-          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0.</mrow>
         </md>
         
       </p>
@@ -120,7 +120,7 @@
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0.</mrow>
         </md>
         Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>
       </p>
@@ -134,7 +134,7 @@
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -s_m \amp =  b_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
+          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0.</mrow>
         </md>
       </p>
       <p>
@@ -340,7 +340,7 @@
           <mrow> a_{2,1}0 + a_{2,2}0 +\cdots a_{2,m}0 -b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{n,1}0 + a_{n,2}0 +\cdots a_{n,m}0-b_n  \amp =  -t_n</mrow>
-          <mrow> c_10 + c_20 +\cdots c_m0-d  \amp =  f</mrow>
+          <mrow> c_10 + c_20 +\cdots c_m0-d  \amp =  f.</mrow>
         </md>
       </p>
     </statement>
@@ -498,12 +498,12 @@
     <task>
       <statement>
         <p>
-          Let's increase <m>x_1</m>.  Take the row corresponding to <m>t_C</m> and solve for <m>x_1</m> in terms of <m>x_2, t_C</m>.
+          Let's increase <m>x_1</m>.  Consider the row corresponding to <m>t_C</m>.  Take the associated equality and solve for <m>x_1</m> in terms of <m>x_2, t_C</m>.
         </p>
       </statement>
       <statement>
         <p>
-          For each equality corresponding to the rows <m>t_A, t_B, f</m> replace <m>x_1</m> with the value you found ealier and rewrite the left hand sides.
+          For each equality associated with the rows corresponding to <m>t_A, t_B, f</m>, replace <m>x_1</m> with the value you found above and rewrite the left hand sides.
         </p>
       </statement>
     </task>
@@ -602,7 +602,7 @@
     <task>
       <statement>
         <p>
-          Recall that this new tableau has a basic solution where <m>t_C, x_2=0</m>, what point is this?
+          Recall that this new tableau has a basic solution where <m>t_C, x_2=0</m>.  What is <m>x_1</m>?  Where in <m>\R^2</m> is this solution?
         </p>
       </statement>
     </task>
@@ -714,7 +714,7 @@
     <task>
       <statement>
         <p>
-          If I increase <m>t_C</m> from 0, do I increase <m>f</m>?  What about <m>t_B</m>?
+          If we increase <m>t_C</m> from 0, do we increase <m>f</m>?  What about <m>t_B</m>?
         </p>
       </statement>
     </task>
@@ -722,7 +722,7 @@
     <task>
       <statement>
         <p>
-          Consider the plot of the feasible region for this problem.  What exactly, geometrically, did we end up doing here?
+          Consider the plot of the feasible region for this problem.  What exactly, geometrically, did we end up doing in this activity?
         </p>
         <p>
           <interactive  platform="doenetml" width="100%" aspect="4:4.1">
@@ -741,7 +741,7 @@
   <activity>
     <statement>
       <p>
-        Based on <xref ref="activity-widget"/>, what is a criteria to determine if a feasible tableau has a basic optimal solution?
+        Based on <xref ref="activity-widget"/>, what would be a reasonable criteria to determine if a feasible tableau has a basic optimal solution?
       </p>
       <ol marker="A." cols="2">
         <li>
@@ -908,13 +908,13 @@
               <cell halign="left" right="medium">
               </cell>
               <cell>
-                <m>  </m>
+                <m> ?</m>
               </cell>
               <cell right="medium">
-                <m>  </m>
+                <m>  ?</m>
               </cell>
               <cell right="medium">
-                <m> </m>
+                <m> ?</m>
               </cell>
               <cell halign="left">
                 <m>=-x_1</m>
@@ -924,13 +924,13 @@
               <cell halign="left" right="medium">
               </cell>
               <cell bottom="medium">
-                <m>  </m>
+                <m>  ?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m> </m>
+                <m> ?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m> </m>
+                <m> ?</m>
               </cell>
               <cell halign="left">
                 <m>=-t_2</m>
@@ -940,13 +940,13 @@
               <cell halign="left" right="medium">
               </cell>
               <cell bottom="medium">
-                <m>  </m>
+                <m>  ?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>  </m>
+                <m>  ?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m> </m>
+                <m> ?</m>
               </cell>
               <cell halign="left">
                 <m>=f</m>
@@ -1244,7 +1244,7 @@
                 <m></m>
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>-1</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -1350,7 +1350,7 @@
                 <m></m>
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>-1</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -1449,7 +1449,7 @@
     <task>
       <statement>
         <p>
-          How do we know we now have an optimal solution based only on the tableau?
+          How do we know the basic solution we now have is an optimal solution?
         </p>
       </statement>
      
@@ -1602,6 +1602,7 @@
         <statement>
          
           <p>
+            Pivot on the entry with the <m>*</m>:
             <tabular halign="center">
               <row>
                 <cell halign="right">
@@ -1782,7 +1783,7 @@
       <task>
         <statement>
           <p>
-            Compare this solution and tableau to the final solution in <xref ref="activity-widget"/>. What do you notice?
+            Compare this basic solution and tableau to the final solution in <xref ref="activity-widget"/>. What do you notice?
           </p>
         </statement>
         <hint>

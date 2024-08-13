@@ -132,14 +132,14 @@
           </tabular>
         </p>
         <p>
-          Note that each <m>x_1, t_3, t_1, x_4=0</m> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?
+          Note that  <m>x_1, t_3, t_1, x_4=0</m> for the basic solution of this tableau.  Write out the corresponding system of canonical inequalities.  Are they all satisfied?
         </p>
         
       </task>
       <task>
         <statement>
           <p>
-            Which of the following is a sufficient condition for a Tucker Tableau to correspond to a feasible solution?
+            Which of the following is a neccesary and sufficient condition for a Tucker tableau to have a feasible basic solution?
           </p>
           <ol marker="A." cols="2">
             <li>
@@ -1728,7 +1728,7 @@
     </p>
   
     <definition xml:id="def-simplexcanonmaxbf">
-      <idx>simplex algorithm: maximum basic feasible</idx>
+      <idx>Simplex Algorithm: maximum basic feasible</idx>
       <idx>algorithm, simplex: maximum basic feasible</idx>
       <statement>
         <p>
@@ -1750,7 +1750,7 @@
       <statement>
   
         <p>
-          Recall the canonical tableau
+          Recall the canonical tableau:
         </p>
         <p>
           <tabular halign="center">
@@ -1883,12 +1883,13 @@
                 <m>d</m>
               </cell>
               <cell halign="left">
+                <m>=f</m>
               </cell>
             </row>
           </tabular>
         </p>
         <p>
-          Suppose that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m> 
+          Suppose that the basic solution encoded by the tableau were feasible, and that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m> 
         </p>
       </statement>
     </activity>
@@ -2594,7 +2595,7 @@
       </task>
     </activity>
   
-    <p>With this, we may define our algorithm for potentiall non-feasible tableau</p>
+    <p>With this, we may define our algorithm for potential non-feasible tableau</p>
   
     <definition xml:id="def-simplexmax">
       <idx>simplex algorithm: maximum</idx>
@@ -3109,7 +3110,7 @@
     <p>This allows us to define a minimization algorithm.</p>
   
     <definition xml:id="def-simplexmin">
-      <idx>simplex algorithm: minimum</idx>
+      <idx>Simplex Algorithm: minimum</idx>
       <idx>algorithm, simplex: minimum</idx>
       <statement>
         <p>

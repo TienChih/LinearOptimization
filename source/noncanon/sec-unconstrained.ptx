@@ -20,7 +20,7 @@
             <mrow>\textbf{Maximize: }  f(\mathbf{x})= 3x+2y  &amp;   </mrow>
             <mrow>\textbf{Subject to: }  4x+5y&amp;  \leq  23</mrow>
             <mrow> 2x +y&amp; \leq  7</mrow>
-            <mrow> x -y&amp; \leq  5</mrow>
+            <mrow> x -y&amp; \leq  5.</mrow>
           </md>
 
          
@@ -341,17 +341,17 @@
         <ol marker="A." cols="1">
           <li>
             <p>
-              Following the rules of pivoting through the simplex algorithm, we should be able to return to the origin.
+              Following the rules of pivoting through the Simplex Algorithm, we should be able to return to the origin.
             </p>
           </li>
           <li>
             <p>
-              It is possible to perform pivots that don't neccesarily follow the rules of the simplex algorithm, to return to the origin, and this is sensible as we are just traversing corner points.
+              It is possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm, to return to the origin, and this is sensible as we are just traversing corner points.
             </p>
           </li>
           <li>
             <p>
-              It is technically possible to perform pivots that don't neccesarily follow the rules of the simplex algorithmand this is <em>not</em> sensible.
+              It is technically possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm and this is <em>not</em> sensible.
             </p>
           </li>
         </ol>
@@ -386,7 +386,7 @@
           <md>
             <mrow>\textbf{Maximize: }  f(\mathbf{x})= 5x+4y  &amp;   </mrow>
             <mrow>\textbf{Subject to: }  2x+3y&amp;  \leq  26</mrow>
-            <mrow> -2x -10 y&amp; \leq  2</mrow>
+            <mrow> -2x -10 y&amp; \leq  2.</mrow>
           </md>
 
          
@@ -470,7 +470,7 @@
           </tabular>
         </p>
         <p>
-          Out of <m>x_y, y, t_1, t_2</m>, which are non-negative?
+          Out of <m>x, y, t_1, t_2</m>, which are non-negative?
         </p>
       </statement>
     </task>
@@ -630,7 +630,7 @@
         </p>
 
         <p>
-           What point are we on?
+           What point in <m>\mathbb{R}^2</m> represents the basic solution of this tableau?
            
         </p>
       </statement>
@@ -639,7 +639,7 @@
     <task>
       <statement>
         <p>
-          Why is this point <em>not</em> optimal?
+          Why is this point <em>not</em> an optimal solution?
         </p>
       </statement>
     </task>
@@ -812,7 +812,7 @@
     <task>
       <statement>
         <p>
-          Why is the resulting tableau <em>not</em> infeasible?
+          Why does the resulting tableau encode a basic solution which is <em>not</em> infeasible?
         </p>
       </statement>
     </task>
@@ -913,7 +913,7 @@
           </tabular>
         </p>
         <p>
-          Why is this tableau optimal?  
+          Why is the basic solution encoded by this tableau optimal?  
         </p>
       </statement>
     </task>
@@ -987,7 +987,7 @@
           <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+3y  &amp;   </mrow>
           <mrow>\textbf{Subject to: }  x+2y&amp;  \leq  10</mrow>
           <mrow> 2x +y&amp; \leq  15</mrow>
-          <mrow> x&amp; \geq  0</mrow>
+          <mrow> x&amp; \geq  0.</mrow>
         </md>
       </p>
     </statement>

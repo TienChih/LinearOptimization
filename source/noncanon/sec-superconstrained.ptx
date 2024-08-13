@@ -190,7 +190,7 @@
             </tabular>
         </p>
         <p>
-           Without computing the tableau, what point are we on if we pivot on the entry with a *?
+           Without computing the tableau, what point are we on if we pivot on the entry with a <m>*</m>?
            Is it feasible?
         </p>
       </statement>
@@ -363,7 +363,13 @@
               <m>\cdots</m>
             </cell>
             <cell bottom="medium">
+              <m>x_{j-1}</m>
+            </cell>
+            <cell bottom="medium">
               <m>x_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_{j+1}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>
@@ -390,7 +396,13 @@
               <m>\cdots</m>
             </cell>
             <cell>
+              <m>a_{1(j-1)}</m>
+            </cell>
+            <cell>
               <m>a_{1j}</m>
+            </cell>
+            <cell>
+              <m>a_{1(j+1)}</m>
             </cell>
             <cell>
               <m>\cdots</m>
@@ -418,7 +430,13 @@
               <m>\cdots</m>
             </cell>
             <cell>
+              <m>a_{2(j-1)}</m>
+            </cell>
+            <cell>
               <m>a_{2j}</m>
+            </cell>
+            <cell>
+              <m>a_{2(j+1)}</m>
             </cell>
             <cell>
               <m>\cdots</m>
@@ -449,6 +467,12 @@
               <m>\vdots</m>
             </cell>
             <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
               <m>\ddots</m>
             </cell>
             <cell right="medium">
@@ -474,7 +498,13 @@
               <m>\cdots</m>
             </cell>
             <cell>
+              <m>a_{i(j-1)}</m>
+            </cell>
+            <cell>
               <m>a_{ij}</m>
+            </cell>
+            <cell>
+              <m>a_{i(j+1)}</m>
             </cell>
             <cell>
               <m>\cdots</m>
@@ -505,6 +535,12 @@
               <m>\vdots</m>
             </cell>
             <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
               <m>\ddots</m>
             </cell>
             <cell right="medium">
@@ -530,7 +566,13 @@
               <m>\cdots</m>
             </cell>
             <cell bottom="medium">
+              <m>a_{n(j-1)}</m>
+            </cell>
+            <cell bottom="medium">
               <m>a_{nj}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n(j+1)}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>
@@ -558,7 +600,13 @@
               <m>\cdots</m>
             </cell>
             <cell bottom="medium">
+              <m>c_{j-1}</m>
+            </cell>
+            <cell bottom="medium">
               <m>c_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_{j+1}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>
@@ -592,7 +640,13 @@
               <m>\cdots</m>
             </cell>
             <cell bottom="medium">
+              <m>x_{j-1}</m>
+            </cell>
+            <cell bottom="medium">
               <m>0</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_{j+1}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>
@@ -619,7 +673,13 @@
               <m>\cdots</m>
             </cell>
             <cell>
+              <m>a_{1(j-1)}</m>
+            </cell>
+            <cell>
               <m>a_{1j}</m>
+            </cell>
+            <cell>
+              <m>a_{1(j+1)}</m>
             </cell>
             <cell>
               <m>\cdots</m>
@@ -647,7 +707,13 @@
               <m>\cdots</m>
             </cell>
             <cell>
+              <m>a_{2(j-1)}</m>
+            </cell>
+            <cell>
               <m>a_{2j}</m>
+            </cell>
+            <cell>
+              <m>a_{2(j+1)}</m>
             </cell>
             <cell>
               <m>\cdots</m>
@@ -678,6 +744,12 @@
               <m>\vdots</m>
             </cell>
             <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
               <m>\ddots</m>
             </cell>
             <cell right="medium">
@@ -703,7 +775,13 @@
               <m>\cdots</m>
             </cell>
             <cell>
+              <m>a_{i(j-1)}</m>
+            </cell>
+            <cell>
               <m>a_{ij}</m>
+            </cell>
+            <cell>
+              <m>a_{i(j+1)}</m>
             </cell>
             <cell>
               <m>\cdots</m>
@@ -734,6 +812,12 @@
               <m>\vdots</m>
             </cell>
             <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
               <m>\ddots</m>
             </cell>
             <cell right="medium">
@@ -759,7 +843,13 @@
               <m>\cdots</m>
             </cell>
             <cell bottom="medium">
+              <m>a_{n(j-1)}</m>
+            </cell>
+            <cell bottom="medium">
               <m>a_{nj}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n(j+1)}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>
@@ -787,7 +877,13 @@
               <m>\cdots</m>
             </cell>
             <cell bottom="medium">
+              <m>c_{j-1}</m>
+            </cell>
+            <cell bottom="medium">
               <m>c_j</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_{j+1}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>
@@ -825,6 +921,16 @@
               <m>\cdots</m>
             </cell>
             <cell bottom="medium">
+              <m>x_{j-1}</m>
+            </cell>
+            
+            <cell bottom="medium">
+              <m>x_{j+1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
               <m>x_m</m>
             </cell>
             <cell bottom="medium">
@@ -841,6 +947,16 @@
             </cell>
             <cell>
               <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>a_{1(j-1)}</m>
+            </cell>
+            
+            <cell>
+              <m>a_{1(j+1)}</m>
             </cell>
             <cell>
               <m>\cdots</m>
@@ -867,6 +983,16 @@
             <cell>
               <m>\cdots</m>
             </cell>
+            <cell>
+              <m>a_{2(j-1)}</m>
+            </cell>
+            
+            <cell>
+              <m>a_{2(j+1)}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
             <cell right="medium">
               <m>a_{2m}</m>
             </cell>
@@ -883,6 +1009,16 @@
             <cell>
               <m>\vdots</m>
             </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            
             <cell>
               <m>\vdots</m>
             </cell>
@@ -911,6 +1047,16 @@
             <cell>
               <m>\cdots</m>
             </cell>
+            <cell>
+              <m>a_{i(j-1)}</m>
+            </cell>
+            
+            <cell>
+              <m>a_{i(j+1)}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
             <cell right="medium">
               <m>a_{im}</m>
             </cell>
@@ -918,7 +1064,7 @@
               <m>b_i</m>
             </cell>
             <cell halign="left">
-              <m>=-t_i</m>
+              <m>=-x_j</m>
             </cell>
           </row>
           <row>
@@ -933,12 +1079,22 @@
             <cell>
               <m>\ddots</m>
             </cell>
-            <cell right="medium">
+            <cell>
               <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
             </cell>
             <cell right="medium">
               <m>\vdots</m>
             </cell>
+            
             <cell halign="left">
               <m>\vdots</m>
             </cell>
@@ -951,6 +1107,16 @@
             </cell>
             <cell bottom="medium">
               <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n(j-1)}</m>
+            </cell>
+            
+            <cell bottom="medium">
+              <m>a_{n(j+1)}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>
@@ -973,6 +1139,16 @@
             </cell>
             <cell bottom="medium">
               <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_{j-1}</m>
+            </cell>
+            
+            <cell bottom="medium">
+              <m>c_{j+1}</m>
             </cell>
             <cell bottom="medium">
               <m>\cdots</m>

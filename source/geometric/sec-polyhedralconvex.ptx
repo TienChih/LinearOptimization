@@ -69,7 +69,7 @@
     <introduction>
       <statement>
         <p>
-          Let <m>P=(-3,1), Q=(2,-5)</m>.  Let <m>X=t\cdot P+(1-t)\cdot Q</m> for some <m>0\leq t\leq 1</m>
+          Let <m>P=(-3,1), Q=(2,-5)</m>.  Let <m>X=t\cdot P+(1-t)\cdot Q</m> for some <m>0\leq t\leq 1</m>.
         </p>
       </statement>
     </introduction>
@@ -116,7 +116,7 @@
     <task>
       <statement>
         <p>
-          Let <m>P=(2,1,0), Q=(0, -3, 1)</m> Describe the set of points <m>\{t\cdot P+(1-t)\cdot Q : t\in [0,1]\}</m>.
+          Let <m>P=(2,1,0), Q=(0, -3, 1)</m>.  Describe the set of points <m>\{t\cdot P+(1-t)\cdot Q : t\in [0,1]\}</m>.
         </p>
         <!--<hint>
           <p>
@@ -278,7 +278,7 @@
     <task>
       <statement>
         <p>
-          Find convex sets <m>S_1, S_2</m> so that <m>S_1\cup S_2</m> is not convex.
+          Prove or find a counterexample to the following statement: If <m>S_1, S_2</m> are convex sets, then <m>S_1\cup S_2</m> is convex.
         </p>
       </statement>
     </task>
@@ -373,7 +373,7 @@
   <activity>
     <statement>
       <p>
-        Which of the activities <xref ref="activity-exampleart"/>,  <xref ref="activity-examplediet"/> are bounded?
+        Which of the problems described in <xref ref="activity-exampleart"/>,  <xref ref="activity-examplediet"/> have bounded feasible regions?
       </p>
     </statement>
   </activity>
@@ -577,44 +577,22 @@
     <task>
       <statement>
         <p>
-          In <m>\mathbb{R}^2</m> How many lines are needed to intersect to obtain a point?
+          In <m>\mathbb{R}^2</m> How many lines are needed to intersect so their intersection is a unique point?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          In <m>\mathbb{R}^3</m> How many planes are needed to intersect to obtain a point?
+          In <m>\mathbb{R}^3</m> How many planes are needed to intersect so their intersection is a unique point?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          In <m>\mathbb{R}^n</m> How many <m>n-1</m> dimensional hyperplanes are needed to intersect to obtain a point?
+          In <m>\mathbb{R}^n</m> How many <m>n-1</m> dimensional hyperplanes are needed to intersect so their intersection is a unique point?
         </p>
-        <ol marker="A." cols="2">
-          <li>
-            <p>
-              <m>3</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>n-1</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>n</m>
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>n+1</m>
-            </p>
-          </li>
-        </ol>
       </statement>
     </task>
     <task>

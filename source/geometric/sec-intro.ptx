@@ -26,12 +26,12 @@
   <activity xml:id="activity-solspace">
     <introduction>
       <p>
-        Consider the augemnted matrix <me>M=\left(\begin{array}{cccc|c}
+        Consider the augemnted matrix <me>M=\left{\begin{array}{cccc|c}
           a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} &amp; b_1 \\
           a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}&amp; b_2 \\
           \vdots &amp; \vdots &amp;  \ddots &amp; \vdots &amp; \vdots \\
           a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn} &amp; b_m \\
-          \end{array}\right) = (A|b).</me>
+          \end{array}\right] = (A|b).</me>
       </p>
       
     </introduction>
@@ -66,12 +66,12 @@
   <activity xml:id="activity-basis">
     <introduction>
       <p>
-        Consider the  matrix <me>M=\left(\begin{array}{cccc}
+        Consider the  matrix <me>M=\left[\begin{array}{cccc}
           a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} \\
           a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n} \\
           \vdots &amp; \vdots &amp;  \ddots &amp; \vdots\\
           a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn}  \\
-          \end{array}\right) = (A|b).</me>
+          \end{array}\right].</me>
       </p>
     </introduction>
     <task>
@@ -184,9 +184,7 @@
         this is backwards.  It makes far more sense to approach the determinant geometrically first, there is a property of transformations we want to measure, we call this 
         quantity the determinant, it happens to have cool algebraic properties.
       </p>
-      <p>
-        Speaking of <m>\ldots</m>
-      </p>
+      
     </statement>
   </observation>
 
@@ -201,7 +199,7 @@
       </p>
 
       <p>
-        What do you suppose Dr. Atiyah meant by this quote?  How might it have impacted your mathematical journey or education?
+        What do you suppose Dr. Atiyah meant by this quote?  What does it mean to you?  How might this sentiment have impacted your mathematical journey or education?
       </p>
     </statement>
   </activity>
