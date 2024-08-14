@@ -121,9 +121,6 @@ sagecell.makeSagecell({
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
 #thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-polyhedralconvex-28-4-1-2 { counter-set: sec-polyhedralconvex-28-4-1-2 0; }
-#sec-polyhedralconvex-28-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-4-1-2,upper-alpha)"."; }
-#sec-polyhedralconvex-28-4-1-2 > li { counter-increment: sec-polyhedralconvex-28-4-1-2; }
 #sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
 #sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
 #sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
@@ -639,7 +636,7 @@ true);
 <li id="sec-dualpivot-5-1-2-2"><div class="para" id="sec-dualpivot-5-1-2-2-1">The dual problem is unbounded below.</div></li>
 <li id="sec-dualpivot-5-1-2-3"><div class="para" id="sec-dualpivot-5-1-2-3-1">The dual problem is infeasible.</div></li>
 </ol></article><article class="task exercise-like" id="sec-dualpivot-5-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-dualpivot-5-2-1-1">Verify that the primal problem is infeasible.</div> <div class="para" id="sec-dualpivot-5-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="sec-dualpivot-5-2-1-1">For each of the possibilities discussed in (a), fill in the tableau below to achieve this criteria or explain why it is not possible.</div> <div class="para" id="sec-dualpivot-5-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -650,22 +647,22 @@ true);
 <tr>
 <td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
 </tr>
 <tr>
 <td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
 </tr>
 <tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 <tr>
@@ -675,46 +672,7 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="sec-dualpivot-5-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-dualpivot-5-3-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual problem.</div></article><article class="task exercise-like" id="sec-dualpivot-5-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-dualpivot-5-4-1-1">Verify that the primal problem is infeasible.</div> <div class="para" id="sec-dualpivot-5-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="r m b2 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_1\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(y_2\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
-</tr>
-<tr>
-<td class="r m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_1\)</span></td>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-</table></div></div></article><article class="task exercise-like" id="sec-dualpivot-5-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-dualpivot-5-5-1-1">Take the negative transpose, then use the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.2">Definition 2.2.2</a> to determine the nature of the dual problem.</div></article></article><article class="activity project-like" id="sec-dualpivot-6"><h3 class="heading">
+</table></div></div></article></article><article class="activity project-like" id="sec-dualpivot-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-dualpivot-6-1"><div class="para" id="sec-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual problems.</div></div>

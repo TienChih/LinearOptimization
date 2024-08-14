@@ -109,9 +109,6 @@ window.MathJax = {
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
 #thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-polyhedralconvex-28-4-1-2 { counter-set: sec-polyhedralconvex-28-4-1-2 0; }
-#sec-polyhedralconvex-28-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-4-1-2,upper-alpha)"."; }
-#sec-polyhedralconvex-28-4-1-2 > li { counter-increment: sec-polyhedralconvex-28-4-1-2; }
 #sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
 #sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
 #sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
@@ -551,10 +548,11 @@ true);
 <div class="para" id="exploration-witch-1-1">The witch Agnesi<details class="ptx-footnote" aria-live="polite" id="exploration-witch-1-1-1"><summary class="ptx-footnote__number" title="Footnote 4.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="exploration-witch-1-1-1">The name Agnesi was chosen by my Spring 2024 class who knew her from her eponymous curve.</div></details> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.</div> <div class="para" id="exploration-witch-1-2">Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.</div>
 </div>
 <article class="task exercise-like" id="exploration-witch-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-witch-2-1-1">Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.</div> <iframe id="exploration-witch-2-1-2" width="600" height="600" src="exploration-witch-2-1-2-if.html"></iframe></article><article class="task exercise-like" id="exploration-witch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="exploration-witch-3-1-1">Agnesi is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?</div></article><article class="task exercise-like" id="exploration-witch-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-witch-4-1-1">Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs.  Which provides the greater increase in revenue? Is this consistent with what you thought earlier?</div></article><article class="task exercise-like" id="exploration-witch-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="exploration-witch-5-1-1">If the need for healing elixer increases and they now sell for 5 gold, would that change our answer?</div></article></article><article class="activity project-like" id="sec-sensitivity-4"><h3 class="heading">
+<div class="para" id="exploration-witch-2-1-1">Before proceeding to solve the problem, make an estimate: how much do you think each newt eye and frog is worth to her?  Why do you think so?</div></article><article class="task exercise-like" id="exploration-witch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-witch-3-1-1">We now return to the initially posed maximization problem.  Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.</div> <iframe id="exploration-witch-3-1-2" width="600" height="600" src="exploration-witch-3-1-2-if.html"></iframe></article><article class="task exercise-like" id="exploration-witch-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-witch-4-1-1">Agnesi is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?</div></article><article class="task exercise-like" id="exploration-witch-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-witch-5-1-1">Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs.  Which provides the greater increase in revenue? Is this consistent with what you thought earlier?</div></article><article class="task exercise-like" id="exploration-witch-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="exploration-witch-6-1-1">If the need for healing elixer increases and they now sell for 5 gold, would that change our answer?</div></article></article><article class="activity project-like" id="sec-sensitivity-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-sensitivity-4-1-1">In both <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a> and <a href="sec-pivot.html#activity-insurance" class="xref" data-knowl="./knowl/xref/activity-insurance.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.7">Activity 2.1.7</a> we essentially explore the idea of assigning values somehow to the bounds of a maximization problem.</div> <div class="para" id="sec-sensitivity-4-1-2">If you have a production problem, and wish to assign a value to all your materials, which of the following should be reasonable things to expect from these values?</div> <ol class="upper-alpha cols2" id="sec-sensitivity-4-1-3">
@@ -801,7 +799,7 @@ x_1+x_2 \amp = 14 \\
 a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2\\
 \vdots \amp   \vdots\\
 a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n\\
-x_1, x_2, \ldots, x_m\amp \geq  0
+x_1, x_2, \ldots, x_m\amp \geq  0.
 \end{align*}
 </div></div> <div class="para" id="definition-dual-7">The <dfn class="terminology">dual minimization problem</dfn>  is aritculated as follows:</div> <div class="para logical" id="definition-dual-8"><div class="displaymath process-math" id="definition-dual-8-1">
 \begin{align*}
@@ -810,7 +808,7 @@ x_1, x_2, \ldots, x_m\amp \geq  0
 a_{1,2}y_1 + a_{2,2}y_2 +\cdots a_{n,2}y_n\amp \geq  c_2\\
 \vdots \amp   \vdots\\
 a_{1,m}y_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \geq  c_m\\
-y_1, y_2, \ldots, y_n\amp \geq  0
+y_1, y_2, \ldots, y_n\amp \geq  0.
 \end{align*}
 </div></div> <div class="para" id="definition-dual-9">We refer to the <span class="process-math">\(y_i\)</span> as <dfn class="terminology">dual variables</dfn>.</div></article><article class="activity project-like" id="sec-sensitivity-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
@@ -828,7 +826,10 @@ y_1, y_2, \ldots, y_n\amp \geq  0
 </ol>
 </div></article><article class="task exercise-like" id="sec-sensitivity-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-sensitivity-8-4-1-1">For each inequality in our dual problem, articulate what those inequalities represent in this context.</div></article><article class="task exercise-like" id="sec-sensitivity-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-sensitivity-8-5-1-1">Describe the dual objective function in this context.</div></article></article></section></div>
+<div class="para" id="sec-sensitivity-8-5-1-1">Describe the dual objective function in this context.</div></article></article><article class="activity project-like" id="sec-sensitivity-9"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-sensitivity-9-1-1">Describe three primal maximization problems with some “real world” context, these do not have to be “realistic”, they can be fantastical like Agnesi’s problem here.  Then, describe the dual problem to each and say what the dual variables mean in each case.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-duality.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-dualitytheory.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

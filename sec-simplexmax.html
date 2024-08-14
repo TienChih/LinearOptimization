@@ -109,9 +109,6 @@ window.MathJax = {
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
 #thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-polyhedralconvex-28-4-1-2 { counter-set: sec-polyhedralconvex-28-4-1-2 0; }
-#sec-polyhedralconvex-28-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-4-1-2,upper-alpha)"."; }
-#sec-polyhedralconvex-28-4-1-2 > li { counter-increment: sec-polyhedralconvex-28-4-1-2; }
 #sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
 #sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
 #sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
@@ -599,8 +596,8 @@ true);
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div></div>
-<div class="para" id="activity-tableaufeasible-1-3">Note that each <span class="process-math">\(x_1, t_3, t_1, x_4=0\)</span> for this tableau.  Write out the corresponding system of canonical inequalities (this should be easy, almost everything is zero).  Are they all satisfied?</div></article><article class="task exercise-like" id="activity-tableaufeasible-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="activity-tableaufeasible-2-1-1">Which of the following is a sufficient condition for a Tucker Tableau to correspond to a feasible solution?</div> <ol class="upper-alpha cols2" id="activity-tableaufeasible-2-1-2">
+<div class="para" id="activity-tableaufeasible-1-3">Note that  <span class="process-math">\(x_1, t_3, t_1, x_4=0\)</span> for the basic solution of this tableau.  Write out the corresponding system of canonical inequalities.  Are they all satisfied?</div></article><article class="task exercise-like" id="activity-tableaufeasible-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="activity-tableaufeasible-2-1-1">Which of the following is a neccesary and sufficient condition for a Tucker tableau to have a feasible basic solution?</div> <ol class="upper-alpha cols2" id="activity-tableaufeasible-2-1-2">
 <li id="activity-tableaufeasible-2-1-2-1"><div class="para" id="activity-tableaufeasible-2-1-2-1-1">Some of the <span class="process-math">\(c_j\leq 0\text{.}\)</span>
 </div></li>
 <li id="activity-tableaufeasible-2-1-2-2"><div class="para" id="activity-tableaufeasible-2-1-2-2-1">All of the <span class="process-math">\(c_j\leq 0\text{.}\)</span>
@@ -1202,7 +1199,7 @@ true);
 </ol></article><article class="activity project-like" id="subsec-basicfeasible-8"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-basicfeasible-8-1-1">Recall the canonical tableau</div> <div class="para" id="subsec-basicfeasible-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="subsec-basicfeasible-8-1-1">Recall the canonical tableau:</div> <div class="para" id="subsec-basicfeasible-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -1255,9 +1252,9 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div></div> <div class="para" id="subsec-basicfeasible-8-1-3">Suppose that after pivoting on <span class="process-math">\(a_{ij}\)</span> according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a> we had that <span class="process-math">\(d\to d'\text{.}\)</span>  Show that <span class="process-math">\(d'\leq d\)</span>
+</table></div></div> <div class="para" id="subsec-basicfeasible-8-1-3">Suppose that the basic solution encoded by the tableau were feasible, and that after pivoting on <span class="process-math">\(a_{ij}\)</span> according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.1">Definition 2.2.1</a> we had that <span class="process-math">\(d\to d'\text{.}\)</span>  Show that <span class="process-math">\(d'\leq d\)</span>
 </div></article><article class="activity project-like" id="subsec-basicfeasible-9"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
 </h4>
@@ -1522,7 +1519,7 @@ true);
 <li id="subsec-infeasiblemaximization-3-6-1-2-2"><div class="para" id="subsec-infeasiblemaximization-3-6-1-2-2-1">All of the <span class="process-math">\(a_{2k}, k\geq 2\)</span> such that <span class="process-math">\(b_k/a_{2k}\)</span> is minimized.</div></li>
 <li id="subsec-infeasiblemaximization-3-6-1-2-3"><div class="para" id="subsec-infeasiblemaximization-3-6-1-2-3-1">All of the <span class="process-math">\(a_{2k}, k\geq 2\)</span> such that if <span class="process-math">\(k&gt;2\)</span> then <span class="process-math">\(a_{2k}&gt;0\)</span> and <span class="process-math">\(b_k/a_{2k}\)</span> is minimized.</div></li>
 </ol></article><article class="task exercise-like" id="subsec-infeasiblemaximization-3-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="subsec-infeasiblemaximization-3-7-1-1">Note that we have no idea if <span class="process-math">\(b_1\)</span> is positive or negative before we started, much less after.  Why don’t we care?</div></article></article><div class="para" id="subsec-infeasiblemaximization-4">With this, we may define our algorithm for potentiall non-feasible tableau</div>
+<div class="para" id="subsec-infeasiblemaximization-3-7-1-1">Note that we have no idea if <span class="process-math">\(b_1\)</span> is positive or negative before we started, much less after.  Why don’t we care?</div></article></article><div class="para" id="subsec-infeasiblemaximization-4">With this, we may define our algorithm for potential non-feasible tableau</div>
 <article class="definition definition-like" id="def-simplexmax"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
 </h4> <div class="para" id="def-simplexmax-3-1">The Simplex Algorithm for Maximum Tableaus</div> <ol class="decimal" id="def-simplexmax-3-2">

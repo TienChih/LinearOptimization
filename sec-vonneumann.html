@@ -121,9 +121,6 @@ sagecell.makeSagecell({
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
 #thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-polyhedralconvex-28-4-1-2 { counter-set: sec-polyhedralconvex-28-4-1-2 0; }
-#sec-polyhedralconvex-28-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-4-1-2,upper-alpha)"."; }
-#sec-polyhedralconvex-28-4-1-2 > li { counter-increment: sec-polyhedralconvex-28-4-1-2; }
 #sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
 #sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
 #sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
@@ -575,16 +572,16 @@ true);
 </div>
 <article class="task exercise-like" id="sec-vonneumann-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-vonneumann-7-2-1-1">Given a fixed column strategy <span class="process-math">\(\q'\)</span> which of these describes the role for the row player?</div> <ol class="upper-alpha cols2" id="sec-vonneumann-7-2-1-2">
-<li id="sec-vonneumann-7-2-1-2-1"><div class="para" id="sec-vonneumann-7-2-1-2-1-1"><span class="process-math">\(\displaystyle \displaystyle \min_{\p \in F_{\p}} \p^\top A\q'\)</span></div></li>
-<li id="sec-vonneumann-7-2-1-2-2"><div class="para" id="sec-vonneumann-7-2-1-2-2-1"><span class="process-math">\(\displaystyle \displaystyle \max_{\p \in F_{\p}} \p^\top A\q'\)</span></div></li>
-<li id="sec-vonneumann-7-2-1-2-3"><div class="para" id="sec-vonneumann-7-2-1-2-3-1"><span class="process-math">\(\displaystyle \displaystyle \min_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'\)</span></div></li>
-<li id="sec-vonneumann-7-2-1-2-4"><div class="para" id="sec-vonneumann-7-2-1-2-4-1"><span class="process-math">\(\displaystyle \displaystyle \max_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'\)</span></div></li>
+<li id="sec-vonneumann-7-2-1-2-1"><div class="para" id="sec-vonneumann-7-2-1-2-1-1"><span class="process-math">\(\displaystyle \min_{\p \in F_{\p}} \p^\top A\q'\text{.}\)</span></div></li>
+<li id="sec-vonneumann-7-2-1-2-2"><div class="para" id="sec-vonneumann-7-2-1-2-2-1"><span class="process-math">\(\displaystyle \max_{\p \in F_{\p}} \p^\top A\q'\text{.}\)</span></div></li>
+<li id="sec-vonneumann-7-2-1-2-3"><div class="para" id="sec-vonneumann-7-2-1-2-3-1"><span class="process-math">\(\displaystyle \min_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'\text{.}\)</span></div></li>
+<li id="sec-vonneumann-7-2-1-2-4"><div class="para" id="sec-vonneumann-7-2-1-2-4-1"><span class="process-math">\(\displaystyle \max_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like" id="sec-vonneumann-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-vonneumann-7-3-1-1">Given a fixed row strategy <span class="process-math">\(\p'\)</span> which of these describes the role for the column player?</div> <ol class="upper-alpha cols2" id="sec-vonneumann-7-3-1-2">
-<li id="sec-vonneumann-7-3-1-2-1"><div class="para" id="sec-vonneumann-7-3-1-2-1-1"><span class="process-math">\(\displaystyle \displaystyle \min_{\q \in F_{\q}} \p'^\top A\q\)</span></div></li>
-<li id="sec-vonneumann-7-3-1-2-2"><div class="para" id="sec-vonneumann-7-3-1-2-2-1"><span class="process-math">\(\displaystyle \displaystyle \max_{\q \in F_{\q}} \p'^\top A\q\)</span></div></li>
-<li id="sec-vonneumann-7-3-1-2-3"><div class="para" id="sec-vonneumann-7-3-1-2-3-1"><span class="process-math">\(\displaystyle \displaystyle \min_{\p \in F_{\p}} \sum_{j=1}^m \p^\top A^{(j)}\q_j\)</span></div></li>
-<li id="sec-vonneumann-7-3-1-2-4"><div class="para" id="sec-vonneumann-7-3-1-2-4-1"><span class="process-math">\(\displaystyle \displaystyle \max_{\p \in F_{\p}} \sum_{ij=1}^m \p^\top A^{(j)}\q_j\)</span></div></li>
+<li id="sec-vonneumann-7-3-1-2-1"><div class="para" id="sec-vonneumann-7-3-1-2-1-1"><span class="process-math">\(\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q\text{.}\)</span></div></li>
+<li id="sec-vonneumann-7-3-1-2-2"><div class="para" id="sec-vonneumann-7-3-1-2-2-1"><span class="process-math">\(\displaystyle \max_{\q \in F_{\q}} \p'^\top A\q\text{.}\)</span></div></li>
+<li id="sec-vonneumann-7-3-1-2-3"><div class="para" id="sec-vonneumann-7-3-1-2-3-1"><span class="process-math">\(\displaystyle \min_{\p \in F_{\p}} \sum_{j=1}^m \p^\top A^{(j)}\q_j\text{.}\)</span></div></li>
+<li id="sec-vonneumann-7-3-1-2-4"><div class="para" id="sec-vonneumann-7-3-1-2-4-1"><span class="process-math">\(\displaystyle \max_{\p \in F_{\p}} \sum_{ij=1}^m \p^\top A^{(j)}\q_j\text{.}\)</span></div></li>
 </ol></article></article><article class="activity project-like" id="sec-vonneumann-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
 </h3>
@@ -721,7 +718,7 @@ true);
 <div class="para" id="sec-vonneumann-11-1">Revist <a href="sec-vonneumann.html#exploration-vonneuman" class="xref" data-knowl="./knowl/xref/exploration-vonneuman.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 5.2.1">Exploration 5.2.1</a>.  Has your answer adjusted at all?</div></article><article class="activity project-like" id="sec-vonneumann-12"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-vonneumann-12-1"><div class="para" id="sec-vonneumann-12-1-1">Consider the payoff matrix <span class="process-math">\(A=\begin{bmatrix} 1 \amp 0 \\ 1\amp 2 \end{bmatrix}\)</span>
+<div class="introduction" id="sec-vonneumann-12-1"><div class="para" id="sec-vonneumann-12-1-1">Consider the payoff matrix <span class="process-math">\(A=\begin{bmatrix} 1 \amp 0 \\ 1\amp 2 \end{bmatrix}\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="sec-vonneumann-12-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-vonneumann-12-2-1-1">Find the optimal strategy <span class="process-math">\(\q'\)</span> for Colleen in this game, and the game value <span class="process-math">\(v\text{.}\)</span>

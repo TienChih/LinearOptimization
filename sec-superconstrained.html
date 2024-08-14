@@ -109,9 +109,6 @@ window.MathJax = {
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
 #thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-polyhedralconvex-28-4-1-2 { counter-set: sec-polyhedralconvex-28-4-1-2 0; }
-#sec-polyhedralconvex-28-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-4-1-2,upper-alpha)"."; }
-#sec-polyhedralconvex-28-4-1-2 > li { counter-increment: sec-polyhedralconvex-28-4-1-2; }
 #sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
 #sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
 #sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
@@ -613,7 +610,7 @@ x, y, z&amp; \geq  0
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div> <div class="para" id="super-constrained-geometry-5-1-2">Without computing the tableau, what point are we on if we pivot on the entry with a *? Is it feasible?</div></article><article class="task exercise-like" id="super-constrained-geometry-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+</div> <div class="para" id="super-constrained-geometry-5-1-2">Without computing the tableau, what point are we on if we pivot on the entry with a <span class="process-math">\(*\text{?}\)</span> Is it feasible?</div></article><article class="task exercise-like" id="super-constrained-geometry-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="super-constrained-geometry-6-1-1">As we traverse corner points on the way to an optimal solution, would we ever leave the plane <span class="process-math">\(3x+2y-z=8\text{?}\)</span>
 </div></article><article class="task exercise-like" id="super-constrained-geometry-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="super-constrained-geometry-7-1-1">After the last pivot, our tableau has the form: <div class="tabular-box natural-width"><table class="tabular">
@@ -682,7 +679,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_{j-1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_j\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_{j+1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
@@ -693,7 +692,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1(j-1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1j}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1(j+1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
@@ -704,7 +705,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2(j-1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2j}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2(j+1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
@@ -716,6 +719,8 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
@@ -726,7 +731,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i1}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i2}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i(j-1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{ij}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i(j+1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{im}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_i\)</span></td>
@@ -738,6 +745,8 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
@@ -748,7 +757,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n(j-1)}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{nj}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n(j+1)}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_n\)</span></td>
@@ -759,7 +770,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_{j-1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_j\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_{j+1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
@@ -773,7 +786,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_{j-1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_{j+1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
@@ -784,7 +799,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1(j-1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1j}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1(j+1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
@@ -795,7 +812,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2(j-1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2j}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2(j+1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
@@ -807,6 +826,8 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
@@ -817,7 +838,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i1}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i2}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i(j-1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{ij}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i(j+1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{im}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_i\)</span></td>
@@ -829,6 +852,8 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
@@ -839,7 +864,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n(j-1)}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{nj}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n(j+1)}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_n\)</span></td>
@@ -850,7 +877,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_{j-1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_j\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_{j+1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
@@ -863,6 +892,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_2\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_{j-1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_{j+1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_m\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -871,6 +903,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="l m b0 r2 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{11}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{12}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1(j-1)}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{1(j+1)}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{1m}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_1\)</span></td>
@@ -881,12 +916,18 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{21}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{22}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2(j-1)}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{2(j+1)}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{2m}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_2\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_2\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
@@ -899,16 +940,22 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i1}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i2}\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i(j-1)}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{i(j+1)}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(a_{im}\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_i\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-t_i\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_j\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\ddots\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
 </tr>
@@ -916,6 +963,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="l m b0 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n2}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n(j-1)}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(a_{n(j+1)}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(b_n\)</span></td>
@@ -925,6 +975,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <td class="l m b0 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_1\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_{j-1}\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(c_{j+1}\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_m\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
@@ -940,7 +993,7 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 \textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   \\
 \textbf{Subject to: }  x+2y+3z&amp;  \leq  6\\
 4x-7y&amp; =  28\\
-x, y, z&amp; \geq  0
+x, y, z&amp; \geq  0.
 \end{align*}
 </div>
 </div></div></article><article class="activity project-like" id="sec-superconstrained-7"><h3 class="heading">
@@ -953,7 +1006,7 @@ x, y, z&amp; \geq  0
 \textbf{Maximize: }  f(\mathbf{x})= 2x+y-2z  &amp;   \\
 \textbf{Subject to: }  x+y+z&amp;  \leq  1\\
 y+4z&amp; =  2\\
-x, y, z&amp; \geq  0
+x, y, z&amp; \geq  0.
 \end{align*}
 </div>
 </div></div>
@@ -1072,7 +1125,7 @@ x, y, z&amp; \geq  0
 \textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   \\
 \textbf{Subject to: }  x+2y+3z&amp;  \leq  6\\
 4x-7y&amp; \leq  28\\
-x, y, z&amp; \geq  0
+x, y, z&amp; \geq  0.
 \end{align*}
 </div>
 </div>
@@ -1086,7 +1139,7 @@ x, y, z&amp; \geq  0
 \textbf{Maximize: }  f(\mathbf{x})= x+2y+z  &amp;   \\
 \textbf{Subject to: }  x+y+z&amp;  =  6\\
 x+y&amp; \leq  1\\
-x,  z&amp; \geq  0
+x,  z&amp; \geq  0.
 \end{align*}
 </div>
 </div>

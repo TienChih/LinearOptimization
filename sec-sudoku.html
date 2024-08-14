@@ -121,9 +121,6 @@ sagecell.makeSagecell({
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
 #thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-polyhedralconvex-28-4-1-2 { counter-set: sec-polyhedralconvex-28-4-1-2 0; }
-#sec-polyhedralconvex-28-4-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-4-1-2,upper-alpha)"."; }
-#sec-polyhedralconvex-28-4-1-2 > li { counter-increment: sec-polyhedralconvex-28-4-1-2; }
 #sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
 #sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
 #sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
@@ -561,7 +558,7 @@ true);
 </h3>
 <div class="introduction" id="exploration-sudoku-1">
 <div class="para" id="exploration-sudoku-1-1">Consider the following sudoku puzzle:</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sudoku.svg" role="img" class="contained" alt="A sudoku puzzle."></div> <div class="para logical" id="exploration-sudoku-1-3">
-<div class="para">Note that the rules for sudoku are that we fill in each entry with an integer <span class="process-math">\(1-9\)</span> so that:</div>
+<div class="para">Note that the rules for sudoku are that we fill in each entry with an integer <span class="process-math">\(1, \ldots,9\)</span> so that:</div>
 <ul class="disc" id="exploration-sudoku-1-3-2">
 <li id="exploration-sudoku-1-3-2-1"><div class="para" id="exploration-sudoku-1-3-2-1-1">Each row contains exactly one of each number.</div></li>
 <li id="exploration-sudoku-1-3-2-2"><div class="para" id="exploration-sudoku-1-3-2-2-1">Each column contains exactly one of each number.</div></li>
@@ -591,7 +588,7 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-sudoku-9-1">
-<div class="para" id="sec-sudoku-9-1-1">Consider the following order 2 sudoku puzzle:</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sudokusmall.svg" role="img" class="contained" alt="An order 2 sudoku puzzle."></div>
+<div class="para" id="sec-sudoku-9-1-1">Consider the following order 2 sudoku puzzle:</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sudokusmall.svg" role="img" class="contained" alt="An order 2 sudoku puzzle."></div>
 </div>
 <article class="task exercise-like" id="sec-sudoku-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-sudoku-9-2-1-1">Following <a href="sec-sudoku.html#activity-order3sudoku" class="xref" data-knowl="./knowl/xref/activity-order3sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.2.2">Activity 9.2.2</a>, write out the linear optimization problem which would compute the solved puzzle.</div></article><article class="task exercise-like" id="sec-sudoku-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
