@@ -75,7 +75,7 @@
           <mrow>\textbf{Maximize: }  \displaystyle \sum_{i} x_{id}</mrow>
           <mrow>\textbf{Subject to: }  \sum_{i}x_{ij} - \sum_{i} x_{ji} \amp =  0, \text{for each vertex }v_j</mrow>
           <mrow> x_{ij}\amp \leq  c_{ij}, \text{for each edge} (v_i, v_j)</mrow>
-          <mrow> x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+          <mrow> x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).</mrow>
         </md>
         
       </p>
@@ -111,7 +111,7 @@
             <mrow>\textbf{Subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
             <mrow>\mu_s \amp =0 </mrow>
             <mrow> \mu_d \amp =-1</mrow>
-            <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+            <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).</mrow>
           </md>
         </p>
       </statement>
@@ -298,7 +298,7 @@
           <m>v_s</m> to <m>v_d</m>.
         </p>
         <p>
-          Let <me> q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}</me>
+          Let <me> q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}.</me>
         </p>
         <p>
           Why is <m>q>0</m>?

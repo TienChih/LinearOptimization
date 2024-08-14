@@ -359,11 +359,7 @@
             Draw a <alert>minimum</alert><m>^*</m> number of lines through <m>T</m> covering
             an entire row or column such that all <m>0</m>'s are covered.
           </p>
-          <hint>
-            <p>
-              <m>* \Rightarrow</m><alert>minimum</alert><m>\Leftarrow</m>.
-            </p>
-          </hint>
+          
           
         </li>
         <li>

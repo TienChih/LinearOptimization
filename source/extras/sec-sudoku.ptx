@@ -70,7 +70,7 @@
       </image>
       <p>
         Note that the rules for sudoku are that we fill in each
-        entry with an integer <m>1-9</m> so that:
+        entry with an integer <m>1, \ldots,9</m> so that:
         <ul>
           <li>
             <p>
@@ -110,7 +110,7 @@
   </remark>
 
   <p>
-    More sudokus may be found at <url ref="https://www.websudoku.com/">https://www.websudoku.com/</url>
+    More sudokus may be found at <url ref="https://www.websudoku.com/"> https://www.websudoku.com/ </url>
   </p>
 
   <activity xml:id="activity-order3sudoku">
@@ -185,7 +185,7 @@
       <p>
         Consider the following order 2 sudoku puzzle:
       </p>
-      <image xml:id="sudokusmall">
+      <image xml:id="sudokusmall" width="50%">
         <shortdescription>An order 2 sudoku puzzle.</shortdescription>
         <latex-image>
           \begin{tikzpicture}

@@ -67,22 +67,22 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>\displaystyle \min_{\p \in F_{\p}} \p^\top A\q'</m>
+              <m>\displaystyle \min_{\p \in F_{\p}} \p^\top A\q'</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\displaystyle \max_{\p \in F_{\p}} \p^\top A\q'</m>
+              <m>\displaystyle \max_{\p \in F_{\p}} \p^\top A\q'</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\displaystyle \min_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'</m>
+              <m>\displaystyle \min_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'</m>
+              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{i=1}^n \p_i A_{(i)}\q'</m>.
             </p>
           </li>
           
@@ -100,22 +100,22 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q</m>
+              <m>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\displaystyle \max_{\q \in F_{\q}} \p'^\top A\q</m>
+              <m>\displaystyle \max_{\q \in F_{\q}} \p'^\top A\q</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\displaystyle \min_{\p \in F_{\p}} \sum_{j=1}^m \p^\top A^{(j)}\q_j</m>
+              <m>\displaystyle \min_{\p \in F_{\p}} \sum_{j=1}^m \p^\top A^{(j)}\q_j</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{ij=1}^m \p^\top A^{(j)}\q_j</m>
+              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{ij=1}^m \p^\top A^{(j)}\q_j</m>.
             </p>
           </li>
         </ol>
@@ -551,7 +551,7 @@
   <activity>
     <introduction>
       <p>
-        Consider the payoff matrix <m>A=\begin{bmatrix} 1 \amp 0 \\ 1\amp 2 \end{bmatrix}</m>
+        Consider the payoff matrix <m>A=\begin{bmatrix} 1 \amp 0 \\ 1\amp 2 \end{bmatrix}</m>.
       </p>
     </introduction>
     <task>

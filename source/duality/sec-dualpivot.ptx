@@ -257,8 +257,10 @@
     <task>
       <statement>
         <p>
-          Verify that the primal problem is infeasible.
+          For each of the possibilities discussed in (a), fill in the tableau below
+          to achieve this criteria or explain why it is not possible.
         </p>
+        
         <p>
           <tabular halign="center">
             <row>
@@ -284,10 +286,10 @@
                 <m>-1</m>
               </cell>
               <cell right="medium">
-                <m>-1</m>
+                <m>?</m>
               </cell>
               <cell right="medium">
-                <m>-3</m>
+                <m>?</m>
               </cell>
               <cell halign="left">
                 <m>=-t_1</m>
@@ -301,10 +303,10 @@
                 <m>1</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>1</m>
+                <m>?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>2</m>
+                <m>?</m>
               </cell>
               <cell halign="left">
                 <m>=-t_2</m>
@@ -312,16 +314,16 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>-1</m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m>2</m>
+                <m>?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>-4</m>
+                <m>?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>0</m>
+                <m>?</m>
               </cell>
               <cell halign="left" bottom="medium">
                 <m>=f</m>
@@ -346,115 +348,7 @@
         </p>
       </statement>
     </task>
-    <task>
-      <statement>
-        <p>
-          Take the negative transpose, then use the Simplex Algorithm 
-          <xref ref="def-simplexmax"/> to determine the nature of the dual problem.
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Verify that the primal problem is infeasible.
-        </p>
-        <p>
-          <tabular halign="center">
-            <row>
-              <cell halign="right" bottom="medium" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>x_1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>x_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                <m>y_1</m>
-              </cell>
-              <cell>
-                <m>-1</m>
-              </cell>
-              <cell right="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_1</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                <m>y_2</m>
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>-1</m>
-              </cell>
-              <cell halign="left">
-                <m>=-t_2</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-                <m>1</m>
-              </cell>
-              <cell bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>1</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>0</m>
-              </cell>
-              <cell halign="left" bottom="medium">
-                <m>=f</m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="left">
-              </cell>
-              <cell>
-                <m>=s_1</m>
-              </cell>
-              <cell>
-                <m>=s_2</m>
-              </cell>
-              <cell right="medium">
-                <m>=g</m>
-              </cell>
-              <cell halign="left">
-                
-              </cell>
-            </row>
-          </tabular>
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          Take the negative transpose, then use the Simplex Algorithm 
-          <xref ref="def-simplexmax"/> to determine the nature of the dual problem.
-        </p>
-      </statement>
-    </task>
+    
   </activity>
   
   

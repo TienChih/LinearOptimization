@@ -344,7 +344,7 @@
       <statement>
         <p>
           Suppose <m>A</m> had a column <m>A_j</m> such that <m>\y^\top A_j\lt 0</m>, show that there is an <m>\alpha>0</m>
-          such that <m>y^\top (\alpha A_j)\lt \y^\top \vb </m>.  Why is this a contradiction?
+          such that <m>\y^\top (\alpha A_j)\lt \y^\top \vb </m>.  Why is this a contradiction?
         </p>
       </statement>
     </task>
@@ -390,7 +390,7 @@
       <ol marker="A.">
         <li>
           <p>
-            There is a <m>\mathbf{x}\in \R^m</m> such that <m>\mathbf{x}\geq \mathbf{0}</m> and <m>A\mathbf{x}\leq \mathbf{b}</m>
+            There is a <m>\mathbf{x}\in \R^m</m> such that <m>\mathbf{x}\geq \mathbf{0}</m> and <m>A\mathbf{x}\leq \mathbf{b}</m>.
           </p>
         </li>
         <li>

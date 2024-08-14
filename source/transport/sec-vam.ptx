@@ -111,11 +111,17 @@
     <task>
       <statement>
         <p>
-          Let <m>x_{ij}</m> denote the the tons of goods shipped from warehouse <m>i</m> to 
-          market <m>j</m>.
+          Just eyeballing this, can you come up with a heuristic guess
+          as to an optimal, or at least <q>good</q> shipping schedule?
+          How did you come up with this and what did you have to consider?
         </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
         <p>
-          Write an (in)equality for the quantity of goods shipped from Warehouse 1 in terms of the
+          Let <m>x_{ij}</m> denote the the tons of goods shipped from warehouse <m>i</m> to 
+          market <m>j</m>.  Write an (in)equality for the quantity of goods shipped from Warehouse 1 in terms of the
           <m>x_{ij}</m>.
         </p>
       </statement>

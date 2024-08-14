@@ -107,7 +107,7 @@
       <task>
         <statement>
           <p>
-            <image xml:id="flowexb">
+            <image xml:id="flowexb" width="60%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -151,7 +151,7 @@
       <task>
         <statement>
           <p>
-            <image xml:id="flowexc">
+            <image xml:id="flowexc" width="70%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -491,7 +491,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            <image xml:id="shortpatha">
+            <image xml:id="shortpatha" width="60%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -531,7 +531,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            <image xml:id="shortpathb">
+            <image xml:id="shortpathb" width="60%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -570,7 +570,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            <image xml:id="shortpathc">
+            <image xml:id="shortpathc" width="80%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -617,7 +617,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            <image xml:id="shortpathd">
+            <image xml:id="shortpathd" width="70%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -704,7 +704,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            <image xml:id="minflowa">
+            <image xml:id="minflowa" width="60%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -743,7 +743,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            <image xml:id="minflowb">
+            <image xml:id="minflowb" width="60%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[
@@ -784,7 +784,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            <image xml:id="minflowc">
+            <image xml:id="minflowc" width="65%">
               <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
               <latex-image>
                 \begin{tikzpicture}[

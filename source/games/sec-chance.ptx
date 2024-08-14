@@ -469,7 +469,7 @@
     <task>
       <statement>
         <p>
-          Solve for the optimal strategies using LP methods.
+          Solve for the optimal strategies using the method of your choice.
         </p>
       </statement>
     </task>

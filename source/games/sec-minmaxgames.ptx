@@ -43,6 +43,14 @@
     <task>
       <statement>
         <p>
+          Take turns playing this game, do you think either the even or odd player has
+          any advantage in this game?.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
           Record the net winnings to the Even player in the following table:
         </p>
         <p>
@@ -216,7 +224,7 @@
       <p>
         In a two-player zero-sum game, where the row player has <m>n</m> choices and the column player has <m>m</m> choices, the
          <term>payoff matrix</term> is a matrix which records in each row and column the net payoff to the row player (this choice is purely
-         by convention, but we will stick to it.)
+         by convention, but we will stick to it).
       </p>
       <p>
         If a row <m>i</m> has entries that are strictly greater than or equal to the entries of another row <m>j</m>, 
@@ -1564,7 +1572,7 @@
     <statement>
       <p>
         Find the optimal strategies for two players Rowan and Colleen
-        playing <q>Rock, Paper, Scissors</q>
+        playing <q>Rock, Paper, Scissors</q>.
       </p>
     </statement>
   </activity>

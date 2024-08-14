@@ -2112,7 +2112,7 @@ data rational.
           absurdly large number.
         </p>
       </introduction>
-    </exercise>
+    
 
     <task>
       <statement>
@@ -2143,6 +2143,7 @@ data rational.
         </p>
       </statement>
     </task>
+  </exercise>
 
   </exercises>
   

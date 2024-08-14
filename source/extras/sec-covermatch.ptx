@@ -18,7 +18,7 @@
     <introduction>
       <p>
         Consider the following undirected graph <m>G</m>.
-        <image xml:id="exploration-graph">
+        <image xml:id="exploration-graph" width="80%">
           <shortdescription>An undirected graph.</shortdescription>
           <latex-image>
             \begin{tikzpicture}
@@ -64,7 +64,7 @@
       <statement>
         <p>
           Find <m>\Xi(H)</m> for <m>H</m>:
-          <image xml:id="exploration-noperfect">
+          <image xml:id="exploration-noperfect" with="80%">
             <shortdescription>An undirected graph.</shortdescription>
             <latex-image>
               \begin{tikzpicture}
@@ -234,17 +234,17 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>f(\x^*)\leq \Xi(G)</m>
+              <m>f(\x^*)\leq \Xi(G)</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>f(\x^*)\geq \Xi(G)</m>
+              <m>f(\x^*)\geq \Xi(G)</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>f(\x^*)= \Xi(G)</m>
+              <m>f(\x^*)= \Xi(G)</m>.
             </p>
           </li>
           <li>
@@ -415,17 +415,17 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>g(\y^*)\leq \tau(G)</m>
+              <m>g(\y^*)\leq \tau(G)</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>g(\y^*)\geq \tau(G)</m>
+              <m>g(\y^*)\geq \tau(G)</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>g(\y^*)= \tau(G)</m>
+              <m>g(\y^*)= \tau(G)</m>.
             </p>
           </li>
           <li>
@@ -450,17 +450,17 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>\Xi(G)\leq \tau(G)</m>
+              <m>\Xi(G)\leq \tau(G)</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\Xi(G)\geq \tau(G)</m>
+              <m>\Xi(G)\geq \tau(G)</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>\Xi(G)= \tau(G)</m>
+              <m>\Xi(G)= \tau(G)</m>.
             </p>
           </li>
           <li>
@@ -681,17 +681,17 @@
           <ol marker="A.">
             <li>
               <p>
-                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} </m>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} </m>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} </m>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} </m>.
               </p>
             </li>
           </ol>
@@ -803,17 +803,17 @@
           <ol marker="A.">
             <li>
               <p>
-                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} </m>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} </m>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} </m>
+                <m>\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} </m>.
               </p>
             </li>
           </ol>
@@ -938,7 +938,7 @@
               </li>
             </ul> 
           </p>
-          <image xml:id="edgetypes">
+          <image xml:id="edgetypes" width="80%">
             <shortdescription>A bipartite graph with partitioned vertices and edges.</shortdescription>
             <latex-image>
               \begin{tikzpicture}
@@ -1014,27 +1014,27 @@
           <ol marker="A.">
             <li>
               <p>
-                <m>\epsilon = \min \{y^*_i: v_i\in V(G)\} </m>
+                <m>\epsilon = \min \{y^*_i: v_i\in V(G)\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon = \min \{y^*_i: v_i\in V_1\} </m>
+                <m>\epsilon = \min \{y^*_i: v_i\in V_1\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon = \min \{y^*_i: v_i\in V_2\} </m>
+                <m>\epsilon = \min \{y^*_i: v_i\in V_2\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon = \min \{y^*_i: v_i\in F\cap V_1\} </m>
+                <m>\epsilon = \min \{y^*_i: v_i\in F\cap V_1\} </m>.
               </p>
             </li>
             <li>
               <p>
-                <m>\epsilon = \min \{y^*_i: v_i\in F\cap V_2\} </m>
+                <m>\epsilon = \min \{y^*_i: v_i\in F\cap V_2\} </m>.
               </p>
             </li>
           </ol>

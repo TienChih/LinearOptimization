@@ -26,7 +26,7 @@
                         a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2m}\\
                         \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
                         a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nm}\\
-                        \end{bmatrix}
+                        \end{bmatrix}.
                     </me>
                     Also denoted <m>A=[a_{ij}]_{n\times m}</m> is a <m>n\times m</m> matrix,
                     denoting that <m>A</m> has <m>n</m> rows and <m>m</m> columns.  We note that
@@ -64,7 +64,7 @@
                         a_{12} &amp; a_{22} &amp; \cdots &amp; a_{n2}\\
                         \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
                         a_{1m} &amp; a_{2m} &amp; \cdots &amp; a_{nm}\\
-                        \end{bmatrix}
+                        \end{bmatrix}.
 
                     </me>
                 </p>
@@ -83,7 +83,7 @@
                     1 &amp; 0\\
                     -2 &amp; 5\\
                     3 &amp; 6
-                    \end{bmatrix}
+                    \end{bmatrix}.
                     </me>
                 </p>
             </statement>
@@ -124,7 +124,7 @@
                             \begin{bmatrix}
                             5 &amp; 5 &amp; 3\\
                             -8 &amp; 7 &amp; 2
-                            \end{bmatrix}
+                            \end{bmatrix}.
                         </mrow>
                     
                     </md>
@@ -169,7 +169,7 @@
                             \begin{bmatrix}
                             5 &amp; 5 &amp; 3\\
                             -8 &amp; 7 &amp; 2
-                            \end{bmatrix}
+                            \end{bmatrix}.
                         </mrow>
                     
                     </md>
@@ -204,7 +204,7 @@
                             4 &amp; 7 &amp; 0 \\
                             -48 &amp; -4 &amp; -20 \\
                             -36 &amp; 33 &amp; -24 
-                            \end{bmatrix}
+                            \end{bmatrix}.
                         </mrow>
                     
                     </md>
@@ -254,7 +254,7 @@
                            3 &amp; 0\\
                             -6 &amp; 15\\
                             9 &amp; 18
-                           \end{bmatrix}
+                           \end{bmatrix}.
                        </mrow>
                     
                     </md>
