@@ -4,7 +4,7 @@
   <title>Duality Theory</title>
   <introduction>
     <p> In this section, we establish the theoretical underpinnings of duality. This is a proof heavy section.</p>
-  </introduction>
+  </introduction>   
   
 
   <notation>
@@ -75,11 +75,7 @@
           where <m>f(\mathbf{x_0}) \lt g(\mathbf{y_0})</m>.
         </p>
       </statement>
-      <hint>
-        <p>
-          Simpler is better.
-        </p>
-      </hint>
+      
     </task>
     <task>
       <statement>
