@@ -751,7 +751,7 @@
   <definition xml:id="def-branchbound">
     <statement>
       <p>
-        The <em>branch and bound</em> algorithm for solving an integer optimization maximization problem
+        The <em>Branch and Bound Algorithm</em> for solving an integer optimization maximization problem
         is as follows:
       </p>
       <ol>
@@ -880,7 +880,7 @@
       <p>
         As the demand for meat pies skyrockets, Agnesi is now able to acquire 40 oz of floor a day,
         but now uses 10 oz of floor per meat pie to thicken the gravy.  She is able to sell these for 40 gp each.
-        Use the branch and bound algorithm <xref ref="def-branchbound"/> to found her
+        Use the Branch and Bound Algorithm <xref ref="def-branchbound"/> to found her
         new optimal production level.
       </p>
       <p>

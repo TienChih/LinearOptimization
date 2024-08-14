@@ -176,7 +176,7 @@
   <activity>
     <introduction>
       <p>
-        In this activity, we model the shortest path algorithm as a linear optimization problem.  Assume <m>N</m> is a weighted network with no negative cycles.  Let <m>0\leq x_{ij}\leq 1</m>
+        In this activity, we model the shortest path problem as a linear optimization problem.  Assume <m>N</m> is a weighted network with no negative cycles.  Let <m>0\leq x_{ij}\leq 1</m>
         where <m>x_{ij}=1</m> if <m>(v_i, v_j)</m> is in a shortest path <m>P</m> from <m>v_s</m> to <m>v_d</m>.
       </p>
     </introduction>
@@ -971,7 +971,7 @@
         </li>
         <li>
           <p>
-            Apply the shortest path algorithm on <m>N'</m> to find the shortest path from <m>v_s</m> to <m>v_d</m>.
+            Apply the Shortest Path Algorithm on <m>N'</m> to find the shortest path from <m>v_s</m> to <m>v_d</m>.
             If no path exists STOP, there is no flow with total value <m>F</m>.
           </p>
         </li>

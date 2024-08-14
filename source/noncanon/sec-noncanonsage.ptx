@@ -6,7 +6,7 @@
   <introduction>
     <p>
       In <xref ref="sec-simplexsage"/>, we showed how to use Sage to solve canonical linear optimization problems
-      with the simplex algorithm.  In this section, we use Sage to solve noncanonical problems.
+      with the Simplex Algorithm.  In this section, we use Sage to solve noncanonical problems.
     </p>
   </introduction>
   

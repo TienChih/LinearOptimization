@@ -929,8 +929,8 @@
 
     <exercise>
       <p>
-        In <xref ref="ex-transport"/>, looking at the final talbeau of the transportation
-        algorithm, determine which of these have a <em>unique</em> optimal solution.
+        In <xref ref="ex-transport"/>, looking at the final talbeau of the Transportation
+        Algorithm, determine which of these have a <em>unique</em> optimal solution.
       </p>
     </exercise>
 
@@ -2014,7 +2014,7 @@
 
     <exercise>
       <p>
-        Prove that the transportation  algorithm <xref ref="def-transportationalg"/> will lead to an optimal solution
+        Prove that the Transportation  Algorithm <xref ref="def-transportationalg"/> will lead to an optimal solution
 after a finite number of steps if the algorithm is applied to a problem with all
 data rational.
       </p>

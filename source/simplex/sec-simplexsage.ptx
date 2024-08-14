@@ -944,7 +944,7 @@
               P
             </input>
           </sage>
-          and then just run the simplex algorithm:
+          and then just run the Simplex Algorithm:
           <sage>
             <input>
               %display typeset
@@ -983,7 +983,7 @@
     <task>
       <statement>
         <p>
-          Now let's run the simplex algorithm to see what the deal is:
+          Now let's run the Simplex Algorithm to see what the deal is:
           <sage>
             <input>
               %display typeset
@@ -1021,7 +1021,7 @@
     <task>
       <statement>
         <p>
-          We can run the simplex algorithm:
+          We can run the Simplex Algorithm:
           <sage>
             <input>
               %display typeset

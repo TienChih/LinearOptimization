@@ -1091,7 +1091,7 @@
     <title>Gomory Cutting-Plane Algorithm</title>
     <statement>
       <p>
-        The <em>Gomory cutting-plane</em> algorithm for an optimization problem is as follows:
+        The <em>Gomory Cutting-Plane</em> Algorithm for an optimization problem is as follows:
       </p>
       <ol>
         <li>

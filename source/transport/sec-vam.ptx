@@ -158,7 +158,7 @@
   <activity xml:id="activity-vamexample">
     <introduction>
       <p>
-        While we could solve this transportation by the simplex algorithm,
+        While we could solve this transportation by the Simplex Algorithm,
         it would be painfully tedious to do.  We develop an algorithm to simplify this process.
       </p>
       <!--<p>

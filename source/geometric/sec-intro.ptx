@@ -26,7 +26,7 @@
   <activity xml:id="activity-solspace">
     <introduction>
       <p>
-        Consider the augemnted matrix <me>M=\left{\begin{array}{cccc|c}
+        Consider the augemnted matrix <me>M=\left[\begin{array}{cccc|c}
           a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} &amp; b_1 \\
           a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}&amp; b_2 \\
           \vdots &amp; \vdots &amp;  \ddots &amp; \vdots &amp; \vdots \\
