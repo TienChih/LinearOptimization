@@ -110,7 +110,7 @@
   </remark>
 
   <p>
-    More sudokus may be found at <url ref="https://www.websudoku.com/"> https://www.websudoku.com/ </url>
+    More sudokus may be found at <url href="https://www.websudoku.com/"> https://www.websudoku.com/ </url>
   </p>
 
   <activity xml:id="activity-order3sudoku">
