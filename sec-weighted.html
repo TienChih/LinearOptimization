@@ -582,7 +582,7 @@ true);
 </h3> <div class="para" id="def-negativecycle-4-1">We define a <dfn class="terminology">cycle</dfn> in a weighted network to be a path froma vertex <span class="process-math">\(v_x\)</span> to itself.  If the length of a cycle is negative, we call it a <dfn class="terminology">negative cycle</dfn>.</div></article><article class="activity project-like" id="sec-weighted-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-weighted-8-1"><div class="para" id="sec-weighted-8-1-1">In this activity, we model the shortest path algorithm as a linear optimization problem.  Assume <span class="process-math">\(N\)</span> is a weighted network with no negative cycles.  Let <span class="process-math">\(0\leq x_{ij}\leq 1\)</span> where <span class="process-math">\(x_{ij}=1\)</span> if <span class="process-math">\((v_i, v_j)\)</span> is in a shortest path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
+<div class="introduction" id="sec-weighted-8-1"><div class="para" id="sec-weighted-8-1-1">In this activity, we model the shortest path problem as a linear optimization problem.  Assume <span class="process-math">\(N\)</span> is a weighted network with no negative cycles.  Let <span class="process-math">\(0\leq x_{ij}\leq 1\)</span> where <span class="process-math">\(x_{ij}=1\)</span> if <span class="process-math">\((v_i, v_j)\)</span> is in a shortest path <span class="process-math">\(P\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span>
 </div></div>
 <article class="task exercise-like" id="sec-weighted-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-weighted-8-2-1">What is the objective problem?</div>
@@ -795,7 +795,7 @@ print(P.optimal_value())
 </div></li>
 </ul>
 </div></li>
-<li id="def-mincostflowalgorithm-4-2-4"><div class="para" id="def-mincostflowalgorithm-4-2-4-1">Apply the shortest path algorithm on <span class="process-math">\(N'\)</span> to find the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span> If no path exists STOP, there is no flow with total value <span class="process-math">\(F\text{.}\)</span>
+<li id="def-mincostflowalgorithm-4-2-4"><div class="para" id="def-mincostflowalgorithm-4-2-4-1">Apply the Shortest Path Algorithm on <span class="process-math">\(N'\)</span> to find the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\text{.}\)</span> If no path exists STOP, there is no flow with total value <span class="process-math">\(F\text{.}\)</span>
 </div></li>
 <li id="def-mincostflowalgorithm-4-2-5"><div class="para logical" id="def-mincostflowalgorithm-4-2-5-1">
 <div class="para">Find the <span class="process-math">\(\alpha\)</span>-path corresponding to the shortest path found in (4).  Let</div>
