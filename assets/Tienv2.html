@@ -177,6 +177,40 @@ function textClicked(idInput) {
 }
 
 
+function delCol(idInput) {
+	var splitInput = idInput.split("|");
+	colDelete = Number(splitInput[1]);
+	
+	document.getElementById("Error").innerHTML = "Delete Column " + idInput;
+	
+	northBorder.splice(colDelete-1, 1);
+	southBorder.splice(colDelete-1, 1);
+	
+	i = 0;
+	while (i < dataTable.length) {
+		dataTable[i].splice (colDelete-1, 1);
+		i++;
+	}
+	
+	document.getElementById("selNumCol").value = document.getElementById("selNumCol").value - 1;
+	populateResultTable();
+}
+
+function delRow(idInput) {
+	var splitInput = idInput.split("|");
+	rowDelete = Number(splitInput[1]);
+	
+	document.getElementById("Error").innerHTML = "Delete Row " + idInput;
+	
+	westBorder.splice(rowDelete-1, 1);
+	eastBorder.splice(rowDelete-1, 1);
+	
+	dataTable.splice (rowDelete-1, 1);
+	
+	document.getElementById("selNumRow").value = document.getElementById("selNumRow").value - 1;
+	populateResultTable();
+}
+
 function populateDataTable() {
 	dataTable = [];
 	var dataRow;
@@ -247,14 +281,34 @@ function populateResultTable() {
 	valY = Number(document.getElementById("selNumRow").value);
 	process = (clickX > 0) && (clickY > 0) && (dataTable[clickY-1][clickX-1] != 0);
 	try {
-  // Create header  
+	// Create Delete col
+	
 	row = document.createElement("tr");
 	
-	cell = document.createElement("th");
+	cell = document.createElement("td");
 	cell.innerHTML = "";
 	row.appendChild(cell);
 	for (var j = 1; j <= (valX); j++) {
-		cell = document.createElement("th");
+		cell = document.createElement("td");
+		btn = document.createElement("button")
+		node = document.createTextNode("X");
+		btn.appendChild(node);
+		btn.id = "delCol|" + j;
+		btn.style = "color:red";
+		btn.onclick = function(){delCol(this.id);};
+	cell.appendChild(btn);
+		row.appendChild(cell);
+	}
+	tbl.appendChild(row);
+	
+  // Create header  
+	row = document.createElement("tr");
+	
+	cell = document.createElement("td");
+	cell.innerHTML = "";
+	row.appendChild(cell);
+	for (var j = 1; j <= (valX); j++) {
+		cell = document.createElement("td");
 		cell.innerHTML = northBorder[j-1];
 		row.appendChild(cell);
 	}
@@ -297,6 +351,16 @@ function populateResultTable() {
 		
 		cell = document.createElement("th");
 		cell.innerHTML = eastBorder[i-1];
+		row.appendChild(cell);
+		
+		cell = document.createElement("td");
+		btn = document.createElement("button")
+		node = document.createTextNode("X");
+		btn.appendChild(node);
+		btn.id - "delRow|" + i;
+		btn.style = "color:red";
+		btn.onclick = function(){delRow(this.id);};
+		cell.appendChild(btn);
 		row.appendChild(cell);
 		
 		tbl.appendChild(row);
