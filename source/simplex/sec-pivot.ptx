@@ -20,7 +20,7 @@
       <p>
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n</mrow>
@@ -39,7 +39,7 @@
       <p>
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m +t_n \amp =  b_n</mrow>
@@ -116,21 +116,18 @@
       <p>
         <md>
           <mrow>\textbf{Minimize: }  g(\mathbf{y}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
           <mrow> x_1, x_2, \ldots, x_n\amp \geq  0.</mrow>
         </md>
-        Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>
-      </p>
-      <p>
-        May be rewritten as:
+        Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>, may be rewritten as:
       </p>
       <p>
         <md>
           <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -s_m \amp =  b_m</mrow>
@@ -167,7 +164,7 @@
         We can rewrite
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_n+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n +t_m \amp =  b_n</mrow>
@@ -176,7 +173,7 @@
         as 
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m  -b_1\amp =  -t_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m  -b_1\amp =  -t_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n-b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n -b_n \amp =  -t_n</mrow>
@@ -388,12 +385,8 @@
   <activity xml:id="activity-widget">
     <introduction>
       <p>
-        Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.
-      </p>
-      <p>
-        Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.
-      </p>
-      <p>
+        Suppose a company produces two types of widgets.  
+        Widget 1 sells for $200 and Widget 2 sells for $150. Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.
         The company has 20 units of ingredient A, 30 units of B and 25 units of C.
       </p>
     </introduction>

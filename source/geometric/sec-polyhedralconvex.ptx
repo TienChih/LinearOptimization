@@ -285,11 +285,11 @@
   </activity>
 
   <activity>
-    <task>
+    <statement>
       <p>
         Prove that the feasible region of a canonical linear programming problem is convex.
       </p>
-    </task>
+    </statement>
   </activity>
 
   <definition xml:id="def-polyhedralconvex">
@@ -536,7 +536,7 @@
             <mrow>x+4y \amp\leq 26 </mrow>
             <mrow>2x+2y \amp\leq 16 </mrow>
             <mrow>4x+y \amp\leq 24 </mrow>
-            <mrow>x, y \amp\geq 0 </mrow>
+            <mrow>x, y \amp\geq 0. </mrow>
           </md>
           
           <interactive platform="doenetml" width="100%" aspect="4:4.25">
@@ -604,27 +604,27 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>n</m>
+              <m>n.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{n\choose k}</m>
+              <m>{n\choose k}.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{n+k\choose k}</m>
+              <m>{n+k\choose k}.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{k\choose n}</m>
+              <m>{k\choose n}.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{n+k\choose n}</m>
+              <m>{n+k\choose n}.</m>
             </p>
           </li>
         </ol>

@@ -138,7 +138,7 @@
         
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \leq  b_m</mrow>
@@ -153,7 +153,7 @@
         
         <md>
           <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
-          <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
@@ -198,9 +198,9 @@
         <md>
           <mrow>\textbf{Minimize: }g(x_1, x_2) = 5x_1-3x_2\amp </mrow>
           <mrow>\amp </mrow>
-          <mrow>\textbf{Subject to: }  4x_1 + x_2 \amp \geq  10</mrow>
+          <mrow>\textbf{subject to: }  4x_1 + x_2 \amp \geq  10</mrow>
           <mrow> 3x_1 + 12x_2 \amp \geq  12</mrow>
-          <mrow> x_1, x_2, \amp \geq  0</mrow>
+          <mrow> x_1, x_2, \amp \geq  0.</mrow>
         </md>
         How might we convert this to a canonical maximization problem?
 

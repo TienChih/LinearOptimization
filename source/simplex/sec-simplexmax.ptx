@@ -391,7 +391,27 @@
           </ol>
         </statement>
       </task>
-  
+      </activity>
+      
+      <activity>
+        <introduction>
+          <p>
+            So have found a reasonable condition for a canonical
+            maximization problem to have unbounded feasible region.
+            We now consider objective functions.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Before reading ahead, discuss whether or not the statements
+              <q>a canonical maximization problem has unbounded feasible region</q>
+              and <q>a canonical maximization problem has unbounded objective function</q>
+              are logically equivalent.  If they are, why?  If not, does one imply the other,
+              or can each statement hold while the other statement is false?
+            </p>
+          </statement>
+        </task>
       <task>
         <statement>
           <p>
@@ -445,8 +465,8 @@
                 <cell halign="left">
                   <m>=-t_2</m>
                 </cell>
-              </row>
-              <row>
+              </row> 
+              <row> 
                 <cell halign="left" right="medium">
                 </cell>
                 <cell bottom="medium">
@@ -2401,7 +2421,7 @@
   
         </p>
         <p>
-          Consider the tableau: 
+          Consider the following tableau: 
   
           
            
@@ -2807,7 +2827,7 @@
         <p>
           <md>
             <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-            <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
+            <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
             <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
             <mrow> \vdots \amp   \vdots</mrow>
             <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>

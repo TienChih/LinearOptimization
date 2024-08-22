@@ -112,7 +112,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y) = \amp 3x-y</mrow>
-              <mrow>\textbf{Subject to: } 15-4x\amp \geq  y</mrow>
+              <mrow>\textbf{subject to: } 15-4x\amp \geq  y</mrow>
               <mrow> 2x+3y\amp \leq  y+12</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
             </md>
@@ -124,7 +124,7 @@
           <p>
             <md>
               <mrow>\textbf{Minimize: }  g(x,y) = \amp -4x-2y</mrow>
-              <mrow>\textbf{Subject to: } 4x-7y\amp \leq  -2</mrow>
+              <mrow>\textbf{subject to: } 4x-7y\amp \leq  -2</mrow>
               <mrow> 5x+3y\amp \leq  21</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
             </md>
@@ -136,7 +136,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  h(x,y, z) = \amp x+3y-3z</mrow>
-              <mrow>\textbf{Subject to: } 3-4x+z\amp \geq  5y</mrow>
+              <mrow>\textbf{subject to: } 3-4x+z\amp \geq  5y</mrow>
               <mrow> 1\leq 2y+z \amp \leq  9</mrow>
               <mrow> 0\leq x \amp \leq  8</mrow>
               <mrow> y, z\amp \geq  0.</mrow>
@@ -149,7 +149,7 @@
           <p>
             <md>
               <mrow>\textbf{Minimize: }  k(x,y,z) = \amp x-2y-z</mrow>
-              <mrow>\textbf{Subject to: } 10x+5y+2z\amp \leq  1000</mrow>
+              <mrow>\textbf{subject to: } 10x+5y+2z\amp \leq  1000</mrow>
               <mrow> 2y+4z \amp \leq  800</mrow>
               <mrow> x,y,z\amp \geq  0.</mrow>
             </md>
@@ -197,7 +197,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y) = \amp 5x+6y</mrow>
-              <mrow>\textbf{Subject to: } 2x+3y\amp \geq  12</mrow>
+              <mrow>\textbf{subject to: } 2x+3y\amp \geq  12</mrow>
               <mrow> -3x+2y\amp \leq  14</mrow>
               <mrow> x+y\amp \leq  12</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
@@ -224,7 +224,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y) = \amp 2x+y</mrow>
-              <mrow>\textbf{Subject to: } x+4y\amp \leq  11</mrow>
+              <mrow>\textbf{subject to: } x+4y\amp \leq  11</mrow>
               <mrow> 6x+2y\amp \leq  22</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
             </md>
@@ -236,7 +236,7 @@
           <p>
             <md>
               <mrow>\textbf{Minimize: }  f(x,y) = \amp 2x+y</mrow>
-              <mrow>\textbf{Subject to: } x+4y\amp \geq  11</mrow>
+              <mrow>\textbf{subject to: } x+4y\amp \geq  11</mrow>
               <mrow> 6x+2y\amp \geq  22</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
             </md>
@@ -321,7 +321,7 @@
         Consider the canonical linear optimization problem
         <md>
           <mrow>\textbf{Maximize: }  f(x,y,z,w) = 3x-2y+5z-w</mrow>
-          <mrow>\textbf{Subject to: } -x+2y-3z+6w\amp \leq  12</mrow>
+          <mrow>\textbf{subject to: } -x+2y-3z+6w\amp \leq  12</mrow>
           <mrow> x,y, z, w\amp \geq  0.</mrow>
         </md>
       </p>
@@ -336,7 +336,7 @@
         Consider the canonical linear optimization problem
         <md>
           <mrow>\textbf{Minimize: }  g(x,y,z,w) = 2x-y-3z+4w</mrow>
-          <mrow>\textbf{Subject to: } x+2y+2z+4y\amp \geq  8</mrow>
+          <mrow>\textbf{subject to: } x+2y+2z+4y\amp \geq  8</mrow>
           <mrow>4x-y\amp \geq 6</mrow>
           <mrow> x,y, z, w\amp \geq  0.</mrow>
         </md>
@@ -372,7 +372,7 @@
         Show that 
         <md>
           <mrow>\textbf{Maximize: }  f(x,y) = \amp x-y</mrow>
-          <mrow>\textbf{Subject to: } x+y\amp \geq  5</mrow>
+          <mrow>\textbf{subject to: } x+y\amp \geq  5</mrow>
           <mrow> x-5y\amp \leq  0</mrow>
           <mrow> y-2x\amp \leq  1</mrow>
           <mrow> x,y\amp \geq  0.</mrow>
@@ -387,7 +387,7 @@
       Show that 
       <md>
         <mrow>\textbf{Minimize: }  g(x,y) = \amp 5x+3y</mrow>
-        <mrow>\textbf{Subject to: } y-5x\amp \geq  1</mrow>
+        <mrow>\textbf{subject to: } y-5x\amp \geq  1</mrow>
         <mrow> x-5y\amp \geq  0</mrow>
         <mrow> x,y\amp \geq  0.</mrow>
       </md>

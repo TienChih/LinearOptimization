@@ -166,7 +166,7 @@
   <li>
     <p>
       <em>As always, we anchor everything in this course with geometric reasoning, and use this reasoning to bolster the algebraic
-      aspects of this material.</em> Students who find themselves confused or lost in the midst of algebraic weeds, should retreat
+      aspects of this material.</em> Much like linear algebra, students who find themselves confused or lost in the midst of algebraic weeds, should retreat
       and consider the situation from a geometric point of view.  It can be natural for practical linear optimization problems to take
       place in hundreds, maybe thousands of dimensions, but two and three dimensions gives us all the intuition we need.
     </p>
