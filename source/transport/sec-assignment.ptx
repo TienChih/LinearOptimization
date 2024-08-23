@@ -348,11 +348,9 @@
         </li>
         <li>
           <p>
-            IF <m>T</m> has a permutation set of zeroes:
+            IF <m>T</m> has a permutation set of zeroes: STOP
           </p>
-          <p>
-            STOP
-          </p>
+          
         </li>
         <li>
           <p>
@@ -421,7 +419,7 @@
   <activity>
     <statement>
       <p>
-        Use the Hungarian algorithm <xref ref="def-hungarian"/> to solve
+        Use the Hungarian Algorithm <xref ref="def-hungarian"/> to solve
         the problem from <xref ref="exploration-assignment"/>.
       </p>
     </statement>
@@ -537,7 +535,7 @@
     <task>
       <statement>
         <p>
-          After converting, use the Hungarian algorithm <xref ref="def-hungarian"/> to solve
+          After converting, use the Hungarian Algorithm <xref ref="def-hungarian"/> to solve
           the problem.
         </p>
       </statement>

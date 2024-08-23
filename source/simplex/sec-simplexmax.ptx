@@ -566,13 +566,13 @@
               <cell halign="left" right="medium">
               </cell>
               <cell>
-                <m>1</m>
+                <m>3</m>
               </cell>
               <cell right="medium">
-                <m>4</m>
+                <m>3</m>
               </cell>
               <cell right="medium">
-                <m>26</m>
+                <m>13</m>
               </cell>
               <cell halign="left">
                 <m>=-t_1</m>
@@ -598,13 +598,13 @@
               <cell halign="left" right="medium">
               </cell>
               <cell bottom="medium">
-                <m>4</m>
+                <m>9</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>1</m>
+                <m>6</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>24</m>
+                <m>32</m>
               </cell>
               <cell halign="left">
                 <m>=-t_3</m>
@@ -614,13 +614,13 @@
               <cell halign="left" right="medium">
               </cell>
               <cell bottom="medium">
-                <m>8</m>
-              </cell>
-              <cell right="medium" bottom="medium">
                 <m>7</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>0</m>
+                <m>8</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>32</m>
               </cell>
               <cell halign="left">
                 <m>=f</m>
@@ -638,30 +638,28 @@
         </statement>
       </task>
       <task>
-        <statement>
+        <statement> 
           <p>
-            Consider a sketch of our feasible region:
+            Consider a sketch of our feasible region: 
             
-            <image xml:id="whichpivot">
+            <image xml:id="whichpivot" width="80%">
               <description>The feasible region for a canonical maximization problem.</description>
               <latex-image>
-                \begin{tikzpicture}[scale=0.2] 
-                \draw[fill, blue, opacity=0.4] (0,0) -- (0,6.5) -- (2, 6) -- (5,4) -- (6,0) -- (0,0);
-                \draw[very thick,->] (-1.5,0) -- (30,0);
-                \draw[very thick,->] (0,-1.5) -- (0,30);
-                \draw[black, thick] (0,0) -- (0,6.5) -- (2,6) -- (5,4) -- (6,0)-- (0,0);         
-                \draw[red, dashed, thick] (-1,8) --node[above, sloped, pos= 0.7]{\tiny $2x+3y=22$} (12.5, -1);          
-                \draw[purple, dashed, thick] (-1,6.75) --node[above, sloped, pos= 0.5]{\tiny $x+4y=26$} (30, -1);
-                \draw[orange, dashed, thick] (-1,28) --node[above, sloped, pos= 0.3]{\tiny $4x+y=24$} (6.25, -1);
-                \draw[ fill] (0,0) node[below left]{\tiny $(0,0)$} circle (6pt); 
-                \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
-                \draw[ fill] (0,22/3) node[ left]{\tiny $(0,22/3)$} circle (6pt); 
-                \draw[ fill] (0,6.5) node[ left]{\tiny $(0,6.5)$} circle (6pt); 
-                \draw[ fill] (0,24) node[ left]{\tiny $(0,24)$} circle (6pt);  
-                \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
-                \draw[ fill] (11,0) node[ below]{\tiny $(11,0)$} circle (6pt); 
-                \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (6pt); 
-                \draw[ fill] (26,0) node[ below]{\tiny $(26,0)$} circle (6pt);  
+                \begin{tikzpicture}
+                \draw[fill, blue, opacity=0.4] (0,0) -- (0,4) -- (1, 10/3) -- (2,7/3) -- (32/9,0) -- (0,0);
+                \draw[very thick,->] (-0.5,0) -- (6,0);
+                \draw[very thick,->] (0,-0.5) -- (0,6);
+                \draw[black, thick] (0,0) -- (0,4) -- (1, 10/3) -- (2,7/3) -- (32/9,0) -- (0,0);   
+                \draw[teal, dashed, thick] (0,13/3) --node[above, sloped, pos= 0.7]{\tiny $3x+3y=13$} (13/3, 0);          
+                \draw[purple, dashed, thick] (0,4) --node[above, sloped, pos= 0.5]{\tiny $2x+3y=12$} (6, 0);
+                \draw[orange, dashed, thick] (0,16/3) --node[above, sloped, pos= 0.3]{\tiny $9x+6y=32$} (32/9, 0);
+                \draw[ fill] (0,0) node[below left]{\tiny $(0,0)$} circle (2pt); 
+                \draw[ fill] (0,4) node[ left]{\tiny $(0,4)$} circle (2pt); 
+                \draw[ fill] (0,13/3) node[ left]{\tiny $(0,13/3)$} circle (2pt); 
+                \draw[ fill] (0,16/3) node[ left]{\tiny $(0,16/3)$} circle (2pt); 
+                \draw[ fill] (32/9,0) node[ below left]{\tiny $(32/9,0)$} circle (2pt); 
+                \draw[ fill] (13/3,0) node[ below]{\tiny $(13/3,0)$} circle (2pt); 
+                \draw[ fill] (6,0) node[ below]{\tiny $(6,0)$} circle (2pt);  
             
             \end{tikzpicture}
       
@@ -980,7 +978,7 @@
               </p>
             </li>
           </ul>
-          If a tableau is feasible but not optimal, determine the legit pivot points
+          If a tableau is feasible but not optimal, determine the legit pivot points.
         </p>
       </introduction>
       <task>
@@ -1905,7 +1903,7 @@
               <cell halign="left">
                 <m>=f</m>
               </cell>
-            </row>
+            </row> 
           </tabular>
         </p>
         <p>
@@ -2833,7 +2831,7 @@
             <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
             <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
           </md>
-          Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>.
+          where <m>a_{ij}, b_i, c_j, d\in \mathbb{R}</m>.
         </p>
         <p>  
           This problem may be recorded in the following tableau:

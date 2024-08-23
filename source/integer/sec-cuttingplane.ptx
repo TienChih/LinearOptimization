@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-cuttingplane" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>CuttingPlane Method</title>
+  <title>Cutting-Plane Method</title>
 
   <introduction>
     <p>
@@ -47,7 +47,7 @@
   <activity xml:id="activity-cut">
     <introduction>
       <p>
-        In this activity, we motivate the math behind the cutting plane method.
+        In this activity, we motivate the math behind the cutting-plane method.
       </p>
       <p>
         Let <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> be a feasible solution of the relaxation
@@ -198,7 +198,7 @@
         </p>
         <p>
           We call the hyperplane <m>\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j = (\lfloor b_i \rfloor - b_i)</m>
-          a <em>cutting plane</em>.
+          a <em>cutting-plane</em>.
         </p>
       </statement>
     </task>
@@ -424,7 +424,7 @@
     <task>
       <statement>
         <p>
-          Using the fact that <m>t_1=12-3x_1-2x_2, t_2=7+3x_1-2x_2</m>, describe this cutting plane <m>a_{31}t_1+a_{32}t_2=b_3</m>
+          Using the fact that <m>t_1=12-3x_1-2x_2, t_2=7+3x_1-2x_2</m>, describe this cutting-plane <m>a_{31}t_1+a_{32}t_2=b_3</m>
           in terms of <m>x_1, x_2</m>.
         </p>
       </statement>
@@ -625,7 +625,7 @@
     <task>
       <statement>
         <p>
-          Using the fact that <m>t_3=-\frac{3}{4}+\frac{1}{4}t_1+\frac{1}{4}t_2</m>, express this new cutting plane
+          Using the fact that <m>t_3=-\frac{3}{4}+\frac{1}{4}t_1+\frac{1}{4}t_2</m>, express this new cutting-plane
           <m>a_{41}t_3+a_{42}t_2=b_4</m> in terms of <m>x_1, x_2</m>.
         </p>
       </statement>
@@ -857,7 +857,7 @@
     <task>
       <statement>
         <p>
-          Using the fact that <m>t_4=-\frac{1}{3}+\frac{2}{3}s_3+\frac{2}{3}t_2</m>, express this new cutting plane
+          Using the fact that <m>t_4=-\frac{1}{3}+\frac{2}{3}s_3+\frac{2}{3}t_2</m>, express this new cutting-plane
           <m>a_{51}t_3+a_{52}t_4=b_5</m> in terms of <m>x_1, x_2</m>.
         </p>
       </statement>
@@ -985,7 +985,7 @@
     <task>
       <statement>
         <p>
-          Enter the coefficients for the objective function and the three cutting planes in order that you found them, and drag
+          Enter the coefficients for the objective function and the three cutting-planes in order that you found them, and drag
           the objective plane onto the optimal solution to the integer problem.
         </p>
         <interactive platform="doenetml" width="100%" aspect="4:5">

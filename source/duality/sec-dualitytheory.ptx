@@ -97,7 +97,7 @@
     <statement>
       <p>
         For a primal maximization problem with objective function <m>f</m> and dual objective <m>g</m>,
-        we have that <me>f\leq g</me>
+        we have that <me>f\leq g.</me>
       </p>
       <p>
         In particular, if there is a feasible primal solution <m>\x'</m> and feasible dual solution <m>\y'</m> such that
@@ -278,7 +278,7 @@
       <ol marker="A.">
         <li>
           <p>
-            There is a <m>\mathbf{x}\in \R^m</m> such that <m>\mathbf{x}\geq \mathbf{0}</m> and <m>A\mathbf{x}=\mathbf{b}</m>
+            There is a <m>\mathbf{x}\in \R^m</m> such that <m>\mathbf{x}\geq \mathbf{0}</m> and <m>A\mathbf{x}=\mathbf{b}.</m>
           </p>
         </li>
         <li>

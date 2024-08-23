@@ -44,7 +44,7 @@
       <statement>
         <p>
           Take turns playing this game, do you think either the even or odd player has
-          any advantage in this game?.
+          any advantage in this game?
         </p>
       </statement>
     </task>
@@ -1520,7 +1520,7 @@
     </task>
     <task>
       <p>
-        To test out this solution edit this code:
+        To test out this solution edit this R code:
         <sage language="r">
           <input>
             numsamp = 1000000

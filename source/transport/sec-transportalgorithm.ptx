@@ -347,79 +347,79 @@
             <cell halign="right">
             </cell>
             <cell bottom="medium">
-              1
+              <m></m>NA
             </cell>
             <cell bottom="medium">
-              1
+              <m></m>NA
             </cell>
             <cell bottom="medium">
-              5
+              <m></m>NA
             </cell>
             <cell>
             </cell>
           </row>
           <row>
             <cell halign="right" right="medium">
-              1
+              <m></m>NA
             </cell>
             <cell>
-              <m>\ec{2}^{20}</m>
+              <m>\ec{2}^{30}</m>
             </cell>
             <cell>
-              1
+              <m>\ec{1}^{20}</m>
             </cell>
             <cell right="medium">
-              <m>\ec{2}^{20}</m>
+              <m>\ec{5}^{20}</m>
             </cell>
             <cell halign="left">
-              0 
+              <m>0 </m>
             </cell>
           </row>
           <row>
             <cell halign="right" right="medium">
-              3
+              <m></m>NA
             </cell>
             <cell>
-              <m>\ec{9}^{10}</m>
+              <m>5</m>
             </cell>
             <cell>
-              <m>\ec{4}^{50}</m>
+              <m>\ec{3}^{20}</m>
             </cell>
             <cell right="medium">
-              7
+              <m>6</m>
             </cell>
             <cell halign="left">
-              0 
+              <m>0 </m>
             </cell>
           </row>
           <row>
             <cell halign="right" right="medium">
-              1
+              <m></m>NA
             </cell>
             <cell bottom="medium">
               <m>\ec{1}^{10}</m>
             </cell>
             <cell bottom="medium">
-              2
+              <m>2</m>
             </cell>
             <cell right="medium" bottom="medium">
-              9
+              <m>8</m>
             </cell>
             <cell halign="left" bottom="medium">
-              0 
+              <m>0 </m>
             </cell>
           </row>
           <row>
             <cell halign="right">
             </cell>
             <cell>
-              0 
+              <m>0 </m>
             </cell>
             <cell>
-              0 
+              <m>0 </m>
             </cell>
             <cell right="medium">
-              0
+              <m>0</m>
             </cell>
             <cell halign="left">
             </cell>
@@ -463,7 +463,7 @@
     <task>
       <statement>
         <p>
-          Select column values <m>b_i</m> and row values <m>a_j</m> so that each circled value is the sum of row and column values <m>b_i+c_j</m>.
+          Select  row values <m>a_i</m> and column values <m>b_j</m>  so that each <em>circled</em> value <m>c_{ij}</m> is the sum of row and column values <m>a_i+b_j</m>.
         </p>
         <p>
           (We can think of these as analogous to the shadow costs associated with the warehouse/market bounds)
@@ -490,67 +490,46 @@
                 <m>a_1</m>
               </cell>
               <cell>
-                <m>\ec{2}^{20}</m>
+                <m>\ec{2}^{30}</m>
               </cell>
               <cell>
-                1
+                <m>\ec{1}^{20}</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}^{20}</m>
+                <m>\ec{5}^{20}</m>
               </cell>
-              <cell halign="left">
-                
-              </cell>
+              
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>a_2</m>
+                <m>b_2</m>
               </cell>
               <cell>
-                <m>\ec{9}^{10}</m>
+                <m>5</m>
               </cell>
               <cell>
-                <m>\ec{4}^{50}</m>
+                <m>\ec{3}^{20}</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
-              <cell halign="left">
-                
-              </cell>
+              
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>a_3</m>
+                <m>b_3</m>
               </cell>
               <cell bottom="medium">
                 <m>\ec{1}^{10}</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
-              </cell>
-              <cell halign="left">
-                 
+                <m>8</m>
               </cell>
             </row>
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell>
-                 
-              </cell>
-              <cell>
-                 
-              </cell>
-              <cell >
-                
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
+            
           </tabular>
         </p>
       </statement>
@@ -591,67 +570,46 @@
                 <m>a_1</m>
               </cell>
               <cell>
-                <m>\ec{0}^{20}</m>
+                <m>\ec{0}^{30}</m>
               </cell>
               <cell>
-                ?
+                <m>\ec{0}^{20}</m>
               </cell>
               <cell right="medium">
                 <m>\ec{0}^{20}</m>
               </cell>
-              <cell halign="left">
-                
-              </cell>
+              
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>a_2</m>
+                <m>b_2</m>
               </cell>
               <cell>
-                <m>\ec{0}^{10}</m>
+                <m>?</m>
               </cell>
               <cell>
-                <m>\ec{0}^{50}</m>
+                <m>\ec{0}^{20}</m>
               </cell>
               <cell right="medium">
-                <m>\eb{-2}^{0}</m>
+                <m>\eb{-?}</m>
               </cell>
-              <cell halign="left">
-                
-              </cell>
+              
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>a_3</m>
+                <m>b_3</m>
               </cell>
               <cell bottom="medium">
-                <m>\ec{0}^{10}</m>
+                <m>\ec{?}^{10}</m>
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell right="medium" bottom="medium">
-                ?
-              </cell>
-              <cell halign="left">
-                 
+                <m>?</m>
               </cell>
             </row>
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell>
-                 
-              </cell>
-              <cell>
-                 
-              </cell>
-              <cell >
-                
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
+            
           </tabular>
         </p>
       </statement>
@@ -672,10 +630,15 @@
           shipments to <m>c_{23}</m>?
 
         </p>
-        <ol cols="2" marker="A.">
+        <ol  marker="A.">
           <li>
             <p>
-              <m>c_{21}</m>.
+              <m>c_{11}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c_{12}</m>.
             </p>
           </li>
           <li>
@@ -683,9 +646,20 @@
               <m>c_{13}</m>.
             </p>
           </li>
+          <li>
+            <p>
+              <m>c_{22}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>c_{31}</m>.
+            </p>
+          </li>
         </ol>
         <p>
-          How do the other entries in the cycle adjust?
+          How do the other entries in the cycle adjust?  (There may be more than one valid
+          choice.)
         </p>
       </statement>
     </task>
@@ -717,13 +691,13 @@
                 <m>a_1</m>
               </cell>
               <cell>
-                <m>\ec{0}^{30}</m>
+                <m>?</m>
               </cell>
               <cell>
                 <m>?</m>
               </cell>
               <cell right="medium">
-                <m>\ec{0}^{10}</m>
+                <m>?</m>
               </cell>
               <cell halign="left">
                 
@@ -737,10 +711,10 @@
                 <m>?</m>
               </cell>
               <cell>
-                <m>\ec{0}^{50}</m>
+                <m>?</m>
               </cell>
               <cell right="medium">
-                <m>\ec{0}^{10}</m>
+                <m>?</m>
               </cell>
               <cell halign="left">
                 
@@ -751,7 +725,7 @@
                 <m>a_3</m>
               </cell>
               <cell bottom="medium">
-                <m>\ec{0}^{10}</m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>?</m>
@@ -796,82 +770,62 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>b_1</m>
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>b_2</m>
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>b_3</m>
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m></m>
+                <m>a_1</m>
               </cell>
               <cell>
-                <m>\ec{2}^{30}</m>
+                <m>2^{30}</m>
               </cell>
               <cell>
-                <m>1</m>
+                <m>1^{40}</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}^{10}</m>
+                <m>5^0</m>
               </cell>
-              <cell halign="left">
-                
-              </cell>
+              
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m></m>
+                <m>b_2</m>
               </cell>
               <cell>
-                <m>9</m>
+                <m>5^0</m>
               </cell>
               <cell>
-                <m>\ec{4}^{50}</m>
+                <m>3^0</m>
               </cell>
               <cell right="medium">
-                <m>\ec{7}^{10}</m>
+                <m>6^{20}</m>
               </cell>
-              <cell halign="left">
-                
-              </cell>
+              
             </row>
             <row>
               <cell halign="right" right="medium">
+                <m>b_3</m>
               </cell>
               <cell bottom="medium">
-                <m>\ec{1}^{10}</m>
+                <m>1^{10}</m>
               </cell>
               <cell bottom="medium">
-                <m>2</m>
+                <m>2^0</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>9</m>
-              </cell>
-              <cell halign="left">
-                 
+                <m>8^0</m>
               </cell>
             </row>
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell>
-                 
-              </cell>
-              <cell>
-                 
-              </cell>
-              <cell >
-                
-              </cell>
-              <cell halign="left">
-              </cell>
-            </row>
+            
           </tabular>
         </p>
       </statement>

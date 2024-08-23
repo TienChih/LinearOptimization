@@ -13,7 +13,7 @@
   <exploration xml:id="exploration-path">
     <introduction>
       <p>
-        Dr. Ayad is driving from her home to Fantasi college.  The town is connected by a series of one way streets,
+        Dr. Ayad is driving from her home to Fantasi College.  The town is connected by a series of one way streets,
         each labled with the time it would take to traverse the road.
       </p>
       <image xml:id="traffic">
@@ -133,7 +133,7 @@
 
           \draw[->] (s) --node[above, sloped]{\tiny$3$} (v1);
           \draw[->] (v1) --node[above , sloped]{\tiny$2$} (v2);
-          \draw[->] (v2)--node[above , sloped ]{\tiny$-6$}(v3);
+          \draw[->] (v2)--node[below , sloped ]{\tiny$-6$}(v3);
           \draw[->] (v3)--node[above , sloped]{\tiny$3$}(v1);
           \draw[->] (v1)--node[above , sloped]{\tiny$4$}(v4);
           \end{tikzpicture}

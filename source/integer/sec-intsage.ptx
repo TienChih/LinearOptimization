@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-intsage" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Solving Integer Optimization Problems with Sage</title>
+
+  <introduction>
+    <p>
+      In <xref ref="sec-simplexsage"/> and <xref ref="sec-noncanonsage"/>, we solved canonical
+      and non-canonical linear optimization problems.  Solving such problems by hand could be tedious,
+      and the techniques to solve integer optimization problems are even more involved. In this section, we solve integer
+      optimization problems using sage.
+    </p>
+    <p>
+      Since integer optimization is more difficult computationally than
+      linear optimization, we use different commands to find solutions.
+      Rather than use <c>InteractiveLPProblem</c>, we use <c>MixedIntegerLinearProgram</c>.
+    </p>
+  </introduction>
+  
+
+  <activity>
+    <introduction>
+      <p>
+        Say we want to solve the integer optimization problem:
+          <md>
+            <mrow>\textbf{Minimize: }  f(\mathbf{x}) &amp; = 3x_1+4x_2+2x_3</mrow>
+            <mrow>\textbf{subject to: }  x_1&amp; \leq  7</mrow>
+            <mrow> x_2+x_3&amp; \geq 5</mrow>
+            <mrow> 5x_1+3x_2+2x_3&amp; \leq 37</mrow>
+            <mrow> x_1, x_2, x_3&amp; \geq  0,\text{ and are integers}.</mrow>
+          </md>
+      </p>
+      </introduction>
+    
+      <task>
+        <statement>
+          <p>
+            Record this non-canonical problem using Sage:
+          </p>
+          <p>
+            <sage>
+              <input>
+                P = MixedIntegerLinearProgram(solver="GLPK")
+                X = P.new_variable(integer=True, nonnegative=True)
+                P.add_constraint(X[1] &lt;= 7)
+                P.add_constraint(X[2]+X[3] >= 5)
+                P.add_constraint(5*X[1]+3*X[2]+2*X[3] &lt;= 37)
+                P.set_objective(3*X[1]+4*X[2]+2*X[3])
+                P.show()
+              </input>
+              
+            </sage>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            We can then find the optimal solution:
+            <sage>
+              <input>
+                print(P.solve())
+                for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
+                    print(f'x_{i} = {v}')
+              </input>
+              
+            </sage>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            We could also minimize <m>f</m> if we chose:
+            <sage>
+              <input>
+                P = MixedIntegerLinearProgram(solver="GLPK", maximization=False)
+                X = P.new_variable(integer=True, nonnegative=True)
+                P.add_constraint(X[1] &lt;= 7)
+                P.add_constraint(X[2]+X[3] >= 5)
+                P.add_constraint(5*X[1]+3*X[2]+2*X[3] &lt;= 37)
+                P.set_objective(3*X[1]+4*X[2]+2*X[3])
+                P.show()
+              </input>
+              
+            </sage>
+            <sage>
+              <input>
+                print(P.solve())
+                for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
+                    print(f'x_{i} = {v}')
+              </input>
+              
+            </sage>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            We could also have solved the linear relaxation of the original problem <m>f</m> if we chose:
+            <sage>
+              <input>
+                P = MixedIntegerLinearProgram(solver="GLPK")
+                X = P.new_variable(integer=False, nonnegative=True)
+                P.add_constraint(X[1] &lt;= 7)
+                P.add_constraint(X[2]+X[3] >= 5)
+                P.add_constraint(5*X[1]+3*X[2]+2*X[3] &lt;= 37)
+                P.set_objective(3*X[1]+4*X[2]+2*X[3])
+                P.show()
+              </input>
+              
+            </sage>
+            <sage>
+              <input>
+                print(P.solve())
+                for i, v in sorted(P.get_values(X).items()):
+                    print(f'x_{i} = {v}')
+              </input>
+              
+            </sage>
+          </p>
+        </statement>
+      </task>
+        
+            
+        
+       
+    
+  </activity>
+
+  
+
+  <activity>
+    <statement>
+      <p>
+        Solve:
+        <p>
+          <md>
+            <mrow>\textbf{Maximize: }  f(\mathbf{x}) &amp;= 3x_1+2x_2</mrow>
+            <mrow>\textbf{subject to: }  4x_1+5x_2 &amp;\leq 39</mrow>
+            <mrow> 7x_1+3x_2 &amp;\geq 20</mrow>
+            <mrow> x_2 &amp;\leq  5</mrow>
+            <mrow> x_1, x_2 &amp; \text{ are integers.}</mrow>
+          </md>
+        </p>
+      </p>
+      <p>
+        <sage>
+          <input>
+            P = MixedIntegerLinearProgram(solver="GLPK")
+            X = P.new_variable(FIXME)
+            P.add_constraint(FIXME)
+            P.set_objective(FIXME)
+            P.show()
+          </input>
+          
+        </sage>
+        <sage>
+          <input>
+            print(P.solve())
+            for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
+                print(f'x_{i} = {v}')
+          </input>
+          
+        </sage>
+      </p>
+    </statement>
+  </activity>
+  
+
+</section>

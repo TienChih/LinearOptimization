@@ -3,11 +3,10 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" publication="../publication/publication.ptx"  >
-      <stringparams html.css.extra="external/custom-styles.css"/>
-       <!--<stringparams debug.project.number="the-way-it-should-be"/> -->
+      <stringparams html.css.extra="external/custom-styles.css"  debug.project.number="the-way-it-should-be"/> 
     </target>
     <target name="print" format="pdf"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" >
-    <!-- <stringparams debug.project.number="the-way-it-should-be"/> -->
+    <stringparams debug.project.number="the-way-it-should-be"/> 
     </target>
   </targets>
 </project>

@@ -25,8 +25,8 @@
    <exercise xml:id="ex-nc">
       <introduction>
         <p>
-          Solve each of the noncanonicallinear programming problems below. If a linear
-  programming problem has infinitely many optimal solutions, find all optimal
+          Solve each of the noncanonical linear optimization problems below. If a linear
+  optimization problem has infinitely many optimal solutions, find all optimal
   solutions.
         </p>
       </introduction>
@@ -36,7 +36,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y,z)  &amp; = x-2y-z</mrow>
-              <mrow>\textbf{Subject to: } x+y&amp; \leq  1</mrow>
+              <mrow>\textbf{subject to: } x+y&amp; \leq  1</mrow>
               <mrow> x+y+z&amp; \geq  2</mrow>
               <mrow> y-2z &amp; \geq  0.</mrow>
             </md>
@@ -52,7 +52,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  g(x,y,z)  &amp; = 4x+2y+z</mrow>
-              <mrow>\textbf{Subject to: } x+y+z&amp; \leq  5</mrow>
+              <mrow>\textbf{subject to: } x+y+z&amp; \leq  5</mrow>
               <mrow> 4x-y-z&amp; \leq  5</mrow>
               <mrow> 2y+z &amp; \leq  4.</mrow>
             </md>
@@ -66,7 +66,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y,z)  &amp; = 4x+2y+z</mrow>
-              <mrow>\textbf{Subject to: } x+z&amp; \leq  5</mrow>
+              <mrow>\textbf{subject to: } x+z&amp; \leq  5</mrow>
               <mrow> 4x-y-z&amp; \leq  5</mrow>
               <mrow> 2y+z &amp; \leq  4.</mrow>
             </md>
@@ -79,7 +79,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  k(x,y,z)  &amp; = x+2y+z</mrow>
-              <mrow>\textbf{Subject to: } 2x-y+z&amp; =  3</mrow>
+              <mrow>\textbf{subject to: } 2x-y+z&amp; =  3</mrow>
               <mrow> x+2y&amp; \leq  4</mrow>
               <mrow> -2x+5y+3z &amp; \leq  4</mrow>
               <mrow>x, y, z &amp; \geq 0.</mrow>
@@ -93,7 +93,7 @@
           <p>
             <md>
               <mrow>\textbf{Minimize: }  h(x,y,z)  &amp; = x+y+z</mrow>
-              <mrow>\textbf{Subject to: } x-y&amp; \geq 1</mrow>
+              <mrow>\textbf{subject to: } x-y&amp; \geq 1</mrow>
               <mrow> 2x+z&amp; \leq  10</mrow>
               <mrow> y+z &amp; =  4</mrow>
               <mrow>x, y, z &amp; \geq 0.</mrow>
@@ -107,7 +107,7 @@
           <p>
             <md>
               <mrow>\textbf{Minimize: }  f(x,y,z)  &amp; = 3x+y+2z</mrow>
-              <mrow>\textbf{Subject to: } x+2y+3z&amp; \geq 24</mrow>
+              <mrow>\textbf{subject to: } x+2y+3z&amp; \geq 24</mrow>
               <mrow> 2x+4y+3z&amp; =  36</mrow>
               <mrow>y, z &amp; \geq 0.</mrow>
             </md>
@@ -120,7 +120,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  \ell(x,y,z)  &amp; = x+y+z</mrow>
-              <mrow>\textbf{Subject to: } x+y+z&amp; \leq 3</mrow>
+              <mrow>\textbf{subject to: } x+y+z&amp; \leq 3</mrow>
               <mrow> x+y&amp; \leq  1</mrow>
               <mrow> y+2z&amp; =2</mrow>
               <mrow>x, y &amp; \geq 0.</mrow>
@@ -134,7 +134,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y,z)  &amp; = 3x-2y+3z</mrow>
-              <mrow>\textbf{Subject to: } x-y+2z&amp; =6</mrow>
+              <mrow>\textbf{subject to: } x-y+2z&amp; =6</mrow>
               <mrow> x+2z&amp; =8</mrow>
               <mrow> y+2z&amp; \geq 2</mrow>
               <mrow>y, z &amp; \geq 0.</mrow>
@@ -148,9 +148,9 @@
           <p>
             <md>
               <mrow>\textbf{Minimize: }  \alpha(x,y,z)  &amp; = -5x+y-2z</mrow>
-              <mrow>\textbf{Subject to: } 2x+z&amp; =0</mrow>
+              <mrow>\textbf{subject to: } 2x+z&amp; =0</mrow>
               <mrow> x-y&amp; \geq  1</mrow>
-              <mrow> 3x-y+z&amp; \leq 3</mrow>
+              <mrow> 3x-y+z&amp; \leq 3.</mrow>
             </md>
           </p>
         </statement>
@@ -161,7 +161,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  g(x,y,z)  &amp; = x+y+z</mrow>
-              <mrow>\textbf{Subject to: } x-y-z&amp; \leq 2</mrow>
+              <mrow>\textbf{subject to: } x-y-z&amp; \leq 2.</mrow>
               <mrow> y-z&amp; \geq  1</mrow>
             </md>
           </p>
@@ -173,7 +173,7 @@
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y)  &amp; = x+y</mrow>
-              <mrow>\textbf{Subject to: } 2x+y&amp; =5</mrow>
+              <mrow>\textbf{subject to: } 2x+y&amp; =5</mrow>
               <mrow> x-y&amp; =-2</mrow>
               <mrow> x+2y&amp; =8</mrow>
               <mrow>x, y &amp; \geq 0.</mrow>
@@ -196,7 +196,7 @@
       <task>
         <statement>
           <p>
-            A noncanonical linear programming problem with more unconstrained independent
+            A noncanonical linear optimization problem with more unconstrained independent
 variables than constraints has unbounded objective function.  (As in  <xref ref="ex-nc"/> (J))
           </p>
         </statement>
@@ -204,7 +204,7 @@ variables than constraints has unbounded objective function.  (As in  <xref ref=
          <task>
         <statement>
           <p>
-            A noncanonicallinear programming problem with more equations of constraint
+            A noncanonical linear optimization problem with more equations of constraint
 than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
           </p>
         </statement>
@@ -216,11 +216,11 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
     <exercise>
       <introduction>
         <p>
-          Sketch the constraint set for each noncanonicallinear programming problem below.
+          Sketch the constraint set for each noncanonical linear optimization problem below.
   On the basis of this constraint set, formulate a conjecture as to whether or not the
   solution of the given problem is the same as the solution of the associated canonical
-  linear programming problem where all independent variables are constrained to be
-  nonnegative. Verify your conjecture by solving both linear programming problems.
+  linear optimization problem where all independent variables are constrained to be
+  nonnegative. Verify your conjecture by solving both linear optimization problems.
         </p>
       </introduction>
        
@@ -229,7 +229,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y)  &amp; = x+y</mrow>
-              <mrow>\textbf{Subject to: } 2x+y&amp; \leq 11</mrow>
+              <mrow>\textbf{subject to: } 2x+y&amp; \leq 11</mrow>
               <mrow> x-y&amp; \geq -2.</mrow>
             </md>
           </p>
@@ -241,7 +241,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
           <p>
             <md>
               <mrow>\textbf{Minimize: }  g(x,y)  &amp; = 2x+y</mrow>
-              <mrow>\textbf{Subject to: } 3x+2y&amp; \geq 5</mrow>
+              <mrow>\textbf{subject to: } 3x+2y&amp; \geq 5</mrow>
               <mrow> 2x-y&amp; \geq 1.</mrow>
             </md>
           </p>
@@ -253,7 +253,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
           <p>
             <md>
               <mrow>\textbf{Maximize: }  f(x,y)  &amp; = 5x+y</mrow>
-              <mrow>\textbf{Subject to: } x-y&amp; \leq 8</mrow>
+              <mrow>\textbf{subject to: } x-y&amp; \leq 8</mrow>
               <mrow> 2x+y&amp; \leq 7.</mrow>
             </md>
           </p>
@@ -265,7 +265,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
           <p>
             <md>
               <mrow>\textbf{Minimize: }  g(x,y)  &amp; = x+2y</mrow>
-              <mrow>\textbf{Subject to: } x+3y&amp; \geq 5</mrow>
+              <mrow>\textbf{subject to: } x+3y&amp; \geq 5</mrow>
               <mrow> 2x+y&amp; \geq 0.</mrow>
             </md>
           </p>
@@ -282,7 +282,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
       <p>
         <md>
           <mrow>\textbf{Maximize: }  f(x,y,z)  &amp; = 2x+y-2z</mrow>
-          <mrow>\textbf{Subject to: } x+y+z&amp; \leq 1</mrow>
+          <mrow>\textbf{subject to: } x+y+z&amp; \leq 1</mrow>
           <mrow> y+4z&amp; =2</mrow>
           <mrow> x, y, z&amp; \geq0.</mrow>
         </md>
@@ -296,7 +296,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
           unconstrained independent variables into canonical form is to replace every
           unconstrained independent variable by the difference of two independent variables
           constrained to be nonnegative. This produces an equivalent canonical linear
-          programming problem which is solved by using the simplex algorithm.
+          optimization problem which is solved by using the simplex algorithm.
         </p>
         <p>
           For example:
@@ -304,7 +304,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
         <p>
           <md>
             <mrow>\textbf{Maximize: }  f(x,y)  &amp; = 4x+y</mrow>
-            <mrow>\textbf{Subject to: } x+y&amp; \leq 2</mrow>
+            <mrow>\textbf{subject to: } x+y&amp; \leq 2</mrow>
             <mrow> x-2y&amp; \leq 5</mrow>
             <mrow> x&amp; \geq0</mrow>
           </md>
@@ -315,7 +315,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
         <p>
           <md>
             <mrow>\textbf{Maximize: }  f(x,y^+, y^-)  &amp; = 4x+y^+-y^-</mrow>
-            <mrow>\textbf{Subject to: } x+y^+-y^-&amp; \leq 2</mrow>
+            <mrow>\textbf{subject to: } x+y^+-y^-&amp; \leq 2</mrow>
             <mrow> x-2y^+ + 2y^-&amp; \leq 5</mrow>
             <mrow> x, y^+, y^-&amp; \geq0</mrow>
           </md>
@@ -352,10 +352,10 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
     <exercise xml:id="ex-superconstrained">
       <introduction>
         <p>
-          Another method method for transforming a linear programming problem with
+          Another method method for transforming a linear optimization problem with
           equations of constraint into canonical form is to replace every equation of
           constraint by two inequality constraints. This produces an equivalent canonical
-          linear programming problem which is solved by using the simplex algorithm.
+          linear optimization problem which is solved by using the simplex algorithm.
         </p>
         <p>
           For example:
@@ -363,7 +363,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
         <p>
           <md>
             <mrow>\textbf{Maximize: }  f(x,y, z)  &amp; = x+y+z</mrow>
-            <mrow>\textbf{Subject to: } x+2z&amp; \leq 7</mrow>
+            <mrow>\textbf{subject to: } x+2z&amp; \leq 7</mrow>
             <mrow> -x+2y-z&amp; \leq 3</mrow>
             <mrow> x+y&amp; =7</mrow>
             <mrow> x, y, z&amp; \geq0</mrow>
@@ -375,7 +375,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
         <p>
           <md>
             <mrow>\textbf{Maximize: }  f(x,y, z)  &amp; = x+y+z</mrow>
-            <mrow>\textbf{Subject to: } x+2z&amp; \leq 7</mrow>
+            <mrow>\textbf{subject to: } x+2z&amp; \leq 7</mrow>
             <mrow> -x+2y-z&amp; \leq 3</mrow>
             <mrow> x+y&amp; \leq 7</mrow>
             <mrow> x+y&amp; \geq 7</mrow>
@@ -417,7 +417,7 @@ than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (K))
       <p>
         <md>
           <mrow>\textbf{Maximize: }  f(x,y, z)  &amp; = 2x+y-2z</mrow>
-          <mrow>\textbf{Subject to: } 2x+y&amp; \leq 3</mrow>
+          <mrow>\textbf{subject to: } 2x+y&amp; \leq 3</mrow>
           <mrow> x+2y-z&amp; \leq 5</mrow>
           <mrow> x+y+z&amp; =0</mrow>
           <mrow> x, y&amp; \geq0.</mrow>

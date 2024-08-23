@@ -132,7 +132,7 @@
       <p>
         Let <m>\q'</m> denote a fixed column strategy, and let 
         <m>v=\displaystyle \max_{1\leq i\leq n}A_{(i)}\q'</m>, and let
-        <m>u=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q'</m>
+        <m>u=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q'.</m>
       </p>
     </introduction>
     <task>
@@ -194,13 +194,7 @@
         why Colleen would be willing to play this game.)
       </p>
     </introduction>
-    <task>
-      <statement>
-        <p>
-          Argue why optimal row and column outcomes <m>\ec{u}, \ec{v} > 0</m>.
-        </p>
-      </statement>
-    </task>
+    
     <task>
       <statement>
         <p>
@@ -425,6 +419,14 @@
     <task>
       <statement>
         <p>
+          Argue why, for an optimal solutions to the primal and dual problem, we have that <m>\ec{u^*}, \ec{v^*} > 0</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
           Consider the inequality constraints in our formulation, divide each of these by <m>\ec{v}</m>.  Let
           <m>\tilde{q}_j:=\frac{q_j}{\ec{v}}</m>.  Can we rewrite our inequalities as linear combinations of <m>\tilde{q}_{j}</m>
           is less than or equal to some cosntant?
@@ -486,7 +488,7 @@
       <statement>
         <p>
           What does the Strong Duality Theorem <xref ref="thm-strongduality"/> say about the optimal solutions to
-          both problems?  What in turn, does that say about <m>\tilde{u}, \tilde{v}</m>?
+          both problems?  What in turn, does that say about <m>\ec{u^*}, \ec{v^*}</m>?
         </p>
       </statement>
     </task>

@@ -472,7 +472,7 @@
     <task>
       <statement>
         <p>
-          For each tableau above, if I decrease each decision variable from <m>0</m> to <m>-1</m>, how does that change the value of the objective function?  What does decreasing a decision variable from <m>0</m> to <m>-1</m> mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?
+          For each tableau above, if we decrease each decision variable from <m>0</m> to <m>-1</m>, how does that change the value of the objective function?  What does decreasing a decision variable from <m>0</m> to <m>-1</m> mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?
         </p>
       </statement>
     </task>
@@ -714,7 +714,7 @@
     <p>
       <md>
         <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-        <mrow>\textbf{Subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
+        <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
         <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2</mrow>
         <mrow> \vdots \amp   \vdots</mrow>
         <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n</mrow>
@@ -729,7 +729,7 @@
     <p>
       <md>
         <mrow>\textbf{Minimize: }  g(\mathbf{y}) = y_1b_1 + y_2b_2 +\cdots y_nb_n-d \amp= \left(\displaystyle\sum_{i=1}^n y_ib_i \right)-d</mrow>
-        <mrow>\textbf{Subject to: }  a_{1,1}y_1 + a_{2,1}y_2 +\cdots a_{n,1}y_n\amp \geq  c_1</mrow>
+        <mrow>\textbf{subject to: }  a_{1,1}y_1 + a_{2,1}y_2 +\cdots a_{n,1}y_n\amp \geq  c_1</mrow>
         <mrow> a_{1,2}y_1 + a_{2,2}y_2 +\cdots a_{n,2}y_n\amp \geq  c_2</mrow>
         <mrow> \vdots \amp   \vdots</mrow>
         <mrow> a_{1,m}y_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \geq  c_m</mrow>

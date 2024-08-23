@@ -1997,7 +1997,7 @@
         <statement>
           <p>
             Consider the non-negativity condition in step 4 of <xref ref="def-transportationalg"/>.  How does
-            this relate to the constraints of the dual problem to the transportation problem.
+            this relate to the constraints of the dual problem to the transportation problem?
           </p>
         </statement>
       </task>

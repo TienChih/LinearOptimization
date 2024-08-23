@@ -18,7 +18,7 @@
 
           <md>
             <mrow>\textbf{Maximize: }  f(\mathbf{x})= 3x+2y  &amp;   </mrow>
-            <mrow>\textbf{Subject to: }  4x+5y&amp;  \leq  23</mrow>
+            <mrow>\textbf{subject to: }  4x+5y&amp;  \leq  23</mrow>
             <mrow> 2x +y&amp; \leq  7</mrow>
             <mrow> x -y&amp; \leq  5.</mrow>
           </md>
@@ -125,7 +125,7 @@
           </tabular>
         </p>
         <p>   
-           What point are we currently on?
+           What point currently represents the basic solution?
            
         </p>
       </statement>
@@ -134,7 +134,7 @@
     <task>
       <statement>
         <p>
-          Suppose we pivot on the entry with the <m>*</m> What point are we on now?  (You do not need to fill in the tableau.)
+          Suppose we pivot on the entry with the <m>*</m>.  What point has the basic solution moved to?  (You do not need to fill in the tableau.)
            
         </p>
         <p>
@@ -228,7 +228,7 @@
     <task>
       <statement>
         <p>
-          Suppose we pivot on the entry with the <m>*</m>.  What point are we on now?
+          Suppose we pivot on the entry with the <m>*</m>.  What point has the basic solution moved to?
            
         </p>
         <p>
@@ -385,7 +385,7 @@
 
           <md>
             <mrow>\textbf{Maximize: }  f(\mathbf{x})= 5x+4y  &amp;   </mrow>
-            <mrow>\textbf{Subject to: }  2x+3y&amp;  \leq  26</mrow>
+            <mrow>\textbf{subject to: }  2x+3y&amp;  \leq  26</mrow>
             <mrow> -2x -10 y&amp; \leq  2.</mrow>
           </md>
 
@@ -480,7 +480,7 @@
         <p>
           
          
-           Perform a pivot on the given entry.
+           Perform a pivot on the given entry:
            
         </p>
         <p>
@@ -630,16 +630,7 @@
         </p>
 
         <p>
-           What point in <m>\mathbb{R}^2</m> represents the basic solution of this tableau?
-           
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Why is this point <em>not</em> an optimal solution?
+           What point in <m>\mathbb{R}^2</m> represents the basic solution of this tableau?  Why is this point <em>not</em> an optimal solution?
         </p>
       </statement>
     </task>
@@ -804,7 +795,7 @@
           </tabular>
         </p>
         <p>
-          Pivot on the entry with the <m>*</m>
+          Pivot on the entry with the <m>*</m>.
         </p>
       </statement>
     </task>
@@ -985,7 +976,7 @@
         Solve the linear optimization problem:
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+3y  &amp;   </mrow>
-          <mrow>\textbf{Subject to: }  x+2y&amp;  \leq  10</mrow>
+          <mrow>\textbf{subject to: }  x+2y&amp;  \leq  10</mrow>
           <mrow> 2x +y&amp; \leq  15</mrow>
           <mrow> x&amp; \geq  0.</mrow>
         </md>

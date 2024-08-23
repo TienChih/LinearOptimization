@@ -937,7 +937,7 @@
     <task>
       <statement>
         <p>
-          This still seems like a it would be annoying.  Why don't we revisit the original problem
+          This still seems like a it would be annoying.  Why don't we revisit the original problem?
           <sage>
             <input>
               %display typeset
@@ -966,7 +966,7 @@
     <task>
       <statement>
         <p>
-          Encode the problem into sage:
+          Encode the problem into Sage:
           <sage>
             <input>
               %display typeset
@@ -1004,7 +1004,7 @@
     <task>
       <statement>
         <p>
-          Encode the problem into sage:
+          Encode the problem into Sage:
           <sage>
             <input>
               %display typeset

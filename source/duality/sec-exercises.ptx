@@ -221,7 +221,7 @@ basic variables. Determine if the following are TRUE or FALSE:
         <p>
           <md>
             <mrow>\textbf{Maximize: }  f(x,y) = \amp x+y</mrow>
-            <mrow>\textbf{Subject to: } x+2y\amp \leq  4</mrow>
+            <mrow>\textbf{subject to: } x+2y\amp \leq  4</mrow>
             <mrow> 3x+y\amp \leq  6</mrow>
             <mrow> x,y\amp \geq  0.</mrow>
           </md>

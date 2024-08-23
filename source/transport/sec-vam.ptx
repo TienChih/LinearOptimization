@@ -46,10 +46,10 @@
               $1/ton
             </cell>
             <cell right="medium">
-              $2/ton
+              $5/ton
             </cell>
             <cell halign="left">
-              40 tons
+              70 tons
             </cell>
           </row>
           <row>
@@ -57,16 +57,16 @@
               Warehouse 2
             </cell>
             <cell>
-              $9/ton
+              $5/ton
             </cell>
             <cell>
-              $4/ton
+              $3/ton
             </cell>
             <cell right="medium">
-              $7/ton
+              $6/ton
             </cell>
             <cell halign="left">
-              60 tons
+              20 tons
             </cell>
           </row>
           <row>
@@ -80,7 +80,7 @@
               $2/ton
             </cell>
             <cell right="medium" bottom="medium">
-              $9/ton
+              $8/ton
             </cell>
             <cell halign="left" bottom="medium">
               10 tons
@@ -93,13 +93,13 @@
               40 tons
             </cell>
             <cell>
-              50 tons
+              40 tons
             </cell>
             <cell right="medium">
               20 tons
             </cell>
             <cell halign="left">
-              110 tons
+              100 tons
             </cell>
           </row>
         </tabular>
@@ -205,79 +205,79 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                5
+                <m>1</m>
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m>1</m>
               </cell>
               <cell>
-                2
+                <m>2</m>
               </cell>
               <cell>
-                1
+                <m>1</m>
               </cell>
               <cell right="medium">
-                2
+                <m>5</m>
               </cell>
               <cell halign="left">
-                40 
+                <m>70 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                3
+                <m>2</m>
               </cell>
               <cell>
-                9
+                <m>5</m>
               </cell>
               <cell>
-                4
+                <m>3</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
               <cell halign="left">
-                60 
+                <m>20 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
+                <m>8</m>
               </cell>
               <cell halign="left" bottom="medium">
-                10 
+                <m>10 </m>
               </cell>
             </row>
             <row>
               <cell halign="right">
               </cell>
               <cell>
-                40 
+                <m>40 </m>
               </cell>
               <cell>
-                50 
+                <m>40 </m>
               </cell>
               <cell right="medium">
-                20
+                <m>20</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -299,7 +299,7 @@
     <task>
       <statement>
         <p>
-          We select the row/column with the highest entries and use the smallest entry in said row/column to move as much of the 
+          We select the row or column with the highest difference and use the smallest entry in said row/column to move as much of the 
           goods as we can:
         </p>
         <p>
@@ -308,79 +308,79 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                5
+                <m>1</m>
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m>1</m>
               </cell>
               <cell>
-                2
+                <m>2</m>
               </cell>
               <cell>
-                1
+                <m>1</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}</m>
+                <m>5</m>
               </cell>
               <cell halign="left">
-                40 
+                <m>70 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                3
+                <m>2</m>
               </cell>
               <cell>
-                9
+                <m>5</m>
               </cell>
               <cell>
-                4
+                <m>\ec{3}</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
               <cell halign="left">
-                60 
+                <m>20 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
+                <m>8</m>
               </cell>
               <cell halign="left" bottom="medium">
-                10 
+                <m>10 </m>
               </cell>
             </row>
             <row>
               <cell halign="right">
               </cell>
               <cell>
-                40 
+                <m>40 </m>
               </cell>
               <cell>
-                50 
+                <m>40 </m>
               </cell>
               <cell right="medium">
-                20
+                <m>20</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -393,79 +393,79 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                5
+                <m>1</m>
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m>1</m>
               </cell>
               <cell>
-                2
+                <m>2</m>
               </cell>
               <cell>
-                1
+                <m>1</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}^{20}</m>
+                <m>5</m>
               </cell>
               <cell halign="left">
-                20 
+                <m>70 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                3
+                <m>2</m>
               </cell>
               <cell>
-                9
+                <m>5</m>
               </cell>
               <cell>
-                4
+                <m>\ec{3}^{20}</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
               <cell halign="left">
-                60 
+                <m>0 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
+                <m>8</m>
               </cell>
               <cell halign="left" bottom="medium">
-                10 
+                <m>10 </m>
               </cell>
             </row>
             <row>
               <cell halign="right">
               </cell>
               <cell>
-                40 
+                <m>40 </m>
               </cell>
               <cell>
-                50 
+                <m>20 </m>
               </cell>
               <cell right="medium">
-                0
+                <m>20</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -482,7 +482,7 @@
     <task>
       <statement>
         <p>
-          Now that Market 3 has all their demand filled, and shipping there is no longer an option, what are the differences between the lowest costs and second lowest costs in each row/column?
+          Now that Warehouse 2 has all their supply exhausted, and shipping from there is no longer an option, what are the differences between the lowest costs and second lowest costs in each row/column?
         </p>
         
         <p>
@@ -491,79 +491,79 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                NA
+                <m>?</m>
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell>
-                2
+                <m>2</m>
               </cell>
               <cell>
-                1
+                <m>1</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}^{20}</m>
+                <m>5</m>
               </cell>
               <cell halign="left">
-                20 
+                <m>70 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m></m>NA
               </cell>
               <cell>
-                9
+                <m>5</m>
               </cell>
               <cell>
-                4
+                <m>\ec{3}^{20}</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
               <cell halign="left">
-                60 
+                <m>0 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
+                <m>8</m>
               </cell>
               <cell halign="left" bottom="medium">
-                10 
+                <m>10 </m>
               </cell>
             </row>
             <row>
               <cell halign="right">
               </cell>
               <cell>
-                40 
+                <m>40 </m>
               </cell>
               <cell>
-                50 
+                <m>20 </m>
               </cell>
               <cell right="medium">
-                0
+                <m>20</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -580,7 +580,7 @@
     <task>
       <statement>
         <p>
-          The next highest difference is 3 for warehouse 2:
+          The next highest difference is for Market 3:
         </p>
         <p>
           <tabular halign="center">
@@ -588,79 +588,79 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                NA
+                <m>?</m>
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell>
-                2
+                <m>2</m>
               </cell>
               <cell>
-                1
+                <m>1</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}^{20}</m>
+                <m>\ec{5}</m>
               </cell>
               <cell halign="left">
-                20 
+                <m>70 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m></m>NA
               </cell>
               <cell>
-                9
+                <m>5</m>
               </cell>
               <cell>
-                <m>\ec{4}</m>
+                <m>\ec{3}^{20}</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
               <cell halign="left">
-                60 
+                <m>0 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
+                <m>8</m>
               </cell>
               <cell halign="left" bottom="medium">
-                10 
+                <m>10 </m>
               </cell>
             </row>
             <row>
               <cell halign="right">
               </cell>
               <cell>
-                40 
+                <m>40 </m>
               </cell>
               <cell>
-                50 
+                <m>20 </m>
               </cell>
               <cell right="medium">
-                0
+                <m>20</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -673,79 +673,79 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                NA
+                <m></m>NA
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell>
-                2
+                <m>2</m>
               </cell>
               <cell>
-                1
+                <m>1</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}^{20}</m>
+                <m>\ec{5}^{20}</m>
               </cell>
               <cell halign="left">
-                20 
+                <m>50 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m></m>NA
               </cell>
               <cell>
-                9
+                <m>5</m>
               </cell>
               <cell>
-                <m>\ec{4}^{50}</m>
+                <m>\ec{3}^{20}</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
               <cell halign="left">
-                10 
+                <m>0 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                ?
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                1
+                <m>1</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
+                <m>8</m>
               </cell>
               <cell halign="left" bottom="medium">
-                10 
+                <m>10 </m>
               </cell>
             </row>
             <row>
               <cell halign="right">
               </cell>
               <cell>
-                40 
+                <m>40 </m>
               </cell>
               <cell>
-                0 
+                <m>20 </m>
               </cell>
               <cell right="medium">
-                0
+                <m>0</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -753,7 +753,7 @@
           </tabular>
         </p>
         <p>
-          Does it make sense to continue to move goods from warehouse 2?
+          Does it make sense to continue to move goods to Market 3?
         </p>
         <p>
           What should be the next choice of warehouse/market?
@@ -778,79 +778,79 @@
               <cell halign="right">
               </cell>
               <cell bottom="medium">
-                1
+                <m></m>NA
               </cell>
               <cell bottom="medium">
-                1
+                <m></m>NA
               </cell>
               <cell bottom="medium">
-                5
+                <m></m>NA
               </cell>
               <cell>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m></m>NA
               </cell>
               <cell>
-                <m>\ec{2}^{20}</m>
+                <m>\ec{2}^{30}</m>
               </cell>
               <cell>
-                1
+                <m>\ec{1}^{20}</m>
               </cell>
               <cell right="medium">
-                <m>\ec{2}^{20}</m>
+                <m>\ec{5}^{20}</m>
               </cell>
               <cell halign="left">
-                0 
+                <m>0 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                3
+                <m></m>NA
               </cell>
               <cell>
-                <m>\ec{9}^{10}</m>
+                <m>5</m>
               </cell>
               <cell>
-                <m>\ec{4}^{50}</m>
+                <m>\ec{3}^{20}</m>
               </cell>
               <cell right="medium">
-                7
+                <m>6</m>
               </cell>
               <cell halign="left">
-                0 
+                <m>0 </m>
               </cell>
             </row>
             <row>
               <cell halign="right" right="medium">
-                1
+                <m></m>NA
               </cell>
               <cell bottom="medium">
                 <m>\ec{1}^{10}</m>
               </cell>
               <cell bottom="medium">
-                2
+                <m>2</m>
               </cell>
               <cell right="medium" bottom="medium">
-                9
+                <m>8</m>
               </cell>
               <cell halign="left" bottom="medium">
-                0 
+                <m>0 </m>
               </cell>
             </row>
             <row>
               <cell halign="right">
               </cell>
               <cell>
-                0 
+                <m>0 </m>
               </cell>
               <cell>
-                0 
+                <m>0 </m>
               </cell>
               <cell right="medium">
-                0
+                <m>0</m>
               </cell>
               <cell halign="left">
               </cell>
@@ -859,7 +859,7 @@
         </p>
         <p>
           Verify that this is a feasible solution to the original transportation problem.
-          Is it optimal?
+          Do you think it is optimal?
         </p>
       </statement>
     </task>

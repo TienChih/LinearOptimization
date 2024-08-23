@@ -686,12 +686,12 @@
   <activity>
     <introduction>
       <p>
-        Consider canonical linear programming problem: Maximzie <m>f(x,y)=x+y</m>, subject to
+        Consider the canonical linear optimization problem: Maximzie <m>f(x,y)=x+y</m>, subject to
         <md>
           <mrow>-2x +y \amp\leq0 </mrow>
           <mrow>x -2y \amp\leq0 </mrow>
           <mrow> x +y \amp\leq4 </mrow>
-          <mrow>x,y \amp\geq0 </mrow>
+          <mrow>x,y \amp\geq0. </mrow>
         </md>
       </p>
     </introduction>
@@ -703,18 +703,18 @@
         </p>
       </statement>
       <hint>
-        <image xml:id="degenerate">
+        <image xml:id="degenerate" width="80%"> 
           <description>The feasible region with multiple lines intersecting the origin.</description>
           <latex-image>
             \begin{tikzpicture}
                 \draw[fill, blue, opacity=0.4] (0,0) -- (4/3,8/3) -- (8/3, 4/3)  -- (0,0);
-                \draw[very thick,->] (-1.5,0) -- (5.5,0);
-                \draw[very thick,->] (0,-1.5) -- (0, 5.5);
-                \foreach \x in {-1,...,5}\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\tiny $\mathbf{\x}$};
-                \foreach \y in {-1,...,5}\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\tiny $\mathbf{\y}$};
+                \draw[very thick,->] (-0.5,0) -- (4.5,0);
+                \draw[very thick,->] (0,-0.5) -- (0, 4.5);
+                \foreach \x in {0,...,4}\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {\tiny $\mathbf{\x}$};
+                \foreach \y in {0,...,4}\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {\tiny $\mathbf{\y}$};
                 \draw[black, thick] (0,0) -- (4/3,8/3) -- (8/3,4/3) -- (0,0);
-                \draw[red, dashed, thick] (-1.5,-0.75) --node[below, sloped, pos=0.45]{\small $2x+y=0$} (5.5, 2.75);
-                \draw[teal, dashed, thick, pos=0.7] (-0.75,-1.5) --node[above left, sloped]{\small$x+2y=0$} (2.75, 5.5);
+                \draw[red, dashed, thick] (-0.5,-0.25) --node[below, sloped, pos=0.45]{\small $2x+y=0$} (4.5, 2.25);
+                \draw[teal, dashed, thick, pos=0.7] (-0.25,-0.5) --node[above left, sloped]{\small$x+2y=0$} (2.25, 4.5);
                 \draw[ fill] (0,0) node[above left]{\small$(0,0)$} circle (2pt); 
                 \draw[ fill] (4/3,8/3) node[ above right]{\small$(4/3,8/3)$} circle (2pt); 
                 \draw[ fill] (8/3,4/3) node[ right]{\small$(8/3,4/3)$} circle (2pt); 
@@ -922,7 +922,7 @@
 
     </p>
     <p>
-      Note that in order for Cycling to occur, each pivot must be degenerate (ask yourself why?).
+      Note that in order for cycling to occur, each pivot must be degenerate (ask yourself why?).
         So if <m>x_j</m> is fickle, <m>x_j=0</m> for each basic solution during the cycle.
     </p>
     <p>
@@ -1133,7 +1133,7 @@
 
       <md>
         <mrow>x_k \amp = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_i.</mrow>
-        <mrow>f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d</mrow>
+        <mrow>f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d.</mrow>
       </md>
 
       Note that since the above pivot was valid, we must have that <m>c_s>0, a_{ts}>0</m> 
@@ -1347,13 +1347,13 @@
         <mrow>x_s \amp = Z </mrow>
         <mrow>x_j \amp = 0\text{ for }x_j\not\in B_i, x_j\neq x_s </mrow>
         <mrow>x_k \amp = b_k-a_{ks}Z \text{ for }x_k\in B_i</mrow>
-        <mrow>f \amp = c_sZ-d </mrow>
+        <mrow>f \amp = c_sZ-d. </mrow>
       </md>  
     </p>
     <p>
       So we have <me>c_sZ-d =f =c_s^*Z-d+\displaystyle\sum_{x_k\in B_i} c_{k}^*(b_k-a_{ks}Z)</me>
       where <m>c_k^*=0</m> for <m>x_k\in B_\ell</m>.  So via algebra:
-      <me>\left( c_s-c_s^*  + \displaystyle\sum_{x_k\in B_i} c_{k}^*a_{ks} \right)Z = \displaystyle\sum_{x_k\in B_i} c_{k}^*b_k</me>
+      <me>\left( c_s-c_s^*  + \displaystyle\sum_{x_k\in B_i} c_{k}^*a_{ks} \right)Z = \displaystyle\sum_{x_k\in B_i} c_{k}^*b_k.</me>
     </p>
     <p>
       The above equation holds true no matter what <m>Z</m> is.  Thus:

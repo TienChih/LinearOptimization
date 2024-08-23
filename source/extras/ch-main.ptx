@@ -22,7 +22,8 @@
 
   <!-- include sections -->
   <xi:include href="sec-covermatch.ptx" />
-  <xi:include href="sec-sudoku.ptx" />
+  <xi:include href="sec-sudoku.ptx" /> 
+  <xi:include href="sec-scheduling.ptx" />
   
 
 </chapter>

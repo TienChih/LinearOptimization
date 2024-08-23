@@ -194,7 +194,7 @@
     <task>
       <statement>
         <p>
-          Are any of these identical?
+          Are any of these conditions identical?
         </p>
       </statement>
     </task>
@@ -364,7 +364,7 @@
         <p>
           Suppose for a pair of primal-dual solutions if <m>x_j</m> were allowed to be be any value including negative values, 
           What must be true about <m>s_j</m>?  (If <m>x_j</m> is unconstrained, what can we say about the hyperplane <m>-x_j=0</m> as a bounding hyperplane?)
-          <ol marker="A." cols="2">
+          <ol marker="A." >
             <li>
               <p>
                 <m>s_j</m> could be any value as well.
@@ -402,7 +402,7 @@
           Suppose for a pair of primal-dual solutions if <m>t_i=0</m>. 
           What must be true about <m>y_i</m>?  (If we increase <m>b_i</m> can we predict if that helps or hurts <m>f</m>?
             Does it matter?)
-          <ol marker="A." cols="2">
+          <ol marker="A.">
             <li>
               <p>
                 <m>y_i</m> could be any value as well.
