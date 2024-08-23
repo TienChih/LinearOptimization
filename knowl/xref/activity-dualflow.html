@@ -12,14 +12,14 @@
 </head>
 <body class="ignore-math">
 <article class="activity project-like"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span>
 </h3>
 <div class="introduction">
 <div class="para">Consider the primal maximization problem for a max flow problem for a capacitated network with unique source <span class="process-math">\(v_s\)</span> and unique sink <span class="process-math">\(v_d\text{:}\)</span>
 </div> <div class="para logical"><div class="displaymath process-math">
 \begin{align*}
 \textbf{Maximize: }  \displaystyle \sum_{i} x_{id}\\
-\textbf{Subject to: }  \sum_{i}x_{ij} - \sum_{i} x_{ji} \amp =  0, \text{for each vertex }v_j\\
+\textbf{subject to: }  \sum_{i}x_{ij} - \sum_{i} x_{ji} \amp =  0, \text{for each vertex }v_j\\
 x_{ij}\amp \leq  c_{ij}, \text{for each edge} (v_i, v_j)\\
 x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).
 \end{align*}
@@ -30,7 +30,7 @@ x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).
 <div class="displaymath process-math">
 \begin{align*}
 \textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}\\
-\textbf{Subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{for each edge }(v_s, v_j)\\
+\textbf{subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{for each edge }(v_s, v_j)\\
 -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j), i\neq s, j\neq d\\
 - \mu_i +y_{id} \amp \geq  0, \text{for each edge }(v_i, v_d)\\
 y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
@@ -42,7 +42,7 @@ y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 <div class="para">Verify that we may simplify the dual solution as:</div> <div class="para logical"><div class="displaymath process-math">
 \begin{align*}
 \textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}\\
-\textbf{Subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j)\\
+\textbf{subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j)\\
 \mu_s \amp =0 \\
 \mu_d \amp =-1\\
 y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).

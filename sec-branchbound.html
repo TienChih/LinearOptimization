@@ -143,12 +143,12 @@ sagecell.makeSagecell({
 #activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
 #activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
 #activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
-#activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
-#activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
-#activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
-#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
-#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
-#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
+#subsec-basicfeasible-4-4-1-2 { counter-set: subsec-basicfeasible-4-4-1-2 0; }
+#subsec-basicfeasible-4-4-1-2 > li::marker { content: ""counter(subsec-basicfeasible-4-4-1-2,upper-alpha)"."; }
+#subsec-basicfeasible-4-4-1-2 > li { counter-increment: subsec-basicfeasible-4-4-1-2; }
+#subsec-basicfeasible-5-5-1-4 { counter-set: subsec-basicfeasible-5-5-1-4 0; }
+#subsec-basicfeasible-5-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-5-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-5-5-1-4 > li { counter-increment: subsec-basicfeasible-5-5-1-4; }
 #def-simplexcanonmaxbf-3-2 { counter-set: def-simplexcanonmaxbf-3-2 0; }
 #def-simplexcanonmaxbf-3-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-3-2,decimal)"."; }
 #def-simplexcanonmaxbf-3-2 > li { counter-increment: def-simplexcanonmaxbf-3-2; }
@@ -170,15 +170,15 @@ sagecell.makeSagecell({
 #unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
 #unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
 #unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-example-5-1-2 { counter-set: unconstrained-example-5-1-2 0; }
+#unconstrained-example-5-1-2 > li::marker { content: ""counter(unconstrained-example-5-1-2,upper-alpha)"."; }
+#unconstrained-example-5-1-2 > li { counter-increment: unconstrained-example-5-1-2; }
 #unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
 #unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
 #unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
-#unconstrained-example-7-1-2 { counter-set: unconstrained-example-7-1-2 0; }
-#unconstrained-example-7-1-2 > li::marker { content: ""counter(unconstrained-example-7-1-2,upper-alpha)"."; }
-#unconstrained-example-7-1-2 > li { counter-increment: unconstrained-example-7-1-2; }
-#unconstrained-example-10-1-2 { counter-set: unconstrained-example-10-1-2 0; }
-#unconstrained-example-10-1-2 > li::marker { content: ""counter(unconstrained-example-10-1-2,upper-alpha)"."; }
-#unconstrained-example-10-1-2 > li { counter-increment: unconstrained-example-10-1-2; }
+#unconstrained-example-9-1-2 { counter-set: unconstrained-example-9-1-2 0; }
+#unconstrained-example-9-1-2 > li::marker { content: ""counter(unconstrained-example-9-1-2,upper-alpha)"."; }
+#unconstrained-example-9-1-2 > li { counter-increment: unconstrained-example-9-1-2; }
 #sec-unconstrained-8-1-2 { counter-set: sec-unconstrained-8-1-2 0; }
 #sec-unconstrained-8-1-2 > li::marker { content: ""counter(sec-unconstrained-8-1-2,decimal)"."; }
 #sec-unconstrained-8-1-2 > li { counter-increment: sec-unconstrained-8-1-2; }
@@ -390,7 +390,6 @@ true);
     \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
     \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
    \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
-   \DeclareMathOperator{\span}{span}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -518,10 +517,11 @@ true);
 <div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Cutting-Plane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intsage.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Solving Integer Optimization Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -533,6 +533,7 @@ true);
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-covermatch.html#subsec-Konigs" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Königs Theorem and Bipartite Graphs</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -577,10 +578,10 @@ print(P.optimal_value())
 <div class="para" id="exploration-meat-3-1-1">What are some problems with this solution?  Without trying to explictly find the optimal solution, how far off is this solution?</div></article><article class="task exercise-like" id="exploration-meat-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="exploration-meat-4-1-1">How many sandwiches and pies should she actually sell to maximize her income?</div> <iframe id="exploration-meat-4-1-2" width="600" height="600" src="exploration-meat-4-1-2-if.html"></iframe></article><article class="task exercise-like" id="exploration-meat-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="exploration-meat-5-1-1">After the local barber has been arrested, demand for Agnesi’s pies sees an increase, and she is able to now sell them for 12 gold pieces.  Now what production level maximizes her income?</div> <iframe id="exploration-meat-5-1-2" width="600" height="600" src="exploration-meat-5-1-2-if.html"></iframe></article></article><article class="definition definition-like" id="def-intergerprogra"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-intergerprogra-1-1">A linear optimization problem where all solutions must be integers is called an <dfn class="terminology">integer optimization problem</dfn>.</div> <div class="para" id="def-intergerprogra-1-2">If the condition that solutions be integers are relaxed, this is called the <dfn class="terminology">relaxation</dfn> of the integer optimization problem.</div></article><article class="activity project-like" id="sec-branchbound-5"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.3</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="sec-branchbound-5-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-branchbound-5-1-1-1">Come up with three realistic optimization problems who are best modeled by an integer optimization problem.  You do not need to work out all the details or solve the problems.</div></article><article class="task exercise-like" id="sec-branchbound-5-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
@@ -591,7 +592,7 @@ print(P.optimal_value())
 <li id="sec-branchbound-5-2-1-2-4"><div class="para" id="sec-branchbound-5-2-1-2-4-1">The integer  problem is infeasible.</div></li>
 <li id="sec-branchbound-5-2-1-2-5"><div class="para" id="sec-branchbound-5-2-1-2-5-1">The integer  problem is unbounded above.</div></li>
 </ol></article></article><article class="activity project-like" id="activity-meat1"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-meat1-1">
 <div class="para" id="activity-meat1-1-1">The <em class="emphasis">branch and bound</em> method is a way to systematically add bounds to a linear optimization problem to ensure the solution is integral.</div> <div class="para" id="activity-meat1-1-2">We examine the integer optimization problem from <a href="sec-branchbound.html#exploration-meat" class="xref" data-knowl="./knowl/xref/exploration-meat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.1.1">Exploration 8.1.1</a>, and it’s relaxation.</div>
@@ -632,7 +633,7 @@ print(P.optimal_value())
 <div class="para" id="activity-meat1-9-1-1">Instead we now consider the constraint <span class="process-math">\(x_2\geq 4\text{.}\)</span>  Solve this maximization problem.  Why do we no longer need to consider the case where <span class="process-math">\(x_2\geq 4\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-meat1-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
 <div class="para" id="activity-meat1-10-1-1">How do we know we now have arrived at the optimal solution?</div> <div class="para" id="activity-meat1-10-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree5.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article></article><article class="definition definition-like" id="def-branchbound"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-branchbound-1-1">The <em class="emphasis">Branch and Bound Algorithm</em> for solving an integer optimization maximization problem is as follows:</div> <ol class="decimal" id="def-branchbound-1-2">
 <li id="def-branchbound-1-2-1"><div class="para" id="def-branchbound-1-2-1-1">INITIALIZE: Begin with a canonical maximization integer optimization problem.</div></li>
@@ -647,12 +648,12 @@ print(P.optimal_value())
 <li id="def-branchbound-1-2-9"><div class="para" id="def-branchbound-1-2-9-1">If all subproblems are explored, RETURN to 4 for the parent problem.</div></li>
 <li id="def-branchbound-1-2-10"><div class="para" id="def-branchbound-1-2-10-1">Once the search tree has been exhausted, identify the optimal integral solution.</div></li>
 </ol></article><article class="example example-like" id="sec-branchbound-8"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.3</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-branchbound-8-1-1">The complete search tree for <a href="sec-branchbound.html#activity-meat1" class="xref" data-knowl="./knowl/xref/activity-meat1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.1.3">Activity 8.1.3</a> is as follows</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/treecomplete.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div> <div class="para" id="sec-branchbound-8-1-3">We start at Node 0, and identify the two subproblems.  We exlore the subproblem where <span class="process-math">\(x_1\leq 4\)</span> in Node 1, and again identify two subproblems.  We stop and return at Node 2 because the solution was integral.  We stop and return from Node 3, even though the solution is not integral, because the optimal solution for that subproblem was already less than the solution found in Node 1, and any further exploration would lead to a lower value still.</div> <div class="para" id="sec-branchbound-8-1-4">We then return to the starting node and to the other initial subproblem in Node 4, were <span class="process-math">\(x\geq 5\text{.}\)</span>  When we split into the the two subproblems, <span class="process-math">\(x_2\leq 3\)</span> gives an integral solution in Node 5, and the constraint <span class="process-math">\(x_2\geq 6\)</span> gives an infeasible problem.</div> <div class="para" id="sec-branchbound-8-1-5">Thus, we return, and of the two integral solutions found, <span class="process-math">\(f(5,3)=71\)</span> has the highest value.</div></article><article class="activity project-like" id="sec-branchbound-9"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
+<div class="para" id="sec-branchbound-8-1-1">The complete search tree for <a href="sec-branchbound.html#activity-meat1" class="xref" data-knowl="./knowl/xref/activity-meat1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 8.1.4">Activity 8.1.4</a> is as follows</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/treecomplete.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div> <div class="para" id="sec-branchbound-8-1-3">We start at Node 0, and identify the two subproblems.  We exlore the subproblem where <span class="process-math">\(x_1\leq 4\)</span> in Node 1, and again identify two subproblems.  We stop and return at Node 2 because the solution was integral.  We stop and return from Node 3, even though the solution is not integral, because the optimal solution for that subproblem was already less than the solution found in Node 1, and any further exploration would lead to a lower value still.</div> <div class="para" id="sec-branchbound-8-1-4">We then return to the starting node and to the other initial subproblem in Node 4, were <span class="process-math">\(x\geq 5\text{.}\)</span>  When we split into the the two subproblems, <span class="process-math">\(x_2\leq 3\)</span> gives an integral solution in Node 5, and the constraint <span class="process-math">\(x_2\geq 6\)</span> gives an infeasible problem.</div> <div class="para" id="sec-branchbound-8-1-5">Thus, we return, and of the two integral solutions found, <span class="process-math">\(f(5,3)=71\)</span> has the highest value.</div></article><article class="activity project-like" id="sec-branchbound-9"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-branchbound-9-1-1">As the demand for meat pies skyrockets, Agnesi is now able to acquire 40 oz of floor a day, but now uses 10 oz of floor per meat pie to thicken the gravy.  She is able to sell these for 40 gp each. Use the Branch and Bound Algorithm <a href="sec-branchbound.html#def-branchbound" class="xref" data-knowl="./knowl/xref/def-branchbound.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.1.2">Definition 8.1.2</a> to found her new optimal production level.</div> <div class="para" id="sec-branchbound-9-1-2">
+<div class="para" id="sec-branchbound-9-1-1">As the demand for meat pies skyrockets, Agnesi is now able to acquire 40 oz of floor a day, but now uses 10 oz of floor per meat pie to thicken the gravy.  She is able to sell these for 40 gp each. Use the Branch and Bound Algorithm <a href="sec-branchbound.html#def-branchbound" class="xref" data-knowl="./knowl/xref/def-branchbound.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 8.1.5">Definition 8.1.5</a> to found her new optimal production level.</div> <div class="para" id="sec-branchbound-9-1-2">
 <pre id="sec-branchbound-9-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)

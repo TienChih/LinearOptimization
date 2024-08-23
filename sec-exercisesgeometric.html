@@ -143,12 +143,12 @@ sagecell.makeSagecell({
 #activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
 #activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
 #activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
-#activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
-#activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
-#activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
-#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
-#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
-#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
+#subsec-basicfeasible-4-4-1-2 { counter-set: subsec-basicfeasible-4-4-1-2 0; }
+#subsec-basicfeasible-4-4-1-2 > li::marker { content: ""counter(subsec-basicfeasible-4-4-1-2,upper-alpha)"."; }
+#subsec-basicfeasible-4-4-1-2 > li { counter-increment: subsec-basicfeasible-4-4-1-2; }
+#subsec-basicfeasible-5-5-1-4 { counter-set: subsec-basicfeasible-5-5-1-4 0; }
+#subsec-basicfeasible-5-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-5-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-5-5-1-4 > li { counter-increment: subsec-basicfeasible-5-5-1-4; }
 #def-simplexcanonmaxbf-3-2 { counter-set: def-simplexcanonmaxbf-3-2 0; }
 #def-simplexcanonmaxbf-3-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-3-2,decimal)"."; }
 #def-simplexcanonmaxbf-3-2 > li { counter-increment: def-simplexcanonmaxbf-3-2; }
@@ -170,15 +170,15 @@ sagecell.makeSagecell({
 #unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
 #unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
 #unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-example-5-1-2 { counter-set: unconstrained-example-5-1-2 0; }
+#unconstrained-example-5-1-2 > li::marker { content: ""counter(unconstrained-example-5-1-2,upper-alpha)"."; }
+#unconstrained-example-5-1-2 > li { counter-increment: unconstrained-example-5-1-2; }
 #unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
 #unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
 #unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
-#unconstrained-example-7-1-2 { counter-set: unconstrained-example-7-1-2 0; }
-#unconstrained-example-7-1-2 > li::marker { content: ""counter(unconstrained-example-7-1-2,upper-alpha)"."; }
-#unconstrained-example-7-1-2 > li { counter-increment: unconstrained-example-7-1-2; }
-#unconstrained-example-10-1-2 { counter-set: unconstrained-example-10-1-2 0; }
-#unconstrained-example-10-1-2 > li::marker { content: ""counter(unconstrained-example-10-1-2,upper-alpha)"."; }
-#unconstrained-example-10-1-2 > li { counter-increment: unconstrained-example-10-1-2; }
+#unconstrained-example-9-1-2 { counter-set: unconstrained-example-9-1-2 0; }
+#unconstrained-example-9-1-2 > li::marker { content: ""counter(unconstrained-example-9-1-2,upper-alpha)"."; }
+#unconstrained-example-9-1-2 > li { counter-increment: unconstrained-example-9-1-2; }
 #sec-unconstrained-8-1-2 { counter-set: sec-unconstrained-8-1-2 0; }
 #sec-unconstrained-8-1-2 > li::marker { content: ""counter(sec-unconstrained-8-1-2,decimal)"."; }
 #sec-unconstrained-8-1-2 > li { counter-increment: sec-unconstrained-8-1-2; }
@@ -390,7 +390,6 @@ true);
     \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
     \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
    \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
-   \DeclareMathOperator{\span}{span}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -518,10 +517,11 @@ true);
 <div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Cutting-Plane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intsage.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Solving Integer Optimization Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -533,6 +533,7 @@ true);
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-covermatch.html#subsec-Konigs" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Königs Theorem and Bipartite Graphs</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -574,12 +575,12 @@ true);
 <div class="para" id="exercises-geometric-1-10-1-1">An unbounded polyhedral convex subset having exactly one extreme point.</div></article><article class="task exercise-like" id="exercises-geometric-1-11"><h5 class="heading"><span class="codenumber">(j)</span></h5>
 <div class="para" id="exercises-geometric-1-11-1-1">An bounded convex subset having infinitely many extreme points.</div></article><article class="task exercise-like" id="exercises-geometric-1-12"><h5 class="heading"><span class="codenumber">(k)</span></h5>
 <div class="para" id="exercises-geometric-1-12-1-1">An unbounded convex subset having infinitely many extreme points.</div></article></article><article class="exercise exercise-like" id="ex-convertcanon"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="introduction" id="ex-convertcanon-1"><div class="para" id="ex-convertcanon-1-1">Convert each of the linear optimization problems below to canonical form as in <a href="sec-initial.html#def-canonicalproblems" class="xref" data-knowl="./knowl/xref/def-canonicalproblems.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.1">Definition 1.2.1</a>.</div></div>
+<div class="introduction" id="ex-convertcanon-1"><div class="para" id="ex-convertcanon-1-1">Convert each of the linear optimization problems below to canonical form as in <a href="sec-initial.html#def-canonicalproblems" class="xref" data-knowl="./knowl/xref/def-canonicalproblems.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.2.3">Definition 1.2.3</a>.</div></div>
 <article class="task exercise-like" id="ex-convertcanon-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="ex-convertcanon-2-1-1"><div class="displaymath process-math" id="ex-convertcanon-2-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y) = \amp 3x-y\\
-\textbf{Subject to: } 15-4x\amp \geq  y\\
+\textbf{subject to: } 15-4x\amp \geq  y\\
 2x+3y\amp \leq  y+12\\
 x,y\amp \geq  0.
 \end{align*}
@@ -587,7 +588,7 @@ x,y\amp \geq  0.
 <div class="para logical" id="ex-convertcanon-3-1-1"><div class="displaymath process-math" id="ex-convertcanon-3-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  g(x,y) = \amp -4x-2y\\
-\textbf{Subject to: } 4x-7y\amp \leq  -2\\
+\textbf{subject to: } 4x-7y\amp \leq  -2\\
 5x+3y\amp \leq  21\\
 x,y\amp \geq  0.
 \end{align*}
@@ -595,7 +596,7 @@ x,y\amp \geq  0.
 <div class="para logical" id="ex-convertcanon-4-1-1"><div class="displaymath process-math" id="ex-convertcanon-4-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  h(x,y, z) = \amp x+3y-3z\\
-\textbf{Subject to: } 3-4x+z\amp \geq  5y\\
+\textbf{subject to: } 3-4x+z\amp \geq  5y\\
 1\leq 2y+z \amp \leq  9\\
 0\leq x \amp \leq  8\\
 y, z\amp \geq  0.
@@ -604,7 +605,7 @@ y, z\amp \geq  0.
 <div class="para logical" id="ex-convertcanon-5-1-1"><div class="displaymath process-math" id="ex-convertcanon-5-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  k(x,y,z) = \amp x-2y-z\\
-\textbf{Subject to: } 10x+5y+2z\amp \leq  1000\\
+\textbf{subject to: } 10x+5y+2z\amp \leq  1000\\
 2y+4z \amp \leq  800\\
 x,y,z\amp \geq  0.
 \end{align*}
@@ -615,7 +616,7 @@ x,y,z\amp \geq  0.
 <div class="para logical" id="ex-convertcanon-9-1-1"><div class="displaymath process-math" id="ex-convertcanon-9-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y) = \amp 5x+6y\\
-\textbf{Subject to: } 2x+3y\amp \geq  12\\
+\textbf{subject to: } 2x+3y\amp \geq  12\\
 -3x+2y\amp \leq  14\\
 x+y\amp \leq  12\\
 x,y\amp \geq  0.
@@ -626,7 +627,7 @@ x,y\amp \geq  0.
 <div class="para logical" id="ex-geosolve-2-1-1"><div class="displaymath process-math" id="ex-geosolve-2-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y) = \amp 2x+y\\
-\textbf{Subject to: } x+4y\amp \leq  11\\
+\textbf{subject to: } x+4y\amp \leq  11\\
 6x+2y\amp \leq  22\\
 x,y\amp \geq  0.
 \end{align*}
@@ -634,7 +635,7 @@ x,y\amp \geq  0.
 <div class="para logical" id="ex-geosolve-3-1-1"><div class="displaymath process-math" id="ex-geosolve-3-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  f(x,y) = \amp 2x+y\\
-\textbf{Subject to: } x+4y\amp \geq  11\\
+\textbf{subject to: } x+4y\amp \geq  11\\
 6x+2y\amp \geq  22\\
 x,y\amp \geq  0.
 \end{align*}
@@ -661,7 +662,7 @@ x,y\amp \geq  0.
 <div class="displaymath process-math" id="ex-5planes-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y,z,w) = 3x-2y+5z-w\\
-\textbf{Subject to: } -x+2y-3z+6w\amp \leq  12\\
+\textbf{subject to: } -x+2y-3z+6w\amp \leq  12\\
 x,y, z, w\amp \geq  0.
 \end{align*}
 </div>
@@ -672,7 +673,7 @@ x,y, z, w\amp \geq  0.
 <div class="displaymath process-math" id="ex-6planes-1-1">
 \begin{align*}
 \textbf{Minimize: }  g(x,y,z,w) = 2x-y-3z+4w\\
-\textbf{Subject to: } x+2y+2z+4y\amp \geq  8\\
+\textbf{subject to: } x+2y+2z+4y\amp \geq  8\\
 4x-y\amp \geq 6\\
 x,y, z, w\amp \geq  0.
 \end{align*}
@@ -694,7 +695,7 @@ print(A.rref())
 <div class="displaymath process-math" id="exercises-geometric-9-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y) = \amp x-y\\
-\textbf{Subject to: } x+y\amp \geq  5\\
+\textbf{subject to: } x+y\amp \geq  5\\
 x-5y\amp \leq  0\\
 y-2x\amp \leq  1\\
 x,y\amp \geq  0.
@@ -707,7 +708,7 @@ x,y\amp \geq  0.
 <div class="displaymath process-math" id="exercises-geometric-10-1-1">
 \begin{align*}
 \textbf{Minimize: }  g(x,y) = \amp 5x+3y\\
-\textbf{Subject to: } y-5x\amp \geq  1\\
+\textbf{subject to: } y-5x\amp \geq  1\\
 x-5y\amp \geq  0\\
 x,y\amp \geq  0.
 \end{align*}

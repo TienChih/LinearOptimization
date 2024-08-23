@@ -143,12 +143,12 @@ sagecell.makeSagecell({
 #activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
 #activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
 #activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
-#activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
-#activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
-#activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
-#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
-#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
-#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
+#subsec-basicfeasible-4-4-1-2 { counter-set: subsec-basicfeasible-4-4-1-2 0; }
+#subsec-basicfeasible-4-4-1-2 > li::marker { content: ""counter(subsec-basicfeasible-4-4-1-2,upper-alpha)"."; }
+#subsec-basicfeasible-4-4-1-2 > li { counter-increment: subsec-basicfeasible-4-4-1-2; }
+#subsec-basicfeasible-5-5-1-4 { counter-set: subsec-basicfeasible-5-5-1-4 0; }
+#subsec-basicfeasible-5-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-5-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-5-5-1-4 > li { counter-increment: subsec-basicfeasible-5-5-1-4; }
 #def-simplexcanonmaxbf-3-2 { counter-set: def-simplexcanonmaxbf-3-2 0; }
 #def-simplexcanonmaxbf-3-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-3-2,decimal)"."; }
 #def-simplexcanonmaxbf-3-2 > li { counter-increment: def-simplexcanonmaxbf-3-2; }
@@ -170,15 +170,15 @@ sagecell.makeSagecell({
 #unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
 #unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
 #unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-example-5-1-2 { counter-set: unconstrained-example-5-1-2 0; }
+#unconstrained-example-5-1-2 > li::marker { content: ""counter(unconstrained-example-5-1-2,upper-alpha)"."; }
+#unconstrained-example-5-1-2 > li { counter-increment: unconstrained-example-5-1-2; }
 #unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
 #unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
 #unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
-#unconstrained-example-7-1-2 { counter-set: unconstrained-example-7-1-2 0; }
-#unconstrained-example-7-1-2 > li::marker { content: ""counter(unconstrained-example-7-1-2,upper-alpha)"."; }
-#unconstrained-example-7-1-2 > li { counter-increment: unconstrained-example-7-1-2; }
-#unconstrained-example-10-1-2 { counter-set: unconstrained-example-10-1-2 0; }
-#unconstrained-example-10-1-2 > li::marker { content: ""counter(unconstrained-example-10-1-2,upper-alpha)"."; }
-#unconstrained-example-10-1-2 > li { counter-increment: unconstrained-example-10-1-2; }
+#unconstrained-example-9-1-2 { counter-set: unconstrained-example-9-1-2 0; }
+#unconstrained-example-9-1-2 > li::marker { content: ""counter(unconstrained-example-9-1-2,upper-alpha)"."; }
+#unconstrained-example-9-1-2 > li { counter-increment: unconstrained-example-9-1-2; }
 #sec-unconstrained-8-1-2 { counter-set: sec-unconstrained-8-1-2 0; }
 #sec-unconstrained-8-1-2 > li::marker { content: ""counter(sec-unconstrained-8-1-2,decimal)"."; }
 #sec-unconstrained-8-1-2 > li { counter-increment: sec-unconstrained-8-1-2; }
@@ -390,7 +390,6 @@ true);
     \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
     \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
    \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
-   \DeclareMathOperator{\span}{span}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -518,10 +517,11 @@ true);
 <div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Cutting-Plane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intsage.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Solving Integer Optimization Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -533,6 +533,7 @@ true);
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-covermatch.html#subsec-Konigs" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Königs Theorem and Bipartite Graphs</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -601,11 +602,11 @@ f=\sum_{i\in V_1, j\in V_2}x_{ij}-\sum_{i\in V_1, j\in V_2}x_{ji}.
 <article class="task exercise-like" id="exercises-flow-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-flow-6-2-1-1">Given an example for <span class="process-math">\(N\)</span> such that <span class="process-math">\(N\)</span> has non-unique max-flows.</div></article><article class="task exercise-like" id="exercises-flow-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-flow-6-3-1-1">Given an example for <span class="process-math">\(N\)</span> such that <span class="process-math">\(N\)</span> has non-unique min-cuts.</div></article><article class="task exercise-like" id="exercises-flow-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="exercises-flow-6-4-1-1">Let <span class="process-math">\(x_{ij}\)</span> denote any max-flow for <span class="process-math">\(N\)</span> with value <span class="process-math">\(f\)</span> and  <span class="process-math">\((V_1, V_2)\)</span> denote any min-cut (not neccesarily produced by <span class="process-math">\(x_{ij}\)</span> and <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.4: Min Cut Algorithm">Definition 7.2.4</a>).  Let <span class="process-math">\((V_1', V_2')\)</span> be the cut generated <span class="process-math">\(x_{ij}\)</span> via <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.4: Min Cut Algorithm">Definition 7.2.4</a>.</div> <div class="para" id="exercises-flow-6-4-1-2">Prove that <span class="process-math">\(x_{ij}=c_{ij}\)</span> for any <span class="process-math">\(v_i\in V_1, v_j=V_2\text{.}\)</span>
+<div class="para" id="exercises-flow-6-4-1-1">Let <span class="process-math">\(x_{ij}\)</span> denote any max-flow for <span class="process-math">\(N\)</span> with value <span class="process-math">\(f\)</span> and  <span class="process-math">\((V_1, V_2)\)</span> denote any min-cut (not neccesarily produced by <span class="process-math">\(x_{ij}\)</span> and <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12: Min Cut Algorithm">Definition 7.2.12</a>).  Let <span class="process-math">\((V_1', V_2')\)</span> be the cut generated <span class="process-math">\(x_{ij}\)</span> via <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12: Min Cut Algorithm">Definition 7.2.12</a>.</div> <div class="para" id="exercises-flow-6-4-1-2">Prove that <span class="process-math">\(x_{ij}=c_{ij}\)</span> for any <span class="process-math">\(v_i\in V_1, v_j=V_2\text{.}\)</span>
 </div></article><article class="task exercise-like" id="exercises-flow-6-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="exercises-flow-6-5-1-1">Let <span class="process-math">\(x_{ij}, x'_{ij}\)</span> be two distinct max-flows on <span class="process-math">\(N\text{,}\)</span> and <span class="process-math">\((V_1, V_2), (V'_1, V'_2)\)</span> be the cuts produced by <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.4: Min Cut Algorithm">Definition 7.2.4</a> on with these flows respectively.  Prove that <span class="process-math">\((V_1, V_2) = (V'_1, V'_2)\text{.}\)</span>
+<div class="para" id="exercises-flow-6-5-1-1">Let <span class="process-math">\(x_{ij}, x'_{ij}\)</span> be two distinct max-flows on <span class="process-math">\(N\text{,}\)</span> and <span class="process-math">\((V_1, V_2), (V'_1, V'_2)\)</span> be the cuts produced by <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12: Min Cut Algorithm">Definition 7.2.12</a> on with these flows respectively.  Prove that <span class="process-math">\((V_1, V_2) = (V'_1, V'_2)\text{.}\)</span>
 </div></article></article><article class="exercise exercise-like" id="ex-shortestpath"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="introduction" id="ex-shortestpath-1"><div class="para" id="ex-shortestpath-1-1">For each of the following, find the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> using <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.4: Dijkstra’s Shortest Path Algorithm">Definition 7.3.4</a>.</div></div>
+<div class="introduction" id="ex-shortestpath-1"><div class="para" id="ex-shortestpath-1-1">For each of the following, find the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> using <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.7: Dijkstra’s Shortest Path Algorithm">Definition 7.3.7</a>.</div></div>
 <article class="task exercise-like" id="ex-shortestpath-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="ex-shortestpath-2-1-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/shortpatha.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div></div></article><article class="task exercise-like" id="ex-shortestpath-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="ex-shortestpath-3-1-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/shortpathb.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div></div></article><article class="task exercise-like" id="ex-shortestpath-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
@@ -616,7 +617,7 @@ f=\sum_{i\in V_1, j\in V_2}x_{ij}-\sum_{i\in V_1, j\in V_2}x_{ji}.
 <article class="task exercise-like" id="exercises-flow-9-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-flow-9-2-1-1">Let <span class="process-math">\(x,y,z\in V\text{.}\)</span>  Prove that the value of the shortest path from <span class="process-math">\(x\)</span> to <span class="process-math">\(z\)</span> is the sum of the value of the shortest path from <span class="process-math">\(x\)</span> to <span class="process-math">\(y\)</span> plus the value of the shortest path from <span class="process-math">\(y\)</span> to <span class="process-math">\(z\text{.}\)</span>
 </div></article><article class="task exercise-like" id="exercises-flow-9-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="exercises-flow-9-3-1-1">Suppose there was an edge going into <span class="process-math">\(v_s\text{,}\)</span> then <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.4: Dijkstra’s Shortest Path Algorithm">Definition 7.3.4</a> fails.</div></article></article><article class="exercise exercise-like" id="ex-minflow"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="exercises-flow-9-3-1-1">Suppose there was an edge going into <span class="process-math">\(v_s\text{,}\)</span> then <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.7: Dijkstra’s Shortest Path Algorithm">Definition 7.3.7</a> fails.</div></article></article><article class="exercise exercise-like" id="ex-minflow"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
 <div class="introduction" id="ex-minflow-1"><div class="para" id="ex-minflow-1-1">For each of the following, find the minimum cost-flows for <span class="process-math">\(F=8\)</span> and <span class="process-math">\(F=10\text{.}\)</span>  Interpret each ordered pair <span class="process-math">\((c_{ij}, w_{ij})\)</span> as (capacity,cost).</div></div>
 <article class="task exercise-like" id="ex-minflow-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="ex-minflow-2-1-1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/minflowa.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div></div></article><article class="task exercise-like" id="ex-minflow-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>

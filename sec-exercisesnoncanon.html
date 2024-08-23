@@ -143,12 +143,12 @@ sagecell.makeSagecell({
 #activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
 #activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
 #activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
-#activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
-#activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
-#activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
-#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
-#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
-#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
+#subsec-basicfeasible-4-4-1-2 { counter-set: subsec-basicfeasible-4-4-1-2 0; }
+#subsec-basicfeasible-4-4-1-2 > li::marker { content: ""counter(subsec-basicfeasible-4-4-1-2,upper-alpha)"."; }
+#subsec-basicfeasible-4-4-1-2 > li { counter-increment: subsec-basicfeasible-4-4-1-2; }
+#subsec-basicfeasible-5-5-1-4 { counter-set: subsec-basicfeasible-5-5-1-4 0; }
+#subsec-basicfeasible-5-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-5-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-5-5-1-4 > li { counter-increment: subsec-basicfeasible-5-5-1-4; }
 #def-simplexcanonmaxbf-3-2 { counter-set: def-simplexcanonmaxbf-3-2 0; }
 #def-simplexcanonmaxbf-3-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-3-2,decimal)"."; }
 #def-simplexcanonmaxbf-3-2 > li { counter-increment: def-simplexcanonmaxbf-3-2; }
@@ -170,15 +170,15 @@ sagecell.makeSagecell({
 #unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
 #unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
 #unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-example-5-1-2 { counter-set: unconstrained-example-5-1-2 0; }
+#unconstrained-example-5-1-2 > li::marker { content: ""counter(unconstrained-example-5-1-2,upper-alpha)"."; }
+#unconstrained-example-5-1-2 > li { counter-increment: unconstrained-example-5-1-2; }
 #unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
 #unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
 #unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
-#unconstrained-example-7-1-2 { counter-set: unconstrained-example-7-1-2 0; }
-#unconstrained-example-7-1-2 > li::marker { content: ""counter(unconstrained-example-7-1-2,upper-alpha)"."; }
-#unconstrained-example-7-1-2 > li { counter-increment: unconstrained-example-7-1-2; }
-#unconstrained-example-10-1-2 { counter-set: unconstrained-example-10-1-2 0; }
-#unconstrained-example-10-1-2 > li::marker { content: ""counter(unconstrained-example-10-1-2,upper-alpha)"."; }
-#unconstrained-example-10-1-2 > li { counter-increment: unconstrained-example-10-1-2; }
+#unconstrained-example-9-1-2 { counter-set: unconstrained-example-9-1-2 0; }
+#unconstrained-example-9-1-2 > li::marker { content: ""counter(unconstrained-example-9-1-2,upper-alpha)"."; }
+#unconstrained-example-9-1-2 > li { counter-increment: unconstrained-example-9-1-2; }
 #sec-unconstrained-8-1-2 { counter-set: sec-unconstrained-8-1-2 0; }
 #sec-unconstrained-8-1-2 > li::marker { content: ""counter(sec-unconstrained-8-1-2,decimal)"."; }
 #sec-unconstrained-8-1-2 > li { counter-increment: sec-unconstrained-8-1-2; }
@@ -390,7 +390,6 @@ true);
     \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
     \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
    \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
-   \DeclareMathOperator{\span}{span}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -518,10 +517,11 @@ true);
 <div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Cutting-Plane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intsage.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Solving Integer Optimization Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -533,6 +533,7 @@ true);
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-covermatch.html#subsec-Konigs" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Königs Theorem and Bipartite Graphs</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -562,12 +563,12 @@ true);
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="ex-nc"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="introduction" id="ex-nc-1"><div class="para" id="ex-nc-1-1">Solve each of the noncanonicallinear programming problems below. If a linear programming problem has infinitely many optimal solutions, find all optimal solutions.</div></div>
+<div class="introduction" id="ex-nc-1"><div class="para" id="ex-nc-1-1">Solve each of the noncanonical linear optimization problems below. If a linear optimization problem has infinitely many optimal solutions, find all optimal solutions.</div></div>
 <article class="task exercise-like" id="ex-nc-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="ex-nc-2-1-1"><div class="displaymath process-math" id="ex-nc-2-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y,z)  &amp; = x-2y-z\\
-\textbf{Subject to: } x+y&amp; \leq  1\\
+\textbf{subject to: } x+y&amp; \leq  1\\
 x+y+z&amp; \geq  2\\
 y-2z &amp; \geq  0.
 \end{align*}
@@ -575,7 +576,7 @@ y-2z &amp; \geq  0.
 <div class="para logical" id="ex-nc-3-1-1"><div class="displaymath process-math" id="ex-nc-3-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  g(x,y,z)  &amp; = 4x+2y+z\\
-\textbf{Subject to: } x+y+z&amp; \leq  5\\
+\textbf{subject to: } x+y+z&amp; \leq  5\\
 4x-y-z&amp; \leq  5\\
 2y+z &amp; \leq  4.
 \end{align*}
@@ -583,7 +584,7 @@ y-2z &amp; \geq  0.
 <div class="para logical" id="ex-nc-4-1-1"><div class="displaymath process-math" id="ex-nc-4-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y,z)  &amp; = 4x+2y+z\\
-\textbf{Subject to: } x+z&amp; \leq  5\\
+\textbf{subject to: } x+z&amp; \leq  5\\
 4x-y-z&amp; \leq  5\\
 2y+z &amp; \leq  4.
 \end{align*}
@@ -591,7 +592,7 @@ y-2z &amp; \geq  0.
 <div class="para logical" id="ex-nc-5-1-1"><div class="displaymath process-math" id="ex-nc-5-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  k(x,y,z)  &amp; = x+2y+z\\
-\textbf{Subject to: } 2x-y+z&amp; =  3\\
+\textbf{subject to: } 2x-y+z&amp; =  3\\
 x+2y&amp; \leq  4\\
 -2x+5y+3z &amp; \leq  4\\
 x, y, z &amp; \geq 0.
@@ -600,7 +601,7 @@ x, y, z &amp; \geq 0.
 <div class="para logical" id="ex-nc-6-1-1"><div class="displaymath process-math" id="ex-nc-6-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  h(x,y,z)  &amp; = x+y+z\\
-\textbf{Subject to: } x-y&amp; \geq 1\\
+\textbf{subject to: } x-y&amp; \geq 1\\
 2x+z&amp; \leq  10\\
 y+z &amp; =  4\\
 x, y, z &amp; \geq 0.
@@ -609,7 +610,7 @@ x, y, z &amp; \geq 0.
 <div class="para logical" id="ex-nc-7-1-1"><div class="displaymath process-math" id="ex-nc-7-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  f(x,y,z)  &amp; = 3x+y+2z\\
-\textbf{Subject to: } x+2y+3z&amp; \geq 24\\
+\textbf{subject to: } x+2y+3z&amp; \geq 24\\
 2x+4y+3z&amp; =  36\\
 y, z &amp; \geq 0.
 \end{align*}
@@ -617,7 +618,7 @@ y, z &amp; \geq 0.
 <div class="para logical" id="ex-nc-8-1-1"><div class="displaymath process-math" id="ex-nc-8-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  \ell(x,y,z)  &amp; = x+y+z\\
-\textbf{Subject to: } x+y+z&amp; \leq 3\\
+\textbf{subject to: } x+y+z&amp; \leq 3\\
 x+y&amp; \leq  1\\
 y+2z&amp; =2\\
 x, y &amp; \geq 0.
@@ -626,7 +627,7 @@ x, y &amp; \geq 0.
 <div class="para logical" id="ex-nc-9-1-1"><div class="displaymath process-math" id="ex-nc-9-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y,z)  &amp; = 3x-2y+3z\\
-\textbf{Subject to: } x-y+2z&amp; =6\\
+\textbf{subject to: } x-y+2z&amp; =6\\
 x+2z&amp; =8\\
 y+2z&amp; \geq 2\\
 y, z &amp; \geq 0.
@@ -635,22 +636,22 @@ y, z &amp; \geq 0.
 <div class="para logical" id="ex-nc-10-1-1"><div class="displaymath process-math" id="ex-nc-10-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  \alpha(x,y,z)  &amp; = -5x+y-2z\\
-\textbf{Subject to: } 2x+z&amp; =0\\
+\textbf{subject to: } 2x+z&amp; =0\\
 x-y&amp; \geq  1\\
-3x-y+z&amp; \leq 3
+3x-y+z&amp; \leq 3.
 \end{align*}
 </div></div></article><article class="task exercise-like" id="ex-nc-11"><h5 class="heading"><span class="codenumber">(j)</span></h5>
 <div class="para logical" id="ex-nc-11-1-1"><div class="displaymath process-math" id="ex-nc-11-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  g(x,y,z)  &amp; = x+y+z\\
-\textbf{Subject to: } x-y-z&amp; \leq 2\\
+\textbf{subject to: } x-y-z&amp; \leq 2.\\
 y-z&amp; \geq  1
 \end{align*}
 </div></div></article><article class="task exercise-like" id="ex-nc-12"><h5 class="heading"><span class="codenumber">(k)</span></h5>
 <div class="para logical" id="ex-nc-12-1-1"><div class="displaymath process-math" id="ex-nc-12-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y)  &amp; = x+y\\
-\textbf{Subject to: } 2x+y&amp; =5\\
+\textbf{subject to: } 2x+y&amp; =5\\
 x-y&amp; =-2\\
 x+2y&amp; =8\\
 x, y &amp; \geq 0.
@@ -658,35 +659,35 @@ x, y &amp; \geq 0.
 </div></div></article></article><article class="exercise exercise-like" id="exercises-noncanon-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-noncanon-2-1"><div class="para" id="exercises-noncanon-2-1-1">Label each of the following statements TRUE or FALSE. If the statement is FALSE, provide a counterexample.</div></div>
 <article class="task exercise-like" id="exercises-noncanon-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="exercises-noncanon-2-2-1-1">A noncanonical linear programming problem with more unconstrained independent variables than constraints has unbounded objective function.  (As in  <a href="sec-exercisesnoncanon.html#ex-nc" class="xref" data-knowl="./knowl/xref/ex-nc.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.4.1">Exercise 3.4.1</a> (J))</div></article><article class="task exercise-like" id="exercises-noncanon-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="exercises-noncanon-2-3-1-1">A noncanonicallinear programming problem with more equations of constraint than independent variables is infeasible.  (As in  <a href="sec-exercisesnoncanon.html#ex-nc" class="xref" data-knowl="./knowl/xref/ex-nc.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.4.1">Exercise 3.4.1</a> (K))</div></article></article><article class="exercise exercise-like" id="exercises-noncanon-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="introduction" id="exercises-noncanon-3-1"><div class="para" id="exercises-noncanon-3-1-1">Sketch the constraint set for each noncanonicallinear programming problem below. On the basis of this constraint set, formulate a conjecture as to whether or not the solution of the given problem is the same as the solution of the associated canonical linear programming problem where all independent variables are constrained to be nonnegative. Verify your conjecture by solving both linear programming problems.</div></div>
+<div class="para" id="exercises-noncanon-2-2-1-1">A noncanonical linear optimization problem with more unconstrained independent variables than constraints has unbounded objective function.  (As in  <a href="sec-exercisesnoncanon.html#ex-nc" class="xref" data-knowl="./knowl/xref/ex-nc.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.4.1">Exercise 3.4.1</a> (J))</div></article><article class="task exercise-like" id="exercises-noncanon-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-noncanon-2-3-1-1">A noncanonical linear optimization problem with more equations of constraint than independent variables is infeasible.  (As in  <a href="sec-exercisesnoncanon.html#ex-nc" class="xref" data-knowl="./knowl/xref/ex-nc.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.4.1">Exercise 3.4.1</a> (K))</div></article></article><article class="exercise exercise-like" id="exercises-noncanon-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="exercises-noncanon-3-1"><div class="para" id="exercises-noncanon-3-1-1">Sketch the constraint set for each noncanonical linear optimization problem below. On the basis of this constraint set, formulate a conjecture as to whether or not the solution of the given problem is the same as the solution of the associated canonical linear optimization problem where all independent variables are constrained to be nonnegative. Verify your conjecture by solving both linear optimization problems.</div></div>
 <article class="task exercise-like" id="exercises-noncanon-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="exercises-noncanon-3-2-1-1"><div class="displaymath process-math" id="exercises-noncanon-3-2-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y)  &amp; = x+y\\
-\textbf{Subject to: } 2x+y&amp; \leq 11\\
+\textbf{subject to: } 2x+y&amp; \leq 11\\
 x-y&amp; \geq -2.
 \end{align*}
 </div></div></article><article class="task exercise-like" id="exercises-noncanon-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para logical" id="exercises-noncanon-3-3-1-1"><div class="displaymath process-math" id="exercises-noncanon-3-3-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  g(x,y)  &amp; = 2x+y\\
-\textbf{Subject to: } 3x+2y&amp; \geq 5\\
+\textbf{subject to: } 3x+2y&amp; \geq 5\\
 2x-y&amp; \geq 1.
 \end{align*}
 </div></div></article><article class="task exercise-like" id="exercises-noncanon-3-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para logical" id="exercises-noncanon-3-4-1-1"><div class="displaymath process-math" id="exercises-noncanon-3-4-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y)  &amp; = 5x+y\\
-\textbf{Subject to: } x-y&amp; \leq 8\\
+\textbf{subject to: } x-y&amp; \leq 8\\
 2x+y&amp; \leq 7.
 \end{align*}
 </div></div></article><article class="task exercise-like" id="exercises-noncanon-3-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para logical" id="exercises-noncanon-3-5-1-1"><div class="displaymath process-math" id="exercises-noncanon-3-5-1-1-1">
 \begin{align*}
 \textbf{Minimize: }  g(x,y)  &amp; = x+2y\\
-\textbf{Subject to: } x+3y&amp; \geq 5\\
+\textbf{subject to: } x+3y&amp; \geq 5\\
 2x+y&amp; \geq 0.
 \end{align*}
 </div></div></article></article><article class="exercise exercise-like" id="exercises-noncanon-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
@@ -694,23 +695,23 @@ x-y&amp; \geq -2.
 <div class="para logical" id="exercises-noncanon-4-2"><div class="displaymath process-math" id="exercises-noncanon-4-2-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y,z)  &amp; = 2x+y-2z\\
-\textbf{Subject to: } x+y+z&amp; \leq 1\\
+\textbf{subject to: } x+y+z&amp; \leq 1\\
 y+4z&amp; =2\\
 x, y, z&amp; \geq0.
 \end{align*}
 </div></div></article><article class="exercise exercise-like" id="ex-uc"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="introduction" id="ex-uc-1">
-<div class="para" id="ex-uc-1-1">Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.</div> <div class="para" id="ex-uc-1-2">For example:</div> <div class="para logical" id="ex-uc-1-3"><div class="displaymath process-math" id="ex-uc-1-3-1">
+<div class="para" id="ex-uc-1-1">Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear optimization problem which is solved by using the simplex algorithm.</div> <div class="para" id="ex-uc-1-2">For example:</div> <div class="para logical" id="ex-uc-1-3"><div class="displaymath process-math" id="ex-uc-1-3-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y)  &amp; = 4x+y\\
-\textbf{Subject to: } x+y&amp; \leq 2\\
+\textbf{subject to: } x+y&amp; \leq 2\\
 x-2y&amp; \leq 5\\
 x&amp; \geq0
 \end{align*}
 </div></div> <div class="para" id="ex-uc-1-4">may be restated as the following canonical optimization problem:</div> <div class="para logical" id="ex-uc-1-5"><div class="displaymath process-math" id="ex-uc-1-5-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y^+, y^-)  &amp; = 4x+y^+-y^-\\
-\textbf{Subject to: } x+y^+-y^-&amp; \leq 2\\
+\textbf{subject to: } x+y^+-y^-&amp; \leq 2\\
 x-2y^+ + 2y^-&amp; \leq 5\\
 x, y^+, y^-&amp; \geq0
 \end{align*}
@@ -722,10 +723,10 @@ x, y^+, y^-&amp; \geq0
 <div class="para" id="ex-uc-3-1-1">Solve the original optimization problem.</div></article><article class="task exercise-like" id="ex-uc-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="ex-uc-4-1-1">How do the solutions compare?</div></article></article><article class="exercise exercise-like" id="ex-superconstrained"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="introduction" id="ex-superconstrained-1">
-<div class="para" id="ex-superconstrained-1-1">Another method method for transforming a linear programming problem with equations of constraint into canonical form is to replace every equation of constraint by two inequality constraints. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.</div> <div class="para" id="ex-superconstrained-1-2">For example:</div> <div class="para logical" id="ex-superconstrained-1-3"><div class="displaymath process-math" id="ex-superconstrained-1-3-1">
+<div class="para" id="ex-superconstrained-1-1">Another method method for transforming a linear optimization problem with equations of constraint into canonical form is to replace every equation of constraint by two inequality constraints. This produces an equivalent canonical linear optimization problem which is solved by using the simplex algorithm.</div> <div class="para" id="ex-superconstrained-1-2">For example:</div> <div class="para logical" id="ex-superconstrained-1-3"><div class="displaymath process-math" id="ex-superconstrained-1-3-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y, z)  &amp; = x+y+z\\
-\textbf{Subject to: } x+2z&amp; \leq 7\\
+\textbf{subject to: } x+2z&amp; \leq 7\\
 -x+2y-z&amp; \leq 3\\
 x+y&amp; =7\\
 x, y, z&amp; \geq0
@@ -733,7 +734,7 @@ x, y, z&amp; \geq0
 </div></div> <div class="para" id="ex-superconstrained-1-4">may be restated as the following canonical optimization problem:</div> <div class="para logical" id="ex-superconstrained-1-5"><div class="displaymath process-math" id="ex-superconstrained-1-5-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y, z)  &amp; = x+y+z\\
-\textbf{Subject to: } x+2z&amp; \leq 7\\
+\textbf{subject to: } x+2z&amp; \leq 7\\
 -x+2y-z&amp; \leq 3\\
 x+y&amp; \leq 7\\
 x+y&amp; \geq 7\\
@@ -749,7 +750,7 @@ x, y, z&amp; \geq0.
 <div class="para logical" id="exercises-noncanon-7-2"><div class="displaymath process-math" id="exercises-noncanon-7-2-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y, z)  &amp; = 2x+y-2z\\
-\textbf{Subject to: } 2x+y&amp; \leq 3\\
+\textbf{subject to: } 2x+y&amp; \leq 3\\
 x+2y-z&amp; \leq 5\\
 x+y+z&amp; =0\\
 x, y&amp; \geq0.

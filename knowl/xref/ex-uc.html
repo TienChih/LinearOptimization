@@ -15,17 +15,17 @@
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
 </h4>
 <div class="introduction">
-<div class="para">Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear programming problem which is solved by using the simplex algorithm.</div> <div class="para">For example:</div> <div class="para logical"><div class="displaymath process-math">
+<div class="para">Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear optimization problem which is solved by using the simplex algorithm.</div> <div class="para">For example:</div> <div class="para logical"><div class="displaymath process-math">
 \begin{align*}
 \textbf{Maximize: }  f(x,y)  &amp; = 4x+y\\
-\textbf{Subject to: } x+y&amp; \leq 2\\
+\textbf{subject to: } x+y&amp; \leq 2\\
 x-2y&amp; \leq 5\\
 x&amp; \geq0
 \end{align*}
 </div></div> <div class="para">may be restated as the following canonical optimization problem:</div> <div class="para logical"><div class="displaymath process-math">
 \begin{align*}
 \textbf{Maximize: }  f(x,y^+, y^-)  &amp; = 4x+y^+-y^-\\
-\textbf{Subject to: } x+y^+-y^-&amp; \leq 2\\
+\textbf{subject to: } x+y^+-y^-&amp; \leq 2\\
 x-2y^+ + 2y^-&amp; \leq 5\\
 x, y^+, y^-&amp; \geq0
 \end{align*}

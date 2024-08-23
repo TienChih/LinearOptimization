@@ -143,12 +143,12 @@ sagecell.makeSagecell({
 #activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
 #activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
 #activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
-#activity-tableaubounded-9-1-2 { counter-set: activity-tableaubounded-9-1-2 0; }
-#activity-tableaubounded-9-1-2 > li::marker { content: ""counter(activity-tableaubounded-9-1-2,upper-alpha)"."; }
-#activity-tableaubounded-9-1-2 > li { counter-increment: activity-tableaubounded-9-1-2; }
-#subsec-basicfeasible-4-5-1-4 { counter-set: subsec-basicfeasible-4-5-1-4 0; }
-#subsec-basicfeasible-4-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-4-5-1-4,upper-alpha)"."; }
-#subsec-basicfeasible-4-5-1-4 > li { counter-increment: subsec-basicfeasible-4-5-1-4; }
+#subsec-basicfeasible-4-4-1-2 { counter-set: subsec-basicfeasible-4-4-1-2 0; }
+#subsec-basicfeasible-4-4-1-2 > li::marker { content: ""counter(subsec-basicfeasible-4-4-1-2,upper-alpha)"."; }
+#subsec-basicfeasible-4-4-1-2 > li { counter-increment: subsec-basicfeasible-4-4-1-2; }
+#subsec-basicfeasible-5-5-1-4 { counter-set: subsec-basicfeasible-5-5-1-4 0; }
+#subsec-basicfeasible-5-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-5-5-1-4,upper-alpha)"."; }
+#subsec-basicfeasible-5-5-1-4 > li { counter-increment: subsec-basicfeasible-5-5-1-4; }
 #def-simplexcanonmaxbf-3-2 { counter-set: def-simplexcanonmaxbf-3-2 0; }
 #def-simplexcanonmaxbf-3-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-3-2,decimal)"."; }
 #def-simplexcanonmaxbf-3-2 > li { counter-increment: def-simplexcanonmaxbf-3-2; }
@@ -170,15 +170,15 @@ sagecell.makeSagecell({
 #unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
 #unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
 #unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-example-5-1-2 { counter-set: unconstrained-example-5-1-2 0; }
+#unconstrained-example-5-1-2 > li::marker { content: ""counter(unconstrained-example-5-1-2,upper-alpha)"."; }
+#unconstrained-example-5-1-2 > li { counter-increment: unconstrained-example-5-1-2; }
 #unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
 #unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
 #unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
-#unconstrained-example-7-1-2 { counter-set: unconstrained-example-7-1-2 0; }
-#unconstrained-example-7-1-2 > li::marker { content: ""counter(unconstrained-example-7-1-2,upper-alpha)"."; }
-#unconstrained-example-7-1-2 > li { counter-increment: unconstrained-example-7-1-2; }
-#unconstrained-example-10-1-2 { counter-set: unconstrained-example-10-1-2 0; }
-#unconstrained-example-10-1-2 > li::marker { content: ""counter(unconstrained-example-10-1-2,upper-alpha)"."; }
-#unconstrained-example-10-1-2 > li { counter-increment: unconstrained-example-10-1-2; }
+#unconstrained-example-9-1-2 { counter-set: unconstrained-example-9-1-2 0; }
+#unconstrained-example-9-1-2 > li::marker { content: ""counter(unconstrained-example-9-1-2,upper-alpha)"."; }
+#unconstrained-example-9-1-2 > li { counter-increment: unconstrained-example-9-1-2; }
 #sec-unconstrained-8-1-2 { counter-set: sec-unconstrained-8-1-2 0; }
 #sec-unconstrained-8-1-2 > li::marker { content: ""counter(sec-unconstrained-8-1-2,decimal)"."; }
 #sec-unconstrained-8-1-2 > li { counter-increment: sec-unconstrained-8-1-2; }
@@ -390,7 +390,6 @@ true);
     \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
     \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
    \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
-   \DeclareMathOperator{\span}{span}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -518,10 +517,11 @@ true);
 <div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Programming</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">CuttingPlane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Cutting-Plane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intsage.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Solving Integer Optimization Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Problems for Chapter 8</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -533,6 +533,7 @@ true);
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-covermatch.html#subsec-Konigs" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Königs Theorem and Bipartite Graphs</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -670,11 +671,11 @@ print(DH.optimal_value())
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.1.1</span><span class="space"> </span><span class="title">Königs Theorem and Bipartite Graphs</span>
 </h3>
 <section class="introduction" id="subsec-Konigs-2"><div class="para" id="subsec-Konigs-2-1">As mentioned above, a full discussion of covers and matchings, while fascinating, would be beyond the scope of this text. We will restrict ourselves to a specific family of graphs.</div></section><article class="definition definition-like" id="def-bipartite"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.1.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.1.7</span><span class="period">.</span>
 </h4>
 <div class="para" id="def-bipartite-1-1">A graph <span class="process-math">\(G\)</span> is said to be bipartite, if its vertices <span class="process-math">\(V\)</span> may be partitioned into two disjoint sets, <span class="process-math">\(V_1, V_2\)</span> where there are no edges between vertices in the same <span class="process-math">\(V_i\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-bp"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.7</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.8</span><span class="period">.</span>
 </h4>
 <article class="task exercise-like" id="activity-bp-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="activity-bp-1-1-1">Is <span class="process-math">\(G\)</span> from <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a> bipartite?</div></article><article class="task exercise-like" id="activity-bp-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
@@ -685,14 +686,14 @@ print(DH.optimal_value())
 <li id="activity-bp-3-1-2-3"><div class="para" id="activity-bp-3-1-2-3-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/nbp2.svg" role="img" class="contained" alt="An undirected graph."></div></div></li>
 <li id="activity-bp-3-1-2-4"><div class="para" id="activity-bp-3-1-2-4-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/bp2.svg" role="img" class="contained" alt="An undirected graph."></div></div></li>
 </ol></article></article><article class="activity project-like" id="subsec-Konigs-5"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.8</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.9</span><span class="period">.</span>
 </h4>
 <div class="para" id="subsec-Konigs-5-1">Prove that if a graph is bipartite, then it must <em class="emphasis">not</em> contain an odd length cycle <details class="ptx-footnote" aria-live="polite" id="subsec-Konigs-5-1-2"><summary class="ptx-footnote__number" title="Footnote 9.1.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="subsec-Konigs-5-1-2">The coverse is also true, but we will leave that alone.</div></details>.</div></article><div class="para" id="subsec-Konigs-6">We now consider coverings and matchings on only bipartite graphs.</div>
 <article class="activity project-like" id="subsec-Konigs-7"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.9</span><span class="period">.</span>
-</h4>
-<div class="para" id="subsec-Konigs-7-1">For the graphs in <a href="sec-covermatch.html#activity-bp" class="xref" data-knowl="./knowl/xref/activity-bp.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.7">Activity 9.1.7</a>, find <span class="process-math">\(\Xi, \tau\text{.}\)</span>  What do you notice? Is there any difference in the results for bipartite and non-bipartite graphs?</div></article><article class="activity project-like" id="activity-covermatcheq"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.10</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-Konigs-7-1">For the graphs in <a href="sec-covermatch.html#activity-bp" class="xref" data-knowl="./knowl/xref/activity-bp.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.8">Activity 9.1.8</a>, find <span class="process-math">\(\Xi, \tau\text{.}\)</span>  What do you notice? Is there any difference in the results for bipartite and non-bipartite graphs?</div></article><article class="activity project-like" id="activity-covermatcheq"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.11</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-covermatcheq-1"><div class="para" id="activity-covermatcheq-1-1">Consider the general linear optimization problems found in <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a> and <a href="sec-covermatch.html#activity-mincover" class="xref" data-knowl="./knowl/xref/activity-mincover.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.4">Activity 9.1.4</a>
 </div></div>
@@ -700,7 +701,7 @@ print(DH.optimal_value())
 <div class="para" id="activity-covermatcheq-2-1-1">Show that if the primal matching problem has an optimal solution <span class="process-math">\(\x^*\)</span> consisting of only integer values, then it corresponds to a maximum matching.</div></article><article class="task exercise-like" id="activity-covermatcheq-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="activity-covermatcheq-3-1-1">Show that if the dual covering problem has an optimal solution <span class="process-math">\(\y^*\)</span> consisting of only integer values, then it corresponds to a minimum cover.</div></article></article><div class="para" id="subsec-Konigs-9">We now consider a general bipartite graph <span class="process-math">\(G\text{,}\)</span> and we suppose the primal matching problem has an optimal solution <span class="process-math">\(\x^*\)</span> with potentially fractional values.  We will explore how we can convert this solution into an integral valued optimal solution.</div>
 <article class="activity project-like" id="activity-cyclefrac"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.11</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.12</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-cyclefrac-1">
 <div class="para" id="activity-cyclefrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div> <div class="para" id="activity-cyclefrac-1-2">Suppose there were a collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle <span class="process-math">\(C\text{.}\)</span>  Without loss of generality, we may label the vertices  <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> so that for <span class="process-math">\(1\leq i \leq k-1\text{,}\)</span> <span class="process-math">\(v_iv_{i+1}\)</span> and <span class="process-math">\(v_kv_1\)</span> have an edge between them, and <span class="process-math">\(x_{i,i+1}^*, x_{k,1}^*\)</span> have fractional values.</div> <div class="para" id="activity-cyclefrac-1-3">To make notation bearable, we’ll understand that <span class="process-math">\(v_{k+1}=v_1\text{.}\)</span>
@@ -721,7 +722,7 @@ print(DH.optimal_value())
 </div></article><article class="task exercise-like" id="activity-cyclefrac-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
 <div class="para" id="activity-cyclefrac-7-1-1">Show that <span class="process-math">\(f(\x') = f(\x^*)\text{.}\)</span>
 </div></article><article class="task exercise-like" id="activity-cyclefrac-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para" id="activity-cyclefrac-8-1-1">When comparing <span class="process-math">\(\x^*\)</span> and <span class="process-math">\(\x'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha cols2" id="activity-cyclefrac-8-1-2">
+<div class="para" id="activity-cyclefrac-8-1-1">When comparing <span class="process-math">\(\x^*\)</span> and <span class="process-math">\(\x'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha" id="activity-cyclefrac-8-1-2">
 <li id="activity-cyclefrac-8-1-2-1"><div class="para" id="activity-cyclefrac-8-1-2-1-1">
 <span class="process-math">\(\x^*\)</span> has fewer integer values.</div></li>
 <li id="activity-cyclefrac-8-1-2-2"><div class="para" id="activity-cyclefrac-8-1-2-2-1">
@@ -730,7 +731,7 @@ print(DH.optimal_value())
 <span class="process-math">\(\x^*, \x'\)</span> have the same number of integer values.</div></li>
 <li id="activity-cyclefrac-8-1-2-4"><div class="para" id="activity-cyclefrac-8-1-2-4-1">This cannot be determined.</div></li>
 </ol></article></article><article class="activity project-like" id="activity-pathfrac"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.12</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.13</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-pathfrac-1">
 <div class="para" id="activity-pathfrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div> <div class="para" id="activity-pathfrac-1-2">Suppose there were <em class="emphasis">no</em> collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle.  Let <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> form a maximal path <span class="process-math">\(P\)</span> where <span class="process-math">\(x^*_{i,i+1}, 1\leq i\leq k-1\)</span> has fractional value.</div> <div class="para" id="activity-pathfrac-1-3">Note that <span class="process-math">\(v_1, v_k\)</span> are the endpoints of <span class="process-math">\(P\text{.}\)</span>
@@ -751,7 +752,7 @@ print(DH.optimal_value())
 </div></article><article class="task exercise-like" id="activity-pathfrac-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
 <div class="para" id="activity-pathfrac-7-1-1">Show that <span class="process-math">\(f(\x') \geq f(\x^*)\text{.}\)</span>  Why does this imply <span class="process-math">\(f(\x') = f(\x^*)\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-pathfrac-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para" id="activity-pathfrac-8-1-1">When comparing <span class="process-math">\(\x^*\)</span> and <span class="process-math">\(\x'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha cols2" id="activity-pathfrac-8-1-2">
+<div class="para" id="activity-pathfrac-8-1-1">When comparing <span class="process-math">\(\x^*\)</span> and <span class="process-math">\(\x'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha" id="activity-pathfrac-8-1-2">
 <li id="activity-pathfrac-8-1-2-1"><div class="para" id="activity-pathfrac-8-1-2-1-1">
 <span class="process-math">\(\x^*\)</span> has fewer integer values.</div></li>
 <li id="activity-pathfrac-8-1-2-2"><div class="para" id="activity-pathfrac-8-1-2-2-1">
@@ -761,7 +762,7 @@ print(DH.optimal_value())
 <li id="activity-pathfrac-8-1-2-4"><div class="para" id="activity-pathfrac-8-1-2-4-1">This cannot be determined.</div></li>
 </ol></article></article><div class="para" id="subsec-Konigs-12">We now switch our attention to covers.  Suppose the dual covering problem has an optimal solution <span class="process-math">\(\y^*\)</span> with potentially fractional values.  We will explore how we can convert this solution into an integral valued optimal solution.</div>
 <article class="activity project-like" id="activity-coverfrac"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.13</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.14</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-coverfrac-1">
 <div class="para" id="activity-coverfrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\y^*\)</span> be an optimal solution to the dual covering problem from <a href="sec-covermatch.html#activity-mincover" class="xref" data-knowl="./knowl/xref/activity-mincover.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.4">Activity 9.1.4</a>.</div> <div class="para" id="activity-coverfrac-1-2">Let <span class="process-math">\(F\subseteq V\)</span> be the set of vertices where <span class="process-math">\(x^*_i\)</span> has a fractional value for all <span class="process-math">\(v_i\in F\text{.}\)</span>  Without loss of generality, suppose <span class="process-math">\(V_1\cap F\geq V_2\cap F\text{.}\)</span>
@@ -801,7 +802,7 @@ print(DH.optimal_value())
 <div class="para" id="activity-coverfrac-8-1-1">For each edge in <span class="process-math">\(E_4\text{,}\)</span> show that the corresponding constraint is still satisfied.</div></article><article class="task exercise-like" id="activity-coverfrac-9"><h5 class="heading"><span class="codenumber">(h)</span></h5>
 <div class="para" id="activity-coverfrac-9-1-1">Show that <span class="process-math">\(g(\y')\leq g(\y^*)\text{.}\)</span>  Why does this imply <span class="process-math">\(g(\y') = g(\y^*)\text{?}\)</span>
 </div></article><article class="task exercise-like" id="activity-coverfrac-10"><h5 class="heading"><span class="codenumber">(i)</span></h5>
-<div class="para" id="activity-coverfrac-10-1-1">When comparing <span class="process-math">\(\y^*\)</span> and <span class="process-math">\(\y'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha cols2" id="activity-coverfrac-10-1-2">
+<div class="para" id="activity-coverfrac-10-1-1">When comparing <span class="process-math">\(\y^*\)</span> and <span class="process-math">\(\y'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha" id="activity-coverfrac-10-1-2">
 <li id="activity-coverfrac-10-1-2-1"><div class="para" id="activity-coverfrac-10-1-2-1-1">
 <span class="process-math">\(\y^*\)</span> has fewer integer values.</div></li>
 <li id="activity-coverfrac-10-1-2-2"><div class="para" id="activity-coverfrac-10-1-2-2-1">
@@ -811,13 +812,13 @@ print(DH.optimal_value())
 <li id="activity-coverfrac-10-1-2-4"><div class="para" id="activity-coverfrac-10-1-2-4-1">This cannot be determined.</div></li>
 </ol></article></article><div class="para" id="subsec-Konigs-14">We are finally ready to state our main result, König’s Theorem.</div>
 <article class="theorem theorem-like" id="thm-Konigs"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">König’s Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.1.15</span><span class="period">.</span><span class="space"> </span><span class="title">König’s Theorem.</span>
 </h4>
 <div class="para" id="thm-Konigs-4-1">Let <span class="process-math">\(G\)</span> be a bipartite graph.  Then <span class="process-math">\(\Xi(G)=\tau(G)\text{.}\)</span>
 </div></article><article class="activity project-like" id="subsec-Konigs-16"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.14</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.16</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-Konigs-16-1-1">Use <a href="sec-covermatch.html#activity-covermatcheq" class="xref" data-knowl="./knowl/xref/activity-covermatcheq.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.10">Activity 9.1.10</a>, <a href="sec-covermatch.html#activity-cyclefrac" class="xref" data-knowl="./knowl/xref/activity-cyclefrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.11">Activity 9.1.11</a>, <a href="sec-covermatch.html#activity-pathfrac" class="xref" data-knowl="./knowl/xref/activity-pathfrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.12">Activity 9.1.12</a>, and <a href="sec-covermatch.html#activity-coverfrac" class="xref" data-knowl="./knowl/xref/activity-coverfrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.13">Activity 9.1.13</a> to prove <a href="sec-covermatch.html#thm-Konigs" class="xref" data-knowl="./knowl/xref/thm-Konigs.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.2: König’s Theorem">Theorem 9.1.2</a>.</div></article></section></section></div>
+<div class="para" id="subsec-Konigs-16-1-1">Use <a href="sec-covermatch.html#activity-covermatcheq" class="xref" data-knowl="./knowl/xref/activity-covermatcheq.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.11">Activity 9.1.11</a>, <a href="sec-covermatch.html#activity-cyclefrac" class="xref" data-knowl="./knowl/xref/activity-cyclefrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.12">Activity 9.1.12</a>, <a href="sec-covermatch.html#activity-pathfrac" class="xref" data-knowl="./knowl/xref/activity-pathfrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.13">Activity 9.1.13</a>, and <a href="sec-covermatch.html#activity-coverfrac" class="xref" data-knowl="./knowl/xref/activity-coverfrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.14">Activity 9.1.14</a> to prove <a href="sec-covermatch.html#thm-Konigs" class="xref" data-knowl="./knowl/xref/thm-Konigs.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.15: König’s Theorem">Theorem 9.1.15</a>.</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="ch-extras.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-sudoku.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

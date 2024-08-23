@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
+</h3>
+<div class="introduction">
+<div class="para">Yafa is an incoming freshman at Fantasi College and she is picking classes for her first semester. Fantasi College has classes either on Monday-Wednesday-Friday from 8:30-9:30, 10:00-11:00, 12:30-1:30 and 2:00-3:00, and on Tuesday-Thursday from 8:30-10:00, 10:30-12:00, and 1:00-2:30.</div> <div class="para">Yafa has put together a list of potential classes she could take this semester, and assigned to them a score from 1 - 10 depending on her interest in the class, the time of day, and her own “research” looking up professors on external rating sites. (Yafa has not yet taken her introductory statistics course, and so doesn’t yet know how unreliable and biased these sites, and reviews in general, are.)</div> <div class="para">(Note that this is not altogether realistic, in that this is a massive oversimplification for the purpose of understanding the key ideas.)</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"># <span class="process-math">\((j)\)</span>
+</td>
+<td class="c m b2 r2 l0 t0 lines">Course Name and Time</td>
+<td class="c m b2 r2 l0 t0 lines">Score <span class="process-math">\((c_j)\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">Art MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">Art MWF 2:00-3:00</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r2 l0 t0 lines">Art TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">Art TuTh 1:00-2:30</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">CS MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">CS TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">Econ MWF 8:30-9:30</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">Econ MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">Econ TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">10</td>
+<td class="c m b0 r2 l0 t0 lines">Econ TuTh 1:00-2:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">11</td>
+<td class="c m b0 r2 l0 t0 lines">Hist MWF 8:30-9:30</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">12</td>
+<td class="c m b0 r2 l0 t0 lines">Hist TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">13</td>
+<td class="c m b0 r2 l0 t0 lines">Lit MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">14</td>
+<td class="c m b0 r2 l0 t0 lines">Lit MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">15</td>
+<td class="c m b0 r2 l0 t0 lines">Lit MWF 2:00-3:00</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">16</td>
+<td class="c m b0 r2 l0 t0 lines">Lit TuTh 8:30-10:00</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">17</td>
+<td class="c m b0 r2 l0 t0 lines">MathA MWF 8:30-9:30</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">18</td>
+<td class="c m b0 r2 l0 t0 lines">MathA MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">19</td>
+<td class="c m b0 r2 l0 t0 lines">MathA TuTh 8:30-10:00</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">20</td>
+<td class="c m b0 r2 l0 t0 lines">MathB MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">21</td>
+<td class="c m b0 r2 l0 t0 lines">MathB MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">22</td>
+<td class="c m b0 r2 l0 t0 lines">MathB TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">23</td>
+<td class="c m b0 r2 l0 t0 lines">Sem MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">24</td>
+<td class="c m b0 r2 l0 t0 lines">Sem MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">25</td>
+<td class="c m b0 r2 l0 t0 lines">Sem TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines">26</td>
+<td class="c m b2 r2 l0 t0 lines">Sem TuTh 10:30-12:00</td>
+<td class="c m b2 r2 l0 t0 lines">7</td>
+</tr>
+</table></div> <div class="para">Additionally, she has the following stipulations to her schedule:</div> <ul class="disc" id="activity-schedule-1-6">
+<li><div class="para">No student is allowed to enroll in different offerings of the same class, MathA and MathB are considered different classes.</div></li>
+<li><div class="para">No student can enroll in more than 1 course in the same timeslot.</div></li>
+<li><div class="para">To prevent burnout, no student each student must have at least one time-slot off every day.</div></li>
+<li><div class="para">No student can enroll in more than 6 or fewer than 4 classes.</div></li>
+<li><div class="para">Each income student must enroll in a Freshman Seminar (Sem).</div></li>
+<li><div class="para">Because of her major, Yafa intends to enroll in at least 1 Math class this semester (either A or B, not exclusive).</div></li>
+<li><div class="para">Yafa wishes to get a headstart on her general education, so she wants to take at least one of either Literature (Lit) or Art (Art).  Similarly, she wishes to take at least one of Economics (Econ) or History (Hist).</div></li>
+</ul> <div class="para">Let <span class="process-math">\(x_j\)</span> be 1 if she takes course <span class="process-math">\(j\)</span> and 0 otherwise.</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">What is a reasonable linear objective function to maximize?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Write out the constraints which restrict students to at most 1 offering of the same class.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Write out the constraints which restrict students to at most 1 course in a given timeslot.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Write out the constraints which ensure each student will have at least one free time-slot a day.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">Write out the constraints which ensure each student is enrolled in at least 4 and at most 6 courses.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Write out the constraint which ensure each student enrolls in one seminar.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">Write out the constraint which ensure that Yafa enrolls in (at least) one Math class.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para">Write out the constraints which ensure that Yafa is on track with her general education credits.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para">Write out the integer maximization problem we have constructed.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para">(Optional) Solve it: <pre id="activity-schedule-11-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
+X = P.new_variable(integer=True, nonnegative=True)
+P.add_constraint(FIXME)
+P.set_objective(FIXME)
+P.show()
+</script></pre> <pre id="activity-schedule-11-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
+for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
+    print(f'x_{i} = {v}')
+</script></pre>
+</div></article></article><span class="incontext"><a class="internal" href="sec-scheduling.html#activity-schedule">in-context</a></span>
+</body>
+</html>

@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <article class="definition definition-like"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
 </h3> <div class="para">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an <span class="process-math">\(n\times n\)</span> assignment tableau <span class="process-math">\(T\text{.}\)</span>
 </div> <ol class="decimal" id="def-hungarian-3-2">
 <li>
@@ -28,10 +28,7 @@
 </li>
 <li><div class="para">Subtract from each row the smallest entry in that row.</div></li>
 <li><div class="para">Subtract from each column the smallest entry in that column.</div></li>
-<li>
-<div class="para">IF <span class="process-math">\(T\)</span> has a permutation set of zeroes:</div>
-<div class="para">STOP</div>
-</li>
+<li><div class="para">IF <span class="process-math">\(T\)</span> has a permutation set of zeroes: STOP</div></li>
 <li><div class="para">Draw a <em class="alert">minimum</em><span class="process-math">\(^*\)</span> number of lines through <span class="process-math">\(T\)</span> covering an entire row or column such that all <span class="process-math">\(0\)</span>’s are covered.</div></li>
 <li><div class="para">Let <span class="process-math">\(M\)</span> be the value of the smallest uncovered entry.  Subtract all uncovered entries by <span class="process-math">\(M\text{,}\)</span> and add <span class="process-math">\(M\)</span> to the entries corresponding to intersections of the lines.</div></li>
 <li><div class="para">GOTO 5.</div></li>
