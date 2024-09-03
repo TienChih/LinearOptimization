@@ -38,7 +38,7 @@
     <task>
       <statement>
         <p>
-          What given a fixed <m>n</m>, what should <m>m</m> be for the system of equations encoded by <m>M</m>  to have a unique solution?
+          Given a fixed <m>n</m>, what is a neccesary condition for the values of <m>m</m> so that the system of equations encoded by <m>M</m>  has a unique solution?
         </p>
       </statement>
     </task>

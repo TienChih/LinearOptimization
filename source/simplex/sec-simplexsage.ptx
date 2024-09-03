@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-simplexsage" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Using Sage</title>
+  <title>Using Sage to Solve Linear Optimization Problems</title>
 
 
   <introduction>

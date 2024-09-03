@@ -229,17 +229,11 @@
       <statement>
         <p>
           Let <m>\mathbf{x}, \mathbf{y}\in S</m>, that is, there are <m>k_x, k_y</m> such that <m>f(\mathbf{x})=a_1x_1+a_2x_2+\cdots a_nx_n = k_x, f(\mathbf{y})= a_1y_1+a_2y_2+\cdots a_ny_n =k_y</m>
-          and <m>k_x, k_y\leq b</m>.  Show that <m>f(t\mathbf{x}+(1-t)\mathbf{y})\leq \max(k_x, k_y)</m>.
+          and <m>k_x, k_y\leq b</m>.  Show that <m>f(t\mathbf{x}+(1-t)\mathbf{y})\leq b</m> for <m>t\in [0,1]</m>.
         </p>
       </statement>
     </task>
-    <task>
-      <statement>
-        <p>
-          Show that <m>f(t\mathbf{x}+(1-t)\mathbf{y})\leq b</m>
-        </p>
-      </statement>
-    </task>
+    
 
     <task>
       <statement>
