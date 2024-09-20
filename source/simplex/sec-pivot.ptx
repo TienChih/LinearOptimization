@@ -56,6 +56,10 @@
           
           What must be true about the slack variables <m>t_i</m>?
         </p>
+        <!--
+        TYPO
+        punctuation needed below
+        -->
         <ol marker="A.">
           <li>
             <p>
@@ -101,6 +105,10 @@
             <p>
               <m>t_i</m> is unbounded.
             </p>
+            <!-- 
+            TYPO
+            should be could be unbounded
+            -->
           </li>
         </ol>
       </statement>
@@ -377,6 +385,11 @@
         </p>
       </statement>
     </task>
+    <!--
+    TYPO
+    one more?
+    DOENET
+    -->
     <hint>
       <interactive desmos="eawi5elsrl"  />
     </hint>
@@ -1005,6 +1018,10 @@
             <mrow>-x+2y \amp \leq 30</mrow>
             <mrow>-x-2y \amp \leq 0</mrow>
             <mrow>-3x-y \amp \leq 20</mrow>
+            <!-- 
+            TYPO
+            Add x, y>=0
+            -->
           </md>
           which we may encode as:
          
@@ -1368,6 +1385,10 @@
               <cell halign="left" right="medium">
               </cell>
               <cell>
+                <!-- 
+                TYPO
+                * should be below
+                -->
                 <m> ? </m>
               </cell>
               <cell right="medium">

@@ -588,6 +588,10 @@
                 <m>3</m>
               </cell>
               <cell right="medium">
+                <!-- 
+                TYPO
+                Should be 12
+                -->
                 <m>22</m>
               </cell>
               <cell halign="left">
@@ -958,6 +962,10 @@
           For each of the following tableaus, determine what if any of the following are true:
           <ul>
             <li>
+              <!--
+              TYPO
+              should be basic solution
+              -->
               <p>
                 The tableau corresponds to an infeasible solution.
               </p>
@@ -2558,6 +2566,10 @@
           </p>
         </statement>
       </task>
+      <!-- 
+      TYPO
+      LET'S THEN SAY
+      -->
       <task>
         <statement>
           <p>
