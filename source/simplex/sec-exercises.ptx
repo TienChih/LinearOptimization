@@ -337,6 +337,7 @@
       <!-- 
           TYPO
           c and d have double counted variables.
+          Fixed
       -->
       
          
@@ -534,7 +535,7 @@
                   <m>4</m>
                 </cell>
                 <cell halign="left">
-                  <m>=-t_3</m>
+                  <m>=-x_3</m>
                 </cell>
               </row>
 
@@ -678,7 +679,7 @@
                   <m>7/2</m>
                 </cell>
                 <cell halign="left">
-                  <m>=-x_1</m>
+                  <m>=-x_3</m>
                 </cell>
               </row>
               <row>

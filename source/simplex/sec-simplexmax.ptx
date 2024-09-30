@@ -22,6 +22,7 @@
           <!-- 
           TYPO
           Second t_3 should be t_2
+          Fixed
           -->
           <tabular halign="center">
             <row>
@@ -31,7 +32,7 @@
                 <m>x_1</m>
               </cell>
               <cell bottom="medium">
-                <m>t_3</m>
+                <m>t_2</m>
               </cell>
               <cell bottom="medium">
                 <m>t_1</m>
@@ -595,8 +596,9 @@
                 <!-- 
                 TYPO
                 Should be 12
+                Fixed
                 -->
-                <m>22</m>
+                <m>12</m>
               </cell>
               <cell halign="left">
                 <m>=-t_2</m>
@@ -969,9 +971,10 @@
               <!--
               TYPO
               should be basic solution
+              Fixed
               -->
               <p>
-                The tableau corresponds to an infeasible solution.
+                The tableau records an infeasible basic solution.
               </p>
             </li>
             <li>

@@ -59,21 +59,22 @@
         <!--
         TYPO
         punctuation needed below
+        fixed
         -->
         <ol marker="A.">
           <li>
             <p>
-              <m>t_i\leq 0</m>
+              <m>t_i\leq 0.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>t_i\geq 0</m>
+              <m>t_i\geq 0.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>\sum_{i=1}^m t_i=0</m>
+              <m>\sum_{i=1}^m t_i=0.</m>
             </p>
           </li>
         </ol>
@@ -88,26 +89,27 @@
         <ol style="A">
           <li>
             <p>
-              <m>b_i</m>
+              <m>b_i.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>c_i</m>
+              <m>c_i.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>x_i</m>
+              <m>x_i.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>t_i</m> is unbounded.
+              <m>t_i</m> could be unbounded.
             </p>
             <!-- 
             TYPO
             should be could be unbounded
+            Fixed
             -->
           </li>
         </ol>
@@ -749,9 +751,10 @@
       <!-- 
           TYPO
           Maybe should be sufficient?
+          Fixed
       -->
       <p>
-        Based on <xref ref="activity-widget"/>, what would be a reasonable criteria to determine if a feasible tableau has a basic optimal solution?
+        Based on <xref ref="activity-widget"/>, what would be a reasonable sufficient condition for a feasible tableau to have a basic optimal solution?
       </p>
       <ol marker="A." cols="2">
         <li>
@@ -1022,9 +1025,11 @@
             <mrow>-x+2y \amp \leq 30</mrow>
             <mrow>-x-2y \amp \leq 0</mrow>
             <mrow>-3x-y \amp \leq 20</mrow>
+            <mrow>-x,y \amp \geq 0</mrow>
             <!-- 
             TYPO
             Add x, y>=0
+            Fixed
             -->
           </md>
           which we may encode as:
@@ -1392,11 +1397,12 @@
                 <!-- 
                 TYPO
                 * should be below
+                Fixed
                 -->
-                <m> ? </m>
+                <m> ?^* </m>
               </cell>
               <cell right="medium">
-                <m> ?^* </m>
+                <m> ? </m>
               </cell>
               <cell right="medium">
                 <m> ? </m>
