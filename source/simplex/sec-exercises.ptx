@@ -333,6 +333,11 @@
           </ul>
         </p>
       </introduction>
+
+      <!-- 
+          TYPO
+          c and d have double counted variables.
+      -->
       
          
         <task>

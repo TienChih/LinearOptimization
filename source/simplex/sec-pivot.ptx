@@ -746,6 +746,10 @@
 
   <activity>
     <statement>
+      <!-- 
+          TYPO
+          Maybe should be sufficient?
+      -->
       <p>
         Based on <xref ref="activity-widget"/>, what would be a reasonable criteria to determine if a feasible tableau has a basic optimal solution?
       </p>
