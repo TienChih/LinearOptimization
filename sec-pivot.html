@@ -570,16 +570,16 @@ x_1, x_2, \ldots, x_m\amp \geq  0.
 <article class="task exercise-like" id="activity-maxslack-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-maxslack-2-1-1">What must be true about the slack variables <span class="process-math">\(t_i\text{?}\)</span>
 </div>  <ol class="upper-alpha" id="activity-maxslack-2-1-2">
-<li id="activity-maxslack-2-1-2-1"><div class="para" id="activity-maxslack-2-1-2-1-1"><span class="process-math">\(\displaystyle t_i\leq 0\)</span></div></li>
-<li id="activity-maxslack-2-1-2-2"><div class="para" id="activity-maxslack-2-1-2-2-1"><span class="process-math">\(\displaystyle t_i\geq 0\)</span></div></li>
-<li id="activity-maxslack-2-1-2-3"><div class="para" id="activity-maxslack-2-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i=1}^m t_i=0\)</span></div></li>
+<li id="activity-maxslack-2-1-2-1"><div class="para" id="activity-maxslack-2-1-2-1-1"><span class="process-math">\(\displaystyle t_i\leq 0.\)</span></div></li>
+<li id="activity-maxslack-2-1-2-2"><div class="para" id="activity-maxslack-2-1-2-2-1"><span class="process-math">\(\displaystyle t_i\geq 0.\)</span></div></li>
+<li id="activity-maxslack-2-1-2-3"><div class="para" id="activity-maxslack-2-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i=1}^m t_i=0.\)</span></div></li>
 </ol></article><article class="task exercise-like" id="activity-maxslack-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-maxslack-3-1-1">What is the largest value <span class="process-math">\(t_i\)</span> could obtain?</div> <ol class="decimal" id="activity-maxslack-3-1-2">
-<li id="activity-maxslack-3-1-2-1"><div class="para" id="activity-maxslack-3-1-2-1-1"><span class="process-math">\(\displaystyle b_i\)</span></div></li>
-<li id="activity-maxslack-3-1-2-2"><div class="para" id="activity-maxslack-3-1-2-2-1"><span class="process-math">\(\displaystyle c_i\)</span></div></li>
-<li id="activity-maxslack-3-1-2-3"><div class="para" id="activity-maxslack-3-1-2-3-1"><span class="process-math">\(\displaystyle x_i\)</span></div></li>
+<li id="activity-maxslack-3-1-2-1"><div class="para" id="activity-maxslack-3-1-2-1-1"><span class="process-math">\(\displaystyle b_i.\)</span></div></li>
+<li id="activity-maxslack-3-1-2-2"><div class="para" id="activity-maxslack-3-1-2-2-1"><span class="process-math">\(\displaystyle c_i.\)</span></div></li>
+<li id="activity-maxslack-3-1-2-3"><div class="para" id="activity-maxslack-3-1-2-3-1"><span class="process-math">\(\displaystyle x_i.\)</span></div></li>
 <li id="activity-maxslack-3-1-2-4"><div class="para" id="activity-maxslack-3-1-2-4-1">
-<span class="process-math">\(t_i\)</span> is unbounded.</div></li>
+<span class="process-math">\(t_i\)</span> could be unbounded.</div></li>
 </ol></article></article><article class="observation remark-like" id="sec-pivot-4"><h3 class="heading">
 <span class="type">Observation</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
 </h3>
@@ -842,7 +842,7 @@ c_10 + c_20 +\cdots c_m0-d  \amp =  f.
 </div></article><article class="task exercise-like" id="activity-widget-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
 <div class="para" id="activity-widget-11-1-1">Consider the plot of the feasible region for this problem.  What exactly, geometrically, did we end up doing in this activity?</div> <div class="para" id="activity-widget-11-1-2"><iframe id="activity-widget-11-1-2-1" width="600" height="615" src="activity-widget-11-1-2-1-if.html"></iframe></div></article></article><article class="activity project-like" id="sec-pivot-10"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
-</h3> <div class="para" id="sec-pivot-10-1-1">Based on <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.6">Activity 2.1.6</a>, what would be a reasonable criteria to determine if a feasible tableau has a basic optimal solution?</div> <ol class="upper-alpha cols2" id="sec-pivot-10-1-2">
+</h3> <div class="para" id="sec-pivot-10-1-1">Based on <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.6">Activity 2.1.6</a>, what would be a reasonable sufficient condition for a feasible tableau to have a basic optimal solution?</div> <ol class="upper-alpha cols2" id="sec-pivot-10-1-2">
 <li id="sec-pivot-10-1-2-1"><div class="para" id="sec-pivot-10-1-2-1-1">Some of the <span class="process-math">\(c_j\leq 0\text{.}\)</span>
 </div></li>
 <li id="sec-pivot-10-1-2-2"><div class="para" id="sec-pivot-10-1-2-2-1">All of the <span class="process-math">\(c_j\leq 0\text{.}\)</span>
@@ -952,7 +952,8 @@ c_10 + c_20 +\cdots c_m0-d  \amp =  f.
 -7x+y \amp \leq 0\\
 -x+2y \amp \leq 30\\
 -x-2y \amp \leq 0\\
--3x-y \amp \leq 20
+-3x-y \amp \leq 20\\
+-x,y \amp \geq 0
 \end{align*}
 </div>
 <div class="para">which we may encode as:</div>
@@ -1107,9 +1108,9 @@ c_10 + c_20 +\cdots c_m0-d  \amp =  f.
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
-<td class="c m b0 r0 l0 t0 lines"> <span class="process-math">\(? \)</span>
+<td class="c m b0 r0 l0 t0 lines"> <span class="process-math">\(?^* \)</span>
 </td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?^* \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(? \)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
 </tr>
