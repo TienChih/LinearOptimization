@@ -59,7 +59,7 @@
     <task>
       <statement>
         <p>
-         Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 new eyes and 15 frogs.  Which provides the greater increase in revenue?
+         Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 newt eyes and 15 frogs.  Which provides the greater increase in revenue?
          Is this consistent with what you thought earlier?
         </p>
       </statement>
@@ -68,7 +68,7 @@
     <task>
       <statement>
         <p>
-          If the need for healing elixer increases and they now sell for 5 gold, would that change our answer?
+          If the need for healing elixer increases and they now sell for 5 gold, would that change our answers above?
         </p>
       </statement>
     </task>
@@ -78,6 +78,11 @@
   </exploration>
 
   <activity>
+    <!-- 
+    TYPO
+    assorted typos
+    fixed
+    -->
     <statement>
       <p>
         In both <xref ref="exploration-witch"/> and <xref ref="activity-insurance"/> we essentially explore the idea of assigning values
@@ -94,17 +99,17 @@
         </li>
         <li>
           <p>
-            The total value of the materials should be as big as possible.
+            The total value of the materials should be as big as possible, to maximize costs associated with their value.
           </p>
         </li>
         <li>
           <p>
-            The total value of the materials should be as small as possible.
+            The total value of the materials should be as small as possible, to minimize costs associated with their value.
           </p>
         </li>
         <li>
           <p>
-            The total value of these materials should be greater than or equal to the value of selling products made with those materials.
+            The total value of these materials should reflect the value of selling products made with those materials.
           </p>
         </li>
         <li>
@@ -114,7 +119,7 @@
         </li>
         <li>
           <p>
-            If a material is ever used, it has zero value.
+            If a material is never used, it has zero value.
           </p>
         </li>
       </ol>
@@ -464,7 +469,7 @@
           </tabular>
         </p>
         <p>
-          For each tableau, confirm the solution is feasible.  Then look at the objective row, is there anything familiar about those values?
+          For each tableau, confirm the solution is feasible.  
         </p>
        
       </statement>

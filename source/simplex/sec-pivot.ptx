@@ -366,7 +366,7 @@
             \draw[very thick,->] (0,-0.2) -- (0,2);
             \draw[black, thick] (0,0) -- (0,1.6) -- (1, 1) -- (1.5,0)  -- (0,0);   
             \draw[teal, dashed, thick] (0,1.6) --node[above, sloped, pos= 0.2]{\tiny $3x+5y=8$} (2, 0.4);          
-            \draw[orange, dashed, thick] (0.5,2) --node[above, sloped, pos= 0.8]{\tiny $9x+6y=32$} (1.5, 0);
+            \draw[orange, dashed, thick] (0.5,2) --node[above, sloped, pos= 0.8]{\tiny $2x+y=3$} (1.5, 0);
             \draw[ fill] (0,0) node[below left]{\tiny $(0,0)$} circle (1pt); 
             \draw[ fill] (0,1.6) node[ left]{\tiny $(0,1.6)$} circle (1pt); 
             \draw[ fill] (1.5,0) node[ below ]{\tiny $(1.5,0)$} circle (1pt); 
@@ -403,6 +403,15 @@
       <statement>
         <p>
           What points in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=3</m>?
+        </p>
+      </statement>
+      
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What points in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=0</m>?  What about <m>t_1=8, t_2=0</m>?
         </p>
       </statement>
     </task>
