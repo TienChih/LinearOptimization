@@ -7,7 +7,7 @@
   </introduction>   
   
 
-  <notation>
+  <observation>
     <statement>
       <p>
         Recall the primal maximization problem <xref ref="activity-maxslack"/>, and the corresponding
@@ -33,7 +33,7 @@
         <m>\mathbf{y}\in \mathbb{R}^n</m> subject to <me> \mathbf{y}^{\top}A\geq c^{\top}, \mathbf{y}\geq 0.</me>
       </p>
     </statement>
-  </notation>
+  </observation>
 
   <activity xml:id="activity-weakduality">
     <introduction>
