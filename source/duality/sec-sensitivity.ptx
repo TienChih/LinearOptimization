@@ -678,7 +678,7 @@
           </tabular>
         </p>
         <p>
-          Suppose that for <m>j\in \{1,2,\ldots,n\}</m> each plane <m>-x_j=0</m> has corresponding normal vector
+          Suppose that for <m>j\in \{1,2,\ldots,m\}</m> each plane <m>-x_j=0</m> has corresponding normal vector
           <m>\mathbf{v}_j</m>. 
         </p>
       </introduction>
@@ -699,7 +699,7 @@
       <task>
         <statement>
           <p>
-            Suppose that this tableau corresponds to an optimal solution.  If we decrease any <m>x_1</m> from <m>0</m> to <m>-1</m>, how does <m>f</m> change?  What does this decrease correspond to geometrically?
+            Suppose that this tableau corresponds to an optimal solution.  If we decrease any <m>x_j</m> from <m>0</m> to <m>-1</m>, how does <m>f</m> change?  What does this decrease correspond to geometrically?
           </p>
         </statement>
       </task>

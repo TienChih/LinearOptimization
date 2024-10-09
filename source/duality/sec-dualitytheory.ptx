@@ -29,7 +29,7 @@
       </p>
 
       <p>
-        Likewise, we can rephrase the dual min problem as follows: Minimize <m>f = \mathbf{y}^{\top}b-d</m> for
+        Likewise, we can rephrase the dual min problem as follows: Minimize <m>g = \mathbf{y}^{\top}b-d</m> for
         <m>\mathbf{y}\in \mathbb{R}^n</m> subject to <me> \mathbf{y}^{\top}A\geq c^{\top}, \mathbf{y}\geq 0.</me>
       </p>
     </statement>
