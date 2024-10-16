@@ -18,7 +18,7 @@
           a_{n1} \amp a_{n2} \amp \cdots \amp a_{nm} \end{bmatrix}, 
         b = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}, 
       c^{\top}= \begin{bmatrix}c_1 \amp c_2\amp \cdots \amp c_m \end{bmatrix}, d=d</me>
-
+  
       
 
       </p>
@@ -182,7 +182,8 @@
     <task>
       <statement>
         <p>
-          Let <m>\mathbf{d} = u'-u_0</m> decribe geometrically what <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m> represents.  Think dot product and projections.
+          Let <m>\mathbf{d} = u'-u_0</m> decribe geometrically what <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m> represents.  (Think dot product, projections and for <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m>
+          to start at <m>u</m>).
         </p>
       </statement>
     </task>
@@ -196,7 +197,7 @@
     <task>
       <statement>
         <p>
-          Let <m>w=\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u_0</m>, show that <m> w = \alpha u_0 + (1-\alpha)u'</m> 
+          Let <m>w=\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u_0</m>, show that <m> w = \alpha u' + (1-\alpha)u_0</m> 
         </p>
       </statement>
     </task>
@@ -218,7 +219,7 @@
     <task>
       <statement>
         <p>
-          Why is the last statement a contradiction?
+          Why does the last statement result in a contradiction?
         </p>
       </statement>
     </task>

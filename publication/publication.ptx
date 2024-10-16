@@ -98,6 +98,7 @@
       exercise-worksheet="no"
       exercise-readingquestion="no"
     />
+    <tableofcontents  focused="yes" preexpanded-levels="1" />
     <!-- Specify the style of the html by giving names to      -->
     <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
     <!-- put <css style="oscarlevin"/>                         -->
@@ -127,6 +128,7 @@
     <!-- StatCounter requires both values to be set            -->
     <!-- <analytics google-gst="UA-0123456-1" statcounter-project="0123456"
     statcounter-security="0123456"/> -->
+    
   </html>
 
   <!-- To use WeBWorK, you need a server.  -->
