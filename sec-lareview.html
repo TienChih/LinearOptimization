@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -543,7 +543,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-lareview"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">A.1</span><span class="space"> </span><span class="title">Linear Algebra Review</span>
 </h2>
-<section class="introduction" id="sec-lareview-2"><div class="para" id="sec-lareview-2-1">This is an extremely brief review of linear algebra.  It is understood that linear algebra is a pre-requisite for this course.  However, everyone needs refreshers or a reference for specifics from time to time.</div> <div class="para" id="sec-lareview-2-2">If a more thorough treatment is needed, then there are numerous linear algebra texts, and many that are OERs like this text.   <a class="external" href="https://understandinglinearalgebra.org/home.html" target="_blank">“Understanding Linear Algebra”</a><details class="ptx-footnote" aria-live="polite" id="sec-lareview-2-2-2"><summary class="ptx-footnote__number" title="Footnote A.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-lareview-2-2-2"><code class="code-inline tex2jax_ignore">understandinglinearalgebra.org/home.html</code></div></details> by David Austin is an excellent text with a focus on developing geometric intuition, and less so on formal proofs.  For a more theory oriented text, <a class="external" href="https://hefferon.net/linearalgebra/" target="_blank">“Linear Algebra”</a><details class="ptx-footnote" aria-live="polite" id="sec-lareview-2-2-4"><summary class="ptx-footnote__number" title="Footnote A.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-lareview-2-2-4"><code class="code-inline tex2jax_ignore">hefferon.net/linearalgebra/</code></div></details> by Jim Hefferon is an excellent choice.</div></section><article class="definition definition-like" id="def-matrix"><h3 class="heading">
+<section class="introduction" id="sec-lareview-2"><div class="para" id="sec-lareview-2-1">This is an extremely brief review of linear algebra.  It is understood that linear algebra is a pre-requisite for this course.  However, everyone needs refreshers or a reference for specifics from time to time.</div>
+<div class="para" id="sec-lareview-2-2">If a more thorough treatment is needed, then there are numerous linear algebra texts, and many that are OERs like this text.   <a class="external" href="https://understandinglinearalgebra.org/home.html" target="_blank">“Understanding Linear Algebra”</a><details class="ptx-footnote" aria-live="polite" id="sec-lareview-2-2-2"><summary class="ptx-footnote__number" title="Footnote A.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-lareview-2-2-2"><code class="code-inline tex2jax_ignore">understandinglinearalgebra.org/home.html</code></div></details> by David Austin is an excellent text with a focus on developing geometric intuition, and less so on formal proofs.  For a more theory oriented text, <a class="external" href="https://hefferon.net/linearalgebra/" target="_blank">“Linear Algebra”</a><details class="ptx-footnote" aria-live="polite" id="sec-lareview-2-2-4"><summary class="ptx-footnote__number" title="Footnote A.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-lareview-2-2-4"><code class="code-inline tex2jax_ignore">hefferon.net/linearalgebra/</code></div></details> by Jim Hefferon is an excellent choice.</div></section><article class="definition definition-like" id="def-matrix"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.1.1</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="def-matrix-1-1">
@@ -808,12 +809,14 @@ a_{1m} &amp; a_{2m} &amp; \cdots &amp; a_{nm}\\
 <div class="para" id="thm-subspace-1-1">Let <span class="process-math">\(V\)</span> be a vector space, then <span class="process-math">\(W\subseteq V\)</span> is a subspace of <span class="process-math">\(V\text{,}\)</span> if <span class="process-math">\(W\)</span> is non-empty, and if for any <span class="process-math">\(\p, \q\in W\)</span> and scalars <span class="process-math">\(a,b\text{,}\)</span> we have that <span class="process-math">\(a\p+b\q\in W\text{.}\)</span>
 </div></article><article class="example example-like" id="sec-lareview-27"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">A.1.22</span><span class="period">.</span>
-</h3>In <span class="process-math">\(\mathbb{R}^4\text{,}\)</span> the set<div class="displaymath process-math">
+</h3>
+<span class="process-math">\(\mathbb{R}^4\text{,}\)</span><div class="displaymath process-math">
 \begin{equation*}
 W = \left\{ \begin{bmatrix}
 u \\ 0 \\ w \\ 0 \end{bmatrix}: u,w\in \mathbb{R}\right\}
 \end{equation*}
-</div>forms a subspace of  <span class="process-math">\(\mathbb{R}^4\text{.}\)</span></article><article class="definition definition-like" id="def-linearcombination"><h3 class="heading">
+</div>
+<span class="process-math">\(\mathbb{R}^4\text{.}\)</span></article><article class="definition definition-like" id="def-linearcombination"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.1.23</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="def-linearcombination-1-1">
@@ -890,7 +893,8 @@ S =  \left\{ \begin{bmatrix}
 \begin{bmatrix}
 2 \\ -3 \\ 19  \end{bmatrix}
 \right\}\)</span> is dependent.</div>
-</div> <div class="para" id="sec-lareview-32-2">
+</div>
+<div class="para" id="sec-lareview-32-2">
 <span class="process-math">\(\left\{ \begin{bmatrix}
 1 \\ 2 \\ 3  \end{bmatrix}, \begin{bmatrix}
 2 \\ 5 \\ -4  \end{bmatrix},

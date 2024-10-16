@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -559,7 +559,9 @@ true);
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="exploration-sudoku-1">
-<div class="para" id="exploration-sudoku-1-1">Consider the following sudoku puzzle:</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sudoku.svg" role="img" class="contained" alt="A sudoku puzzle."></div> <div class="para logical" id="exploration-sudoku-1-3">
+<div class="para" id="exploration-sudoku-1-1">Consider the following sudoku puzzle:</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sudoku.svg" role="img" class="contained" alt="A sudoku puzzle."></div>
+<div class="para logical" id="exploration-sudoku-1-3">
 <div class="para">Note that the rules for sudoku are that we fill in each entry with an integer <span class="process-math">\(1, \ldots,9\)</span> so that:</div>
 <ul class="disc" id="exploration-sudoku-1-3-2">
 <li id="exploration-sudoku-1-3-2-1"><div class="para" id="exploration-sudoku-1-3-2-1-1">Each row contains exactly one of each number.</div></li>
@@ -590,11 +592,12 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.2.4</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-sudoku-9-1">
-<div class="para" id="sec-sudoku-9-1-1">Consider the following order 2 sudoku puzzle:</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sudokusmall.svg" role="img" class="contained" alt="An order 2 sudoku puzzle."></div>
+<div class="para" id="sec-sudoku-9-1-1">Consider the following order 2 sudoku puzzle:</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sudokusmall.svg" role="img" class="contained" alt="An order 2 sudoku puzzle."></div>
 </div>
 <article class="task exercise-like" id="sec-sudoku-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-sudoku-9-2-1-1">Following <a href="sec-sudoku.html#activity-order3sudoku" class="xref" data-knowl="./knowl/xref/activity-order3sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.2.3">Activity 9.2.3</a>, write out the linear optimization problem which would compute the solved puzzle.</div></article><article class="task exercise-like" id="sec-sudoku-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-sudoku-9-3-1-1">If you <em class="emphasis">really</em> want to, solve this problem (there are 64 decision variables so...): <pre id="sec-sudoku-9-3-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para" id="sec-sudoku-9-3-1-1">If you <em class="emphasis">really</em> want to, solve this problem (there are 64 decision variables so...): <div id="sec-sudoku-9-3-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
 c = (FIXME)
@@ -604,14 +607,15 @@ P = InteractiveLPProblem(A, b, c,
  variable_type = "",
  problem_type = FIXME)
 P
-</script></pre> <pre id="sec-sudoku-9-3-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
+</script></div> <div id="sec-sudoku-9-3-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
-</script></pre>
+</script></div>
 </div></article></article><div class="para" id="sec-sudoku-10">This provides an oppourtunity for an enteprising student to engage in some further exploration.</div>
 <article class="project project-like" id="sec-sudoku-11"><h3 class="heading">
 <span class="type">Project</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-sudoku-11-1">Write  <em class="emphasis">effecient</em> code in Sage where one inputs a <span class="process-math">\(9\times 9\)</span> matrix representing a sudoku puzzle (with maybe 0’s for blank entries), and the code produces the appropriate linear optimization problem and solves it.</div> <div class="para" id="sec-sudoku-11-2">For more advanced or experienced coders, generalize this to allow the <code class="code-inline tex2jax_ignore">order</code> of the sudoku puzzle to be a parameter.</div></article></section></div>
+<div class="para" id="sec-sudoku-11-1">Write  <em class="emphasis">effecient</em> code in Sage where one inputs a <span class="process-math">\(9\times 9\)</span> matrix representing a sudoku puzzle (with maybe 0’s for blank entries), and the code produces the appropriate linear optimization problem and solves it.</div>
+<div class="para" id="sec-sudoku-11-2">For more advanced or experienced coders, generalize this to allow the <code class="code-inline tex2jax_ignore">order</code> of the sudoku puzzle to be a parameter.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-covermatch.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-scheduling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

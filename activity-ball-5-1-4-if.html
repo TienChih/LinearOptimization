@@ -94,7 +94,21 @@ window.MathJax = {
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/doenet-standalone-test@0.6.0/dist/style.css">
 <script onload="onLoad()" type="module" src="https://cdn.jsdelivr.net/npm/doenet-standalone-test@0.6.0/dist/doenet-standalone.min.js"></script><script>function onLoad() {window.renderDoenetToContainer(document.querySelector(".doenetml-applet"))}</script>
 </head>
-<body class="ptx-content ignore-math" id="changeme"><div style="width:600px; height:645px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div class="doenetml-applet">
+<body class="ptx-content ignore-math" id="changeme">
+<div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+   
+   \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
+    \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
+    \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div style="width:600px; height:645px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div class="doenetml-applet">
 <div class="doenetml-loading" style="text-align:center">
 <p><img src="https://www.doenet.org/Doenet_Logo_Frontpage.png"></p>
 <p>Waiting on the page to load...</p>
@@ -125,5 +139,6 @@ window.MathJax = {
 <slider from="0.1" to="1" initialValue="1" name="r" width="300" step="0.05" showValue="true" showTicks="true"/> 
  
           </script>
-</div></div></body>
+</div></div>
+</body>
 </html>

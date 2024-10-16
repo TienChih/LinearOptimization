@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -547,7 +547,9 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-chance-4-1">
-<div class="para" id="sec-chance-4-1-1">Consider the following game.  Rowan and Colleen place $25 into a pot.  Then they are dealt either a Jack, Queen or King at random. This deck only has those three cards.  Whoever has the highest card takes the pot.</div> <div class="para" id="sec-chance-4-1-2">Rowan has the option of raising by $10 or folding. If he folds, he loses $25.  Otherwise Colleen then can either fold or call.  If they fold, she loses $25, if she calls, she puts $10 into the pot.</div> <div class="para" id="sec-chance-4-1-3">Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.</div>
+<div class="para" id="sec-chance-4-1-1">Consider the following game.  Rowan and Colleen place $25 into a pot.  Then they are dealt either a Jack, Queen or King at random. This deck only has those three cards.  Whoever has the highest card takes the pot.</div>
+<div class="para" id="sec-chance-4-1-2">Rowan has the option of raising by $10 or folding. If he folds, he loses $25.  Otherwise Colleen then can either fold or call.  If they fold, she loses $25, if she calls, she puts $10 into the pot.</div>
+<div class="para" id="sec-chance-4-1-3">Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.</div>
 </div>
 <article class="task exercise-like" id="sec-chance-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-chance-4-2-1-1">What would best describe possible choices of strategy for Rowan and Colleen?</div> <ol class="upper-alpha" id="sec-chance-4-2-1-2">
@@ -715,7 +717,9 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-chance-5-1">
-<div class="para" id="sec-chance-5-1-1">We introduce a second game here.  Each player places $<span class="process-math">\(p\)</span> into the pot. Then the each secretly flip a coin.  We consider heads “greater” than tails.</div> <div class="para" id="sec-chance-5-1-2">Rowan then has the options of passing or betting.  If he passes, then both players reveal their coin and the higher value wins.  If they are the same, players split the pot evenly, and both players net wins/losses are $0. His other option is to bet, in which case he adds $<span class="process-math">\(r\)</span> to the pot.</div> <div class="para" id="sec-chance-5-1-3">Then Colleen has a choice as well, to fold or call.  If she folds, then Rowan nets the $<span class="process-math">\(b\text{.}\)</span>  Otherwise, she calls, and also adds $<span class="process-math">\(r\)</span> to the pot and both coins are revealed.</div>
+<div class="para" id="sec-chance-5-1-1">We introduce a second game here.  Each player places $<span class="process-math">\(p\)</span> into the pot. Then the each secretly flip a coin.  We consider heads “greater” than tails.</div>
+<div class="para" id="sec-chance-5-1-2">Rowan then has the options of passing or betting.  If he passes, then both players reveal their coin and the higher value wins.  If they are the same, players split the pot evenly, and both players net wins/losses are $0. His other option is to bet, in which case he adds $<span class="process-math">\(r\)</span> to the pot.</div>
+<div class="para" id="sec-chance-5-1-3">Then Colleen has a choice as well, to fold or call.  If she folds, then Rowan nets the $<span class="process-math">\(b\text{.}\)</span>  Otherwise, she calls, and also adds $<span class="process-math">\(r\)</span> to the pot and both coins are revealed.</div>
 </div>
 <article class="task exercise-like" id="sec-chance-5-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-chance-5-2-1-1">Suppose that Rowan will stick to the strategy of RP (raise on head, pass on tails) and Colleen choses CC (call on both heads or tails).  What are Rowan’s expected winnings in this case?</div></article><article class="task exercise-like" id="sec-chance-5-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>

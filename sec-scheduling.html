@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -562,7 +562,10 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-schedule-1">
-<div class="para" id="activity-schedule-1-1">Yafa is an incoming freshman at Fantasi College and she is picking classes for her first semester. Fantasi College has classes either on Monday-Wednesday-Friday from 8:30-9:30, 10:00-11:00, 12:30-1:30 and 2:00-3:00, and on Tuesday-Thursday from 8:30-10:00, 10:30-12:00, and 1:00-2:30.</div> <div class="para" id="activity-schedule-1-2">Yafa has put together a list of potential classes she could take this semester, and assigned to them a score from 1 - 10 depending on her interest in the class, the time of day, and her own “research” looking up professors on external rating sites. (Yafa has not yet taken her introductory statistics course, and so doesn’t yet know how unreliable and biased these sites, and reviews in general, are.)</div> <div class="para" id="activity-schedule-1-3">(Note that this is not altogether realistic, in that this is a massive oversimplification for the purpose of understanding the key ideas.)</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="activity-schedule-1-1">Yafa is an incoming freshman at Fantasi College and she is picking classes for her first semester. Fantasi College has classes either on Monday-Wednesday-Friday from 8:30-9:30, 10:00-11:00, 12:30-1:30 and 2:00-3:00, and on Tuesday-Thursday from 8:30-10:00, 10:30-12:00, and 1:00-2:30.</div>
+<div class="para" id="activity-schedule-1-2">Yafa has put together a list of potential classes she could take this semester, and assigned to them a score from 1 - 10 depending on her interest in the class, the time of day, and her own “research” looking up professors on external rating sites. (Yafa has not yet taken her introductory statistics course, and so doesn’t yet know how unreliable and biased these sites, and reviews in general, are.)</div>
+<div class="para" id="activity-schedule-1-3">(Note that this is not altogether realistic, in that this is a massive oversimplification for the purpose of understanding the key ideas.)</div>
+<div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
@@ -733,7 +736,9 @@ true);
 <td class="c m b2 r2 l0 t0 lines">Sem TuTh 10:30-12:00</td>
 <td class="c m b2 r2 l0 t0 lines">7</td>
 </tr>
-</table></div> <div class="para" id="activity-schedule-1-5">Additionally, she has the following stipulations to her schedule:</div> <ul class="disc" id="activity-schedule-1-6">
+</table></div>
+<div class="para" id="activity-schedule-1-5">Additionally, she has the following stipulations to her schedule:</div>
+<ul class="disc" id="activity-schedule-1-6">
 <li id="activity-schedule-1-6-1"><div class="para" id="activity-schedule-1-6-1-1">No student is allowed to enroll in different offerings of the same class, MathA and MathB are considered different classes.</div></li>
 <li id="activity-schedule-1-6-2"><div class="para" id="activity-schedule-1-6-2-1">No student can enroll in more than 1 course in the same timeslot.</div></li>
 <li id="activity-schedule-1-6-3"><div class="para" id="activity-schedule-1-6-3-1">To prevent burnout, no student each student must have at least one time-slot off every day.</div></li>
@@ -741,7 +746,8 @@ true);
 <li id="activity-schedule-1-6-5"><div class="para" id="activity-schedule-1-6-5-1">Each income student must enroll in a Freshman Seminar (Sem).</div></li>
 <li id="activity-schedule-1-6-6"><div class="para" id="activity-schedule-1-6-6-1">Because of her major, Yafa intends to enroll in at least 1 Math class this semester (either A or B, not exclusive).</div></li>
 <li id="activity-schedule-1-6-7"><div class="para" id="activity-schedule-1-6-7-1">Yafa wishes to get a headstart on her general education, so she wants to take at least one of either Literature (Lit) or Art (Art).  Similarly, she wishes to take at least one of Economics (Econ) or History (Hist).</div></li>
-</ul> <div class="para" id="activity-schedule-1-7">Let <span class="process-math">\(x_j\)</span> be 1 if she takes course <span class="process-math">\(j\)</span> and 0 otherwise.</div>
+</ul>
+<div class="para" id="activity-schedule-1-7">Let <span class="process-math">\(x_j\)</span> be 1 if she takes course <span class="process-math">\(j\)</span> and 0 otherwise.</div>
 </div>
 <article class="task exercise-like" id="activity-schedule-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-schedule-2-1">What is a reasonable linear objective function to maximize?</div></article><article class="task exercise-like" id="activity-schedule-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
@@ -753,20 +759,22 @@ true);
 <div class="para" id="activity-schedule-8-1-1">Write out the constraint which ensure that Yafa enrolls in (at least) one Math class.</div></article><article class="task exercise-like" id="activity-schedule-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="activity-schedule-9-1-1">Write out the constraints which ensure that Yafa is on track with her general education credits.</div></article><article class="task exercise-like" id="activity-schedule-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
 <div class="para" id="activity-schedule-10-1-1">Write out the integer maximization problem we have constructed.</div></article><article class="task exercise-like" id="activity-schedule-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="activity-schedule-11-1-1">(Optional) Solve it: <pre id="activity-schedule-11-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
+<div class="para" id="activity-schedule-11-1-1">(Optional) Solve it: <div id="activity-schedule-11-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
 X = P.new_variable(integer=True, nonnegative=True)
 P.add_constraint(FIXME)
 P.set_objective(FIXME)
 P.show()
-</script></pre> <pre id="activity-schedule-11-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
+</script></div> <div id="activity-schedule-11-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
 for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
     print(f'x_{i} = {v}')
-</script></pre>
+</script></div>
 </div></article></article><article class="activity project-like" id="activity-schedule2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-schedule2-1">
-<div class="para" id="activity-schedule2-1-1">Let’s call Yafa from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> student <span class="process-math">\(1\text{.}\)</span> In a gross oversimplification suppose there were in total 5 students including Yafa registering, and that each class could sit at most 2 students.</div> <div class="para" id="activity-schedule2-1-2">Each student assigns their own score to each course, <span class="process-math">\(c_{ij}\)</span> being the score that student <span class="process-math">\(i\)</span> gives to course <span class="process-math">\(j\text{.}\)</span>  Let <span class="process-math">\(x_{ij}\)</span> be 1 if student <span class="process-math">\(i\)</span> enrolls in course <span class="process-math">\(j\)</span> and 0 otherwise.</div> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="activity-schedule2-1-1">Let’s call Yafa from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> student <span class="process-math">\(1\text{.}\)</span> In a gross oversimplification suppose there were in total 5 students including Yafa registering, and that each class could sit at most 2 students.</div>
+<div class="para" id="activity-schedule2-1-2">Each student assigns their own score to each course, <span class="process-math">\(c_{ij}\)</span> being the score that student <span class="process-math">\(i\)</span> gives to course <span class="process-math">\(j\text{.}\)</span>  Let <span class="process-math">\(x_{ij}\)</span> be 1 if student <span class="process-math">\(i\)</span> enrolls in course <span class="process-math">\(j\)</span> and 0 otherwise.</div>
+<div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"></td>
@@ -1047,7 +1055,9 @@ for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
 <td class="c m b2 r2 l0 t0 lines">8</td>
 <td class="c m b2 r2 l0 t0 lines">6</td>
 </tr>
-</table></div> <div class="para" id="activity-schedule2-1-4">In addition to the constraints that all students have to abide by, we have the following constraint for each student:</div> <ul class="disc" id="activity-schedule2-1-5">
+</table></div>
+<div class="para" id="activity-schedule2-1-4">In addition to the constraints that all students have to abide by, we have the following constraint for each student:</div>
+<ul class="disc" id="activity-schedule2-1-5">
 <li id="activity-schedule2-1-5-1"><div class="para" id="activity-schedule2-1-5-1-1">Yafa (student 1) still has her constraints from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a>.</div></li>
 <li id="activity-schedule2-1-5-2"><div class="para" id="activity-schedule2-1-5-2-1">Student 2 has to take at least 1 Art class, either Computer Science (CS) or Math, and either Economics or History.</div></li>
 <li id="activity-schedule2-1-5-3"><div class="para" id="activity-schedule2-1-5-3-1">Student 3 has to take at least 1 Economics class, 1 Math and 1 Literature class.</div></li>

@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -621,7 +621,8 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-tableaubounded-1">
-<div class="para" id="activity-tableaubounded-1-1">Consider the following  tableau:</div> <div class="para" id="activity-tableaubounded-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="activity-tableaubounded-1-1">Consider the following  tableau:</div>
+<div class="para" id="activity-tableaubounded-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_3\)</span></td>
@@ -667,7 +668,8 @@ true);
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-156\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div></div> <div class="para" id="activity-tableaubounded-1-3">Note that this tableau records a basic solution where <span class="process-math">\(x_3, t_3, x_2, t_1=0\text{.}\)</span>
+</table></div></div>
+<div class="para" id="activity-tableaubounded-1-3">Note that this tableau records a basic solution where <span class="process-math">\(x_3, t_3, x_2, t_1=0\text{.}\)</span>
 </div>
 </div>
 <article class="task exercise-like" id="activity-tableaubounded-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -737,7 +739,8 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="subsec-basicfeasible-5-1">
-<div class="para" id="subsec-basicfeasible-5-1-1">Consider the canonical maximization problem and basic solution encoded by the following tableau:</div> <div class="para" id="subsec-basicfeasible-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="subsec-basicfeasible-5-1-1">Consider the canonical maximization problem and basic solution encoded by the following tableau:</div>
+<div class="para" id="subsec-basicfeasible-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -1194,7 +1197,8 @@ true);
 </table></div></div></article></article><div class="para" id="subsec-basicfeasible-7">With all this, we finally may define our <em class="emphasis">Simplex Algorithm for Maximum Basic Feasible Tableaus</em>.</div>
 <article class="definition definition-like" id="def-simplexcanonmaxbf"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
-</h4> <div class="para" id="def-simplexcanonmaxbf-3-1">The Simplex Algorithm for Maximum Basic Feasible Tableaus</div> <ol class="decimal" id="def-simplexcanonmaxbf-3-2">
+</h4>
+<div class="para" id="def-simplexcanonmaxbf-3-1">The Simplex Algorithm for Maximum Basic Feasible Tableaus</div> <ol class="decimal" id="def-simplexcanonmaxbf-3-2">
 <li id="def-simplexcanonmaxbf-3-2-1"><div class="para" id="p-derived-def-simplexcanonmaxbf-3-2-1">Ensure that each <span class="process-math">\(b_i\geq 0\text{,}\)</span> that is that the solution is feasible.</div></li>
 <li id="def-simplexcanonmaxbf-3-2-2"><div class="para" id="p-derived-def-simplexcanonmaxbf-3-2-2">IF every <span class="process-math">\(c_j\leq 0\text{:}\)</span> STOP the current solution is optimal.</div></li>
 <li id="def-simplexcanonmaxbf-3-2-3"><div class="para" id="p-derived-def-simplexcanonmaxbf-3-2-3">PICK a column <span class="process-math">\(j\)</span> such that <span class="process-math">\(c_j &gt; 0\text{.}\)</span>
@@ -1466,7 +1470,9 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="subsec-infeasiblemaximization-3-1">
-<div class="para" id="subsec-infeasiblemaximization-3-1-1">We now want to concoct a scheme to turn all the <span class="process-math">\(b_i\)</span> non-negative, if possible.</div> <div class="para" id="subsec-infeasiblemaximization-3-1-2">Consider the following tableau:</div> <div class="para" id="subsec-infeasiblemaximization-3-1-3"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="subsec-infeasiblemaximization-3-1-1">We now want to concoct a scheme to turn all the <span class="process-math">\(b_i\)</span> non-negative, if possible.</div>
+<div class="para" id="subsec-infeasiblemaximization-3-1-2">Consider the following tableau:</div>
+<div class="para" id="subsec-infeasiblemaximization-3-1-3"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
@@ -1515,7 +1521,8 @@ true);
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div></div> <div class="para" id="subsec-infeasiblemaximization-3-1-4">Suppose that <span class="process-math">\(b_2\lt 0, b_3, b_4&gt;0\text{.}\)</span> We want to turn <span class="process-math">\(b_2\)</span> positive while making sure <span class="process-math">\(b_3, b_4\)</span> stay positive.</div>
+</table></div></div>
+<div class="para" id="subsec-infeasiblemaximization-3-1-4">Suppose that <span class="process-math">\(b_2\lt 0, b_3, b_4&gt;0\text{.}\)</span> We want to turn <span class="process-math">\(b_2\)</span> positive while making sure <span class="process-math">\(b_3, b_4\)</span> stay positive.</div>
 </div>
 <article class="task exercise-like" id="subsec-infeasiblemaximization-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="subsec-infeasiblemaximization-3-2-1-1">Suppose each <span class="process-math">\(a_{2j}\geq 0\text{,}\)</span> what can we say about the associated problem?</div></article><article class="task exercise-like" id="subsec-infeasiblemaximization-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
@@ -1531,7 +1538,8 @@ true);
 <div class="para" id="subsec-infeasiblemaximization-3-7-1-1">Note that we have no idea if <span class="process-math">\(b_1\)</span> is positive or negative before we started, much less after.  Why don’t we care?</div></article></article><div class="para" id="subsec-infeasiblemaximization-4">With this, we may define our algorithm for potential non-feasible tableau</div>
 <article class="definition definition-like" id="def-simplexmax"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
-</h4> <div class="para" id="def-simplexmax-3-1">The Simplex Algorithm for Maximum Tableaus</div> <ol class="decimal" id="def-simplexmax-3-2">
+</h4>
+<div class="para" id="def-simplexmax-3-1">The Simplex Algorithm for Maximum Tableaus</div> <ol class="decimal" id="def-simplexmax-3-2">
 <li id="def-simplexmax-3-2-1"><div class="para" id="p-derived-def-simplexmax-3-2-1">IF each <span class="process-math">\(b_i\geq 0\text{,}\)</span> GOTO 8.</div></li>
 <li id="def-simplexmax-3-2-2"><div class="para" id="p-derived-def-simplexmax-3-2-2">PICK the largest <span class="process-math">\(i\)</span> such that <span class="process-math">\(b_i\lt 0\text{.}\)</span>
 </div></li>
@@ -1619,7 +1627,8 @@ true);
 </h3>
 <article class="definition definition-like" id="def-negativetranspose"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span>
-</h4> <div class="para" id="def-negativetranspose-2-1">Recall that the canonical minimization problem:</div> <div class="para logical" id="def-negativetranspose-2-2">
+</h4>
+<div class="para" id="def-negativetranspose-2-1">Recall that the canonical minimization problem:</div> <div class="para logical" id="def-negativetranspose-2-2">
 <div class="displaymath process-math" id="def-negativetranspose-2-2-1">
 \begin{align*}
 \textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d\\
@@ -1750,7 +1759,8 @@ x_1, x_2, \ldots, x_n\amp \geq  0
 <div class="para" id="subsec-simplexmin-3-1-1">Show that this negative transpose of a canonical minimization tableau encodes a problem that has the same feasible region and optimal solution as the original minimization problem.</div></article><div class="para" id="subsec-simplexmin-4">This allows us to define a minimization algorithm.</div>
 <article class="definition definition-like" id="def-simplexmin"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span>
-</h4> <div class="para" id="def-simplexmin-3-1">The Simplex Algorithm for Minimization Tableaus</div> <ol class="decimal" id="def-simplexmin-3-2">
+</h4>
+<div class="para" id="def-simplexmin-3-1">The Simplex Algorithm for Minimization Tableaus</div> <ol class="decimal" id="def-simplexmin-3-2">
 <li id="def-simplexmin-3-2-1"><div class="para" id="p-derived-def-simplexmin-3-2-1">TAKE the Negative Transpose.</div></li>
 <li id="def-simplexmin-3-2-2"><div class="para" id="p-derived-def-simplexmin-3-2-2">APPLY <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.11">Definition 2.2.11</a> .</div></li>
 </ol></article><article class="activity project-like" id="subsec-simplexmin-6"><h4 class="heading">

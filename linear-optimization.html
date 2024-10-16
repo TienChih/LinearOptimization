@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -98,10 +98,10 @@ sagecell.makeSagecell({
   ],
   "evalButtonText": "Evaluate (Sage)"
 });
-</script><script>// Make *any* pre with class 'sagecell-r' an executable Sage cell
+</script><script>// Make *any* div with class 'sagecell-r' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-r",
+  "inputLocation": "div.sagecell-r",
   "linked": true,
   "linkKey": "linked-r",
   "autoeval": false,
@@ -409,7 +409,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">

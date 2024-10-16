@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,7 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-extras"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">9</span><span class="space"> </span><span class="title">Extra Topics</span>
 </h2>
-<section class="introduction" id="ch-extras-2"><div class="para" id="ch-extras-2-1">This is a chapter on random applications of linear optimization that are not generally a standard part of the undergraduate course, but are fun and nifty extensions.  There is a good chance that anyone taking or teaching a class on linear optimization will not be able to cover these topics.  However, for a class who finds the time, as independent reading for an ambitious or curious student, or fodder for projects or exploration, these can provide some insight into the vast array of problems to which the theory from this course may be applied.</div> <div class="para" id="ch-extras-2-2">In <a href="sec-covermatch.html" class="internal" title="Section 9.1: Coverings and Matchings of Graphs">Section 9.1</a>, we discuss graph matchings and coverings using linear optimization.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-extras-2"><div class="para" id="ch-extras-2-1">This is a chapter on random applications of linear optimization that are not generally a standard part of the undergraduate course, but are fun and nifty extensions.  There is a good chance that anyone taking or teaching a class on linear optimization will not be able to cover these topics.  However, for a class who finds the time, as independent reading for an ambitious or curious student, or fodder for projects or exploration, these can provide some insight into the vast array of problems to which the theory from this course may be applied.</div>
+<div class="para" id="ch-extras-2-2">In <a href="sec-covermatch.html" class="internal" title="Section 9.1: Coverings and Matchings of Graphs">Section 9.1</a>, we discuss graph matchings and coverings using linear optimization.</div></section><nav class="summary-links"><ul>
 <li><a href="sec-covermatch.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Coverings and Matchings of Graphs</span></a></li>
 <li><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></li>
 <li><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></li>

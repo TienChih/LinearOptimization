@@ -9,10 +9,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-r' an executable Sage cell
+<script>// Make *any* div with class 'sagecell-r' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-r",
+  "inputLocation": "div.sagecell-r",
   "linked": true,
   "linkKey": "linked-r",
   "autoeval": false,
@@ -64,7 +64,7 @@ P(X=x) \amp \approx 0.1667\amp 0.5 \amp 0.3 \amp \approx 0.0333\\
 \end{array}
 \end{equation*}
 </div>
-</div> <div class="para">This can be seen by the following R simulation: <pre id="ex-apple-2-3-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            n=1000
+</div> <div class="para">This can be seen by the following R simulation: <div id="ex-apple-2-3-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            n=1000
 poison = 3
 notpoison = 7
 eat = 4
@@ -78,7 +78,7 @@ for(i in 1:n){
   numpoison[i] = sum(sample(applevec, eat, replace = FALSE))  
 }
 hist(numpoison)
-</script></pre>
+</script></div>
 </div></article><span class="incontext"><a class="internal" href="sec-probreview.html#ex-apple">in-context</a></span>
 </body>
 </html>

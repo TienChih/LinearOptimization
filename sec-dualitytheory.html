@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -625,19 +625,20 @@ f(\x')=g(\y')
 </div></article><article class="task exercise-like" id="sec-dualitytheory-10-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-dualitytheory-10-5-1-1">Let <span class="process-math">\(u'\in U\)</span> such that <span class="process-math">\(\mathbf{h}^\top u'\leq0\text{.}\)</span>  Sketch <span class="process-math">\(u'\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-dualitytheory-10-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-dualitytheory-10-6-1-1">Let <span class="process-math">\(\mathbf{d} = u'-u_0\)</span> decribe geometrically what <span class="process-math">\(\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u\)</span> represents.  Think dot product and projections.</div></article><article class="task exercise-like" id="sec-dualitytheory-10-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-dualitytheory-10-6-1-1">Let <span class="process-math">\(\mathbf{d} = u'-u_0\)</span> decribe geometrically what <span class="process-math">\(\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u\)</span> represents.  (Think dot product, projections and for <span class="process-math">\(\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u\)</span> to start at <span class="process-math">\(u\)</span>).</div></article><article class="task exercise-like" id="sec-dualitytheory-10-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="sec-dualitytheory-10-7-1-1">Let <span class="process-math">\(\alpha = \frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\text{,}\)</span> show that <span class="process-math">\(0\lt \alpha \lt 1\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-dualitytheory-10-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="sec-dualitytheory-10-8-1-1">Let <span class="process-math">\(w=\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u_0\text{,}\)</span> show that <span class="process-math">\(w = \alpha u_0 + (1-\alpha)u'\)</span>
+<div class="para" id="sec-dualitytheory-10-8-1-1">Let <span class="process-math">\(w=\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u_0\text{,}\)</span> show that <span class="process-math">\(w = \alpha u' + (1-\alpha)u_0\)</span>
 </div></article><article class="task exercise-like" id="sec-dualitytheory-10-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="sec-dualitytheory-10-9-1-1">Show that <span class="process-math">\(w\in U\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-dualitytheory-10-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
 <div class="para" id="sec-dualitytheory-10-10-1-1">Show that <span class="process-math">\(w^\top w = u_0^\top u_0 + \alpha \mathbf{d}^\top \mathbf{d}\left(2 \frac{u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}+\alpha\right)\text{,}\)</span> and explain why <span class="process-math">\(w^\top w \lt u_0^\top u_0\text{.}\)</span>
 </div></article><article class="task exercise-like" id="sec-dualitytheory-10-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="sec-dualitytheory-10-11-1-1">Why is the last statement a contradiction?</div></article></article><div class="para" id="sec-dualitytheory-11">We now introduce a key idea which will tie together the primal and dual problems.</div>
+<div class="para" id="sec-dualitytheory-10-11-1-1">Why does the last statement result in a contradiction?</div></article></article><div class="para" id="sec-dualitytheory-11">We now introduce a key idea which will tie together the primal and dual problems.</div>
 <article class="definition definition-like" id="def-cone"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
-</h3> <div class="para" id="def-cone-2-1">Let <span class="process-math">\(S\subseteq \R^n\text{.}\)</span>  We call the <dfn class="terminology">cone</dfn> of <span class="process-math">\(S\text{,}\)</span> denoted <span class="process-math">\(\cone(S)\)</span> to be the set <span class="process-math">\(\cone(S):=\left\{\displaystyle \sum_{i=1}^m u_i\mathbf{s}_i: u_i\in \R, u_i\geq 0, \mathbf{s}_i\in S \right\}\text{.}\)</span>
+</h3>
+<div class="para" id="def-cone-2-1">Let <span class="process-math">\(S\subseteq \R^n\text{.}\)</span>  We call the <dfn class="terminology">cone</dfn> of <span class="process-math">\(S\text{,}\)</span> denoted <span class="process-math">\(\cone(S)\)</span> to be the set <span class="process-math">\(\cone(S):=\left\{\displaystyle \sum_{i=1}^m u_i\mathbf{s}_i: u_i\in \R, u_i\geq 0, \mathbf{s}_i\in S \right\}\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-cone"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
 </h3>
@@ -717,7 +718,8 @@ f(\x')=g(\y')
 <div class="para" id="sec-dualitytheory-19-4-1-1">If <span class="process-math">\(\x_*, \y_*\)</span> are feasible optimal solutions with slack variables <span class="process-math">\(\vt_*, \vs_*\text{,}\)</span> what must be true about <span class="process-math">\(\x_*^\top\vs_* + \y_*^\top\vt_*\text{?}\)</span>
 </div></article></article><article class="definition definition-like" id="def-complementaryslackness"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.15</span><span class="period">.</span>
-</h3> <div class="para" id="def-complementaryslackness-2-1">Feasible variables <span class="process-math">\(\x, \y, \vs, \vt \)</span> are said to exhibit <dfn class="terminology">complementary slackness</dfn> if <span class="process-math">\(\vs^\top\x=0, \y^\top\vt=0\text{.}\)</span>
+</h3>
+<div class="para" id="def-complementaryslackness-2-1">Feasible variables <span class="process-math">\(\x, \y, \vs, \vt \)</span> are said to exhibit <dfn class="terminology">complementary slackness</dfn> if <span class="process-math">\(\vs^\top\x=0, \y^\top\vt=0\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-sensitivity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-dualpivot.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

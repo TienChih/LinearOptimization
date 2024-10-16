@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter contains-active">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list contains-active">
@@ -558,11 +558,11 @@ true);
 <div class="para" id="frontmatter-6-2">This book aims to develop readers’ ability to reason about linear optimization concepts, and to facilitate thinking and intuition. Several technological tools are deployed to this effect, to enhance geometric reasoning, bypass tedious arithmetic computations, or both. These include embedded Sage cells with executable code, Doenet activities, and Desmos graphs.</div>
 <div class="para" id="frontmatter-6-3"> Sage is introduced as a platform for performing many computations since it is freely available and its syntax mirrors common mathematical notation. Print readers may access Sage online through <a class="external" href="https://sagecell.sagemath.org/" target="_blank">.</a><details class="ptx-footnote" aria-live="polite" id="frontmatter-6-3-2"><summary class="ptx-footnote__number" title="Footnote 0.0.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-6-3-2"><code class="code-inline tex2jax_ignore">sagecell.sagemath.org/</code></div></details>
 </div>
-<div class="para" id="frontmatter-6-4">Throughout the book, Sage cells appear in various places to encourage readers to use Sage to complete some relevant computation.  In the print version, these may appear with some pre-populated code, such as the one below, that you will want to copy into an online Sage cell. <pre id="frontmatter-6-4-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix([[1,2], [2,1]])
-</script></pre> Some activities call for the students to determine the appropriate parameters which would allow Sage to solve the question at hand.  In these cases, <code class="code-inline tex2jax_ignore">FIXME</code> or similar place holders are placed within the code, and meant to be edited out in favor of the correct entries <pre id="frontmatter-6-4-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(FIXME)
+<div class="para" id="frontmatter-6-4">Throughout the book, Sage cells appear in various places to encourage readers to use Sage to complete some relevant computation.  In the print version, these may appear with some pre-populated code, such as the one below, that you will want to copy into an online Sage cell. <div id="frontmatter-6-4-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix([[1,2], [2,1]])
+</script></div> Some activities call for the students to determine the appropriate parameters which would allow Sage to solve the question at hand.  In these cases, <code class="code-inline tex2jax_ignore">FIXME</code> or similar place holders are placed within the code, and meant to be edited out in favor of the correct entries <div id="frontmatter-6-4-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = matrix(FIXME)
 rref(A)
-</script></pre> Empty cells appear as shown below and are included to indicate part of an exercise or activity that is meant to be completed in Sage. <pre id="frontmatter-6-4-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></pre>
+</script></div> Empty cells appear as shown below and are included to indicate part of an exercise or activity that is meant to be completed in Sage. <div id="frontmatter-6-4-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
 </div>
 <div class="para" id="frontmatter-6-5">For other interactive components to activities, the pdf and print versions of this text will contain links and QR codes to a standalone version of the activity, so that readers with an appropriate device may follow along the flow of the course.</div>
 <div class="para" id="frontmatter-6-6">In this section, I provide two additional such interactives.  One is a Desmos linear optimization visualizer and solver for two dimensional problems: <iframe src="https://www.desmos.com/calculator/rwbqdwjfht" id="frontmatter-6-6-1" width="600" height="600"></iframe> The other is a Desmos 3d version of this interactive for three dimensions. <iframe src="https://www.desmos.com/3d/15yyp0qdym" id="frontmatter-6-6-2" width="600" height="600"></iframe> These tools can help you visualize and solve small dimensional problems and can be very helpful for beginners.</div>

@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -547,7 +547,8 @@ true);
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="exploration-witch-1">
-<div class="para" id="exploration-witch-1-1">The witch Agnesi<details class="ptx-footnote" aria-live="polite" id="exploration-witch-1-1-1"><summary class="ptx-footnote__number" title="Footnote 4.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="exploration-witch-1-1-1">The name Agnesi was chosen by my Spring 2024 class who knew her from her eponymous curve.</div></details> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.</div> <div class="para" id="exploration-witch-1-2">Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.</div>
+<div class="para" id="exploration-witch-1-1">The witch Agnesi<details class="ptx-footnote" aria-live="polite" id="exploration-witch-1-1-1"><summary class="ptx-footnote__number" title="Footnote 4.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="exploration-witch-1-1-1">The name Agnesi was chosen by my Spring 2024 class who knew her from her eponymous curve.</div></details> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.</div>
+<div class="para" id="exploration-witch-1-2">Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.</div>
 </div>
 <article class="task exercise-like" id="exploration-witch-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="exploration-witch-2-1-1">Before proceeding to solve the problem, make an estimate: how much do you think each newt eye and frog is worth to her?  Why do you think so?</div></article><article class="task exercise-like" id="exploration-witch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
@@ -594,7 +595,8 @@ x_1+x_2 \amp = 14 \\
 \end{equation*}
 </div>
 <div class="para">which may be depicted:</div>
-</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/witch.svg" role="img" class="contained" alt="The feasible region for the witch production problem, and depicted normal vectors."></div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/witch.svg" role="img" class="contained" alt="The feasible region for the witch production problem, and depicted normal vectors."></div>
 </div>
 <article class="task exercise-like" id="activity-coefficients-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-coefficients-2-1-1">Starting at the basic solution, perform pivots as follows:</div> <div class="para" id="activity-coefficients-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
@@ -730,7 +732,8 @@ x_1+x_2 \amp = 14 \\
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-sensitivity-6-1">
-<div class="para" id="sec-sensitivity-6-1-1">Consider the tableau:</div> <div class="para" id="sec-sensitivity-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="sec-sensitivity-6-1-1">Consider the tableau:</div>
+<div class="para" id="sec-sensitivity-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -785,7 +788,8 @@ x_1+x_2 \amp = 14 \\
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="sec-sensitivity-6-1-3">Suppose that for <span class="process-math">\(j\in \{1,2,\ldots,m\}\)</span> each plane <span class="process-math">\(-x_j=0\)</span> has corresponding normal vector <span class="process-math">\(\mathbf{v}_j\text{.}\)</span>
+</table></div></div>
+<div class="para" id="sec-sensitivity-6-1-3">Suppose that for <span class="process-math">\(j\in \{1,2,\ldots,m\}\)</span> each plane <span class="process-math">\(-x_j=0\)</span> has corresponding normal vector <span class="process-math">\(\mathbf{v}_j\text{.}\)</span>
 </div>
 </div>
 <article class="task exercise-like" id="sec-sensitivity-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
@@ -794,7 +798,9 @@ x_1+x_2 \amp = 14 \\
 <div class="para" id="sec-sensitivity-6-3-1-1">Is there anything special about a tableau where <span class="process-math">\(f\)</span> is a non-negative linear combination of normal vectors?</div></article><article class="task exercise-like" id="sec-sensitivity-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-sensitivity-6-4-1-1">Suppose that this tableau corresponds to an optimal solution.  If we decrease any <span class="process-math">\(x_j\)</span> from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\text{,}\)</span> how does <span class="process-math">\(f\)</span> change?  What does this decrease correspond to geometrically?</div></article></article><article class="definition definition-like" id="definition-dual"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
-</h3> <div class="para" id="definition-dual-5">Recall the canonical maximization problem:</div> <div class="para logical" id="definition-dual-6"><div class="displaymath process-math" id="definition-dual-6-1">
+</h3>
+<div class="para" id="definition-dual-5">Recall the canonical maximization problem:</div>
+<div class="para logical" id="definition-dual-6"><div class="displaymath process-math" id="definition-dual-6-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d\\
 \textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1\\
@@ -803,7 +809,9 @@ a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2\\
 a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n\\
 x_1, x_2, \ldots, x_m\amp \geq  0.
 \end{align*}
-</div></div> <div class="para" id="definition-dual-7">The <dfn class="terminology">dual minimization problem</dfn>  is aritculated as follows:</div> <div class="para logical" id="definition-dual-8"><div class="displaymath process-math" id="definition-dual-8-1">
+</div></div>
+<div class="para" id="definition-dual-7">The <dfn class="terminology">dual minimization problem</dfn>  is aritculated as follows:</div>
+<div class="para logical" id="definition-dual-8"><div class="displaymath process-math" id="definition-dual-8-1">
 \begin{align*}
 \textbf{Minimize: }  g(\mathbf{y}) = y_1b_1 + y_2b_2 +\cdots y_nb_n-d \amp= \left(\displaystyle\sum_{i=1}^n y_ib_i \right)-d\\
 \textbf{subject to: }  a_{1,1}y_1 + a_{2,1}y_2 +\cdots a_{n,1}y_n\amp \geq  c_1\\
@@ -812,7 +820,8 @@ a_{1,2}y_1 + a_{2,2}y_2 +\cdots a_{n,2}y_n\amp \geq  c_2\\
 a_{1,m}y_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \geq  c_m\\
 y_1, y_2, \ldots, y_n\amp \geq  0.
 \end{align*}
-</div></div> <div class="para" id="definition-dual-9">We refer to the <span class="process-math">\(y_i\)</span> as <dfn class="terminology">dual variables</dfn>.</div></article><article class="activity project-like" id="sec-sensitivity-8"><h3 class="heading">
+</div></div>
+<div class="para" id="definition-dual-9">We refer to the <span class="process-math">\(y_i\)</span> as <dfn class="terminology">dual variables</dfn>.</div></article><article class="activity project-like" id="sec-sensitivity-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-sensitivity-8-1"><div class="para" id="sec-sensitivity-8-1-1">Recall Agnesi’s business <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>, and the coefficient computations done in <a href="sec-sensitivity.html#activity-coefficients" class="xref" data-knowl="./knowl/xref/activity-coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.3">Activity 4.1.3</a>.</div></div>

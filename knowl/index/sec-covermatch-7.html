@@ -9,10 +9,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -29,7 +29,8 @@ sagecell.makeSagecell({
 </h3>
 <div class="introduction">
 <div class="para"> Given a graph <span class="process-math">\(G\text{,}\)</span> a <dfn class="terminology">vertex cover</dfn> or <span class="process-math">\(cover\)</span> is a colection of vertices <span class="process-math">\(U\)</span> such that for any edge <span class="process-math">\(v_iv_j\)</span> either <span class="process-math">\(v_i\)</span> or <span class="process-math">\(v_j\)</span> (possibly both) are in <span class="process-math">\(U\text{.}\)</span>
-</div> <div class="para">Let <span class="process-math">\(\tau(G)\)</span> denote the size of the smallest vertex cover <details class="ptx-footnote" aria-live="polite" id="sec-covermatch-7-1-2-2"><summary class="ptx-footnote__number" title="Footnote 9.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-covermatch-7-1-2-2">This is fairly standard.</div></details>.</div>
+</div>
+<div class="para">Let <span class="process-math">\(\tau(G)\)</span> denote the size of the smallest vertex cover <details class="ptx-footnote" aria-live="polite" id="sec-covermatch-7-1-2-2"><summary class="ptx-footnote__number" title="Footnote 9.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-covermatch-7-1-2-2">This is fairly standard.</div></details>.</div>
 </div>
 <article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para">Find <span class="process-math">\(\tau(G)\)</span> for <span class="process-math">\(G\)</span> from, <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>
@@ -37,17 +38,17 @@ sagecell.makeSagecell({
 <div class="para">Find <span class="process-math">\(\tau(H)\)</span> for <span class="process-math">\(H\)</span> from, <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>
 </div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para">For each vertex <span class="process-math">\(v_i\text{,}\)</span> let <span class="process-math">\(y_i=1\)</span> if <span class="process-math">\(v_i\in U\)</span> and <span class="process-math">\(y_i=0\)</span> otherwise. Show this is a feasible solution to the dual problem found in <a href="sec-covermatch.html#activity-mincover" class="xref" data-knowl="./knowl/xref/activity-mincover.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.4">Activity 9.1.4</a> for <span class="process-math">\(G\text{.}\)</span> Is it optimal?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para">Since we solved the matching problem for <span class="process-math">\(G\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <pre id="sec-covermatch-7-5-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para">Since we solved the matching problem for <span class="process-math">\(G\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <div id="sec-covermatch-7-5-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 D = P.dual()
 D
-</script></pre> <pre id="sec-covermatch-7-5-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(D.optimal_solution())
+</script></div> <div id="sec-covermatch-7-5-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(D.optimal_solution())
 print(D.optimal_value())
-</script></pre> <div class="para">What do we notice?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para">We “solved” the matching maximixation problem for <span class="process-math">\(H\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <pre id="sec-covermatch-7-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+</script></div> <div class="para">What do we notice?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">We “solved” the matching maximixation problem for <span class="process-math">\(H\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <div id="sec-covermatch-7-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 DH = PH.dual()
 DH
-</script></pre> <pre id="sec-covermatch-7-6-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(DH.optimal_solution())
+</script></div> <div id="sec-covermatch-7-6-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(DH.optimal_solution())
 print(DH.optimal_value())
-</script></pre> <div class="para">What do we notice?</div></article></article><span class="incontext"><a class="internal" href="sec-covermatch.html#sec-covermatch-7">in-context</a></span>
+</script></div> <div class="para">What do we notice?</div></article></article><span class="incontext"><a class="internal" href="sec-covermatch.html#sec-covermatch-7">in-context</a></span>
 </body>
 </html>

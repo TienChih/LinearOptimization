@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,8 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercisesgeometric"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Problems for Chapter 1</span>
 </h2>
-<pre id="sec-exercisesgeometric-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></pre>
+<div id="sec-exercisesgeometric-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
 <section class="exercises" id="exercises-geometric"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
@@ -679,7 +679,7 @@ x,y, z, w\amp \geq  0.
 \end{align*}
 </div>
 </div>
-<div class="para" id="ex-6planes-2">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <pre id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([
+<div class="para" id="ex-6planes-2">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <div id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([
 [1,0,0,0,0],
 [0,1,0,0,0], 
 [0,0,1,0,0],
@@ -687,7 +687,7 @@ x,y, z, w\amp \geq  0.
 print(A)
 print(" ")
 print(A.rref())
-</script></pre>
+</script></div>
 </div></article><article class="exercise exercise-like" id="exercises-geometric-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
 <div class="para" id="exercises-geometric-8-1">Express <span class="process-math">\({k+4\choose 4}\)</span> as a polynomial in terms of <span class="process-math">\(k\text{.}\)</span>  How does this relate to <a href="sec-exercisesgeometric.html#ex-5planes" class="xref" data-knowl="./knowl/xref/ex-5planes.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.4.6">Exercise 1.4.6</a>, <a href="sec-exercisesgeometric.html#ex-6planes" class="xref" data-knowl="./knowl/xref/ex-6planes.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.4.7">Exercise 1.4.7</a>?</div></article><article class="exercise exercise-like" id="exercises-geometric-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
 <div class="para logical" id="exercises-geometric-9-1">

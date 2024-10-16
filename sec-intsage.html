@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,7 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-intsage"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">8.3</span><span class="space"> </span><span class="title">Solving Integer Optimization Problems with Sage</span>
 </h2>
-<section class="introduction" id="sec-intsage-2"><div class="para" id="sec-intsage-2-1">In <a href="sec-simplexsage.html" class="internal" title="Section 2.4: Using Sage to Solve Linear Optimization Problems">Section 2.4</a> and <a href="sec-noncanonsage.html" class="internal" title="Section 3.3: Solving NonCanonical Problems with Sage">Section 3.3</a>, we solved canonical and non-canonical linear optimization problems.  Solving such problems by hand could be tedious, and the techniques to solve integer optimization problems are even more involved. In this section, we solve integer optimization problems using sage.</div> <div class="para" id="sec-intsage-2-2">Since integer optimization is more difficult computationally than linear optimization, we use different commands to find solutions. Rather than use <code class="code-inline tex2jax_ignore">InteractiveLPProblem</code>, we use <code class="code-inline tex2jax_ignore">MixedIntegerLinearProgram</code>.</div></section><article class="activity project-like" id="sec-intsage-3"><h3 class="heading">
+<section class="introduction" id="sec-intsage-2"><div class="para" id="sec-intsage-2-1">In <a href="sec-simplexsage.html" class="internal" title="Section 2.4: Using Sage to Solve Linear Optimization Problems">Section 2.4</a> and <a href="sec-noncanonsage.html" class="internal" title="Section 3.3: Solving NonCanonical Problems with Sage">Section 3.3</a>, we solved canonical and non-canonical linear optimization problems.  Solving such problems by hand could be tedious, and the techniques to solve integer optimization problems are even more involved. In this section, we solve integer optimization problems using sage.</div>
+<div class="para" id="sec-intsage-2-2">Since integer optimization is more difficult computationally than linear optimization, we use different commands to find solutions. Rather than use <code class="code-inline tex2jax_ignore">InteractiveLPProblem</code>, we use <code class="code-inline tex2jax_ignore">MixedIntegerLinearProgram</code>.</div></section><article class="activity project-like" id="sec-intsage-3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-intsage-3-1"><div class="para logical" id="sec-intsage-3-1-1">
@@ -571,42 +572,42 @@ x_1, x_2, x_3&amp; \geq  0,\text{ and are integers}.
 </div>
 </div></div>
 <article class="task exercise-like" id="sec-intsage-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-intsage-3-2-1-1">Record this non-canonical problem using Sage:</div> <div class="para" id="sec-intsage-3-2-1-2"><pre id="sec-intsage-3-2-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
+<div class="para" id="sec-intsage-3-2-1-1">Record this non-canonical problem using Sage:</div> <div class="para" id="sec-intsage-3-2-1-2"><div id="sec-intsage-3-2-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
 X = P.new_variable(integer=True, nonnegative=True)
 P.add_constraint(X[1] <= 7)
 P.add_constraint(X[2]+X[3] >= 5)
 P.add_constraint(5*X[1]+3*X[2]+2*X[3] <= 37)
 P.set_objective(3*X[1]+4*X[2]+2*X[3])
 P.show()
-</script></pre></div></article><article class="task exercise-like" id="sec-intsage-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-intsage-3-3-1-1">We can then find the optimal solution: <pre id="sec-intsage-3-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
+</script></div></div></article><article class="task exercise-like" id="sec-intsage-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-intsage-3-3-1-1">We can then find the optimal solution: <div id="sec-intsage-3-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
 for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
     print(f'x_{i} = {v}')
-</script></pre>
+</script></div>
 </div></article><article class="task exercise-like" id="sec-intsage-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-intsage-3-4-1-1">We could also minimize <span class="process-math">\(f\)</span> if we chose: <pre id="sec-intsage-3-4-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK", maximization=False)
+<div class="para" id="sec-intsage-3-4-1-1">We could also minimize <span class="process-math">\(f\)</span> if we chose: <div id="sec-intsage-3-4-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK", maximization=False)
 X = P.new_variable(integer=True, nonnegative=True)
 P.add_constraint(X[1] <= 7)
 P.add_constraint(X[2]+X[3] >= 5)
 P.add_constraint(5*X[1]+3*X[2]+2*X[3] <= 37)
 P.set_objective(3*X[1]+4*X[2]+2*X[3])
 P.show()
-</script></pre> <pre id="sec-intsage-3-4-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
+</script></div> <div id="sec-intsage-3-4-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
 for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
     print(f'x_{i} = {v}')
-</script></pre>
+</script></div>
 </div></article><article class="task exercise-like" id="sec-intsage-3-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-intsage-3-5-1-1">We could also have solved the linear relaxation of the original problem <span class="process-math">\(f\)</span> if we chose: <pre id="sec-intsage-3-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
+<div class="para" id="sec-intsage-3-5-1-1">We could also have solved the linear relaxation of the original problem <span class="process-math">\(f\)</span> if we chose: <div id="sec-intsage-3-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
 X = P.new_variable(integer=False, nonnegative=True)
 P.add_constraint(X[1] <= 7)
 P.add_constraint(X[2]+X[3] >= 5)
 P.add_constraint(5*X[1]+3*X[2]+2*X[3] <= 37)
 P.set_objective(3*X[1]+4*X[2]+2*X[3])
 P.show()
-</script></pre> <pre id="sec-intsage-3-5-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
+</script></div> <div id="sec-intsage-3-5-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
 for i, v in sorted(P.get_values(X).items()):
     print(f'x_{i} = {v}')
-</script></pre>
+</script></div>
 </div></article></article><article class="activity project-like" id="sec-intsage-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span>
 </h3>
@@ -620,15 +621,15 @@ x_1, x_2 &amp; \text{ are integers.}
 \end{align*}
 </div></div>
 </div> <div class="para" id="sec-intsage-4-1-2">
-<pre id="sec-intsage-4-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
+<div id="sec-intsage-4-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
 X = P.new_variable(FIXME)
 P.add_constraint(FIXME)
 P.set_objective(FIXME)
 P.show()
-</script></pre> <pre id="sec-intsage-4-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
+</script></div> <div id="sec-intsage-4-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
 for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
     print(f'x_{i} = {v}')
-</script></pre>
+</script></div>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-cuttingplane.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesinteger.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

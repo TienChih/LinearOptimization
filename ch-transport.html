@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,7 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-transport"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">6</span><span class="space"> </span><span class="title">The Transportation &amp; Assignment Problems</span>
 </h2>
-<section class="introduction" id="ch-transport-2"><div class="para" id="ch-transport-2-1">Another application of linear optimization is shipping goods from multiple sources to multiple destinations in a way that minimizes costs while satisfying all supply and demand needs. A related task is assigning entities to tasks in a way that minimizes cost or maximizes utility.  While these may be modeled as linear optimization problems, we also discuss some algorithms which computes these solutions in a less unweildy manner.</div> <div class="para" id="ch-transport-2-2">In <a href="sec-vam.html" class="internal" title="Section 6.1: A Transportation problem and VAM">Section 6.1</a>, we discuss the general transportation problem and an algorithm which heuristically produces a “good” feasible solution.  Then in <a href="sec-transportalgorithm.html" class="internal" title="Section 6.2: The Transportation Algorithm">Section 6.2</a> we explore an algorithm which improves a feasible solution and produces an optimal solution.  Then in <a href="sec-assignment.html" class="internal" title="Section 6.3: The Assignment Problem and Hungarian Algorithm">Section 6.3</a>, we examine a specific type of transportation problem, the assignment problem, and study an algorithm partiular to this class of problem.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-transport-2"><div class="para" id="ch-transport-2-1">Another application of linear optimization is shipping goods from multiple sources to multiple destinations in a way that minimizes costs while satisfying all supply and demand needs. A related task is assigning entities to tasks in a way that minimizes cost or maximizes utility.  While these may be modeled as linear optimization problems, we also discuss some algorithms which computes these solutions in a less unweildy manner.</div>
+<div class="para" id="ch-transport-2-2">In <a href="sec-vam.html" class="internal" title="Section 6.1: A Transportation problem and VAM">Section 6.1</a>, we discuss the general transportation problem and an algorithm which heuristically produces a “good” feasible solution.  Then in <a href="sec-transportalgorithm.html" class="internal" title="Section 6.2: The Transportation Algorithm">Section 6.2</a> we explore an algorithm which improves a feasible solution and produces an optimal solution.  Then in <a href="sec-assignment.html" class="internal" title="Section 6.3: The Assignment Problem and Hungarian Algorithm">Section 6.3</a>, we examine a specific type of transportation problem, the assignment problem, and study an algorithm partiular to this class of problem.</div></section><nav class="summary-links"><ul>
 <li><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></li>
 <li><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></li>
 <li><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></li>

@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,8 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercisesduality"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">4.4</span><span class="space"> </span><span class="title">Problems for Chapter 4</span>
 </h2>
-<pre id="sec-exercisesduality-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></pre>
+<div id="sec-exercisesduality-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
 <div class="para" id="sec-exercisesduality-3">The simplex pivoter may be found here: <details id="sec-exercisesduality-3-1" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-exercisesduality-3-1-1"><iframe src="external/Tienv2.html" id="sec-exercisesduality-3-1-1-1" width="600" height="600"></iframe></div></div></details>
 </div>
 <section class="exercises" id="exercises-duality"><h3 class="heading hide-type">
@@ -565,8 +565,10 @@ true);
 <article class="exercise exercise-like" id="exercises-duality-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
 <div class="para" id="exercises-duality-1-1">For each problem in <a href="sec-exercisessimplex.html#ex-solvesimplex" class="xref" data-knowl="./knowl/xref/ex-solvesimplex.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 2.5.5">Exercise 2.5.5</a>, if the problem has an optimal solution, identify the bounding hyperplanes that the solution lies on, then state the normal vector for the objective plane in terms of the normal vectors of the bounding hyperplanes.</div></article><article class="exercise exercise-like" id="exercises-duality-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-duality-2-1">
-<div class="para" id="exercises-duality-2-1-1">Suppose that a company is painting figurines, 4 colors <span class="process-math">\(C_1, C_2, C_3, C_4\text{.}\)</span>   The colors are mixed from red, green and blue paint.</div> <div class="para" id="exercises-duality-2-1-2">
-<span class="process-math">\(C_1\)</span> takes 2 oz of red, 2 oz green and 1 oz blue. <span class="process-math">\(C_2\)</span> takes 3 oz of red, 1 oz green and 1 oz blue. <span class="process-math">\(C_3\)</span> takes 1 oz of red, 2 oz green and 2 oz blue. <span class="process-math">\(C_4\)</span> takes 1 oz of red and 4 oz blue.</div> <div class="para" id="exercises-duality-2-1-3">Figurines with color <span class="process-math">\(C_1, C_3\)</span> sell for $20, <span class="process-math">\(C_2\)</span> colored figures sell for $25 dollars and <span class="process-math">\(C_4\)</span> colored figurines sell for $30.  The company has many figurines to paint and 100 oz each of red, green and blue paint.  How many of each colored figurine should be painted to maximize revenue?</div>
+<div class="para" id="exercises-duality-2-1-1">Suppose that a company is painting figurines, 4 colors <span class="process-math">\(C_1, C_2, C_3, C_4\text{.}\)</span>   The colors are mixed from red, green and blue paint.</div>
+<div class="para" id="exercises-duality-2-1-2">
+<span class="process-math">\(C_1\)</span> takes 2 oz of red, 2 oz green and 1 oz blue. <span class="process-math">\(C_2\)</span> takes 3 oz of red, 1 oz green and 1 oz blue. <span class="process-math">\(C_3\)</span> takes 1 oz of red, 2 oz green and 2 oz blue. <span class="process-math">\(C_4\)</span> takes 1 oz of red and 4 oz blue.</div>
+<div class="para" id="exercises-duality-2-1-3">Figurines with color <span class="process-math">\(C_1, C_3\)</span> sell for $20, <span class="process-math">\(C_2\)</span> colored figures sell for $25 dollars and <span class="process-math">\(C_4\)</span> colored figurines sell for $30.  The company has many figurines to paint and 100 oz each of red, green and blue paint.  How many of each colored figurine should be painted to maximize revenue?</div>
 </div>
 <article class="task exercise-like" id="exercises-duality-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-duality-2-2-1-1">Solve the above canonical maximization problem and</div></article><article class="task exercise-like" id="exercises-duality-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
@@ -575,7 +577,8 @@ true);
 <div class="para" id="exercises-duality-2-5-1-1">If we had 100 oz red, 110 oz green, and 100 oz blue paint, without resolving the problem, what would the optimal revenue be?</div></article><article class="task exercise-like" id="exercises-duality-2-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <div class="para" id="exercises-duality-2-6-1-1">If we had 100 oz red, 100 oz green, and 95 oz blue paint, without resolving the problem, what would the optimal revenue be?</div></article></article><article class="exercise exercise-like" id="exercises-duality-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-duality-3-1">
-<div class="para" id="exercises-duality-3-1-1">An office worker is eating in their work cafeteria and they are recently put on a low cholestrol diet.  Their usual choices are pasta, fried tofu and chicken sandwiches.  The pasta has 6 g of protein, 60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol. The fried tofu has 10 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 50 mg of cholesterol. The chicken sandwich has 18 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.</div> <div class="para" id="exercises-duality-3-1-2">They need 200 g of protein, 960 g of carbohydrates and 40 mg of vitamin C in a month, and wishes to minimize cholesterol.  How many of each meal should they eat?</div>
+<div class="para" id="exercises-duality-3-1-1">An office worker is eating in their work cafeteria and they are recently put on a low cholestrol diet.  Their usual choices are pasta, fried tofu and chicken sandwiches.  The pasta has 6 g of protein, 60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol. The fried tofu has 10 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 50 mg of cholesterol. The chicken sandwich has 18 g of protein, 40 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.</div>
+<div class="para" id="exercises-duality-3-1-2">They need 200 g of protein, 960 g of carbohydrates and 40 mg of vitamin C in a month, and wishes to minimize cholesterol.  How many of each meal should they eat?</div>
 </div>
 <article class="task exercise-like" id="exercises-duality-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-duality-3-2-1-1">Find the optimal solution to the above problem.</div></article><article class="task exercise-like" id="exercises-duality-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
@@ -595,7 +598,8 @@ true);
 <div class="para" id="ex-duality-4-1-1">Prove that if the primal (dual) problem is feasible and unbounded above (below), then the dual (primal) problem is infeasible.</div></article><article class="task exercise-like" id="ex-duality-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="ex-duality-5-1-1">Find a primal-dual linear problem where both the primal and dual problems are infeasible.</div></article></article><article class="exercise exercise-like" id="exercises-duality-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-duality-6-1">
-<div class="para" id="exercises-duality-6-1-1">Consider the canonical maximization linear optimization problem below:</div> <div class="para logical" id="exercises-duality-6-1-2"><div class="displaymath process-math" id="exercises-duality-6-1-2-1">
+<div class="para" id="exercises-duality-6-1-1">Consider the canonical maximization linear optimization problem below:</div>
+<div class="para logical" id="exercises-duality-6-1-2"><div class="displaymath process-math" id="exercises-duality-6-1-2-1">
 \begin{align*}
 \textbf{Maximize: }  f(x,y) = \amp x+y\\
 \textbf{subject to: } x+2y\amp \leq  4\\
@@ -848,7 +852,8 @@ x,y\amp \geq  0.
 </tr>
 </table></div></div></article></article><article class="exercise exercise-like" id="exercises-duality-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-duality-9-1">
-<div class="para" id="exercises-duality-9-1-1">Consider the following tableau:</div> <div class="para" id="exercises-duality-9-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="exercises-duality-9-1-1">Consider the following tableau:</div>
+<div class="para" id="exercises-duality-9-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -889,7 +894,8 @@ x,y\amp \geq  0.
 <div class="para" id="exercises-duality-9-2-1-1">Find <span class="process-math">\(b_1, b_2, c_1, c_2\)</span> so that the basic solutions of the above tableau are optimal, and both problems have infinitely many solutions.</div></article><article class="task exercise-like" id="exercises-duality-9-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-duality-9-3-1-1">Classify the choices for <span class="process-math">\(b_1, b_2, c_1, c_2\)</span> for which the conditions of part a hold.</div></article></article><article class="exercise exercise-like" id="exercises-duality-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-duality-10-1">
-<div class="para" id="exercises-duality-10-1-1">Consider a two variable, two constraint primal maximization problem.  Recall Weak Duality <a href="sec-dualitytheory.html#prop-weakduality" class="xref" data-knowl="./knowl/xref/prop-weakduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.2.3">Proposition 4.2.3</a>, and Complementary Slackness, <a href="sec-dualitytheory.html#def-complementaryslackness" class="xref" data-knowl="./knowl/xref/def-complementaryslackness.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.2.15">Definition 4.2.15</a>.</div> <div class="para" id="exercises-duality-10-1-2">Suppose we found a pair of primal-dual solutions which satisfied main constraints, but one or more non-negativity constraints.</div>
+<div class="para" id="exercises-duality-10-1-1">Consider a two variable, two constraint primal maximization problem.  Recall Weak Duality <a href="sec-dualitytheory.html#prop-weakduality" class="xref" data-knowl="./knowl/xref/prop-weakduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.2.3">Proposition 4.2.3</a>, and Complementary Slackness, <a href="sec-dualitytheory.html#def-complementaryslackness" class="xref" data-knowl="./knowl/xref/def-complementaryslackness.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.2.15">Definition 4.2.15</a>.</div>
+<div class="para" id="exercises-duality-10-1-2">Suppose we found a pair of primal-dual solutions which satisfied main constraints, but one or more non-negativity constraints.</div>
 </div>
 <article class="task exercise-like" id="exercises-duality-10-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-duality-10-2-1-1">Must the  Weak Duality  still hold?  Prove or find a counterexample.</div></article><article class="task exercise-like" id="exercises-duality-10-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>

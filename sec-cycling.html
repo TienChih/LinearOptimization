@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -547,7 +547,8 @@ true);
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="activity-cyclingexample-1">
-<div class="para" id="activity-cyclingexample-1-1">Consider the following canonical maximization tableau:</div> <div class="para" id="activity-cyclingexample-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="activity-cyclingexample-1-1">Consider the following canonical maximization tableau:</div>
+<div class="para" id="activity-cyclingexample-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -830,9 +831,11 @@ x,y \amp\geq0.
 <div class="para" id="sec-cycling-4-2-1-1">Consider a sequence of pivots swapping <span class="process-math">\(x\leftrightarrow t_2\text{,}\)</span> <span class="process-math">\(y \leftrightarrow  t_1\)</span> <span class="process-math">\(t_1 \leftrightarrow y\text{,}\)</span> <span class="process-math">\(t_2 \leftrightarrow x\text{.}\)</span>  In each of these cases, what is the basic solution recorded by the tableau?</div>
 <div class="solutions"><details id="sec-cycling-4-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/degenerate.svg" role="img" class="contained" alt="The feasible region with multiple lines intersecting the origin."></div></div></details></div></article></article><article class="definition definition-like" id="def-Cycling"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
-</h3> <div class="para" id="def-Cycling-2-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.6">Definition 2.2.6</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <dfn class="terminology">cycling</dfn>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">
+</h3>
+<div class="para" id="def-Cycling-2-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.6">Definition 2.2.6</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <dfn class="terminology">cycling</dfn>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
-</h3> <div class="para" id="def-degenerate-2-1">If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <dfn class="terminology">degenerate</dfn> pivot.</div></article><div class="para" id="sec-cycling-7">Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate.  Fortunately, there is a solution to this issue.</div>
+</h3>
+<div class="para" id="def-degenerate-2-1">If a pivot on a tableau gives a new tableau corresponding to the same basic solution, we call the pivot a <dfn class="terminology">degenerate</dfn> pivot.</div></article><div class="para" id="sec-cycling-7">Cycling is bad, since potentially this allows the Simplex Algorithm to not terminate.  Fortunately, there is a solution to this issue.</div>
 <article class="theorem theorem-like" id="thm-BlandAnticycling"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Bland’s Anticycling Rules.</span>
 </h3>
@@ -894,7 +897,9 @@ x,y \amp\geq0.
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div> and order the variables in the associated way.  Suppose we follow Bland’s rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) <span class="process-math">\(B_1\to B_2\to \cdots B_\ell \to B_1\text{.}\)</span> We call a variable <span class="process-math">\(x_j\)</span> <dfn class="terminology">fickle</dfn> if <span class="process-math">\(x_j\)</span> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.</div> <div class="para" id="sec-cycling-9-2">Note that in order for cycling to occur, each pivot must be degenerate (ask yourself why?). So if <span class="process-math">\(x_j\)</span> is fickle, <span class="process-math">\(x_j=0\)</span> for each basic solution during the cycle.</div> <div class="para" id="sec-cycling-9-3">Since the number of variables is finite, the set of fickle variables is also finite, and let <span class="process-math">\(x_t\)</span> denote the fickle variable with largest subscript.  Suppose that <span class="process-math">\(x_t \in B_i, x_t\not\in B_{i+1}\)</span> (why must such a <span class="process-math">\(B_i\)</span> exist?). Denote the entering variable from <span class="process-math">\(B_i\to B_{i+1}\)</span> with <span class="process-math">\(x_s\text{.}\)</span> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+</table></div> and order the variables in the associated way.  Suppose we follow Bland’s rules and still have cycling. That is, there is a sequence of pivots and bases (set of basic variables) <span class="process-math">\(B_1\to B_2\to \cdots B_\ell \to B_1\text{.}\)</span> We call a variable <span class="process-math">\(x_j\)</span> <dfn class="terminology">fickle</dfn> if <span class="process-math">\(x_j\)</span> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.</div>
+<div class="para" id="sec-cycling-9-2">Note that in order for cycling to occur, each pivot must be degenerate (ask yourself why?). So if <span class="process-math">\(x_j\)</span> is fickle, <span class="process-math">\(x_j=0\)</span> for each basic solution during the cycle.</div>
+<div class="para" id="sec-cycling-9-3">Since the number of variables is finite, the set of fickle variables is also finite, and let <span class="process-math">\(x_t\)</span> denote the fickle variable with largest subscript.  Suppose that <span class="process-math">\(x_t \in B_i, x_t\not\in B_{i+1}\)</span> (why must such a <span class="process-math">\(B_i\)</span> exist?). Denote the entering variable from <span class="process-math">\(B_i\to B_{i+1}\)</span> with <span class="process-math">\(x_s\text{.}\)</span> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width middle" style="width:50%;"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -980,7 +985,8 @@ x,y \amp\geq0.
 </tr>
 </table></div>
 </div></div> Note that <span class="process-math">\(x_s\)</span> must also be fickle (why?) and so <span class="process-math">\(s\lt t\text{.}\)</span>
-</div> <div class="para logical" id="sec-cycling-9-4">
+</div>
+<div class="para logical" id="sec-cycling-9-4">
 <div class="para">We call the <dfn class="terminology">dictionary</dfn> for a basis the system of equations corresponding to that basis.  So the dictionary for <span class="process-math">\(B_i\)</span> is <span class="process-math">\(D_i\)</span> which we can write as:</div>
 <div class="displaymath process-math" id="sec-cycling-9-4-4">
 \begin{align*}
@@ -990,7 +996,9 @@ f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d.
 </div>
 <div class="para">Note that since the above pivot was valid, we must have that <span class="process-math">\(c_s&gt;0, a_{ts}&gt;0\)</span> and since the pivot was degenerate, we have <span class="process-math">\(b_t=0\text{.}\)</span>
 </div>
-</div> <div class="para" id="sec-cycling-9-5">Now, because we have cycling, we must have that <span class="process-math">\(x_t\)</span> reenters the basis at some point</div> <div class="para" id="sec-cycling-9-6"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+</div>
+<div class="para" id="sec-cycling-9-5">Now, because we have cycling, we must have that <span class="process-math">\(x_t\)</span> reenters the basis at some point</div>
+<div class="para" id="sec-cycling-9-6"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width middle" style="width:50%;"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -1075,7 +1083,8 @@ f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d.
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></div></div> <div class="para logical" id="sec-cycling-9-7">
+</div></div></div>
+<div class="para logical" id="sec-cycling-9-7">
 <div class="para">Note that for this pivot to be valid, we have that <span class="process-math">\(c_t^*&gt;0\text{.}\)</span> If we let <span class="process-math">\(D_\ell\)</span> denote the dictionary before <span class="process-math">\(x_t\)</span> re-enters the basis, we have:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1092,7 +1101,8 @@ x_k \amp = b_k-a_{ks}Z \text{ for }x_k\in B_i\\
 f \amp = c_sZ-d. 
 \end{align*}
 </div>
-</div> <div class="para logical" id="sec-cycling-9-8">
+</div>
+<div class="para logical" id="sec-cycling-9-8">
 <div class="para">So we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1105,7 +1115,8 @@ c_sZ-d =f =c_s^*Z-d+\displaystyle\sum_{x_k\in B_i} c_{k}^*(b_k-a_{ks}Z)
 \left( c_s-c_s^*  + \displaystyle\sum_{x_k\in B_i} c_{k}^*a_{ks} \right)Z = \displaystyle\sum_{x_k\in B_i} c_{k}^*b_k.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="sec-cycling-9-9">
+</div>
+<div class="para logical" id="sec-cycling-9-9">
 <div class="para">The above equation holds true no matter what <span class="process-math">\(Z\)</span> is.  Thus:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1124,8 +1135,11 @@ c_s-c_s^*  + \displaystyle\sum_{x_k\in B_i} c_{k}^*a_{ks}=0.
 c_r^*a_{rs}\lt 0.
 \end{equation*}
 </div>
-</div> <div class="para" id="sec-cycling-9-10">From this, we know that <span class="process-math">\(c_r^*\neq 0\text{.}\)</span>  So <span class="process-math">\(x_r\not\in B_\ell\text{,}\)</span> but <span class="process-math">\(x_r\in B_i\text{,}\)</span> so <span class="process-math">\(x_r\)</span> is fickle.  Since <span class="process-math">\(t\)</span> is the largest index of a fickle variable, <span class="process-math">\(r\lt t\text{.}\)</span>  Note that <span class="process-math">\(x_r\)</span> is not entering from <span class="process-math">\(B_\ell\text{,}\)</span> so <span class="process-math">\(c_r^*\leq 0\text{.}\)</span>  Thus <span class="process-math">\(a_{rs}&gt;0\text{.}\)</span>
-</div> <div class="para" id="sec-cycling-9-11">But <span class="process-math">\(x_r\)</span> is fickle, so <span class="process-math">\(b_r=0\)</span> in <span class="process-math">\(D_i\text{.}\)</span>  But then, we would have picked <span class="process-math">\(x_r\text{,}\)</span> not <span class="process-math">\(x_t\)</span> to leave.</div> <div class="para" id="sec-cycling-9-12"><div class="tabular-box natural-width"><table class="tabular">
+</div>
+<div class="para" id="sec-cycling-9-10">From this, we know that <span class="process-math">\(c_r^*\neq 0\text{.}\)</span>  So <span class="process-math">\(x_r\not\in B_\ell\text{,}\)</span> but <span class="process-math">\(x_r\in B_i\text{,}\)</span> so <span class="process-math">\(x_r\)</span> is fickle.  Since <span class="process-math">\(t\)</span> is the largest index of a fickle variable, <span class="process-math">\(r\lt t\text{.}\)</span>  Note that <span class="process-math">\(x_r\)</span> is not entering from <span class="process-math">\(B_\ell\text{,}\)</span> so <span class="process-math">\(c_r^*\leq 0\text{.}\)</span>  Thus <span class="process-math">\(a_{rs}&gt;0\text{.}\)</span>
+</div>
+<div class="para" id="sec-cycling-9-11">But <span class="process-math">\(x_r\)</span> is fickle, so <span class="process-math">\(b_r=0\)</span> in <span class="process-math">\(D_i\text{.}\)</span>  But then, we would have picked <span class="process-math">\(x_r\text{,}\)</span> not <span class="process-math">\(x_t\)</span> to leave.</div>
+<div class="para" id="sec-cycling-9-12"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
@@ -1174,7 +1188,8 @@ c_r^*a_{rs}\lt 0.
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div></div> <div class="para" id="sec-cycling-9-13">which is a contradiction.</div></article></details><article class="activity project-like" id="sec-cycling-10"><h3 class="heading">
+</table></div></div>
+<div class="para" id="sec-cycling-9-13">which is a contradiction.</div></article></details><article class="activity project-like" id="sec-cycling-10"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-cycling-10-1-1">If we follow <a href="sec-cycling.html#thm-BlandAnticycling" class="xref" data-knowl="./knowl/xref/thm-BlandAnticycling.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.3.5: Bland’s Anticycling Rules">Theorem 2.3.5</a> then no basis is visited twice during the Simplex Algorithm.  Note that <span class="process-math">\(f\)</span> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?</div></article></section></div>

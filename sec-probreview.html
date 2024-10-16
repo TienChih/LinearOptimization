@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-r' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-r' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-r",
+  "inputLocation": "div.sagecell-r",
   "linked": true,
   "linkKey": "linked-r",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,7 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-probreview"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">A.2</span><span class="space"> </span><span class="title">Probability Theory Review</span>
 </h2>
-<section class="introduction" id="sec-probreview-2"><div class="para" id="sec-probreview-2-1">This is an extremely brief “review” of the limited probability theory we utilize in <a href="ch-games.html" class="internal" title="Chapter 5: Zero-Sum Games">Chapter 5</a>.  It’s not even particularly fair to call this a review, since probability is not a prerequisite to this course.  However, the limited amount we use is fairly straightforward and intuitive.</div> <div class="para" id="sec-probreview-2-2">If a more thorough treatment is needed, then depending on your goals, there are good options available.  For someone looking to explore some elementary probability theory, the introductory statistics textbook <a class="external" href="https://www.openintro.org/book/os/" target="_blank">“OpenIntro Statistics”</a><details class="ptx-footnote" aria-live="polite" id="sec-probreview-2-2-2"><summary class="ptx-footnote__number" title="Footnote A.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-probreview-2-2-2"><code class="code-inline tex2jax_ignore">www.openintro.org/book/os/</code></div></details> by David Diez, Christopher Barr, and Mine Çetinkaya-Rundel does a good job presenting this material.  It also is an excellent introducotry statistics text with labs and data available.  For a calculus-based, theory heavy treatment of this text, I recommend <a class="external" href="https://www.markhuberdatascience.org/probability-textbook" target="_blank">“Probability: Lecture and Labs”</a><details class="ptx-footnote" aria-live="polite" id="sec-probreview-2-2-4"><summary class="ptx-footnote__number" title="Footnote A.2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-probreview-2-2-4"><code class="code-inline tex2jax_ignore">www.markhuberdatascience.org/probability-textbook</code></div></details>.</div></section><article class="definition definition-like" id="def-basicprob"><h3 class="heading">
+<section class="introduction" id="sec-probreview-2"><div class="para" id="sec-probreview-2-1">This is an extremely brief “review” of the limited probability theory we utilize in <a href="ch-games.html" class="internal" title="Chapter 5: Zero-Sum Games">Chapter 5</a>.  It’s not even particularly fair to call this a review, since probability is not a prerequisite to this course.  However, the limited amount we use is fairly straightforward and intuitive.</div>
+<div class="para" id="sec-probreview-2-2">If a more thorough treatment is needed, then depending on your goals, there are good options available.  For someone looking to explore some elementary probability theory, the introductory statistics textbook <a class="external" href="https://www.openintro.org/book/os/" target="_blank">“OpenIntro Statistics”</a><details class="ptx-footnote" aria-live="polite" id="sec-probreview-2-2-2"><summary class="ptx-footnote__number" title="Footnote A.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-probreview-2-2-2"><code class="code-inline tex2jax_ignore">www.openintro.org/book/os/</code></div></details> by David Diez, Christopher Barr, and Mine Çetinkaya-Rundel does a good job presenting this material.  It also is an excellent introducotry statistics text with labs and data available.  For a calculus-based, theory heavy treatment of this text, I recommend <a class="external" href="https://www.markhuberdatascience.org/probability-textbook" target="_blank">“Probability: Lecture and Labs”</a><details class="ptx-footnote" aria-live="polite" id="sec-probreview-2-2-4"><summary class="ptx-footnote__number" title="Footnote A.2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-probreview-2-2-4"><code class="code-inline tex2jax_ignore">www.markhuberdatascience.org/probability-textbook</code></div></details>.</div></section><article class="definition definition-like" id="def-basicprob"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.2.1</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-basicprob-1-1">In probability, an <dfn class="terminology">experiment</dfn> is an  occurrence with a measurable result. Each instance of an experiment is  a <dfn class="terminology">trial</dfn>. The possible results of each trial are called <dfn class="terminology">outcomes</dfn>. The set of all possible outcomes for an experiment is the <dfn class="terminology">sample space</dfn> for that experiment.</div></article><article class="definition definition-like" id="def-prob"><h3 class="heading">
@@ -579,7 +580,9 @@ P(A)=\frac{|A|}{|S|}.
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">A.2.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-probreview-5-1">But what does it mean for an event <span class="process-math">\(A\)</span> to have probability <span class="process-math">\(P(A)\text{?}\)</span>  It means that if I repeat the experiment over and over, the proportion of them where <span class="process-math">\(A\)</span> is true should be <span class="process-math">\(P(A)\text{.}\)</span>
-</div> <div class="para" id="sec-probreview-5-2">So if I roll a die over and over, the proportion of them that give me a 6 over time should be <span class="process-math">\(\frac{1}{6}\text{.}\)</span>  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:</div> <pre id="sec-probreview-5-3" class="ptx-sagecell sagecell-r"><script type="text/x-sage">          n=10000
+</div>
+<div class="para" id="sec-probreview-5-2">So if I roll a die over and over, the proportion of them that give me a 6 over time should be <span class="process-math">\(\frac{1}{6}\text{.}\)</span>  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:</div>
+<div id="sec-probreview-5-3" class="ptx-sagecell sagecell-r"><script type="text/x-sage">          n=10000
 
 sixes=0
 Sixvec<-vector(length = 0)
@@ -594,7 +597,7 @@ Sixvec<-c(Sixvec, sixes/i)
 
 plot(Sixvec, type="l", ylim=c(0,1))
 abline(h=1/6, col="red", lty=2)
-</script></pre></article><article class="definition definition-like" id="def-rv"><h3 class="heading">
+</script></div></article><article class="definition definition-like" id="def-rv"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.2.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-rv-1-1">A <dfn class="terminology">random variable</dfn> is a function from sample space to an outcome set. For our purposes, this set of outcomes will always be <span class="process-math">\(\mathbb{R}\text{.}\)</span>
@@ -650,7 +653,7 @@ P(X=x) \amp \approx 0.1667\amp 0.5 \amp 0.3 \amp \approx 0.0333\\
 \end{array}
 \end{equation*}
 </div>
-</div> <div class="para" id="ex-apple-2-3">This can be seen by the following R simulation: <pre id="ex-apple-2-3-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            n=1000
+</div> <div class="para" id="ex-apple-2-3">This can be seen by the following R simulation: <div id="ex-apple-2-3-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            n=1000
 poison = 3
 notpoison = 7
 eat = 4
@@ -664,7 +667,7 @@ for(i in 1:n){
   numpoison[i] = sum(sample(applevec, eat, replace = FALSE))  
 }
 hist(numpoison)
-</script></pre>
+</script></div>
 </div></article><article class="definition definition-like" id="def-expectation"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.2.7</span><span class="period">.</span>
 </h3>
@@ -686,11 +689,11 @@ E(X)=\sum P(X=x)\cdot x.
 E(X)=0\cdot\frac{35}{210}+1\cdot\frac{105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.
 \end{equation*}
 </div>
-</div> <div class="para" id="sec-probreview-12-1-2">We can compute the mean of the previously simulated number of poisoned apples and visualize it: <pre id="sec-probreview-12-1-2-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            hist(numpoison)
+</div> <div class="para" id="sec-probreview-12-1-2">We can compute the mean of the previously simulated number of poisoned apples and visualize it: <div id="sec-probreview-12-1-2-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            hist(numpoison)
 avgpoison = mean(numpoison)
 abline(v = avgpoison, lwd = 2, lty = 2, col = "red")
 print(avgpoison)
-</script></pre>
+</script></div>
 </div> <div class="para" id="sec-probreview-12-1-3">Be sure to run the simulation in <a href="sec-probreview.html#ex-apple" class="xref" data-knowl="./knowl/xref/ex-apple.html" data-reveal-label="Reveal" data-close-label="Close" title="Example A.2.6: Poisoned apples">Example A.2.6</a> first!</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-lareview.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="simplexpivoter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

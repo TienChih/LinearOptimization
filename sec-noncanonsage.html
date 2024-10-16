@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -568,7 +568,7 @@ y, z&amp; \geq  0.
 </div></div>
 </div></div>
 <article class="task exercise-like" id="sec-noncanonsage-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-noncanonsage-3-2-1-1">Record this non-canonical problem using Sage:</div> <div class="para" id="sec-noncanonsage-3-2-1-2"><pre id="sec-noncanonsage-3-2-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para" id="sec-noncanonsage-3-2-1-1">Record this non-canonical problem using Sage:</div> <div class="para" id="sec-noncanonsage-3-2-1-2"><div id="sec-noncanonsage-3-2-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = ([[1,2,3],[2,4,3]])
 b = ([24,36])
 c = ([3,1,2])
@@ -578,10 +578,10 @@ P = InteractiveLPProblem(A, b, c,
  variable_type = ["", ">=", ">="],
  problem_type = "min")
 P
-</script></pre></div></article><article class="task exercise-like" id="sec-noncanonsage-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-noncanonsage-3-3-1-1">Find the optimal solution: <pre id="sec-noncanonsage-3-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
+</script></div></div></article><article class="task exercise-like" id="sec-noncanonsage-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-noncanonsage-3-3-1-1">Find the optimal solution: <div id="sec-noncanonsage-3-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
-</script></pre>
+</script></div>
 </div></article></article><div class="para" id="sec-noncanonsage-4">Note that we use the command <code class="code-inline tex2jax_ignore">InteractiveLPProblem</code> rather than <code class="code-inline tex2jax_ignore">InteractiveLPProblemStandardForm</code> for general (potentially non-canonical) linear optimization problems. Sage does not have a command for the Simplex Algorithm for <code class="code-inline tex2jax_ignore">InteractiveLPProblem</code>.</div>
 <article class="activity project-like" id="sec-noncanonsage-5"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
@@ -595,7 +595,7 @@ x-y&amp; \geq 1\\
 \end{align*}
 </div></div>
 </div> <div class="para" id="sec-noncanonsage-5-1-2">
-<pre id="sec-noncanonsage-5-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div id="sec-noncanonsage-5-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
 c = (FIXME)
@@ -605,9 +605,9 @@ P = InteractiveLPProblem(A, b, c,
  variable_type = "",
  problem_type = FIXME)
 P
-</script></pre> <pre id="sec-noncanonsage-5-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
+</script></div> <div id="sec-noncanonsage-5-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
-</script></pre>
+</script></div>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-superconstrained.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesnoncanon.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

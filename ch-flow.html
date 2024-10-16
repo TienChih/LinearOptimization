@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,7 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-flow"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">7</span><span class="space"> </span><span class="title">Network Flows</span>
 </h2>
-<section class="introduction" id="ch-flow-2"><div class="para" id="ch-flow-2-1">In this chapter, we focus on flows through directed graphs called <em class="emphasis">networks</em>.  While graph theory is an enormous area of math (in which I work), we are particularly interested in optimization problems on weighted and or capacitated networks, such as maximizing the flow through a network with limited capacity, or finding a path minimizing the distance between nodes.</div> <div class="para" id="ch-flow-2-2">In <a href="sec-networkflow.html" class="internal" title="Section 7.1: Directed Graphs and Network Flow">Section 7.1</a> we explore maximal flows through capacitated networks and model this problem with linear optimization.  In <a href="sec-maxflowmincut.html" class="internal" title="Section 7.2: Max Flow - Min Cut">Section 7.2</a> we discuss the dual problem, connect it to <em class="emphasis">cuts</em> in the network, and discuss algorithms which solve both problems.  In <a href="sec-weighted.html" class="internal" title="Section 7.3: Weighted Graphs">Section 7.3</a> we shift our attention to weighted networks, and examine shortest paths and minimum cost flows.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-flow-2"><div class="para" id="ch-flow-2-1">In this chapter, we focus on flows through directed graphs called <em class="emphasis">networks</em>.  While graph theory is an enormous area of math (in which I work), we are particularly interested in optimization problems on weighted and or capacitated networks, such as maximizing the flow through a network with limited capacity, or finding a path minimizing the distance between nodes.</div>
+<div class="para" id="ch-flow-2-2">In <a href="sec-networkflow.html" class="internal" title="Section 7.1: Directed Graphs and Network Flow">Section 7.1</a> we explore maximal flows through capacitated networks and model this problem with linear optimization.  In <a href="sec-maxflowmincut.html" class="internal" title="Section 7.2: Max Flow - Min Cut">Section 7.2</a> we discuss the dual problem, connect it to <em class="emphasis">cuts</em> in the network, and discuss algorithms which solve both problems.  In <a href="sec-weighted.html" class="internal" title="Section 7.3: Weighted Graphs">Section 7.3</a> we shift our attention to weighted networks, and examine shortest paths and minimum cost flows.</div></section><nav class="summary-links"><ul>
 <li><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></li>
 <li><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></li>
 <li><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></li>

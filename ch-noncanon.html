@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,7 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-noncanon"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Noncanonical Problems</span>
 </h2>
-<section class="introduction" id="ch-noncanon-2"> <div class="para" id="ch-noncanon-2-3">Thus far, we have focused ourselves on <em class="emphasis">canonical</em> optimization problems where each decision variable is non-negative, and all bounds are inequalities.  However, what would happen if we relaxed, or strengthened these conditions?</div> <div class="para" id="ch-noncanon-2-4">In this chapter, we explore noncanonical optimization problems.  In <a href="sec-unconstrained.html" class="internal" title="Section 3.1: Unconstrained Variables">Section 3.1</a> we consider the possibility of potentially negative decision variables, and explore the algebraic and geometric interpretations of this phonomena.  In <a href="sec-superconstrained.html" class="internal" title="Section 3.2: Super Constrained Bounds">Section 3.2</a> we do the same for bounds defined by equality conditions, rather than inequalities.  In <a href="sec-noncanonsage.html" class="internal" title="Section 3.3: Solving NonCanonical Problems with Sage">Section 3.3</a> we show how to encode and solve non-canonical linear optimization using Sage.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-noncanon-2"><div class="para" id="ch-noncanon-2-3">Thus far, we have focused ourselves on <em class="emphasis">canonical</em> optimization problems where each decision variable is non-negative, and all bounds are inequalities.  However, what would happen if we relaxed, or strengthened these conditions?</div>
+<div class="para" id="ch-noncanon-2-4">In this chapter, we explore noncanonical optimization problems.  In <a href="sec-unconstrained.html" class="internal" title="Section 3.1: Unconstrained Variables">Section 3.1</a> we consider the possibility of potentially negative decision variables, and explore the algebraic and geometric interpretations of this phonomena.  In <a href="sec-superconstrained.html" class="internal" title="Section 3.2: Super Constrained Bounds">Section 3.2</a> we do the same for bounds defined by equality conditions, rather than inequalities.  In <a href="sec-noncanonsage.html" class="internal" title="Section 3.3: Solving NonCanonical Problems with Sage">Section 3.3</a> we show how to encode and solve non-canonical linear optimization using Sage.</div></section><nav class="summary-links"><ul>
 <li><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></li>
 <li><a href="sec-superconstrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Bounds</span></a></li>
 <li><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></li>

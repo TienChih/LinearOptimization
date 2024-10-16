@@ -9,10 +9,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -38,7 +38,7 @@ x,y, z, w\amp \geq  0.
 \end{align*}
 </div>
 </div>
-<div class="para">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <pre id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([
+<div class="para">Find the <span class="process-math">\({6\choose 4}\)</span> potential intersections of bounding hyperplanes, determine which are feasible, and which of those are optimal.  (It is recommended that you use some technological tools to solve for the resulting linear systems.) <div id="ex-6planes-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A=matrix([
 [1,0,0,0,0],
 [0,1,0,0,0], 
 [0,0,1,0,0],
@@ -46,7 +46,7 @@ x,y, z, w\amp \geq  0.
 print(A)
 print(" ")
 print(A.rref())
-</script></pre>
+</script></div>
 </div></article><span class="incontext"><a class="internal" href="sec-exercisesgeometric.html#ex-6planes">in-context</a></span>
 </body>
 </html>

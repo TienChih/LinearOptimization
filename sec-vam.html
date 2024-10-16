@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -547,7 +547,8 @@ true);
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="exploration-transportation-1">
-<div class="para" id="exploration-transportation-1-1">Suppose we have a company moving goods (lets say widgets) from 3 different warehouses to 3 different markets.  The cost of shipping from warehouses to markets is listed below, along with the demand from each market and the supply available at each warehouse:</div> <div class="para" id="exploration-transportation-1-2"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="exploration-transportation-1-1">Suppose we have a company moving goods (lets say widgets) from 3 different warehouses to 3 different markets.  The cost of shipping from warehouses to markets is listed below, along with the demand from each market and the supply available at each warehouse:</div>
+<div class="para" id="exploration-transportation-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines">Market 1</td>
@@ -583,7 +584,8 @@ true);
 <td class="c m b0 r2 l0 t0 lines">20 tons</td>
 <td class="l m b0 r0 l0 t0 lines">100 tons</td>
 </tr>
-</table></div></div> <div class="para" id="exploration-transportation-1-3">We want to ship the goods from the warehouses to the markets in a way that minimizes costs.</div>
+</table></div></div>
+<div class="para" id="exploration-transportation-1-3">We want to ship the goods from the warehouses to the markets in a way that minimizes costs.</div>
 </div>
 <article class="task exercise-like" id="exploration-transportation-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="exploration-transportation-2-1-1">Just eyeballing this, can you come up with a heuristic guess as to an optimal, or at least “good” shipping schedule? How did you come up with this and what did you have to consider?</div></article><article class="task exercise-like" id="exploration-transportation-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
@@ -593,11 +595,11 @@ true);
 </div></article><article class="task exercise-like" id="exploration-transportation-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="exploration-transportation-5-1-1">Write a (possibly noncanonical) linear minimization problem that minimizes the cost to ship these goods.</div></article></article><article class="definition definition-like" id="def-balanced"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span>
-</h3> <div class="para" id="def-balanced-3-1">A transportation problem where the total demand and the total supply are the same is a <dfn class="terminology">balanced</dfn> transportation problem.</div></article><article class="activity project-like" id="activity-vamexample"><h3 class="heading">
+</h3>
+<div class="para" id="def-balanced-3-1">A transportation problem where the total demand and the total supply are the same is a <dfn class="terminology">balanced</dfn> transportation problem.</div></article><article class="activity project-like" id="activity-vamexample"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-vamexample-1">
-<div class="para" id="activity-vamexample-1-1">While we could solve this transportation by the Simplex Algorithm, it would be painfully tedious to do.  We develop an algorithm to simplify this process.</div> </div>
+<div class="introduction" id="activity-vamexample-1"><div class="para" id="activity-vamexample-1-1">While we could solve this transportation by the Simplex Algorithm, it would be painfully tedious to do.  We develop an algorithm to simplify this process.</div></div>
 <article class="task exercise-like" id="activity-vamexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="activity-vamexample-2-1-1">
 <div class="para">Suppose we had <span class="process-math">\(n\)</span> warehouses and <span class="process-math">\(m\)</span> markets with supplies <span class="process-math">\(w_i\)</span> and demands <span class="process-math">\(m_j\text{.}\)</span>  We have linear equations</div>
@@ -879,7 +881,8 @@ true);
 </table></div></div> <div class="para" id="activity-vamexample-8-1-3">Verify that this is a feasible solution to the original transportation problem. Do you think it is optimal?</div></article><article class="task exercise-like" id="activity-vamexample-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="activity-vamexample-9-1-1">Out of the nine possible warehouse/market pairs, how many have actual shipments between them?  How does that compare to what we found in (a)?</div></article></article><article class="definition definition-like" id="def-vam"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span>
-</h3> <div class="para" id="def-vam-4-1">To summarise the <em class="emphasis">Vogel Advanced-Start Method</em> or <em class="emphasis">VAM</em> method of producing a feasible solution to the transportation problem is outlined as follows.</div> <ol class="decimal" id="def-vam-4-2">
+</h3>
+<div class="para" id="def-vam-4-1">To summarise the <em class="emphasis">Vogel Advanced-Start Method</em> or <em class="emphasis">VAM</em> method of producing a feasible solution to the transportation problem is outlined as follows.</div> <ol class="decimal" id="def-vam-4-2">
 <li id="def-vam-4-2-1"><div class="para" id="def-vam-4-2-1-1">We begin with <span class="process-math">\(m\)</span> sources and <span class="process-math">\(n\)</span> sinks, each with a supply or demand respectively. We associate each row of the transportation tableau with a source, each column with a sink, and each entry <span class="process-math">\(c_{ij}\)</span> with the cost of shipping from source<span class="process-math">\(i\)</span> to sink <span class="process-math">\(j\text{.}\)</span>
 </div></li>
 <li id="def-vam-4-2-2"><div class="para" id="def-vam-4-2-2-1">For each row and column, we record the difference between the lowest two values.</div></li>

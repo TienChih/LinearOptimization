@@ -9,10 +9,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+<script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -28,7 +28,8 @@ sagecell.makeSagecell({
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
 </h3>
 <div class="introduction">
-<div class="para">The <em class="emphasis">branch and bound</em> method is a way to systematically add bounds to a linear optimization problem to ensure the solution is integral.</div> <div class="para">We examine the integer optimization problem from <a href="sec-branchbound.html#exploration-meat" class="xref" data-knowl="./knowl/xref/exploration-meat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.1.1">Exploration 8.1.1</a>, and it’s relaxation.</div>
+<div class="para">The <em class="emphasis">branch and bound</em> method is a way to systematically add bounds to a linear optimization problem to ensure the solution is integral.</div>
+<div class="para">We examine the integer optimization problem from <a href="sec-branchbound.html#exploration-meat" class="xref" data-knowl="./knowl/xref/exploration-meat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.1.1">Exploration 8.1.1</a>, and it’s relaxation.</div>
 </div>
 <article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para">Consider <span class="process-math">\(x_1\)</span> the number of sandwiches sold, the current optimal <span class="process-math">\(x_1\text{.}\)</span> Which two of the following potential additional constraints would force the value of <span class="process-math">\(x_1\)</span> to be an integer, while remaining as close to the optimal solution of the relaxation as possible.</div> <ol class="upper-alpha cols2" id="activity-meat1-2-1-2">
@@ -42,7 +43,7 @@ sagecell.makeSagecell({
 <li><div class="para"><span class="process-math">\(x_1\geq 6\text{.}\)</span></div></li>
 </ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para">Let us consider the additional constraint <span class="process-math">\(x_1\leq 4\text{.}\)</span>  Solve the resulting general linear optimization problem:</div> <div class="para">
-<pre id="activity-meat1-3-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div id="activity-meat1-3-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
 c = (FIXME)
@@ -52,9 +53,9 @@ P = InteractiveLPProblem(A, b, c,
  variable_type = [FIXME],
  problem_type = FIXME)
 P
-</script></pre> <pre id="activity-meat1-3-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
+</script></div> <div id="activity-meat1-3-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
-</script></pre>
+</script></div>
 </div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree1.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para">What additional constraints on <span class="process-math">\(x_2\)</span> would ensure that <span class="process-math">\(x_2\)</span> would be integral while changing <span class="process-math">\(x_2\)</span> as little as possible?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para">Consider the additional constraint <span class="process-math">\(x_2\leq 4\text{.}\)</span>  Solve this maximization problem.  Why do we no longer need to adjust <span class="process-math">\(x_1\text{?}\)</span>  Are we gaurunteed that this solution is optimal?</div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree2.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>

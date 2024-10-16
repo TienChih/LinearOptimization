@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -568,7 +568,8 @@ true);
 </h3>
 <div class="introduction" id="activity-maxmatch-1">
 <div class="para" id="activity-maxmatch-1-1">Let <span class="process-math">\(G\)</span> be a graph with vertices <span class="process-math">\(v_1, \ldots, v_n\text{,}\)</span> and <span class="process-math">\(M\)</span> be any matching on <span class="process-math">\(G\text{.}\)</span> For each edge <span class="process-math">\(v_iv_j\)</span> let <span class="process-math">\(x_{ij}\in [0,1]\)</span> such that if <span class="process-math">\(v_iv_j\in M\text{,}\)</span> then <span class="process-math">\(x_{ij}=1\text{,}\)</span> otherwise <span class="process-math">\(x_{ij}=0\text{.}\)</span>
-</div> <div class="para" id="activity-maxmatch-1-2">We now construct a canonical maximization problem which can help compute a maximum matching.</div>
+</div>
+<div class="para" id="activity-maxmatch-1-2">We now construct a canonical maximization problem which can help compute a maximum matching.</div>
 </div>
 <article class="task exercise-like" id="activity-maxmatch-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-maxmatch-2-1-1">For each vertex <span class="process-math">\(v_i\text{,}\)</span> write an inequality to ensure that <span class="process-math">\(M\)</span> is a matching.</div></article><article class="task exercise-like" id="activity-maxmatch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
@@ -578,7 +579,7 @@ true);
 </div></article><article class="task exercise-like" id="activity-maxmatch-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-maxmatch-5-1-1">State the maximization linear optimization problem for computing the maximum matching of a graph <span class="process-math">\(G\text{.}\)</span> We well refer to this problem as the <dfn class="terminology">matching primal problem</dfn>.</div></article><article class="task exercise-like" id="activity-maxmatch-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-maxmatch-6-1-1">Consider <span class="process-math">\(G\)</span> from <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>.  Label each vertex and write out a Tucker tableau for the linear optimization problem for computing the maximum matching.</div></article><article class="task exercise-like" id="activity-maxmatch-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-maxmatch-7-1-1">Solve the above optimization problem:</div> <pre id="activity-maxmatch-7-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para" id="activity-maxmatch-7-1-1">Solve the above optimization problem:</div> <div id="activity-maxmatch-7-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 AH = (FIX_ME)
 bH = (FIX_ME)
 cH = (FIX_ME)
@@ -586,11 +587,11 @@ PH = InteractiveLPProblem(AH, bH, cH,
  constraint_type = "<=",
  variable_type = ">=")
 PH
-</script></pre> <pre id="activity-maxmatch-7-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(PH.optimal_solution())
+</script></div> <div id="activity-maxmatch-7-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(PH.optimal_solution())
 print(PH.optimal_value())
-</script></pre> <div class="para" id="activity-maxmatch-7-1-4">What do you notice?</div></article><article class="task exercise-like" id="activity-maxmatch-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+</script></div> <div class="para" id="activity-maxmatch-7-1-4">What do you notice?</div></article><article class="task exercise-like" id="activity-maxmatch-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para" id="activity-maxmatch-8-1-1">Consider <span class="process-math">\(H\)</span> from <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>.  Label each vertex and write out a Tucker Tableau for the linear optimization problem for computing the maximum matching.</div></article><article class="task exercise-like" id="activity-maxmatch-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-maxmatch-9-1-1">Solve the above optimization problem:</div> <pre id="activity-maxmatch-9-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para" id="activity-maxmatch-9-1-1">Solve the above optimization problem:</div> <div id="activity-maxmatch-9-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIX_ME)
 b = (FIX_ME)
 c = (FIX_ME)
@@ -598,9 +599,9 @@ P = InteractiveLPProblem(A, b, c,
  constraint_type = "<=",
  variable_type = ">=")
 P
-</script></pre> <pre id="activity-maxmatch-9-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
+</script></div> <div id="activity-maxmatch-9-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
-</script></pre> <div class="para" id="activity-maxmatch-9-1-4">What do you notice?</div></article></article><article class="activity project-like" id="sec-covermatch-5"><h3 class="heading">
+</script></div> <div class="para" id="activity-maxmatch-9-1-4">What do you notice?</div></article></article><article class="activity project-like" id="sec-covermatch-5"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-covermatch-5-1"><div class="para" id="sec-covermatch-5-1-1">Consider the general maximization problem constructed in <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div></div>
@@ -627,7 +628,8 @@ print(P.optimal_value())
 </h3>
 <div class="introduction" id="sec-covermatch-7-1">
 <div class="para" id="sec-covermatch-7-1-1"> Given a graph <span class="process-math">\(G\text{,}\)</span> a <dfn class="terminology">vertex cover</dfn> or <span class="process-math">\(cover\)</span> is a colection of vertices <span class="process-math">\(U\)</span> such that for any edge <span class="process-math">\(v_iv_j\)</span> either <span class="process-math">\(v_i\)</span> or <span class="process-math">\(v_j\)</span> (possibly both) are in <span class="process-math">\(U\text{.}\)</span>
-</div> <div class="para" id="sec-covermatch-7-1-2">Let <span class="process-math">\(\tau(G)\)</span> denote the size of the smallest vertex cover <details class="ptx-footnote" aria-live="polite" id="sec-covermatch-7-1-2-2"><summary class="ptx-footnote__number" title="Footnote 9.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-covermatch-7-1-2-2">This is fairly standard.</div></details>.</div>
+</div>
+<div class="para" id="sec-covermatch-7-1-2">Let <span class="process-math">\(\tau(G)\)</span> denote the size of the smallest vertex cover <details class="ptx-footnote" aria-live="polite" id="sec-covermatch-7-1-2-2"><summary class="ptx-footnote__number" title="Footnote 9.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-covermatch-7-1-2-2">This is fairly standard.</div></details>.</div>
 </div>
 <article class="task exercise-like" id="sec-covermatch-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-covermatch-7-2-1-1">Find <span class="process-math">\(\tau(G)\)</span> for <span class="process-math">\(G\)</span> from, <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>
@@ -635,18 +637,18 @@ print(P.optimal_value())
 <div class="para" id="sec-covermatch-7-3-1-1">Find <span class="process-math">\(\tau(H)\)</span> for <span class="process-math">\(H\)</span> from, <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>
 </div></article><article class="task exercise-like" id="sec-covermatch-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-covermatch-7-4-1-1">For each vertex <span class="process-math">\(v_i\text{,}\)</span> let <span class="process-math">\(y_i=1\)</span> if <span class="process-math">\(v_i\in U\)</span> and <span class="process-math">\(y_i=0\)</span> otherwise. Show this is a feasible solution to the dual problem found in <a href="sec-covermatch.html#activity-mincover" class="xref" data-knowl="./knowl/xref/activity-mincover.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.4">Activity 9.1.4</a> for <span class="process-math">\(G\text{.}\)</span> Is it optimal?</div></article><article class="task exercise-like" id="sec-covermatch-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-covermatch-7-5-1-1">Since we solved the matching problem for <span class="process-math">\(G\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <pre id="sec-covermatch-7-5-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para" id="sec-covermatch-7-5-1-1">Since we solved the matching problem for <span class="process-math">\(G\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <div id="sec-covermatch-7-5-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 D = P.dual()
 D
-</script></pre> <pre id="sec-covermatch-7-5-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(D.optimal_solution())
+</script></div> <div id="sec-covermatch-7-5-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(D.optimal_solution())
 print(D.optimal_value())
-</script></pre> <div class="para" id="sec-covermatch-7-5-1-4">What do we notice?</div></article><article class="task exercise-like" id="sec-covermatch-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-covermatch-7-6-1-1">We “solved” the matching maximixation problem for <span class="process-math">\(H\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <pre id="sec-covermatch-7-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+</script></div> <div class="para" id="sec-covermatch-7-5-1-4">What do we notice?</div></article><article class="task exercise-like" id="sec-covermatch-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-covermatch-7-6-1-1">We “solved” the matching maximixation problem for <span class="process-math">\(H\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <div id="sec-covermatch-7-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 DH = PH.dual()
 DH
-</script></pre> <pre id="sec-covermatch-7-6-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(DH.optimal_solution())
+</script></div> <div id="sec-covermatch-7-6-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(DH.optimal_solution())
 print(DH.optimal_value())
-</script></pre> <div class="para" id="sec-covermatch-7-6-1-4">What do we notice?</div></article></article><article class="activity project-like" id="sec-covermatch-8"><h3 class="heading">
+</script></div> <div class="para" id="sec-covermatch-7-6-1-4">What do we notice?</div></article></article><article class="activity project-like" id="sec-covermatch-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.6</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-covermatch-8-1"><div class="para" id="sec-covermatch-8-1-1">Consider the general dual minimization problem constructed in <a href="sec-covermatch.html#activity-mincover" class="xref" data-knowl="./knowl/xref/activity-mincover.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.4">Activity 9.1.4</a>.</div></div>
@@ -704,7 +706,9 @@ print(DH.optimal_value())
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.12</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-cyclefrac-1">
-<div class="para" id="activity-cyclefrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div> <div class="para" id="activity-cyclefrac-1-2">Suppose there were a collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle <span class="process-math">\(C\text{.}\)</span>  Without loss of generality, we may label the vertices  <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> so that for <span class="process-math">\(1\leq i \leq k-1\text{,}\)</span> <span class="process-math">\(v_iv_{i+1}\)</span> and <span class="process-math">\(v_kv_1\)</span> have an edge between them, and <span class="process-math">\(x_{i,i+1}^*, x_{k,1}^*\)</span> have fractional values.</div> <div class="para" id="activity-cyclefrac-1-3">To make notation bearable, we’ll understand that <span class="process-math">\(v_{k+1}=v_1\text{.}\)</span>
+<div class="para" id="activity-cyclefrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div>
+<div class="para" id="activity-cyclefrac-1-2">Suppose there were a collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle <span class="process-math">\(C\text{.}\)</span>  Without loss of generality, we may label the vertices  <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> so that for <span class="process-math">\(1\leq i \leq k-1\text{,}\)</span> <span class="process-math">\(v_iv_{i+1}\)</span> and <span class="process-math">\(v_kv_1\)</span> have an edge between them, and <span class="process-math">\(x_{i,i+1}^*, x_{k,1}^*\)</span> have fractional values.</div>
+<div class="para" id="activity-cyclefrac-1-3">To make notation bearable, we’ll understand that <span class="process-math">\(v_{k+1}=v_1\text{.}\)</span>
 </div>
 </div>
 <article class="task exercise-like" id="activity-cyclefrac-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -734,7 +738,9 @@ print(DH.optimal_value())
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.13</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-pathfrac-1">
-<div class="para" id="activity-pathfrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div> <div class="para" id="activity-pathfrac-1-2">Suppose there were <em class="emphasis">no</em> collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle.  Let <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> form a maximal path <span class="process-math">\(P\)</span> where <span class="process-math">\(x^*_{i,i+1}, 1\leq i\leq k-1\)</span> has fractional value.</div> <div class="para" id="activity-pathfrac-1-3">Note that <span class="process-math">\(v_1, v_k\)</span> are the endpoints of <span class="process-math">\(P\text{.}\)</span>
+<div class="para" id="activity-pathfrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div>
+<div class="para" id="activity-pathfrac-1-2">Suppose there were <em class="emphasis">no</em> collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle.  Let <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> form a maximal path <span class="process-math">\(P\)</span> where <span class="process-math">\(x^*_{i,i+1}, 1\leq i\leq k-1\)</span> has fractional value.</div>
+<div class="para" id="activity-pathfrac-1-3">Note that <span class="process-math">\(v_1, v_k\)</span> are the endpoints of <span class="process-math">\(P\text{.}\)</span>
 </div>
 </div>
 <article class="task exercise-like" id="activity-pathfrac-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -765,7 +771,8 @@ print(DH.optimal_value())
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.14</span><span class="period">.</span>
 </h4>
 <div class="introduction" id="activity-coverfrac-1">
-<div class="para" id="activity-coverfrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\y^*\)</span> be an optimal solution to the dual covering problem from <a href="sec-covermatch.html#activity-mincover" class="xref" data-knowl="./knowl/xref/activity-mincover.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.4">Activity 9.1.4</a>.</div> <div class="para" id="activity-coverfrac-1-2">Let <span class="process-math">\(F\subseteq V\)</span> be the set of vertices where <span class="process-math">\(x^*_i\)</span> has a fractional value for all <span class="process-math">\(v_i\in F\text{.}\)</span>  Without loss of generality, suppose <span class="process-math">\(V_1\cap F\geq V_2\cap F\text{.}\)</span>
+<div class="para" id="activity-coverfrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\y^*\)</span> be an optimal solution to the dual covering problem from <a href="sec-covermatch.html#activity-mincover" class="xref" data-knowl="./knowl/xref/activity-mincover.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.4">Activity 9.1.4</a>.</div>
+<div class="para" id="activity-coverfrac-1-2">Let <span class="process-math">\(F\subseteq V\)</span> be the set of vertices where <span class="process-math">\(x^*_i\)</span> has a fractional value for all <span class="process-math">\(v_i\in F\text{.}\)</span>  Without loss of generality, suppose <span class="process-math">\(V_1\cap F\geq V_2\cap F\text{.}\)</span>
 </div>
 </div>
 <article class="task exercise-like" id="activity-coverfrac-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>

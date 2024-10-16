@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -555,7 +555,8 @@ true);
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-integer"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">8</span><span class="space"> </span><span class="title">Integer Programming</span>
 </h2>
-<section class="introduction" id="ch-integer-2"><div class="para" id="ch-integer-2-1">Thus far, we have been exploring problems where the solution space consists of real-valued vectors.  However, in some contexts, like in <a href="ch-transport.html" class="internal" title="Chapter 6: The Transportation &amp; Assignment Problems">Chapter 6</a> and <a href="ch-flow.html" class="internal" title="Chapter 7: Network Flows">Chapter 7</a>, it is sensible to imagine that fractional or irrational solutions may not make sense in the real-world contexts of those problems.  It’s also not a stretch to imagine more classical production-type problems where only integral units would be possible.</div> <div class="para" id="ch-integer-2-2">In the cases where real valued and integer valued optimal solutions may differ, some care must be taken to solve for the optimal integer valued solution.  In <a href="sec-branchbound.html" class="internal" title="Section 8.1: Branch and Bound Method">Section 8.1</a>, we explore one potential algorithm which is algebraically driven, and in <a href="sec-cuttingplane.html" class="internal" title="Section 8.2: Cutting-Plane Method">Section 8.2</a>, we discuss an alternative algorithm which is geometrically focused.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-integer-2"><div class="para" id="ch-integer-2-1">Thus far, we have been exploring problems where the solution space consists of real-valued vectors.  However, in some contexts, like in <a href="ch-transport.html" class="internal" title="Chapter 6: The Transportation &amp; Assignment Problems">Chapter 6</a> and <a href="ch-flow.html" class="internal" title="Chapter 7: Network Flows">Chapter 7</a>, it is sensible to imagine that fractional or irrational solutions may not make sense in the real-world contexts of those problems.  It’s also not a stretch to imagine more classical production-type problems where only integral units would be possible.</div>
+<div class="para" id="ch-integer-2-2">In the cases where real valued and integer valued optimal solutions may differ, some care must be taken to solve for the optimal integer valued solution.  In <a href="sec-branchbound.html" class="internal" title="Section 8.1: Branch and Bound Method">Section 8.1</a>, we explore one potential algorithm which is algebraically driven, and in <a href="sec-cuttingplane.html" class="internal" title="Section 8.2: Cutting-Plane Method">Section 8.2</a>, we discuss an alternative algorithm which is geometrically focused.</div></section><nav class="summary-links"><ul>
 <li><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></li>
 <li><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Cutting-Plane Method</span></a></li>
 <li><a href="sec-intsage.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Solving Integer Optimization Problems with Sage</span></a></li>
