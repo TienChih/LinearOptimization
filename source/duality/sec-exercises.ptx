@@ -966,7 +966,7 @@ solutions of successive tableaus.
         </p>
         <p>
           Suppose we found a pair of primal-dual solutions which satisfied main constraints,
-          but one or more non-negativity constraints.
+          but failed one or more non-negativity constraints.
         </p>
       </introduction>
       

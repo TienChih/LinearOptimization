@@ -93,12 +93,13 @@
       table="no"
       listing="no"
       list="no"
-      exercise-inline="yes"
+      exercise-inline="no"
       exercise-divisional="no"
       exercise-worksheet="no"
       exercise-readingquestion="no"
     />
-    <tableofcontents  focused="yes" preexpanded-levels="1" />
+    <tableofcontents  focused="yes" preexpanded-levels="2" />
+    <exercises tabbed-tasks="project, inline" />
     <!-- Specify the style of the html by giving names to      -->
     <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
     <!-- put <css style="oscarlevin"/>                         -->
