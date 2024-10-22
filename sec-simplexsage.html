@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -722,7 +722,8 @@ true);
 <article class="activity project-like" id="activity-initialsage"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-initialsage-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-initialsage">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-initialsage-1">
 <div class="para" id="activity-initialsage-1-1">Let’s start simple, suppose we want to solve:</div>
 <div class="para" id="activity-initialsage-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -761,8 +762,8 @@ true);
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div></div>
-</div>
-<article class="task exercise-like" id="activity-initialsage-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-initialsage-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-initialsage-2-1-1">We can enter the above problem into sage via: <div id="activity-initialsage-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = ([2, -1], [-2, 1], [3, 2])
 b = (5, 2, 12)
@@ -770,14 +771,17 @@ c = (5,4)
 P = InteractiveLPProblemStandardForm(A, b, c, )
 P
 </script></div>
-</div></article><article class="task exercise-like" id="activity-initialsage-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-initialsage-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-initialsage-3-1-1">We can plot the feasible region and objective level curves, since this is a 2d problem: <div id="activity-initialsage-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P.plot()
 </script></div>
-</div></article><article class="task exercise-like" id="activity-initialsage-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-initialsage-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="activity-initialsage-4-1-1">We could also encode this problem into a dictionary. <div id="activity-initialsage-4-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D = P.initial_dictionary()
 D
 </script></div> We will understand that <span class="process-math">\(t_1=x_3, t_2=x_4, t_3=x_5\text{.}\)</span>
-</div></article><article class="task exercise-like" id="activity-initialsage-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-initialsage-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-initialsage-5-1-1">If we want to pivot from <span class="process-math">\(x_4\)</span> to <span class="process-math">\(x_2\)</span> we can write that as: <div id="activity-initialsage-5-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("x2")
 D.leave("x4")
 D
@@ -819,19 +823,23 @@ D
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-8 \)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="activity-initialsage-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-initialsage-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-initialsage-6-1-1">What pivot should we do next?  Encode it below: <div id="activity-initialsage-6-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("FIX_ME")
 D.leave("FIX_ME2")
 D.update()
 D
 </script></div>
-</div></article><article class="task exercise-like" id="activity-initialsage-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-initialsage-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-initialsage-7-1-1">We can check at any point if we have an optimal solution. <div id="activity-initialsage-7-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.is_optimal()
 </script></div>
-</div></article></article><article class="activity project-like" id="sec-simplexsage-6"><h3 class="heading">
+</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-simplexsage-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-simplexsage-6-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-simplexsage-6-1">
 <div class="para" id="sec-simplexsage-6-1-1">So if we want to solve:</div>
 <div class="para" id="sec-simplexsage-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -888,13 +896,14 @@ P = InteractiveLPProblemStandardForm(A, b, c,)
 P
 </script></div>
 </div>
-</div>
-<article class="task exercise-like" id="sec-simplexsage-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-simplexsage-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-simplexsage-6-2-1-1">We now encode the above problem in a dictionary. <div id="sec-simplexsage-6-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 D = P.initial_dictionary()
 D
 </script></div>
-</div></article><article class="task exercise-like" id="sec-simplexsage-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-simplexsage-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-simplexsage-6-3-1-1">We can see who can enter: <div id="sec-simplexsage-6-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.possible_entering()
 </script></div> If we say, pick <span class="process-math">\(x_2\)</span> to enter, see who can legitimately leave: <div id="sec-simplexsage-6-3-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("x2")
 D.possible_leaving()
@@ -902,23 +911,27 @@ D.possible_leaving()
 D.update()
 D
 </script></div>
-</div></article><article class="task exercise-like" id="sec-simplexsage-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-simplexsage-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-simplexsage-6-4-1-1">From here, pick another legitimate pivot and perform it: <div id="sec-simplexsage-6-4-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">D.enter("FIX_ME")
 D.leave("FIX_ME2")
 D.update()
 D
 </script></div>
-</div></article><article class="task exercise-like" id="sec-simplexsage-6-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-simplexsage-6-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-simplexsage-6-5-1-1">This still seems like a it would be annoying.  Why don’t we revisit the original problem? <div id="sec-simplexsage-6-5-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 P
 </script></div> and then just run the Simplex Algorithm: <div id="sec-simplexsage-6-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 P.run_simplex_method()
 </script></div>
-</div></article></article><article class="activity project-like" id="sec-simplexsage-7"><h3 class="heading">
+</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-simplexsage-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-simplexsage-7-1"><div class="para" id="sec-simplexsage-7-1-1">Remember that cycling example <a href="sec-cycling.html#activity-cyclingexample" class="xref" data-knowl="./knowl/xref/activity-cyclingexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.3.1">Activity 2.3.1</a>?</div></div>
-<article class="task exercise-like" id="sec-simplexsage-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-simplexsage-7-1"><div class="para" id="sec-simplexsage-7-1-1">Remember that cycling example <a href="sec-cycling.html#activity-cyclingexample" class="xref" data-knowl="./knowl/xref/activity-cyclingexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.3.1">Activity 2.3.1</a>?</div></div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-simplexsage-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-simplexsage-7-2-1-1">Encode the problem into Sage: <div id="sec-simplexsage-7-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIX_ME)
 b = (FIX_ME)
@@ -926,15 +939,18 @@ c = (FIX_ME)
 P = InteractiveLPProblemStandardForm(A, b, c, )
 P
 </script></div>
-</div></article><article class="task exercise-like" id="sec-simplexsage-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-simplexsage-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-simplexsage-7-3-1-1">Now let’s run the Simplex Algorithm to see what the deal is: <div id="sec-simplexsage-7-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 P.run_simplex_method()
 </script></div>
-</div></article></article><article class="activity project-like" id="sec-simplexsage-8"><h3 class="heading">
+</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-simplexsage-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-simplexsage-8-1"><div class="para" id="sec-simplexsage-8-1-1">We can now tackle the problem posed in <a href="sec-simplexsage.html#exploration-sage" class="xref" data-knowl="./knowl/xref/exploration-sage.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 2.4.1">Exploration 2.4.1</a>.</div></div>
-<article class="task exercise-like" id="sec-simplexsage-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-simplexsage-8-1"><div class="para" id="sec-simplexsage-8-1-1">We can now tackle the problem posed in <a href="sec-simplexsage.html#exploration-sage" class="xref" data-knowl="./knowl/xref/exploration-sage.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 2.4.1">Exploration 2.4.1</a>.</div></div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-simplexsage-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-simplexsage-8-2-1-1">Encode the problem into Sage: <div id="sec-simplexsage-8-2-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIX_ME)
 b = (FIX_ME)
@@ -942,15 +958,18 @@ c = (FIX_ME)
 P = InteractiveLPProblemStandardForm(A, b, c, )
 P
 </script></div>
-</div></article><article class="task exercise-like" id="sec-simplexsage-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-simplexsage-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-simplexsage-8-3-1-1">We can run the Simplex Algorithm: <div id="sec-simplexsage-8-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 P.run_simplex_method()
 </script></div>
-</div></article><article class="task exercise-like" id="sec-simplexsage-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-simplexsage-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-simplexsage-8-4-1-1">We can also just say what the solution is: <div id="sec-simplexsage-8-4-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
 </script></div>
-</div></article></article></section></div>
+</div></article></div>
+</div></div></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-cycling.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisessimplex.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

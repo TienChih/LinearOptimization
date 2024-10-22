@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -558,7 +558,8 @@ true);
 <section class="introduction" id="sec-sudoku-3"><div class="para" id="sec-sudoku-3-1">In this section, we explore a curious application of linear programming.  Solving sudokus!</div></section><article class="exploration project-like" id="exploration-sudoku"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="exploration-sudoku-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="exploration-sudoku">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="exploration-sudoku-1">
 <div class="para" id="exploration-sudoku-1-1">Consider the following sudoku puzzle:</div>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sudoku.svg" role="img" class="contained" alt="A sudoku puzzle."></div>
 <div class="para logical" id="exploration-sudoku-1-3">
@@ -569,9 +570,10 @@ true);
 <li id="exploration-sudoku-1-3-2-3"><div class="para" id="exploration-sudoku-1-3-2-3-1">Each <span class="process-math">\(3\times 3\)</span> “block” contains exactly one of each number.</div></li>
 </ul>
 </div>
-</div>
-<article class="task exercise-like" id="exploration-sudoku-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-sudoku-2-1-1">Solve the above sudoku if you feel like it.</div></article></article><article class="remark remark-like" id="sec-sudoku-5"><h3 class="heading">
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="exploration-sudoku-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-sudoku-2-1-1">Solve the above sudoku if you feel like it.</div></article></div>
+</div></div></div></article><article class="remark remark-like" id="sec-sudoku-5"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-sudoku-5-1">We consider the standard sudokus like the one above an <dfn class="terminology">order</dfn> sudoku: we have <span class="process-math">\(3\times 3\)</span>  “blocks”, each with <span class="process-math">\(3\times 3\)</span> entries.  Potential values range from <span class="process-math">\(1\)</span> through <span class="process-math">\(3^2\text{.}\)</span>  Other orders are also possible.</div></article><div class="para" id="sec-sudoku-6">More sudokus may be found at <a class="external" href="https://www.websudoku.com/" target="_blank">https://www.websudoku.com/</a><details class="ptx-footnote" aria-live="polite" id="sec-sudoku-6-2"><summary class="ptx-footnote__number" title="Footnote 9.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-sudoku-6-2"><code class="code-inline tex2jax_ignore">www.websudoku.com/</code></div></details>
@@ -579,24 +581,34 @@ true);
 <article class="activity project-like" id="activity-order3sudoku"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-order3sudoku-1"><div class="para" id="activity-order3sudoku-1-1">Consider a general order <span class="process-math">\(3\)</span> sudoku puzzle.  We want to define a linear maximization problem that solves a given puzzle.  Let <span class="process-math">\(x_{ijk}=1\)</span> is a solution has value <span class="process-math">\(k\)</span> in entry <span class="process-math">\(i, j\)</span> (measured from the bottom left), and <span class="process-math">\(x_{ijk}=0\)</span> otherwise.</div></div>
-<article class="task exercise-like" id="activity-order3sudoku-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-order3sudoku-2-1-1">For the <span class="process-math">\(i,j\)</span>th entry, write a linear equality constraint which ensures a value is chosen.</div></article><article class="task exercise-like" id="activity-order3sudoku-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-order3sudoku-3-1-1">For row <span class="process-math">\(i\text{,}\)</span> write 9 equality conditions so that this row contains one of each entry.</div></article><article class="task exercise-like" id="activity-order3sudoku-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-order3sudoku-4-1-1">For column <span class="process-math">\(j\text{,}\)</span> write 9 equality conditions so that this column contains one of each entry.</div></article><article class="task exercise-like" id="activity-order3sudoku-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-order3sudoku-5-1-1">For an arbitrary block, write 9 equality conditions so that this block contains one of each entry.</div></article><article class="task exercise-like" id="activity-order3sudoku-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-order3sudoku-6-1-1">Now consider the sudoku puzzle from <a href="sec-sudoku.html#exploration-sudoku" class="xref" data-knowl="./knowl/xref/exploration-sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.2.1">Exploration 9.2.1</a>. How could we write out appropriate equality conditions fixing each entry?</div></article><article class="task exercise-like" id="activity-order3sudoku-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-order3sudoku-7-1-1">Are there any other constraints we need?</div></article><article class="task exercise-like" id="activity-order3sudoku-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="activity-order3sudoku-8-1-1">What should the objective function be?  (Does it matter?)</div></article></article><div class="para" id="sec-sudoku-8">Obviously, this would be an absolutely absurdly large problem to even fully write out, much less solve.  We consider something simpler.</div>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-order3sudoku">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-order3sudoku-1"><div class="para" id="activity-order3sudoku-1-1">Consider a general order <span class="process-math">\(3\)</span> sudoku puzzle.  We want to define a linear maximization problem that solves a given puzzle.  Let <span class="process-math">\(x_{ijk}=1\)</span> is a solution has value <span class="process-math">\(k\)</span> in entry <span class="process-math">\(i, j\)</span> (measured from the bottom left), and <span class="process-math">\(x_{ijk}=0\)</span> otherwise.</div></div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-order3sudoku-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-order3sudoku-2-1-1">For the <span class="process-math">\(i,j\)</span>th entry, write a linear equality constraint which ensures a value is chosen.</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-order3sudoku-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-order3sudoku-3-1-1">For row <span class="process-math">\(i\text{,}\)</span> write 9 equality conditions so that this row contains one of each entry.</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-order3sudoku-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-order3sudoku-4-1-1">For column <span class="process-math">\(j\text{,}\)</span> write 9 equality conditions so that this column contains one of each entry.</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-order3sudoku-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-order3sudoku-5-1-1">For an arbitrary block, write 9 equality conditions so that this block contains one of each entry.</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-order3sudoku-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-order3sudoku-6-1-1">Now consider the sudoku puzzle from <a href="sec-sudoku.html#exploration-sudoku" class="xref" data-knowl="./knowl/xref/exploration-sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.2.1">Exploration 9.2.1</a>. How could we write out appropriate equality conditions fixing each entry?</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-order3sudoku-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-order3sudoku-7-1-1">Are there any other constraints we need?</div></article></div>
+<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="activity-order3sudoku-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="activity-order3sudoku-8-1-1">What should the objective function be?  (Does it matter?)</div></article></div>
+</div></div></div></article><div class="para" id="sec-sudoku-8">Obviously, this would be an absolutely absurdly large problem to even fully write out, much less solve.  We consider something simpler.</div>
 <article class="activity project-like" id="sec-sudoku-9"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.2.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-sudoku-9-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-sudoku-9-1">
 <div class="para" id="sec-sudoku-9-1-1">Consider the following order 2 sudoku puzzle:</div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sudokusmall.svg" role="img" class="contained" alt="An order 2 sudoku puzzle."></div>
-</div>
-<article class="task exercise-like" id="sec-sudoku-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-sudoku-9-2-1-1">Following <a href="sec-sudoku.html#activity-order3sudoku" class="xref" data-knowl="./knowl/xref/activity-order3sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.2.3">Activity 9.2.3</a>, write out the linear optimization problem which would compute the solved puzzle.</div></article><article class="task exercise-like" id="sec-sudoku-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-sudoku-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-sudoku-9-2-1-1">Following <a href="sec-sudoku.html#activity-order3sudoku" class="xref" data-knowl="./knowl/xref/activity-order3sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.2.3">Activity 9.2.3</a>, write out the linear optimization problem which would compute the solved puzzle.</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-sudoku-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-sudoku-9-3-1-1">If you <em class="emphasis">really</em> want to, solve this problem (there are 64 decision variables so...): <div id="sec-sudoku-9-3-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
@@ -610,7 +622,8 @@ P
 </script></div> <div id="sec-sudoku-9-3-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
 </script></div>
-</div></article></article><div class="para" id="sec-sudoku-10">This provides an oppourtunity for an enteprising student to engage in some further exploration.</div>
+</div></article></div>
+</div></div></div></article><div class="para" id="sec-sudoku-10">This provides an oppourtunity for an enteprising student to engage in some further exploration.</div>
 <article class="project project-like" id="sec-sudoku-11"><h3 class="heading">
 <span class="type">Project</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span>
 </h3>

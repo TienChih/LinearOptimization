@@ -397,7 +397,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -561,7 +561,8 @@ true);
 <div class="para" id="exploration-scheduling-1-1">Consider the last time you had to pick classes to fit a schedule.  What were some things you had to consider in doing so? What sort of constraints did you consider neccesary, and which were considered preferences?  How does your answers compare to your classmates?</div></article><article class="activity project-like" id="activity-schedule"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-schedule-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-schedule">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-schedule-1">
 <div class="para" id="activity-schedule-1-1">Yafa is an incoming freshman at Fantasi College and she is picking classes for her first semester. Fantasi College has classes either on Monday-Wednesday-Friday from 8:30-9:30, 10:00-11:00, 12:30-1:30 and 2:00-3:00, and on Tuesday-Thursday from 8:30-10:00, 10:30-12:00, and 1:00-2:30.</div>
 <div class="para" id="activity-schedule-1-2">Yafa has put together a list of potential classes she could take this semester, and assigned to them a score from 1 - 10 depending on her interest in the class, the time of day, and her own “research” looking up professors on external rating sites. (Yafa has not yet taken her introductory statistics course, and so doesn’t yet know how unreliable and biased these sites, and reviews in general, are.)</div>
 <div class="para" id="activity-schedule-1-3">(Note that this is not altogether realistic, in that this is a massive oversimplification for the purpose of understanding the key ideas.)</div>
@@ -748,17 +749,26 @@ true);
 <li id="activity-schedule-1-6-7"><div class="para" id="activity-schedule-1-6-7-1">Yafa wishes to get a headstart on her general education, so she wants to take at least one of either Literature (Lit) or Art (Art).  Similarly, she wishes to take at least one of Economics (Econ) or History (Hist).</div></li>
 </ul>
 <div class="para" id="activity-schedule-1-7">Let <span class="process-math">\(x_j\)</span> be 1 if she takes course <span class="process-math">\(j\)</span> and 0 otherwise.</div>
-</div>
-<article class="task exercise-like" id="activity-schedule-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-schedule-2-1">What is a reasonable linear objective function to maximize?</div></article><article class="task exercise-like" id="activity-schedule-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-schedule-3-1-1">Write out the constraints which restrict students to at most 1 offering of the same class.</div></article><article class="task exercise-like" id="activity-schedule-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-schedule-4-1-1">Write out the constraints which restrict students to at most 1 course in a given timeslot.</div></article><article class="task exercise-like" id="activity-schedule-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-schedule-5-1-1">Write out the constraints which ensure each student will have at least one free time-slot a day.</div></article><article class="task exercise-like" id="activity-schedule-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-schedule-6-1-1">Write out the constraints which ensure each student is enrolled in at least 4 and at most 6 courses.</div></article><article class="task exercise-like" id="activity-schedule-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-schedule-7-1-1">Write out the constraint which ensure each student enrolls in one seminar.</div></article><article class="task exercise-like" id="activity-schedule-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="activity-schedule-8-1-1">Write out the constraint which ensure that Yafa enrolls in (at least) one Math class.</div></article><article class="task exercise-like" id="activity-schedule-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-schedule-9-1-1">Write out the constraints which ensure that Yafa is on track with her general education credits.</div></article><article class="task exercise-like" id="activity-schedule-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-schedule-10-1-1">Write out the integer maximization problem we have constructed.</div></article><article class="task exercise-like" id="activity-schedule-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-schedule-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-schedule-2-1">What is a reasonable linear objective function to maximize?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-schedule-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-schedule-3-1-1">Write out the constraints which restrict students to at most 1 offering of the same class.</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-schedule-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-schedule-4-1-1">Write out the constraints which restrict students to at most 1 course in a given timeslot.</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-schedule-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-schedule-5-1-1">Write out the constraints which ensure each student will have at least one free time-slot a day.</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-schedule-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-schedule-6-1-1">Write out the constraints which ensure each student is enrolled in at least 4 and at most 6 courses.</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-schedule-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-schedule-7-1-1">Write out the constraint which ensure each student enrolls in one seminar.</div></article></div>
+<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="activity-schedule-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="activity-schedule-8-1-1">Write out the constraint which ensure that Yafa enrolls in (at least) one Math class.</div></article></div>
+<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="activity-schedule-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="activity-schedule-9-1-1">Write out the constraints which ensure that Yafa is on track with her general education credits.</div></article></div>
+<div data-component="tab" data-tabname="(i)"><article class="task exercise-like" id="activity-schedule-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="activity-schedule-10-1-1">Write out the integer maximization problem we have constructed.</div></article></div>
+<div data-component="tab" data-tabname="(j)"><article class="task exercise-like" id="activity-schedule-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
 <div class="para" id="activity-schedule-11-1-1">(Optional) Solve it: <div id="activity-schedule-11-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
 X = P.new_variable(integer=True, nonnegative=True)
 P.add_constraint(FIXME)
@@ -768,10 +778,12 @@ P.show()
 for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
     print(f'x_{i} = {v}')
 </script></div>
-</div></article></article><article class="activity project-like" id="activity-schedule2"><h3 class="heading">
+</div></article></div>
+</div></div></div></article><article class="activity project-like" id="activity-schedule2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-schedule2-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-schedule2">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-schedule2-1">
 <div class="para" id="activity-schedule2-1-1">Let’s call Yafa from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> student <span class="process-math">\(1\text{.}\)</span> In a gross oversimplification suppose there were in total 5 students including Yafa registering, and that each class could sit at most 2 students.</div>
 <div class="para" id="activity-schedule2-1-2">Each student assigns their own score to each course, <span class="process-math">\(c_{ij}\)</span> being the score that student <span class="process-math">\(i\)</span> gives to course <span class="process-math">\(j\text{.}\)</span>  Let <span class="process-math">\(x_{ij}\)</span> be 1 if student <span class="process-math">\(i\)</span> enrolls in course <span class="process-math">\(j\)</span> and 0 otherwise.</div>
 <div class="tabular-box natural-width"><table class="tabular">
@@ -1064,12 +1076,16 @@ for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
 <li id="activity-schedule2-1-5-4"><div class="para" id="activity-schedule2-1-5-4-1">Student 4 has to take a Computer Science class and a History class.</div></li>
 <li id="activity-schedule2-1-5-5"><div class="para" id="activity-schedule2-1-5-5-1">Student 5 has to take both Math classes.</div></li>
 </ul>
-</div>
-<article class="task exercise-like" id="activity-schedule2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-schedule2-2-1-1">How might the objective function and constraints from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> be adapted to this situation?</div></article><article class="task exercise-like" id="activity-schedule2-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-schedule2-3-1-1">What additional constraints are required?</div></article><article class="task exercise-like" id="activity-schedule2-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-schedule2-4-1-1">Depending on how you set up the objective function, a student who rates everything highly will be prioritized over a student who ranks everything more modestly.  To prevent gaming the system, what could be done to ameliorate this effect?</div></article><article class="task exercise-like" id="activity-schedule2-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-schedule2-5-1-1">The Dean approves one of the classes to be increased in size to a whopping 3 students. How can the dual problem inform how this choice of class should be made?</div></article></article><article class="activity project-like" id="sec-scheduling-7"><h3 class="heading">
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-schedule2-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-schedule2-2-1-1">How might the objective function and constraints from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> be adapted to this situation?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-schedule2-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-schedule2-3-1-1">What additional constraints are required?</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-schedule2-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-schedule2-4-1-1">Depending on how you set up the objective function, a student who rates everything highly will be prioritized over a student who ranks everything more modestly.  To prevent gaming the system, what could be done to ameliorate this effect?</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-schedule2-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-schedule2-5-1-1">The Dean approves one of the classes to be increased in size to a whopping 3 students. How can the dual problem inform how this choice of class should be made?</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-scheduling-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-scheduling-7-1-1">Discuss how the discussions in <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> and <a href="sec-scheduling.html#activity-schedule2" class="xref" data-knowl="./knowl/xref/activity-schedule2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.3">Activity 9.3.3</a> may be modified to apply to other situations.</div></article><article class="project project-like" id="sec-scheduling-8"><h3 class="heading">

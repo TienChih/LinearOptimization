@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -546,7 +546,8 @@ true);
 <section class="introduction" id="sec-assignment-2"><div class="para" id="sec-assignment-2-1">We consider the assignment problem, where each source and sink have supply and demand 1, and an alternative algorithm to solve these sort of problems.</div></section><article class="exploration project-like" id="exploration-assignment"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="exploration-assignment-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="exploration-assignment">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="exploration-assignment-1">
 <div class="para" id="exploration-assignment-1-1">Supose we have 3 jobs and 3 contractors, and we wish to assign jobs to contractors at the minimum price. How can we distribute the jobs amongst the contractors? (Costs are in thousands of dollars)</div>
 <div class="para" id="exploration-assignment-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -585,11 +586,14 @@ true);
 <td class="l m b0 r0 l0 t0 lines">?</td>
 </tr>
 </table></div></div>
-</div>
-<article class="task exercise-like" id="exploration-assignment-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-assignment-2-1-1">What are the “supply” and “demand” of each job and contractor?</div></article><article class="task exercise-like" id="exploration-assignment-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="exploration-assignment-3-1-1">Use VAM <a href="sec-vam.html#def-vam" class="xref" data-knowl="./knowl/xref/def-vam.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.4">Definition 6.1.4</a> and the Transportation Algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.3">Definition 6.2.3</a> to solve this problem.</div></article><article class="task exercise-like" id="exploration-assignment-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-assignment-4-1-1">Could there have been an easier way to approach this problem?</div></article></article><article class="definition definition-like" id="def-assignmentproblem"><h3 class="heading">
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="exploration-assignment-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-assignment-2-1-1">What are the “supply” and “demand” of each job and contractor?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="exploration-assignment-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-assignment-3-1-1">Use VAM <a href="sec-vam.html#def-vam" class="xref" data-knowl="./knowl/xref/def-vam.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.4">Definition 6.1.4</a> and the Transportation Algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.3">Definition 6.2.3</a> to solve this problem.</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="exploration-assignment-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-assignment-4-1-1">Could there have been an easier way to approach this problem?</div></article></div>
+</div></div></div></article><article class="definition definition-like" id="def-assignmentproblem"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-assignmentproblem-2-1">An <dfn class="terminology">assignment problem</dfn> is a transportation problem where the supply and demands are all 1.</div></article><div class="para" id="sec-assignment-5">Note that in <a href="sec-assignment.html#exploration-assignment" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 6.3.1">Exploration 6.3.1</a>, while we were able to solve this as a transportation problem, the restriction to supplies and demands of 1 ought to yield a simpler way to find a solution.</div>
@@ -599,7 +603,8 @@ true);
 <div class="para" id="def-permutation-2-1">Let <span class="process-math">\(T\)</span> be a tableau for a balanced assignment problem. A <dfn class="terminology">permutation set of zeroes</dfn> is a subset of zero cells for <span class="process-math">\(T\)</span> so that each row and column contains exactly one zero cell.</div></article><article class="activity project-like" id="sec-assignment-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-assignment-7-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-assignment-7-1">
 <div class="para" id="sec-assignment-7-1-1">We explore some features of the assignment tableau that can help shed light on what an appropriate algorithm would look like.</div>
 <div class="para" id="sec-assignment-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -631,18 +636,26 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div>
-</div>
-<article class="task exercise-like" id="sec-assignment-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-7-2-1-1">If we multiply each entry by <span class="process-math">\(2\text{,}\)</span> would that change our optimal solution? What about by <span class="process-math">\(-1\text{?}\)</span>  What values <span class="process-math">\(k\)</span> could I multiply the tableau by to preserve the optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-assignment-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-7-2-1-1">If we multiply each entry by <span class="process-math">\(2\text{,}\)</span> would that change our optimal solution? What about by <span class="process-math">\(-1\text{?}\)</span>  What values <span class="process-math">\(k\)</span> could I multiply the tableau by to preserve the optimal solution?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-assignment-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-assignment-7-3-1-1">If we add or subtract <span class="process-math">\(2\)</span> from each entry, does it change the optimal solution? What about <span class="process-math">\(n\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-assignment-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-assignment-7-4-1-1">Suppose we had an optimal solution to the assignment problem. Explain why adding <span class="process-math">\(k\)</span> to each entry in a row does not change the optimal solution.</div>
-<div class="solutions"><details id="sec-assignment-7-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-assignment-7-4-2-1">How would this compare to solving the original problem and adding <span class="process-math">\(k\)</span> to the cost?</div></div></details></div></article><article class="task exercise-like" id="sec-assignment-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-assignment-7-5-1-1">What would change if we did this to a different row?  A column?</div></article><article class="task exercise-like" id="sec-assignment-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-assignment-7-6-1-1">Suppose I subtracted the smallest value in each row from every entry of that row.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-7-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="sec-assignment-7-7-1-1">Suppose I subtracted the smallest value in each column from every entry of that column.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-7-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="sec-assignment-7-8-1-1">If we had a tableau with all rational values, how could I change this to a tableau of all integer values with the same optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-7-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="sec-assignment-7-9-1-1">If we had a tableau with all integer values, how could I change this to a tableau of all non-negative integer values with the same optimal solution?</div></article></article><article class="definition definition-like" id="def-hungarian"><h3 class="heading">
+<div class="solutions"><details id="sec-assignment-7-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-assignment-7-4-2-1">How would this compare to solving the original problem and adding <span class="process-math">\(k\)</span> to the cost?</div></div></details></div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-assignment-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-assignment-7-5-1-1">What would change if we did this to a different row?  A column?</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="sec-assignment-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-assignment-7-6-1-1">Suppose I subtracted the smallest value in each row from every entry of that row.  If there was a permutation set of zeroes, what would that entail?</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="sec-assignment-7-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-assignment-7-7-1-1">Suppose I subtracted the smallest value in each column from every entry of that column.  If there was a permutation set of zeroes, what would that entail?</div></article></div>
+<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="sec-assignment-7-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="sec-assignment-7-8-1-1">If we had a tableau with all rational values, how could I change this to a tableau of all integer values with the same optimal solution?</div></article></div>
+<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="sec-assignment-7-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="sec-assignment-7-9-1-1">If we had a tableau with all integer values, how could I change this to a tableau of all non-negative integer values with the same optimal solution?</div></article></div>
+</div></div></div></article><article class="definition definition-like" id="def-hungarian"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-hungarian-3-1">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an <span class="process-math">\(n\times n\)</span> assignment tableau <span class="process-math">\(T\text{.}\)</span>
@@ -667,21 +680,28 @@ true);
 </ol></article><article class="activity project-like" id="sec-assignment-9"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.6</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="sec-assignment-9-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-assignment-9-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-assignment-9-1-1-1">In step 6 of <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a>, suppose we draw <span class="process-math">\(k\)</span> lines.  Could <span class="process-math">\(k\)</span> be greater than <span class="process-math">\(n\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-9-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-assignment-9-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-assignment-9-2-1-1">Suppose that the zeroes of the tableau in a given step do <em class="emphasis">not</em> form a permutation set of zeroes.  Show that <span class="process-math">\(k&lt;n\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-9-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-assignment-9-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-assignment-9-3-1-1">What would it mean if <span class="process-math">\(k=n\text{?}\)</span>
-</div></article><article class="task exercise-like" id="sec-assignment-9-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-assignment-9-4-1-1">Show that step 7 is equivalent to subtracting <span class="process-math">\(M\)</span> from each uncovered row, and adding <span class="process-math">\(M\)</span> to each covered column.  (Or subtracting <span class="process-math">\(M\)</span> from each uncovered column, and adding <span class="process-math">\(M\)</span> to each covered row.)</div></article><article class="task exercise-like" id="sec-assignment-9-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-assignment-9-5-1-1">Why does step 7 not change the optimal assignment?</div></article></article><article class="activity project-like" id="sec-assignment-10"><h3 class="heading">
+</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-assignment-9-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-assignment-9-4-1-1">Show that step 7 is equivalent to subtracting <span class="process-math">\(M\)</span> from each uncovered row, and adding <span class="process-math">\(M\)</span> to each covered column.  (Or subtracting <span class="process-math">\(M\)</span> from each uncovered column, and adding <span class="process-math">\(M\)</span> to each covered row.)</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="sec-assignment-9-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-assignment-9-5-1-1">Why does step 7 not change the optimal assignment?</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-assignment-10"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.7</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-assignment-10-1-1">Use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a> to solve the problem from <a href="sec-assignment.html#exploration-assignment" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 6.3.1">Exploration 6.3.1</a>.</div></article><article class="activity project-like" id="sec-assignment-11"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.8</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-assignment-11-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-assignment-11-1">
 <div class="para" id="sec-assignment-11-1-1">Suppose 4 students are picking 4 research topics.  The four topics are to be distributed one each amongst the four students. They rated the topics on a scale of 1-10.</div>
 <div class="para" id="sec-assignment-11-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -721,10 +741,12 @@ true);
 </tr>
 </table></div></div>
 <div class="para" id="sec-assignment-11-1-3">We want to maximize the total “enjoyment”.</div>
-</div>
-<article class="task exercise-like" id="sec-assignment-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-11-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article><article class="task exercise-like" id="sec-assignment-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-assignment-11-3-1-1">After converting, use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a> to solve the problem.</div></article></article></section></div>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-assignment-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-11-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-assignment-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-assignment-11-3-1-1">After converting, use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a> to solve the problem.</div></article></div>
+</div></div></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisestransports.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

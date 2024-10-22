@@ -385,7 +385,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="1" data-max-levels="2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -546,16 +546,22 @@ true);
 <section class="introduction" id="sec-sensitivity-2"><div class="para" id="sec-sensitivity-2-1">In this section, we begin the exploration of what duality means.  We assign natural meanings to dual variables and the dual problem. One perspective to keep in mind this section is the role of bounds and objective function in the primal problem, and how they change here.</div></section><article class="exploration project-like" id="exploration-witch"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="exploration-witch-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="exploration-witch">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="exploration-witch-1">
 <div class="para" id="exploration-witch-1-1">The witch Agnesi<details class="ptx-footnote" aria-live="polite" id="exploration-witch-1-1-1"><summary class="ptx-footnote__number" title="Footnote 4.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="exploration-witch-1-1-1">The name Agnesi was chosen by my Spring 2024 class who knew her from her eponymous curve.</div></details> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes 1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.</div>
 <div class="para" id="exploration-witch-1-2">Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts of elixers and potions.</div>
-</div>
-<article class="task exercise-like" id="exploration-witch-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-witch-2-1-1">Before proceeding to solve the problem, make an estimate: how much do you think each newt eye and frog is worth to her?  Why do you think so?</div></article><article class="task exercise-like" id="exploration-witch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="exploration-witch-3-1-1">We now return to the initially posed maximization problem.  Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.</div> <iframe id="exploration-witch-3-1-2" width="600" height="600" src="exploration-witch-3-1-2-if.html"></iframe></article><article class="task exercise-like" id="exploration-witch-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-witch-4-1-1">Agnesi is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?</div></article><article class="task exercise-like" id="exploration-witch-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="exploration-witch-5-1-1">Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 newt eyes and 15 frogs.  Which provides the greater increase in revenue? Is this consistent with what you thought earlier?</div></article><article class="task exercise-like" id="exploration-witch-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="exploration-witch-6-1-1">If the need for healing elixer increases and they now sell for 5 gold, would that change our answers above?</div></article></article><article class="activity project-like" id="sec-sensitivity-4"><h3 class="heading">
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="exploration-witch-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-witch-2-1-1">Before proceeding to solve the problem, make an estimate: how much do you think each newt eye and frog is worth to her?  Why do you think so?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="exploration-witch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-witch-3-1-1">We now return to the initially posed maximization problem.  Sketch the feasible region for this problem, and use whatever method you feel like to find the optimal solution.</div> <iframe id="exploration-witch-3-1-2" width="600" height="600" src="exploration-witch-3-1-2-if.html"></iframe></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="exploration-witch-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-witch-4-1-1">Agnesi is frustrated by her production levels and income.  She is going to recruit some local children to gather more materials for her. Without explicitly computing anything, looking at her situation, what would result in greater profits for her, more newt eyes or frogs?</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="exploration-witch-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-witch-5-1-1">Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 newt eyes and 15 frogs.  Which provides the greater increase in revenue? Is this consistent with what you thought earlier?</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="exploration-witch-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="exploration-witch-6-1-1">If the need for healing elixer increases and they now sell for 5 gold, would that change our answers above?</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-sensitivity-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-sensitivity-4-1-1">In both <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a> and <a href="sec-pivot.html#activity-insurance" class="xref" data-knowl="./knowl/xref/activity-insurance.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.12">Activity 2.1.12</a> we essentially explore the idea of assigning values somehow to the bounds of a maximization problem.</div> <div class="para" id="sec-sensitivity-4-1-2">If you have a production problem, and wish to assign a value to all your materials, which of the following should be reasonable things to expect from these values?</div> <ol class="upper-alpha cols2" id="sec-sensitivity-4-1-3">
@@ -568,7 +574,8 @@ true);
 </ol></article><article class="activity project-like" id="activity-coefficients"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-coefficients-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-coefficients">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-coefficients-1">
 <div class="para logical" id="activity-coefficients-1-1">
 <div class="para">From <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>, letting <span class="process-math">\(x_1\)</span> denote the number of healing elixers, and <span class="process-math">\(x_2\)</span> denote the amount of poison created. Then, we get that the feasible region satisfies the inequalities:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exploration-witch.html" id="activity-coefficients-1-1-4">
@@ -597,8 +604,8 @@ x_1+x_2 \amp = 14 \\
 <div class="para">which may be depicted:</div>
 </div>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/witch.svg" role="img" class="contained" alt="The feasible region for the witch production problem, and depicted normal vectors."></div>
-</div>
-<article class="task exercise-like" id="activity-coefficients-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-coefficients-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-coefficients-2-1-1">Starting at the basic solution, perform pivots as follows:</div> <div class="para" id="activity-coefficients-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -715,8 +722,10 @@ x_1+x_2 \amp = 14 \\
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div></div> <div class="para" id="activity-coefficients-2-1-6">For each tableau, confirm the solution is feasible.</div></article><article class="task exercise-like" id="activity-coefficients-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-coefficients-3-1-1">For each tableau above, if we decrease each decision variable from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\text{,}\)</span> how does that change the value of the objective function?  What does decreasing a decision variable from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\)</span> mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?</div></article><article class="task exercise-like" id="activity-coefficients-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</table></div></div> <div class="para" id="activity-coefficients-2-1-6">For each tableau, confirm the solution is feasible.</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-coefficients-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-coefficients-3-1-1">For each tableau above, if we decrease each decision variable from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\text{,}\)</span> how does that change the value of the objective function?  What does decreasing a decision variable from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\)</span> mean geometrically? What does it mean in terms of the normal vectors of the associated intersecting hyperplanes?</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-coefficients-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="activity-coefficients-4-1-1">Consider that <span class="process-math">\((0,14)\)</span> is on the intersection of <span class="process-math">\(-x=0, x+y=14\)</span> which are hyperplanes with normal vectors <span class="process-math">\(\begin{bmatrix} -1 \\ 0 \end{bmatrix}\)</span> and <span class="process-math">\(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span> respectively.  Note that <span class="process-math">\(3x+2y=28\)</span> passes through <span class="process-math">\((0,14)\)</span> with normal vector <span class="process-math">\(\begin{bmatrix} 3 \\ 2 \end{bmatrix}\text{.}\)</span>
 </div> <div class="para logical" id="activity-coefficients-4-1-2">
 <div class="para">Drag sliders for <span class="process-math">\(y_1, y_2\)</span> so that</div>
@@ -725,13 +734,18 @@ x_1+x_2 \amp = 14 \\
 \begin{bmatrix} 3 \\ 2 \end{bmatrix} = y_1\begin{bmatrix} -1 \\ 0 \end{bmatrix}+y_2 \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
 \end{equation*}
 </div>
-</div> <iframe id="activity-coefficients-4-1-3" width="600" height="800" src="activity-coefficients-4-1-3-if.html"></iframe></article><article class="task exercise-like" id="activity-coefficients-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-coefficients-5-1-1">For each extreme point, express <span class="process-math">\(\begin{bmatrix}3 \\ 2\end{bmatrix} \)</span> as a linear combination of the normal vectors of the corresponding hyperplanes. Then, for each tableau computed above, look at their basic solutions.  What point corresponds to each basic solution, and how are these coefficients reflected in each tableau?</div> <div class="para" id="activity-coefficients-5-1-2"><iframe id="activity-coefficients-5-1-2-1" width="600" height="800" src="activity-coefficients-5-1-2-1-if.html"></iframe></div></article><article class="task exercise-like" id="activity-coefficients-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-coefficients-6-1-1">For each extreme point in the feasible region, consider the bounding planes who intersect at that point.  If you traverse in the direction of the normal vectors from the extreme point, does the objective function increase or decrease?  How does this connect to the coefficients we just found?</div></article><article class="task exercise-like" id="activity-coefficients-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-coefficients-7-1-1">For which extreme points are the normal vector of the objective plane a linear combination of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about those extreme points? Is there anything noteworthy about the corresponding tableau?</div></article></article><article class="activity project-like" id="sec-sensitivity-6"><h3 class="heading">
+</div> <iframe id="activity-coefficients-4-1-3" width="600" height="800" src="activity-coefficients-4-1-3-if.html"></iframe></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-coefficients-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-coefficients-5-1-1">For each extreme point, express <span class="process-math">\(\begin{bmatrix}3 \\ 2\end{bmatrix} \)</span> as a linear combination of the normal vectors of the corresponding hyperplanes. Then, for each tableau computed above, look at their basic solutions.  What point corresponds to each basic solution, and how are these coefficients reflected in each tableau?</div> <div class="para" id="activity-coefficients-5-1-2"><iframe id="activity-coefficients-5-1-2-1" width="600" height="800" src="activity-coefficients-5-1-2-1-if.html"></iframe></div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-coefficients-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-coefficients-6-1-1">For each extreme point in the feasible region, consider the bounding planes who intersect at that point.  If you traverse in the direction of the normal vectors from the extreme point, does the objective function increase or decrease?  How does this connect to the coefficients we just found?</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-coefficients-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-coefficients-7-1-1">For which extreme points are the normal vector of the objective plane a linear combination of the normal vectors of intersecting hyperplanes using only positive coefficients?   Is there anything special about those extreme points? Is there anything noteworthy about the corresponding tableau?</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-sensitivity-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-sensitivity-6-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-sensitivity-6-1">
 <div class="para" id="sec-sensitivity-6-1-1">Consider the tableau:</div>
 <div class="para" id="sec-sensitivity-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -791,12 +805,15 @@ x_1+x_2 \amp = 14 \\
 </table></div></div>
 <div class="para" id="sec-sensitivity-6-1-3">Suppose that for <span class="process-math">\(j\in \{1,2,\ldots,m\}\)</span> each plane <span class="process-math">\(-x_j=0\)</span> has corresponding normal vector <span class="process-math">\(\mathbf{v}_j\text{.}\)</span>
 </div>
-</div>
-<article class="task exercise-like" id="sec-sensitivity-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-sensitivity-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-sensitivity-6-2-1-1">Prove that  the normal vector for <span class="process-math">\(f\)</span> is <span class="process-math">\(\sum_{j=1}^m (-c_j)\mathbf{v}_j\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-sensitivity-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-sensitivity-6-3-1-1">Is there anything special about a tableau where <span class="process-math">\(f\)</span> is a non-negative linear combination of normal vectors?</div></article><article class="task exercise-like" id="sec-sensitivity-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-sensitivity-6-4-1-1">Suppose that this tableau corresponds to an optimal solution.  If we decrease any <span class="process-math">\(x_j\)</span> from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\text{,}\)</span> how does <span class="process-math">\(f\)</span> change?  What does this decrease correspond to geometrically?</div></article></article><article class="definition definition-like" id="definition-dual"><h3 class="heading">
+</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-sensitivity-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-sensitivity-6-3-1-1">Is there anything special about a tableau where <span class="process-math">\(f\)</span> is a non-negative linear combination of normal vectors?</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-sensitivity-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-sensitivity-6-4-1-1">Suppose that this tableau corresponds to an optimal solution.  If we decrease any <span class="process-math">\(x_j\)</span> from <span class="process-math">\(0\)</span> to <span class="process-math">\(-1\text{,}\)</span> how does <span class="process-math">\(f\)</span> change?  What does this decrease correspond to geometrically?</div></article></div>
+</div></div></div></article><article class="definition definition-like" id="definition-dual"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="definition-dual-5">Recall the canonical maximization problem:</div>
@@ -824,9 +841,11 @@ y_1, y_2, \ldots, y_n\amp \geq  0.
 <div class="para" id="definition-dual-9">We refer to the <span class="process-math">\(y_i\)</span> as <dfn class="terminology">dual variables</dfn>.</div></article><article class="activity project-like" id="sec-sensitivity-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-sensitivity-8-1"><div class="para" id="sec-sensitivity-8-1-1">Recall Agnesi’s business <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>, and the coefficient computations done in <a href="sec-sensitivity.html#activity-coefficients" class="xref" data-knowl="./knowl/xref/activity-coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.3">Activity 4.1.3</a>.</div></div>
-<article class="task exercise-like" id="sec-sensitivity-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-sensitivity-8-2-1-1">Following <a href="sec-sensitivity.html#definition-dual" class="xref" data-knowl="./knowl/xref/definition-dual.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.5">Definition 4.1.5</a>, write out the dual problem to the maximization problem described in <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>.</div></article><article class="task exercise-like" id="sec-sensitivity-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-sensitivity-8-1"><div class="para" id="sec-sensitivity-8-1-1">Recall Agnesi’s business <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>, and the coefficient computations done in <a href="sec-sensitivity.html#activity-coefficients" class="xref" data-knowl="./knowl/xref/activity-coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 4.1.3">Activity 4.1.3</a>.</div></div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-sensitivity-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-sensitivity-8-2-1-1">Following <a href="sec-sensitivity.html#definition-dual" class="xref" data-knowl="./knowl/xref/definition-dual.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.5">Definition 4.1.5</a>, write out the dual problem to the maximization problem described in <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>.</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-sensitivity-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical" id="sec-sensitivity-8-3-1-1">
 <div class="para"><div class="para" id="sec-sensitivity-8-3-1-1-1">Which of the following best represent the dual variables <span class="process-math">\(y_1, y_2\)</span> in this context?</div></div>
 <ol class="upper-alpha" id="sec-sensitivity-8-3-1-1-2">
@@ -835,9 +854,12 @@ y_1, y_2, \ldots, y_n\amp \geq  0.
 <li id="sec-sensitivity-8-3-1-1-2-3"><div class="para" id="sec-sensitivity-8-3-1-1-2-3-1">The quantity of healing elixers and poisons.</div></li>
 <li id="sec-sensitivity-8-3-1-1-2-4"><div class="para" id="sec-sensitivity-8-3-1-1-2-4-1">The value of healing elixers and poisons.</div></li>
 </ol>
-</div></article><article class="task exercise-like" id="sec-sensitivity-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-sensitivity-8-4-1-1">For each inequality in our dual problem, articulate what those inequalities represent in this context.</div></article><article class="task exercise-like" id="sec-sensitivity-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-sensitivity-8-5-1-1">Describe the dual objective function in this context.</div></article></article><article class="activity project-like" id="sec-sensitivity-9"><h3 class="heading">
+</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-sensitivity-8-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-sensitivity-8-4-1-1">For each inequality in our dual problem, articulate what those inequalities represent in this context.</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-sensitivity-8-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-sensitivity-8-5-1-1">Describe the dual objective function in this context.</div></article></div>
+</div></div></div></article><article class="activity project-like" id="sec-sensitivity-9"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-sensitivity-9-1-1">Describe three primal maximization problems with some “real world” context, these do not have to be “realistic”, they can be fantastical like Agnesi’s problem here.  Then, describe the dual problem to each and say what the dual variables mean in each case.</div></article></section></div>
