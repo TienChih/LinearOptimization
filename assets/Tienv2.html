@@ -228,9 +228,7 @@ function populateDataTable() {
 	for (var j = 1; j <= valX; j++) {
 		dataRow.push(math.fraction(document.getElementById("InputTable|c|" + j).value));
 	}
-	for (var k = 1; k <= valY; k++) { //Populate extra cols
-		dataRow.push(math.fraction(0));
-	}
+	
 	dataRow.push(math.fraction(document.getElementById("InputTable|d").value));
 	
 	dataTable.push(dataRow);
@@ -296,7 +294,7 @@ function populateResultTable() {
 		btn.id = "delCol|" + j;
 		btn.style = "color:red";
 		btn.onclick = function(){delCol(this.id);};
-	cell.appendChild(btn);
+	    cell.appendChild(btn);
 		row.appendChild(cell);
 	}
 	tbl.appendChild(row);
@@ -357,7 +355,7 @@ function populateResultTable() {
 		btn = document.createElement("button")
 		node = document.createTextNode("X");
 		btn.appendChild(node);
-		btn.id - "delRow|" + i;
+		btn.id = "delRow|" + i;
 		btn.style = "color:red";
 		btn.onclick = function(){delRow(this.id);};
 		cell.appendChild(btn);
