@@ -993,7 +993,7 @@ solutions of successive tableaus.
       <idx>complementary slackness theorem</idx>
       <idx>theorem, complementary slackness</idx>
       <p>
-        Prove that feasible solutions <m>\x, \y</m>, with
+        Prove that for a canonical problem, feasible solutions <m>\x, \y</m>, with
         slack variables <m>\vs, \vt</m> exhibt complementary slackness
         if and only if <m>\x, \y</m> are optimal.
       </p>

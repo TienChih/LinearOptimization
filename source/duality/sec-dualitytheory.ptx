@@ -499,6 +499,11 @@
 
   <activity>
     <title>Complementary Slackness</title>
+    <introduction>
+      <p>
+        We assume the primal problem is canonical.
+      </p>
+    </introduction>
     <task>
       <statement>
         <p>
@@ -510,7 +515,7 @@
     <task>
       <statement>
         <p>
-          If <m>\x, \y</m> are feasible, if <m>x_j\neq 0</m>, what does that
+          Suppose <m>\x</m> is a  feasible extreme point, and <m>\y, \vt</m> are the corresponding coefficients for the normal vectors.   If <m>x_j\neq 0</m>, what does that
           say about <m>s_j</m>?
         </p>
         <hint>
