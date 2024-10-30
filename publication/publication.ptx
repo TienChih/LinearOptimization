@@ -99,7 +99,7 @@
       exercise-readingquestion="no"
     />
     <tableofcontents  focused="yes" preexpanded-levels="2" />
-    <exercises tabbed-tasks="project, inline" />
+    <!-- <exercises tabbed-tasks="project " /> -->
     <!-- Specify the style of the html by giving names to      -->
     <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
     <!-- put <css style="oscarlevin"/>                         -->
