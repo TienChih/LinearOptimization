@@ -12,7 +12,7 @@
 
   
 
-  <activity xml:id="activity-exampleart">
+  <activity xml:id="activity-exampleart" label="WGAF">
     <introduction>
       <p>
         A sculptor and a painter work together to produce pieces of art, vases and figurines.  The vases takes the sculptor 1 hour to make and the painter 2 hours to paint.  
@@ -24,7 +24,7 @@
       </p>
       
     </introduction>
-    <task>
+    <task label="1">
       <statement>
         <p>
           Write an in terms of <m>x_1, x_2</m> that represent the constraints on the time of the sculptor.
@@ -32,7 +32,7 @@
       </statement>
     </task>
 
-    <task>
+    <task label="2">
       <statement>
         <p>
           Write an in terms of <m>x_1, x_2</m> that represent the constraints on the time of the painter.
@@ -40,7 +40,7 @@
       </statement>
     </task>
 
-    <task>
+    <task label="3">
       <statement>
         <p>
           What other inequalities involving <m>x_1, x_2</m> would be sensible to impose?
@@ -48,7 +48,7 @@
       </statement>
     </task>
 
-    <task>
+    <task label="4">
       <statement>
         <p>
           Treating <m>x_1</m> as <m>x</m> and <m>x_2</m> as <m>y</m>, sketch the region on the cartesian plane satisfying all the above inequalities.
@@ -61,7 +61,7 @@
         
     </task>
 
-    <task>
+    <task label="5">
       <statement>
         <p>
           Pick some points within this feasible region, what do they represent
@@ -72,7 +72,7 @@
       </statement>
     </task>
 
-    <task>
+    <task label="6">
       <statement>
         <p>
           Suppose the vases sold for $100 and the figurines sold for $120.  Without reading ahead, what would or could you do to solve this problem?  What kind of things would you need to consider?
@@ -90,7 +90,7 @@
         </p>
       </statement>
     </task>
-    <task>
+    <task label="7">
       <statement>
         <p>
           If there was a surge in demand for vases, and they started selling for $1000, how would that change your approach and the solution?

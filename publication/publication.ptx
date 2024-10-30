@@ -73,7 +73,7 @@
   </latex>
 
   <html>
-    <platform host="web"/>
+    <platform host="runestone"/>
     <!-- The host above could also be "runestone" -->
 
     <!-- Whether to knowl a particular elements is set here    -->
@@ -99,7 +99,7 @@
       exercise-readingquestion="no"
     />
     <tableofcontents  focused="yes" preexpanded-levels="2" />
-    <!-- <exercises tabbed-tasks="project " /> -->
+    <exercises tabbed-tasks="project " /> 
     <!-- Specify the style of the html by giving names to      -->
     <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
     <!-- put <css style="oscarlevin"/>                         -->
