@@ -559,8 +559,7 @@ true);
 <div class="para" id="sec-intsage-2-2">Since integer optimization is more difficult computationally than linear optimization, we use different commands to find solutions. Rather than use <code class="code-inline tex2jax_ignore">InteractiveLPProblem</code>, we use <code class="code-inline tex2jax_ignore">MixedIntegerLinearProgram</code>.</div></section><article class="activity project-like" id="sec-intsage-3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-intsage-3-1"><div class="para logical" id="sec-intsage-3-1-1">
+<div class="introduction" id="sec-intsage-3-1"><div class="para logical" id="sec-intsage-3-1-1">
 <div class="para">Say we want to solve the integer optimization problem:</div>
 <div class="displaymath process-math" id="sec-intsage-3-1-1-1">
 \begin{align*}
@@ -571,8 +570,8 @@ x_2+x_3&amp; \geq 5\\
 x_1, x_2, x_3&amp; \geq  0,\text{ and are integers}.
 \end{align*}
 </div>
-</div></div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-intsage-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<article class="task exercise-like" id="sec-intsage-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-intsage-3-2-1-1">Record this non-canonical problem using Sage:</div> <div class="para" id="sec-intsage-3-2-1-2"><div id="sec-intsage-3-2-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
 X = P.new_variable(integer=True, nonnegative=True)
 P.add_constraint(X[1] <= 7)
@@ -580,14 +579,12 @@ P.add_constraint(X[2]+X[3] >= 5)
 P.add_constraint(5*X[1]+3*X[2]+2*X[3] <= 37)
 P.set_objective(3*X[1]+4*X[2]+2*X[3])
 P.show()
-</script></div></div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-intsage-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</script></div></div></article><article class="task exercise-like" id="sec-intsage-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-intsage-3-3-1-1">We can then find the optimal solution: <div id="sec-intsage-3-3-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.solve())
 for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
     print(f'x_{i} = {v}')
 </script></div>
-</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-intsage-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article><article class="task exercise-like" id="sec-intsage-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-intsage-3-4-1-1">We could also minimize <span class="process-math">\(f\)</span> if we chose: <div id="sec-intsage-3-4-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK", maximization=False)
 X = P.new_variable(integer=True, nonnegative=True)
 P.add_constraint(X[1] <= 7)
@@ -599,8 +596,7 @@ P.show()
 for i, v in sorted(P.get_values(X, convert=ZZ, tolerance=1e-3).items()):
     print(f'x_{i} = {v}')
 </script></div>
-</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-intsage-3-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+</div></article><article class="task exercise-like" id="sec-intsage-3-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="sec-intsage-3-5-1-1">We could also have solved the linear relaxation of the original problem <span class="process-math">\(f\)</span> if we chose: <div id="sec-intsage-3-5-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">P = MixedIntegerLinearProgram(solver="GLPK")
 X = P.new_variable(integer=False, nonnegative=True)
 P.add_constraint(X[1] <= 7)
@@ -612,8 +608,7 @@ P.show()
 for i, v in sorted(P.get_values(X).items()):
     print(f'x_{i} = {v}')
 </script></div>
-</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-intsage-4"><h3 class="heading">
+</div></article></article><article class="activity project-like" id="sec-intsage-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-intsage-4-1-1">Solve: <div class="para logical" id="sec-intsage-4-1-1-1"><div class="displaymath process-math" id="sec-intsage-4-1-1-1-1">

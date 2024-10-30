@@ -558,8 +558,7 @@ true);
 <section class="introduction" id="sec-dualpivot-2"><div class="para" id="sec-dualpivot-2-1">In this section, we examine pivoting with primal-dual tableau’s. We will compare (in a good way!) to what we did in <a href="sec-pivot.html" class="internal" title="Section 2.1: Canonical Programs and the Simplex Pivot">Section 2.1</a>.</div></section><article class="activity project-like" id="sec-dualpivot-3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-dualpivot-3-1">
+<div class="introduction" id="sec-dualpivot-3-1">
 <div class="para" id="sec-dualpivot-3-1-1">Noting that the dual variables <span class="process-math">\(y_i\)</span> are non-negative weights attached to the hyperplanes defined by <span class="process-math">\(t_i=0\text{,}\)</span> and the slack variables for the dual problem <span class="process-math">\(s_j\)</span> are the weights associated with the planes <span class="process-math">\(-x_j=0\text{,}\)</span> we can encode all this information in the <em class="emphasis">Primal-Dual Tucker Tableau</em>:</div>
 <div class="para" id="sec-dualpivot-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -611,9 +610,9 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div>
-<div class="para" id="sec-dualpivot-3-1-3">(The additional dividing lines in the top left and bottom right seperate the primal decision-slack variables from the dual decision-slack vasriables.)</div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-dualpivot-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-dualpivot-3-1-3">(The additional dividing lines in the top left and bottom right seperate the primal decision-slack variables from the dual decision-slack variables.)</div>
+</div>
+<article class="task exercise-like" id="sec-dualpivot-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-dualpivot-3-2-1-1">Write out the sufficient conditions for the tableau to determine:</div> <ol class="upper-alpha" id="sec-dualpivot-3-2-1-2">
 <li id="sec-dualpivot-3-2-1-2-1"><div class="para" id="sec-dualpivot-3-2-1-2-1-1">The primal problem is feasible.</div></li>
 <li id="sec-dualpivot-3-2-1-2-2"><div class="para" id="sec-dualpivot-3-2-1-2-2-1">The dual problem is feasible.</div></li>
@@ -623,32 +622,24 @@ true);
 <li id="sec-dualpivot-3-2-1-2-6"><div class="para" id="sec-dualpivot-3-2-1-2-6-1">The dual problem is infeasible.</div></li>
 <li id="sec-dualpivot-3-2-1-2-7"><div class="para" id="sec-dualpivot-3-2-1-2-7-1">The primal problem has a feasible optimal solution.</div></li>
 <li id="sec-dualpivot-3-2-1-2-8"><div class="para" id="sec-dualpivot-3-2-1-2-8-1">The dual problem has a feasible optimal solution.</div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-dualpivot-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-dualpivot-3-3-1-1">Are any of these conditions identical?</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-dualpivot-4"><h3 class="heading">
+</ol></article><article class="task exercise-like" id="sec-dualpivot-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-dualpivot-3-3-1-1">Are any of these conditions identical?</div></article></article><article class="activity project-like" id="sec-dualpivot-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-dualpivot-4-1"><div class="para" id="sec-dualpivot-4-1-1">Recall  <a href="sec-initial.html#activity-exampleart" class="xref" data-knowl="./knowl/xref/activity-exampleart.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.2.1">Activity 1.2.1</a>.</div></div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-dualpivot-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-dualpivot-4-2-1-1">Record this information in a primal-dual tucker tableau.</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-dualpivot-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-dualpivot-4-3-1-1">Apply the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.11">Definition 2.2.11</a> to this tableau.</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-dualpivot-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-dualpivot-4-4-1-1">Consider the dual solution.  What does that mean in the context of the time spent by the painter and the sculptor?</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-dualpivot-5"><h3 class="heading">
+<div class="introduction" id="sec-dualpivot-4-1"><div class="para" id="sec-dualpivot-4-1-1">Recall  <a href="sec-initial.html#activity-exampleart" class="xref" data-knowl="./knowl/xref/activity-exampleart.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.2.1">Activity 1.2.1</a>.</div></div>
+<article class="task exercise-like" id="sec-dualpivot-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-dualpivot-4-2-1-1">Record this information in a primal-dual tucker tableau.</div></article><article class="task exercise-like" id="sec-dualpivot-4-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-dualpivot-4-3-1-1">Apply the Simplex Algorithm <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.11">Definition 2.2.11</a> to this tableau.</div></article><article class="task exercise-like" id="sec-dualpivot-4-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-dualpivot-4-4-1-1">Consider the dual solution.  What does that mean in the context of the time spent by the painter and the sculptor?</div></article></article><article class="activity project-like" id="sec-dualpivot-5"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-dualpivot-5-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sec-dualpivot-5-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-dualpivot-5-1-1">If a primal problem is infeasible, what <em class="emphasis">could</em> be true of the dual problem?</div>
 <ol class="upper-alpha" id="sec-dualpivot-5-1-2">
 <li id="sec-dualpivot-5-1-2-1"><div class="para" id="sec-dualpivot-5-1-2-1-1">The dual problem has an optimal solution.</div></li>
 <li id="sec-dualpivot-5-1-2-2"><div class="para" id="sec-dualpivot-5-1-2-2-1">The dual problem is unbounded below.</div></li>
 <li id="sec-dualpivot-5-1-2-3"><div class="para" id="sec-dualpivot-5-1-2-3-1">The dual problem is infeasible.</div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-dualpivot-5-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</ol></article><article class="task exercise-like" id="sec-dualpivot-5-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-dualpivot-5-2-1-1">For each of the possibilities discussed in (a), fill in the tableau below to achieve this criteria or explain why it is not possible.</div> <div class="para" id="sec-dualpivot-5-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b2 r2 l0 t0 lines"></td>
@@ -685,13 +676,11 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-dualpivot-6"><h3 class="heading">
+</table></div></div></article></article><article class="activity project-like" id="sec-dualpivot-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-dualpivot-6-1"><div class="para" id="sec-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual problems.</div></div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-dualpivot-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="introduction" id="sec-dualpivot-6-1"><div class="para" id="sec-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual problems.</div></div>
+<article class="task exercise-like" id="sec-dualpivot-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="sec-dualpivot-6-2-1-1">
 <div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(x_j\)</span> were allowed to be be any value including negative values, What must be true about <span class="process-math">\(s_j\text{?}\)</span>  (If <span class="process-math">\(x_j\)</span> is unconstrained, what can we say about the hyperplane <span class="process-math">\(-x_j=0\)</span> as a bounding hyperplane?)</div>
 <ol class="upper-alpha" id="sec-dualpivot-6-2-1-1-5">
@@ -702,8 +691,7 @@ true);
 <li id="sec-dualpivot-6-2-1-1-5-4"><div class="para" id="sec-dualpivot-6-2-1-1-5-4-1"><span class="process-math">\(s_j=0\text{.}\)</span></div></li>
 <li id="sec-dualpivot-6-2-1-1-5-5"><div class="para" id="sec-dualpivot-6-2-1-1-5-5-1"><span class="process-math">\(s_j\neq 0\text{.}\)</span></div></li>
 </ol>
-</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-dualpivot-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></article><article class="task exercise-like" id="sec-dualpivot-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical" id="sec-dualpivot-6-3-1-1">
 <div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(t_i=0\text{.}\)</span> What must be true about <span class="process-math">\(y_i\text{?}\)</span>  (If we increase <span class="process-math">\(b_i\)</span> can we predict if that helps or hurts <span class="process-math">\(f\text{?}\)</span> Does it matter?)</div>
 <ol class="upper-alpha" id="sec-dualpivot-6-3-1-1-5">
@@ -714,12 +702,10 @@ true);
 <li id="sec-dualpivot-6-3-1-1-5-4"><div class="para" id="sec-dualpivot-6-3-1-1-5-4-1"><span class="process-math">\(y_i=0\text{.}\)</span></div></li>
 <li id="sec-dualpivot-6-3-1-1-5-5"><div class="para" id="sec-dualpivot-6-3-1-1-5-5-1"><span class="process-math">\(y_i\neq 0\text{.}\)</span></div></li>
 </ol>
-</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-dualpivot-7"><h3 class="heading">
+</div></article></article><article class="activity project-like" id="sec-dualpivot-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-dualpivot-7-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sec-dualpivot-7-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-dualpivot-7-1-1">Solve the following non-canonical primal-dual problem:</div>
 <div class="para" id="sec-dualpivot-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -770,8 +756,7 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-dualpivot-7-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</table></div></div></article><article class="task exercise-like" id="sec-dualpivot-7-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-dualpivot-7-2-1-1">Enter the primal-problem and use Sage to confirm the solution: <div class="para" id="sec-dualpivot-7-2-1-1-1">
 <div id="sec-dualpivot-7-2-1-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
@@ -787,15 +772,13 @@ P
 print(P.optimal_value())
 </script></div>
 </div>
-</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-dualpivot-7-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article><article class="task exercise-like" id="sec-dualpivot-7-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-dualpivot-7-3-1-1">Use sage to find the dual and solve it:</div> <div id="sec-dualpivot-7-3-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 D = P.dual()
 D
 </script></div> <div id="sec-dualpivot-7-3-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(D.optimal_solution())
 print(D.optimal_value())
-</script></div></article></div>
-</div></div></div></article></section></div>
+</script></div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-dualitytheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesduality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

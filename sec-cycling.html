@@ -546,8 +546,7 @@ true);
 <section class="introduction" id="sec-cycling-2"><div class="para" id="sec-cycling-2-1">In this section, we discuss a potentially serious hurdle to using the Simplex Algorithm, and show how to avoid it completely.</div></section><article class="activity project-like" id="activity-cyclingexample"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-cyclingexample">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-cyclingexample-1">
+<div class="introduction" id="activity-cyclingexample-1">
 <div class="para" id="activity-cyclingexample-1-1">Consider the following canonical maximization tableau:</div>
 <div class="para" id="activity-cyclingexample-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -587,8 +586,8 @@ true);
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div></div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-cyclingexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div>
+<article class="task exercise-like" id="activity-cyclingexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-cyclingexample-2-1-1">Perform the following sequence of pivots, ensure each time that it is a valid pivot according to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.6">Definition 2.2.6</a>, and keep track of the variables.</div> <div class="para" id="activity-cyclingexample-2-1-2">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -813,14 +812,11 @@ true);
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
-</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-cyclingexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-cyclingexample-3-1-1">Compare your final tableau to the initial tableau.  Are there any similarities?</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-cycling-4"><h3 class="heading">
+</div></article><article class="task exercise-like" id="activity-cyclingexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-cyclingexample-3-1-1">Compare your final tableau to the initial tableau.  Are there any similarities?</div></article></article><article class="activity project-like" id="sec-cycling-4"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-cycling-4-1"><div class="para logical" id="sec-cycling-4-1-1">
+<div class="introduction" id="sec-cycling-4-1"><div class="para logical" id="sec-cycling-4-1-1">
 <div class="para">Consider the canonical linear optimization problem: Maximzie <span class="process-math">\(f(x,y)=x+y\text{,}\)</span> subject to</div>
 <div class="displaymath process-math" id="sec-cycling-4-1-1-2">
 \begin{align*}
@@ -830,11 +826,10 @@ x +y \amp\leq4 \\
 x,y \amp\geq0. 
 \end{align*}
 </div>
-</div></div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-cycling-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<article class="task exercise-like" id="sec-cycling-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-cycling-4-2-1-1">Consider a sequence of pivots swapping <span class="process-math">\(x\leftrightarrow t_2\text{,}\)</span> <span class="process-math">\(y \leftrightarrow  t_1\)</span> <span class="process-math">\(t_1 \leftrightarrow y\text{,}\)</span> <span class="process-math">\(t_2 \leftrightarrow x\text{.}\)</span>  In each of these cases, what is the basic solution recorded by the tableau?</div>
-<div class="solutions"><details id="sec-cycling-4-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/degenerate.svg" role="img" class="contained" alt="The feasible region with multiple lines intersecting the origin."></div></div></details></div></article></div>
-</div></div></div></article><article class="definition definition-like" id="def-Cycling"><h3 class="heading">
+<div class="solutions"><details id="sec-cycling-4-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/degenerate.svg" role="img" class="contained" alt="The feasible region with multiple lines intersecting the origin."></div></div></details></div></article></article><article class="definition definition-like" id="def-Cycling"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-Cycling-2-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.6">Definition 2.2.6</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <dfn class="terminology">cycling</dfn>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">

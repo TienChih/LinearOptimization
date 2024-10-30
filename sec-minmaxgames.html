@@ -558,8 +558,7 @@ true);
 <section class="introduction" id="sec-minmaxgames-2"><div class="para" id="sec-minmaxgames-2-1">In this section, we introduce zero-sum games, some basic strategies for approaching them, and highlight a connection to linear optimization.</div></section><article class="exploration project-like" id="exploration-evenodd"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="exploration-evenodd">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="exploration-evenodd-1">
+<div class="introduction" id="exploration-evenodd-1">
 <div class="para" id="exploration-evenodd-1-1">Suppose we have two players, then “Even” player and the “Odd” player.  Each player picks an integer from 1-3.</div>
 <ul class="disc" id="exploration-evenodd-1-2">
 <li id="exploration-evenodd-1-2-1"><div class="para logical" id="exploration-evenodd-1-2-1-1">
@@ -571,10 +570,9 @@ true);
 </div></li>
 <li id="exploration-evenodd-1-2-2"><div class="para" id="exploration-evenodd-1-2-2-1">If the sum is odd: the Even player pays the Odd player $3.</div></li>
 </ul>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="exploration-evenodd-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-evenodd-2-1-1">Take turns playing this game, do you think either the even or odd player has any advantage in this game?</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="exploration-evenodd-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div>
+<article class="task exercise-like" id="exploration-evenodd-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-evenodd-2-1-1">Take turns playing this game, do you think either the even or odd player has any advantage in this game?</div></article><article class="task exercise-like" id="exploration-evenodd-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="exploration-evenodd-3-1-1">Record the net winnings to the Even player in the following table:</div> <div class="para" id="exploration-evenodd-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -624,30 +622,21 @@ true);
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="exploration-evenodd-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-evenodd-4-1-1">Examinine this table, and comparing the rows, is there any advantage to the Even player in picking the first row over the third row?</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="exploration-evenodd-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="exploration-evenodd-5-1-1">Comparing the columns, is there any advantage to the Odd player in picking the third column over the first column?</div></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="exploration-evenodd-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="exploration-evenodd-6-1-1">Delete any row (column) corresponding to a choice that the Even (Odd) player would never make.</div> <div class="para" id="exploration-evenodd-6-1-2">If the Even player always picks a 2, what is the optimal strategy for the Odd player?  Similarly if the Odd player always picks a 1, what is the optimal strategy for the even player?</div></article></div>
-<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="exploration-evenodd-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="exploration-evenodd-7-1-1">Do either player gain any advantage by picking a single choice and sticking to it?</div></article></div>
-<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="exploration-evenodd-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="exploration-evenodd-8-1-1">Suppose the Even player flips a coin to make their choice, if the Odd player picks a 1, what is their average expected winnings? What if they choose a 2?</div></article></div>
-<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="exploration-evenodd-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="exploration-evenodd-9-1-1">Suppose the Odd player flips a coin to make their choice, if the Even player picks a 2, what is their average expected winnings? What if they choose a 3?</div></article></div>
-<div data-component="tab" data-tabname="(i)"><article class="task exercise-like" id="exploration-evenodd-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="exploration-evenodd-10-1-1">Does this game favor either the Even or Odd player?</div></article></div>
-</div></div></div></article><article class="definition definition-like" id="def-payoff"><h3 class="heading">
+</table></div></div></article><article class="task exercise-like" id="exploration-evenodd-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-evenodd-4-1-1">Examinine this table, and comparing the rows, is there any advantage to the Even player in picking the first row over the third row?</div></article><article class="task exercise-like" id="exploration-evenodd-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-evenodd-5-1-1">Comparing the columns, is there any advantage to the Odd player in picking the third column over the first column?</div></article><article class="task exercise-like" id="exploration-evenodd-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="exploration-evenodd-6-1-1">Delete any row (column) corresponding to a choice that the Even (Odd) player would never make.</div> <div class="para" id="exploration-evenodd-6-1-2">If the Even player always picks a 2, what is the optimal strategy for the Odd player?  Similarly if the Odd player always picks a 1, what is the optimal strategy for the even player?</div></article><article class="task exercise-like" id="exploration-evenodd-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="exploration-evenodd-7-1-1">Do either player gain any advantage by picking a single choice and sticking to it?</div></article><article class="task exercise-like" id="exploration-evenodd-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="exploration-evenodd-8-1-1">Suppose the Even player flips a coin to make their choice, if the Odd player picks a 1, what is their average expected winnings? What if they choose a 2?</div></article><article class="task exercise-like" id="exploration-evenodd-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="exploration-evenodd-9-1-1">Suppose the Odd player flips a coin to make their choice, if the Even player picks a 2, what is their average expected winnings? What if they choose a 3?</div></article><article class="task exercise-like" id="exploration-evenodd-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="exploration-evenodd-10-1-1">Does this game favor either the Even or Odd player?</div></article></article><article class="definition definition-like" id="def-payoff"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-payoff-3-1">In a two-player zero-sum game, where the row player has <span class="process-math">\(n\)</span> choices and the column player has <span class="process-math">\(m\)</span> choices, the <dfn class="terminology">payoff matrix</dfn> is a matrix which records in each row and column the net payoff to the row player (this choice is purely by convention, but we will stick to it).</div> <div class="para" id="def-payoff-3-2">If a row <span class="process-math">\(i\)</span> has entries that are strictly greater than or equal to the entries of another row <span class="process-math">\(j\text{,}\)</span> then we say that row <span class="process-math">\(i\)</span> <dfn class="terminology">dominates</dfn> row <span class="process-math">\(j\text{.}\)</span>  We then may delete row <span class="process-math">\(j\)</span> since there is now reason the row player would choose <span class="process-math">\(j\text{.}\)</span>  Similarly, if column <span class="process-math">\(i\)</span> is less than or equal to column <span class="process-math">\(j\text{,}\)</span> column <span class="process-math">\(i\)</span> <dfn class="terminology">dominates</dfn> column <span class="process-math">\(j\)</span> and we may delete column <span class="process-math">\(j\text{.}\)</span>
 </div></article><article class="activity project-like" id="activity-rowcol"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-rowcol">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-rowcol-1">
+<div class="introduction" id="activity-rowcol-1">
 <div class="para" id="activity-rowcol-1-1">Consider the payoff matrix for a game between Rowan and Colleen.</div>
 <div class="para" id="activity-rowcol-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -697,8 +686,8 @@ true);
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(a_{nm}\)</span></td>
 </tr>
 </table></div></div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-rowcol-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div>
+<article class="task exercise-like" id="activity-rowcol-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="activity-rowcol-2-1-1">
 <div class="para">Suppose that Rowan pursues a <dfn class="terminology">mixed strategy</dfn> a probability distribution of their choices <span class="process-math">\(\p\)</span> where</div>
 <div class="displaymath process-math">
@@ -713,10 +702,8 @@ true);
 <li id="activity-rowcol-2-1-3-4"><div class="para" id="activity-rowcol-2-1-3-4-1"><span class="process-math">\(E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}\text{.}\)</span></div></li>
 <li id="activity-rowcol-2-1-3-5"><div class="para" id="activity-rowcol-2-1-3-5-1"><span class="process-math">\(E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n p_i\text{.}\)</span></div></li>
 <li id="activity-rowcol-2-1-3-6"><div class="para" id="activity-rowcol-2-1-3-6-1"><span class="process-math">\(E_j(\p) = \frac{1}{n}\displaystyle \sum_{i=1}^n a_{ij}p_i\text{.}\)</span></div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-rowcol-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-rowcol-3-1-1">If Colleen somehow figures out Rowan’s strategy <span class="process-math">\(\p\text{,}\)</span> which column <span class="process-math">\(j\)</span> should she choose?</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-rowcol-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</ol></article><article class="task exercise-like" id="activity-rowcol-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-rowcol-3-1-1">If Colleen somehow figures out Rowan’s strategy <span class="process-math">\(\p\text{,}\)</span> which column <span class="process-math">\(j\)</span> should she choose?</div></article><article class="task exercise-like" id="activity-rowcol-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="activity-rowcol-4-1-1">Rowan is aware that Colleen is a sharp player can likely figure out <span class="process-math">\(\p\text{.}\)</span>  How then should he choose his strategy? <span class="process-math">\(\p\text{?}\)</span>
 </div> <ol class="upper-alpha cols2" id="activity-rowcol-4-1-2">
 <li id="activity-rowcol-4-1-2-1"><div class="para" id="activity-rowcol-4-1-2-1-1">Maximize <span class="process-math">\(u=\displaystyle \max_{1\leq j\leq m}E_j(\p)\text{.}\)</span>
@@ -727,8 +714,7 @@ true);
 </div></li>
 <li id="activity-rowcol-4-1-2-4"><div class="para" id="activity-rowcol-4-1-2-4-1">Minimize <span class="process-math">\(u=\displaystyle \min_{1\leq j\leq m}E_j(\p)\text{.}\)</span>
 </div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-rowcol-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+</ol></article><article class="task exercise-like" id="activity-rowcol-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para logical" id="activity-rowcol-5-1-1">
 <div class="para">At the exact same time, Colleen is pursuing her own mixed strategy <span class="process-math">\(\q\text{:}\)</span>
 </div>
@@ -744,10 +730,8 @@ true);
 <li id="activity-rowcol-5-1-3-4"><div class="para" id="activity-rowcol-5-1-3-4-1"><span class="process-math">\(F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}\text{.}\)</span></div></li>
 <li id="activity-rowcol-5-1-3-5"><div class="para" id="activity-rowcol-5-1-3-5-1"><span class="process-math">\(F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j\text{.}\)</span></div></li>
 <li id="activity-rowcol-5-1-3-6"><div class="para" id="activity-rowcol-5-1-3-6-1"><span class="process-math">\(F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j\text{.}\)</span></div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-rowcol-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-rowcol-6-1-1">If Rowan somehow figures out Colleen’s strategy <span class="process-math">\(\q\text{,}\)</span> which row <span class="process-math">\(i\)</span> should he choose?</div></article></div>
-<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-rowcol-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+</ol></article><article class="task exercise-like" id="activity-rowcol-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-rowcol-6-1-1">If Rowan somehow figures out Colleen’s strategy <span class="process-math">\(\q\text{,}\)</span> which row <span class="process-math">\(i\)</span> should he choose?</div></article><article class="task exercise-like" id="activity-rowcol-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-rowcol-7-1-1">Colleen is also aware that Rowan is a sharp player can likely figure out <span class="process-math">\(\q\text{.}\)</span>  How then should she choose her strategy? <span class="process-math">\(\q\text{?}\)</span>
 </div> <ol class="upper-alpha cols2" id="activity-rowcol-7-1-2">
 <li id="activity-rowcol-7-1-2-1"><div class="para" id="activity-rowcol-7-1-2-1-1">Maximize <span class="process-math">\(v=\displaystyle \max_{1\leq i\leq n}F_i(\q)\text{.}\)</span>
@@ -758,8 +742,7 @@ true);
 </div></li>
 <li id="activity-rowcol-7-1-2-4"><div class="para" id="activity-rowcol-7-1-2-4-1">Minimize <span class="process-math">\(v=\displaystyle \min_{1\leq i\leq n}F_i(\q)\text{.}\)</span>
 </div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="task-gametableau"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+</ol></article><article class="task exercise-like" id="task-gametableau"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para" id="task-gametableau-1-1">Consider the primal-dual problems encoded by the tableau:</div> <div class="para" id="task-gametableau-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b2 r2 l0 t0 lines"></td>
@@ -841,18 +824,12 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="task-gametableau-1-3">Write out both the primal and dual problems encoded by this tableau.  (Including all equalities, inequalities, and the objective functions)</div></article></div>
-<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="activity-rowcol-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-rowcol-9-1-1">What primal constraint does the first row represent?  How does it relate to Colleen’s strategy?</div></article></div>
-<div data-component="tab" data-tabname="(i)"><article class="task exercise-like" id="activity-rowcol-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-rowcol-10-1-1">What primal constraint do the next <span class="process-math">\(n\)</span> rows represent?  How does it relate to Colleen’s strategy?</div></article></div>
-<div data-component="tab" data-tabname="(j)"><article class="task exercise-like" id="activity-rowcol-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="activity-rowcol-11-1-1">What is the primal objective function?  How does it relate to Colleen’s strategy?</div></article></div>
-<div data-component="tab" data-tabname="(k)"><article class="task exercise-like" id="activity-rowcol-12"><h4 class="heading"><span class="codenumber">(k)</span></h4>
-<div class="para" id="activity-rowcol-12-1-1">Repeat (h)-(j) for the columns, and with regards to Rowan’s strategy.</div></article></div>
-<div data-component="tab" data-tabname="(l)"><article class="task exercise-like" id="activity-rowcol-13"><h4 class="heading"><span class="codenumber">(l)</span></h4>
-<div class="para" id="activity-rowcol-13-1-1">Supposing that this system has an optimal primal and dual solution, what would those solutions represent?</div></article></div>
-</div></div></div></article><article class="definition definition-like" id="def-saddlepoint"><h3 class="heading">
+</table></div></div> <div class="para" id="task-gametableau-1-3">Write out both the primal and dual problems encoded by this tableau.  (Including all equalities, inequalities, and the objective functions)</div></article><article class="task exercise-like" id="activity-rowcol-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="activity-rowcol-9-1-1">What primal constraint does the first row represent?  How does it relate to Colleen’s strategy?</div></article><article class="task exercise-like" id="activity-rowcol-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="activity-rowcol-10-1-1">What primal constraint do the next <span class="process-math">\(n\)</span> rows represent?  How does it relate to Colleen’s strategy?</div></article><article class="task exercise-like" id="activity-rowcol-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
+<div class="para" id="activity-rowcol-11-1-1">What is the primal objective function?  How does it relate to Colleen’s strategy?</div></article><article class="task exercise-like" id="activity-rowcol-12"><h4 class="heading"><span class="codenumber">(k)</span></h4>
+<div class="para" id="activity-rowcol-12-1-1">Repeat (h)-(j) for the columns, and with regards to Rowan’s strategy.</div></article><article class="task exercise-like" id="activity-rowcol-13"><h4 class="heading"><span class="codenumber">(l)</span></h4>
+<div class="para" id="activity-rowcol-13-1-1">Supposing that this system has an optimal primal and dual solution, what would those solutions represent?</div></article></article><article class="definition definition-like" id="def-saddlepoint"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-saddlepoint-2-1">Suppose that the reduced payoff matrix had an entry <span class="process-math">\(a_{ij}\)</span> that is the largest value in it’s column and the smallest value in it’s row.</div> <div class="para" id="def-saddlepoint-2-2"><div class="tabular-box natural-width"><table class="tabular">
@@ -922,8 +899,7 @@ true);
 </table></div></div> <div class="para" id="def-saddlepoint-2-3">Such an entry <span class="process-math">\(a_{ij}\)</span> is called a <dfn class="terminology">saddle point</dfn>.</div></article><article class="activity project-like" id="sec-minmaxgames-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-minmaxgames-7-1">
+<div class="introduction" id="sec-minmaxgames-7-1">
 <div class="para" id="sec-minmaxgames-7-1-1-1">Suppose a reduced payoff matrix had a saddle point <span class="process-math">\(a_{ij}\text{.}\)</span>
 </div> <div class="para" id="sec-minmaxgames-7-1-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -990,8 +966,8 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-minmaxgames-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div>
+<article class="task exercise-like" id="sec-minmaxgames-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-minmaxgames-7-2-1-1">Pivot first on the entry with a <span class="process-math">\(*\)</span> then <span class="process-math">\(**\text{.}\)</span>
 </div> <div class="para" id="sec-minmaxgames-7-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -1121,29 +1097,22 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-minmaxgames-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</table></div></div></article><article class="task exercise-like" id="sec-minmaxgames-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-minmaxgames-7-3-1-1">For each entry <span class="process-math">\(B, B', C, C'\)</span> determine if:</div> <ol class="upper-alpha cols2" id="sec-minmaxgames-7-3-1-2">
 <li id="sec-minmaxgames-7-3-1-2-1"><div class="para" id="sec-minmaxgames-7-3-1-2-1-1">The entry is zero.</div></li>
 <li id="sec-minmaxgames-7-3-1-2-2"><div class="para" id="sec-minmaxgames-7-3-1-2-2-1">The entry is positive.</div></li>
 <li id="sec-minmaxgames-7-3-1-2-3"><div class="para" id="sec-minmaxgames-7-3-1-2-3-1">The entry is negative.</div></li>
 <li id="sec-minmaxgames-7-3-1-2-4"><div class="para" id="sec-minmaxgames-7-3-1-2-4-1">The entries value cannot be determined.</div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-minmaxgames-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</ol></article><article class="task exercise-like" id="sec-minmaxgames-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-minmaxgames-7-4-1-1">What is <span class="process-math">\(D\text{?}\)</span>  What are <span class="process-math">\(\ec{u}, \ec{v}\text{?}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-minmaxgames-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-minmaxgames-7-5-1-1">After we delete the appropriate rows and columns, what could be said about the resulting primal-dual problems?</div></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="sec-minmaxgames-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+</div></article><article class="task exercise-like" id="sec-minmaxgames-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-minmaxgames-7-5-1-1">After we delete the appropriate rows and columns, what could be said about the resulting primal-dual problems?</div></article><article class="task exercise-like" id="sec-minmaxgames-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="sec-minmaxgames-7-6-1-1">Would it make a difference if we pivoted by <span class="process-math">\(**\)</span> first then <span class="process-math">\(*\text{?}\)</span>
-</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-minmaxgames-8"><h3 class="heading">
+</div></article></article><article class="activity project-like" id="sec-minmaxgames-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.6</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="">
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-minmaxgames-8-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-minmaxgames-8-1-1">Follow the outline provided by <a href="sec-minmaxgames.html#activity-rowcol" class="xref" data-knowl="./knowl/xref/activity-rowcol.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.1.3">Activity 5.1.3</a> to find the optimal strategies for the Even and Odd players in <a href="sec-minmaxgames.html#exploration-evenodd" class="xref" data-knowl="./knowl/xref/exploration-evenodd.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 5.1.1">Exploration 5.1.1</a>, and who if anyone the game favors.</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-minmaxgames-8-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<article class="task exercise-like" id="sec-minmaxgames-8-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-minmaxgames-8-1-1">Follow the outline provided by <a href="sec-minmaxgames.html#activity-rowcol" class="xref" data-knowl="./knowl/xref/activity-rowcol.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.1.3">Activity 5.1.3</a> to find the optimal strategies for the Even and Odd players in <a href="sec-minmaxgames.html#exploration-evenodd" class="xref" data-knowl="./knowl/xref/exploration-evenodd.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 5.1.1">Exploration 5.1.1</a>, and who if anyone the game favors.</div></article><article class="task exercise-like" id="sec-minmaxgames-8-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-minmaxgames-8-2-1">To test out this solution edit this R code: <div id="sec-minmaxgames-8-2-1-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">numsamp = 1000000
 
 Rowan = sample(1:3, numsamp, replace = TRUE, prob = c(FIXMER1, FIXMER2, FIXMER3))
@@ -1161,12 +1130,9 @@ hist(Winnings)
 abline(v=mean(Winnings), col="red",lwd=3, lty=2 )
 print(mean(Winnings))
 </script></div> Where <code class="code-inline tex2jax_ignore">FIXMER1</code>, <code class="code-inline tex2jax_ignore">FIXMER2</code>, <code class="code-inline tex2jax_ignore">FIXMER3</code> represent the entries for the optimal mixed strategy for the row player Even, and <code class="code-inline tex2jax_ignore">FIXMEC1</code>, <code class="code-inline tex2jax_ignore">FIXMEC2</code>, <code class="code-inline tex2jax_ignore">FIXMEC3</code> are for the optimal mixed strategy for the column player Odd.</div>
-<div class="para" id="sec-minmaxgames-8-2-2">Then run the cell and see the distributions of winnings and the average winnings. How does this value compare to what you found.</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-minmaxgames-8-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-minmaxgames-8-3-1-1">Take turns, one student pick a new strategy for Even, and another student then modify the strategy for Odd in light of the new strategy. Can we do better than Odd’s current best strategy?</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-minmaxgames-8-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-minmaxgames-8-4-1-1">Conversely, take turns, one student pick a new strategy for Odd, and another student then modify the strategy for Even in light of the new strategy. Can we do better than Even’s current best strategy?</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-minmaxgames-9"><h3 class="heading">
+<div class="para" id="sec-minmaxgames-8-2-2">Then run the cell and see the distributions of winnings and the average winnings. How does this value compare to what you found.</div></article><article class="task exercise-like" id="sec-minmaxgames-8-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-minmaxgames-8-3-1-1">Take turns, one student pick a new strategy for Even, and another student then modify the strategy for Odd in light of the new strategy. Can we do better than Odd’s current best strategy?</div></article><article class="task exercise-like" id="sec-minmaxgames-8-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-minmaxgames-8-4-1-1">Conversely, take turns, one student pick a new strategy for Odd, and another student then modify the strategy for Even in light of the new strategy. Can we do better than Even’s current best strategy?</div></article></article><article class="activity project-like" id="sec-minmaxgames-9"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.7</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-minmaxgames-9-1-1">Find the optimal strategies for two players Rowan and Colleen playing “Rock, Paper, Scissors”.</div></article></section></div>

@@ -546,8 +546,7 @@ true);
 <section class="introduction" id="sec-vam-3"><div class="para" id="sec-vam-3-1">We introduce the transportation problem, consider it’s connection to linear optimization, and show an algorithm that produces a (maybe not optimal) solution.</div></section><article class="exploration project-like" id="exploration-transportation"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="exploration-transportation">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="exploration-transportation-1">
+<div class="introduction" id="exploration-transportation-1">
 <div class="para" id="exploration-transportation-1-1">Suppose we have a company moving goods (lets say widgets) from 3 different warehouses to 3 different markets.  The cost of shipping from warehouses to markets is listed below, along with the demand from each market and the supply available at each warehouse:</div>
 <div class="para" id="exploration-transportation-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -587,26 +586,21 @@ true);
 </tr>
 </table></div></div>
 <div class="para" id="exploration-transportation-1-3">We want to ship the goods from the warehouses to the markets in a way that minimizes costs.</div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="exploration-transportation-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-transportation-2-1-1">Just eyeballing this, can you come up with a heuristic guess as to an optimal, or at least “good” shipping schedule? How did you come up with this and what did you have to consider?</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="exploration-transportation-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div>
+<article class="task exercise-like" id="exploration-transportation-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-transportation-2-1-1">Just eyeballing this, can you come up with a heuristic guess as to an optimal, or at least “good” shipping schedule? How did you come up with this and what did you have to consider?</div></article><article class="task exercise-like" id="exploration-transportation-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="exploration-transportation-3-1-1">Let <span class="process-math">\(x_{ij}\)</span> denote the the tons of goods shipped from warehouse <span class="process-math">\(i\)</span> to market <span class="process-math">\(j\text{.}\)</span>  Write an (in)equality for the quantity of goods shipped from Warehouse 1 in terms of the <span class="process-math">\(x_{ij}\text{.}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="exploration-transportation-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article><article class="task exercise-like" id="exploration-transportation-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="exploration-transportation-4-1-1">Write an (in)equality for the quantity of goods shipped to Market 2 in terms of the <span class="process-math">\(x_{ij}\text{.}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="exploration-transportation-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="exploration-transportation-5-1-1">Write a (possibly noncanonical) linear minimization problem that minimizes the cost to ship these goods.</div></article></div>
-</div></div></div></article><article class="definition definition-like" id="def-balanced"><h3 class="heading">
+</div></article><article class="task exercise-like" id="exploration-transportation-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-transportation-5-1-1">Write a (possibly noncanonical) linear minimization problem that minimizes the cost to ship these goods.</div></article></article><article class="definition definition-like" id="def-balanced"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-balanced-3-1">A transportation problem where the total demand and the total supply are the same is a <dfn class="terminology">balanced</dfn> transportation problem.</div></article><article class="activity project-like" id="activity-vamexample"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="activity-vamexample">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-vamexample-1"><div class="para" id="activity-vamexample-1-1">While we could solve this transportation by the Simplex Algorithm, it would be painfully tedious to do.  We develop an algorithm to simplify this process.</div></div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-vamexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="introduction" id="activity-vamexample-1"><div class="para" id="activity-vamexample-1-1">While we could solve this transportation by the Simplex Algorithm, it would be painfully tedious to do.  We develop an algorithm to simplify this process.</div></div>
+<article class="task exercise-like" id="activity-vamexample-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="activity-vamexample-2-1-1">
 <div class="para">Suppose we had <span class="process-math">\(n\)</span> warehouses and <span class="process-math">\(m\)</span> markets with supplies <span class="process-math">\(w_i\)</span> and demands <span class="process-math">\(m_j\text{.}\)</span>  We have linear equations</div>
 <div class="displaymath process-math">
@@ -616,8 +610,7 @@ true);
 </div>
 <div class="para">Since <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{,}\)</span> what is the maximum number of <span class="process-math">\(x_{ij}\)</span> that can be non-zero for a basic solution?</div>
 </div>
-<div class="solutions"><details id="activity-vamexample-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="activity-vamexample-2-2-1">Imagine an augmented matrix with the coefficients of the <span class="process-math">\(x_{ij}\)</span> on one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix. Then consider that <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{.}\)</span>  What does this say about the (in)dependence of the rows? What then must the rank be?</div></div></details></div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-vamexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="solutions"><details id="activity-vamexample-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="activity-vamexample-2-2-1">Imagine an augmented matrix with the coefficients of the <span class="process-math">\(x_{ij}\)</span> on one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix. Then consider that <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{.}\)</span>  What does this say about the (in)dependence of the rows? What then must the rank be?</div></div></details></div></article><article class="task exercise-like" id="activity-vamexample-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-vamexample-3-1-1">We first mark the difference between the lowest two values in each row/column:</div> <div class="para" id="activity-vamexample-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -654,8 +647,7 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-vamexample-3-1-3"> A table like this is called a <dfn class="terminology">transportation tableau</dfn>.</div> <div class="para" id="activity-vamexample-3-1-4">Ideally we would always want to move everything with the cheapest available option. It’s not hard to see that in most cases, like this one, this isn’t actually possible. What do these numbers we computed measure?  How can they help us decide how to move goods?</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-vamexample-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</table></div></div> <div class="para" id="activity-vamexample-3-1-3"> A table like this is called a <dfn class="terminology">transportation tableau</dfn>.</div> <div class="para" id="activity-vamexample-3-1-4">Ideally we would always want to move everything with the cheapest available option. It’s not hard to see that in most cases, like this one, this isn’t actually possible. What do these numbers we computed measure?  How can they help us decide how to move goods?</div></article><article class="task exercise-like" id="activity-vamexample-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="activity-vamexample-4-1-1">We select the row or column with the highest difference and use the smallest entry in said row/column to move as much of the goods as we can:</div> <div class="para" id="activity-vamexample-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -728,8 +720,7 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-vamexample-4-1-4">Would it make sense to move any more goods to market 3?  How should we decide how to move goods next?</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-vamexample-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+</table></div></div> <div class="para" id="activity-vamexample-4-1-4">Would it make sense to move any more goods to market 3?  How should we decide how to move goods next?</div></article><article class="task exercise-like" id="activity-vamexample-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-vamexample-5-1-1">Now that Warehouse 2 has all their supply exhausted, and shipping from there is no longer an option, what are the differences between the lowest costs and second lowest costs in each row/column?</div> <div class="para" id="activity-vamexample-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -767,8 +758,7 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(20\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-vamexample-5-1-3">Would it make sense to move any more goods to market 3?  How should we decide how to move goods next?</div></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-vamexample-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+</table></div></div> <div class="para" id="activity-vamexample-5-1-3">Would it make sense to move any more goods to market 3?  How should we decide how to move goods next?</div></article><article class="task exercise-like" id="activity-vamexample-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-vamexample-6-1-1">The next highest difference is for Market 3:</div> <div class="para" id="activity-vamexample-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -844,10 +834,8 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-vamexample-6-1-4">Does it make sense to continue to move goods to Market 3?</div> <div class="para" id="activity-vamexample-6-1-5">What should be the next choice of warehouse/market?</div></article></div>
-<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-vamexample-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-vamexample-7-1-1">Finish moving the goods from warehouses to markets.</div></article></div>
-<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="activity-vamexample-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+</table></div></div> <div class="para" id="activity-vamexample-6-1-4">Does it make sense to continue to move goods to Market 3?</div> <div class="para" id="activity-vamexample-6-1-5">What should be the next choice of warehouse/market?</div></article><article class="task exercise-like" id="activity-vamexample-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-vamexample-7-1-1">Finish moving the goods from warehouses to markets.</div></article><article class="task exercise-like" id="activity-vamexample-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para" id="activity-vamexample-8-1-1">Consider the final transportation tableau:</div> <div class="para" id="activity-vamexample-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -890,10 +878,8 @@ true);
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-vamexample-8-1-3">Verify that this is a feasible solution to the original transportation problem. Do you think it is optimal?</div></article></div>
-<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="activity-vamexample-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-vamexample-9-1-1">Out of the nine possible warehouse/market pairs, how many have actual shipments between them?  How does that compare to what we found in (a)?</div></article></div>
-</div></div></div></article><article class="definition definition-like" id="def-vam"><h3 class="heading">
+</table></div></div> <div class="para" id="activity-vamexample-8-1-3">Verify that this is a feasible solution to the original transportation problem. Do you think it is optimal?</div></article><article class="task exercise-like" id="activity-vamexample-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="activity-vamexample-9-1-1">Out of the nine possible warehouse/market pairs, how many have actual shipments between them?  How does that compare to what we found in (a)?</div></article></article><article class="definition definition-like" id="def-vam"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-vam-4-1">To summarise the <em class="emphasis">Vogel Advanced-Start Method</em> or <em class="emphasis">VAM</em> method of producing a feasible solution to the transportation problem is outlined as follows.</div> <ol class="decimal" id="def-vam-4-2">
