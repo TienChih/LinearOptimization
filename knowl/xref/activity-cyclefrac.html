@@ -14,35 +14,43 @@
 <article class="activity project-like"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.12</span><span class="period">.</span>
 </h4>
-<div class="introduction">
-<div class="para">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div>
-<div class="para">Suppose there were a collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle <span class="process-math">\(C\text{.}\)</span>  Without loss of generality, we may label the vertices  <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> so that for <span class="process-math">\(1\leq i \leq k-1\text{,}\)</span> <span class="process-math">\(v_iv_{i+1}\)</span> and <span class="process-math">\(v_kv_1\)</span> have an edge between them, and <span class="process-math">\(x_{i,i+1}^*, x_{k,1}^*\)</span> have fractional values.</div>
-<div class="para">To make notation bearable, we’ll understand that <span class="process-math">\(v_{k+1}=v_1\text{.}\)</span>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__activity-cyclefrac">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-cyclefrac-1">
+<div class="para" id="activity-cyclefrac-1-1">Let <span class="process-math">\(G\)</span> be a bipartite graph, and let <span class="process-math">\(\x^*\)</span> be an optimal solution to the primal matching problem from <a href="sec-covermatch.html#activity-maxmatch" class="xref" data-knowl="./knowl/xref/activity-maxmatch.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.2">Activity 9.1.2</a>.</div>
+<div class="para" id="activity-cyclefrac-1-2">Suppose there were a collection of edges for which the corresponding <span class="process-math">\(x_{ij}^*\)</span> had fractional values, such that these fractional edges formed a cycle <span class="process-math">\(C\text{.}\)</span>  Without loss of generality, we may label the vertices  <span class="process-math">\(v_1, v_2, \ldots v_k\)</span> so that for <span class="process-math">\(1\leq i \leq k-1\text{,}\)</span> <span class="process-math">\(v_iv_{i+1}\)</span> and <span class="process-math">\(v_kv_1\)</span> have an edge between them, and <span class="process-math">\(x_{i,i+1}^*, x_{k,1}^*\)</span> have fractional values.</div>
+<div class="para" id="activity-cyclefrac-1-3">To make notation bearable, we’ll understand that <span class="process-math">\(v_{k+1}=v_1\text{.}\)</span>
 </div>
-</div>
-<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para">Why must <span class="process-math">\(k\)</span> be even?</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para">Suppose we construct a new solution <span class="process-math">\(\x'\)</span> by replacing <span class="process-math">\(x_{i,i+1}^*\)</span> with <span class="process-math">\(x_{i,i+1}^*-\epsilon\)</span> when <span class="process-math">\(i\)</span> is odd, with <span class="process-math">\(x_{i,i+1}^*+\epsilon\)</span> when <span class="process-math">\(i\)</span> is even, and leaving every edge not part of <span class="process-math">\(C\)</span> the same.  What value for <span class="process-math">\(\epsilon\)</span> would guarantee that at least one of the new <span class="process-math">\(x'_{i,i+1}\)</span> is an integer?</div> <ol class="upper-alpha" id="activity-cyclefrac-3-1-2">
-<li><div class="para"><span class="process-math">\(\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} \text{.}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} \text{.}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} \text{.}\)</span></div></li>
-</ol></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para">Show that <span class="process-math">\(\x'\geq 0\text{.}\)</span>
-</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para">Show that for any vertex <span class="process-math">\(v_j\)</span> <em class="emphasis">not</em> a part of <span class="process-math">\(C\text{,}\)</span> the bound corresponding to <span class="process-math">\(v_j\)</span> is still satisfied by <span class="process-math">\(\x'\text{.}\)</span>
-</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para">Show that for any vertex <span class="process-math">\(v_i\)</span>  part of <span class="process-math">\(C\text{,}\)</span> the bound corresponding to <span class="process-math">\(v_i\)</span> is still satisfied by <span class="process-math">\(\x'\text{.}\)</span>
-</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para">Show that <span class="process-math">\(f(\x') = f(\x^*)\text{.}\)</span>
-</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para">When comparing <span class="process-math">\(\x^*\)</span> and <span class="process-math">\(\x'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha" id="activity-cyclefrac-8-1-2">
-<li><div class="para">
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-cyclefrac-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="activity-cyclefrac-2-1-1">Why must <span class="process-math">\(k\)</span> be even?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-cyclefrac-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="activity-cyclefrac-3-1-1">Suppose we construct a new solution <span class="process-math">\(\x'\)</span> by replacing <span class="process-math">\(x_{i,i+1}^*\)</span> with <span class="process-math">\(x_{i,i+1}^*-\epsilon\)</span> when <span class="process-math">\(i\)</span> is odd, with <span class="process-math">\(x_{i,i+1}^*+\epsilon\)</span> when <span class="process-math">\(i\)</span> is even, and leaving every edge not part of <span class="process-math">\(C\)</span> the same.  What value for <span class="process-math">\(\epsilon\)</span> would guarantee that at least one of the new <span class="process-math">\(x'_{i,i+1}\)</span> is an integer?</div> <ol class="upper-alpha" id="activity-cyclefrac-3-1-2">
+<li id="activity-cyclefrac-3-1-2-1"><div class="para" id="activity-cyclefrac-3-1-2-1-1"><span class="process-math">\(\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k\} \text{.}\)</span></div></li>
+<li id="activity-cyclefrac-3-1-2-2"><div class="para" id="activity-cyclefrac-3-1-2-2-1"><span class="process-math">\(\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is odd}\} \text{.}\)</span></div></li>
+<li id="activity-cyclefrac-3-1-2-3"><div class="para" id="activity-cyclefrac-3-1-2-3-1"><span class="process-math">\(\epsilon=\min \{x^*_{i,i+1}: 1\leq i \leq k, i\text{ is even}\} \text{.}\)</span></div></li>
+</ol></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-cyclefrac-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="activity-cyclefrac-4-1-1">Show that <span class="process-math">\(\x'\geq 0\text{.}\)</span>
+</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-cyclefrac-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="activity-cyclefrac-5-1-1">Show that for any vertex <span class="process-math">\(v_j\)</span> <em class="emphasis">not</em> a part of <span class="process-math">\(C\text{,}\)</span> the bound corresponding to <span class="process-math">\(v_j\)</span> is still satisfied by <span class="process-math">\(\x'\text{.}\)</span>
+</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-cyclefrac-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="activity-cyclefrac-6-1-1">Show that for any vertex <span class="process-math">\(v_i\)</span>  part of <span class="process-math">\(C\text{,}\)</span> the bound corresponding to <span class="process-math">\(v_i\)</span> is still satisfied by <span class="process-math">\(\x'\text{.}\)</span>
+</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-cyclefrac-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="activity-cyclefrac-7-1-1">Show that <span class="process-math">\(f(\x') = f(\x^*)\text{.}\)</span>
+</div></article></div>
+<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="activity-cyclefrac-8"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="activity-cyclefrac-8-1-1">When comparing <span class="process-math">\(\x^*\)</span> and <span class="process-math">\(\x'\text{,}\)</span> which solution has fewer integer values?</div> <ol class="upper-alpha" id="activity-cyclefrac-8-1-2">
+<li id="activity-cyclefrac-8-1-2-1"><div class="para" id="activity-cyclefrac-8-1-2-1-1">
 <span class="process-math">\(\x^*\)</span> has fewer integer values.</div></li>
-<li><div class="para">
+<li id="activity-cyclefrac-8-1-2-2"><div class="para" id="activity-cyclefrac-8-1-2-2-1">
 <span class="process-math">\(\x'\)</span> has fewer integer values.</div></li>
-<li><div class="para">
+<li id="activity-cyclefrac-8-1-2-3"><div class="para" id="activity-cyclefrac-8-1-2-3-1">
 <span class="process-math">\(\x^*, \x'\)</span> have the same number of integer values.</div></li>
-<li><div class="para">This cannot be determined.</div></li>
-</ol></article></article><span class="incontext"><a class="internal" href="sec-covermatch.html#activity-cyclefrac">in-context</a></span>
+<li id="activity-cyclefrac-8-1-2-4"><div class="para" id="activity-cyclefrac-8-1-2-4-1">This cannot be determined.</div></li>
+</ol></article></div>
+</div></div></div></article><span class="incontext"><a class="internal" href="sec-covermatch.html#activity-cyclefrac">in-context</a></span>
 </body>
 </html>

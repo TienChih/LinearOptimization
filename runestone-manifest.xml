@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <runestone-services version="7.4.3"/>
+  <library-metadata publisher="pretext">
+    <title>Linear Optimization</title>
+    <subtitle>A Geometric Inquiry Course</subtitle>
+    <document-id edition="">changeme</document-id>
+    <shelf>AP Computer Science</shelf>
+    <blurb> A simple string (no markup is allowed) to describe your book. </blurb>
+  </library-metadata>
+  <latex-macros>
+\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+   
+   \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
+    \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
+    \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+</latex-macros>
+  <webwork-version major="" minor=""/>
+  <chapter>
+    <id>ch-geometric</id>
+    <title>Geometric Linear Optimization</title>
+    <subchapter>
+      <id>sec-intro</id>
+      <title>A Brief Geometric Review of Linear Algebra</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-initial</id>
+      <title>Initial Examples</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__geometric-feasibleregion1">
+              <iframe id="geometric-feasibleregion1" width="600" height="638" src="geometric-feasibleregion1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__geometric-feasibleregion1">
+              <iframe id="geometric-feasibleregion1" width="600" height="638" src="geometric-feasibleregion1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-polyhedralconvex</id>
+      <title>Polyhedral Convextiy</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="sec-polyhedralconvex-12-1-2-1" width="600" height="638" src="sec-polyhedralconvex-12-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-ball-5-1-4" width="600" height="645" src="activity-ball-5-1-4-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-ball-5-1-4" width="600" height="645" src="activity-ball-5-1-4-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="sec-polyhedralconvex-27-1-1-1-3" width="600" height="638" src="sec-polyhedralconvex-27-1-1-1-3-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="sec-polyhedralconvex-27-1-1-1-3" width="600" height="638" src="sec-polyhedralconvex-27-1-1-1-3-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisesgeometric</id>
+      <title>Problems for Chapter 1</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-simplex</id>
+    <title>The Simplex Algorithm</title>
+    <subchapter>
+      <id>sec-pivot</id>
+      <title>Canonical Programs and the Simplex Pivot</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-widget-11-1-2-1" width="600" height="615" src="activity-widget-11-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-widget-11-1-2-1" width="600" height="615" src="activity-widget-11-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-pivotexample-7-1-1-1" width="600" height="615" src="activity-pivotexample-7-1-1-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-pivotexample-7-1-1-1" width="600" height="615" src="activity-pivotexample-7-1-1-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-simplexmax</id>
+      <title>The Simplex Algorithm for Canonical Maximization</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="subsec-basicfeasible-4-3-1-4-1" width="600" height="600" src="subsec-basicfeasible-4-3-1-4-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="subsec-basicfeasible-4-3-1-4-1" width="600" height="600" src="subsec-basicfeasible-4-3-1-4-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-cycling</id>
+      <title>Cycling</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-simplexsage</id>
+      <title>Using Sage to Solve Linear Optimization Problems</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisessimplex</id>
+      <title>Problems for Chapter 2</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-noncanon</id>
+    <title>Noncanonical Problems</title>
+    <subchapter>
+      <id>sec-unconstrained</id>
+      <title>Unconstrained Variables</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="unconstrained-geometry-6-1-2-1" width="600" height="600" src="unconstrained-geometry-6-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="unconstrained-geometry-6-1-2-1" width="600" height="600" src="unconstrained-geometry-6-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="unconstrained-example-12-1-2-1" width="600" height="600" src="unconstrained-example-12-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="unconstrained-example-12-1-2-1" width="600" height="600" src="unconstrained-example-12-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-superconstrained</id>
+      <title>Super Constrained Bounds</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-noncanonsage</id>
+      <title>Solving NonCanonical Problems with Sage</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisesnoncanon</id>
+      <title>Problems for Chapter 3</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-duality</id>
+    <title>Duality</title>
+    <subchapter>
+      <id>sec-sensitivity</id>
+      <title>Sensitivity Analysis</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="exploration-witch-3-1-2" width="600" height="600" src="exploration-witch-3-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="exploration-witch-3-1-2" width="600" height="600" src="exploration-witch-3-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-coefficients-4-1-3" width="600" height="800" src="activity-coefficients-4-1-3-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-coefficients-5-1-2-1" width="600" height="800" src="activity-coefficients-5-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-coefficients-4-1-3" width="600" height="800" src="activity-coefficients-4-1-3-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="activity-coefficients-5-1-2-1" width="600" height="800" src="activity-coefficients-5-1-2-1-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-dualitytheory</id>
+      <title>Duality Theory</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-dualpivot</id>
+      <title>Tucker Tableau’s, Pivots and Duality</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisesduality</id>
+      <title>Problems for Chapter 4</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-games</id>
+    <title>Zero-Sum Games</title>
+    <subchapter>
+      <id>sec-minmaxgames</id>
+      <title>Min-Max Games</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-vonneumann</id>
+      <title>VonNeumann Minimax Theorem</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-chance</id>
+      <title>Games of Chance</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisesgames</id>
+      <title>Problems for Chapter 5</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-transport</id>
+    <title>The Transportation &amp; Assignment Problems</title>
+    <subchapter>
+      <id>sec-vam</id>
+      <title>A Transportation problem and VAM</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-transportalgorithm</id>
+      <title>The Transportation Algorithm</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-assignment</id>
+      <title>The Assignment Problem and Hungarian Algorithm</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisestransports</id>
+      <title>Problems for Chapter 6</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-flow</id>
+    <title>Network Flows</title>
+    <subchapter>
+      <id>sec-networkflow</id>
+      <title>Directed Graphs and Network Flow</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-maxflowmincut</id>
+      <title>Max Flow - Min Cut</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-weighted</id>
+      <title>Weighted Graphs</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisesflow</id>
+      <title>Problems for Chapter 7</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-integer</id>
+    <title>Integer Programming</title>
+    <subchapter>
+      <id>sec-branchbound</id>
+      <title>Branch and Bound Method</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="exploration-meat-4-1-2" width="600" height="600" src="exploration-meat-4-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="exploration-meat-5-1-2" width="600" height="600" src="exploration-meat-5-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="exploration-meat-4-1-2" width="600" height="600" src="exploration-meat-4-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="exploration-meat-5-1-2" width="600" height="600" src="exploration-meat-5-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-cuttingplane</id>
+      <title>Cutting-Plane Method</title>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="sec-cuttingplane-6-12-1-2" width="600" height="750" src="sec-cuttingplane-6-12-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+      <question>
+        <label>DoenetML Interactive</label>
+        <htmlsrc>
+          <div class="ptx-runestone-container">
+            <div data-component="doenet" id="changeme__">
+              <iframe id="sec-cuttingplane-6-12-1-2" width="600" height="750" src="sec-cuttingplane-6-12-1-2-if.html"/>
+            </div>
+          </div>
+        </htmlsrc>
+      </question>
+    </subchapter>
+    <subchapter>
+      <id>sec-intsage</id>
+      <title>Solving Integer Optimization Problems with Sage</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-exercisesinteger</id>
+      <title>Problems for Chapter 8</title>
+    </subchapter>
+  </chapter>
+  <chapter>
+    <id>ch-extras</id>
+    <title>Extra Topics</title>
+    <subchapter>
+      <id>sec-covermatch</id>
+      <title>Coverings and Matchings of Graphs</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-sudoku</id>
+      <title>Sudoku</title>
+    </subchapter>
+    <subchapter>
+      <id>sec-scheduling</id>
+      <title>Scheduling</title>
+    </subchapter>
+  </chapter>
+</manifest>

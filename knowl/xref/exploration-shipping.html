@@ -14,26 +14,34 @@
 <article class="exploration project-like"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">7.3.11</span><span class="period">.</span>
 </h3>
-<div class="introduction"><div class="para">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs (denoted <span class="process-math">\((c_{ij}, w_{ij})\)</span>), and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
-</div></div>
-<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para">Let’s find a single path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> along which we could ship goods at the lowest possible cost.  What criteria should we use to identitfy this path?</div> <ol class="upper-alpha cols2" id="exploration-shipping-2-1-2">
-<li><div class="para">Maximize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
-<li><div class="para">Minimize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
-<li><div class="para">Maximize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.</div></li>
-<li><div class="para">Minimize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.</div></li>
-</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para">Find a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
-</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.10: Ford-Fulkerson Algorithm">Definition 7.2.10</a>.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para">Decrease capacities of any used edges by <span class="process-math">\(x_{ij}\text{.}\)</span>
-</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para">Repeat (a)-(c) until we have a flow of 10.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para">Argue that this is <em class="emphasis">not</em> the lowest cost flow.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para">Which of the following was an issue with how this problem was approached?</div> <ol class="upper-alpha" id="exploration-shipping-8-1-2">
-<li><div class="para">The original path chosen was too expensive.</div></li>
-<li><div class="para">The original path forced us into poor choices of future paths.</div></li>
-<li><div class="para">There was no mechanism to backtrack or adjust previous choices.</div></li>
-</ol></article></article><span class="incontext"><a class="internal" href="sec-weighted.html#exploration-shipping">in-context</a></span>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__exploration-shipping">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="exploration-shipping-1"><div class="para" id="exploration-shipping-1-1">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs (denoted <span class="process-math">\((c_{ij}, w_{ij})\)</span>), and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
+</div></div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="exploration-shipping-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-shipping-2-1-1">Let’s find a single path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> along which we could ship goods at the lowest possible cost.  What criteria should we use to identitfy this path?</div> <ol class="upper-alpha cols2" id="exploration-shipping-2-1-2">
+<li id="exploration-shipping-2-1-2-1"><div class="para" id="exploration-shipping-2-1-2-1-1">Maximize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
+<li id="exploration-shipping-2-1-2-2"><div class="para" id="exploration-shipping-2-1-2-2-1">Minimize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.</div></li>
+<li id="exploration-shipping-2-1-2-3"><div class="para" id="exploration-shipping-2-1-2-3-1">Maximize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.</div></li>
+<li id="exploration-shipping-2-1-2-4"><div class="para" id="exploration-shipping-2-1-2-4-1">Minimize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.</div></li>
+</ol></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="exploration-shipping-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-shipping-3-1-1">Find a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span>
+</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="exploration-shipping-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-shipping-4-1-1">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.10: Ford-Fulkerson Algorithm">Definition 7.2.10</a>.</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="exploration-shipping-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exploration-shipping-5-1-1">Decrease capacities of any used edges by <span class="process-math">\(x_{ij}\text{.}\)</span>
+</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="exploration-shipping-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="exploration-shipping-6-1-1">Repeat (a)-(c) until we have a flow of 10.</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="exploration-shipping-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="exploration-shipping-7-1-1">Argue that this is <em class="emphasis">not</em> the lowest cost flow.</div></article></div>
+<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="exploration-shipping-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="exploration-shipping-8-1-1">Which of the following was an issue with how this problem was approached?</div> <ol class="upper-alpha" id="exploration-shipping-8-1-2">
+<li id="exploration-shipping-8-1-2-1"><div class="para" id="exploration-shipping-8-1-2-1-1">The original path chosen was too expensive.</div></li>
+<li id="exploration-shipping-8-1-2-2"><div class="para" id="exploration-shipping-8-1-2-2-1">The original path forced us into poor choices of future paths.</div></li>
+<li id="exploration-shipping-8-1-2-3"><div class="para" id="exploration-shipping-8-1-2-3-1">There was no mechanism to backtrack or adjust previous choices.</div></li>
+</ol></article></div>
+</div></div></div></article><span class="incontext"><a class="internal" href="sec-weighted.html#exploration-shipping">in-context</a></span>
 </body>
 </html>

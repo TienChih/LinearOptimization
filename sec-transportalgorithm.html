@@ -11,6 +11,7 @@
 <title>The Transportation Algorithm</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://runestone.academy/ns/books/published/changeme/sec-transportalgorithm.html">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear Optimization">
 <meta property="book:author" content="Tien Chih">
@@ -98,7 +99,7 @@ sagecell.makeSagecell({
   ],
   "evalButtonText": "Evaluate (Sage)"
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="_static/lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -118,6 +119,30 @@ sagecell.makeSagecell({
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = true;
+eBookConfig.host = '';
+eBookConfig.app = eBookConfig.host + '/runestone';
+eBookConfig.course = '~._ course_name _.~';
+eBookConfig.basecourse = '~._ base_course _.~';
+eBookConfig.isLoggedIn = ~._ is_logged_in _.~;
+eBookConfig.email = '~._ user_email _.~';
+eBookConfig.isInstructor = ~._ is_instructor _.~;
+eBookConfig.logLevel = 10;
+eBookConfig.ajaxURL = eBookConfig.app + "/ajax/";
+eBookConfig.username = '~._ user_id _.~';
+eBookConfig.readings = ~._ readings|safe _.~;
+eBookConfig.activities = ~._ activity_info|safe _.~;
+eBookConfig.downloadsEnabled = ~._ downloads_enabled _.~;
+eBookConfig.allow_pairs = ~._ allow_pairs _.~;
+eBookConfig.enableScratchAC = false;
+eBookConfig.new_server_prefix = "/ns";
+eBookConfig.runestone_version = '7.4.3';
+</script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script><!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f64dcc3632d7a0c3.css">
 <style>
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
@@ -358,7 +383,7 @@ sagecell.makeSagecell({
 <h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar ptx-runestone-container"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -383,7 +408,20 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-vam.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-assignment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-vam.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-assignment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button class="runestone-profile dropdown button" title="Profile"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf0d3;</span><span class="name">Profile</span><div class="dropdown-content">
+{% if settings.academy_mode: %}
+<a href="/ns/course/index">Course Home</a><a href="/runestone/assignments/chooseAssignment">Assignments</a><a href="/runestone/assignments/practice">Practice</a><hr>
+<a id="inst_peer_link" href="/runestone/peer/instructor.html">Peer Instruction (Instructor)</a><a href="/runestone/peer/student.html">Peer Instruction (Student)</a><hr>
+<a href="/runestone/default/courses">Change Course</a><hr>
+<a id="ip_dropdown_link" href="/runestone/admin/index">Instructor's Page</a><hr>
+{% endif %}
+<a href="/runestone/dashboard/studentreport">Progress Page</a><hr>
+{% if is_logged_in %}
+<a href="/runestone/default/user/profile">Edit Profile</a><a href="/runestone/default/user/change_password">Change Password</a><a href="/runestone/default/user/logout">Log Out</a>
+{% else %}
+<a href="/runestone/default/user/register">Register</a><a href="/runestone/default/user/login">Login</a>
+{% endif %}
+</div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
@@ -401,12 +439,12 @@ true);
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Dedication</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Our goals</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
-<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-6.html" class="internal"><span class="title">Our goals</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-8.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -558,7 +596,8 @@ true);
 <section class="introduction" id="sec-transportalgorithm-2"><div class="para" id="sec-transportalgorithm-2-1">We show how we can take a feasible transportation solution (say from <a href="sec-vam.html" class="internal" title="Section 6.1: A Transportation problem and VAM">Section 6.1</a>), and from there produce an optimal solution.</div></section><article class="exploration project-like" id="sec-transportalgorithm-3"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-transportalgorithm-3-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-transportalgorithm-3-1">
 <div class="para" id="sec-transportalgorithm-3-1-1">Consider a transportation tableau:</div>
 <div class="para" id="sec-transportalgorithm-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -587,8 +626,8 @@ true);
 </tr>
 </table></div></div>
 <div class="para" id="sec-transportalgorithm-3-1-3">The box here denotes that the bottom right 5 isn’t currently being used  but likely should be.</div>
-</div>
-<article class="task exercise-like" id="sec-transportalgorithm-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-transportalgorithm-3-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-transportalgorithm-3-2-1-1">It is clear that we should shift some of warehouse 2’s shipments to market 2 to reduce costs. Why isn’t this a valid transportation tableau?</div> <div class="para" id="sec-transportalgorithm-3-2-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -614,7 +653,8 @@ true);
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="sec-transportalgorithm-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-transportalgorithm-3-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-transportalgorithm-3-3-1-1">How should we adjust these values to have a valid tableau?</div> <div class="para" id="sec-transportalgorithm-3-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -640,7 +680,8 @@ true);
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="sec-transportalgorithm-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-transportalgorithm-3-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-transportalgorithm-3-4-1-1">How about this one?</div> <div class="para" id="sec-transportalgorithm-3-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -698,10 +739,12 @@ true);
 <td class="c m b0 r0 l0 t0 lines">0</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article></article><article class="activity project-like" id="activity-transportalgorithm"><h3 class="heading">
+</table></div></div></article></div>
+</div></div></div></article><article class="activity project-like" id="activity-transportalgorithm"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="activity-transportalgorithm-1">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__activity-transportalgorithm">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-transportalgorithm-1">
 <div class="para" id="activity-transportalgorithm-1-1">Recall the transportation tableau obtained in <a href="sec-vam.html#activity-vamexample" class="xref" data-knowl="./knowl/xref/activity-vamexample.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 6.1.3">Activity 6.1.3</a>:</div>
 <div class="para" id="activity-transportalgorithm-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -747,14 +790,15 @@ true);
 </tr>
 </table></div></div>
 <div class="para" id="activity-transportalgorithm-1-3">Note that this tableau corresponds to a basic feasible solution for the original minimization problem.</div>
-</div>
-<article class="task exercise-like" id="activity-transportalgorithm-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-transportalgorithm-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="activity-transportalgorithm-2-1-1">If this solution is not optimal, what should the next step be?</div> <ol class="upper-alpha" id="activity-transportalgorithm-2-1-2">
 <li id="activity-transportalgorithm-2-1-2-1"><div class="para" id="activity-transportalgorithm-2-1-2-1-1">Pick a variable to exit the basis which increases the objective function and make the smallest change.</div></li>
 <li id="activity-transportalgorithm-2-1-2-2"><div class="para" id="activity-transportalgorithm-2-1-2-2-1">Pick a variable to exit the basis which decreases the objective function and make the smallest change.</div></li>
 <li id="activity-transportalgorithm-2-1-2-3"><div class="para" id="activity-transportalgorithm-2-1-2-3-1">Pick a variable to exit the basis which increases the objective function and make the biggest change.</div></li>
 <li id="activity-transportalgorithm-2-1-2-4"><div class="para" id="activity-transportalgorithm-2-1-2-4-1">Pick a variable to exit the basis which decreases the objective function and make the biggest change.</div></li>
-</ol></article><article class="task exercise-like" id="activity-transportalgorithm-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</ol></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-transportalgorithm-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="activity-transportalgorithm-3-1-1">Select  row values <span class="process-math">\(a_i\)</span> and column values <span class="process-math">\(b_j\)</span>  so that each <em class="emphasis">circled</em> value <span class="process-math">\(c_{ij}\)</span> is the sum of row and column values <span class="process-math">\(a_i+b_j\text{.}\)</span>
 </div> <div class="para" id="activity-transportalgorithm-3-1-2">(We can think of these as analogous to the shadow costs associated with the warehouse/market bounds)</div> <div class="para" id="activity-transportalgorithm-3-1-3"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -782,8 +826,10 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(8\)</span></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-transportalgorithm-4-1-1">Replace each entry of the tableau <span class="process-math">\(c_{ij}\)</span> with <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>  What does this measure?  What does it mean if each entry is non-negative?</div></article><article class="task exercise-like" id="activity-transportalgorithm-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-transportalgorithm-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-transportalgorithm-4-1-1">Replace each entry of the tableau <span class="process-math">\(c_{ij}\)</span> with <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>  What does this measure?  What does it mean if each entry is non-negative?</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-transportalgorithm-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-transportalgorithm-5-1-1">Pick a <span class="process-math">\(c_{ij}\lt 0\)</span>
 </div> <div class="para" id="activity-transportalgorithm-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -811,8 +857,10 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-transportalgorithm-6-1-1">Pick  circled entries <span class="process-math">\(c_{k \ell}\)</span> so that they with the boxed <span class="process-math">\(c_{ij}\)</span> form a <dfn class="terminology">cycle</dfn>, that is each of these entries shares a row with exactly one another of the entries, and a column with another of the entries.</div></article><article class="task exercise-like" id="activity-transportalgorithm-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-transportalgorithm-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-transportalgorithm-6-1-1">Pick  circled entries <span class="process-math">\(c_{k \ell}\)</span> so that they with the boxed <span class="process-math">\(c_{ij}\)</span> form a <dfn class="terminology">cycle</dfn>, that is each of these entries shares a row with exactly one another of the entries, and a column with another of the entries.</div></article></div>
+<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-transportalgorithm-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-transportalgorithm-7-1-1">Based on the discussion in (a), which entry should transfer their shipments to <span class="process-math">\(c_{23}\text{?}\)</span>
 </div> <ol class="upper-alpha" id="activity-transportalgorithm-7-1-2">
 <li id="activity-transportalgorithm-7-1-2-1"><div class="para" id="activity-transportalgorithm-7-1-2-1-1"><span class="process-math">\(c_{11}\text{.}\)</span></div></li>
@@ -820,7 +868,8 @@ true);
 <li id="activity-transportalgorithm-7-1-2-3"><div class="para" id="activity-transportalgorithm-7-1-2-3-1"><span class="process-math">\(c_{13}\text{.}\)</span></div></li>
 <li id="activity-transportalgorithm-7-1-2-4"><div class="para" id="activity-transportalgorithm-7-1-2-4-1"><span class="process-math">\(c_{22}\text{.}\)</span></div></li>
 <li id="activity-transportalgorithm-7-1-2-5"><div class="para" id="activity-transportalgorithm-7-1-2-5-1"><span class="process-math">\(c_{31}\text{.}\)</span></div></li>
-</ol> <div class="para" id="activity-transportalgorithm-7-1-3">How do the other entries in the cycle adjust?  (There may be more than one valid choice.)</div></article><article class="task exercise-like" id="activity-transportalgorithm-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+</ol> <div class="para" id="activity-transportalgorithm-7-1-3">How do the other entries in the cycle adjust?  (There may be more than one valid choice.)</div></article></div>
+<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="activity-transportalgorithm-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
 <div class="para" id="activity-transportalgorithm-8-1-1">Remove the basis entry which is no longer being used, and recompute the <span class="process-math">\(a_i, b_j\)</span> with the new basis.</div> <div class="para" id="activity-transportalgorithm-8-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -857,7 +906,8 @@ true);
 <td class="c m b0 r0 l0 t0 lines"></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="activity-transportalgorithm-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
 <div class="para" id="activity-transportalgorithm-9-1-1">Verify that none of the entries are non negative.  Why do we now terminate?</div> <div class="para" id="activity-transportalgorithm-9-1-2">We then replace the entries with the original entries</div> <div class="para" id="activity-transportalgorithm-9-1-3"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -884,7 +934,8 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2^0\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(8^0\)</span></td>
 </tr>
-</table></div></div></article><article class="task exercise-like" id="activity-transportalgorithm-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(i)"><article class="task exercise-like" id="activity-transportalgorithm-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
 <div class="para" id="activity-transportalgorithm-10-1-1">Use Sage to confirm the solution: <div class="para" id="activity-transportalgorithm-10-1-1-1">
 <div id="activity-transportalgorithm-10-1-1-1-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
@@ -899,7 +950,8 @@ P
 print(P.optimal_value())
 </script></div>
 </div>
-</div></article></article><article class="definition definition-like" id="def-transportationalg"><h3 class="heading">
+</div></article></div>
+</div></div></div></article><article class="definition definition-like" id="def-transportationalg"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-transportationalg-3-1">To summarize, the Transportation Algorithm is as follows:</div> <ol class="decimal" id="def-transportationalg-3-2">
@@ -924,23 +976,27 @@ print(P.optimal_value())
 </ol></article><article class="activity project-like" id="sec-transportalgorithm-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-transportalgorithm-6-1"><div class="para" id="sec-transportalgorithm-6-1-1">Consider the Transportation Algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.3">Definition 6.2.3</a>. Recall that the objective function for the transportation problem is <span class="process-math">\(f(\x)=\displaystyle \sum x_{ij}c_{ij}\text{,}\)</span> and that the entries of the tableau produced in Step 3 are <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>
-</div></div>
-<article class="task exercise-like" id="sec-transportalgorithm-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-transportalgorithm-6-2-1">Show that in step 5 the newly produced solution has a strictly lower objective value.</div></article><article class="task exercise-like" id="sec-transportalgorithm-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-transportalgorithm-6-1"><div class="para" id="sec-transportalgorithm-6-1-1">Consider the Transportation Algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.3">Definition 6.2.3</a>. Recall that the objective function for the transportation problem is <span class="process-math">\(f(\x)=\displaystyle \sum x_{ij}c_{ij}\text{,}\)</span> and that the entries of the tableau produced in Step 3 are <span class="process-math">\(c_{ij}-a_i-b_j\text{.}\)</span>
+</div></div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-transportalgorithm-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-transportalgorithm-6-2-1">Show that in step 5 the newly produced solution has a strictly lower objective value.</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-transportalgorithm-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-transportalgorithm-6-3-1-1">If instead of step 4, we selected an entry with a zero value, what would be true about the resulting new solution?</div> <ol class="upper-alpha" id="sec-transportalgorithm-6-3-1-2">
 <li id="sec-transportalgorithm-6-3-1-2-1"><div class="para" id="sec-transportalgorithm-6-3-1-2-1-1">The new solution has smaller objective value.</div></li>
 <li id="sec-transportalgorithm-6-3-1-2-2"><div class="para" id="sec-transportalgorithm-6-3-1-2-2-1">The new solution has greater objective value.</div></li>
 <li id="sec-transportalgorithm-6-3-1-2-3"><div class="para" id="sec-transportalgorithm-6-3-1-2-3-1">The new solution has the same objective value.</div></li>
 <li id="sec-transportalgorithm-6-3-1-2-4"><div class="para" id="sec-transportalgorithm-6-3-1-2-4-1">The relation of the value of the new solution to the original cannot be determined in general.</div></li>
-</ol></article></article><section class="subsection" id="subsec-unbalanced"><h3 class="heading hide-type">
+</ol></article></div>
+</div></div></div></article><section class="subsection" id="subsec-unbalanced"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="space"> </span><span class="title">Unbalanced Transportation Problems</span>
 </h3>
 <article class="activity project-like" id="activity-unbalanced"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="activity-unbalanced-3"><div class="para" id="activity-unbalanced-3-1">We now consider the case of <dfn class="terminology">unbalanced</dfn> transportation problems, where the demand and supply are unequal.</div></div>
-<article class="task exercise-like" id="activity-unbalanced-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__activity-unbalanced">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-unbalanced-3"><div class="para" id="activity-unbalanced-3-1">We now consider the case of <dfn class="terminology">unbalanced</dfn> transportation problems, where the demand and supply are unequal.</div></div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-unbalanced-4"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="activity-unbalanced-4-1-1">Suppose we had the following transportation problem:</div> <div class="para" id="activity-unbalanced-4-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -977,7 +1033,8 @@ print(P.optimal_value())
 <td class="c m b0 r2 l0 t0 lines">40 tons</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-unbalanced-4-1-3">Suppose we satisfy all the demand in a way that minimizes costs. What would be the remaining result?</div></article><article class="task exercise-like" id="activity-unbalanced-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+</table></div></div> <div class="para" id="activity-unbalanced-4-1-3">Suppose we satisfy all the demand in a way that minimizes costs. What would be the remaining result?</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-unbalanced-5"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="activity-unbalanced-5-1-1">Suppose we “ship” the excess supply to a phatom market:</div> <div class="para" id="activity-unbalanced-5-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -1019,7 +1076,8 @@ print(P.optimal_value())
 <td class="c m b0 r2 l0 t0 lines">?</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-unbalanced-5-1-3">How much is shipped to the “Market”?  How much does it cost to “ship” from each warehouse to “Market”?</div></article><article class="task exercise-like" id="activity-unbalanced-6"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+</table></div></div> <div class="para" id="activity-unbalanced-5-1-3">How much is shipped to the “Market”?  How much does it cost to “ship” from each warehouse to “Market”?</div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-unbalanced-6"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="activity-unbalanced-6-1-1">Suppose we had the following transportation problem:</div> <div class="para" id="activity-unbalanced-6-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -1056,7 +1114,8 @@ print(P.optimal_value())
 <td class="c m b0 r2 l0 t0 lines">40 tons</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-unbalanced-6-1-3">Suppose we exhaust all the supply in a way that minimizes costs. What would be the remaining result?</div></article><article class="task exercise-like" id="activity-unbalanced-7"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+</table></div></div> <div class="para" id="activity-unbalanced-6-1-3">Suppose we exhaust all the supply in a way that minimizes costs. What would be the remaining result?</div></article></div>
+<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-unbalanced-7"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="activity-unbalanced-7-1-1">Suppose we have a phantom “Warehouse” that “filled” the outstanding demand.</div> <div class="para" id="activity-unbalanced-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -1100,14 +1159,16 @@ print(P.optimal_value())
 <td class="c m b0 r2 l0 t0 lines">40 tons</td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div></div> <div class="para" id="activity-unbalanced-7-1-3">How much additional “supply” is needed?  How much would it cost to ship this “supply” from “Warehouse” to the markets?</div></article><article class="task exercise-like" id="activity-unbalanced-8"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="activity-unbalanced-8-1-1">Describe a general procedure for solving unbalanced transportation problems.</div></article></article></section></section></div>
+</table></div></div> <div class="para" id="activity-unbalanced-7-1-3">How much additional “supply” is needed?  How much would it cost to ship this “supply” from “Warehouse” to the markets?</div></article></div>
+<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-unbalanced-8"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="activity-unbalanced-8-1-1">Describe a general procedure for solving unbalanced transportation problems.</div></article></div>
+</div></div></div></article></section><div id="scprogresscontainer">You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page.<div id="subchapterprogress" aria-label="Page progress"></div>
+</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-vam.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-assignment.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
-</div>
-</body>
+</div>{% if show_ethical_ad %}<div style="width: 100%"><div data-ea-publisher="runestoneacademy" data-ea-type="image" style="display: flex; justify-content: center"></div></div>{% endif %}</body>
 </html>

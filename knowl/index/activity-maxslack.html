@@ -14,9 +14,10 @@
 <article class="activity project-like"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
 </h3>
-<div class="introduction">
-<div class="para">Consider the canonical maximization problem:</div>
-<div class="para logical"><div class="displaymath process-math">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__activity-maxslack">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-maxslack-1">
+<div class="para" id="activity-maxslack-1-1">Consider the canonical maximization problem:</div>
+<div class="para logical" id="activity-maxslack-1-2"><div class="displaymath process-math" id="activity-maxslack-1-2-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d\\
 \textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1\\
@@ -26,8 +27,8 @@ a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n\\
 x_1, x_2, \ldots, x_m\amp \geq  0.
 \end{align*}
 </div></div>
-<div class="para"> Note that we may rewrite this as a system of equalities by introducing the <dfn class="terminology">slack variables</dfn> <span class="process-math">\(t_i\text{.}\)</span> We will refer to the <span class="process-math">\(x_j\)</span> as <dfn class="terminology">decision variables</dfn>.</div>
-<div class="para logical"><div class="displaymath process-math">
+<div class="para" id="activity-maxslack-1-3"> Note that we may rewrite this as a system of equalities by introducing the <dfn class="terminology">slack variables</dfn> <span class="process-math">\(t_i\text{.}\)</span> We will refer to the <span class="process-math">\(x_j\)</span> as <dfn class="terminology">decision variables</dfn>.</div>
+<div class="para logical" id="activity-maxslack-1-4"><div class="displaymath process-math" id="activity-maxslack-1-4-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d\\
 \textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1\\
@@ -37,20 +38,22 @@ a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m +t_n \amp =  b_n\\
 x_1, x_2, \ldots, x_m\amp \geq  0.
 \end{align*}
 </div></div>
-</div>
-<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para">What must be true about the slack variables <span class="process-math">\(t_i\text{?}\)</span>
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-maxslack-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-maxslack-2-1-1">What must be true about the slack variables <span class="process-math">\(t_i\text{?}\)</span>
 </div>  <ol class="upper-alpha" id="activity-maxslack-2-1-2">
-<li><div class="para"><span class="process-math">\(\displaystyle t_i\leq 0.\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle t_i\geq 0.\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle \sum_{i=1}^m t_i=0.\)</span></div></li>
-</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para">What is the largest value <span class="process-math">\(t_i\)</span> could obtain?</div> <ol class="decimal" id="activity-maxslack-3-1-2">
-<li><div class="para"><span class="process-math">\(\displaystyle b_i.\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle c_i.\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle x_i.\)</span></div></li>
-<li><div class="para">
+<li id="activity-maxslack-2-1-2-1"><div class="para" id="activity-maxslack-2-1-2-1-1"><span class="process-math">\(\displaystyle t_i\leq 0.\)</span></div></li>
+<li id="activity-maxslack-2-1-2-2"><div class="para" id="activity-maxslack-2-1-2-2-1"><span class="process-math">\(\displaystyle t_i\geq 0.\)</span></div></li>
+<li id="activity-maxslack-2-1-2-3"><div class="para" id="activity-maxslack-2-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i=1}^m t_i=0.\)</span></div></li>
+</ol></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-maxslack-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-maxslack-3-1-1">What is the largest value <span class="process-math">\(t_i\)</span> could obtain?</div> <ol class="decimal" id="activity-maxslack-3-1-2">
+<li id="activity-maxslack-3-1-2-1"><div class="para" id="activity-maxslack-3-1-2-1-1"><span class="process-math">\(\displaystyle b_i.\)</span></div></li>
+<li id="activity-maxslack-3-1-2-2"><div class="para" id="activity-maxslack-3-1-2-2-1"><span class="process-math">\(\displaystyle c_i.\)</span></div></li>
+<li id="activity-maxslack-3-1-2-3"><div class="para" id="activity-maxslack-3-1-2-3-1"><span class="process-math">\(\displaystyle x_i.\)</span></div></li>
+<li id="activity-maxslack-3-1-2-4"><div class="para" id="activity-maxslack-3-1-2-4-1">
 <span class="process-math">\(t_i\)</span> could be unbounded.</div></li>
-</ol></article></article><span class="incontext"><a class="internal" href="sec-pivot.html#activity-maxslack">in-context</a></span>
+</ol></article></div>
+</div></div></div></article><span class="incontext"><a class="internal" href="sec-pivot.html#activity-maxslack">in-context</a></span>
 </body>
 </html>

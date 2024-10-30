@@ -14,13 +14,14 @@
 <article class="activity project-like"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
 </h4>
-<div class="introduction">
-<div class="para">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div>
-<div class="para">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div>
-<div class="para">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div>
-<div class="para logical">
+<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__activity-insurance">
+<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-insurance-1">
+<div class="para" id="activity-insurance-1-1">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div>
+<div class="para" id="activity-insurance-1-2">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div>
+<div class="para" id="activity-insurance-1-3">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div>
+<div class="para logical" id="activity-insurance-1-4">
 <div class="para">Now, the company wants to assign values <span class="process-math">\(y_A, y_B, y_C\)</span> to the three ingredients.  The values for each should be enough so that in a disaster, the potential revenue is recovered, ie:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="activity-insurance-1-4-2">
 \begin{align*}
 y_A +2y_B+2y_C \amp \geq 200 \\
 2y_A +2y_B+y_C \amp \geq 150 
@@ -29,10 +30,10 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 <div class="para">Of course, the values shouldn’t be negative, so <span class="process-math">\(y_A, y_B, y_C\geq 0\text{.}\)</span>
 </div>
 </div>
-<div class="para">But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize <span class="process-math">\(g(y_A, y_B, y_C)=20y_A+30y_B+25y_C\text{.}\)</span>
+<div class="para" id="activity-insurance-1-5">But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize <span class="process-math">\(g(y_A, y_B, y_C)=20y_A+30y_B+25y_C\text{.}\)</span>
 </div>
-<div class="para">We can convert this into a max problem to solve, but we can also record it in the following tableau:</div>
-<div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="activity-insurance-1-6">We can convert this into a max problem to solve, but we can also record it in the following tableau:</div>
+<div class="para" id="activity-insurance-1-7"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
@@ -70,9 +71,9 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 </tr>
 </table></div></div>
-</div>
-<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
+</div></div>
+<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-insurance-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="activity-insurance-2-1-1">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
@@ -110,9 +111,10 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span>
-</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
+</div></article></div>
+<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-insurance-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="activity-insurance-3-1-1">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span>
+</div> <div class="para" id="activity-insurance-3-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
@@ -149,8 +151,10 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 </tr>
-</table></div></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para">Compare this basic solution and tableau to the final solution in <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.6">Activity 2.1.6</a>. What do you notice?</div>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para"><iframe src="https://www.desmos.com/3d/z4fjuixofk" id="activity-insurance-4-2-1-1" width="600" height="600"></iframe></div></div></details></div></article></article><span class="incontext"><a class="internal" href="sec-pivot.html#activity-insurance">in-context</a></span>
+</table></div></div></article></div>
+<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-insurance-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="activity-insurance-4-1-1">Compare this basic solution and tableau to the final solution in <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.6">Activity 2.1.6</a>. What do you notice?</div>
+<div class="solutions"><details id="activity-insurance-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="activity-insurance-4-2-1"><iframe src="https://www.desmos.com/3d/z4fjuixofk" id="activity-insurance-4-2-1-1" width="600" height="600"></iframe></div></div></details></div></article></div>
+</div></div></div></article><span class="incontext"><a class="internal" href="sec-pivot.html#activity-insurance">in-context</a></span>
 </body>
 </html>
