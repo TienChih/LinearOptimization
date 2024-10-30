@@ -27,24 +27,22 @@ sagecell.makeSagecell({
 <article class="activity project-like"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__activity-meat1">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-meat1-1">
-<div class="para" id="activity-meat1-1-1">The <em class="emphasis">branch and bound</em> method is a way to systematically add bounds to a linear optimization problem to ensure the solution is integral.</div>
-<div class="para" id="activity-meat1-1-2">We examine the integer optimization problem from <a href="sec-branchbound.html#exploration-meat" class="xref" data-knowl="./knowl/xref/exploration-meat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.1.1">Exploration 8.1.1</a>, and it’s relaxation.</div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-meat1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-meat1-2-1-1">Consider <span class="process-math">\(x_1\)</span> the number of sandwiches sold, the current optimal <span class="process-math">\(x_1\text{.}\)</span> Which two of the following potential additional constraints would force the value of <span class="process-math">\(x_1\)</span> to be an integer, while remaining as close to the optimal solution of the relaxation as possible.</div> <ol class="upper-alpha cols2" id="activity-meat1-2-1-2">
-<li id="activity-meat1-2-1-2-1"><div class="para" id="activity-meat1-2-1-2-1-1"><span class="process-math">\(x_1\leq 3\text{.}\)</span></div></li>
-<li id="activity-meat1-2-1-2-2"><div class="para" id="activity-meat1-2-1-2-2-1"><span class="process-math">\(x_1\geq 3\text{.}\)</span></div></li>
-<li id="activity-meat1-2-1-2-3"><div class="para" id="activity-meat1-2-1-2-3-1"><span class="process-math">\(x_1\leq 4\text{.}\)</span></div></li>
-<li id="activity-meat1-2-1-2-4"><div class="para" id="activity-meat1-2-1-2-4-1"><span class="process-math">\(x_1\geq 4\text{.}\)</span></div></li>
-<li id="activity-meat1-2-1-2-5"><div class="para" id="activity-meat1-2-1-2-5-1"><span class="process-math">\(x_1\leq 5\text{.}\)</span></div></li>
-<li id="activity-meat1-2-1-2-6"><div class="para" id="activity-meat1-2-1-2-6-1"><span class="process-math">\(x_1\geq 5\text{.}\)</span></div></li>
-<li id="activity-meat1-2-1-2-7"><div class="para" id="activity-meat1-2-1-2-7-1"><span class="process-math">\(x_1\leq 6\text{.}\)</span></div></li>
-<li id="activity-meat1-2-1-2-8"><div class="para" id="activity-meat1-2-1-2-8-1"><span class="process-math">\(x_1\geq 6\text{.}\)</span></div></li>
-</ol></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-meat1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-meat1-3-1-1">Let us consider the additional constraint <span class="process-math">\(x_1\leq 4\text{.}\)</span>  Solve the resulting general linear optimization problem:</div> <div class="para" id="activity-meat1-3-1-2">
+<div class="introduction">
+<div class="para">The <em class="emphasis">branch and bound</em> method is a way to systematically add bounds to a linear optimization problem to ensure the solution is integral.</div>
+<div class="para">We examine the integer optimization problem from <a href="sec-branchbound.html#exploration-meat" class="xref" data-knowl="./knowl/xref/exploration-meat.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 8.1.1">Exploration 8.1.1</a>, and it’s relaxation.</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Consider <span class="process-math">\(x_1\)</span> the number of sandwiches sold, the current optimal <span class="process-math">\(x_1\text{.}\)</span> Which two of the following potential additional constraints would force the value of <span class="process-math">\(x_1\)</span> to be an integer, while remaining as close to the optimal solution of the relaxation as possible.</div> <ol class="upper-alpha cols2" id="activity-meat1-2-1-2">
+<li><div class="para"><span class="process-math">\(x_1\leq 3\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_1\geq 3\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_1\leq 4\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_1\geq 4\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_1\leq 5\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_1\geq 5\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_1\leq 6\text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(x_1\geq 6\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Let us consider the additional constraint <span class="process-math">\(x_1\leq 4\text{.}\)</span>  Solve the resulting general linear optimization problem:</div> <div class="para">
 <div id="activity-meat1-3-1-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
@@ -58,24 +56,16 @@ P
 </script></div> <div id="activity-meat1-3-1-2-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
 </script></div>
-</div> <div class="para" id="activity-meat1-3-1-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree1.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-meat1-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-meat1-4-1-1">What additional constraints on <span class="process-math">\(x_2\)</span> would ensure that <span class="process-math">\(x_2\)</span> would be integral while changing <span class="process-math">\(x_2\)</span> as little as possible?</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-meat1-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-meat1-5-1-1">Consider the additional constraint <span class="process-math">\(x_2\leq 4\text{.}\)</span>  Solve this maximization problem.  Why do we no longer need to adjust <span class="process-math">\(x_1\text{?}\)</span>  Are we gaurunteed that this solution is optimal?</div> <div class="para" id="activity-meat1-5-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree2.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-meat1-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-meat1-6-1-1">We consider the constraint <span class="process-math">\(x_2\geq 5\)</span> instead.  Solve this maximization problem.  Even though the solution is not integral, why do we no longer need to pursue the case where <span class="process-math">\(x_1\leq 4, x_2\geq 5\text{?}\)</span>
-</div> <div class="para" id="activity-meat1-6-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree3.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article></div>
-<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-meat1-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-meat1-7-1-1">We return to the other possible initial constraint for <span class="process-math">\(x_1\text{,}\)</span> <span class="process-math">\(x_1\geq 5\text{.}\)</span>  Solve this maximization problem.  What are the possible constraints we could now add for <span class="process-math">\(x_2\text{?}\)</span>
-</div> <div class="para" id="activity-meat1-7-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree4.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article></div>
-<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="activity-meat1-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="activity-meat1-8-1-1">We consider now the constraint <span class="process-math">\(x_2\leq 3\text{.}\)</span>  Solve this maximazation problem.  How does this solution compare to the previous integral solution we found?</div></article></div>
-<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="activity-meat1-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-meat1-9-1-1">Instead we now consider the constraint <span class="process-math">\(x_2\geq 4\text{.}\)</span>  Solve this maximization problem.  Why do we no longer need to consider the case where <span class="process-math">\(x_2\geq 4\text{?}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(i)"><article class="task exercise-like" id="activity-meat1-10"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-meat1-10-1-1">How do we know we now have arrived at the optimal solution?</div> <div class="para" id="activity-meat1-10-1-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree5.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article></div>
-</div></div></div></article><span class="incontext"><a class="internal" href="sec-branchbound.html#activity-meat1">in-context</a></span>
+</div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree1.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">What additional constraints on <span class="process-math">\(x_2\)</span> would ensure that <span class="process-math">\(x_2\)</span> would be integral while changing <span class="process-math">\(x_2\)</span> as little as possible?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Consider the additional constraint <span class="process-math">\(x_2\leq 4\text{.}\)</span>  Solve this maximization problem.  Why do we no longer need to adjust <span class="process-math">\(x_1\text{?}\)</span>  Are we gaurunteed that this solution is optimal?</div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree2.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">We consider the constraint <span class="process-math">\(x_2\geq 5\)</span> instead.  Solve this maximization problem.  Even though the solution is not integral, why do we no longer need to pursue the case where <span class="process-math">\(x_1\leq 4, x_2\geq 5\text{?}\)</span>
+</div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree3.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">We return to the other possible initial constraint for <span class="process-math">\(x_1\text{,}\)</span> <span class="process-math">\(x_1\geq 5\text{.}\)</span>  Solve this maximization problem.  What are the possible constraints we could now add for <span class="process-math">\(x_2\text{?}\)</span>
+</div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree4.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">We consider now the constraint <span class="process-math">\(x_2\leq 3\text{.}\)</span>  Solve this maximazation problem.  How does this solution compare to the previous integral solution we found?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para">Instead we now consider the constraint <span class="process-math">\(x_2\geq 4\text{.}\)</span>  Solve this maximization problem.  Why do we no longer need to consider the case where <span class="process-math">\(x_2\geq 4\text{?}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para">How do we know we now have arrived at the optimal solution?</div> <div class="para"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/tree5.svg" role="img" class="contained" alt="A Tree Diagram describing additional constraints."></div></div></article></article><span class="incontext"><a class="internal" href="sec-branchbound.html#activity-meat1">in-context</a></span>
 </body>
 </html>

@@ -11,7 +11,6 @@
 <title>The Assignment Problem and Hungarian Algorithm</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://runestone.academy/ns/books/published/changeme/sec-assignment.html">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Linear Optimization">
 <meta property="book:author" content="Tien Chih">
@@ -87,7 +86,7 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="_static/lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -107,30 +106,6 @@ window.MathJax = {
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = true;
-eBookConfig.host = '';
-eBookConfig.app = eBookConfig.host + '/runestone';
-eBookConfig.course = '~._ course_name _.~';
-eBookConfig.basecourse = '~._ base_course _.~';
-eBookConfig.isLoggedIn = ~._ is_logged_in _.~;
-eBookConfig.email = '~._ user_email _.~';
-eBookConfig.isInstructor = ~._ is_instructor _.~;
-eBookConfig.logLevel = 10;
-eBookConfig.ajaxURL = eBookConfig.app + "/ajax/";
-eBookConfig.username = '~._ user_id _.~';
-eBookConfig.readings = ~._ readings|safe _.~;
-eBookConfig.activities = ~._ activity_info|safe _.~;
-eBookConfig.downloadsEnabled = ~._ downloads_enabled _.~;
-eBookConfig.allow_pairs = ~._ allow_pairs _.~;
-eBookConfig.enableScratchAC = false;
-eBookConfig.new_server_prefix = "/ns";
-eBookConfig.runestone_version = '7.4.3';
-</script>
-<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script><!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.00db6230172ad960.bundle.js"></script><script src="_static/prefix-347.8328b60515045466.bundle.js"></script><script src="_static/prefix-runestone.aa624e4071d017c3.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-347.f9add1ca35d5ad93.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f64dcc3632d7a0c3.css">
 <style>
 #thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
 #thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
@@ -371,7 +346,7 @@ eBookConfig.runestone_version = '7.4.3';
 <h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar ptx-runestone-container"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -396,20 +371,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercisestransports.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button class="runestone-profile dropdown button" title="Profile"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf0d3;</span><span class="name">Profile</span><div class="dropdown-content">
-{% if settings.academy_mode: %}
-<a href="/ns/course/index">Course Home</a><a href="/runestone/assignments/chooseAssignment">Assignments</a><a href="/runestone/assignments/practice">Practice</a><hr>
-<a id="inst_peer_link" href="/runestone/peer/instructor.html">Peer Instruction (Instructor)</a><a href="/runestone/peer/student.html">Peer Instruction (Student)</a><hr>
-<a href="/runestone/default/courses">Change Course</a><hr>
-<a id="ip_dropdown_link" href="/runestone/admin/index">Instructor's Page</a><hr>
-{% endif %}
-<a href="/runestone/dashboard/studentreport">Progress Page</a><hr>
-{% if is_logged_in %}
-<a href="/runestone/default/user/profile">Edit Profile</a><a href="/runestone/default/user/change_password">Change Password</a><a href="/runestone/default/user/logout">Log Out</a>
-{% else %}
-<a href="/runestone/default/user/register">Register</a><a href="/runestone/default/user/login">Login</a>
-{% endif %}
-</div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-transport.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-exercisestransports.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
@@ -584,8 +546,7 @@ true);
 <section class="introduction" id="sec-assignment-2"><div class="para" id="sec-assignment-2-1">We consider the assignment problem, where each source and sink have supply and demand 1, and an alternative algorithm to solve these sort of problems.</div></section><article class="exploration project-like" id="exploration-assignment"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__exploration-assignment">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="exploration-assignment-1">
+<div class="introduction" id="exploration-assignment-1">
 <div class="para" id="exploration-assignment-1-1">Supose we have 3 jobs and 3 contractors, and we wish to assign jobs to contractors at the minimum price. How can we distribute the jobs amongst the contractors? (Costs are in thousands of dollars)</div>
 <div class="para" id="exploration-assignment-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -624,14 +585,11 @@ true);
 <td class="l m b0 r0 l0 t0 lines">?</td>
 </tr>
 </table></div></div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="exploration-assignment-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-assignment-2-1-1">What are the “supply” and “demand” of each job and contractor?</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="exploration-assignment-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="exploration-assignment-3-1-1">Use VAM <a href="sec-vam.html#def-vam" class="xref" data-knowl="./knowl/xref/def-vam.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.4">Definition 6.1.4</a> and the Transportation Algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.3">Definition 6.2.3</a> to solve this problem.</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="exploration-assignment-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="exploration-assignment-4-1-1">Could there have been an easier way to approach this problem?</div></article></div>
-</div></div></div></article><article class="definition definition-like" id="def-assignmentproblem"><h3 class="heading">
+</div>
+<article class="task exercise-like" id="exploration-assignment-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exploration-assignment-2-1-1">What are the “supply” and “demand” of each job and contractor?</div></article><article class="task exercise-like" id="exploration-assignment-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exploration-assignment-3-1-1">Use VAM <a href="sec-vam.html#def-vam" class="xref" data-knowl="./knowl/xref/def-vam.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.1.4">Definition 6.1.4</a> and the Transportation Algorithm <a href="sec-transportalgorithm.html#def-transportationalg" class="xref" data-knowl="./knowl/xref/def-transportationalg.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2.3">Definition 6.2.3</a> to solve this problem.</div></article><article class="task exercise-like" id="exploration-assignment-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exploration-assignment-4-1-1">Could there have been an easier way to approach this problem?</div></article></article><article class="definition definition-like" id="def-assignmentproblem"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-assignmentproblem-2-1">An <dfn class="terminology">assignment problem</dfn> is a transportation problem where the supply and demands are all 1.</div></article><div class="para" id="sec-assignment-5">Note that in <a href="sec-assignment.html#exploration-assignment" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 6.3.1">Exploration 6.3.1</a>, while we were able to solve this as a transportation problem, the restriction to supplies and demands of 1 ought to yield a simpler way to find a solution.</div>
@@ -641,8 +599,7 @@ true);
 <div class="para" id="def-permutation-2-1">Let <span class="process-math">\(T\)</span> be a tableau for a balanced assignment problem. A <dfn class="terminology">permutation set of zeroes</dfn> is a subset of zero cells for <span class="process-math">\(T\)</span> so that each row and column contains exactly one zero cell.</div></article><article class="activity project-like" id="sec-assignment-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-assignment-7-1">
+<div class="introduction" id="sec-assignment-7-1">
 <div class="para" id="sec-assignment-7-1-1">We explore some features of the assignment tableau that can help shed light on what an appropriate algorithm would look like.</div>
 <div class="para" id="sec-assignment-7-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -674,26 +631,18 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-assignment-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-7-2-1-1">If we multiply each entry by <span class="process-math">\(2\text{,}\)</span> would that change our optimal solution? What about by <span class="process-math">\(-1\text{?}\)</span>  What values <span class="process-math">\(k\)</span> could I multiply the tableau by to preserve the optimal solution?</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-assignment-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div>
+<article class="task exercise-like" id="sec-assignment-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-7-2-1-1">If we multiply each entry by <span class="process-math">\(2\text{,}\)</span> would that change our optimal solution? What about by <span class="process-math">\(-1\text{?}\)</span>  What values <span class="process-math">\(k\)</span> could I multiply the tableau by to preserve the optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-assignment-7-3-1-1">If we add or subtract <span class="process-math">\(2\)</span> from each entry, does it change the optimal solution? What about <span class="process-math">\(n\text{?}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-assignment-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article><article class="task exercise-like" id="sec-assignment-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-assignment-7-4-1-1">Suppose we had an optimal solution to the assignment problem. Explain why adding <span class="process-math">\(k\)</span> to each entry in a row does not change the optimal solution.</div>
-<div class="solutions"><details id="sec-assignment-7-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-assignment-7-4-2-1">How would this compare to solving the original problem and adding <span class="process-math">\(k\)</span> to the cost?</div></div></details></div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-assignment-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-assignment-7-5-1-1">What would change if we did this to a different row?  A column?</div></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="sec-assignment-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-assignment-7-6-1-1">Suppose I subtracted the smallest value in each row from every entry of that row.  If there was a permutation set of zeroes, what would that entail?</div></article></div>
-<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="sec-assignment-7-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="sec-assignment-7-7-1-1">Suppose I subtracted the smallest value in each column from every entry of that column.  If there was a permutation set of zeroes, what would that entail?</div></article></div>
-<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="sec-assignment-7-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="sec-assignment-7-8-1-1">If we had a tableau with all rational values, how could I change this to a tableau of all integer values with the same optimal solution?</div></article></div>
-<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="sec-assignment-7-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="sec-assignment-7-9-1-1">If we had a tableau with all integer values, how could I change this to a tableau of all non-negative integer values with the same optimal solution?</div></article></div>
-</div></div></div></article><article class="definition definition-like" id="def-hungarian"><h3 class="heading">
+<div class="solutions"><details id="sec-assignment-7-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="sec-assignment-7-4-2-1">How would this compare to solving the original problem and adding <span class="process-math">\(k\)</span> to the cost?</div></div></details></div></article><article class="task exercise-like" id="sec-assignment-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-assignment-7-5-1-1">What would change if we did this to a different row?  A column?</div></article><article class="task exercise-like" id="sec-assignment-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-assignment-7-6-1-1">Suppose I subtracted the smallest value in each row from every entry of that row.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-7-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-assignment-7-7-1-1">Suppose I subtracted the smallest value in each column from every entry of that column.  If there was a permutation set of zeroes, what would that entail?</div></article><article class="task exercise-like" id="sec-assignment-7-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="sec-assignment-7-8-1-1">If we had a tableau with all rational values, how could I change this to a tableau of all integer values with the same optimal solution?</div></article><article class="task exercise-like" id="sec-assignment-7-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="sec-assignment-7-9-1-1">If we had a tableau with all integer values, how could I change this to a tableau of all non-negative integer values with the same optimal solution?</div></article></article><article class="definition definition-like" id="def-hungarian"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-hungarian-3-1">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an <span class="process-math">\(n\times n\)</span> assignment tableau <span class="process-math">\(T\text{.}\)</span>
@@ -718,28 +667,21 @@ true);
 </ol></article><article class="activity project-like" id="sec-assignment-9"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.6</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__">
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-assignment-9-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<article class="task exercise-like" id="sec-assignment-9-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-assignment-9-1-1-1">In step 6 of <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a>, suppose we draw <span class="process-math">\(k\)</span> lines.  Could <span class="process-math">\(k\)</span> be greater than <span class="process-math">\(n\text{?}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-assignment-9-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+</div></article><article class="task exercise-like" id="sec-assignment-9-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-assignment-9-2-1-1">Suppose that the zeroes of the tableau in a given step do <em class="emphasis">not</em> form a permutation set of zeroes.  Show that <span class="process-math">\(k&lt;n\text{.}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="sec-assignment-9-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+</div></article><article class="task exercise-like" id="sec-assignment-9-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="sec-assignment-9-3-1-1">What would it mean if <span class="process-math">\(k=n\text{?}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="sec-assignment-9-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-assignment-9-4-1-1">Show that step 7 is equivalent to subtracting <span class="process-math">\(M\)</span> from each uncovered row, and adding <span class="process-math">\(M\)</span> to each covered column.  (Or subtracting <span class="process-math">\(M\)</span> from each uncovered column, and adding <span class="process-math">\(M\)</span> to each covered row.)</div></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="sec-assignment-9-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-assignment-9-5-1-1">Why does step 7 not change the optimal assignment?</div></article></div>
-</div></div></div></article><article class="activity project-like" id="sec-assignment-10"><h3 class="heading">
+</div></article><article class="task exercise-like" id="sec-assignment-9-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-assignment-9-4-1-1">Show that step 7 is equivalent to subtracting <span class="process-math">\(M\)</span> from each uncovered row, and adding <span class="process-math">\(M\)</span> to each covered column.  (Or subtracting <span class="process-math">\(M\)</span> from each uncovered column, and adding <span class="process-math">\(M\)</span> to each covered row.)</div></article><article class="task exercise-like" id="sec-assignment-9-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-assignment-9-5-1-1">Why does step 7 not change the optimal assignment?</div></article></article><article class="activity project-like" id="sec-assignment-10"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.7</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-assignment-10-1-1">Use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a> to solve the problem from <a href="sec-assignment.html#exploration-assignment" class="xref" data-knowl="./knowl/xref/exploration-assignment.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 6.3.1">Exploration 6.3.1</a>.</div></article><article class="activity project-like" id="sec-assignment-11"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3.8</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="sec-assignment-11-1">
+<div class="introduction" id="sec-assignment-11-1">
 <div class="para" id="sec-assignment-11-1-1">Suppose 4 students are picking 4 research topics.  The four topics are to be distributed one each amongst the four students. They rated the topics on a scale of 1-10.</div>
 <div class="para" id="sec-assignment-11-1-2"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -779,18 +721,16 @@ true);
 </tr>
 </table></div></div>
 <div class="para" id="sec-assignment-11-1-3">We want to maximize the total “enjoyment”.</div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="sec-assignment-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-assignment-11-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="sec-assignment-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-assignment-11-3-1-1">After converting, use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a> to solve the problem.</div></article></div>
-</div></div></div></article><div id="scprogresscontainer">You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page.<div id="subchapterprogress" aria-label="Page progress"></div>
-</div></section></div>
+</div>
+<article class="task exercise-like" id="sec-assignment-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-assignment-11-2-1-1">This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?</div></article><article class="task exercise-like" id="sec-assignment-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-assignment-11-3-1-1">After converting, use the Hungarian Algorithm <a href="sec-assignment.html#def-hungarian" class="xref" data-knowl="./knowl/xref/def-hungarian.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.3.5">Definition 6.3.5</a> to solve the problem.</div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-transportalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisestransports.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
-</div>{% if show_ethical_ad %}<div style="width: 100%"><div data-ea-publisher="runestoneacademy" data-ea-type="image" style="display: flex; justify-content: center"></div></div>{% endif %}</body>
+</div>
+</body>
 </html>

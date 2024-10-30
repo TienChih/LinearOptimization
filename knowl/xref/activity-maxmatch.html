@@ -27,26 +27,20 @@ sagecell.makeSagecell({
 <article class="activity project-like"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.2</span><span class="period">.</span>
 </h3>
-<div class="ptx-runestone-container"><div class="runestone tabbed_section"><div data-component="tabbedStuff" id="changeme__activity-maxmatch">
-<div data-component="tab" data-tabname="Introduction"><div class="introduction" id="activity-maxmatch-1">
-<div class="para" id="activity-maxmatch-1-1">Let <span class="process-math">\(G\)</span> be a graph with vertices <span class="process-math">\(v_1, \ldots, v_n\text{,}\)</span> and <span class="process-math">\(M\)</span> be any matching on <span class="process-math">\(G\text{.}\)</span> For each edge <span class="process-math">\(v_iv_j\)</span> let <span class="process-math">\(x_{ij}\in [0,1]\)</span> such that if <span class="process-math">\(v_iv_j\in M\text{,}\)</span> then <span class="process-math">\(x_{ij}=1\text{,}\)</span> otherwise <span class="process-math">\(x_{ij}=0\text{.}\)</span>
+<div class="introduction">
+<div class="para">Let <span class="process-math">\(G\)</span> be a graph with vertices <span class="process-math">\(v_1, \ldots, v_n\text{,}\)</span> and <span class="process-math">\(M\)</span> be any matching on <span class="process-math">\(G\text{.}\)</span> For each edge <span class="process-math">\(v_iv_j\)</span> let <span class="process-math">\(x_{ij}\in [0,1]\)</span> such that if <span class="process-math">\(v_iv_j\in M\text{,}\)</span> then <span class="process-math">\(x_{ij}=1\text{,}\)</span> otherwise <span class="process-math">\(x_{ij}=0\text{.}\)</span>
 </div>
-<div class="para" id="activity-maxmatch-1-2">We now construct a canonical maximization problem which can help compute a maximum matching.</div>
-</div></div>
-<div data-component="tab" data-tabname="(a)"><article class="task exercise-like" id="activity-maxmatch-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-maxmatch-2-1-1">For each vertex <span class="process-math">\(v_i\text{,}\)</span> write an inequality to ensure that <span class="process-math">\(M\)</span> is a matching.</div></article></div>
-<div data-component="tab" data-tabname="(b)"><article class="task exercise-like" id="activity-maxmatch-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-maxmatch-3-1-1">Given the above constraints, do we need another constraint to ensure that <span class="process-math">\(x_{ij}\leq 1\text{?}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(c)"><article class="task exercise-like" id="activity-maxmatch-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-maxmatch-4-1-1">Find a linear objective function to compute <span class="process-math">\(\Xi(G)\text{.}\)</span>
-</div></article></div>
-<div data-component="tab" data-tabname="(d)"><article class="task exercise-like" id="activity-maxmatch-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-maxmatch-5-1-1">State the maximization linear optimization problem for computing the maximum matching of a graph <span class="process-math">\(G\text{.}\)</span> We well refer to this problem as the <dfn class="terminology">matching primal problem</dfn>.</div></article></div>
-<div data-component="tab" data-tabname="(e)"><article class="task exercise-like" id="activity-maxmatch-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-maxmatch-6-1-1">Consider <span class="process-math">\(G\)</span> from <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>.  Label each vertex and write out a Tucker tableau for the linear optimization problem for computing the maximum matching.</div></article></div>
-<div data-component="tab" data-tabname="(f)"><article class="task exercise-like" id="activity-maxmatch-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-maxmatch-7-1-1">Solve the above optimization problem:</div> <div id="activity-maxmatch-7-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para">We now construct a canonical maximization problem which can help compute a maximum matching.</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">For each vertex <span class="process-math">\(v_i\text{,}\)</span> write an inequality to ensure that <span class="process-math">\(M\)</span> is a matching.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Given the above constraints, do we need another constraint to ensure that <span class="process-math">\(x_{ij}\leq 1\text{?}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Find a linear objective function to compute <span class="process-math">\(\Xi(G)\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">State the maximization linear optimization problem for computing the maximum matching of a graph <span class="process-math">\(G\text{.}\)</span> We well refer to this problem as the <dfn class="terminology">matching primal problem</dfn>.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">Consider <span class="process-math">\(G\)</span> from <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>.  Label each vertex and write out a Tucker tableau for the linear optimization problem for computing the maximum matching.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Solve the above optimization problem:</div> <div id="activity-maxmatch-7-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 AH = (FIX_ME)
 bH = (FIX_ME)
 cH = (FIX_ME)
@@ -56,11 +50,9 @@ PH = InteractiveLPProblem(AH, bH, cH,
 PH
 </script></div> <div id="activity-maxmatch-7-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(PH.optimal_solution())
 print(PH.optimal_value())
-</script></div> <div class="para" id="activity-maxmatch-7-1-4">What do you notice?</div></article></div>
-<div data-component="tab" data-tabname="(g)"><article class="task exercise-like" id="activity-maxmatch-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="activity-maxmatch-8-1-1">Consider <span class="process-math">\(H\)</span> from <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>.  Label each vertex and write out a Tucker Tableau for the linear optimization problem for computing the maximum matching.</div></article></div>
-<div data-component="tab" data-tabname="(h)"><article class="task exercise-like" id="activity-maxmatch-9"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="activity-maxmatch-9-1-1">Solve the above optimization problem:</div> <div id="activity-maxmatch-9-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+</script></div> <div class="para">What do you notice?</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">Consider <span class="process-math">\(H\)</span> from <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>.  Label each vertex and write out a Tucker Tableau for the linear optimization problem for computing the maximum matching.</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para">Solve the above optimization problem:</div> <div id="activity-maxmatch-9-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIX_ME)
 b = (FIX_ME)
 c = (FIX_ME)
@@ -70,7 +62,6 @@ P = InteractiveLPProblem(A, b, c,
 P
 </script></div> <div id="activity-maxmatch-9-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
-</script></div> <div class="para" id="activity-maxmatch-9-1-4">What do you notice?</div></article></div>
-</div></div></div></article><span class="incontext"><a class="internal" href="sec-covermatch.html#activity-maxmatch">in-context</a></span>
+</script></div> <div class="para">What do you notice?</div></article></article><span class="incontext"><a class="internal" href="sec-covermatch.html#activity-maxmatch">in-context</a></span>
 </body>
 </html>
