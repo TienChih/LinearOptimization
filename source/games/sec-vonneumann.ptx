@@ -186,7 +186,7 @@
       </p>
       <p>
         Suppose we have a payoff matrix <m>A</m> where every entry is positive.  In other words, after each round 
-        Rowan is gaurunteed to win money and Colleen is gaurunteed to lose money.  Rowan's strategy here is to take Colleen for 
+        Rowan is guaranteed to win money and Colleen is guaranteed to lose money.  Rowan's strategy here is to take Colleen for 
         as much money as he can and Colleen's strategy is to minimize her losses. 
       </p>
       <p>
@@ -198,7 +198,7 @@
     <task>
       <statement>
         <p>
-          Write out the primal maximization problem for the LP formulation of this game:
+          Write out the primal maximization problem for the Linear Optimization formulation of this game:
 
         </p>
         <p>
@@ -429,7 +429,7 @@
         <p>
           Consider the inequality constraints in our formulation, divide each of these by <m>\ec{v}</m>.  Let
           <m>\tilde{q}_j:=\frac{q_j}{\ec{v}}</m>.  Can we rewrite our inequalities as linear combinations of <m>\tilde{q}_{j}</m>
-          is less than or equal to some cosntant?
+          is less than or equal to some constant?
         </p>
       </statement>
     </task>
