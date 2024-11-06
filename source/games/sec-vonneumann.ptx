@@ -130,9 +130,9 @@
         We prove an interesting way to think of the optimal strategies.
       </p>
       <p>
-        Let <m>\q'</m> denote a fixed column strategy, and let 
-        <m>v=\displaystyle \max_{1\leq i\leq n}A_{(i)}\q'</m>, and let
-        <m>u=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q'.</m>
+        Let <m>\q'</m> denote a fixed column strategy, let
+        <m>u_1=\displaystyle\max_{\p \in F_{\p} } \p^\top A\q'</m>, and let 
+          <m>u_2=\displaystyle \max_{1\leq i\leq n}A_{(i)}\q'</m>
       </p>
     </introduction>
     <task>
@@ -140,14 +140,14 @@
         
         <p>
           Recall that <m>\p^\top A\q' = \displaystyle \sum_{i=1}^n \p_i A_{(i)}\q'</m>.
-          Prove that <m> \p^\top A\q' \leq v</m>.
+          Prove that <m> \p^\top A\q' \leq u_2</m>.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Why must <m>u\leq v</m>?
+          Why must <m>u_1\leq u_2</m>?
         </p>
       </statement>
     </task>
@@ -155,14 +155,14 @@
       <statement>
         <p>
           Show that there is a (very simple) row strategy <m>\p''</m> where
-          <m>(\p'')^\top A \q'=v</m>.
+          <m>(\p'')^\top A \q'=u_2</m>.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Why must <m>v\leq u</m>?
+          Why must <m>u_2\leq u_1</m>?
         </p>
       </statement>
     </task>
