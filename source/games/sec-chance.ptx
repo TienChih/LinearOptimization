@@ -504,7 +504,7 @@
   <activity>
     <introduction>
       <p>
-        We introduce a second game here.  Each player places $<m>p</m> into the pot.
+        We introduce a second game here.  Each player places $<m>b</m> into the pot.
         Then the each secretly flip a coin.  We consider heads <q>greater</q> than tails.
       </p>
       <p>
@@ -544,7 +544,7 @@
               CF
             </cell>
             <cell bottom="medium">
-              FF
+              CC
             </cell>
             <cell>
             </cell>
@@ -592,7 +592,7 @@
               RP
             </cell>
             <cell>
-              <m>b/4</m>
+              <m>b</m>
             </cell>
             <cell>
               ?
@@ -710,7 +710,7 @@
     <task>
       <statement>
         <p>
-          If <m>b>0</m>, use linear optimization methods to find the optimal mixed strategies for both players.
+          If <m>b>r</m>, use linear optimization methods to find the optimal mixed strategies for both players.
         </p>
       </statement>
     </task>
