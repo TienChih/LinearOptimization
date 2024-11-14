@@ -502,7 +502,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>b_2</m>
+                <m>a_2</m>
               </cell>
               <cell>
                 <m>5</m>
@@ -517,7 +517,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>b_3</m>
+                <m>a_3</m>
               </cell>
               <cell bottom="medium">
                 <m>\ec{1}^{10}</m>
@@ -582,7 +582,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>b_2</m>
+                <m>a_2</m>
               </cell>
               <cell>
                 <m>?</m>
@@ -597,7 +597,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>b_3</m>
+                <m>a_3</m>
               </cell>
               <cell bottom="medium">
                 <m>\ec{?}^{10}</m>
@@ -630,7 +630,7 @@
           shipments to <m>c_{23}</m>?
 
         </p>
-        <ol  marker="A.">
+        <ol  marker="A." cols="2">
           <li>
             <p>
               <m>c_{11}</m>.
@@ -798,7 +798,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>b_2</m>
+                <m>a_2</m>
               </cell>
               <cell>
                 <m>5^0</m>
@@ -813,7 +813,7 @@
             </row>
             <row>
               <cell halign="right" right="medium">
-                <m>b_3</m>
+                <m>a_3</m>
               </cell>
               <cell bottom="medium">
                 <m>1^{10}</m>
