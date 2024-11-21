@@ -580,7 +580,7 @@ x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).
 \textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}\\
 \textbf{subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{for each edge }(v_s, v_j)\\
 -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j), i\neq s, j\neq d\\
-- \mu_i +y_{id} \amp \geq  0, \text{for each edge }(v_i, v_d)\\
+- \mu_i +y_{id} \amp \geq  1, \text{for each edge }(v_i, v_d)\\
 y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 \end{align*}
 </div>
@@ -596,14 +596,11 @@ y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)
 y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).
 \end{align*}
 </div></div></article><article class="task exercise-like" id="activity-dualflow-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-dualflow-4-1-1">Suppose <span class="process-math">\(\mu_j=-1\text{.}\)</span>  What could <span class="process-math">\(\mu_i, y_{ij}\)</span> be?  What value for <span class="process-math">\(\mu_i\)</span> would minimize the dual objective function?  What happens if <span class="process-math">\(\mu_i\)</span> is huge, how would that affect <span class="process-math">\(-\mu_k+\mu_i+y_{ki}\text{?}\)</span>
+<div class="para" id="activity-dualflow-4-1-1">Suppose <span class="process-math">\(\mu_j=-1\text{.}\)</span>  What could <span class="process-math">\(\mu_i, y_{ij}\)</span> be?  What value for <span class="process-math">\(\mu_i\)</span> would minimize the dual objective function?  What happens if <span class="process-math">\(\mu_i\)</span> is huge?  How would the resulting <span class="process-math">\(\mu_i\)</span>   that affect the inequality <span class="process-math">\(-\mu_k+\mu_i+y_{ki}\geq 0\text{?}\)</span>
 </div> <div class="para" id="activity-dualflow-4-1-2">Repeat for <span class="process-math">\(\mu_i=0, \mu_j=-1, 0\text{.}\)</span>
 </div></article><article class="task exercise-like" id="activity-dualflow-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="activity-dualflow-5-1-1">Suppose each <span class="process-math">\(\mu_k\in \{0, -1\}\text{,}\)</span> Note that <span class="process-math">\(V_1:=\{v_i:\mu_i=0\}, V_2:=\{v_j:\mu_j=-1\}\)</span> forms a cut of <span class="process-math">\(N\text{.}\)</span>
-</div> <div class="para" id="activity-dualflow-5-1-2">For <span class="process-math">\(v_i, v_j\in V_1\text{,}\)</span> what is <span class="process-math">\(y_{ij}\text{?}\)</span>
-</div> <div class="para" id="activity-dualflow-5-1-3">For <span class="process-math">\(v_i, v_j\in V_2\text{,}\)</span> what is <span class="process-math">\(y_{ij}\text{?}\)</span>
-</div> <div class="para" id="activity-dualflow-5-1-4">For <span class="process-math">\(v_i\in V_1, v_j\in V_2\text{,}\)</span> what is <span class="process-math">\(y_{ij}\text{?}\)</span>
-</div> <div class="para" id="activity-dualflow-5-1-5">Can any cut of <span class="process-math">\(N\)</span> be modeled this way?</div></article><article class="task exercise-like" id="activity-dualflow-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+</div> <div class="para" id="activity-dualflow-5-1-2">For <span class="process-math">\(v_i, v_j\in V_1\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?</div> <div class="para" id="activity-dualflow-5-1-3">For <span class="process-math">\(v_i, v_j\in V_2\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?</div> <div class="para" id="activity-dualflow-5-1-4">For <span class="process-math">\(v_i\in V_1, v_j\in V_2\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?</div> <div class="para" id="activity-dualflow-5-1-5">For <span class="process-math">\(v_i\in V_2, v_j\in V_1\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?</div> <div class="para" id="activity-dualflow-5-1-6">Can any cut of <span class="process-math">\(N\)</span> be modeled this way?</div></article><article class="task exercise-like" id="activity-dualflow-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
 <div class="para" id="activity-dualflow-6-1-1">What is the capacity of the above cut?  How does that relate to the dual problem?</div></article><article class="task exercise-like" id="activity-dualflow-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="activity-dualflow-7-1-1">Prove that the maximum flow through a network is bounded above by the minimum cut capacity.</div></article></article><article class="activity project-like" id="sec-maxflowmincut-7"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span>
