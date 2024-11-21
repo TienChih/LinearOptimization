@@ -899,7 +899,7 @@
         </li>
         <li>
           <p>
-            Shift shipments appropriately along the cycle so that <m>c_{k\ell}</m> has a positive shipping quantity, and
+            Shift shipments appropriately along the cycle so that <m>c_{k\ell}</m> has a non-negative shipping quantity, and
             one of the selected basis entries has a zero shipping quantity.
           </p>
           <p>

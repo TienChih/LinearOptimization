@@ -92,7 +92,7 @@
             <mrow>\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}</mrow>
             <mrow>\textbf{subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{for each edge }(v_s, v_j)</mrow>
             <mrow> -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j), i\neq s, j\neq d</mrow>
-            <mrow> - \mu_i +y_{id} \amp \geq  0, \text{for each edge }(v_i, v_d)</mrow>
+            <mrow> - \mu_i +y_{id} \amp \geq  1, \text{for each edge }(v_i, v_d)</mrow>
             <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
           </md>
         
@@ -120,7 +120,7 @@
       <statement>
         <p>
           Suppose <m>\mu_j=-1</m>.  What could <m>\mu_i, y_{ij}</m> be?  What value for <m>\mu_i</m> would minimize the dual objective function?  What happens if <m>\mu_i</m>
-          is huge, how would that affect <m>-\mu_k+\mu_i+y_{ki}</m>?
+          is huge?  How would the resulting <m>\mu_i</m>   that affect the inequality <m>-\mu_k+\mu_i+y_{ki}\geq 0</m>?
         </p>
         <p>
           Repeat for <m>\mu_i=0, \mu_j=-1, 0</m>.
@@ -136,13 +136,16 @@
           forms a cut of <m>N</m>.
         </p>
         <p>
-          For <m>v_i, v_j\in V_1</m>, what is <m>y_{ij}</m>?
+          For <m>v_i, v_j\in V_1</m>, what is the <m>y_{ij}</m> that minimizes the objective function?
         </p>
         <p>
-          For <m>v_i, v_j\in V_2</m>, what is <m>y_{ij}</m>?
+          For <m>v_i, v_j\in V_2</m>, what is the <m>y_{ij}</m> that minimizes the objective function?
         </p>
         <p>
-          For <m>v_i\in V_1, v_j\in V_2</m>, what is <m>y_{ij}</m>?
+          For <m>v_i\in V_1, v_j\in V_2</m>, what is the <m>y_{ij}</m> that minimizes the objective function?
+        </p>
+        <p>
+          For <m>v_i\in V_2, v_j\in V_1</m>, what is the <m>y_{ij}</m> that minimizes the objective function?
         </p>
         <p>
           Can any cut of <m>N</m> be modeled this way?
