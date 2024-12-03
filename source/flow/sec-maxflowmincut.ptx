@@ -330,17 +330,17 @@
       <statement>
         <p>
           Define <m>V_2' = V\backslash V_1'</m>.  Prove that for any
-          <m>v_i\in V_1', v_j\in V_2'</m>, we have that <m>x_{ij}'=c_{ij}, x_{ji}=0</m>.
+          <m>v_i\in V_1', v_j\in V_2'</m>, we have that <m>x_{ij}'=c_{ij}, x_{ji}''=0</m>.
         </p>
         <p>
-          (Not neccesary for this proof, but to tie things in, if <m>x_{ij'}=c_{ij}</m>, what does that say about <m>y_{ij}</m> from the dual problem in <xref ref="activity-dualflow"/>?  If <m>x_{ij}'\lt c_{ij}</m>,  what does that say about <m>y_{ij}</m>?  )
+          (Not neccesary for this proof, but to tie things in, if <m>x_{ij}''=c_{ij}</m>, what does that say about <m>y_{ij}</m> from the dual problem in <xref ref="activity-dualflow"/>?  If <m>x_{ij}'\lt c_{ij}</m>,  what does that say about <m>y_{ij}</m>?  )
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Use <xref ref="activity-cutflow"/> to show that the value of
+          Use the result from <xref ref="exercise-outflow"/> to show that the value of
           <m>f'</m> is equal to the cut capacity of <m>(V_1', V_2')</m>. (Proving the result!)
         </p>
       </statement>
@@ -589,11 +589,12 @@ source, and no edges out of the sink. Then the value of the maximalflow from <m>
                 <p>
                   Each forward edge of <m>P</m> satisfies <m>x_{ij} \lt c_{ij}</m>.
                 </p>
+                </li>
                 <li>
                   <p>
                     Eack backwards edge satisfies <m>x_{ij} >0</m>.
                   </p>
-                </li>
+                
               </li>
             </ul>
             (If no such <m>\alpha</m>-path <m>P</m> exists, GOTO 5)

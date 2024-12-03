@@ -429,12 +429,18 @@ O patients can receive only type O, and type AB patients can receive any of the 
       </task>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="exercise-outflow">
       <p>
         Let <m>N</m> be a capacitated network with a unique source and sink,
           with no edges going into the source or out of the sink.  Let <m>x_{ij}</m> 
-          be a flow on this network with value <m>f</m> then prove that <me>f=\sum_{i\in V_1, j\in V_2}x_{ij}-\sum_{i\in V_1, j\in V_2}x_{ji}.</me>
+          be a flow on this network with value <m>f</m>, and <m>(V_1, V_2)</m> be a cut of this network.   
+          Then prove that <me>f=\sum_{v_i\in V_1, v_j\in V_2}x_{ij}-\sum_{v_i\in V_1, v_j\in V_2}x_{ji}.</me>
       </p>
+      <hint>
+        <p>
+          What is the sum <m>\displaystyle \sum_{j\in V_2}\varphi(v_j)</m>?  How can rewriting this as a double sum help?
+        </p>
+      </hint>
     </exercise>
 
     <exercise>
@@ -470,6 +476,11 @@ O patients can receive only type O, and type AB patients can receive any of the 
             Prove that <m>x_{ij}=c_{ij}</m> for any <m>v_i\in V_1, v_j=V_2</m>.
           </p>
         </statement>
+        <hint>
+          <p>
+            Use <xref ref="exercise-outflow"/>.
+          </p>
+        </hint>
       </task>
       <task>
         <statement>
@@ -479,6 +490,11 @@ O patients can receive only type O, and type AB patients can receive any of the 
             with these flows respectively.  Prove that <m>(V_1, V_2) = (V'_1, V'_2)</m>.
           </p>
         </statement>
+        <hint>
+          <p>
+            Use previous part.
+          </p>
+        </hint>
       </task>
     </exercise>
 
