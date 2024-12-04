@@ -1969,8 +1969,7 @@
       <task>
         <statement>
           <p>
-            Write out a canonical minimization problem which models this problem (it's ok to use inequalities here that
-            may not make complete sense, so long as they aren't strict inequalities)
+            Write out a non-canonical minimization problem which models this problem (there should be some equality constraints).
           </p>
         </statement>
       </task>
