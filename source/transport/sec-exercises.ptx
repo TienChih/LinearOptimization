@@ -1961,9 +1961,10 @@
     <exercise>
       <introduction>
         <p>
-          Consider a general balanced transportation problem with <m>w_1, \ldots, w_n</m> warehouses,
-          <m>m_1, \ldots, m_m</m> markets, and cost to ship from warehouse <m>i</m> to market <m>j</m> is
-          <m>c_{ij}</m>.
+          Consider a general balanced transportation problem.  Let <m>w_1, \ldots, w_n</m> denote the 
+          supply of the <m>n</m>  warehouses, and
+          <m>m_1, \ldots, m_m</m> denote the demand of the <m>m</m> markets. 
+          Then let <m>c_{ij}</m> denote the cost to ship from warehouse <m>i</m> to market <m>j</m>.
         </p>
       </introduction>
       <task>
