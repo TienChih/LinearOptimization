@@ -12,12 +12,12 @@
 </head>
 <body class="ignore-math">
 <article class="definition definition-like"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Ford-Fulkerson Algorithm.</span>
+<span class="type">Definition</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">7.2.10</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Ford-Fulkerson Algorithm.</span>
 </h4>
-<div class="para">We describe an algorithm to find the maximum flow for <span class="process-math">\(N\text{,}\)</span>  a capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{:}\)</span>
+<div xmlns:pf="https://prefigure.org" class="para">We describe an algorithm to find the maximum flow for <span class="process-math">\(N\text{,}\)</span>  a capacitated network with a unique source <span class="process-math">\(v_s\)</span> and sink <span class="process-math">\(v_d\text{:}\)</span>
 </div> <ol class="decimal" id="def-maxflowalgorithm-4-2">
-<li><div class="para">INITIALIZE: We begin with any feasible flow <span class="process-math">\(f\)</span> (including the zero flow.)</div></li>
-<li><div class="para logical">
+<li><div xmlns:pf="https://prefigure.org" class="para">INITIALIZE: We begin with any feasible flow <span class="process-math">\(f\)</span> (including the zero flow.)</div></li>
+<li><div xmlns:pf="https://prefigure.org" class="para logical">
 <div class="para">Pick an <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> in <span class="process-math">\(N\)</span> from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> such that:</div>
 <ul class="disc" id="def-maxflowalgorithm-4-2-2-1-6">
 <li><div class="para">Each forward edge of <span class="process-math">\(P\)</span> satisfies <span class="process-math">\(x_{ij} \lt c_{ij}\text{.}\)</span>
@@ -27,7 +27,7 @@
 </ul>
 <div class="para">(If no such <span class="process-math">\(\alpha\)</span>-path <span class="process-math">\(P\)</span> exists, GOTO 5)</div>
 </div></li>
-<li><div class="para logical">
+<li><div xmlns:pf="https://prefigure.org" class="para logical">
 <div class="para">Compute</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -36,11 +36,11 @@ q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_
 </div>
 </div></li>
 <li>
-<div class="para">Define a new flow <span class="process-math">\(f'\)</span> as follows: for each forward edge of <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\((v_i, v_j)\text{,}\)</span> we add <span class="process-math">\(x_{ij}'=q+x_{ij}\text{.}\)</span>  For each backwards edge <span class="process-math">\((v_j, v_i)\)</span> we subtract <span class="process-math">\(x_{ji}' = x_{ji}-q\text{.}\)</span>
+<div xmlns:pf="https://prefigure.org" class="para">Define a new flow <span class="process-math">\(f'\)</span> as follows: for each forward edge of <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\((v_i, v_j)\text{,}\)</span> we add <span class="process-math">\(x_{ij}'=q+x_{ij}\text{.}\)</span>  For each backwards edge <span class="process-math">\((v_j, v_i)\)</span> we subtract <span class="process-math">\(x_{ji}' = x_{ji}-q\text{.}\)</span>
 </div>
-<div class="para">Let <span class="process-math">\(f:=f'\)</span> and GOTO 2</div>
+<div xmlns:pf="https://prefigure.org" class="para">Let <span class="process-math">\(f:=f'\)</span> and GOTO 2</div>
 </li>
-<li><div class="para">STOP.  The flow is now optimal.</div></li>
+<li><div xmlns:pf="https://prefigure.org" class="para">STOP.  The flow is now optimal.</div></li>
 </ol></article><span class="incontext"><a class="internal" href="sec-maxflowmincut.html#def-maxflowalgorithm">in-context</a></span>
 </body>
 </html>
