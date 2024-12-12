@@ -3136,15 +3136,33 @@
     </definition>
   
     <activity>
+    <task>
       <statement>
         <p>
           Show that this negative transpose of a canonical minimization tableau 
           encodes a problem that has the same feasible region and optimal solution as the original minimization problem.
         </p>
       </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Describe a procedure to utilize <xref ref="def-simplexmax"/> to solve a minimization problem.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Use this procedure to solve the problem presented in <xref ref="activity-examplediet"/>.
+        </p>
+      </statement>
+    </task>
+      
     </activity>
   
-    <p>This allows us to define a minimization algorithm.</p>
+    <!--<p>This allows us to define a minimization algorithm.</p>
   
     <definition xml:id="def-simplexmin">
       <idx>Simplex Algorithm: minimum</idx>
@@ -3247,7 +3265,7 @@
           </tabular>
         </p>
       </statement>
-    </activity>
+    </activity>-->
   
   
   

@@ -69,42 +69,42 @@
     <introduction>
       <statement>
         <p>
-          Let <m>P=(-3,1), Q=(2,-5)</m>.  Let <m>X=t\cdot P+(1-t)\cdot Q</m> for some <m>0\leq t\leq 1</m>.
+          Let <m>\p =(-3,1), \q =(2,-5)</m>.  Let <m>\x =t\cdot \p +(1-t)\cdot \q</m> for some <m>0\leq t\leq 1</m>.
         </p>
       </statement>
     </introduction>
     <task>
       <statement>
         <p>
-          What is <m>X</m> if <m>t=0.2</m>?
+          What is <m>\x </m> when <m>t=0.2</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          What is <m>X</m> if <m>t=0.5</m>?
+          What is <m>\x</m> when <m>t=0.5</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          What is <m>X</m> if <m>t=0</m>?
+          What is <m>\x</m> when <m>t=0</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          What is <m>X</m> if <m>t=1</m>?
+          What is <m>\x</m> when <m>t=1</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Describe the set of points <m>\{t\cdot P+(1-t)\cdot Q : t\in [0,1]\}</m>.
+          Describe the set of points <m>\{t\cdot \p+(1-t)\cdot \q : t\in [0,1]\}</m>.
         </p>
         <!--<hint>
           <p>
@@ -116,7 +116,7 @@
     <task>
       <statement>
         <p>
-          Let <m>P=(2,1,0), Q=(0, -3, 1)</m>.  Describe the set of points <m>\{t\cdot P+(1-t)\cdot Q : t\in [0,1]\}</m>.
+          Let <m>\p =(2,1,0), \q=(0, -3, 1)</m>.  Describe the set of points <m>\{t\cdot \p+(1-t)\cdot \q : t\in [0,1]\}</m>.
         </p>
         <!--<hint>
           <p>
@@ -133,8 +133,8 @@
     <statement>
       <p>
         <idx>line segment</idx>
-        Given <m>\mathbf{P}, \mathbf{Q}\in \mathbb{R}^n</m>, we call the set <m>\{t\cdot \mathbf{P}+(1-t)\cdot \mathbf{Q} : t\in [0,1]\}</m> the
-        <term>line segment</term> between <m>\mathbf{P}</m> and <m>\mathbf{Q}</m>.
+        Given <m>\p, \q\in \mathbb{R}^n</m>, we call the set <m>\{t\cdot \p+(1-t)\cdot \q : t\in [0,1]\}</m> the
+        <term>line segment</term> between <m>\p</m> and <m>\q</m>.
       </p>
     </statement>
   </definition>
@@ -143,8 +143,8 @@
     <statement>
       <p>
         <idx>convex</idx>
-        Let <m>S\subseteq \mathbf{R}^n</m>, we say that <m>S</m> is <term>convex</term> if given any <m>\mathbf{P}, \mathbf{Q}\in S</m>,
-        <m>S</m> also contains the line segment between <m>\mathbf{P}, \mathbf{Q}</m>.
+        Let <m>S\subseteq \mathbf{R}^n</m>, we say that <m>S</m> is <term>convex</term> if given any <m>\p, \q\in S</m>,
+        <m>S</m> also contains the line segment between <m>\p, \q</m>.
       </p>
     </statement>
   </definition>
@@ -398,7 +398,7 @@
     <task>
       <statement>
         <p>
-          On the other hand, suppose <m>\mathbf{x}^*\in S</m> <em>IS</em> a maximizer of <m>f</m>, what must be true about <m>\mathbf{x}^*</m>?
+          On the other hand, suppose <m>\mathbf{x}^*\in S</m> <em>is</em> a maximizer of <m>f</m>, what must be true about <m>\mathbf{x}^*</m>?
         </p>
       </statement>
     </task>
@@ -416,7 +416,7 @@
           </md>
         </p>
         <p>
-          How do the statements you've made above apply here?  Where IS <m>f</m> maximized?  Is it consistent with what you said before?
+          How do the statements you've made above apply here?  Where <em>is</em> <m>f</m> maximized?  Is it consistent with what you said before?
         </p>
         <interactive platform="doenetml" width="100%" aspect="4:4.3">
           <slate surface="doenetml">
@@ -478,7 +478,7 @@
   </activity>
 
   <p>
-    We present the following theorems without proof (at the moment).  At least
+    We present the following theorems without proof.  At least
     one of these should seem familiar from calculus.
   </p>
 

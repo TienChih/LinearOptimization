@@ -26,7 +26,7 @@
   <activity xml:id="activity-solspace">
     <introduction>
       <p>
-        Consider the augemnted matrix <me>M=\left[\begin{array}{cccc|c}
+        Consider the augmented matrix <me>M=\left[\begin{array}{cccc|c}
           a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} &amp; b_1 \\
           a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}&amp; b_2 \\
           \vdots &amp; \vdots &amp;  \ddots &amp; \vdots &amp; \vdots \\
@@ -123,12 +123,12 @@
         <p>
           Explain why for any constant <m>c</m> and <m>1\leq j\leq n-1</m>
 
-          <me>\det(A)=\det \left[\begin{array}{cccc}
+          <me>\det(A)=\det \left( \left[\begin{array}{cccc}
             a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n}  \\
             a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}  \\
             \vdots &amp; \vdots &amp;  \ddots &amp; \vdots  \\
             a_{n1}+ca_{j1} &amp; a_{n2}+ca_{j2} &amp;  \cdots &amp; a_{nn} +ca_{jn}  \\
-            \end{array}\right]</me>
+            \end{array}\right] \right)</me>
             geometrically, i.e. without cofactor expansion.
         </p>
       </statement>
@@ -138,12 +138,12 @@
         <p>
           Explain why for any constant <m>c</m> and <m>1\leq j\leq n</m>
  
-          <me>\det \left[\begin{array}{cccc}
+          <me>\det \left( \left[\begin{array}{cccc}
             a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n}  \\
             a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}  \\
             \vdots &amp; \vdots &amp;  \ddots &amp; \vdots  \\
             ca_{n1} &amp; ca_{n2} &amp;  \cdots &amp; ca_{nn}  \\
-            \end{array}\right] = c\det(A)</me>
+            \end{array}\right] \right) = c\det(A)</me>
             geometrically.
         </p>
       </statement>
@@ -154,19 +154,19 @@
           Explain why for any constant <m>c</m> and <m>1\leq j\leq n</m>
 
           <md>
-            <mrow> \amp \det \left[\begin{array}{ccccc}
+            <mrow> \amp \det \left( \left[\begin{array}{ccccc}
               a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1(n-1)} &amp; 0  \\
               a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2(n-1)} &amp; 0 \\
               \vdots &amp; \vdots &amp;  \ddots &amp; \vdots &amp; \vdots \\
               a_{(n-1)1} &amp; a_{(n-1)2} &amp;  \cdots &amp; a_{(n-1)(n-1)} &amp; 0  \\
               0 &amp; 0 &amp;  \cdots &amp; 0 &amp; 1  \\
-              \end{array}\right]</mrow>
-              <mrow> =\amp \det\left[\begin{array}{cccc}
+              \end{array}\right] \right)</mrow>
+              <mrow> =\amp \det \left() \left[\begin{array}{cccc}
                 a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1(n-1)}  \\
                 a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2(n-1)}  \\
                 \vdots &amp; \vdots &amp;  \ddots &amp; \vdots  \\
                 a_{(n-1)1} &amp; a_{(n-1)2} &amp;  \cdots &amp; a_{(n-1)(n-1)}  \\
-                \end{array}\right] </mrow>
+                \end{array}\right] \right) </mrow>
               
             </md>
             geometrically.

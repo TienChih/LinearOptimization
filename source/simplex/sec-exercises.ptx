@@ -1009,7 +1009,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Maximize: }  f(x,y) = \amp -x+4y</mrow>
+              <mrow>\textbf{Maximize: }  f(x,y) \amp = -x+4y</mrow>
               <mrow>\textbf{subject to: } x-y\amp \geq  2</mrow>
               <mrow> 2x-3y\amp \leq  10</mrow>
               <mrow> 5x+4y\amp \leq  64</mrow>
@@ -1022,7 +1022,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Minimize: }  g(x,y) = \amp 3x+2y</mrow>
+              <mrow>\textbf{Minimize: }  g(x,y) \amp = 3x+2y</mrow>
               <mrow>\textbf{subject to: } 5x+2y\amp \geq  32</mrow>
               <mrow> x+3y\amp \geq  22</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
@@ -1034,7 +1034,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Minimize: }  h(x,y,z) = \amp -x-y</mrow>
+              <mrow>\textbf{Minimize: }  h(x,y,z) \amp = -x-y</mrow>
               <mrow>\textbf{subject to: } 3x+6y+2z\amp \leq  6</mrow>
               <mrow> y+z\amp \geq  1</mrow>
               <mrow> x,y,z\amp \geq  0.</mrow>
@@ -2251,11 +2251,14 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
         and then proving that each pivot preserves the uniqueness of the basic solution.
       </p>
       <hint>
-        <p>
+        <statement>
+          <p>
           Note that each basic solution is the intersection of <m>m</m>
           hyperplanes.  What would it take for this to be empty or contain multiple points?
           Think in terms of linear (in)dependence and solving linear systems.
         </p>
+        </statement>
+        
       </hint>
     </exercise>
 

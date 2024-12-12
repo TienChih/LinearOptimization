@@ -111,7 +111,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Maximize: }  f(x,y) = \amp 3x-y</mrow>
+              <mrow>\textbf{Maximize: }  f(x,y) \amp =  3x-y</mrow>
               <mrow>\textbf{subject to: } 15-4x\amp \geq  y</mrow>
               <mrow> 2x+3y\amp \leq  y+12</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
@@ -123,7 +123,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Minimize: }  g(x,y) = \amp -4x-2y</mrow>
+              <mrow>\textbf{Minimize: }  g(x,y) \amp =  -4x-2y</mrow>
               <mrow>\textbf{subject to: } 4x-7y\amp \leq  -2</mrow>
               <mrow> 5x+3y\amp \leq  21</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
@@ -135,7 +135,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Maximize: }  h(x,y, z) = \amp x+3y-3z</mrow>
+              <mrow>\textbf{Maximize: }  h(x,y, z) \amp =  x+3y-3z</mrow>
               <mrow>\textbf{subject to: } 3-4x+z\amp \geq  5y</mrow>
               <mrow> 1\leq 2y+z \amp \leq  9</mrow>
               <mrow> 0\leq x \amp \leq  8</mrow>
@@ -148,7 +148,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Minimize: }  k(x,y,z) = \amp x-2y-z</mrow>
+              <mrow>\textbf{Minimize: }  k(x,y,z)  \amp  =x-2y-z</mrow>
               <mrow>\textbf{subject to: } 10x+5y+2z\amp \leq  1000</mrow>
               <mrow> 2y+4z \amp \leq  800</mrow>
               <mrow> x,y,z\amp \geq  0.</mrow>

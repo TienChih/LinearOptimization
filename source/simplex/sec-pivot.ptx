@@ -84,7 +84,7 @@
     <task>
       <statement>
         <p>
-          What is the largest value <m>t_i</m> could obtain?
+          Whixh of these must be an upper bound for <m>t_i</m>  ?
         </p>
         <ol style="A">
           <li>
@@ -328,7 +328,7 @@
         </tabular>
       </p>
       <p>
-        The variables at the top are called the <term>decision variables</term> or <term>independent variables</term>, the variables on the side are the <term>slack variables</term>, <term>basis variables</term> or <term>basic variables</term>.
+        The variables at the top are called the <term>decision variables</term> or <term>independent variables</term>, the variables on the side are the <term>slack variables</term> or <term>basic variables</term>.
       </p>
       <p>
         The <term>basic solution</term> recorded by a Tucker Tableau is the solution where each decision variable has
@@ -381,28 +381,28 @@
     <task>
       <statement>
         <p>
-          If <m>t_1=0</m>, what points in <m>\mathbb{R}^2</m> satisfy <m>3x+5y-8=-t_1</m>?
+          If <m>t_1=0</m>, what point(s) in <m>\mathbb{R}^2</m> satisfy <m>3x+5y-8=-t_1</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          If <m>t_2=0</m>, what points in <m>\mathbb{R}^2</m> satisfy <m>2x+y-3=-t_2</m>?
+          If <m>t_2=0</m>, what point(s) in <m>\mathbb{R}^2</m> satisfy <m>2x+y-3=-t_2</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          What points in <m>\mathbb{R}^2</m> satisfy both <m>t_1=0, t_2=0</m>?
+          what point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=0, t_2=0</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          What points in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=3</m>?
+          what point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=3</m>?
         </p>
       </statement>
       
@@ -411,7 +411,7 @@
     <task>
       <statement>
         <p>
-          What points in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=0</m>?  What about <m>t_1=8, t_2=0</m>?
+          what point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=0</m>?  What about <m>t_1=8, t_2=0</m>?
         </p>
       </statement>
     </task>
@@ -780,7 +780,7 @@
           Fixed
       -->
       <p>
-        Based on <xref ref="activity-widget"/>, what would be a reasonable sufficient condition for a feasible tableau to have a basic optimal solution?
+        Based on <xref ref="activity-widget"/>, what would be a reasonable sufficient condition for a feasible tableau to record a basic optimal solution?
       </p>
       <ol marker="A." cols="2">
         <li>
@@ -1283,10 +1283,10 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -1307,7 +1307,7 @@
                 <m> ?</m>
               </cell>
               <cell halign="left">
-                <m> </m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -1323,7 +1323,7 @@
                 <m> ? </m>
               </cell>
               <cell halign="left">
-                <m> </m>
+                <m>=-? </m>
               </cell>
             </row>
             <row>
@@ -1339,7 +1339,7 @@
                 <m> ? </m>
               </cell>
               <cell halign="left">
-                <m> </m>
+                <m>=-? </m>
               </cell>
             </row>
             <row>
@@ -1355,7 +1355,7 @@
                 <m> ?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -1389,10 +1389,10 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m></m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -1413,7 +1413,7 @@
                 <m> ?</m>
               </cell>
               <cell halign="left">
-                <m> </m>
+                <m>=-? </m>
               </cell>
             </row>
             <row>
@@ -1434,7 +1434,7 @@
                 <m> ? </m>
               </cell>
               <cell halign="left">
-                <m> </m>
+                <m> =-?</m>
               </cell>
             </row>
             <row>
@@ -1450,7 +1450,7 @@
                 <m> ? </m>
               </cell>
               <cell halign="left">
-                <m> </m>
+                <m>=-? </m>
               </cell>
             </row>
             <row>
@@ -1466,7 +1466,7 @@
                 <m> ?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -1648,6 +1648,39 @@
         </p>
   
       </introduction>
+
+      <task>
+        <statement>
+          <p>
+            For each column <m>i</m>, consider the equality recorded by this tableau: <m>a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C + (-1)c_i=s_i</m>.
+            What must be true about <m>s_i</m> in ordder for <m>a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C \geq c_i</m>?
+            <ol  marker="A." cols="2">
+              <li>
+                <p>
+                  <m>s_i\geq 0 </m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>s_i\leq 0 </m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>s_i= 0 </m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Nothing may be determined about <m>s_i</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </task>
+
+
       <task>
         <statement>
          
@@ -1835,12 +1868,11 @@
           <p>
             Compare this basic solution and tableau to the final solution in <xref ref="activity-widget"/>. What do you notice?
           </p>
-        </statement>
-        <hint>
-          <p>
+           <p>
             <interactive iframe="https://www.desmos.com/3d/z4fjuixofk" width="100%" aspect="1:1"/>
           </p>
-        </hint>
+        </statement>
+         
       </task>
   
   

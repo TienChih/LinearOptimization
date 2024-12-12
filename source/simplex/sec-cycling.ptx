@@ -122,16 +122,16 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -158,7 +158,7 @@
                 <m>0</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             
@@ -181,7 +181,7 @@
                 <m>0</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -214,16 +214,16 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -250,7 +250,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             
@@ -273,7 +273,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -306,16 +306,16 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -342,7 +342,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             
@@ -365,7 +365,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -397,16 +397,16 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -433,7 +433,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             
@@ -456,7 +456,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -488,16 +488,16 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -524,7 +524,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             
@@ -547,7 +547,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -579,16 +579,16 @@
               <cell halign="left">
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
-                <m> </m>
+                <m>?</m>
               </cell>
               <cell bottom="medium">
                 <m>-1</m>
@@ -615,7 +615,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             
@@ -638,7 +638,7 @@
                 <m>?</m>
               </cell>
               <cell halign="left">
-                <m></m>
+                <m>=-?</m>
               </cell>
             </row>
             <row>
@@ -701,9 +701,8 @@
           Consider a sequence of pivots swapping <m>x\leftrightarrow t_2</m>, <m>y \leftrightarrow  t_1</m> <m>t_1 \leftrightarrow y</m>, <m>t_2 \leftrightarrow x</m>.  In each of these cases, what is the basic solution
           recorded by the tableau?
         </p>
-      </statement>
-      <hint>
-        <image xml:id="degenerate" width="80%"> 
+        <p>
+           <image xml:id="degenerate" width="80%"> 
           <description>The feasible region with multiple lines intersecting the origin.</description>
           <latex-image>
             \begin{tikzpicture}
@@ -723,7 +722,9 @@
   
             </latex-image>
         </image> 
-        </hint>
+        </p>
+      </statement>
+       
     </task>
   </activity>
 
