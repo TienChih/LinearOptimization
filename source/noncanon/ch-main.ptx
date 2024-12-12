@@ -7,7 +7,7 @@
     <idx>noncanonical</idx>
     <idx>linear optimization problem, noncanonical</idx>
     <p>
-      Thus far, we have focused ourselves on <em>canonical</em> optimization problems where each decision variable is non-negative,
+      Thus far, we have focused on <em>canonical</em> optimization problems where each decision variable is non-negative,
       and all bounds are inequalities.  However, what would happen if we relaxed, or strengthened these conditions?
     </p>
     <p>

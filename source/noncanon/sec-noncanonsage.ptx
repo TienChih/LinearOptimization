@@ -94,7 +94,7 @@
             P = InteractiveLPProblem(A, b, c,
              [FIXME], 
              constraint_type = [FIXME],
-             variable_type = "",
+             variable_type = [FIXME],
              problem_type = FIXME)
             P
           </input>         

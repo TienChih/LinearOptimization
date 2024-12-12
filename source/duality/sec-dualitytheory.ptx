@@ -108,7 +108,7 @@
 
   <p>
     We have now that if <m>f=g</m> for a pair of feasible solutions, then we have optimality
-    for both problems.  It would be good to prove that this is an if or only if statement.
+    for both problems.  It would be good if the converse were also true.
   </p>
 
   <theorem xml:id="thm-hyperplaneseperation">
@@ -266,6 +266,10 @@
     </task>
   </activity>
 
+  <p>
+    We can codify the intuition gained from <xref ref="activity-cone"/> in the following:
+  </p>
+
   <theorem xml:id="thm-farkas">
     <idx>Farkas lemma</idx>
     <title>The Farkas Lemma</title>
@@ -273,7 +277,7 @@
     
     <statement>
       <p>
-        Given a matrix <m>A\in \R^{n\times m}</m> and <m>\mathbf{b}\in \R^n</m>, exactly one of the
+        Given a matrix <m>A\in \R^{n\times m}</m> and vector <m>\mathbf{b}\in \R^n</m>, exactly one of the
         following is true:
       </p>
       <ol marker="A.">
@@ -361,6 +365,28 @@
           Suppose (A) held, and we had that there was a <m>\begin{bmatrix} \x \\ \vt\end{bmatrix} \geq 0</m> so that
           <m>\begin{bmatrix} A \amp I_n \end{bmatrix} \begin{bmatrix} \x \\ \vt\end{bmatrix} = \vb </m>.  How would <m>A\x</m> compare to <m>\vb </m>?
         </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>A\x\leq \vb</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\x\geq \vb</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\x= \vb</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>A\x</m> and <m>\vb</m>.
+            </p>
+          </li>
+        </ol>
       </statement>
     </task>
     <task>
@@ -369,8 +395,80 @@
           Suppose (A) failed.  Then there is a <m>\y\in \R^n</m> satisfing (B) for <m>\begin{bmatrix} A \amp I_n \end{bmatrix}, \vb </m>.
         </p>
         <p>
-            What can we say about <m>\y^\top A, \y^\top \vb </m> and <m>\y</m> compared to <m>\mathbf{0}, 0</m>?
+            What can we say about <m>\y </m> compared to <m>\mathbf{0}</m>?
         </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\y^\top \leq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top \geq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top  = \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>\y</m> and <m>\mathbf{0}p</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+            What can we say about <m>\y^\top A</m> compared to <m>\mathbf{0}</m>?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\y^\top A\leq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top A\geq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top A = \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>\y^\top A</m> and <m>\mathbf{0}^\top</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+            What can we say about <m>\y^\top \vb</m> compared to <m>0</m>?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\y^\top \vb\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top \vb\geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top \vb = 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>\y^\top \vb</m> and <m>0</m>.
+            </p>
+          </li>
+        </ol>
       </statement>
     </task>
   </activity>
@@ -381,7 +479,7 @@
     
     <statement>
       <p>
-        Given a matrix <m>A\in \R^{n\times m}</m> and <m>\mathbf{b}\in \R^n</m>, exactly one of the
+        Given a matrix <m>A\in \R^{n\times m}</m> and vector <m>\mathbf{b}\in \R^n</m>, exactly one of the
         following is true:
       </p>
       <ol marker="A.">
@@ -437,7 +535,7 @@
           Without loss of generality, let <m>d=0</m> and let <m>g^* = (\y^*)^\top \vb </m>.
         </p>
         <p>
-          Consider the matrices <m>M = \begin{bmatrix} -\vc^\top \\ A\end{bmatrix}, \mathbf{d} = \begin{bmatrix} -g^* \\ \vb \end{bmatrix}</m>. Apply
+          Consider the matrix <m>M = \begin{bmatrix} -\vc^\top \\ A\end{bmatrix}</m>, and vector <m>\mathbf{d} = \begin{bmatrix} -g^* \\ \vb \end{bmatrix}</m>. Apply
           <xref ref="cor-farkasv2"/> to <m>M, \mathbf{d}</m>.  What does it mean for (A) to hold?
         </p>
       </statement>
@@ -519,10 +617,12 @@
           say about <m>s_j</m>?
         </p>
         <hint>
+          <statement>
           <p>
             <m>s_j</m> is the coefficient of the normal vector for the plane <m>-x_j=0</m>.  If
             the feasible solution does not lie on <m>-x_j=0</m>, what can we say about <m>s_j</m>?
           </p>
+          </statement>
         </hint>
         <p>
           What about <m>s_j\neq 0</m>?, <m>y_i\neq0</m>? <m>t_i\neq0</m>?

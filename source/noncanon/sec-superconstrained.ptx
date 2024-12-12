@@ -60,7 +60,7 @@
         <p>
           Consider the inequality <m>3x+2y-z\leq 8</m> captured by the equality
           <m>3x+2y-z - 8=-t_4</m>.  What value must <m>t_4</m> so that <m>3x+2y-z\leq 8</m> 
-          is always an equality?  Call this value ?.
+          is always an equality?  Call this value <m>\xi</m> .
         </p>
       </statement>
     </task>
@@ -164,7 +164,7 @@
                   <m>8</m>
                 </cell>
                 <cell halign="left">
-                  <m>=-?</m>
+                  <m>=-\xi</m>
                 </cell>
               </row>
               <row>
@@ -218,7 +218,7 @@
                 <m>x</m>
               </cell>
               <cell bottom="medium">
-                <m>?</m>
+                <m>\xi</m>
               </cell>
               <cell bottom="medium">
                 <m>z</m>
@@ -329,7 +329,7 @@
           </p>
           <p>
            Ignoring the specific values of the entries of this tableau, using 
-           the value for ? computed earlier, rewrite each of the above equations in terms of <m>x, z</m>.  
+           the value for <m>\xi</m> computed earlier, rewrite each of the above equations in terms of <m>x, z</m>.  
            What information did the ? column provide?
 
 
@@ -1174,8 +1174,8 @@
           Solve the linear optimization problem:
   
             <md>
-              <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   </mrow>
-              <mrow>\textbf{subject to: }  x+2y+3z&amp;  \leq  6</mrow>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x})\amp = x+4y+2z   </mrow>
+              <mrow>\textbf{subject to: }  x+2y+3z \amp  \leq  6</mrow>
               <mrow> 4x-7y&amp; =  28</mrow>
               <mrow> x, y, z&amp; \geq  0.</mrow>
             </md>
@@ -1192,8 +1192,8 @@
           Consider the linear optimization problem:
   
             <md>
-              <mrow>\textbf{Maximize: }  f(\mathbf{x})= 2x+y-2z  &amp;   </mrow>
-              <mrow>\textbf{subject to: }  x+y+z&amp;  \leq  1</mrow>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x}) \amp= 2x+y-2z    </mrow>
+              <mrow>\textbf{subject to: }  x+y+z \amp  \leq  1</mrow>
               <mrow> y+4z&amp; =  2</mrow>
               <mrow> x, y, z&amp; \geq  0.</mrow>
             </md>
@@ -1480,7 +1480,7 @@
           Solve the linear optimization problem:
   
             <md>
-              <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+4y+2z  &amp;   </mrow>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x}) \amp = x+4y+2z    </mrow>
               <mrow>\textbf{subject to: }  x+2y+3z&amp;  \leq  6</mrow>
               <mrow> 4x-7y&amp; \leq  28</mrow>
               <mrow> x, y, z&amp; \geq  0.</mrow>
@@ -1502,7 +1502,7 @@
           Solve the linear optimization problem:
   
             <md>
-              <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+2y+z  &amp;   </mrow>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x}) \amp = x+2y+z    </mrow>
               <mrow>\textbf{subject to: }  x+y+z&amp;  =  6</mrow>
               <mrow> x+y&amp; \leq  1</mrow>
               <mrow> x,  z&amp; \geq  0.</mrow>

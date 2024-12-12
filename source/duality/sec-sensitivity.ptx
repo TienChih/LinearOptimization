@@ -89,7 +89,8 @@
         somehow to the bounds of a maximization problem.  
       </p>
       <p>
-        If you have a production problem, and wish to assign a value to all your materials, which of the following should be reasonable things to expect from these values?
+        Suppose you have a production problem, and you wish to acquire new materials to increase production.  You then assign a value to each potential new  material, according to which would
+        benifit you the most.  Which of the following should be reasonable things to expect from these values?
       </p>
       <ol marker="A." cols="2">
         <li>
@@ -112,14 +113,10 @@
             The total value of these materials should reflect the value of selling products made with those materials.
           </p>
         </li>
+        
         <li>
           <p>
-            All materials must have non-zero value.
-          </p>
-        </li>
-        <li>
-          <p>
-            If a material is never used, it has zero value.
+            If a material is not to be used, it has zero value.
           </p>
         </li>
       </ol>

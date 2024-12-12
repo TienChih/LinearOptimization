@@ -336,35 +336,37 @@
     <task>
       <statement>
         <p>
-          Which of the following do you believe is true?
+          List all the hyperplanes that bound the feasible region.
         </p>
-        <ol marker="A." cols="1">
-          <li>
-            <p>
-              Following the rules of pivoting through the Simplex Algorithm, we should be able to return to the origin.
-            </p>
-          </li>
-          <li>
-            <p>
-              It is possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm, to return to the origin, and this is sensible as we are just traversing corner points.
-            </p>
-          </li>
-          <li>
-            <p>
-              It is technically possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm and this is <em>not</em> sensible.
-            </p>
-          </li>
-        </ol>
       </statement>
     </task>
 
     <task>
       <statement>
         <p>
-          List all the hyperplanes that bound the feasible region.
+          Recall that each simplex pivot represents a shift of the basic solution from one extreme point to another.  Which of the following do you believe is true?
         </p>
+        <ol marker="A." cols="1">
+          <li>
+            <p>
+              Following the rules of pivoting through the Simplex Algorithm, we should be able to return to the origin, and this is consistent with our geometric viewpoint.
+            </p>
+          </li>
+          <li>
+            <p>
+              It is possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm, to return to the origin, and this is consistent with our geometric viewpoint.
+            </p>
+          </li>
+          <li>
+            <p>
+              It is technically possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm to return to the origin, and this is <em>not</em>  consistent with our geometric viewpoint.
+            </p>
+          </li>
+        </ol>
       </statement>
     </task>
+
+    
 
   </activity>
 
@@ -912,7 +914,7 @@
     <task>
       <statement>
         <p>
-          What are <m>t_1, t_2, x, y, f</m>?
+          What are the final values for <m>t_1, t_2, x, y, f</m>?
         </p>
       </statement>
     </task>
