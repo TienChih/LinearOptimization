@@ -12,20 +12,20 @@
 </head>
 <body class="ignore-math">
 <article class="definition definition-like"><h3 class="heading">
-<span class="type">Definition</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">8.1.5</span><span xmlns:pf="https://prefigure.org" class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.5</span><span class="period">.</span>
 </h3>
-<div xmlns:pf="https://prefigure.org" class="para">The <em class="emphasis">Branch and Bound Algorithm</em> for solving an integer optimization maximization problem is as follows:</div> <ol class="decimal" id="def-branchbound-1-2">
-<li><div xmlns:pf="https://prefigure.org" class="para">INITIALIZE: Begin with a canonical maximization integer optimization problem.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Solve the relaxation of the linear optimization problem.  If the solution is integral STOP.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">For some <span class="process-math">\(x_i^*\)</span> in the optimal solution found in the previous step, define two sub problems, one with additional constraint <span class="process-math">\(x_i\leq \lfloor x_i^*\rfloor\)</span> and <span class="process-math">\(x_i\geq \lceil x_i^*\rceil\)</span>
+<div class="para">The <em class="emphasis">Branch and Bound Algorithm</em> for solving an integer optimization maximization problem is as follows:</div> <ol class="decimal" id="def-branchbound-1-2">
+<li><div class="para">INITIALIZE: Begin with a canonical maximization integer optimization problem.</div></li>
+<li><div class="para">Solve the relaxation of the linear optimization problem.  If the solution is integral STOP.</div></li>
+<li><div class="para">For some <span class="process-math">\(x_i^*\)</span> in the optimal solution found in the previous step, define two sub problems, one with additional constraint <span class="process-math">\(x_i\leq \lfloor x_i^*\rfloor\)</span> and <span class="process-math">\(x_i\geq \lceil x_i^*\rceil\)</span>
 </div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Pick one of the subproblems and solve the linear relaxation with the additional constraint.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">If the solution is integral, RETURN to 4.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">If the solution is less than any integral solution found, RETURN to 4.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">If the problem is infeasible, RETURN to 4.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Apply 3-7 to the new problem.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">If all subproblems are explored, RETURN to 4 for the parent problem.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Once the search tree has been exhausted, identify the optimal integral solution.</div></li>
+<li><div class="para">Pick one of the subproblems and solve the linear relaxation with the additional constraint.</div></li>
+<li><div class="para">If the solution is integral, RETURN to 4.</div></li>
+<li><div class="para">If the solution is less than any integral solution found, RETURN to 4.</div></li>
+<li><div class="para">If the problem is infeasible, RETURN to 4.</div></li>
+<li><div class="para">Apply 3-7 to the new problem.</div></li>
+<li><div class="para">If all subproblems are explored, RETURN to 4 for the parent problem.</div></li>
+<li><div class="para">Once the search tree has been exhausted, identify the optimal integral solution.</div></li>
 </ol></article><span class="incontext"><a class="internal" href="sec-branchbound.html#def-branchbound">in-context</a></span>
 </body>
 </html>

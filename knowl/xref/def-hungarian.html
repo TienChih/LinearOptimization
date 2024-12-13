@@ -12,27 +12,27 @@
 </head>
 <body class="ignore-math">
 <article class="definition definition-like"><h3 class="heading">
-<span class="type">Definition</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">6.3.5</span><span xmlns:pf="https://prefigure.org" class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
 </h3>
-<div xmlns:pf="https://prefigure.org" class="para">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an <span class="process-math">\(n\times n\)</span> assignment tableau <span class="process-math">\(T\text{.}\)</span>
+<div class="para">We state here the steps of the <em class="emphasis">Hungarian Algorithm</em>.  We start with an <span class="process-math">\(n\times n\)</span> assignment tableau <span class="process-math">\(T\text{.}\)</span>
 </div> <ol class="decimal" id="def-hungarian-3-2">
 <li>
-<div xmlns:pf="https://prefigure.org" class="para">IF the entries of <span class="process-math">\(T\)</span> are rational but not all integeral, <span class="process-math">\(a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}&gt;0 \text{:}\)</span>
+<div class="para">IF the entries of <span class="process-math">\(T\)</span> are rational but not all integeral, <span class="process-math">\(a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}&gt;0 \text{:}\)</span>
 </div>
-<div xmlns:pf="https://prefigure.org" class="para">THEN multiply each entry of <span class="process-math">\(T\)</span> by the lowest common multiple of the denominators, <span class="process-math">\(\displaystyle \underset{ i, j}{\lcm} q_{ij}\text{.}\)</span>
+<div class="para">THEN multiply each entry of <span class="process-math">\(T\)</span> by the lowest common multiple of the denominators, <span class="process-math">\(\displaystyle \underset{ i, j}{\lcm} q_{ij}\text{.}\)</span>
 </div>
 </li>
 <li>
-<div xmlns:pf="https://prefigure.org" class="para">IF the entries of <span class="process-math">\(T\)</span> are not all non-negative:</div>
-<div xmlns:pf="https://prefigure.org" class="para">THEN add to every entry of <span class="process-math">\(T\)</span> the smallest value of <span class="process-math">\(T\text{,}\)</span> <span class="process-math">\(\displaystyle \min_{i,j}a_{ij}\text{.}\)</span>
+<div class="para">IF the entries of <span class="process-math">\(T\)</span> are not all non-negative:</div>
+<div class="para">THEN add to every entry of <span class="process-math">\(T\)</span> the smallest value of <span class="process-math">\(T\text{,}\)</span> <span class="process-math">\(\displaystyle \min_{i,j}a_{ij}\text{.}\)</span>
 </div>
 </li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Subtract from each row the smallest entry in that row.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Subtract from each column the smallest entry in that column.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">IF <span class="process-math">\(T\)</span> has a permutation set of zeroes: STOP</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Draw a <em class="alert">minimum</em><span class="process-math">\(^*\)</span> number of lines through <span class="process-math">\(T\)</span> covering an entire row or column such that all <span class="process-math">\(0\)</span>’s are covered.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">Let <span class="process-math">\(M\)</span> be the value of the smallest uncovered entry.  Subtract all uncovered entries by <span class="process-math">\(M\text{,}\)</span> and add <span class="process-math">\(M\)</span> to the entries corresponding to intersections of the lines.</div></li>
-<li><div xmlns:pf="https://prefigure.org" class="para">GOTO 5.</div></li>
+<li><div class="para">Subtract from each row the smallest entry in that row.</div></li>
+<li><div class="para">Subtract from each column the smallest entry in that column.</div></li>
+<li><div class="para">IF <span class="process-math">\(T\)</span> has a permutation set of zeroes: STOP</div></li>
+<li><div class="para">Draw a <em class="alert">minimum</em><span class="process-math">\(^*\)</span> number of lines through <span class="process-math">\(T\)</span> covering an entire row or column such that all <span class="process-math">\(0\)</span>’s are covered.</div></li>
+<li><div class="para">Let <span class="process-math">\(M\)</span> be the value of the smallest uncovered entry.  Subtract all uncovered entries by <span class="process-math">\(M\text{,}\)</span> and add <span class="process-math">\(M\)</span> to the entries corresponding to intersections of the lines.</div></li>
+<li><div class="para">GOTO 5.</div></li>
 </ol></article><span class="incontext"><a class="internal" href="sec-assignment.html#def-hungarian">in-context</a></span>
 </body>
 </html>

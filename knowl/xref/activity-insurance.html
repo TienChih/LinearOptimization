@@ -12,13 +12,13 @@
 </head>
 <body class="ignore-math">
 <article class="activity project-like"><h4 class="heading">
-<span class="type">Activity</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">2.1.12</span><span xmlns:pf="https://prefigure.org" class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
 </h4>
 <div class="introduction">
-<div xmlns:pf="https://prefigure.org" class="para">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div>
-<div xmlns:pf="https://prefigure.org" class="para">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div>
-<div xmlns:pf="https://prefigure.org" class="para">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div>
-<div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">Suppose a company produces two types of widgets.  Widget 1 sells for $200 and Widget 2 sells for $150.</div>
+<div class="para">Each widget takes ingredients A, B and C.  Widget 1 needs 1 unit of A, 2 units of B and 2 units of C.  Widget 2 needs 2 units of A, 2 units of B and 1 unit of C.</div>
+<div class="para">The company has 20 units of ingredient A, 30 units of B and 25 units of C.</div>
+<div class="para logical">
 <div class="para">Now, the company wants to assign values <span class="process-math">\(y_A, y_B, y_C\)</span> to the three ingredients.  The values for each should be enough so that in a disaster, the potential revenue is recovered, ie:</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -29,10 +29,10 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 <div class="para">Of course, the values shouldn’t be negative, so <span class="process-math">\(y_A, y_B, y_C\geq 0\text{.}\)</span>
 </div>
 </div>
-<div xmlns:pf="https://prefigure.org" class="para">But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize <span class="process-math">\(g(y_A, y_B, y_C)=20y_A+30y_B+25y_C\text{.}\)</span>
+<div class="para">But, the higher we value the ingredients, the greater the insurance premiums will be, so we need to minimize <span class="process-math">\(g(y_A, y_B, y_C)=20y_A+30y_B+25y_C\text{.}\)</span>
 </div>
-<div xmlns:pf="https://prefigure.org" class="para">We can convert this into a max problem to solve, but we can also record it in the following tableau:</div>
-<div xmlns:pf="https://prefigure.org" class="para"><div class="tabular-box natural-width"><table class="tabular">
+<div class="para">We can convert this into a max problem to solve, but we can also record it in the following tableau:</div>
+<div class="para"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
@@ -72,7 +72,18 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 </table></div></div>
 </div>
 <article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div xmlns:pf="https://prefigure.org" class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para logical">
+<div class="para">For each column <span class="process-math">\(i\text{,}\)</span> consider the equality recorded by this tableau: <span class="process-math">\(a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C + (-1)c_i=s_i\text{.}\)</span> What must be true about <span class="process-math">\(s_i\)</span> in ordder for <span class="process-math">\(a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C \geq c_i\text{?}\)</span>
+</div>
+<ol class="upper-alpha cols2" id="activity-insurance-2-1-1-5">
+<li><div class="para"><span class="process-math">\(s_i\geq 0 \text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(s_i\leq 0 \text{.}\)</span></div></li>
+<li><div class="para"><span class="process-math">\(s_i= 0 \text{.}\)</span></div></li>
+<li><div class="para">Nothing may be determined about <span class="process-math">\(s_i\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
@@ -110,9 +121,9 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 </tr>
 </table></div>
-</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div xmlns:pf="https://prefigure.org" class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span>
-</div> <div xmlns:pf="https://prefigure.org" class="para"><div class="tabular-box natural-width"><table class="tabular">
+</div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Pivot on the entry with the <span class="process-math">\(*\text{:}\)</span>
+</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="l m b2 r0 l0 t0 lines"></td>
@@ -149,8 +160,7 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=s_2\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 </tr>
-</table></div></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div xmlns:pf="https://prefigure.org" class="para">Compare this basic solution and tableau to the final solution in <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.6">Activity 2.1.6</a>. What do you notice?</div>
-<div class="solutions"><details xmlns:pf="https://prefigure.org" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para"><iframe src="https://www.desmos.com/3d/z4fjuixofk" id="activity-insurance-4-2-1-1" width="600" height="600"></iframe></div></div></details></div></article></article><span class="incontext"><a class="internal" href="sec-pivot.html#activity-insurance">in-context</a></span>
+</table></div></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para">Compare this basic solution and tableau to the final solution in <a href="sec-pivot.html#activity-widget" class="xref" data-knowl="./knowl/xref/activity-widget.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.1.6">Activity 2.1.6</a>. What do you notice?</div> <div class="para"><iframe src="https://www.desmos.com/3d/z4fjuixofk" id="activity-insurance-5-1-2-1" width="600" height="600"></iframe></div></article></article><span class="incontext"><a class="internal" href="sec-pivot.html#activity-insurance">in-context</a></span>
 </body>
 </html>

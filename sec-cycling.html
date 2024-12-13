@@ -11,9 +11,9 @@
 <title>Cycling</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
-<meta xmlns:pf="https://prefigure.org" property="book:title" content="Linear Optimization">
-<meta xmlns:pf="https://prefigure.org" property="book:author" content="Tien Chih">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Linear Optimization">
+<meta property="book:author" content="Tien Chih">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -88,13 +88,13 @@ window.MathJax = {
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
-<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
@@ -125,6 +125,9 @@ window.MathJax = {
 #def-pivot-2-2 { counter-set: def-pivot-2-2 0; }
 #def-pivot-2-2 > li::marker { content: ""counter(def-pivot-2-2,decimal)"."; }
 #def-pivot-2-2 > li { counter-increment: def-pivot-2-2; }
+#activity-insurance-2-1-1-5 { counter-set: activity-insurance-2-1-1-5 0; }
+#activity-insurance-2-1-1-5 > li::marker { content: ""counter(activity-insurance-2-1-1-5,upper-alpha)"."; }
+#activity-insurance-2-1-1-5 > li { counter-increment: activity-insurance-2-1-1-5; }
 #activity-tableaufeasible-2-1-2 { counter-set: activity-tableaufeasible-2-1-2 0; }
 #activity-tableaufeasible-2-1-2 > li::marker { content: ""counter(activity-tableaufeasible-2-1-2,upper-alpha)"."; }
 #activity-tableaufeasible-2-1-2 > li { counter-increment: activity-tableaufeasible-2-1-2; }
@@ -146,18 +149,15 @@ window.MathJax = {
 #def-simplexmax-3-2 { counter-set: def-simplexmax-3-2 0; }
 #def-simplexmax-3-2 > li::marker { content: ""counter(def-simplexmax-3-2,decimal)"."; }
 #def-simplexmax-3-2 > li { counter-increment: def-simplexmax-3-2; }
-#def-simplexmin-3-2 { counter-set: def-simplexmin-3-2 0; }
-#def-simplexmin-3-2 > li::marker { content: ""counter(def-simplexmin-3-2,decimal)"."; }
-#def-simplexmin-3-2 > li { counter-increment: def-simplexmin-3-2; }
 #thm-BlandAnticycling-5-2 { counter-set: thm-BlandAnticycling-5-2 0; }
 #thm-BlandAnticycling-5-2 > li::marker { content: ""counter(thm-BlandAnticycling-5-2,decimal)"."; }
 #thm-BlandAnticycling-5-2 > li { counter-increment: thm-BlandAnticycling-5-2; }
 #exploration-sage-1-4 { counter-set: exploration-sage-1-4 0; }
 #exploration-sage-1-4 > li::marker { content: ""counter(exploration-sage-1-4,upper-alpha)"."; }
 #exploration-sage-1-4 > li { counter-increment: exploration-sage-1-4; }
-#unconstrained-geometry-7-1-2 { counter-set: unconstrained-geometry-7-1-2 0; }
-#unconstrained-geometry-7-1-2 > li::marker { content: ""counter(unconstrained-geometry-7-1-2,upper-alpha)"."; }
-#unconstrained-geometry-7-1-2 > li { counter-increment: unconstrained-geometry-7-1-2; }
+#unconstrained-geometry-8-1-2 { counter-set: unconstrained-geometry-8-1-2 0; }
+#unconstrained-geometry-8-1-2 > li::marker { content: ""counter(unconstrained-geometry-8-1-2,upper-alpha)"."; }
+#unconstrained-geometry-8-1-2 > li { counter-increment: unconstrained-geometry-8-1-2; }
 #unconstrained-example-5-1-2 { counter-set: unconstrained-example-5-1-2 0; }
 #unconstrained-example-5-1-2 > li::marker { content: ""counter(unconstrained-example-5-1-2,upper-alpha)"."; }
 #unconstrained-example-5-1-2 > li { counter-increment: unconstrained-example-5-1-2; }
@@ -179,6 +179,18 @@ window.MathJax = {
 #thm-farkas-3-2 { counter-set: thm-farkas-3-2 0; }
 #thm-farkas-3-2 > li::marker { content: ""counter(thm-farkas-3-2,upper-alpha)"."; }
 #thm-farkas-3-2 > li { counter-increment: thm-farkas-3-2; }
+#sec-dualitytheory-16-9-1-3 { counter-set: sec-dualitytheory-16-9-1-3 0; }
+#sec-dualitytheory-16-9-1-3 > li::marker { content: ""counter(sec-dualitytheory-16-9-1-3,upper-alpha)"."; }
+#sec-dualitytheory-16-9-1-3 > li { counter-increment: sec-dualitytheory-16-9-1-3; }
+#sec-dualitytheory-16-10-1-3 { counter-set: sec-dualitytheory-16-10-1-3 0; }
+#sec-dualitytheory-16-10-1-3 > li::marker { content: ""counter(sec-dualitytheory-16-10-1-3,upper-alpha)"."; }
+#sec-dualitytheory-16-10-1-3 > li { counter-increment: sec-dualitytheory-16-10-1-3; }
+#sec-dualitytheory-16-10-1-5 { counter-set: sec-dualitytheory-16-10-1-5 0; }
+#sec-dualitytheory-16-10-1-5 > li::marker { content: ""counter(sec-dualitytheory-16-10-1-5,upper-alpha)"."; }
+#sec-dualitytheory-16-10-1-5 > li { counter-increment: sec-dualitytheory-16-10-1-5; }
+#sec-dualitytheory-16-10-1-7 { counter-set: sec-dualitytheory-16-10-1-7 0; }
+#sec-dualitytheory-16-10-1-7 > li::marker { content: ""counter(sec-dualitytheory-16-10-1-7,upper-alpha)"."; }
+#sec-dualitytheory-16-10-1-7 > li { counter-increment: sec-dualitytheory-16-10-1-7; }
 #cor-farkasv2-3-2 { counter-set: cor-farkasv2-3-2 0; }
 #cor-farkasv2-3-2 > li::marker { content: ""counter(cor-farkasv2-3-2,upper-alpha)"."; }
 #cor-farkasv2-3-2 > li { counter-increment: cor-farkasv2-3-2; }
@@ -236,9 +248,6 @@ window.MathJax = {
 #def-transportationalg-3-2 { counter-set: def-transportationalg-3-2 0; }
 #def-transportationalg-3-2 > li::marker { content: ""counter(def-transportationalg-3-2,decimal)"."; }
 #def-transportationalg-3-2 > li { counter-increment: def-transportationalg-3-2; }
-#sec-transportalgorithm-6-3-1-2 { counter-set: sec-transportalgorithm-6-3-1-2 0; }
-#sec-transportalgorithm-6-3-1-2 > li::marker { content: ""counter(sec-transportalgorithm-6-3-1-2,upper-alpha)"."; }
-#sec-transportalgorithm-6-3-1-2 > li { counter-increment: sec-transportalgorithm-6-3-1-2; }
 #def-hungarian-3-2 { counter-set: def-hungarian-3-2 0; }
 #def-hungarian-3-2 > li::marker { content: ""counter(def-hungarian-3-2,decimal)"."; }
 #def-hungarian-3-2 > li { counter-increment: def-hungarian-3-2; }
@@ -342,11 +351,11 @@ window.MathJax = {
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div>
-</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -371,7 +380,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-simplexsage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-simplex.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-simplexsage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
@@ -385,7 +394,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -540,7 +549,7 @@ true);
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec-cycling"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-cycling"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">Cycling</span>
 </h2>
 <section class="introduction" id="sec-cycling-2"><div class="para" id="sec-cycling-2-1">In this section, we discuss a potentially serious hurdle to using the Simplex Algorithm, and show how to avoid it completely.</div></section><article class="activity project-like" id="activity-cyclingexample"><h3 class="heading">
@@ -592,10 +601,10 @@ true);
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
@@ -606,7 +615,7 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(12.5\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -615,7 +624,7 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-0.24\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -629,10 +638,10 @@ true);
 </table></div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
@@ -643,7 +652,7 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -652,7 +661,7 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -666,10 +675,10 @@ true);
 </table></div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
@@ -680,7 +689,7 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -689,7 +698,7 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -703,10 +712,10 @@ true);
 </table></div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
@@ -717,7 +726,7 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?^*\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -726,7 +735,7 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -740,10 +749,10 @@ true);
 </table></div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
@@ -754,7 +763,7 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -763,7 +772,7 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -777,10 +786,10 @@ true);
 </table></div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
@@ -791,7 +800,7 @@ true);
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -800,7 +809,7 @@ true);
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
 </tr>
 <tr>
 <td class="l m b0 r2 l0 t0 lines"></td>
@@ -828,8 +837,7 @@ x,y \amp\geq0.
 </div>
 </div></div>
 <article class="task exercise-like" id="sec-cycling-4-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-cycling-4-2-1-1">Consider a sequence of pivots swapping <span class="process-math">\(x\leftrightarrow t_2\text{,}\)</span> <span class="process-math">\(y \leftrightarrow  t_1\)</span> <span class="process-math">\(t_1 \leftrightarrow y\text{,}\)</span> <span class="process-math">\(t_2 \leftrightarrow x\text{.}\)</span>  In each of these cases, what is the basic solution recorded by the tableau?</div>
-<div class="solutions"><details id="sec-cycling-4-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/degenerate.svg" role="img" class="contained" alt="The feasible region with multiple lines intersecting the origin."></div></div></details></div></article></article><article class="definition definition-like" id="def-Cycling"><h3 class="heading">
+<div class="para" id="sec-cycling-4-2-1-1">Consider a sequence of pivots swapping <span class="process-math">\(x\leftrightarrow t_2\text{,}\)</span> <span class="process-math">\(y \leftrightarrow  t_1\)</span> <span class="process-math">\(t_1 \leftrightarrow y\text{,}\)</span> <span class="process-math">\(t_2 \leftrightarrow x\text{.}\)</span>  In each of these cases, what is the basic solution recorded by the tableau?</div> <div class="para" id="sec-cycling-4-2-1-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/degenerate.svg" role="img" class="contained" alt="The feasible region with multiple lines intersecting the origin."></div></div></article></article><article class="definition definition-like" id="def-Cycling"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-Cycling-2-1">If a series of pivots in accordance to <a href="sec-simplexmax.html#def-simplexcanonmaxbf" class="xref" data-knowl="./knowl/xref/def-simplexcanonmaxbf.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.6">Definition 2.2.6</a> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <dfn class="terminology">cycling</dfn>.</div></article><article class="definition definition-like" id="def-degenerate"><h3 class="heading">
@@ -1194,11 +1202,11 @@ c_r^*a_{rs}\lt 0.
 </h3>
 <div class="para" id="sec-cycling-10-1-1">If we follow <a href="sec-cycling.html#thm-BlandAnticycling" class="xref" data-knowl="./knowl/xref/thm-BlandAnticycling.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.3.5: Bland’s Anticycling Rules">Theorem 2.3.5</a> then no basis is visited twice during the Simplex Algorithm.  Note that <span class="process-math">\(f\)</span> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simplexsage.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-simplexmax.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-simplexsage.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
