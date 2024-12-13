@@ -1541,6 +1541,8 @@
             print(mean(Winnings))
           </input>
           </sage>
+      </p>
+      <p>
           Where <c>FIXMER1</c>, <c>FIXMER2</c>, <c>FIXMER3</c> represent the entries
           for the optimal mixed strategy for the row player Even, and <c>FIXMEC1</c>, <c>FIXMEC2</c>, <c>FIXMEC3</c>
           are for the optimal mixed strategy for the column player Odd.

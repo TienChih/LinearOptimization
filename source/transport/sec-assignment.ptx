@@ -236,7 +236,7 @@
       <statement>
         <p>
           If we multiply each entry by <m>2</m>, would that change our optimal solution?
-          What about by <m>-1</m>?  What values <m>k</m> could I multiply the tableau
+          What about by <m>-1</m>?  What values <m>k</m> could we multiply the tableau
           by to preserve the optimal solution?
         </p>
       </statement>
@@ -277,7 +277,7 @@
     <task>
       <statement>
         <p>
-          Suppose I subtracted the smallest value in each row from every
+          Suppose we subtracted the smallest value in each row from every
           entry of that row.  If there was a permutation set of zeroes, what would that entail?
         </p>
       </statement>
@@ -285,7 +285,7 @@
     <task>
       <statement>
         <p>
-          Suppose I subtracted the smallest value in each column from every
+          Suppose we subtracted the smallest value in each column from every
           entry of that column.  If there was a permutation set of zeroes, what would that entail?
         </p>
       </statement>
@@ -293,7 +293,7 @@
     <task>
       <statement>
         <p>
-          If we had a tableau with all rational values, how could I change this
+          If we had a tableau with all rational values, how could we change this
           to a tableau of all integer values with the same optimal solution?
         </p>
       </statement>
@@ -301,7 +301,7 @@
     <task>
       <statement>
         <p>
-          If we had a tableau with all integer values, how could I change this
+          If we had a tableau with all integer values, how could we change this
           to a tableau of all non-negative integer values with the same optimal solution?
         </p>
       </statement>

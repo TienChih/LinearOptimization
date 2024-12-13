@@ -109,7 +109,7 @@
       <p>
         Consider the weighted network: 
       </p>
-      <image xml:id="negativecycle">
+      <image xml:id="negativecycle" width="75%">
         <description>A network with negative weights.</description>
         <latex-image>
           \begin{tikzpicture}[

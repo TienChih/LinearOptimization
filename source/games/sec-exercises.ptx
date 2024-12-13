@@ -242,7 +242,7 @@
 
     <exercise>
       <p>
-        For each exercise in <xref ref="ex-games"/>, determine the Von Neumann
+        For each exercise in <xref ref="ex-games"/>, determine the VonNeumann
         value and the optimal strategy.
       </p>
     </exercise>
@@ -250,7 +250,7 @@
     <exercise>
       <introduction>
         <p>
-          For each of the following games of chance, determine the Von Nuemann
+          For each of the following games of chance, determine the VonNeumann
           value for the game, and optimal strategies for both players.
         </p>
       </introduction>
@@ -347,7 +347,7 @@
       <task>
         <statement>
           <p>
-            Find the Von Nuemann value and optimal strategies for each player for the game
+            Find the VonNeumann value and optimal strategies for each player for the game
             above.  There may be multiple cases. 
           </p>
         </statement>
@@ -365,7 +365,7 @@
       <task>
         <statement>
           <p>
-            Find the Von Nuemann value and optimal strategies for each player for the game
+            Find the VonNeumann value and optimal strategies for each player for the game
             above.  
           </p>
         </statement>
@@ -381,7 +381,7 @@
       <task>
         <statement>
           <p>
-            Find the Von Nuemann value and optimal strategies for each player for the game
+            Find the VonNeumann value and optimal strategies for each player for the game
             above if <m>x</m> could be any value.  
           </p>
         </statement>
@@ -400,7 +400,7 @@
       <task>
         <statement>
           <p>
-            Find the optimal solutions and the Von Nuemann value for the above game. (Without
+            Find the optimal solutions and the VonNeumann value for the above game. (Without
             loss of generality, we may assume <m>a,b,c,d</m> are positive, why?)
           </p>
         </statement>

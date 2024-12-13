@@ -879,7 +879,7 @@
         </li>
         <li>
           <p>
-            We (by convention) let <m>b_1=0</m> and select values <m>a_i, b_j</m> so that for each basis entry <m>c_{ij}</m>
+            We  select values <m>a_i, b_j</m> so that for each basis entry <m>c_{ij}</m>
             we have that <m>c_{ij} = a_i+b_j</m>.
           </p>
         </li>
@@ -900,7 +900,8 @@
         <li>
           <p>
             Shift shipments appropriately along the cycle so that <m>c_{k\ell}</m> has a non-negative shipping quantity, and
-            one of the selected basis entries has a zero shipping quantity.
+            one of the selected basis entries has a zero shipping quantity.  Remove this entry from the basis and add the
+            entry in step 4 to the basis.
           </p>
           <p>
             Then GOTO 2.
@@ -918,47 +919,102 @@
   <activity>
     <introduction>
       <p>
-        Consider the Transportation Algorithm <xref ref="def-transportationalg"/>. Recall that
-        the objective function for the transportation problem is <m>f(\x)=\displaystyle \sum x_{ij}c_{ij}</m>,
-        and that the entries of the tableau produced in Step 3 are <m>c_{ij}-a_i-b_j</m>. 
+        Consider the tableau:
       </p>
+      <p>
+          <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+                <m>b_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>b_3</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_1</m>
+              </cell>
+              <cell>
+                <m>\ec{3}^{1}</m>
+              </cell>
+              <cell>
+                <m>\ec{4}^5</m>
+              </cell>
+              <cell right="medium">
+                <m>6</m>
+              </cell>
+              
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_2</m>
+              </cell>
+              <cell>
+                <m>\ec{1}^3</m>
+              </cell>
+              <cell>
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>a_3</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\ec{2}^0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>\ec{2}^2</m>
+              </cell>
+            </row>
+            
+          </tabular>
+        </p>
     </introduction>
     <task>
-      <p>
-        Show that in step 5 the newly produced solution has a strictly lower objective value.
-      </p>
+      <statement>
+        <p>
+          Perform steps 2-5.  How much was shiftted along the cycle in step 5?
+        </p>
+      </statement>
     </task>
     <task>
       <statement>
         <p>
-          If instead of step 4, we selected an entry with a zero value, what would be true about the
-          resulting new solution?
+          What is the analogous type of pivot when performing the Simplex Algorithm <xref ref="def-simplexcanonmaxbf"/>? 
         </p>
-        <ol marker="A.">
-          <li>
-            <p>
-              The new solution has smaller objective value.
-            </p>
-          </li>
-          <li>
-            <p>
-              The new solution has greater objective value.
-            </p>
-          </li>
-          <li>
-            <p>
-              The new solution has the same objective value.
-            </p>
-          </li>
-          <li>
-            <p>
-              The relation of the value of the new solution to the original cannot
-              be determined in general.
-            </p>
-          </li>
-        </ol>
       </statement>
     </task>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        Consider the Transportation Algorithm <xref ref="def-transportationalg"/>. Recall that
+        the objective function for the transportation problem is <m>f(\x)=\displaystyle \sum x_{ij}c_{ij}</m>,
+        and that the entries of the tableau produced in Step 3 are <m>c_{ij}-a_i-b_j</m>. 
+      </p>
+
+      <p>
+        Show that in step 5 the newly produced solution has a  lower or equal objective value.
+      </p>
+    </statement>
+    
   </activity>
 
   <subsection xml:id="subsec-unbalanced">

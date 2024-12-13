@@ -170,7 +170,7 @@
     <task>
       <statement>
         <p>
-          Show that for any feasible  integeral solution of the left hand side off the equality in (2) is an integer.
+          Show that for any feasible  integeral solution,  that the left hand side of the equality in (2) is an integer.
         </p>
       </statement>
     </task>
@@ -254,7 +254,7 @@
           <mrow>\textbf{Subject to: }  3x_1+2x_2 \amp \leq 12</mrow>
           <mrow> -3x_1+2x_2 \amp \leq 70</mrow>
           <mrow> x_1, x_2 \amp \geq  0</mrow>
-          <mrow> x_1, x_2 \text{are integers.} \amp </mrow>
+          <mrow> x_1, x_2 \text{ are integers.} \amp </mrow>
         </md>
       </p>
       

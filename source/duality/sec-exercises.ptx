@@ -150,7 +150,7 @@
         <p>
           Suppose the maximum value of the objective function <m>f(\x)=c_1x_1+\cdots +c_{m+n}x_{m+n}</m>
           of a linear optimization problem is attained at the point <m>\x^*</m> with the first <m>m</m> variables as
-basic variables. Determine if the following are TRUE or FALSE:
+decision variables. Determine if the following are TRUE or FALSE:
         </p>
         <ol>
           <li>
@@ -960,12 +960,93 @@ solutions of successive tableaus.
       <introduction>
         <p>
           Consider a two variable, two constraint primal maximization
-          problem.  Recall 
-          Weak Duality <xref ref="prop-weakduality"/>, and Complementary Slackness, <xref ref="def-complementaryslackness"/>.
-
-        </p>
-        <p>
-          Suppose we found a pair of primal-dual solutions which satisfied main constraints,
+          problem.
+          
+          <tabular halign="center">
+              <row>
+                <cell halign="left" bottom="medium" right="medium">
+                </cell>
+                <cell bottom="medium">
+                  <m>x_1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>x_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m>-1</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_1</m>
+                </cell>
+                <cell>
+                  <m> a_{11}</m>
+                </cell>
+                <cell right="medium">
+                  <m> a_{12}</m>
+                </cell>
+                <cell right="medium">
+                  <m> b_1</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_1</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>y_2</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> a_{21}</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> a_{22}</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> b_2</m>
+                </cell>
+                <cell halign="left">
+                  <m>=-t_2</m>
+                </cell>
+              </row>
+              <row>
+                <cell halign="left" right="medium">
+                  <m>-1</m>
+                </cell>
+                <cell bottom="medium">
+                  <m> c_1</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> c_2</m>
+                </cell>
+                <cell right="medium" bottom="medium">
+                  <m> f</m>
+                </cell>
+                <cell halign="left" bottom="medium">
+                  <m>=f</m>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                </cell>
+                <cell>
+                  <m>=s_1</m>
+                </cell>
+                <cell>
+                  <m>=s_2</m>
+                </cell>
+                <cell right="medium">
+                  <m>=g</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          
+          <p>  Recall 
+          Weak Duality <xref ref="prop-weakduality"/>, and Complementary Slackness, <xref ref="def-complementaryslackness"/>.  Suppose we found a pair of primal-dual solutions which satisfied main constraints,
           but failed one or more non-negativity constraints.
         </p>
       </introduction>

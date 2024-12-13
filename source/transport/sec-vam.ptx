@@ -179,8 +179,21 @@
     <task>
       <statement>
         <p>
-          Suppose we had <m>n</m> warehouses and <m>m</m> markets with supplies <m>w_i</m>
-          and demands <m>m_j</m>.  We have linear equations <me>\sum x_{i\ell} = w_i, \sum x_{kj} = m_j</me>.
+          Consider the transportation Problem described in <xref ref="exploration-transportation"/>, and consider the linear
+          equations 
+
+          <me>\sum x_{i\ell} = w_i, \sum x_{kj} = m_j.</me>
+
+          Set up an augmented matrix representing this system and solve it.  Were the rows of the augmented matrix linearly independent?  
+          What can we say about the solution(s) of this system?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We now generalize to a balanced transportation problem with <m>n</m> warehouses and <m>m</m> markets with supplies <m>w_i</m>
+          and demands <m>m_j</m>.  Note that we have linear equations <me>\sum x_{i\ell} = w_i, \sum x_{kj} = m_j.</me>
           Since <m>\displaystyle \sum w_i = \sum m_j</m>, what is the maximum number of <m>x_{ij}</m>
           that can be non-zero for a basic solution?  
         </p>
@@ -190,7 +203,7 @@
           Imagine an augmented matrix with the coefficients of the <m>x_{ij}</m> on
           one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix.
           Then consider that <m>\displaystyle \sum w_i = \sum m_j</m>.  What does this say about the (in)dependence of the rows?
-          What then must the rank be?
+          What then must the rank be?  What happened in part (a)?
         </p>
       </hint>
     </task>
