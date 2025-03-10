@@ -40,7 +40,7 @@
 
   <figure xml:id="figure-videochapter1summary">
     <caption>A summary of Chapter 1.</caption>
-    <video playat = "select" source = "images/Chapter1Summary.mp4"/>
+    <video playat = "select" source = "images/Chapter1-Summary.mp4"/>
   </figure>
   
 
