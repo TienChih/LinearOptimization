@@ -1243,11 +1243,38 @@ var ptx_lunr_docs = [
   "body": "  Solve:          "
 },
 {
+  "id": "sec-summarynoncanon",
+  "level": "1",
+  "url": "sec-summarynoncanon.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Summary of Chapter 3",
+  "body": " Summary of  We first consider the case where some is allowed to be negative, which we denote as .                                                                                                                                                                                                                                                                                  Note that should we pivot on                                                                                                                                                                                                                                                                                 that having a slack variable that can be negative serves no purpose, since the point of the non-negativity constraint is to reinforce the inequality. Also note that the hyperplane also plays no role in this problem, since it does not serve as a bounding hyperplane. Thus, we may simply delete this row (after recording the equality) as this equality will have no bearing on future steps or the final solution.                                                                                                                                                                                                                A summary of unconstrained variables.     Next we consider the case where the feasible region is bound by an equality, rather than an inequality. In such a case, the slack variable must be zero.                                                                                                                                                                                                                                                                                  Now in this case, if we pivot on entry, we obtain:                                                                                                                                                                                                                                                                                  Note that what the coefficients are, they are coefficients of the variable  and are thus irrelevant. Moreover, we cannot pivot away from this place, since our feasible region is contained completely within the plane. Thus we may delete this column.                                                                                                                                                                                                                                                            A summary of equality constraints.     "
+},
+{
+  "id": "figure-videochapter3negativity",
+  "level": "2",
+  "url": "sec-summarynoncanon.html#figure-videochapter3negativity",
+  "type": "Figure",
+  "number": "3.4.1",
+  "title": "",
+  "body": " A summary of unconstrained variables.   "
+},
+{
+  "id": "figure-videochapter3Equality",
+  "level": "2",
+  "url": "sec-summarynoncanon.html#figure-videochapter3Equality",
+  "type": "Figure",
+  "number": "3.4.2",
+  "title": "",
+  "body": " A summary of equality constraints.   "
+},
+{
   "id": "sec-exercisesnoncanon",
   "level": "1",
   "url": "sec-exercisesnoncanon.html",
   "type": "Section",
-  "number": "3.4",
+  "number": "3.5",
   "title": "Problems for Chapter 3",
   "body": " Problems for   The simplex pivoter may be found here:         Solve each of the noncanonical linear optimization problems below. If a linear optimization problem has infinitely many optimal solutions, find all optimal solutions.                                                Label each of the following statements TRUE or FALSE. If the statement is FALSE, provide a counterexample.   A noncanonical linear optimization problem with more unconstrained independent variables than constraints has unbounded objective function. (As in (J))   A noncanonical linear optimization problem with more equations of constraint than independent variables is infeasible. (As in (K))    Sketch the constraint set for each noncanonical linear optimization problem below. On the basis of this constraint set, formulate a conjecture as to whether or not the solution of the given problem is the same as the solution of the associated canonical linear optimization problem where all independent variables are constrained to be nonnegative. Verify your conjecture by solving both linear optimization problems.                   The following problem has infinitely many solutions. Sketch the feasible region, find the optimal solutions and sketch the solution set.     Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear optimization problem which is solved by using the simplex algorithm.  For example:     may be restated as the following canonical optimization problem:     where we let .   Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?    Another method method for transforming a linear optimization problem with equations of constraint into canonical form is to replace every equation of constraint by two inequality constraints. This produces an equivalent canonical linear optimization problem which is solved by using the simplex algorithm.  For example:     may be restated as the following canonical optimization problem:      Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?   Use the methods presented in and to solve:    What are some pros and cons of the methods presented in and ?   "
 },
@@ -1256,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#ex-nc",
   "type": "Exercise",
-  "number": "3.4.1",
+  "number": "3.5.1",
   "title": "",
   "body": " Solve each of the noncanonical linear optimization problems below. If a linear optimization problem has infinitely many optimal solutions, find all optimal solutions.                                              "
 },
@@ -1265,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#exercises-noncanon-2",
   "type": "Exercise",
-  "number": "3.4.2",
+  "number": "3.5.2",
   "title": "",
   "body": " Label each of the following statements TRUE or FALSE. If the statement is FALSE, provide a counterexample.   A noncanonical linear optimization problem with more unconstrained independent variables than constraints has unbounded objective function. (As in (J))   A noncanonical linear optimization problem with more equations of constraint than independent variables is infeasible. (As in (K))  "
 },
@@ -1274,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#exercises-noncanon-3",
   "type": "Exercise",
-  "number": "3.4.3",
+  "number": "3.5.3",
   "title": "",
   "body": " Sketch the constraint set for each noncanonical linear optimization problem below. On the basis of this constraint set, formulate a conjecture as to whether or not the solution of the given problem is the same as the solution of the associated canonical linear optimization problem where all independent variables are constrained to be nonnegative. Verify your conjecture by solving both linear optimization problems.                  "
 },
@@ -1283,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#exercises-noncanon-4",
   "type": "Exercise",
-  "number": "3.4.4",
+  "number": "3.5.4",
   "title": "",
   "body": "The following problem has infinitely many solutions. Sketch the feasible region, find the optimal solutions and sketch the solution set.   "
 },
@@ -1292,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#ex-uc",
   "type": "Exercise",
-  "number": "3.4.5",
+  "number": "3.5.5",
   "title": "",
   "body": " Another method method for transforming a linear optimization problem with unconstrained independent variables into canonical form is to replace every unconstrained independent variable by the difference of two independent variables constrained to be nonnegative. This produces an equivalent canonical linear optimization problem which is solved by using the simplex algorithm.  For example:     may be restated as the following canonical optimization problem:     where we let .   Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?  "
 },
@@ -1301,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#ex-superconstrained",
   "type": "Exercise",
-  "number": "3.4.6",
+  "number": "3.5.6",
   "title": "",
   "body": " Another method method for transforming a linear optimization problem with equations of constraint into canonical form is to replace every equation of constraint by two inequality constraints. This produces an equivalent canonical linear optimization problem which is solved by using the simplex algorithm.  For example:     may be restated as the following canonical optimization problem:      Solve the second canonical optimization problem above.   Solve the original optimization problem.   How do the solutions compare?  "
 },
@@ -1310,7 +1337,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#exercises-noncanon-7",
   "type": "Exercise",
-  "number": "3.4.7",
+  "number": "3.5.7",
   "title": "",
   "body": "Use the methods presented in and to solve:   "
 },
@@ -1319,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesnoncanon.html#exercises-noncanon-8",
   "type": "Exercise",
-  "number": "3.4.8",
+  "number": "3.5.8",
   "title": "",
   "body": "What are some pros and cons of the methods presented in and ? "
 },
