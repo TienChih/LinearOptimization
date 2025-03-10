@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Max Flow - Min Cut</title>
@@ -86,276 +86,55 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<style>
-#thm-unboundedextreme-1-2 { counter-set: thm-unboundedextreme-1-2 0; }
-#thm-unboundedextreme-1-2 > li::marker { content: ""counter(thm-unboundedextreme-1-2,decimal)"."; }
-#thm-unboundedextreme-1-2 > li { counter-increment: thm-unboundedextreme-1-2; }
-#sec-polyhedralconvex-28-5-1-2 { counter-set: sec-polyhedralconvex-28-5-1-2 0; }
-#sec-polyhedralconvex-28-5-1-2 > li::marker { content: ""counter(sec-polyhedralconvex-28-5-1-2,upper-alpha)"."; }
-#sec-polyhedralconvex-28-5-1-2 > li { counter-increment: sec-polyhedralconvex-28-5-1-2; }
-#activity-maxslack-2-1-2 { counter-set: activity-maxslack-2-1-2 0; }
-#activity-maxslack-2-1-2 > li::marker { content: ""counter(activity-maxslack-2-1-2,upper-alpha)"."; }
-#activity-maxslack-2-1-2 > li { counter-increment: activity-maxslack-2-1-2; }
-#activity-maxslack-3-1-2 { counter-set: activity-maxslack-3-1-2 0; }
-#activity-maxslack-3-1-2 > li::marker { content: ""counter(activity-maxslack-3-1-2,decimal)"."; }
-#activity-maxslack-3-1-2 > li { counter-increment: activity-maxslack-3-1-2; }
-#sec-pivot-10-1-2 { counter-set: sec-pivot-10-1-2 0; }
-#sec-pivot-10-1-2 > li::marker { content: ""counter(sec-pivot-10-1-2,upper-alpha)"."; }
-#sec-pivot-10-1-2 > li { counter-increment: sec-pivot-10-1-2; }
-#def-pivot-2-2 { counter-set: def-pivot-2-2 0; }
-#def-pivot-2-2 > li::marker { content: ""counter(def-pivot-2-2,decimal)"."; }
-#def-pivot-2-2 > li { counter-increment: def-pivot-2-2; }
-#activity-insurance-2-1-1-5 { counter-set: activity-insurance-2-1-1-5 0; }
-#activity-insurance-2-1-1-5 > li::marker { content: ""counter(activity-insurance-2-1-1-5,upper-alpha)"."; }
-#activity-insurance-2-1-1-5 > li { counter-increment: activity-insurance-2-1-1-5; }
-#activity-tableaufeasible-2-1-2 { counter-set: activity-tableaufeasible-2-1-2 0; }
-#activity-tableaufeasible-2-1-2 > li::marker { content: ""counter(activity-tableaufeasible-2-1-2,upper-alpha)"."; }
-#activity-tableaufeasible-2-1-2 > li { counter-increment: activity-tableaufeasible-2-1-2; }
-#activity-tableaubounded-7-1-2 { counter-set: activity-tableaubounded-7-1-2 0; }
-#activity-tableaubounded-7-1-2 > li::marker { content: ""counter(activity-tableaubounded-7-1-2,upper-alpha)"."; }
-#activity-tableaubounded-7-1-2 > li { counter-increment: activity-tableaubounded-7-1-2; }
-#subsec-basicfeasible-4-4-1-2 { counter-set: subsec-basicfeasible-4-4-1-2 0; }
-#subsec-basicfeasible-4-4-1-2 > li::marker { content: ""counter(subsec-basicfeasible-4-4-1-2,upper-alpha)"."; }
-#subsec-basicfeasible-4-4-1-2 > li { counter-increment: subsec-basicfeasible-4-4-1-2; }
-#subsec-basicfeasible-5-5-1-4 { counter-set: subsec-basicfeasible-5-5-1-4 0; }
-#subsec-basicfeasible-5-5-1-4 > li::marker { content: ""counter(subsec-basicfeasible-5-5-1-4,upper-alpha)"."; }
-#subsec-basicfeasible-5-5-1-4 > li { counter-increment: subsec-basicfeasible-5-5-1-4; }
-#def-simplexcanonmaxbf-3-2 { counter-set: def-simplexcanonmaxbf-3-2 0; }
-#def-simplexcanonmaxbf-3-2 > li::marker { content: ""counter(def-simplexcanonmaxbf-3-2,decimal)"."; }
-#def-simplexcanonmaxbf-3-2 > li { counter-increment: def-simplexcanonmaxbf-3-2; }
-#subsec-infeasiblemaximization-3-6-1-2 { counter-set: subsec-infeasiblemaximization-3-6-1-2 0; }
-#subsec-infeasiblemaximization-3-6-1-2 > li::marker { content: ""counter(subsec-infeasiblemaximization-3-6-1-2,upper-alpha)"."; }
-#subsec-infeasiblemaximization-3-6-1-2 > li { counter-increment: subsec-infeasiblemaximization-3-6-1-2; }
-#def-simplexmax-3-2 { counter-set: def-simplexmax-3-2 0; }
-#def-simplexmax-3-2 > li::marker { content: ""counter(def-simplexmax-3-2,decimal)"."; }
-#def-simplexmax-3-2 > li { counter-increment: def-simplexmax-3-2; }
-#thm-BlandAnticycling-5-2 { counter-set: thm-BlandAnticycling-5-2 0; }
-#thm-BlandAnticycling-5-2 > li::marker { content: ""counter(thm-BlandAnticycling-5-2,decimal)"."; }
-#thm-BlandAnticycling-5-2 > li { counter-increment: thm-BlandAnticycling-5-2; }
-#exploration-sage-1-4 { counter-set: exploration-sage-1-4 0; }
-#exploration-sage-1-4 > li::marker { content: ""counter(exploration-sage-1-4,upper-alpha)"."; }
-#exploration-sage-1-4 > li { counter-increment: exploration-sage-1-4; }
-#unconstrained-geometry-8-1-2 { counter-set: unconstrained-geometry-8-1-2 0; }
-#unconstrained-geometry-8-1-2 > li::marker { content: ""counter(unconstrained-geometry-8-1-2,upper-alpha)"."; }
-#unconstrained-geometry-8-1-2 > li { counter-increment: unconstrained-geometry-8-1-2; }
-#unconstrained-example-5-1-2 { counter-set: unconstrained-example-5-1-2 0; }
-#unconstrained-example-5-1-2 > li::marker { content: ""counter(unconstrained-example-5-1-2,upper-alpha)"."; }
-#unconstrained-example-5-1-2 > li { counter-increment: unconstrained-example-5-1-2; }
-#unconstrained-example-6-1-2 { counter-set: unconstrained-example-6-1-2 0; }
-#unconstrained-example-6-1-2 > li::marker { content: ""counter(unconstrained-example-6-1-2,upper-alpha)"."; }
-#unconstrained-example-6-1-2 > li { counter-increment: unconstrained-example-6-1-2; }
-#unconstrained-example-9-1-2 { counter-set: unconstrained-example-9-1-2 0; }
-#unconstrained-example-9-1-2 > li::marker { content: ""counter(unconstrained-example-9-1-2,upper-alpha)"."; }
-#unconstrained-example-9-1-2 > li { counter-increment: unconstrained-example-9-1-2; }
-#sec-unconstrained-8-1-2 { counter-set: sec-unconstrained-8-1-2 0; }
-#sec-unconstrained-8-1-2 > li::marker { content: ""counter(sec-unconstrained-8-1-2,decimal)"."; }
-#sec-unconstrained-8-1-2 > li { counter-increment: sec-unconstrained-8-1-2; }
-#sec-sensitivity-4-1-3 { counter-set: sec-sensitivity-4-1-3 0; }
-#sec-sensitivity-4-1-3 > li::marker { content: ""counter(sec-sensitivity-4-1-3,upper-alpha)"."; }
-#sec-sensitivity-4-1-3 > li { counter-increment: sec-sensitivity-4-1-3; }
-#sec-sensitivity-8-3-1-1-2 { counter-set: sec-sensitivity-8-3-1-1-2 0; }
-#sec-sensitivity-8-3-1-1-2 > li::marker { content: ""counter(sec-sensitivity-8-3-1-1-2,upper-alpha)"."; }
-#sec-sensitivity-8-3-1-1-2 > li { counter-increment: sec-sensitivity-8-3-1-1-2; }
-#thm-farkas-3-2 { counter-set: thm-farkas-3-2 0; }
-#thm-farkas-3-2 > li::marker { content: ""counter(thm-farkas-3-2,upper-alpha)"."; }
-#thm-farkas-3-2 > li { counter-increment: thm-farkas-3-2; }
-#sec-dualitytheory-16-9-1-3 { counter-set: sec-dualitytheory-16-9-1-3 0; }
-#sec-dualitytheory-16-9-1-3 > li::marker { content: ""counter(sec-dualitytheory-16-9-1-3,upper-alpha)"."; }
-#sec-dualitytheory-16-9-1-3 > li { counter-increment: sec-dualitytheory-16-9-1-3; }
-#sec-dualitytheory-16-10-1-3 { counter-set: sec-dualitytheory-16-10-1-3 0; }
-#sec-dualitytheory-16-10-1-3 > li::marker { content: ""counter(sec-dualitytheory-16-10-1-3,upper-alpha)"."; }
-#sec-dualitytheory-16-10-1-3 > li { counter-increment: sec-dualitytheory-16-10-1-3; }
-#sec-dualitytheory-16-10-1-5 { counter-set: sec-dualitytheory-16-10-1-5 0; }
-#sec-dualitytheory-16-10-1-5 > li::marker { content: ""counter(sec-dualitytheory-16-10-1-5,upper-alpha)"."; }
-#sec-dualitytheory-16-10-1-5 > li { counter-increment: sec-dualitytheory-16-10-1-5; }
-#sec-dualitytheory-16-10-1-7 { counter-set: sec-dualitytheory-16-10-1-7 0; }
-#sec-dualitytheory-16-10-1-7 > li::marker { content: ""counter(sec-dualitytheory-16-10-1-7,upper-alpha)"."; }
-#sec-dualitytheory-16-10-1-7 > li { counter-increment: sec-dualitytheory-16-10-1-7; }
-#cor-farkasv2-3-2 { counter-set: cor-farkasv2-3-2 0; }
-#cor-farkasv2-3-2 > li::marker { content: ""counter(cor-farkasv2-3-2,upper-alpha)"."; }
-#cor-farkasv2-3-2 > li { counter-increment: cor-farkasv2-3-2; }
-#sec-dualpivot-3-2-1-2 { counter-set: sec-dualpivot-3-2-1-2 0; }
-#sec-dualpivot-3-2-1-2 > li::marker { content: ""counter(sec-dualpivot-3-2-1-2,upper-alpha)"."; }
-#sec-dualpivot-3-2-1-2 > li { counter-increment: sec-dualpivot-3-2-1-2; }
-#sec-dualpivot-5-1-2 { counter-set: sec-dualpivot-5-1-2 0; }
-#sec-dualpivot-5-1-2 > li::marker { content: ""counter(sec-dualpivot-5-1-2,upper-alpha)"."; }
-#sec-dualpivot-5-1-2 > li { counter-increment: sec-dualpivot-5-1-2; }
-#sec-dualpivot-6-2-1-1-5 { counter-set: sec-dualpivot-6-2-1-1-5 0; }
-#sec-dualpivot-6-2-1-1-5 > li::marker { content: ""counter(sec-dualpivot-6-2-1-1-5,upper-alpha)"."; }
-#sec-dualpivot-6-2-1-1-5 > li { counter-increment: sec-dualpivot-6-2-1-1-5; }
-#sec-dualpivot-6-3-1-1-5 { counter-set: sec-dualpivot-6-3-1-1-5 0; }
-#sec-dualpivot-6-3-1-1-5 > li::marker { content: ""counter(sec-dualpivot-6-3-1-1-5,upper-alpha)"."; }
-#sec-dualpivot-6-3-1-1-5 > li { counter-increment: sec-dualpivot-6-3-1-1-5; }
-#exercises-duality-4-1-2 { counter-set: exercises-duality-4-1-2 0; }
-#exercises-duality-4-1-2 > li::marker { content: "("counter(exercises-duality-4-1-2,lower-alpha)")"; }
-#exercises-duality-4-1-2 > li { counter-increment: exercises-duality-4-1-2; }
-#activity-rowcol-2-1-3 { counter-set: activity-rowcol-2-1-3 0; }
-#activity-rowcol-2-1-3 > li::marker { content: ""counter(activity-rowcol-2-1-3,upper-alpha)"."; }
-#activity-rowcol-2-1-3 > li { counter-increment: activity-rowcol-2-1-3; }
-#activity-rowcol-4-1-2 { counter-set: activity-rowcol-4-1-2 0; }
-#activity-rowcol-4-1-2 > li::marker { content: ""counter(activity-rowcol-4-1-2,upper-alpha)"."; }
-#activity-rowcol-4-1-2 > li { counter-increment: activity-rowcol-4-1-2; }
-#activity-rowcol-5-1-3 { counter-set: activity-rowcol-5-1-3 0; }
-#activity-rowcol-5-1-3 > li::marker { content: ""counter(activity-rowcol-5-1-3,upper-alpha)"."; }
-#activity-rowcol-5-1-3 > li { counter-increment: activity-rowcol-5-1-3; }
-#activity-rowcol-7-1-2 { counter-set: activity-rowcol-7-1-2 0; }
-#activity-rowcol-7-1-2 > li::marker { content: ""counter(activity-rowcol-7-1-2,upper-alpha)"."; }
-#activity-rowcol-7-1-2 > li { counter-increment: activity-rowcol-7-1-2; }
-#sec-minmaxgames-7-3-1-2 { counter-set: sec-minmaxgames-7-3-1-2 0; }
-#sec-minmaxgames-7-3-1-2 > li::marker { content: ""counter(sec-minmaxgames-7-3-1-2,upper-alpha)"."; }
-#sec-minmaxgames-7-3-1-2 > li { counter-increment: sec-minmaxgames-7-3-1-2; }
-#exploration-vonneuman-2 { counter-set: exploration-vonneuman-2 0; }
-#exploration-vonneuman-2 > li::marker { content: ""counter(exploration-vonneuman-2,upper-alpha)"."; }
-#exploration-vonneuman-2 > li { counter-increment: exploration-vonneuman-2; }
-#sec-vonneumann-7-2-1-2 { counter-set: sec-vonneumann-7-2-1-2 0; }
-#sec-vonneumann-7-2-1-2 > li::marker { content: ""counter(sec-vonneumann-7-2-1-2,upper-alpha)"."; }
-#sec-vonneumann-7-2-1-2 > li { counter-increment: sec-vonneumann-7-2-1-2; }
-#sec-vonneumann-7-3-1-2 { counter-set: sec-vonneumann-7-3-1-2 0; }
-#sec-vonneumann-7-3-1-2 > li::marker { content: ""counter(sec-vonneumann-7-3-1-2,upper-alpha)"."; }
-#sec-vonneumann-7-3-1-2 > li { counter-increment: sec-vonneumann-7-3-1-2; }
-#sec-chance-4-2-1-2 { counter-set: sec-chance-4-2-1-2 0; }
-#sec-chance-4-2-1-2 > li::marker { content: ""counter(sec-chance-4-2-1-2,upper-alpha)"."; }
-#sec-chance-4-2-1-2 > li { counter-increment: sec-chance-4-2-1-2; }
-#def-vam-4-2 { counter-set: def-vam-4-2 0; }
-#def-vam-4-2 > li::marker { content: ""counter(def-vam-4-2,decimal)"."; }
-#def-vam-4-2 > li { counter-increment: def-vam-4-2; }
-#activity-transportalgorithm-2-1-2 { counter-set: activity-transportalgorithm-2-1-2 0; }
-#activity-transportalgorithm-2-1-2 > li::marker { content: ""counter(activity-transportalgorithm-2-1-2,upper-alpha)"."; }
-#activity-transportalgorithm-2-1-2 > li { counter-increment: activity-transportalgorithm-2-1-2; }
-#activity-transportalgorithm-7-1-2 { counter-set: activity-transportalgorithm-7-1-2 0; }
-#activity-transportalgorithm-7-1-2 > li::marker { content: ""counter(activity-transportalgorithm-7-1-2,upper-alpha)"."; }
-#activity-transportalgorithm-7-1-2 > li { counter-increment: activity-transportalgorithm-7-1-2; }
-#def-transportationalg-3-2 { counter-set: def-transportationalg-3-2 0; }
-#def-transportationalg-3-2 > li::marker { content: ""counter(def-transportationalg-3-2,decimal)"."; }
-#def-transportationalg-3-2 > li { counter-increment: def-transportationalg-3-2; }
-#def-hungarian-3-2 { counter-set: def-hungarian-3-2 0; }
-#def-hungarian-3-2 > li::marker { content: ""counter(def-hungarian-3-2,decimal)"."; }
-#def-hungarian-3-2 > li { counter-increment: def-hungarian-3-2; }
-#subsec-maxflow-3-4-1-2 { counter-set: subsec-maxflow-3-4-1-2 0; }
-#subsec-maxflow-3-4-1-2 > li::marker { content: ""counter(subsec-maxflow-3-4-1-2,upper-alpha)"."; }
-#subsec-maxflow-3-4-1-2 > li { counter-increment: subsec-maxflow-3-4-1-2; }
-#def-maxflowalgorithm-4-2 { counter-set: def-maxflowalgorithm-4-2 0; }
-#def-maxflowalgorithm-4-2 > li::marker { content: ""counter(def-maxflowalgorithm-4-2,decimal)"."; }
-#def-maxflowalgorithm-4-2 > li { counter-increment: def-maxflowalgorithm-4-2; }
-#def-mincutalgorithm-4-2 { counter-set: def-mincutalgorithm-4-2 0; }
-#def-mincutalgorithm-4-2 > li::marker { content: ""counter(def-mincutalgorithm-4-2,decimal)"."; }
-#def-mincutalgorithm-4-2 > li { counter-increment: def-mincutalgorithm-4-2; }
-#sec-weighted-8-2-2 { counter-set: sec-weighted-8-2-2 0; }
-#sec-weighted-8-2-2 > li::marker { content: ""counter(sec-weighted-8-2-2,upper-alpha)"."; }
-#sec-weighted-8-2-2 > li { counter-increment: sec-weighted-8-2-2; }
-#sec-weighted-8-3-1-2 { counter-set: sec-weighted-8-3-1-2 0; }
-#sec-weighted-8-3-1-2 > li::marker { content: ""counter(sec-weighted-8-3-1-2,upper-alpha)"."; }
-#sec-weighted-8-3-1-2 > li { counter-increment: sec-weighted-8-3-1-2; }
-#sec-weighted-8-4-1-2 { counter-set: sec-weighted-8-4-1-2 0; }
-#sec-weighted-8-4-1-2 > li::marker { content: ""counter(sec-weighted-8-4-1-2,upper-alpha)"."; }
-#sec-weighted-8-4-1-2 > li { counter-increment: sec-weighted-8-4-1-2; }
-#def-DijkstrasAlgorithm-4-2 { counter-set: def-DijkstrasAlgorithm-4-2 0; }
-#def-DijkstrasAlgorithm-4-2 > li::marker { content: ""counter(def-DijkstrasAlgorithm-4-2,decimal)"."; }
-#def-DijkstrasAlgorithm-4-2 > li { counter-increment: def-DijkstrasAlgorithm-4-2; }
-#def-otheralgorithm-4-2 { counter-set: def-otheralgorithm-4-2 0; }
-#def-otheralgorithm-4-2 > li::marker { content: ""counter(def-otheralgorithm-4-2,decimal)"."; }
-#def-otheralgorithm-4-2 > li { counter-increment: def-otheralgorithm-4-2; }
-#exploration-shipping-2-1-2 { counter-set: exploration-shipping-2-1-2 0; }
-#exploration-shipping-2-1-2 > li::marker { content: ""counter(exploration-shipping-2-1-2,upper-alpha)"."; }
-#exploration-shipping-2-1-2 > li { counter-increment: exploration-shipping-2-1-2; }
-#exploration-shipping-8-1-2 { counter-set: exploration-shipping-8-1-2 0; }
-#exploration-shipping-8-1-2 > li::marker { content: ""counter(exploration-shipping-8-1-2,upper-alpha)"."; }
-#exploration-shipping-8-1-2 > li { counter-increment: exploration-shipping-8-1-2; }
-#sec-weighted-16-2-1-2 { counter-set: sec-weighted-16-2-1-2 0; }
-#sec-weighted-16-2-1-2 > li::marker { content: ""counter(sec-weighted-16-2-1-2,upper-alpha)"."; }
-#sec-weighted-16-2-1-2 > li { counter-increment: sec-weighted-16-2-1-2; }
-#sec-weighted-16-3-1-2 { counter-set: sec-weighted-16-3-1-2 0; }
-#sec-weighted-16-3-1-2 > li::marker { content: ""counter(sec-weighted-16-3-1-2,upper-alpha)"."; }
-#sec-weighted-16-3-1-2 > li { counter-increment: sec-weighted-16-3-1-2; }
-#sec-weighted-16-4-1-2 { counter-set: sec-weighted-16-4-1-2 0; }
-#sec-weighted-16-4-1-2 > li::marker { content: ""counter(sec-weighted-16-4-1-2,upper-alpha)"."; }
-#sec-weighted-16-4-1-2 > li { counter-increment: sec-weighted-16-4-1-2; }
-#sec-weighted-16-5-1-2 { counter-set: sec-weighted-16-5-1-2 0; }
-#sec-weighted-16-5-1-2 > li::marker { content: ""counter(sec-weighted-16-5-1-2,upper-alpha)"."; }
-#sec-weighted-16-5-1-2 > li { counter-increment: sec-weighted-16-5-1-2; }
-#def-mincostflowalgorithm-4-2 { counter-set: def-mincostflowalgorithm-4-2 0; }
-#def-mincostflowalgorithm-4-2 > li::marker { content: ""counter(def-mincostflowalgorithm-4-2,decimal)"."; }
-#def-mincostflowalgorithm-4-2 > li { counter-increment: def-mincostflowalgorithm-4-2; }
-#sec-branchbound-5-2-1-2 { counter-set: sec-branchbound-5-2-1-2 0; }
-#sec-branchbound-5-2-1-2 > li::marker { content: ""counter(sec-branchbound-5-2-1-2,upper-alpha)"."; }
-#sec-branchbound-5-2-1-2 > li { counter-increment: sec-branchbound-5-2-1-2; }
-#activity-meat1-2-1-2 { counter-set: activity-meat1-2-1-2 0; }
-#activity-meat1-2-1-2 > li::marker { content: ""counter(activity-meat1-2-1-2,upper-alpha)"."; }
-#activity-meat1-2-1-2 > li { counter-increment: activity-meat1-2-1-2; }
-#def-branchbound-1-2 { counter-set: def-branchbound-1-2 0; }
-#def-branchbound-1-2 > li::marker { content: ""counter(def-branchbound-1-2,decimal)"."; }
-#def-branchbound-1-2 > li { counter-increment: def-branchbound-1-2; }
-#sec-cuttingplane-3-3 { counter-set: sec-cuttingplane-3-3 0; }
-#sec-cuttingplane-3-3 > li::marker { content: ""counter(sec-cuttingplane-3-3,upper-alpha)"."; }
-#sec-cuttingplane-3-3 > li { counter-increment: sec-cuttingplane-3-3; }
-#def-gomoryplane-2-2 { counter-set: def-gomoryplane-2-2 0; }
-#def-gomoryplane-2-2 > li::marker { content: ""counter(def-gomoryplane-2-2,decimal)"."; }
-#def-gomoryplane-2-2 > li { counter-increment: def-gomoryplane-2-2; }
-#sec-covermatch-5-3-1-2 { counter-set: sec-covermatch-5-3-1-2 0; }
-#sec-covermatch-5-3-1-2 > li::marker { content: ""counter(sec-covermatch-5-3-1-2,upper-alpha)"."; }
-#sec-covermatch-5-3-1-2 > li { counter-increment: sec-covermatch-5-3-1-2; }
-#sec-covermatch-8-3-1-2 { counter-set: sec-covermatch-8-3-1-2 0; }
-#sec-covermatch-8-3-1-2 > li::marker { content: ""counter(sec-covermatch-8-3-1-2,upper-alpha)"."; }
-#sec-covermatch-8-3-1-2 > li { counter-increment: sec-covermatch-8-3-1-2; }
-#sec-covermatch-8-4-1-2 { counter-set: sec-covermatch-8-4-1-2 0; }
-#sec-covermatch-8-4-1-2 > li::marker { content: ""counter(sec-covermatch-8-4-1-2,upper-alpha)"."; }
-#sec-covermatch-8-4-1-2 > li { counter-increment: sec-covermatch-8-4-1-2; }
-#activity-bp-3-1-2 { counter-set: activity-bp-3-1-2 0; }
-#activity-bp-3-1-2 > li::marker { content: ""counter(activity-bp-3-1-2,upper-alpha)"."; }
-#activity-bp-3-1-2 > li { counter-increment: activity-bp-3-1-2; }
-#activity-cyclefrac-3-1-2 { counter-set: activity-cyclefrac-3-1-2 0; }
-#activity-cyclefrac-3-1-2 > li::marker { content: ""counter(activity-cyclefrac-3-1-2,upper-alpha)"."; }
-#activity-cyclefrac-3-1-2 > li { counter-increment: activity-cyclefrac-3-1-2; }
-#activity-cyclefrac-8-1-2 { counter-set: activity-cyclefrac-8-1-2 0; }
-#activity-cyclefrac-8-1-2 > li::marker { content: ""counter(activity-cyclefrac-8-1-2,upper-alpha)"."; }
-#activity-cyclefrac-8-1-2 > li { counter-increment: activity-cyclefrac-8-1-2; }
-#activity-pathfrac-3-1-2 { counter-set: activity-pathfrac-3-1-2 0; }
-#activity-pathfrac-3-1-2 > li::marker { content: ""counter(activity-pathfrac-3-1-2,upper-alpha)"."; }
-#activity-pathfrac-3-1-2 > li { counter-increment: activity-pathfrac-3-1-2; }
-#activity-pathfrac-8-1-2 { counter-set: activity-pathfrac-8-1-2 0; }
-#activity-pathfrac-8-1-2 > li::marker { content: ""counter(activity-pathfrac-8-1-2,upper-alpha)"."; }
-#activity-pathfrac-8-1-2 > li { counter-increment: activity-pathfrac-8-1-2; }
-#activity-coverfrac-4-1-2 { counter-set: activity-coverfrac-4-1-2 0; }
-#activity-coverfrac-4-1-2 > li::marker { content: ""counter(activity-coverfrac-4-1-2,upper-alpha)"."; }
-#activity-coverfrac-4-1-2 > li { counter-increment: activity-coverfrac-4-1-2; }
-#activity-coverfrac-10-1-2 { counter-set: activity-coverfrac-10-1-2 0; }
-#activity-coverfrac-10-1-2 > li::marker { content: ""counter(activity-coverfrac-10-1-2,upper-alpha)"."; }
-#activity-coverfrac-10-1-2 > li { counter-increment: activity-coverfrac-10-1-2; }
-#def-vectorspace-1-2 { counter-set: def-vectorspace-1-2 0; }
-#def-vectorspace-1-2 > li::marker { content: ""counter(def-vectorspace-1-2,decimal)"."; }
-#def-vectorspace-1-2 > li { counter-increment: def-vectorspace-1-2; }
-#thm-indyspan-1-2 { counter-set: thm-indyspan-1-2 0; }
-#thm-indyspan-1-2 > li::marker { content: ""counter(thm-indyspan-1-2,decimal)"."; }
-#thm-indyspan-1-2 > li { counter-increment: thm-indyspan-1-2; }
-</style>
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.c2d04816128ebb44.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
 </head>
 <body id="changeme" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -380,7 +159,8 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="sec-networkflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-weighted.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+</script></span><span class="treebuttons"><a class="previous-button button" href="sec-networkflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-weighted.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
    \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
@@ -394,7 +174,7 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -412,9 +192,10 @@ true);
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-polyhedralconvex.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summarygeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Summary of Chapter 1</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Problems for Chapter 1</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -469,7 +250,7 @@ true);
 <div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">VonNeumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">von Neumann Minimax Theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Problems for Chapter 5</span></a></div>
@@ -499,9 +280,9 @@ true);
 <div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-networkflow.html#subsec-maxflow" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Max Flow</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Algorithms for Max Flow and Min Cut</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Algorithms for Max Flow and Min Cut</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
 <li class="toc-item toc-section">
@@ -531,6 +312,7 @@ true);
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-altduality.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Another Approach to Strong Duality</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -748,7 +530,7 @@ q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
