@@ -1,4 +1,4 @@
-:root {
+:root:not(.dark-mode) {
     --documenttitle: hsl(240, 28%, 31%);
     --bodytitle: hsl(51, 100%, 50%);
     --bodysubtitle: hsl(240, 50%, 34%);
