@@ -412,7 +412,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Summary of Chapter 1",
-  "body": " Summary of  We introduced some basic examples of linear optimization problems in and . In these examples, we were able to graphically analyze and show that they reach optimality, and that these optimal solutions occur on the boundary of the feasible region. This is an idea which is critical to the development of our theory.  To show that such a result may generalize, we introduce the notion of convexity  . A convex set is a set which contains every line segement between points in the set. We then show that a half-space was convex, that an intersection of halfspaces was convex, and thus the feasible region of a linear optimization problem is always convex.  Note then that for a linear function , that for any output of , , the equation form a plane in , and that for any lying on this plane, as well. We may increase the value of by moving in one of two direction orthogonal to this plane, until we reach the boundary. But even then, we can still increase the value of by moving along the boundary until we either fall on a subset of the boundary on which is constant, or a corner point also called an extreme point  .  Thus, if a linear optimization problem admits a maximum solution, it must do so at some extreme point. Each extreme point is an intersection of hyperplanes, but in with additional bounding hyperplanes, there could be intersections, not all of whom are feasible, and not all of whom are optimal. There is also no guarantee that a linear optimization problem admits an optimal solution at all. This motivates us to find a more systematic approach to obtaining optimal solutions.   A summary of Chapter 1    "
+  "body": " Summary of  We introduced some basic examples of linear optimization problems in and . In these examples, we were able to graphically analyze and show that they reach optimality, and that these optimal solutions occur on the boundary of the feasible region. This is an idea which is critical to the development of our theory.  To show that such a result may generalize, we introduce the notion of convexity  . A convex set is a set which contains every line segement between points in the set. We then show that a half-space was convex, that an intersection of halfspaces was convex, and thus the feasible region of a linear optimization problem is always convex.  Note then that for a linear function , that for any output of , , the equation form a plane in , and that for any lying on this plane, as well. We may increase the value of by moving in one of two direction orthogonal to this plane, until we reach the boundary. But even then, we can still increase the value of by moving along the boundary until we either fall on a subset of the boundary on which is constant, or a corner point also called an extreme point  .  Thus, if a linear optimization problem admits a maximum solution, it must do so at some extreme point. Each extreme point is an intersection of hyperplanes, but in with additional bounding hyperplanes, there could be intersections, not all of whom are feasible, and not all of whom are optimal. There is also no guarantee that a linear optimization problem admits an optimal solution at all. This motivates us to find a more systematic approach to obtaining optimal solutions.   A summary of Chapter 1.    "
 },
 {
   "id": "figure-videochapter1summary",
@@ -421,7 +421,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "1.4.1",
   "title": "",
-  "body": " A summary of Chapter 1   "
+  "body": " A summary of Chapter 1.   "
 },
 {
   "id": "sec-exercisesgeometric",
@@ -919,11 +919,56 @@ var ptx_lunr_docs = [
   "body": "  We can now tackle the problem posed in .    Encode the problem into Sage:     We can run the Simplex Algorithm:     We can also just say what the solution is:    "
 },
 {
+  "id": "sec-summarysimplex",
+  "level": "1",
+  "url": "sec-summarysimplex.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Summary of Chapter 2",
+  "body": " Summary of  We recall that the canonical linear optimization problem may be written as where the are called the slack variables for each constraint. We refer to the original as decision variables . We noted that by their construction, for any point , is zero if and only if lies on bounding hyperplane, and is positive if it is on the correct side of the bounding hyperplane.    An introduction to slack variables.     All of this information may be written in a condensed form, the Tucker tableau                                                                                                                                       We also noted that, although our inequalities and objective are written in terms of the , since we have the equality that we could rewrite this as: provided and this would allow us to rewrite all the pertinent equalities and inequalities replacing with . This process is called a pivot transformation  , where now is a decision variable and is a slack variable.  We note that by setting all the decision variables equal to zero, we obtain a potential solution called a basic solution and the pivot transformation is really moving from basic solution to basic solution. Assuming that all , the basic solutions are feasible, and we establish a rule to identify pivots. Picking a , we choose a positive entry minimizing the ratio . When each , we have obtained an optimal solution. This is summarized in the Simplex Algorithm  .    Pivot transformations and the simplex algorithm.     Note that a feasible region may be unbounded, which we may detect with seeing a column where each but each . However, this does not mean the objective function is unbounded. This only occurs when as well. Note that this is a sufficient, and not necessary condition.    Unbounded regions and objective functions.     Similarly, whenever , the basic solution is not feasible, but the problem may not be infeasible. The problem is only infeasible (i.e. the feasible region is empty) when for each in the same row. This is again sufficient but not necessary.    Infeasible basic solutions and feasible regions.     Finally, it is possible to pivot from basic solution to basic solution, represented as the intersection of different hyperplanes, but without actually changing the point in in a phenomena called cycling . We introduce and prove Bland's Anticyling Theorem  which shows that ordering the variables, and always using the first possible variable to break any ties, we may avoid this issue.  "
+},
+{
+  "id": "figure-videochapter2slack",
+  "level": "2",
+  "url": "sec-summarysimplex.html#figure-videochapter2slack",
+  "type": "Figure",
+  "number": "2.5.1",
+  "title": "",
+  "body": " An introduction to slack variables.   "
+},
+{
+  "id": "figure-videochapter2Tableau",
+  "level": "2",
+  "url": "sec-summarysimplex.html#figure-videochapter2Tableau",
+  "type": "Figure",
+  "number": "2.5.2",
+  "title": "",
+  "body": " Pivot transformations and the simplex algorithm.   "
+},
+{
+  "id": "figure-videochapter2Unbounded",
+  "level": "2",
+  "url": "sec-summarysimplex.html#figure-videochapter2Unbounded",
+  "type": "Figure",
+  "number": "2.5.3",
+  "title": "",
+  "body": " Unbounded regions and objective functions.   "
+},
+{
+  "id": "figure-videochapter2Infeasibility",
+  "level": "2",
+  "url": "sec-summarysimplex.html#figure-videochapter2Infeasibility",
+  "type": "Figure",
+  "number": "2.5.4",
+  "title": "",
+  "body": " Infeasible basic solutions and feasible regions.   "
+},
+{
   "id": "sec-exercisessimplex",
   "level": "1",
   "url": "sec-exercisessimplex.html",
   "type": "Section",
-  "number": "2.5",
+  "number": "2.6",
   "title": "Problems for Chapter 2",
   "body": " Problems for   The simplex pivoter may be found here:         Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .    Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .    For each of the following canonical maximization tableaus:    Write out the current basic solution.      Determine if the current basic solution is feasible.      Determine if the tableau detects that the feasible region is unbounded.      Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.      Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.     Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.     Identify all valid pivot entries.      Pivot on the entry corresponding to Bland's Anti-cycling rules.      Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            For each problem in solve these problems using the Simplex Algorithm.   Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                     For each problem in , sketch the feasible region and label the extreme points traversed by the Simplex Algorithm in order.   Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?   A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?   The canonical optimization problem below potentially cycles (due to H.W. Kuhn.). Solve the problem by using the Simplex Algorithm with Bland anti-cycling rules.                                                                                                                  Consider a tableau whose basic solution is feasible and optimal. Suppose each . Prove that this is the unique optimal solution if and only if each .   The following have multiple optimal solutions, use the Simplex Algorithm and then pivots to classify all the optimal solutions.                                                                                                                                                                              Consider a square tableau:                                                                                                                                    Suppose we perform pivots so we achieve a tableau of the form:                                                                                                                                      Let and . For each of the following matrices perform appropriate pivots to achieve and confirm .               Explain why in that in general.   Find neccesary and sufficient conditions for the minimization tableau                                                                                                               to have a feasible basic solution.   If a minimization tableau as depicted above has a feasible basic solution, must it also have a feasible basic maximum solution? Prove or find a counterexample.   Find neccesary and sufficient conditions for                                                                                                                      to encode feasible basic solutions for both it's maximization and minimization problems.   Prove that each tableau always encodes a unique basic solution by first showing that the default starting basic solution is unique, and then proving that each pivot preserves the uniqueness of the basic solution.   Note that each basic solution is the intersection of hyperplanes. What would it take for this to be empty or contain multiple points? Think in terms of linear (in)dependence and solving linear systems.     "
 },
@@ -932,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-1",
   "type": "Exercise",
-  "number": "2.5.1",
+  "number": "2.6.1",
   "title": "",
   "body": " Consider the tableau:                                                                    Write out the canonical maximization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical maximization problem in terms of the non-basic variables and the new basic solution in terms of .  "
 },
@@ -941,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-2",
   "type": "Exercise",
-  "number": "2.5.2",
+  "number": "2.6.2",
   "title": "",
   "body": " Consider the tableau:                                                                              Write out the canonical minimization problem encoded by the tableau.   State the basic solution for this tableau.   Determine if the basic solution is feasible.   Pivot on the entry .   Write out the new canonical minimization problem in terms of the non-basic variables and the new basic solution in terms of .  "
 },
@@ -950,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-3",
   "type": "Exercise",
-  "number": "2.5.3",
+  "number": "2.6.3",
   "title": "",
   "body": " For each of the following canonical maximization tableaus:    Write out the current basic solution.      Determine if the current basic solution is feasible.      Determine if the tableau detects that the feasible region is unbounded.      Determine if the tableau detects that the problem is infeasible. If so, ignore the rest of the prompts.      Determine if the tableau detects that the problem is unbounded. If so, ignore the rest of the prompts.     Determine if the current basic solution is optimal. If so, ignore the rest of the prompts.     Identify all valid pivot entries.      Pivot on the entry corresponding to Bland's Anti-cycling rules.      Write out the new basic solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           "
 },
@@ -959,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-4",
   "type": "Exercise",
-  "number": "2.5.4",
+  "number": "2.6.4",
   "title": "",
   "body": "For each problem in solve these problems using the Simplex Algorithm. "
 },
@@ -968,7 +1013,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#ex-solvesimplex",
   "type": "Exercise",
-  "number": "2.5.5",
+  "number": "2.6.5",
   "title": "",
   "body": " Solve the following using the Simplex Algorithm.                                                                                                                                                                                                                                                    "
 },
@@ -977,7 +1022,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-6",
   "type": "Exercise",
-  "number": "2.5.6",
+  "number": "2.6.6",
   "title": "",
   "body": "For each problem in , sketch the feasible region and label the extreme points traversed by the Simplex Algorithm in order. "
 },
@@ -986,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-7",
   "type": "Exercise",
-  "number": "2.5.7",
+  "number": "2.6.7",
   "title": "",
   "body": " Solve the following using the Simplex Algorithm.   A firm produces a rare blend of scotch whiskey. The blend must contain at least 42% alcohol, at least 25% Highland blend, and no more than 15% malt. Three distillery products can be combined for the blend.  Product A costs $12 a gallon, is 46% alcohol, 30% Highland blend and 10% malt. Product B costs $8 a gallon, is 40% alcohol, 20% Highland blend and 5% malt. Product C costs $14 a gallon, is 45% alcohol, 25% Highland blend and 2% malt.  How much of each product should be used to produce 100 gallons of blend at minimal cost?   A company produces three types of tires for the SUV market. In their manufacture, the tires are processed on two machines, a molder and a capper. Tire type A takes 8 hours in the molder, 4 on the capper and sells for $45. Tire type B takes 10 hours in the molder, 7 on the capper and sells for $50. Tire type C takes 5 hours in the molder, 6 on the capper and sells for $40. At least 75 of each type of tire needs to be made each week to fulfill current contracts. If 3000 hours are available each week for molders and 2700 for cappers, how many of each type of tire should be made each week to maximize revenue?  "
 },
@@ -995,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-8",
   "type": "Exercise",
-  "number": "2.5.8",
+  "number": "2.6.8",
   "title": "",
   "body": "The canonical optimization problem below potentially cycles (due to H.W. Kuhn.). Solve the problem by using the Simplex Algorithm with Bland anti-cycling rules.                                                                                                                 "
 },
@@ -1004,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-9",
   "type": "Exercise",
-  "number": "2.5.9",
+  "number": "2.6.9",
   "title": "",
   "body": "Consider a tableau whose basic solution is feasible and optimal. Suppose each . Prove that this is the unique optimal solution if and only if each . "
 },
@@ -1013,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-10",
   "type": "Exercise",
-  "number": "2.5.10",
+  "number": "2.6.10",
   "title": "",
   "body": " The following have multiple optimal solutions, use the Simplex Algorithm and then pivots to classify all the optimal solutions.                                                                                                                                                                            "
 },
@@ -1022,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#ex-invert",
   "type": "Exercise",
-  "number": "2.5.11",
+  "number": "2.6.11",
   "title": "",
   "body": " Consider a square tableau:                                                                                                                                    Suppose we perform pivots so we achieve a tableau of the form:                                                                                                                                      Let and . For each of the following matrices perform appropriate pivots to achieve and confirm .              "
 },
@@ -1031,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-12",
   "type": "Exercise",
-  "number": "2.5.12",
+  "number": "2.6.12",
   "title": "",
   "body": "Explain why in that in general. "
 },
@@ -1040,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-13",
   "type": "Exercise",
-  "number": "2.5.13",
+  "number": "2.6.13",
   "title": "",
   "body": " Find neccesary and sufficient conditions for the minimization tableau                                                                                                               to have a feasible basic solution.   If a minimization tableau as depicted above has a feasible basic solution, must it also have a feasible basic maximum solution? Prove or find a counterexample.   Find neccesary and sufficient conditions for                                                                                                                      to encode feasible basic solutions for both it's maximization and minimization problems.  "
 },
@@ -1049,7 +1094,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisessimplex.html#exercises-simplex-14",
   "type": "Exercise",
-  "number": "2.5.14",
+  "number": "2.6.14",
   "title": "",
   "body": "Prove that each tableau always encodes a unique basic solution by first showing that the default starting basic solution is unique, and then proving that each pivot preserves the uniqueness of the basic solution.   Note that each basic solution is the intersection of hyperplanes. What would it take for this to be empty or contain multiple points? Think in terms of linear (in)dependence and solving linear systems.   "
 },
