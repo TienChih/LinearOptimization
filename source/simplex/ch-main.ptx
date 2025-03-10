@@ -33,6 +33,7 @@
   <!--<xi:include href="sec-simplexmin.ptx" /> -->
   <xi:include href="sec-cycling.ptx" />
   <xi:include href="sec-simplexsage.ptx" /> 
+  <xi:include href="sec-summary.ptx" /> 
   <xi:include href="sec-exercises.ptx" /> 
 
 </chapter>

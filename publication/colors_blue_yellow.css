@@ -36,7 +36,7 @@
  and for knowl output
 */
 
-:root {
+:root:not(.dark-mode) {
   --documenttitle: #2a5ea4;
   --bodytitle: #2B5F82; 
   --bodysubtitle: #bf9000;

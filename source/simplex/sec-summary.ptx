@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-summarysimplex" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary of <xref ref="ch-simplex"/></title>
+
+  <p>
+    We recall that the canonical linear optimization problem
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0.</mrow>
+        </md>
+    may be written as
+        <md>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
+          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m+t_2\amp =  b_2</mrow>
+          <mrow> \vdots \amp   \vdots</mrow>
+          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m +t_n \amp =  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0.</mrow>
+        </md>
+    where the <m>t_i</m> are called the <em>slack variables</em> for each constraint.  We refer to the original <m>x_j</m> as
+    <em>decision variables</em>.  We noted
+    that by their construction, for any point <m>\x\in \mathbb{R}^m</m>, <m>t_i</m> is zero if and only if
+    <m>\x</m> lies on bounding hyperplane, and is positive if it is on the <q>correct</q> side of the bounding hyperplane.
+  </p>
+  <p>
+    <figure xml:id="figure-videochapter2slack">
+    <caption>An introduction to slack variables.</caption>
+    <video playat = "select" source = "images/Chapter2-Slack.mp4"/>
+  </figure>
+  </p>
+  <p>
+    All of this information may be written in a condensed form, the <em>Tucker tableau</em>
+    <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+  </p>
+  <p>
+    We also noted that, although our inequalities and objective are written in terms of the <m>x_j</m>,
+    since we have the equality <me>a_{i1}x_1+\cdots a_{ij}x_j+\cdots a_{im}x_m=b_i-t_i</me> that we could rewrite this as:
+    <me>x_j=\frac{1}{a_{ij}}\left( b_i-t_i-a_{i1}x_i-\cdots-a_{im}x_m \right)</me>  
+    provided <m>x_{ij}\neq0</m> and this would allow us to rewrite all the pertinent equalities and inequalities replacing <m>x_j</m>
+    with <m>t_i</m>.  This process is called a <em>pivot transformation</em> <xref ref="def-pivot"/>, where now
+    <m>t_i</m> is a decision variable and <m>x_j</m> is a slack variable.
+
+  </p>
+  <p>
+    We note that by setting all the decision variables equal to zero, we obtain a potential solution called
+    a <em>basic solution</em> and the pivot transformation is really moving from basic solution to basic solution.
+    Assuming that all <m>b_i\geq0</m>, the basic solutions are feasible, and we establish a rule to identify pivots.  Picking a
+    <m>c_j &gt; 0</m>, we choose a positive entry <m>a_{ij}</m> minimizing the ratio <m>\frac{b_i}{a_{ij}}</m>.
+    When each <m>c_j\leq 0</m>, we have obtained an optimal solution.  This is summarized in the <em>Simplex Algorithm</em> <xref ref="def-simplexmax"/>. 
+  </p>
+
+  <p>
+    <figure xml:id="figure-videochapter2Tableau">
+    <caption>Pivot transformations and the simplex algorithm.</caption>
+    <video playat = "select" source = "images/Chapter2-Tableau.mp4"/>
+    </figure>
+  </p>
+
+  <p>
+    Note that a feasible region may be unbounded, which we may detect with seeing a column <m>j</m>
+    where each <m>a_{ij} \leq 0</m> but each <m>b_i\geq 0</m>.  However, this does not mean the objective function
+    is unbounded.  This only occurs when <m>c_j &lt; 0</m> as well.  Note that this is a sufficient, and not 
+    necessary condition.
+  </p>
+
+  <p>
+    <figure xml:id="figure-videochapter2Unbounded">
+    <caption>Unbounded regions and objective functions.</caption>
+    <video playat = "select" source = "images/Chapter2-Unbounded.mp4"/>
+    </figure>
+  </p>
+
+  <p>
+    Similarly, whenever <m>b_i &lt; 0</m>, the basic solution is not feasible, but the problem
+    may not be infeasible.  The problem is only infeasible (i.e. the feasible region is empty) when 
+    <m>a_{ij}\leq0</m> for each <m>a_{ij}</m> in the same row.  This is again sufficient but not necessary.
+  </p>
+
+  <p>
+    <figure xml:id="figure-videochapter2Infeasibility">
+    <caption>Infeasible basic solutions and feasible regions.</caption>
+    <video playat = "select" source = "images/Chapter2-Infeasibility.mp4"/>
+    </figure>
+  </p>
+
+  <p>
+    Finally, it is possible to pivot from basic solution to basic solution, represented as the intersection of
+    different hyperplanes, but without actually changing the point in <m>\mathbb{R}^m</m> in a phenomena called <em>cycling </em>.
+    We introduce and prove <em>Bland's Anticyling Theorem</em> <xref ref="thm-BlandAnticycling"/> which shows that
+    ordering the variables, and always using the first possible variable to break any ties, we may avoid this issue.
+  </p>
+
+    
+  
+
+
+
+  
+
+</section>
