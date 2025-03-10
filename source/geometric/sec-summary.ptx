@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-summarygeometric" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary of <xref ref="ch-geometric"/></title>
+
+  <p>
+    We introduced some basic examples of linear optimization problems in
+    <xref ref="activity-exampleart"/> and <xref ref="activity-examplediet"/>.  In these
+    examples, we were able to graphically analyze and show that they reach optimality,
+    and that these optimal solutions occur on the boundary of the feasible region.
+    This is an idea which is critical to the development of our theory.
+  </p>
+
+  <p>
+    To show that such a result may generalize, we introduce the notion of
+    <em>convexity</em> <xref ref="def-convex"/>.  A convex set is a set which contains every
+    line segement between points in the set.  We then show that a half-space was convex,
+    that an intersection of halfspaces was convex, and thus the feasible region of a linear optimization 
+    problem is always convex.
+  </p>
+
+  <p>
+    Note then that for a linear function <m>f(x_1, x_2, \ldots x_n)=\displaystyle \sum_{j=1}^m c_j x_j</m>,
+    that for any output of <m>f</m>, <m>k</m>, the equation <me> \displaystyle \sum_{j=1}^m c_j x_j =k</me>
+    form a plane in <m>\mathbb{R}^n</m>, and that for any <m>\x'</m> lying on this plane, <m>f(\x')=k</m> as well.
+    We may increase the value of <m>k</m> by moving in one of two direction orthogonal to this
+    plane, until we reach the boundary.  But even then, we can still increase the value of <m>k</m> by moving along the boundary until
+    we either fall on a subset of the boundary on which <m>f</m> is constant, or a corner point also called
+    an <em>extreme point</em> <xref ref="def-extremepoint"/>.
+  </p>
+
+  <p>
+    Thus, if a linear optimization problem admits a maximum solution, it must do so at some extreme point.
+    Each extreme point is an intersection of hyperplanes, but in <m>\mathbb{R}^m</m> with <m>k</m> additional
+    bounding hyperplanes, there could be <m>{m+k\choose m}</m> intersections, not all of whom
+    are feasible, and not all of whom are optimal.  There is also no guarantee that a linear
+    optimization problem admits an optimal solution at all.  This motivates us to find a more
+    systematic approach to obtaining optimal solutions.
+  </p>
+
+  <figure xml:id="figure-videochapter1summary">
+    <caption>A summary of Chapter 1</caption>
+    <video playat = "select" source = "images/Chapter1Summary.mp4"/>
+  </figure>
+  
+
+
+
+  
+
+</section>

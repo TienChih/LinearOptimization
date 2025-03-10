@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-vonneumann" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>VonNeumann Minimax Theorem</title>
-  <idx>VonNeumann minimax theorem</idx>
-  <idx>theorem, VonNeumann minimax</idx>
+  <title>von Neumann Minimax Theorem</title>
+  <idx>von Neumann minimax theorem</idx>
+  <idx>theorem, von Neumann minimax</idx>
 
   <introduction>
     <p>
@@ -419,7 +419,8 @@
     <task>
       <statement>
         <p>
-          Argue why, for an optimal solutions to the primal and dual problem, we have that <m>\ec{u^*}, \ec{v^*} > 0</m>.
+          For each row and column strategy, we have expected row winnings, <m>\ec{u}, \ec{v}</m> respectively.
+          Why are these always positive?
         </p>
       </statement>
     </task>
@@ -488,7 +489,7 @@
       <statement>
         <p>
           What does the Strong Duality Theorem <xref ref="thm-strongduality"/> say about the optimal solutions to
-          both problems?  What in turn, does that say about <m>\ec{u^*}, \ec{v^*}</m>?
+          both problems?  What in turn, does that say about <m>\ec{u}, \ec{v}</m>?
         </p>
       </statement>
     </task>
@@ -530,7 +531,7 @@
 
 
   <theorem xml:id="thm-vonneumann">
-    <title>VonNeumann's Minimax Theorem</title>
+    <title>von Neumann's Minimax Theorem</title>
     <statement>
       <p>
         Let <m>A</m> be a payoff matrix and <m>\p, \q</m> represent
@@ -542,7 +543,7 @@
         <me>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q = \displaystyle \min_{1\leq i\leq n}A_{(i)}\q = \p'^\top A\q' = \max_{1\leq j\leq m}\p^\top A^{(j)} = \max_{\p \in F_{\p}} \p^\top A\q'.</me>
       </p>
       <p>
-        We call this value described the <em>VonNeumann Value</em> of the game.
+        We call this value described the <em>von Neumann Value</em> of the game.
       </p>
     </statement>
   </theorem>

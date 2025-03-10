@@ -399,8 +399,10 @@
       </p>
     </statement>
   </corollary>
-
-  <theorem xml:id="thm-strongduality">
+  <p>
+    Recall the Strong Duality Theorem <xref ref="thm-strongduality"/>.
+  </p>
+  <theorem xml:id="thm-altstrongduality">
     <title>The Strong Duality Theorem</title>
     <idx>strong duality theorem</idx>
     <idx>theorem, strong duality</idx>
@@ -419,7 +421,7 @@
   
     <introduction>
       <p>
-        We finally prove <xref ref="thm-strongduality"/>.
+        We  provide an alternate proof of <xref ref="thm-strongduality"/> in this activity.
       </p>
     </introduction>
     <task>

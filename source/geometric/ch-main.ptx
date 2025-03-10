@@ -23,6 +23,7 @@
   <xi:include href="sec-intro.ptx" />
   <xi:include href="sec-initialexamples.ptx" />
   <xi:include href="sec-polyhedralconvex.ptx" />
+  <xi:include href="sec-summary.ptx" />
   <xi:include href="sec-exercises.ptx" />
   
 

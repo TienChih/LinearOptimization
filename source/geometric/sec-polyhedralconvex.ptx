@@ -133,7 +133,7 @@
     <statement>
       <p>
         <idx>line segment</idx>
-        Given <m>\p, \q\in \mathbb{R}^n</m>, we call the set <m>\{t\cdot \p+(1-t)\cdot \q : t\in [0,1]\}</m> the
+        Given <m>\p, \q\in \mathbb{R}m</m>, we call the set <m>\{t\cdot \p+(1-t)\cdot \q : t\in [0,1]\}</m> the
         <term>line segment</term> between <m>\p</m> and <m>\q</m>.
       </p>
     </statement>
@@ -143,7 +143,7 @@
     <statement>
       <p>
         <idx>convex</idx>
-        Let <m>S\subseteq \mathbf{R}^n</m>, we say that <m>S</m> is <term>convex</term> if given any <m>\p, \q\in S</m>,
+        Let <m>S\subseteq \mathbf{R}^m</m>, we say that <m>S</m> is <term>convex</term> if given any <m>\p, \q\in S</m>,
         <m>S</m> also contains the line segment between <m>\p, \q</m>.
       </p>
     </statement>
@@ -205,15 +205,15 @@
     <introduction>
       <statement>
         <p>
-          Let <m>S\subseteq \mathbb{R}^n</m> be defined by <m>S:=\{\mathbf{x}\in \mathbb{R}^n: a_1x_1+a_2x_2+\cdots a_nx_n\leq b\}</m> for some 
-          <m>a_i, b\in \mathbb{R}</m> (ie <m>S</m> is a half-space of <m>\mathbb{R}^n</m>).
+          Let <m>S\subseteq \mathbb{R}^m</m> be defined by <m>S:=\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m\leq b\}</m> for some 
+          <m>a_i, b\in \mathbb{R}</m> (ie <m>S</m> is a half-space of <m>\mathbb{R}^m</m>).
         </p>
       </statement>
     </introduction>
     <task>
       <statement>
         <p>
-          Let <m>f(\mathbf{x}):\mathbb{R}^n\to \mathbb{R},  (x_1, x_2, \ldots, x_n)\mapsto a_1x_1+a_2x_2+\cdots a_nx_n</m>.  Explain why 
+          Let <m>f(\mathbf{x}):\mathbb{R}^m\to \mathbb{R},  (x_1, x_2, \ldots, x_m)\mapsto a_1x_1+a_2x_2+\cdots a_mx_m</m>.  Explain why 
           <m>f(c\mathbf{x})=cf(\mathbf{x})</m> for any <m>c\in \mathbb{R}</m>.
         </p>
       </statement>
@@ -433,7 +433,7 @@
       <p>
         <idx>extreme point</idx>
         <idx>corner point</idx>
-        Let <m>S\subseteq \mathbb{R}^n</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <term>extreme point</term> of <m>S</m> if there are no 
+        Let <m>S\subseteq \mathbb{R}^m</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <term>extreme point</term> of <m>S</m> if there are no 
         <m>\mathbf{x}, \mathbf{y}\in S</m> so that <m>\mathbf{e}\in \{t\cdot \mathbf{x}+(1-t)\cdot \mathbf{y} : t\in (0,1)\}</m>.
         <!--
         TYPO
@@ -487,7 +487,7 @@
     <title>Extreme Value Theorem</title>
     <statement>
       <p>
-        If <m>S\subseteq \mathbb{R}^n</m> is a closed and bounded region, and
+        If <m>S\subseteq \mathbb{R}^m</m> is a closed and bounded region, and
         <m>f:S\to \mathbb{R}</m> is a continuous function.  Then there are
         <m>\x_1, \x_2\in S</m> such that <m>f(\x_1)\geq f(\x)</m> and <m>f(\x_2)\leq f(\x)</m>
         for every <m>\x\in S</m>.
@@ -495,7 +495,7 @@
     </statement>
   </theorem>
   <p>
-    (We will assume without proof that linear functions <m>f:\mathbb{R}^n\to \mathbb{R}</m>
+    (We will assume without proof that linear functions <m>f:\mathbb{R}^m\to \mathbb{R}</m>
   are continuous, and that the feasible region of a linear optimization problem is always closed.)
   </p>
   
@@ -591,14 +591,14 @@
     <task>
       <statement>
         <p>
-          In <m>\mathbb{R}^n</m> How many <m>n-1</m> dimensional hyperplanes are needed to intersect so their intersection is a unique point?
+          In <m>\mathbb{R}^m</m> How many <m>m-1</m> dimensional hyperplanes are needed to intersect so their intersection is a unique point?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Suppose a canonical linear programming problem in <m>\mathbb{R}^n</m> is bounded by the usual <m>n</m> hyperplanes corresponding to <m>x_i\geq 0</m>
+          Suppose a canonical linear programming problem in <m>\mathbb{R}^m</m> is bounded by the usual <m>m</m> hyperplanes corresponding to <m>x_i\geq 0</m>
           as well as <m>k</m> additional hyperplanes.  How many potential points of intersection could there be?
         </p>
         <ol marker="A." cols="2">
@@ -609,22 +609,22 @@
           </li>
           <li>
             <p>
-              <m>{n\choose k}.</m>
+              <m>{m\choose k}.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{n+k\choose k}.</m>
+              <m>{m+k\choose k}.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{k\choose n}.</m>
+              <m>{k\choose m}.</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{n+k\choose n}.</m>
+              <m>{m+k\choose n}.</m>
             </p>
           </li>
         </ol>
