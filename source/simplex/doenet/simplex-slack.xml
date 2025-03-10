@@ -1,0 +1,36 @@
+<graph xmin="-0.2" ymin="-0.2" xmax="1.8" ymax="1.8">
+  <polygon vertices="(0,0) (0, 1.6) (1,1) (1.5,0)" filled draggable="false" styleNumber="4"/>
+  <point name="u" styleNumber="5">
+      (0,0)
+    <constraints>
+      <attractTo threshold="0.1"><point>(0,0)</point></attractTo>
+      <attractTo threshold="0.1"><point>(0,1.6)</point></attractTo>
+      <attractTo threshold="0.1"><point>(1,1)</point></attractTo>
+      <attractTo threshold="0.1"><point>(1.5,0)</point></attractTo>
+    </constraints>
+  </point>
+  <m draggable="false" anchor="($u.x+0.1,$u.y+0.11)">
+      $u
+    </m>
+
+  <line name="line1" applyStyleToLabel styleNumber="1"  equation="3x + 5y = 8">
+    <label><m>3x+5y=8</m></label>
+  </line>
+
+
+  <line name="line2" applyStyleToLabel styleNumber="3"  equation="2x + y = 3">
+    <label><m>2x+y=3</m></label>
+  </line>
+</graph>
+
+<p>
+  <m>x= <number>$u.x</number>, y= <number>$u.y</number></m>
+</p>
+
+<p>
+  <m>t_1= 8-3(<number>$u.x</number>)-5(<number>$u.y</number>)=<number>8-3*$u.x-5*$u.y</number></m>
+</p>
+
+<p>
+  <m>t_2= 3-2(<number>$u.x</number>)-(<number>$u.y</number>)=<number>3-2*$u.x-1*$u.y</number></m>
+</p>

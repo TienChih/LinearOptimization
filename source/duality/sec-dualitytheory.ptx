@@ -100,17 +100,503 @@
         we have that <me>f\leq g.</me>
       </p>
       <p>
-        In particular, if there is a feasible primal solution <m>\x'</m> and feasible dual solution <m>\y'</m> such that
-        <me>f(\x')=g(\y')</me> then <m>\x', \y'</m> are optimal solutions for the primal and dual problems respectively.  
+        In particular, if there is a feasible primal solution <m>\x^*</m> and feasible dual solution <m>\y^*</m> such that
+        <me>f(\x^*)=g(\y^*)</me> then <m>\x^*, \y^*</m> are optimal solutions for the primal and dual problems respectively.  
       </p>
     </statement>
   </proposition>
 
   <p>
     We have now that if <m>f=g</m> for a pair of feasible solutions, then we have optimality
-    for both problems.  It would be good if the converse were also true.
+    for both problems.  It would be good if the converse were also true.  This is encapsulated by the following
+    theorem.
   </p>
 
+  <theorem xml:id="thm-strongduality">
+    <title>The Strong Duality Theorem</title>
+    <idx>strong duality theorem</idx>
+    <idx>theorem, strong duality</idx>
+    <statement>
+      <p>
+        Given a pair of primal max-dual min problems, the primal max problem as an optimal solution 
+        <m>\x^*</m> if and only if the dual min problem has an optimal solution <m>\y^*</m>.  Moreover,
+        <m>f(\x^*)=g(\y^*)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    To prove this, we recall the idea we explored in <xref ref="sec-sensitivity"/>
+    that dual variables were coefficients or weights of normal variables of the bounding
+    hyperplanes.
+  </p>
+
+  <activity xml:id = "activity-sampleSD">
+    <introduction>
+      <p>
+        Before we delve into the proof, we illustrate the idea with a constrained case.  Consider a canonical optimization problem captured by the following tableau (we assume for simplicities sake to let <m>d=0</m>):
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_4</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>a_{13}</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{14}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>a_{23}</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{24}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{13}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{23}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{33}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{43}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_3</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_3</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_3</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_4</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      <p>
+        Which after pivoting achieves optimality with the following tableau:
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>t_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_3</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}^*</m>
+            </cell>
+            <cell>
+              <m>a_{12}^*</m>
+            </cell>
+            <cell>
+              <m>a_{13}^*</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{14}^*</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1^*</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_4</m>
+            </cell>
+          </row>
+
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}^*</m>
+            </cell>
+            <cell>
+              <m>a_{22}^*</m>
+            </cell>
+            <cell>
+              <m>a_{23}^*</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{24}^*</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2^*</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{13}^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{23}^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{33}^*</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{43}^*</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_3^*</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_3^*</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_4^*</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d^*</m>
+            </cell>
+            <cell halign="left">
+              <m>=f</m>
+            </cell>
+          </row>
+        </tabular>
+      </p>
+      
+
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Let <m>y_i^*=-c^*_?</m> if <m>c_?^*</m> is the coefficient for <m>t_i</m>
+          in the optimal tableau, and let <m>y^*_i=0</m> otherwise.  Similarly let 
+          <m>s_j^*=-c^*_?</m> if <m>c_?^*</m> is the coefficient for <m>x_j</m>
+          in the optimal tableau, and let <m>s^*_j=0</m> otherwise.
+        </p>
+        <p>
+          Recall that the optimal tableau represents a reformulation of the original
+          problem where  <m>f=c_1x_1+c_2x_2+c_3x_3+c_4x_4</m> is instead rewritten as
+          <m>f=c_1^*t_3+c_2^*x_3+c_3^*x_1+c_4^*t_2-d^*</m>.
+
+        </p>
+        <p>
+          Why must <me>\displaystyle \sum_{j=1}^4 c_jx_j =  \sum_{i=1}^4y_i^*(-t_i) + \sum_{j=1}^4 s_i^*(-x_i)-d^*?</me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use the fact that <m>t_i = b_i-\left(\displaystyle \sum_{j=1}^4 a_{ij}x_j\right)</m>
+          to rewrite the above equality without <m>t_i</m>'s.  Regroup the right hand side so we have the form:
+          <me>\displaystyle \sum_{j=1}^4 c_jx_j = (\text{linear function in terms of }x_j\text{'s})+(\text{constant}).</me>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Recall that the above equality we established is an equality
+          <em>as functions of the <m>x_j</m>'s </em>.  What must be the constant portion
+          of the right hand side be equal to?  What must the linear function in terms of <m>x_j</m>'s 
+          on the right hand side be equal to?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Prove that <m>g(\y^*)=\displaystyle \sum_{i=1}^3 y_i^*b_i=-d^*.</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We now need to show that these <m>y_i^*</m>'s we found is a feasible
+          solution to the dual problem.  Why do we have that <m>c_j = \displaystyle \sum_{i=1}^4 y_i^*a_{ij}-s_j^*</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Why is each <m>y_i^*, s_j^*\geq 0</m>?  Why does this show that <m>\displaystyle \sum_{i=1}^4 y_i^*a_{ij} \geq c_j</m>?
+          This shows that <m>s_j</m>'s are non-negative slack variables for the <m>y_i</m> and
+          that the <m>y_i^*</m>'s are a feasible solution.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show by Weak Duality <xref ref="prop-weakduality"/> that the <m>y_i^*</m>'s
+          are an optimal dual solution.
+        </p>
+      </statement>
+    </task>
+    
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        Adopt the arguments of <xref ref="activity-sampleSD"/> to prove 
+        the Strong Duality Theorem <xref ref="thm-strongduality"/> for a general
+        primal-dual optimization problem
+        <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>0</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+        which also achieves optimality for some general tableau.
+      </p>
+      <p>
+        Use the facts that <me>\displaystyle \sum_{j=1}^m c_jx_j =  \sum_{i=1}^ny_i^*(-t_i) + \sum_{j=1}^m s_i^*(-x_i)-d^*,</me>
+        that <m>t_i = b_i-\left(\displaystyle \sum_{j=1}^n a_{ij}x_j\right)</m>, and  by construction
+        each <m>y_i^*, s_j^*\geq0</m>.
+      </p>
+    </statement>
+  </activity>
+
+  <p>
+    An alternative approach to proving this theorem is provided in <xref ref="sec-altduality"/>.
+  </p>
+
+
+  <!-- 
   <theorem xml:id="thm-hyperplaneseperation">
     <title>Hyperplane Seperation Theorem</title>
     <idx>hyperplane seperation theorem</idx>
@@ -593,7 +1079,7 @@
         </p>
       </statement>
     </task>
-  </activity>
+  </activity> -->
 
   <activity>
     <title>Complementary Slackness</title>
@@ -613,7 +1099,7 @@
     <task>
       <statement>
         <p>
-          Suppose <m>\x</m> is a  feasible extreme point, and <m>\y, \vt</m> are the corresponding coefficients for the normal vectors.   If <m>x_j\neq 0</m>, what does that
+          Suppose <m>\x</m> is a  feasible extreme point, and <m>\y, \vs</m> are the corresponding coefficients for the normal vectors.   If <m>x_j\neq 0</m>, what does that
           say about <m>s_j</m>?
         </p>
         <hint>
@@ -633,7 +1119,17 @@
     <task>
       <statement>
         <p>
-          If <m>\x_*, \y_*</m> are feasible optimal solutions with slack variables <m>\vt_*, \vs_*</m>, what must be true about <m>\x_*^\top\vs_* + \y_*^\top\vt_*</m>?
+          Give an example of a linear optimization primal-dual problem, and feasible solutions 
+          <m>\x, \y</m> with slack variables <m>\vt, \vs</m> where <m> \vs^\top\x + \y^\top\vt &gt; 0</m>.
+        </p>
+        
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          If <m>\x^*, \y^*</m> are feasible optimal solutions with slack variables <m>\vt^*, \vs^*</m>, what must be true about <m>(\vs^*)^\top\x^* + (\y^*)^\top\vt^*</m>?
         </p>
       
       </statement>
@@ -646,7 +1142,7 @@
     <idx>complementary slackness</idx>
     <statement>
       <p>
-        Feasible variables <m>\x, \y, \vs, \vt </m> are said to exhibit <term>complementary slackness</term> if 
+        Feasible variables <m>\x, \y</m> with slack variables <m> \vs, \vt </m> are said to exhibit <term>complementary slackness</term> if 
           <m>\vs^\top\x=0, \y^\top\vt=0</m>.
           
       </p>

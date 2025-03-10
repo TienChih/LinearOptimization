@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-altduality" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Another Approach to Strong Duality</title>
+  <idx>strong duality</idx>
+  <introduction>
+    <p>
+      In this section, we provide an alternative approach to proving
+      the Strong Duality Theorem <xref ref="thm-strongduality"/>.
+    </p>
+  </introduction>
+
+  
+  <theorem xml:id="thm-hyperplaneseperation">
+    <title>Hyperplane Seperation Theorem</title>
+    <idx>hyperplane seperation theorem</idx>
+    <idx>theorem, hyperplane seperation</idx>
+    
+    
+    <statement>
+      <p>
+        Given two disjoint convex sets <m>U, V\subseteq \R^{n}</m>, there is a hyperplane
+        <m>H=\{\mathbf{x}\in \R^n: \mathbf{h}^{\top}\mathbf{x}=k\} </m> for some <m>\mathbf{h}\in \R^n, k\in \R</m>, such that
+        <m>\mathbf{h}^{\top}U \geq k, \mathbf{h}^{\top}V\lt k</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    <task>
+      <statement>
+        <p>
+          Sketch two non-empty convex sets <m>U, V</m>, what does <m>H</m> look like here?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Sketch two non-convex sets where <xref ref="thm-hyperplaneseperation"/> fails.
+        </p>
+      </statement>
+    </task>
+  </activity>
+  
+
+  <activity>
+    <introduction>
+      <p>
+        We prove the case of <xref ref="thm-hyperplaneseperation"/> where there are <m>u_0\in U, v_0\in V</m>
+        that minimize <m>\{\|u-v\|: u\in U, v\in V\}</m>. We assume this is true.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Without loss of generality, let <m>v_0=0</m>.  Why can we do this?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\mathbf{h} = u_0-v_0</m>.  Sketch <m>u_0, v_0, \mathbf{h}</m> and <m>H:=\{\mathbf{x}\in \R^n: \mathbf{h}^\top \mathbf{x}=0\}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We want to show that <m>H</m> is the seperating hyperplane.  Suppose that <m>U</m> was not contained in <m>\{\mathbf{x}\in \R^n: \mathbf{h}^\top\mathbf{x}\geq0\}</m> what must be true about <m>U</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>u'\in U</m> such that <m>\mathbf{h}^\top u'\leq0</m>.  Sketch <m>u'</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\mathbf{d} = u'-u_0</m> decribe geometrically what <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m> represents.  (Think dot product, projections and for <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m>
+          to start at <m>u</m>).
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>\alpha = \frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}</m>, show that <m>0\lt \alpha \lt 1</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>w=\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u_0</m>, show that <m> w = \alpha u' + (1-\alpha)u_0</m> 
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that <m>w\in U</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that <m>w^\top w = u_0^\top u_0 + \alpha \mathbf{d}^\top \mathbf{d}\left(2 \frac{u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}+\alpha\right)</m>, and explain why 
+          <m>w^\top w \lt u_0^\top u_0</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Why does the last statement result in a contradiction?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    We now introduce a key idea which will tie together the primal and dual problems.
+  </p>
+
+  <definition xml:id="def-cone">
+    <idx>cone</idx>
+    <statement>
+      <p>
+        Let <m>S\subseteq \R^n</m>.  We call the <term>cone</term> of <m>S</m>,
+        denoted <m>\cone(S)</m> to be the set <m>\cone(S):=\left\{\displaystyle \sum_{i=1}^m u_i\mathbf{s}_i: u_i\in \R, u_i\geq 0, \mathbf{s}_i\in S \right\}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <activity xml:id="activity-cone">
+    <task>
+      <statement>
+        <p>
+          In <m>\R^2</m>, describe <m>\cone\left( \left\{ \begin{bmatrix} 1\\1\end{bmatrix}, \begin{bmatrix} 1\\-2\end{bmatrix} \right\}  \right)</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Prove that for any <m>S\subseteq \R^n, \cone(S)</m> is convex.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>A</m> denote a <m>n\times m</m> matrix, and let <m>P</m> denote the cone of the columns of <m>A</m>.
+        </p>
+        <p>
+          Suppose <m>\mathbf{b}\not\in P</m>.  What does <xref ref="thm-hyperplaneseperation"/> tell us?
+        </p>  
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    We can codify the intuition gained from <xref ref="activity-cone"/> in the following:
+  </p>
+
+  <theorem xml:id="thm-farkas">
+    <idx>Farkas lemma</idx>
+    <title>The Farkas Lemma</title>
+    
+    
+    <statement>
+      <p>
+        Given a matrix <m>A\in \R^{n\times m}</m> and vector <m>\mathbf{b}\in \R^n</m>, exactly one of the
+        following is true:
+      </p>
+      <ol marker="A.">
+        <li>
+          <p>
+            There is a <m>\mathbf{x}\in \R^m</m> such that <m>\mathbf{x}\geq \mathbf{0}</m> and <m>A\mathbf{x}=\mathbf{b}.</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            There is a <m>\mathbf{y}\in \R^n</m> such that <m>\y^\top \vb\lt 0</m> and <m>\y^\top A \geq \mathbf{0}</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </theorem>
+
+  <activity>
+    <introduction>
+      <p>
+        We prove <xref ref="thm-farkas"/> and a useful corollary.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Recall <xref ref="activity-cone"/> (c).  How do the cases (A) and (B)
+          of <xref ref="thm-farkas"/> relate to the cone <m>P</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose both cases (A) and (B)
+          of <xref ref="thm-farkas"/> held at the same time.  
+          use the product <m>\y^\top A\x</m> to derive a contradiction.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If <xref ref="thm-farkas"/> (A) were true, what could we say about (B)?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose <xref ref="thm-farkas"/> (A) were false.  We want to prove that (B) is true.  What does 
+          <xref ref="activity-cone"/> (c) tell us?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let's   denote the normal vector of the seperating hyperplane by <m>\y</m> (interesting choice &#128064;) so that <m>\y^\top \vb\lt \y^\top p</m> for any <m>p\in P</m>.
+          Why must <m>\y^\top \vb \lt 0</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose <m>A</m> had a column <m>A_j</m> such that <m>\y^\top A_j\lt 0</m>, show that there is an <m>\alpha>0</m>
+          such that <m>\y^\top (\alpha A_j)\lt \y^\top \vb </m>.  Why is this a contradiction?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Why is <xref ref="thm-farkas"/> (B) proven?  Why is then <xref ref="thm-farkas"/> proven?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Now that <xref ref="thm-farkas"/> is proven, we apply it to <m>\begin{bmatrix} A \amp I_n \end{bmatrix}  </m> and <m> \vb </m>.
+        </p>
+        <p>
+          Suppose (A) held, and we had that there was a <m>\begin{bmatrix} \x \\ \vt\end{bmatrix} \geq 0</m> so that
+          <m>\begin{bmatrix} A \amp I_n \end{bmatrix} \begin{bmatrix} \x \\ \vt\end{bmatrix} = \vb </m>.  How would <m>A\x</m> compare to <m>\vb </m>?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>A\x\leq \vb</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\x\geq \vb</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>A\x= \vb</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>A\x</m> and <m>\vb</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose (A) failed.  Then there is a <m>\y\in \R^n</m> satisfing (B) for <m>\begin{bmatrix} A \amp I_n \end{bmatrix}, \vb </m>.
+        </p>
+        <p>
+            What can we say about <m>\y </m> compared to <m>\mathbf{0}</m>?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\y^\top \leq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top \geq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top  = \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>\y</m> and <m>\mathbf{0}p</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+            What can we say about <m>\y^\top A</m> compared to <m>\mathbf{0}</m>?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\y^\top A\leq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top A\geq \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top A = \mathbf{0}^\top</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>\y^\top A</m> and <m>\mathbf{0}^\top</m>.
+            </p>
+          </li>
+        </ol>
+        <p>
+            What can we say about <m>\y^\top \vb</m> compared to <m>0</m>?
+        </p>
+        <ol cols="2" marker="A.">
+          <li>
+            <p>
+              <m>\y^\top \vb\leq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top \vb\geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\y^\top \vb = 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              No comparison may be made between <m>\y^\top \vb</m> and <m>0</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </activity>
+
+  <corollary xml:id="cor-farkasv2">
+    <title>The Farkas Lemma v2</title>
+    <idx>Farkas lemma</idx>
+    
+    <statement>
+      <p>
+        Given a matrix <m>A\in \R^{n\times m}</m> and vector <m>\mathbf{b}\in \R^n</m>, exactly one of the
+        following is true:
+      </p>
+      <ol marker="A.">
+        <li>
+          <p>
+            There is a <m>\mathbf{x}\in \R^m</m> such that <m>\mathbf{x}\geq \mathbf{0}</m> and <m>A\mathbf{x}\leq \mathbf{b}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            There is a <m>\mathbf{y}\in \R^n</m> such that <m>\y\geq 0, \y^\top \vb\lt 0</m> and <m>\y^\top A \geq \mathbf{0}</m>.
+          </p>
+        </li>
+      </ol>
+      <p>
+        Without loss of generality, we may let <m>\y^\top \vb=-1</m> in case (B).
+      </p>
+    </statement>
+  </corollary>
+
+  <theorem xml:id="thm-strongduality">
+    <title>The Strong Duality Theorem</title>
+    <idx>strong duality theorem</idx>
+    <idx>theorem, strong duality</idx>
+    <statement>
+      <p>
+        Given a pair of primal max-dual min problems, the primal max problem as an optimal solution 
+        <m>\x^*</m> if and only if the dual min problem has an optimal solution <m>\y^*</m>.  Moreover,
+        <m>f(\x^*)=g(\y^*)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <activity>
+    <title>Proof of the Strong Duality Theorem</title>
+  
+  
+    <introduction>
+      <p>
+        We finally prove <xref ref="thm-strongduality"/>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Suppose that optimal dual solution <m>\y^*</m> exists.  Explain why by <xref ref="activity-weakduality"/> it suffices to show that <m>f(\x^*)\geq g(\y^*)</m> for some feasible <m>\x^*</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Without loss of generality, let <m>d=0</m> and let <m>g^* = (\y^*)^\top \vb </m>.
+        </p>
+        <p>
+          Consider the matrix <m>M = \begin{bmatrix} -\vc^\top \\ A\end{bmatrix}</m>, and vector <m>\mathbf{d} = \begin{bmatrix} -g^* \\ \vb \end{bmatrix}</m>. Apply
+          <xref ref="cor-farkasv2"/> to <m>M, \mathbf{d}</m>.  What does it mean for (A) to hold?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          If <xref ref="cor-farkasv2"/> (A) holds for <m>M, \mathbf{d}</m>, then it holds for the pair <m>-\vc^\top, \begin{bmatrix} -g^*\end{bmatrix} </m>, 
+          as well as the pair <m>A, \vb </m> for the same <m>\x\in \R^m</m>.  Why does this show that a feasible optimal solution <m>\x^*</m> exists and that <m>f(\x^*)=g(\y^*)</m>?
+
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          On the other hand, suppose <xref ref="cor-farkasv2"/> (B) holds for <m>M, \mathbf{d}</m>. What would it mean for (B) to hold?
+        </p>
+        
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          We would like to derive a contradiction.
+        </p>
+        <p>
+          Let <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}</m> denote the vector produced by 
+          <xref ref="cor-farkasv2"/> (B). Suppose <m>y_0=0</m>.  How would <m>(\y^*+\y)^\top A</m> compare to <m>(\y^*)^\top A</m>
+          and <m>(\y^*+\y)^\top \vb </m> compare to <m>(\y^*)^\top \vb </m>?  Why is this a contradiction?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose <m>y_0>0</m>.  Let <m>\y' := \frac{\y}{y_0}</m>.
+        </p>
+        <p>
+          Show that since <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}M\geq 0</m> that <m>(\y')^\top A \geq \vc^\top</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that since <m>\begin{bmatrix} y_0 \amp \y^\top \end{bmatrix}\mathbf{d} = -1</m> that <m>(\y')^\top \vb= g^*-\frac{1}{y_0}</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Explain why (f) and (g) produce a contradiction.
+        </p>
+      </statement>
+    </task>
+  </activity> 
+
+  
+
+  
+
+  
+
+</section>

@@ -395,14 +395,14 @@
     <task>
       <statement>
         <p>
-          what point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=0, t_2=0</m>?
+          What point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=0, t_2=0</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          what point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=3</m>?
+          What point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=3</m>?
         </p>
       </statement>
       
@@ -411,15 +411,23 @@
     <task>
       <statement>
         <p>
-          what point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=0</m>?  What about <m>t_1=8, t_2=0</m>?
+          What point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=0</m>?  What about <m>t_1=8, t_2=0</m>?
         </p>
       </statement>
     </task>
-    <!--
-    TYPO
-    one more?
-    DOENET
-    -->
+    <task>
+      <statement>
+        <p>
+          Consider the interactive below.  Drag around the point <m>(x,y)</m>. For each variable <m>x, y, t_1, t_2</m>, when are they 
+          positive? Negative? Equal to zero?
+        </p>
+           <interactive  platform="doenetml" width="100%" aspect="4:4.1">
+            <slate surface="doenetml">
+              <xi:include parse="text" href="doenet/simplex-slack.xml"/>
+            </slate>
+          </interactive>
+      </statement>
+    </task>
     
   </activity>
 
@@ -1868,9 +1876,7 @@
           <p>
             Compare this basic solution and tableau to the final solution in <xref ref="activity-widget"/>. What do you notice?
           </p>
-           <p>
-            <interactive iframe="https://www.desmos.com/3d/z4fjuixofk" width="100%" aspect="1:1"/>
-          </p>
+          <interactive iframe="https://www.desmos.com/3d/z4fjuixofk" width="100%" aspect="1:1"/>
         </statement>
          
       </task>

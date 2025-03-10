@@ -67,9 +67,13 @@ A = matrix([[1,2], [2,1]])
     <p>
         In this section, I provide two additional such interactives.  One is a Desmos linear optimization visualizer and solver for
         two dimensional problems:
-        <interactive desmos="rwbqdwjfht" width="100%"/>
+    </p>
+        <interactive desmos="rwbqdwjfht" width="100%" xml:id="desmos-solver"/>
+    <p>    
         The other is a Desmos 3d version of this interactive for three dimensions.
-        <interactive iframe="https://www.desmos.com/3d/15yyp0qdym" width="100%" />
+    </p>    
+        <interactive iframe="https://www.desmos.com/3d/15yyp0qdym" width="100%" xml:id="desmos-solver3d"/>
+    <p>    
         These tools can help you visualize and solve small dimensional problems and can be very helpful for beginners.
     </p>
 
