@@ -410,10 +410,11 @@
           Suppose for a pair of primal-dual solutions if <m>t_i=0</m>. 
           What must be true about <m>y_i</m>?  (Does it matter whether or not pivoting away from the
           equality constraint increases or decreases the objective function?  See interactive below.)
+          
           </p>
           <figure xml:id="figure-equalityconstraint2">
               <caption>The feasible region of a three dimensional linear optimization problem with an equality constraint</caption>
-              <image xml:id="sageplot-implicit-surface2" width="80%" margins="15% 5%">
+              <image xml:id="sageplot-equalityconstraint2" width="80%" margins="15% 5%">
                 <sageplot variant="3d" aspect="1.0">
                 var('x y z')
                 k=1
