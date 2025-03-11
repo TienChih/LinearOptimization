@@ -44,11 +44,33 @@
     <task>
       <statement>
         <p>
-          Suppose we added in the constraint <m>3x+2y-z=8</m> Plot the feasible region, what dimension is it?
+          Suppose we added in the constraint <m>x+y-2z=1</m> Plot the feasible region, what dimension is it?
         </p>
         <hint>
           <p>
             <interactive iframe="https://www.desmos.com/3d/a56a9ca6e5" width="100%"  />
+            <figure xml:id="figure-equalityconstraint1">
+              <caption>The feasible region of a three dimensional linear optimization problem with an equality constraint</caption>
+              <image xml:id="sageplot-implicit-surface" width="80%" margins="15% 5%">
+                <sageplot variant="3d" aspect="1.0">
+                var('x y z')
+                k=1
+                p1 = 2*x+3*z-2
+                P1 = implicit_plot3d(p1, (x, 0, k), (y, 0, k), (z, 0, k), plot_points=50, opacity=0.3, color="red")
+                p2 = 4*x-y-1
+                P2 = implicit_plot3d(p2, (x, 0, k), (y, 0, k), (z, 0, k), plot_points=50, opacity=0.3, color="blue")
+                p3 = 5*y+2*z-5
+                P3 = implicit_plot3d(p3, (x, 0, k), (y, 0, k), (z, 0, k), plot_points=50, opacity=0.3, color="yellow")
+                p4 = x+y-2*z-1
+                P4 = implicit_plot3d(p4, (x, 0, k), (y, 0, k), (z, 0, k), plot_points=50, opacity=0.3, color="green")
+                F4 = polygon3d([[0,1,0], [0.4, 0.6,0], [0.48,0.92,0.2]], opacity=0.8, color="green")
+                from sage.plot.plot3d.plot3d import axes
+                S = P1+P2+P3+P4+F4+ axes(k, color='black')
+                S
+                </sageplot>
+              </image>
+            </figure>
+
           </p>
           
         </hint>
