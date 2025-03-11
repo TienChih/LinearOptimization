@@ -1328,7 +1328,7 @@
   <p>
     Note that what the coefficients <m>a_{ij}, c_j</m> are, they are coefficients
     of the <q>variable</q> <m>0</m> and are thus irrelevant.  Moreover, we cannot
-    pivot away from this place, since our feasible region is contained completely within the plane.
+    pivot away from this plane, since our feasible region is contained completely within the plane.
     Thus we may delete this column.
     <tabular halign="center">
           <row>
