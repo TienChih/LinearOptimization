@@ -474,29 +474,24 @@ true);
 </h3>
 <div class="introduction" id="sec-dualpivot-6-1"><div class="para" id="sec-dualpivot-6-1-1">We now consider unconstrained and equality constrained primal-dual problems.</div></div>
 <article class="task exercise-like" id="sec-dualpivot-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="sec-dualpivot-6-2-1-1">
-<div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(x_j\)</span> were allowed to be be any value including negative values, What must be true about <span class="process-math">\(s_j\text{?}\)</span>  (If <span class="process-math">\(x_j\)</span> is unconstrained, what can we say about the hyperplane <span class="process-math">\(-x_j=0\)</span> as a bounding hyperplane?)</div>
-<ol class="upper-alpha ol-marker-1 cols2" id="sec-dualpivot-6-2-1-1-5">
-<li id="sec-dualpivot-6-2-1-1-5-1"><div class="para" id="sec-dualpivot-6-2-1-1-5-1-1">
+<div class="para" id="sec-dualpivot-6-2-1-1">Suppose for a pair of primal-dual solutions if <span class="process-math">\(x_j\)</span> were allowed to be be any value including negative values, What must be true about <span class="process-math">\(s_j\text{?}\)</span>  (If <span class="process-math">\(x_j\)</span> is unconstrained, what can we say about the hyperplane <span class="process-math">\(-x_j=0\)</span> as a bounding hyperplane? Would there ever be an extreme point solution lying on this plane? See interactive below.)</div> <iframe id="sec-dualpivot-6-2-1-2" width="600" height="600" src="sec-dualpivot-6-2-1-2-if.html"></iframe> <ol class="upper-alpha ol-marker-1 cols2" id="sec-dualpivot-6-2-1-3">
+<li id="sec-dualpivot-6-2-1-3-1"><div class="para" id="sec-dualpivot-6-2-1-3-1-1">
 <span class="process-math">\(s_j\)</span> could be any value as well.</div></li>
-<li id="sec-dualpivot-6-2-1-1-5-2"><div class="para" id="sec-dualpivot-6-2-1-1-5-2-1"><span class="process-math">\(s_j\geq 0\text{.}\)</span></div></li>
-<li id="sec-dualpivot-6-2-1-1-5-3"><div class="para" id="sec-dualpivot-6-2-1-1-5-3-1"><span class="process-math">\(s_j\leq 0\text{.}\)</span></div></li>
-<li id="sec-dualpivot-6-2-1-1-5-4"><div class="para" id="sec-dualpivot-6-2-1-1-5-4-1"><span class="process-math">\(s_j=0\text{.}\)</span></div></li>
-<li id="sec-dualpivot-6-2-1-1-5-5"><div class="para" id="sec-dualpivot-6-2-1-1-5-5-1"><span class="process-math">\(s_j\neq 0\text{.}\)</span></div></li>
-</ol>
-</div></article><article class="task exercise-like" id="sec-dualpivot-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="sec-dualpivot-6-3-1-1">
-<div class="para">Suppose for a pair of primal-dual solutions if <span class="process-math">\(t_i=0\text{.}\)</span> What must be true about <span class="process-math">\(y_i\text{?}\)</span>  (If we increase <span class="process-math">\(b_i\)</span> can we predict if that helps or hurts <span class="process-math">\(f\text{?}\)</span> Does it matter?)</div>
-<ol class="upper-alpha ol-marker-1 cols2" id="sec-dualpivot-6-3-1-1-5">
-<li id="sec-dualpivot-6-3-1-1-5-1"><div class="para" id="sec-dualpivot-6-3-1-1-5-1-1">
+<li id="sec-dualpivot-6-2-1-3-2"><div class="para" id="sec-dualpivot-6-2-1-3-2-1"><span class="process-math">\(s_j\geq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-2-1-3-3"><div class="para" id="sec-dualpivot-6-2-1-3-3-1"><span class="process-math">\(s_j\leq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-2-1-3-4"><div class="para" id="sec-dualpivot-6-2-1-3-4-1"><span class="process-math">\(s_j=0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-2-1-3-5"><div class="para" id="sec-dualpivot-6-2-1-3-5-1"><span class="process-math">\(s_j\neq 0\text{.}\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-dualpivot-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-dualpivot-6-3-1-1">Suppose for a pair of primal-dual solutions if <span class="process-math">\(t_i=0\text{.}\)</span> What must be true about <span class="process-math">\(y_i\text{?}\)</span>  (Does it matter whether or not pivoting away from the equality constraint increases or decreases the objective function?  See interactive below.)</div> <figure class="figure figure-like" id="figure-equalityconstraint2"><div class="image-box" style="width: 80%; margin-left: 15%; margin-right: 5%;"><iframe width="480" height="480" src="generated/sageplot/sageplot-implicit-surface2.html"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.3.5<span class="period">.</span></span><span class="space"> </span>The feasible region of a three dimensional linear optimization problem with an equality constraint</figcaption></figure> <ol class="upper-alpha ol-marker-1 cols2" id="sec-dualpivot-6-3-1-3">
+<li id="sec-dualpivot-6-3-1-3-1"><div class="para" id="sec-dualpivot-6-3-1-3-1-1">
 <span class="process-math">\(y_i\)</span> could be any value as well.</div></li>
-<li id="sec-dualpivot-6-3-1-1-5-2"><div class="para" id="sec-dualpivot-6-3-1-1-5-2-1"><span class="process-math">\(y_i\geq 0\text{.}\)</span></div></li>
-<li id="sec-dualpivot-6-3-1-1-5-3"><div class="para" id="sec-dualpivot-6-3-1-1-5-3-1"><span class="process-math">\(y_i\leq 0\text{.}\)</span></div></li>
-<li id="sec-dualpivot-6-3-1-1-5-4"><div class="para" id="sec-dualpivot-6-3-1-1-5-4-1"><span class="process-math">\(y_i=0\text{.}\)</span></div></li>
-<li id="sec-dualpivot-6-3-1-1-5-5"><div class="para" id="sec-dualpivot-6-3-1-1-5-5-1"><span class="process-math">\(y_i\neq 0\text{.}\)</span></div></li>
-</ol>
-</div></article></article><article class="activity project-like" id="sec-dualpivot-7"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
+<li id="sec-dualpivot-6-3-1-3-2"><div class="para" id="sec-dualpivot-6-3-1-3-2-1"><span class="process-math">\(y_i\geq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-3-1-3-3"><div class="para" id="sec-dualpivot-6-3-1-3-3-1"><span class="process-math">\(y_i\leq 0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-3-1-3-4"><div class="para" id="sec-dualpivot-6-3-1-3-4-1"><span class="process-math">\(y_i=0\text{.}\)</span></div></li>
+<li id="sec-dualpivot-6-3-1-3-5"><div class="para" id="sec-dualpivot-6-3-1-3-5-1"><span class="process-math">\(y_i\neq 0\text{.}\)</span></div></li>
+</ol></article></article><article class="activity project-like" id="sec-dualpivot-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="sec-dualpivot-7-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-dualpivot-7-1-1">Solve the following non-canonical primal-dual problem:</div>
