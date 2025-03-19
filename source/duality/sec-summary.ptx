@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-summaryduality" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary of <xref ref="ch-duality"/></title>
+  <p>
+    We recall that at each corner or extreme point solution, this solution lies on the intersection of <m>n</m>
+    bounding hyperplanes of the feasible region.  We also note that the orthogonal vector for the 
+    objective plane may be written as a linear combination of the orthogonal vectors for these bounding hyperplanes,
+    and in particular, the coefficients of the linear combination are exactly the negative of the <m>c_j's</m> in the 
+    corresponding tableau.  
+    <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_2</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+  </p>
+        
+  <p>  
+    In some sense what <m>-c_j</m> tells us is how much <m>f</m> increases if the corresponding
+    <m>x_j</m> decreases by one, i.e. the bound associated with <m>x_j</m> were relaxed by one.  This gives us a way of determining how
+    relaxing each of the constraints compare to each other, and their relative  value to each other.  So in the case
+    of <xref ref="exploration-witch"/>, We have 
+    <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>x_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>x_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>3</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium">
+                <m>34</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>14</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>3</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+          </tabular>
+          We have that the normal vector for the objective plane, <m>\begin{bmatrix} 3\\2\end{bmatrix}</m> may be written
+          as <m>\begin{bmatrix} 3\\2\end{bmatrix} = -3\begin{bmatrix} -1\\0\end{bmatrix}+(-2)\begin{bmatrix} 0\\-1\end{bmatrix}</m>, and
+          lowering <m>x_1</m> by 1 decreases the objective by 3, and lowering <m>x_2</m> by 1. decreases it by 2.
+  </p>
+
+  <p>
+    But should we pivot to 
+    <tabular halign="center">
+            <row>
+              <cell halign="left">
+              </cell>
+              <cell bottom="medium">
+                <m>t_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>t_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell>
+                <m>1/2</m>
+              </cell>
+              <cell right="medium">
+                <m>-1/2</m>
+              </cell>
+              <cell right="medium">
+                <m>10</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-1/4</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>3/2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>4</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="left" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>-1/2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-3/2</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>-38</m>
+              </cell>
+              <cell halign="left">
+                <m>=f</m>
+              </cell>
+            </row>
+    </tabular>
+  </p>
+  <p>
+    Then <m>\begin{bmatrix} 3\\2\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 3\\1\end{bmatrix}+\frac{3}{2}\begin{bmatrix} 1\\1\end{bmatrix}</m>
+    and decreasing <m>t_1</m> by 1 increases the objective by <m>\frac{1}{2}</m> and decreasing <m>t_2</m> by 1 increases the objective by <m>\frac{3}{2}</m>.
+    Note that this is equivalent to saying how much value would be gained should there by one more newt eye or frog respectively.
+  </p>
+  <p>
+    This inspires us to define the <term>dual problem</term>
+    of a primal maximization problem in <xref ref="definition-dual"/>, where the
+    <m>y_i</m> are the weights or coefficients of the normal vectors for bounding hyperplanes of the feasible region.
+    We may define the <m>s_j</m> to be the slack variable for each dual constraint so that
+    <m>\displaystyle \left( \sum_{i=1}^n a_{ij}y_i\right)+s_j=c_jx</m>, or equivalently:
+    <md>
+    <mrow>\begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_m \end{bmatrix} &amp; = y_1\begin{bmatrix} a_{11} \\ a_{12}\\ \vdots \\ a_{1m} \end{bmatrix}+y_2\begin{bmatrix} a_{21} \\ a_{22}\\ \vdots \\ a_{2m} \end{bmatrix} + \cdots + y_n\begin{bmatrix} a_{n1} \\ a_{n2}\\ \vdots \\ a_{nm} \end{bmatrix}</mrow>
+    <mrow>&amp; +s_1\begin{bmatrix} 1 \\ 0\\ \vdots \\ 0 \end{bmatrix}+s_2\begin{bmatrix} 0 \\ 1\\ \vdots \\ 0 \end{bmatrix}+\cdots+s_m\begin{bmatrix} 0 \\ 0\\ \vdots \\ 1 \end{bmatrix}</mrow>
+    </md>
+    and we have feasibility if and only if each <m>y_i, s_j\geq 0</m>.
+  </p>  
+
+  <figure xml:id="figure-videochapter4normal">
+    <caption>Normal Vectors and Sensitivity Analysis.</caption>
+    <video playat = "select" source = "images/Chapter4-NormalVectors.mp4"/>
+  </figure>
+
+  <p>
+    We then note that by reformulating the primal and dual problem using matrix algebra,
+    then for feasible <m>\x, \y</m>, we have that <me>f=\vc^\top\x \leq \vc^\top A\vb\leq \y^\top \vb=g</me>
+    which is the statement of the Weak Duality Theorem <xref ref="prop-weakduality"/>.  In particular, if <m>f=g</m> for feasible 
+    <m>\x, \y</m>, then both <m>f, g</m> are optimal.
+  </p>
+
+  <p>
+    It turns out the converse to this statement is true as well.  To show this, we suppose that <m>f</m> achieves optimality at
+    <tabular halign="center">
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell bottom="medium">
+              <m>t_?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>t_?</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}^*</m>
+            </cell>
+            <cell>
+              <m>a_{12}^*</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}^*</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1^*</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{21}^*</m>
+            </cell>
+            <cell>
+              <m>a_{22}^*</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}^*</m>
+            </cell>
+            <cell right="medium">
+              <m>b_2^*</m>
+            </cell>
+            <cell halign="left">
+              <m>=-x_?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}^*</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n^*</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_?</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>c_1^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_2^*</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m^*</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d^*</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+        </tabular>
+  </p>
+  <p>
+    We let <m>-c_j = t_i, s_j</m> depending on which variable <m>c_j</m> is the coefficient for, and 
+    by letting each other <m>y_i, s_j=0</m>, we have that
+    <md>
+      <mrow>f = \sum_{i=1}c_jx_j -d \amp = \sum_{i=1}^n (-y_i)t_i + \sum_{j=1}^m (-s_j)x_j  -d^*</mrow>
+      <mrow>  \amp = \sum_{i=1}^n (-y_i)\left(b_i-\sum_{j=1}^m a_{ij}x_j\right) + \sum_{j=1}^m (-s_j)x_j  -d^*  </mrow>
+      <mrow> \amp = \sum_{j=1}^m\left(\left(\sum_{i=1}^n y_ia_{ij}\right)-s_j\right)x_j -\left(d^*+\sum_{i=1}^n y_ib_i\right)  </mrow>
+    </md>
+  </p>  
+
+  <p>
+    We note that since the above tableau satisfies the conditions for an optimal basic solution,
+    each <m>y_i, s_j\geq0</m>.  Since the above equality is an equlity of functions of <m>x_1,\ldots, x_m</m>, by comparing coefficients of <m>x_j</m>,
+    we have <m>\displaystyle \sum_{i=1}^n y_ia_{ij}\geq c_j</m> and <m>\y</m> is a feasible solution.  Then we also have that
+    <m>-d^*=\displaystyle \sum_{i=1}^ny_ib_i-d</m>.  The left hand side is the optimal value for <m>f</m>, and the right hand side is the 
+    current value of <m>g</m> for this choice of <m>\y</m>.  So by <xref ref="prop-weakduality"/>, we prove the Strong Duality
+    Theorem <xref ref="thm-strongduality"/>.
+  </p>
+
+  <figure xml:id="figure-videochapter4duality">
+    <caption>Proofs of the duality theorems.</caption>
+    <video playat = "select" source = "images/Chapter4-Duality.mp4"/>
+  </figure>
+
+  <p>
+    We then note that the dual problem may be recorded simultaneously as the primal problem
+    within the same tableau <tabular halign="center">
+          <row>
+            <cell halign="right" right="medium" bottom="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>x_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>x_m</m>
+            </cell>
+            <cell bottom="medium">
+              <m>-1</m>
+            </cell>
+            <cell halign="left">
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_1</m>
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+            <cell right="medium">
+              <m>b_1</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_1</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+            <cell halign="left">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>y_n</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>b_n</m>
+            </cell>
+            <cell halign="left">
+              <m>=-t_n</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="right" right="medium">
+              <m>-1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>c_1</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>c_m</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>d</m>
+            </cell>
+            <cell halign="left" bottom="medium">
+              <m>=f</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell>
+              <m>=s_1</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>=s_m</m>
+            </cell>
+            <cell right="medium">
+              <m>=g</m>
+            </cell>
+            <cell halign="left"  >
+            </cell>
+          </row>
+        </tabular> 
+        and that by using similar arguments as we did in <xref ref="ch-simplex"/>, we may establish
+        conditions for determining the feasibility, optimality, and boundedness if the dual problem.  A 
+        basic dual variable is feasible if and only if each <m>c_j\leq0</m>, and if we had a <m>c_j &gt; </m> but each
+        <m>a_{ij}\leq 0</m> for that problem, then the problem is infeasible, since this inequality can never be satisfied.
+        If the basic dual is feasible then it is also optimal if and only if <m>b_i\geq 0</m>.  However, if the basic dual
+        is feasible but there is a row <m>i</m> where <m>a_{ij} \geq0</m>, then the dual region is unbounded, and if additionally
+        <m>b_i&lt;0</m>, then the dual problem is unbounded below.  These boundedness conditions are sufficient but not neccesary, the reader is 
+        encouraged to come up with their own counterexamples to necessity.
+  </p>
+
+  <p>
+    We conclude by observing that if a primal problem has an unconstrained variable, the corresponding dual variable must be zero, since
+    the associated hyperplane is not a bounding hyperplane.  Similarly, if we had an equality constraint in the primal with corresponding slack set to zero,
+    the corresponding dual is allowed to be unconstrained, since it is no longer relevant whether pivoting away from this plane improves the primal
+    objective.
+  </p>
+
+  <figure xml:id="figure-videochapter4tableaus">
+    <caption>The dual problem as recorded in tableaus.</caption>
+    <video playat = "select" source = "images/Chapter4-Tableaus.mp4"/>
+  </figure>
+  
+  
+
+
+
+  
+
+</section>

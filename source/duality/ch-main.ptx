@@ -24,6 +24,7 @@
   <xi:include href="sec-sensitivity.ptx" />
   <xi:include href="sec-dualitytheory.ptx" />
   <xi:include href="sec-dualpivot.ptx" />
+  <xi:include href="sec-summary.ptx" />
   <xi:include href="sec-exercises.ptx" />
   
 

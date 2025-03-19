@@ -425,8 +425,8 @@
                 p3 = 5*y+2*z-5
                 P3 = implicit_plot3d(p3, (x, 0, k), (y, 0, k), (z, 0, k), plot_points=50, opacity=0.3, color="yellow")
                 p4 = x+y-2*z-1
-                P4 = implicit_plot3d(p4, (x, 0, k), (y, 0, k), (z, 0, k), plot_points=50, opacity=0.3, color="green")
-                F4 = polygon3d([[0,1,0], [0.4, 0.6,0], [0.48,0.92,0.2]], opacity=0.8, color="green")
+                P4 = implicit_plot3d(p4, (x, 0, k), (y, 0, k), (z, 0, k), plot_points=50, opacity=0.8, color="green")
+                F4 = polygon3d([[0,1,0], [0.4, 0.6,0], [0.48,0.92,0.2]], opacity=1, color="black")
                 from sage.plot.plot3d.plot3d import axes
                 S = P1+P2+P3+P4+F4+ axes(k, color='black')
                 S
