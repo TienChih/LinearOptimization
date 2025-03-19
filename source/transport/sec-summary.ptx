@@ -182,7 +182,7 @@
   </p>
 
   <p>
-    If there is a <term>permutation set of zeroes</term>, a collection of \(n\) zeroes no two of which share a row or column, then
+    If there is a <term>permutation set of zeroes</term>, a collection of <m>n</m> zeroes no two of which share a row or column, then
     these clearly represent an optimal assignment.  If non exist, we may rearrange the tableau by drawing a minimum number of lines through each zero.  We then take the smallest 
     uncovered entry and subtract that from each uncovered row and add it to each covered column.  Equivalently we subtract this value from each uncovered entry and add it to each intersection.
     We then repeat until we find a permutation set of zeroes.
