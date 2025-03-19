@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-summarytransports" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary of <xref ref="ch-transport"/></title>
+
+  <p>
+    We introduce the <term>Transportion Problem</term>: given <m>n</m> <q>warehouses</q>
+    and <m>m</m> <q>markets</q>, each with <m>W_i</m> supply and <m>M_j</m> demand respectively, then
+    given <m>c_{ij}</m>, the cost to ship from warehouse <m>i</m> to market <m>j</m>,
+    to find the shipping quantities <m>x_{ij}</m> which satisfy all the warehouse and market constraints.  When
+    <m>\displaystyle \sum_{i=1}^n W_i=\sum_{j=1}^m M_j</m>, we call this problem <term>balanced</term>.
+  </p>
+  <p>
+    This can be captured with a transportation tableau:
+    <tabular halign="center">
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell bottom="medium">
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell>
+                <m>c_{11}</m>
+              </cell>
+              <cell>
+                <m>c_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>c_{1m}</m>
+              </cell>
+              <cell halign="left">
+                <m>W_1 </m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell>
+                <m>c_{21}</m>
+              </cell>
+              <cell>
+                <m>c_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>c_{2m}</m>
+              </cell>
+              <cell halign="left">
+                <m>W_2 </m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\cdots </m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>c_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>c_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>c_{nm}</m>
+              </cell>
+              <cell halign="left" bottom="medium">
+                <m>W_n </m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>M_1 </m>
+              </cell>
+              <cell>
+                <m>M_2 </m>
+              </cell>
+              <cell>
+                <m>\cdots </m>
+              </cell>
+              <cell right="medium">
+                <m>M_m</m>
+              </cell>
+              <cell halign="left">
+              <m>\displaystyle \sum_{i=1}^n W_i = \sum_{j=1}^m M_j</m>
+              </cell>
+            </row>
+          </tabular>
+        </p>
+
+        <p>
+          Note that if we we to consider the inherent system of equations:
+          <md>
+            <mrow>\sum_{j=1}^m x_{ij} \amp = W_i </mrow>
+            <mrow>\sum_{i=1}^n x_{ij} \amp = M_j </mrow>
+          </md>
+          and the fact that <m>\displaystyle \sum_{i=1}^n W_i=\sum_{j=1}^m M_j</m>, that the associated
+          augmented matrix would have rank <m>n+m-1</m> and thus at most <m>n+m-1</m> of the <m>x_{ij}</m>
+          need be non-zero for a feasible or optimal solution.  A selection of these variables will be considered the <term>basis</term>
+          of a solution, and is equivalent to the basis variables from <xref ref="ch-simplex"/>.
+        </p>
+
+        <p>
+          We then introduce the Vogel Advanced Start Method (VAM) <xref ref="def-vam"/> to heuristically
+          pick a <q>good</q> feasible solution.  The essential premise is that,we take each warehouse and market,
+          and consider the difference between the cheapest and second cheapest options for that row/column.
+          Since we want to minimize cost, we prioritize warehouses/markets where making the second best choice would incur
+          a larger cost penalty than the best choice, and choose the cheapest option for those row/columns.  We then readjust and repeat until we
+          obtain a feasible solution.
+        </p>
+
+  <figure xml:id="figure-videochapter6VAM">
+    <caption>The Vogel Advanced Start Method.</caption>
+    <video playat = "select" source = "images/Chapter6-VAM.mp4"/>
+  </figure>
+
+  <p>
+    We then proceed with the <term>Transportation Algorithm</term> <xref ref="def-transportationalg"/>.
+    The general idea is that we assign an <m>a_i</m> to each row and <m>b_j</m> for each column so that <m>c_{ij}=a_i+b_j</m> for each
+    <m>x_{ij}</m> in the basis.  Then, we reduce each <m>c_{ij}</m> by <m>a_i+b_j</m>.  We then see if any entries are negative.
+  </p>
+  <p>
+    Note that for the current basis, the cost of shipping is <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij}</m>, but since
+     <m>c_{ij}=0</m> for <m>x_{ij}</m> not in the basis, and since <m>\displaystyle \sum_{j=1}^m x_{ij}=W_i, \sum_{i=1}^n x_{ij}=M_j</m>, we have that
+     <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij} = \sum_{i=1}^n a_iW_i+\sum_{j=1}^m b_jM_j</m>, so shifting the shipping to an entry where <m>c_{ij}&lt; a_i+b_j</m> would
+     lower the total shipping cost.  We then outline a cycle consisting of new basis elements and shifting the shipping around to preserve the 
+     warehouse and market constraints, addting the negative entry to the basis and removing an entry with no shipping from the basis.  Note that it is possible for this
+     shift to be zero, yet changing the basis, equivalent to a degenerate piviot from <xref ref="sec-cycling"/>.  We repeat this process until
+     there are no longer negative entries.
+  </p>
+
+  <figure xml:id="figure-videochapter6Transportation">
+    <caption>The Transportation Algorithm.</caption>
+    <video playat = "select" source = "images/Chapter6-Transportation.mp4"/>
+  </figure>
+  
+  <p>
+    Finally, we consider the <term>Assignment Problem</term> and the <term>Hungarian Algorithm</term> <xref ref="def-hungarian"/>.
+    The assignment problem can be thought of as a transportation problem where each warehouse and market have supply and demand 1.
+    But since this is greatly simplified, we should expect a simpler algorithm.  We note that we may add and subtract
+    <m>k</m> from any row or column without changing the optimal assignment, since this is equivalent to picking originally and then giving/taking 
+    <m>k</m> back afterwards. We may also multiply all entries by the same value and preserve the optimal assignment by a similar argument.
+    So we may adjust the tableau to only have non-negative integer entries, and then subtract the smallest value from each row, then each column.
+
+  </p>
+
+  <p>
+    If there is a <term>permutation set of zeroes</term>, a collection of \(n\) zeroes no two of which share a row or column, then
+    these clearly represent an optimal assignment.  If non exist, we may rearrange the tableau by drawing a minimum number of lines through each zero.  We then take the smallest 
+    uncovered entry and subtract that from each uncovered row and add it to each covered column.  Equivalently we subtract this value from each uncovered entry and add it to each intersection.
+    We then repeat until we find a permutation set of zeroes.
+  </p>
+
+  <figure xml:id="figure-videochapter6Assignment">
+    <caption>The Assignment Problem.</caption>
+    <video playat = "select" source = "images/Chapter6-Assignment.mp4"/>
+  </figure>
+
+        
+        
+  
+
+
+
+  
+
+</section>
