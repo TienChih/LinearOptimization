@@ -2188,11 +2188,92 @@ var ptx_lunr_docs = [
   "body": "  Suppose 4 students are picking 4 research topics. The four topics are to be distributed one each amongst the four students. They rated the topics on a scale of 1-10.       Topic 1  Topic 2  Topic 3  Topic 4    Student 1  6  9  10  8    Student 2  2  8  9  7    Student 3  7  7  8  9    Student 4  6  8  9  8     We want to maximize the total enjoyment .    This is a maximization problem, and the assignment problem is a minimization problem, how might we convert it to a minimization problem?    After converting, use the Hungarian Algorithm to solve the problem.   "
 },
 {
+  "id": "sec-summarytransports",
+  "level": "1",
+  "url": "sec-summarytransports.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Summary of Chapter 6",
+  "body": " Summary of  We introduce the Transportion Problem : given  warehouses and  markets , each with supply and demand respectively, then given , the cost to ship from warehouse to market , to find the shipping quantities which satisfy all the warehouse and market constraints. When , we call this problem balanced .  This can be captured with a transportation tableau:                                                                                                                 Note that if we we to consider the inherent system of equations: and the fact that , that the associated augmented matrix would have rank and thus at most of the need be non-zero for a feasible or optimal solution. A selection of these variables will be considered the basis of a solution, and is equivalent to the basis variables from .  We then introduce the Vogel Advanced Start Method (VAM) to heuristically pick a good feasible solution. The essential premise is that,we take each warehouse and market, and consider the difference between the cheapest and second cheapest options for that row\/column. Since we want to minimize cost, we prioritize warehouses\/markets where making the second best choice would incur a larger cost penalty than the best choice, and choose the cheapest option for those row\/columns. We then readjust and repeat until we obtain a feasible solution.   The Vogel Advanced Start Method.    We then proceed with the Transportation Algorithm  . The general idea is that we assign an to each row and for each column so that for each in the basis. Then, we reduce each by . We then see if any entries are negative.  Note that for the current basis, the cost of shipping is , but since for not in the basis, and since , we have that , so shifting the shipping to an entry where would lower the total shipping cost. We then outline a cycle consisting of new basis elements and shifting the shipping around to preserve the warehouse and market constraints, addting the negative entry to the basis and removing an entry with no shipping from the basis. Note that it is possible for this shift to be zero, yet changing the basis, equivalent to a degenerate piviot from . We repeat this process until there are no longer negative entries.   The Transportation Algorithm.    Finally, we consider the Assignment Problem and the Hungarian Algorithm  . The assignment problem can be thought of as a transportation problem where each warehouse and market have supply and demand 1. But since this is greatly simplified, we should expect a simpler algorithm. We note that we may add and subtract from any row or column without changing the optimal assignment, since this is equivalent to picking originally and then giving\/taking back afterwards. We may also multiply all entries by the same value and preserve the optimal assignment by a similar argument. So we may adjust the tableau to only have non-negative integer entries, and then subtract the smallest value from each row, then each column.  If there is a permutation set of zeroes , a collection of \\(n\\) zeroes no two of which share a row or column, then these clearly represent an optimal assignment. If non exist, we may rearrange the tableau by drawing a minimum number of lines through each zero. We then take the smallest uncovered entry and subtract that from each uncovered row and add it to each covered column. Equivalently we subtract this value from each uncovered entry and add it to each intersection. We then repeat until we find a permutation set of zeroes.   The Assignment Problem.    "
+},
+{
+  "id": "sec-summarytransports-2",
+  "level": "2",
+  "url": "sec-summarytransports.html#sec-summarytransports-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Transportion Problem balanced "
+},
+{
+  "id": "sec-summarytransports-4",
+  "level": "2",
+  "url": "sec-summarytransports.html#sec-summarytransports-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "basis "
+},
+{
+  "id": "figure-videochapter6VAM",
+  "level": "2",
+  "url": "sec-summarytransports.html#figure-videochapter6VAM",
+  "type": "Figure",
+  "number": "6.4.1",
+  "title": "",
+  "body": " The Vogel Advanced Start Method.   "
+},
+{
+  "id": "sec-summarytransports-7",
+  "level": "2",
+  "url": "sec-summarytransports.html#sec-summarytransports-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Transportation Algorithm "
+},
+{
+  "id": "figure-videochapter6Transportation",
+  "level": "2",
+  "url": "sec-summarytransports.html#figure-videochapter6Transportation",
+  "type": "Figure",
+  "number": "6.4.2",
+  "title": "",
+  "body": " The Transportation Algorithm.   "
+},
+{
+  "id": "sec-summarytransports-10",
+  "level": "2",
+  "url": "sec-summarytransports.html#sec-summarytransports-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Assignment Problem Hungarian Algorithm "
+},
+{
+  "id": "sec-summarytransports-11",
+  "level": "2",
+  "url": "sec-summarytransports.html#sec-summarytransports-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "permutation set of zeroes "
+},
+{
+  "id": "figure-videochapter6Assignment",
+  "level": "2",
+  "url": "sec-summarytransports.html#figure-videochapter6Assignment",
+  "type": "Figure",
+  "number": "6.4.3",
+  "title": "",
+  "body": " The Assignment Problem.   "
+},
+{
   "id": "sec-exercisestransports",
   "level": "1",
   "url": "sec-exercisestransports.html",
   "type": "Section",
-  "number": "6.4",
+  "number": "6.5",
   "title": "Problems for Chapter 6",
   "body": " Problems for   The simplex pivoter may be found here:         Solve each of the following transportation problems                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    In , looking at the final talbeau of the Transportation Algorithm, determine which of these have a unique optimal solution.  In , for each problem without a unique optimal solution, find an alternative solution and show that it is feasible and gives the same objective value.   True or False for a valid choice of in step 2, then for a fixed real number , is also a valid choice.  Suppose were an absurdly large number. Solve the transportation problem:                                                                                                Solve the following transportation problems:                                                                                                                                                                                                                                       On the planet Zeltros, a luxury resort is preparing for a multi-day celebration they are hosting. One of the requested activities by the guests is hoverbike riding. Over the three day event, they will require hoverbikes on the first day, hoverbikes on the second and hoverbikes on the final day. Brand new hoverbikes are credits. After use they undergo a maintanence procedure which costs credits and takes two days, before they may be used again. A rush job that takes one day is possible but costs credits. The resort naturally wishes to minimize their costs. They wish to know how many bikes to purchase and what maintanence schedule would achieve this. Model this as a transportation problem where the warehouses are the number of brand new hoverbikes purchased before day 1, used hoverbikes from day 1 and used hoverbikes from day 2. Can we make educated guesses on what these capacities should be? What should the markets represent and what are their demands? Then solve the problem.   Solve the following assignment problem using both and as a transportation problem using .                                                       Solve the following assignment problems                                                                                                                                                                                                                                                                                                                                                                                                                                                               Some of the problems in have multiple solutions. Identify them and identify all the optimal solutions.   Consider a general balanced transportation problem. Let denote the supply of the warehouses, and denote the demand of the markets. Then let denote the cost to ship from warehouse to market .   Write out a non-canonical minimization problem which models this problem (there should be some equality constraints).   State the dual problem to the transportation problem.   Prove that in , for a valid choice of in step 2 that How does this relate to the dual problem to the transportation problem?   Consider the non-negativity condition in step 4 of . How does this relate to the constraints of the dual problem to the transportation problem?   Consider an assignment problem treated as a transportation problem. Apply VAM to this initial tableau. Show that the resulting basis generated has selected entries where the shipment along those entries ( ) is zero.  Prove that the Transportation Algorithm will lead to an optimal solution after a finite number of steps if the algorithm is applied to a problem with all data rational.   Consider the following network:   A Network Flow depicting several islands with bridges and carrying capacity.    where the labels on each edge denote the distance from to .  (More about directed weighted networks may be found in )   Consider an assignment problem with sources and sinks  such that the cost of from shipping from to is the label on the edge. Let the cost from shipping from to be 0. For each , let the cost of shipping from to itself be 0. Let every other cost be an absurdly high .  Solve this assignment problem.   For your optimal solution, if  ships to , highlight the corresponding edge on network above. If a vertex ships to itself, highlight that vertex. Disregard the case when ships to . What can you say about the highlighted edges? What may be reasonable conjectures about these edges?    Consider a general directed weighted network with vertices with a unique source and sink , and all weights on edges are positive such as (see for more information).  We will be considering assignment problems where warehouses and markets are the vertices . Throughout this problem, let be an absurdly large number.   Consider an assignment problem where the cost of shipping from to is the weight on that edge if it exists and otherwise. Show that any solution to the assignment problem (not neccesarily optimal) is bijective with the set of possible unions of disjoint cycles on the network.   Suppose we adjust the previous assignment problem where the cost of shipping from to is 0. Show that solutions to this assignment problem are bijective with the union of disjoint cycles and path from to on this network.   Suppose we then further adjust this assignment problem by setting the cost to ship from to itself for any to be 0. Show that an optimal solution to this problem must be a shortest path from to .    "
 },
@@ -2201,7 +2282,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#ex-transport",
   "type": "Exercise",
-  "number": "6.4.1",
+  "number": "6.5.1",
   "title": "",
   "body": " Solve each of the following transportation problems                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   "
 },
@@ -2210,7 +2291,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-2",
   "type": "Exercise",
-  "number": "6.4.2",
+  "number": "6.5.2",
   "title": "",
   "body": "In , looking at the final talbeau of the Transportation Algorithm, determine which of these have a unique optimal solution. "
 },
@@ -2219,7 +2300,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-3",
   "type": "Exercise",
-  "number": "6.4.3",
+  "number": "6.5.3",
   "title": "",
   "body": "In , for each problem without a unique optimal solution, find an alternative solution and show that it is feasible and gives the same objective value. "
 },
@@ -2228,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-4",
   "type": "Exercise",
-  "number": "6.4.4",
+  "number": "6.5.4",
   "title": "",
   "body": " True or False for a valid choice of in step 2, then for a fixed real number , is also a valid choice. "
 },
@@ -2237,7 +2318,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-5",
   "type": "Exercise",
-  "number": "6.4.5",
+  "number": "6.5.5",
   "title": "",
   "body": "Suppose were an absurdly large number. Solve the transportation problem:                                                                                              "
 },
@@ -2246,7 +2327,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-6",
   "type": "Exercise",
-  "number": "6.4.6",
+  "number": "6.5.6",
   "title": "",
   "body": " Solve the following transportation problems:                                                                                                                                                                                                                                      "
 },
@@ -2255,7 +2336,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#ex-hoverbike",
   "type": "Exercise",
-  "number": "6.4.7",
+  "number": "6.5.7",
   "title": "",
   "body": "On the planet Zeltros, a luxury resort is preparing for a multi-day celebration they are hosting. One of the requested activities by the guests is hoverbike riding. Over the three day event, they will require hoverbikes on the first day, hoverbikes on the second and hoverbikes on the final day. Brand new hoverbikes are credits. After use they undergo a maintanence procedure which costs credits and takes two days, before they may be used again. A rush job that takes one day is possible but costs credits. The resort naturally wishes to minimize their costs. They wish to know how many bikes to purchase and what maintanence schedule would achieve this. Model this as a transportation problem where the warehouses are the number of brand new hoverbikes purchased before day 1, used hoverbikes from day 1 and used hoverbikes from day 2. Can we make educated guesses on what these capacities should be? What should the markets represent and what are their demands? Then solve the problem. "
 },
@@ -2264,7 +2345,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-8",
   "type": "Exercise",
-  "number": "6.4.8",
+  "number": "6.5.8",
   "title": "",
   "body": " Solve the following assignment problem using both and as a transportation problem using .                                                     "
 },
@@ -2273,7 +2354,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#ex-assignment",
   "type": "Exercise",
-  "number": "6.4.9",
+  "number": "6.5.9",
   "title": "",
   "body": " Solve the following assignment problems                                                                                                                                                                                                                                                                                                                                                                                                                                                              "
 },
@@ -2282,7 +2363,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-10",
   "type": "Exercise",
-  "number": "6.4.10",
+  "number": "6.5.10",
   "title": "",
   "body": "Some of the problems in have multiple solutions. Identify them and identify all the optimal solutions. "
 },
@@ -2291,7 +2372,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-11",
   "type": "Exercise",
-  "number": "6.4.11",
+  "number": "6.5.11",
   "title": "",
   "body": " Consider a general balanced transportation problem. Let denote the supply of the warehouses, and denote the demand of the markets. Then let denote the cost to ship from warehouse to market .   Write out a non-canonical minimization problem which models this problem (there should be some equality constraints).   State the dual problem to the transportation problem.   Prove that in , for a valid choice of in step 2 that How does this relate to the dual problem to the transportation problem?   Consider the non-negativity condition in step 4 of . How does this relate to the constraints of the dual problem to the transportation problem?  "
 },
@@ -2300,7 +2381,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-12",
   "type": "Exercise",
-  "number": "6.4.12",
+  "number": "6.5.12",
   "title": "",
   "body": "Consider an assignment problem treated as a transportation problem. Apply VAM to this initial tableau. Show that the resulting basis generated has selected entries where the shipment along those entries ( ) is zero. "
 },
@@ -2309,7 +2390,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-13",
   "type": "Exercise",
-  "number": "6.4.13",
+  "number": "6.5.13",
   "title": "",
   "body": "Prove that the Transportation Algorithm will lead to an optimal solution after a finite number of steps if the algorithm is applied to a problem with all data rational. "
 },
@@ -2318,7 +2399,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#ex-shortestpathassignmentparticular",
   "type": "Exercise",
-  "number": "6.4.14",
+  "number": "6.5.14",
   "title": "",
   "body": " Consider the following network:   A Network Flow depicting several islands with bridges and carrying capacity.    where the labels on each edge denote the distance from to .  (More about directed weighted networks may be found in )   Consider an assignment problem with sources and sinks  such that the cost of from shipping from to is the label on the edge. Let the cost from shipping from to be 0. For each , let the cost of shipping from to itself be 0. Let every other cost be an absurdly high .  Solve this assignment problem.   For your optimal solution, if  ships to , highlight the corresponding edge on network above. If a vertex ships to itself, highlight that vertex. Disregard the case when ships to . What can you say about the highlighted edges? What may be reasonable conjectures about these edges?  "
 },
@@ -2327,7 +2408,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisestransports.html#exercises-transport-15",
   "type": "Exercise",
-  "number": "6.4.15",
+  "number": "6.5.15",
   "title": "",
   "body": " Consider a general directed weighted network with vertices with a unique source and sink , and all weights on edges are positive such as (see for more information).  We will be considering assignment problems where warehouses and markets are the vertices . Throughout this problem, let be an absurdly large number.   Consider an assignment problem where the cost of shipping from to is the weight on that edge if it exists and otherwise. Show that any solution to the assignment problem (not neccesarily optimal) is bijective with the set of possible unions of disjoint cycles on the network.   Suppose we adjust the previous assignment problem where the cost of shipping from to is 0. Show that solutions to this assignment problem are bijective with the union of disjoint cycles and path from to on this network.   Suppose we then further adjust this assignment problem by setting the cost to ship from to itself for any to be 0. Show that an optimal solution to this problem must be a shortest path from to .  "
 },
