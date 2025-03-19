@@ -23,7 +23,7 @@
 \sum x_{i\ell} = w_i, \sum x_{kj} = m_j.
 \end{equation*}
 </div>
-<div class="para">Set up an augmented matrix representing this system and solve it.  Were the rows of the augmented matrix linearly independent? What can we say about the solution(s) of this system?</div>
+<div class="para">Set up an augmented matrix representing this system and solve it.  What is the rank of this matrix? Describe the set of solutions to this system?</div>
 </div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para logical">
 <div class="para">We now generalize to a balanced transportation problem with <span class="process-math">\(n\)</span> warehouses and <span class="process-math">\(m\)</span> markets with supplies <span class="process-math">\(w_i\)</span> and demands <span class="process-math">\(m_j\text{.}\)</span>  Note that we have linear equations</div>
@@ -32,7 +32,7 @@
 \sum x_{i\ell} = w_i, \sum x_{kj} = m_j.
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{,}\)</span> what is the maximum number of <span class="process-math">\(x_{ij}\)</span> that can be non-zero for a basic solution?</div>
+<div class="para">Since <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{,}\)</span> how many of the <span class="process-math">\(x_{ij}\)</span> are needed to be non-zero for a basic solution?</div>
 </div>
 <div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para">Imagine an augmented matrix with the coefficients of the <span class="process-math">\(x_{ij}\)</span> on one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix. Then consider that <span class="process-math">\(\displaystyle \sum w_i = \sum m_j\text{.}\)</span>  What does this say about the (in)dependence of the rows? What then must the rank be?  What happened in part (a)?</div></div></details></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para">We first mark the difference between the lowest two values in each row/column:</div> <div class="para"><div class="tabular-box natural-width"><table class="tabular">
