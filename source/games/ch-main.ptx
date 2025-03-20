@@ -34,6 +34,7 @@
   <xi:include href="sec-minmaxgames.ptx" />
   <xi:include href="sec-vonneumann.ptx" />
   <xi:include href="sec-chance.ptx" />
+  <xi:include href="sec-summary.ptx" />
   <xi:include href="sec-exercises.ptx" />
   
 

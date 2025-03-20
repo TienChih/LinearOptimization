@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-summarygames" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Summary of <xref ref="ch-games"/></title>
+
+  <p>
+    In this chapter, we begin by introducing the notion of zero sum games.  Suppose
+    two players, Rowan and Colleen had <m>n</m> and <m>m</m> strategies to choose from,
+    and given an <m>i, j</m> choice of strategies, the net payout to Rowan was <m>a_{ij}</m> (with
+    a negative value meaning a payout to Colleen).  This may be recorded
+    in what is called a <term>payoff matrix</term>.
+
+    <tabular halign="center" >
+          <row>
+            <cell halign="left">
+            </cell>
+            <cell halign="left" bottom="medium">
+            </cell>
+            <cell colspan="3" bottom="medium">
+              Colleen
+            </cell>
+            <cell halign="left" bottom="medium">
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell>
+              <m>a_{11}</m>
+            </cell>
+            <cell>
+              <m>a_{12}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{1m}</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+              
+            </cell>
+            <cell>
+              <m>a_{21}</m>
+            </cell>
+            <cell>
+              <m>a_{22}</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell>
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium">
+              <m>a_{2m}</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+              Rowan
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell right="medium">
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\vdots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell>
+              <m>\ddots</m>
+            </cell>
+            <cell right="medium">
+              <m>\vdots</m>
+            </cell>
+          </row>
+          <row>
+            <cell halign="left" right="medium">
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n1}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>a_{n2}</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell bottom="medium">
+              <m>\cdots</m>
+            </cell>
+            <cell right="medium" bottom="medium">
+              <m>a_{nm}</m>
+            </cell>
+          </row>
+        </tabular>
+  </p>
+  <p>
+    We note that some strategies may be simply bad choices for either player.  For example, if there were two rows
+    <m>i, i'</m> where <m>a_{ij} \geq a_{i'j}</m>, for each <m>j</m>, then there is no
+    reason for Rowan to pick <m>i'</m> over <m>i</m> and we may delete the <m>i'</m> row.
+    Similarly if for columns <m>j, j'</m>, <m>a_{ij} \leq a_{ij'}</m>, we may delete the <m>j'</m> column.  This process
+    of deleting rows and columns is called <term>domination</term>.
+  </p>
+
+  <p>
+    Once domination is complete, we can find the resulting optimal strategies by considering the primal-dial
+    optimization problem:
+
+    <tabular halign="center">
+            <row>
+              <cell halign="right" bottom="medium" right="medium">
+              </cell>
+              <cell bottom="medium">
+                <m>\ec{v}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>q_m</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\ec{u}</m>
+              </cell>
+              <cell>
+                <m>0</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell right="medium">
+                <m>-1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-0</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_1</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1m}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_2</m>
+              </cell>
+              <cell>
+                <m>-1</m>
+              </cell>
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2m}</m>
+              </cell>
+              <cell right="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>p_n</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left" bottom="medium">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>=0</m>
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell>
+                <m>=s_n</m>
+              </cell>
+              <cell right="medium">
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+          Where the <m>p_i, q_j</m> represent probabilities for Rowan and Colleen and 
+          <m>\ec{u}, \ec{v}</m> represent the values of Rowan and Colleens strategies respectively.
+  </p>
+
+  <p>
+    We note that if there is a <term>saddle point</term>, an <m>a_{ij}</m> that is the smallest
+    value in row <m>i</m> but the greatest in column <m>j</m>.  In this
+    case the optimal strategies for Rowan and Colleen are <m>i</m> ans <m>j</m> respectively.
+  </p>
+
+  <p>
+    Otherwise, if there are no saddle points, then both players need to employ a random mix of strategies,
+    and solving the above primal-dual problem find <m>\p, \q</m>, the probability distribution
+    of the valid strategies for both players.
+  </p>
+
+  <figure xml:id="figure-videochapter5ZeroSum">
+    <caption>Zero Sum Games.</caption>
+    <video playat = "select" source = "images/Chapter5-ZeroSum.mp4"/>
+  </figure>
+
+  <p>
+    The theorem  that shows this approach is valid is 
+    the <term>von Neumann minimax Theorem</term> <xref ref="thm-vonneumann"/>.  
+    We first note that technically the above problem attempts to maximize <m>u</m> (minimize <m>v</m>) constrained by
+    <m>u\leq \displaystyle \min_{1\leq i\leq n} A_i \q</m>, (minimize <m>v\geq \displaystyle \min_{1\leq j\leq m} \p A^j</m>), i.e.
+    it maximizes or minimizes across pure strategies, but we wish to max or min across mixed strategies.  These can be shown to be equivalent,
+    a pure strategy is a type of  mixed strategy, and the other inequality can be shown through some algebra.
+  </p>
+  <p>
+    Then if we assume that each <m>a_{ij} &gt; 0</m>, then
+    by letting <m>\tilde{p}_i=\frac{p_i}{u}, \tilde{q}_j=\frac{q_j}{v}</m>, the above system is equivalent to solving:
+
+    <tabular halign="center">
+            <row>
+              <cell halign="right" bottom="medium" right="medium">
+              </cell>
+              
+              <cell bottom="medium">
+                <m>\tilde{q}_1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\tilde{q}_2</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\tilde{q}_m</m>
+              </cell>
+              <cell bottom="medium">
+                <m>-1</m>
+              </cell>
+             
+            </row>
+            
+            <row>
+              <cell halign="right" right="medium">
+                <m>\tilde{p}_1</m>
+              </cell>
+              <cell>
+                <m>a_{11}</m>
+              </cell>
+              <cell>
+                <m>a_{12}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{1m}</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_1</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\tilde{p}_2</m>
+              </cell>
+             
+              <cell>
+                <m>a_{21}</m>
+              </cell>
+              <cell>
+                <m>a_{22}</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium">
+                <m>a_{2m}</m>
+              </cell>
+              <cell right="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_2</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\vdots</m>
+              </cell>
+              <cell>
+                <m>\ddots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell right="medium">
+                <m>\vdots</m>
+              </cell>
+              <cell halign="left">
+                <m>\vdots</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>\tilde{p}_n</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n1}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>a_{n2}</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>a_{nm}</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell halign="left">
+                <m>=-t_n</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right" right="medium">
+                <m>-1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell bottom="medium">
+                <m>\cdots</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>1</m>
+              </cell>
+              <cell right="medium" bottom="medium">
+                <m>0</m>
+              </cell>
+              <cell halign="left" bottom="medium">
+                <m>=f</m>
+              </cell>
+            </row>
+            <row>
+              <cell halign="right">
+              </cell>
+              <cell>
+                <m>=s_1</m>
+              </cell>
+              <cell>
+                <m>=s_2</m>
+              </cell>
+              <cell>
+                <m>\cdots</m>
+              </cell>
+              <cell>
+                <m>=s_n</m>
+              </cell>
+              <cell right="medium">
+                <m>=g</m>
+              </cell>
+              <cell halign="left">
+              </cell>
+            </row>
+          </tabular>
+
+  </p>
+
+  <p>
+    We note that since each <m>a_{ij} &gt; 0</m>, then the primal region is bounded, and so by the
+    Extreme Value Theorem, the primal problem achieves a maximum, and so by the Strong Duality Theorem, the dual
+    achieves optimality as well.
+  </p>
+
+  <figure xml:id="figure-videochapter5vonNeumann">
+    <caption>Proof of the von Neumann minimax Theorem.</caption>
+    <video playat = "select" source = "images/Chapter5-ZeroSum.mp4"/>
+  </figure>
+
+  <p>
+    Finally, we note that when playing games of chance, the random element prevents
+    us from knowing the actual payouts of different strategies.  But we can decide to maximize/minimize expected payouts,
+    and then may proceed as before.
+
+  </p>
+
+  <figure xml:id="figure-videochapter5Chance">
+    <caption>Games of Chance.</caption>
+    <video playat = "select" source = "images/Chapter5-Chance.mp4"/>
+  </figure>
+
+
+  
+
+</section>
