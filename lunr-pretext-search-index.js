@@ -1900,11 +1900,83 @@ var ptx_lunr_docs = [
   "body": "  We introduce a second game here. Each player places $ into the pot. Then the each secretly flip a coin. We consider heads greater than tails.  Rowan then has the options of passing or betting. If he passes, then both players reveal their coin and the higher value wins. If they are the same, players split the pot evenly, and both players net wins\/losses are $0. His other option is to bet, in which case he adds $ to the pot.  Then Colleen has a choice as well, to fold or call. If she folds, then Rowan nets the $ . Otherwise, she calls, and also adds $ to the pot and both coins are revealed.    Suppose that Rowan will stick to the strategy of RP (raise on head, pass on tails) and Colleen choses CC (call on both heads or tails). What are Rowan's expected winnings in this case?    Fill out the payoff matrix for this game.      FF  FC  CF  CC      PP  ?        ?      PR  ?        ?      RP     ?     ?      RR     ?  ?                         It's not possible to determine all the domination without knowing what are. However, knowing , dominate as much as possible      ??  ??      ??  ?  ?      ??  ?  ?                  If , use domination to find the optimal pure strategy for both players.    If , use linear optimization methods to find the optimal mixed strategies for both players.   "
 },
 {
+  "id": "sec-summarygames",
+  "level": "1",
+  "url": "sec-summarygames.html",
+  "type": "Section",
+  "number": "5.4",
+  "title": "Summary of Chapter 5",
+  "body": " Summary of  In this chapter, we begin by introducing the notion of zero sum games. Suppose two players, Rowan and Colleen had and strategies to choose from, and given an choice of strategies, the net payout to Rowan was (with a negative value meaning a payout to Colleen). This may be recorded in what is called a payoff matrix .       Colleen                                            Rowan                                                          We note that some strategies may be simply bad choices for either player. For example, if there were two rows where , for each , then there is no reason for Rowan to pick over and we may delete the row. Similarly if for columns , , we may delete the column. This process of deleting rows and columns is called domination .  Once domination is complete, we can find the resulting optimal strategies by considering the primal-dial optimization problem:                                                                                                                                                                                                              Where the represent probabilities for Rowan and Colleen and represent the values of Rowan and Colleens strategies respectively.  We note that if there is a saddle point , an that is the smallest value in row but the greatest in column . In this case the optimal strategies for Rowan and Colleen are ans respectively.  Otherwise, if there are no saddle points, then both players need to employ a random mix of strategies, and solving the above primal-dual problem find , the probability distribution of the valid strategies for both players.   Zero Sum Games.    The theorem that shows this approach is valid is the von Neumann minimax Theorem  . We first note that technically the above problem attempts to maximize (minimize ) constrained by , (minimize ), i.e. it maximizes or minimizes across pure strategies, but we wish to max or min across mixed strategies. These can be shown to be equivalent, a pure strategy is a type of mixed strategy, and the other inequality can be shown through some algebra.  Then if we assume that each , then by letting , the above system is equivalent to solving:                                                                                                                                                               We note that since each , then the primal region is bounded, and so by the Extreme Value Theorem, the primal problem achieves a maximum, and so by the Strong Duality Theorem, the dual achieves optimality as well.   Proof of the von Neumann minimax Theorem.    Finally, we note that when playing games of chance, the random element prevents us from knowing the actual payouts of different strategies. But we can decide to maximize\/minimize expected payouts, and then may proceed as before.   Games of Chance.    "
+},
+{
+  "id": "sec-summarygames-2",
+  "level": "2",
+  "url": "sec-summarygames.html#sec-summarygames-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "payoff matrix "
+},
+{
+  "id": "sec-summarygames-3",
+  "level": "2",
+  "url": "sec-summarygames.html#sec-summarygames-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "domination "
+},
+{
+  "id": "sec-summarygames-5",
+  "level": "2",
+  "url": "sec-summarygames.html#sec-summarygames-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "saddle point "
+},
+{
+  "id": "figure-videochapter5ZeroSum",
+  "level": "2",
+  "url": "sec-summarygames.html#figure-videochapter5ZeroSum",
+  "type": "Figure",
+  "number": "5.4.1",
+  "title": "",
+  "body": " Zero Sum Games.   "
+},
+{
+  "id": "sec-summarygames-8",
+  "level": "2",
+  "url": "sec-summarygames.html#sec-summarygames-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "von Neumann minimax Theorem "
+},
+{
+  "id": "figure-videochapter5vonNeumann",
+  "level": "2",
+  "url": "sec-summarygames.html#figure-videochapter5vonNeumann",
+  "type": "Figure",
+  "number": "5.4.2",
+  "title": "",
+  "body": " Proof of the von Neumann minimax Theorem.   "
+},
+{
+  "id": "figure-videochapter5Chance",
+  "level": "2",
+  "url": "sec-summarygames.html#figure-videochapter5Chance",
+  "type": "Figure",
+  "number": "5.4.3",
+  "title": "",
+  "body": " Games of Chance.   "
+},
+{
   "id": "sec-exercisesgames",
   "level": "1",
   "url": "sec-exercisesgames.html",
   "type": "Section",
-  "number": "5.4",
+  "number": "5.5",
   "title": "Problems for Chapter 5",
   "body": " Problems for   The simplex pivoter may be found here:         For the following games, write out the payoff matrix and the reduced matrix after domination.   Rowan has a 3 of hearts, 4 of spades, 9 of spades and 10 of hearts. Collen has a 5 of spades, 6 of hearts, 7 of hearts and 8 of spades.  Each player selects a card without revealing it, and both players flip their cards over at the same time. If the suits are the same, then Rowan wins the sum of the two card values. Otherwise, Colleen wins that sum.   The same as (A) but reverse the payoff conditions for Rowan and Colleen.   Rowan picks an even integer from 1-6, and Colleen picks an odd integer from 1-6. If the difference is less than 3, the player who played the bigger number wins the sum of the two values. Otherwise the player who played the smaller number wins the sum of the two values.   Rowan picks an integer from 1-3. Colleen picks two guesses which may be the same. Colleen reveals their guesses one at a time. If they guess correctly, they win $ equal to the value of their other guess. If they do not guess correctly, Rowan wins $ equal to the sum of both guesses.  Colonel Blotto  Colonel Rowan is attacking a town defended by Colonel Colleen. Rowan has three regiments and Colleen has four. There are two routes to the town. Rowan and select any number of regiments to attack along each route, up to a total of three and Colleen can likewise assign her four regiments along either route, neither knowing beforehand the other's strategy.  Along each route, whatever side has a greater number of regiments wins points equal to the number of regiments sent by the opposing side (as they capture those units). Furthermore, if Rowan wins along either route, he captures the town also worth one point.  Morra  Rowan and Colleen each simultaneously hold up one or two fingers and shouts a guess for the total number of fingers held. If either Rowan or Colleen guess correctly, then they collect $ from their opponent equal to this number of fingers. If they both guess correctly or both guess incorrectly, then no money changes hands.    For each of the following payoff matrices, determine if there is a value of so that the matrix has a saddle point. If so, determine the value(s) of and the saddle point(s).                .    .    .    .    .    Write out a reduced payoff matrix with exactly three saddle points.    For each of the following, find the von Neumann value and optimal strategy for the payoff matrix.    .    .    .    .   For each exercise in , determine the von Neumann value and the optimal strategy.   For each of the following games of chance, determine the von Neumann value for the game, and optimal strategies for both players.   Both players secretly flip a coin, they see their own result but not the other. Suppose Heads is greater value than tails.  Rowan then has two choices. He may CALL : both coins are revealed. If Rowan wins, Colleen gives him $2, if Colleen wins, Rowan gives her $4. If both are the same, no money changes hands. He may BID : Colleen then has two choices.  Colleen may FOLD : and Rowan wins $4. Or she may SEE : in which case both coins are revealed, and the winner is awarded $10 from the loser. If there is no winner, no money changes hands.   Each player adds $2 to the pot. Then they roll a 4 sided dice in secret. Each player knows their own results, but not the other's.  Rowan two options. He may FOLD : The pot goes to Colleen. He may PLAY : In which case he adds $5 to the pot.  Colleen then has two options. She may FOLD : The pot goes to Rowan. She may PLAY : In which case she adds $5 to the pot.  Then the results are revealed. Whoever wins takes the pot. If they are a tie, then the pot is split between the players.   There are 6 cards, 2 Jacks, 2 Queens and 2 Kings with Jack < Queen < King. The players each place $1 in the pot. Then, one card each is dealt to each player face down. They may see their own card but not their opponenets.  Rowan now has three choices. He may FOLD : the pot goes to Colleen. He may CHECK : the pot remains as is, or he may RAISE : Rowan adds $2 to the pot.  If Rowan doesn't FOLD, Colleen also has three choices. She may also FOLD : The pot goes to Rown. She may SEE : Colleen adds money to the pot equal to what Rowan added (if any). She may SEE-RAISE : Colleen adds money to the pot equal to what Rowan added, and then they both add in an additional $2.  If no one has folded at this point, the cards are revealed. The pot goes to the winner. If the cards are a tie, then the pot is split evenly between the players.    Prove that if a reduced payoff matrix has multiple saddle points, they have the same value.    Consider the payoff matrix    Find neccesary and sufficient conditions for this matrix to be reduced by domination.   Find the von Neumann value and optimal strategies for each player for the game above. There may be multiple cases.    Consider the payoff matrix where .   Find the von Neumann value and optimal strategies for each player for the game above.   Suppose could be any value, when does this matrix reduce via domination?   Find the von Neumann value and optimal strategies for each player for the game above if could be any value.    Consider the payoff matrix where .   Find the optimal solutions and the von Neumann value for the above game. (Without loss of generality, we may assume are positive, why?)   Prove that in a game with a two by two payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.   Prove via contradiction that in a game with a reduced payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.    "
 },
@@ -1913,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#ex-games",
   "type": "Exercise",
-  "number": "5.4.1",
+  "number": "5.5.1",
   "title": "",
   "body": " For the following games, write out the payoff matrix and the reduced matrix after domination.   Rowan has a 3 of hearts, 4 of spades, 9 of spades and 10 of hearts. Collen has a 5 of spades, 6 of hearts, 7 of hearts and 8 of spades.  Each player selects a card without revealing it, and both players flip their cards over at the same time. If the suits are the same, then Rowan wins the sum of the two card values. Otherwise, Colleen wins that sum.   The same as (A) but reverse the payoff conditions for Rowan and Colleen.   Rowan picks an even integer from 1-6, and Colleen picks an odd integer from 1-6. If the difference is less than 3, the player who played the bigger number wins the sum of the two values. Otherwise the player who played the smaller number wins the sum of the two values.   Rowan picks an integer from 1-3. Colleen picks two guesses which may be the same. Colleen reveals their guesses one at a time. If they guess correctly, they win $ equal to the value of their other guess. If they do not guess correctly, Rowan wins $ equal to the sum of both guesses.  Colonel Blotto  Colonel Rowan is attacking a town defended by Colonel Colleen. Rowan has three regiments and Colleen has four. There are two routes to the town. Rowan and select any number of regiments to attack along each route, up to a total of three and Colleen can likewise assign her four regiments along either route, neither knowing beforehand the other's strategy.  Along each route, whatever side has a greater number of regiments wins points equal to the number of regiments sent by the opposing side (as they capture those units). Furthermore, if Rowan wins along either route, he captures the town also worth one point.  Morra  Rowan and Colleen each simultaneously hold up one or two fingers and shouts a guess for the total number of fingers held. If either Rowan or Colleen guess correctly, then they collect $ from their opponent equal to this number of fingers. If they both guess correctly or both guess incorrectly, then no money changes hands.  "
 },
@@ -1922,7 +1994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-2",
   "type": "Exercise",
-  "number": "5.4.2",
+  "number": "5.5.2",
   "title": "",
   "body": " For each of the following payoff matrices, determine if there is a value of so that the matrix has a saddle point. If so, determine the value(s) of and the saddle point(s).                .    .    .    .    .  "
 },
@@ -1931,7 +2003,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-3",
   "type": "Exercise",
-  "number": "5.4.3",
+  "number": "5.5.3",
   "title": "",
   "body": " Write out a reduced payoff matrix with exactly three saddle points.  "
 },
@@ -1940,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-4",
   "type": "Exercise",
-  "number": "5.4.4",
+  "number": "5.5.4",
   "title": "",
   "body": " For each of the following, find the von Neumann value and optimal strategy for the payoff matrix.    .    .    .    .  "
 },
@@ -1949,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-5",
   "type": "Exercise",
-  "number": "5.4.5",
+  "number": "5.5.5",
   "title": "",
   "body": "For each exercise in , determine the von Neumann value and the optimal strategy. "
 },
@@ -1958,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-6",
   "type": "Exercise",
-  "number": "5.4.6",
+  "number": "5.5.6",
   "title": "",
   "body": " For each of the following games of chance, determine the von Neumann value for the game, and optimal strategies for both players.   Both players secretly flip a coin, they see their own result but not the other. Suppose Heads is greater value than tails.  Rowan then has two choices. He may CALL : both coins are revealed. If Rowan wins, Colleen gives him $2, if Colleen wins, Rowan gives her $4. If both are the same, no money changes hands. He may BID : Colleen then has two choices.  Colleen may FOLD : and Rowan wins $4. Or she may SEE : in which case both coins are revealed, and the winner is awarded $10 from the loser. If there is no winner, no money changes hands.   Each player adds $2 to the pot. Then they roll a 4 sided dice in secret. Each player knows their own results, but not the other's.  Rowan two options. He may FOLD : The pot goes to Colleen. He may PLAY : In which case he adds $5 to the pot.  Colleen then has two options. She may FOLD : The pot goes to Rowan. She may PLAY : In which case she adds $5 to the pot.  Then the results are revealed. Whoever wins takes the pot. If they are a tie, then the pot is split between the players.   There are 6 cards, 2 Jacks, 2 Queens and 2 Kings with Jack < Queen < King. The players each place $1 in the pot. Then, one card each is dealt to each player face down. They may see their own card but not their opponenets.  Rowan now has three choices. He may FOLD : the pot goes to Colleen. He may CHECK : the pot remains as is, or he may RAISE : Rowan adds $2 to the pot.  If Rowan doesn't FOLD, Colleen also has three choices. She may also FOLD : The pot goes to Rown. She may SEE : Colleen adds money to the pot equal to what Rowan added (if any). She may SEE-RAISE : Colleen adds money to the pot equal to what Rowan added, and then they both add in an additional $2.  If no one has folded at this point, the cards are revealed. The pot goes to the winner. If the cards are a tie, then the pot is split evenly between the players.  "
 },
@@ -1967,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-7",
   "type": "Exercise",
-  "number": "5.4.7",
+  "number": "5.5.7",
   "title": "",
   "body": " Prove that if a reduced payoff matrix has multiple saddle points, they have the same value.  "
 },
@@ -1976,7 +2048,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-8",
   "type": "Exercise",
-  "number": "5.4.8",
+  "number": "5.5.8",
   "title": "",
   "body": " Consider the payoff matrix    Find neccesary and sufficient conditions for this matrix to be reduced by domination.   Find the von Neumann value and optimal strategies for each player for the game above. There may be multiple cases.  "
 },
@@ -1985,7 +2057,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-9",
   "type": "Exercise",
-  "number": "5.4.9",
+  "number": "5.5.9",
   "title": "",
   "body": " Consider the payoff matrix where .   Find the von Neumann value and optimal strategies for each player for the game above.   Suppose could be any value, when does this matrix reduce via domination?   Find the von Neumann value and optimal strategies for each player for the game above if could be any value.  "
 },
@@ -1994,7 +2066,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesgames.html#exercises-games-10",
   "type": "Exercise",
-  "number": "5.4.10",
+  "number": "5.5.10",
   "title": "",
   "body": " Consider the payoff matrix where .   Find the optimal solutions and the von Neumann value for the above game. (Without loss of generality, we may assume are positive, why?)   Prove that in a game with a two by two payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.   Prove via contradiction that in a game with a reduced payoff matrix where the optimal solution for each player is a pure strategy , then the matrix has a saddle point.  "
 },
