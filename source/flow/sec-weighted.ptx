@@ -14,7 +14,7 @@
     <introduction>
       <p>
         Dr. Ayad is driving from her home to Fantasi College.  The town is connected by a series of one way streets,
-        each labled with the time it would take to traverse the road.
+        each labeled with the time it would take to traverse the road.
       </p>
       <image xml:id="traffic">
         <description>A Network Flow depicting several nodes and edges with weights.</description>
@@ -60,7 +60,7 @@
     <task>
       <statement>
         <p>
-          What is the shortest amout of time needed for her to arrive at Fantasi College?
+          What is the shortest amount of time needed for her to arrive at Fantasi College?
 
         
       </p>
@@ -166,7 +166,7 @@
     <idx>cycle, negative</idx> 
     <statement>
       <p>
-        We define a <term> cycle</term> in a weighted network to be a path froma vertex <m>v_x</m> to itself.  If the length of a cycle is negative,
+        We define a <term> cycle</term> in a weighted network to be a path from a vertex <m>v_x</m> to itself.  If the length of a cycle is negative,
         we call it a <term>negative cycle</term>.
       </p>
     </statement>
@@ -356,7 +356,7 @@
         </li>
         <li>
           <p>
-            Let <m>\ell_k=\displaystyle \min_{i\in T} \ell_i</m>.
+            Let <m>v_k</m> be a vertex where <m>\ell_k=\displaystyle \min_{i\in T} \ell_i</m>.
           </p>
         </li>
         <li>
@@ -515,7 +515,7 @@
         </li>
         <li>
           <p>
-            Let <m>\ell_k=\displaystyle \min_{i\in T} \ell_i</m>.
+            Let <m>v_k</m> be a vertex where <m>\ell_k=\displaystyle \min_{i\in T} \ell_i</m>.
           </p>
         </li>
         <li>
@@ -888,7 +888,7 @@
       <statement>
         <p>
           Now in addition to decreasing the  capacities of used edges by <m>x_{ij}</m>, add
-          a backwards edge <m>ji</m> with capacity <m>x_{ij}</m> and negative weight <m>-w_{ij}</m>.
+          a backwards edge <m>(v_j,v_i)</m> with capacity <m>x_{ij}</m> and negative weight <m>-w_{ij}</m>.
         </p>
         <p>
           Pick any path from <m>v_0</m> to <m>v_5</m> that traverses a backwards negative edge.  
