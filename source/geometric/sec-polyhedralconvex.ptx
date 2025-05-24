@@ -133,7 +133,7 @@
     <statement>
       <p>
         <idx>line segment</idx>
-        Given <m>\p, \q\in \mathbb{R}m</m>, we call the set <m>\{t\cdot \p+(1-t)\cdot \q : t\in [0,1]\}</m> the
+        Given <m>\p, \q\in \mathbb{R}^m</m>, we call the set <m>\{t\cdot \p+(1-t)\cdot \q : t\in [0,1]\}</m> the
         <term>line segment</term> between <m>\p</m> and <m>\q</m>.
       </p>
     </statement>
