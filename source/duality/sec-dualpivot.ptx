@@ -138,7 +138,7 @@
         </tabular>
       </p>
       <p>
-        (The additional dividing lines in the top left and bottom right seperate the primal decision-slack
+        (The additional dividing lines in the top left and bottom right separate the primal decision-slack
         variables from the dual decision-slack variables.) 
       </p>
     </introduction>

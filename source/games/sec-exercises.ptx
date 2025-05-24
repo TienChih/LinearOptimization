@@ -31,7 +31,7 @@
         <statement>
           <p>
             Rowan has a 3 of hearts, 4 of spades, 9 of spades  and 10 of hearts.
-            Collen has a 5 of spades, 6 of hearts, 7 of hearts  and 8 of spades.
+            Colleen has a 5 of spades, 6 of hearts, 7 of hearts  and 8 of spades.
           </p>
           <p>
             Each player selects a card without revealing it, and both players flip their
@@ -298,7 +298,7 @@
           <p>
             There are 6 cards, 2 Jacks, 2 Queens and 2 Kings with Jack &lt; Queen &lt; King.
             The players each place $1 in the pot.
-            Then, one card each is dealt to each player face down.  They may see their own card but not their opponenets.
+            Then, one card each is dealt to each player face down.  They may see their own card but not their opponents.
           </p>
           <p>
             Rowan now has three choices.  He may <em>FOLD</em>:  the pot goes to Colleen.
@@ -307,7 +307,7 @@
           </p>
           <p>
             If Rowan doesn't FOLD, Colleen also has three choices.  She may also
-            <em>FOLD</em>: The pot goes to Rown.  She may <em>SEE</em>: Colleen adds money
+            <em>FOLD</em>: The pot goes to Rowan.  She may <em>SEE</em>: Colleen adds money
             to the pot equal to what Rowan added (if any).  She may <em>SEE-RAISE</em>:
             Colleen adds money to the pot equal to what Rowan added, and then they both add in an additional
             $2.
@@ -339,7 +339,7 @@
       <task>
         <statement>
           <p>
-            Find neccesary and sufficient conditions for this matrix to be reduced by
+            Find necessary and sufficient conditions for this matrix to be reduced by
             domination.
           </p>
         </statement>

@@ -68,7 +68,7 @@
     <task>
       <statement>
         <p>
-          We want to show that <m>H</m> is the seperating hyperplane.  Suppose that <m>U</m> was not contained in <m>\{\mathbf{x}\in \R^n: \mathbf{h}^\top\mathbf{x}\geq0\}</m> what must be true about <m>U</m>?
+          We want to show that <m>H</m> is the separating hyperplane.  Suppose that <m>U</m> was not contained in <m>\{\mathbf{x}\in \R^n: \mathbf{h}^\top\mathbf{x}\geq0\}</m> what must be true about <m>U</m>?
         </p>
       </statement>
     </task>
@@ -236,7 +236,7 @@
     <task>
       <statement>
         <p>
-          Let's   denote the normal vector of the seperating hyperplane by <m>\y</m> (interesting choice &#128064;) so that <m>\y^\top \vb\lt \y^\top p</m> for any <m>p\in P</m>.
+          Let's   denote the normal vector of the separating hyperplane by <m>\y</m> (interesting choice &#128064;) so that <m>\y^\top \vb\lt \y^\top p</m> for any <m>p\in P</m>.
           Why must <m>\y^\top \vb \lt 0</m>?
         </p>
       </statement>

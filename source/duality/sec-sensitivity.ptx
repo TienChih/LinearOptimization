@@ -13,12 +13,12 @@
   <exploration xml:id="exploration-witch">
     <introduction>
       <p>
-        The witch Agnesi<fn>The name Agnesi was chosen by my Spring 2024 class who knew her from her eponymous curve.</fn> is brewing a healing elixer and a poison.  A pint of healing elixer takes 3 newt eyes and one frog, whereas a pint of poison takes
+        The witch Agnesi<fn>The name Agnesi was chosen by my Spring 2024 class who knew her from her eponymous curve.</fn> is brewing a healing elixir and a poison.  A pint of healing elixir takes 3 newt eyes and one frog, whereas a pint of poison takes
         1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.
       </p>
       <p>
-        Supposing that the healing elixer sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximzie her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts 
-        of elixers and potions.
+        Supposing that the healing elixir sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximize her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts 
+        of elixirs and potions.
       </p>
       
       
@@ -68,7 +68,7 @@
     <task>
       <statement>
         <p>
-          If the need for healing elixer increases and they now sell for 5 gold, would that change our answers above?
+          If the need for healing elixir increases and they now sell for 5 gold, would that change our answers above?
         </p>
       </statement>
     </task>
@@ -127,7 +127,7 @@
   <activity xml:id="activity-coefficients">
     <introduction>
       <p>
-        From <xref ref="exploration-witch"/>, letting <m>x_1</m> denote the number of healing elixers,
+        From <xref ref="exploration-witch"/>, letting <m>x_1</m> denote the number of healing elixirs,
         and <m>x_2</m> denote the amount of poison created. Then, we get that the feasible region satisfies the inequalities:
         <md>
           <mrow>3x_1+x_2 \amp\leq 34 </mrow>
@@ -779,12 +779,12 @@
               </li>
               <li>
                 <p>
-                  The quantity of healing elixers and poisons.
+                  The quantity of healing elixirs and poisons.
                 </p>
               </li>
               <li>
                 <p>
-                  The value of healing elixers and poisons.
+                  The value of healing elixirs and poisons.
                 </p>
               </li>
             </ol>

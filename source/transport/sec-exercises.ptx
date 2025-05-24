@@ -929,7 +929,7 @@
 
     <exercise>
       <p>
-        In <xref ref="ex-transport"/>, looking at the final talbeau of the Transportation
+        In <xref ref="ex-transport"/>, looking at the final tableau of the Transportation
         Algorithm, determine which of these have a <em>unique</em> optimal solution.
       </p>
     </exercise>
@@ -1322,12 +1322,12 @@
         <m>500</m> hoverbikes on the first day, <m>300</m> hoverbikes on the second and <m>800</m> hoverbikes on the final day.
       </p>
       <p>
-        Brand new hoverbikes are <m>1000</m> credits.  After use they undergo a maintanence procedure 
+        Brand new hoverbikes are <m>1000</m> credits.  After use they undergo a maintenance procedure 
         which costs <m>250</m> credits and takes two days, before they may be used again.  A rush job that takes one day is possible
         but costs <m>400</m> credits.
       </p>
       <p>
-        The resort naturally wishes to minimize their costs.  They wish to know how many bikes to purchase and what maintanence 
+        The resort naturally wishes to minimize their costs.  They wish to know how many bikes to purchase and what maintenance 
         schedule would achieve this.
       </p>
       <p>
@@ -2119,7 +2119,7 @@ data rational.
         <p>
           Consider an assignment problem where the cost of shipping from <m>v_i</m> to <m>v_j</m> is
           the weight on that edge if it exists and <m>Z</m> otherwise.  Show that any solution to the assignment problem
-          (not neccesarily optimal) is bijective with the set of possible unions of disjoint cycles on the network.
+          (not necessarily optimal) is bijective with the set of possible unions of disjoint cycles on the network.
         </p>
       </statement>
     </task>

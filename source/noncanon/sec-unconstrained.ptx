@@ -354,12 +354,12 @@
           </li>
           <li>
             <p>
-              It is possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm, to return to the origin, and this is consistent with our geometric viewpoint.
+              It is possible to perform pivots that don't necessarily follow the rules of the Simplex Algorithm, to return to the origin, and this is consistent with our geometric viewpoint.
             </p>
           </li>
           <li>
             <p>
-              It is technically possible to perform pivots that don't neccesarily follow the rules of the Simplex Algorithm to return to the origin, and this is <em>not</em>  consistent with our geometric viewpoint.
+              It is technically possible to perform pivots that don't necessarily follow the rules of the Simplex Algorithm to return to the origin, and this is <em>not</em>  consistent with our geometric viewpoint.
             </p>
           </li>
         </ol>

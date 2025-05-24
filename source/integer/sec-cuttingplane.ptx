@@ -170,7 +170,7 @@
     <task>
       <statement>
         <p>
-          Show that for any feasible  integeral solution,  that the left hand side of the equality in (2) is an integer.
+          Show that for any feasible  integral solution,  that the left hand side of the equality in (2) is an integer.
         </p>
       </statement>
     </task>
@@ -1107,7 +1107,7 @@
         </li>
         <li>
           <p>
-            Select a <m>b_i</m> that is non integral and for that row, construct the additional bound:
+            Select a <m>b_i</m> that is non-integral and for that row, construct the additional bound:
             <m>\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)</m>.
           </p>
         </li>

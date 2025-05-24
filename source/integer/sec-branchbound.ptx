@@ -55,7 +55,7 @@
     <task>
       <statement>
         <p>
-          What are some problems with this solution?  Without trying to explictly find 
+          What are some problems with this solution?  Without trying to explicitly find 
           the optimal solution, how far off is this solution?
         </p>
       </statement>
@@ -420,7 +420,7 @@
         linear optimization problem to ensure the solution is integral.
       </p>
       <p>
-        We examine the integer optimization problem from <xref ref="exploration-meat"/>, and it's relaxation.
+        We examine the integer optimization problem from <xref ref="exploration-meat"/>, and its relaxation.
       </p>
     </introduction>
     <task>
@@ -549,7 +549,7 @@
       <statement>
         <p>
           Consider the additional constraint <m>x_2\leq 4</m>.  Solve this maximization problem.  Why do we
-          no longer need to adjust <m>x_1</m>?  Are we gaurunteed that this solution
+          no longer need to adjust <m>x_1</m>?  Are we guaranteed that this solution
           is optimal?
         </p>
         <p>
@@ -686,7 +686,7 @@
       <statement>
         <p>
           We consider now the constraint <m>x_2\leq 3</m>.  Solve this
-          maximazation problem.  How does this solution compare to the previous
+          maximization problem.  How does this solution compare to the previous
           integral solution we found?
         </p>
       </statement>
@@ -847,7 +847,7 @@
               child { node [env, left] {Node 3:\\ $f(2.5,5)=60$\\ stop} 
                 edge from parent node [below] {$x_2\geq 5$} } 
               edge from parent node [below] {$x_1\leq 4$} }
-              child { node [env] {Node 4: $f(5,\frac{10}{3})\approx 73.33$}
+              child { node [env] {Node 4:\\ $f(5,\frac{10}{3})\approx 73.33$}
                 child { node [env, right] {Node 5:\\ $f(5,3)=71^*$\\stop} 
                   edge from parent node [below] {$x_2\leq 3$} } 
                 child { node [env] {Node 6:\\ infeasible \\ stop} 
@@ -858,7 +858,7 @@
         </latex-image>
       </image> 
       <p>
-        We start at Node 0, and identify the two subproblems.  We exlore the subproblem where
+        We start at Node 0, and identify the two subproblems.  We explore the subproblem where
         <m>x_1\leq 4</m> in Node 1, and again identify two subproblems.  We stop and return at
         Node 2 because the solution was integral.  We stop and return from Node 3,
         even though the solution is not integral, because the optimal solution for that subproblem
@@ -880,31 +880,10 @@
       <p>
         As the demand for meat pies skyrockets, Agnesi is now able to acquire 40 oz of floor a day,
         but now uses 10 oz of floor per meat pie to thicken the gravy.  She is able to sell these for 40 gp each.
-        Use the Branch and Bound Algorithm <xref ref="def-branchbound"/> to found her
+        Use the Branch and Bound Algorithm <xref ref="def-branchbound"/> to find her
         new optimal production level.
       </p>
-      <p>
-        <sage>
-          <input>
-            %display typeset
-            A = (FIXME)
-            b = (FIXME)
-            c = (FIXME)
-            P = InteractiveLPProblem(A, b, c,
-             [FIXME], 
-             constraint_type = [FIXME],
-             variable_type = [FIXME],
-             problem_type = FIXME)
-            P
-          </input>         
-          </sage>
-          <sage>
-            <input>
-              print(P.optimal_solution())
-              print(P.optimal_value())
-            </input>         
-          </sage>
-    </p>
+      
     </statement>
   </activity>
 

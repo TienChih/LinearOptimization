@@ -94,7 +94,7 @@
       <introduction>
         <p>
           An office worker is eating in their work cafeteria and they 
-          are recently put on a low cholestrol diet.  Their usual choices
+          are recently put on a low cholesterol diet.  Their usual choices
           are pasta, fried tofu and chicken sandwiches.  The pasta has 6 g of protein,
           60 g of carbohydrates, 2 mg of vitamin C, and 60 mg of cholesterol.
           The fried tofu has 10 g of protein,
@@ -1075,7 +1075,7 @@ solutions of successive tableaus.
       <idx>theorem, complementary slackness</idx>
       <p>
         Prove that for a canonical problem, feasible solutions <m>\x, \y</m>, with
-        slack variables <m>\vs, \vt</m> exhibt complementary slackness
+        slack variables <m>\vs, \vt</m> exhibit complementary slackness
         if and only if <m>\x, \y</m> are optimal.
       </p>
       <p>
@@ -1086,7 +1086,7 @@ solutions of successive tableaus.
     <exercise>
       <introduction>
         <p>
-          Solve the following non-cononical primal-dual problems:
+          Solve the following non-canonical primal-dual problems:
         </p>
       </introduction>
       <task>

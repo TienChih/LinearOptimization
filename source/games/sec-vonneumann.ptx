@@ -8,7 +8,7 @@
   <introduction>
     <p>
       In this section, show that the linear optimization scheme from <xref ref="sec-minmaxgames"/> gives us exactly what we want
-      by proving VonNeuman's Theorem.
+      by proving von Neumann's Theorem.
     </p>
   </introduction>
 
@@ -454,7 +454,7 @@
       <statement>
         <p>
           Rewrite the new <em>canonical</em> linear programming problem with variables <m>\tilde{q}_j</m> that optimizes
-          Colleen's stretegy.
+          Colleen's strategy.
         </p>
       </statement>
     </task>
@@ -498,7 +498,7 @@
       <statement>
         <p>
           We're still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at
-          Rowan.  To balance things out, Rowan has to pay Colleen $5 after each round.  Would this fact change anything about Rowan and Collen's strategies?
+          Rowan.  To balance things out, Rowan has to pay Colleen $5 after each round.  Would this fact change anything about Rowan and Colleen's strategies?
         </p>
         <p>
           Say it was $<m>r</m>, would that make any difference?

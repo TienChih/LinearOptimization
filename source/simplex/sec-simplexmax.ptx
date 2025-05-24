@@ -144,7 +144,7 @@
       <task>
         <statement>
           <p>
-            Which of the following is a neccesary and sufficient condition for a Tucker tableau to have a feasible basic solution?
+            Which of the following is a necessary and sufficient condition for a Tucker tableau to have a feasible basic solution?
           </p>
           <ol marker="A." cols="2">
             <li>

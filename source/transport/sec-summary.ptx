@@ -139,7 +139,7 @@
 
         <p>
           We then introduce the Vogel Advanced Start Method (VAM) <xref ref="def-vam"/> to heuristically
-          pick a <q>good</q> feasible solution.  The essential premise is that,we take each warehouse and market,
+          pick a <q>good</q> feasible solution.  The essential premise is that, we take each warehouse and market,
           and consider the difference between the cheapest and second cheapest options for that row/column.
           Since we want to minimize cost, we prioritize warehouses/markets where making the second best choice would incur
           a larger cost penalty than the best choice, and choose the cheapest option for those row/columns.  We then readjust and repeat until we
@@ -161,7 +161,7 @@
      <m>c_{ij}=0</m> for <m>x_{ij}</m> not in the basis, and since <m>\displaystyle \sum_{j=1}^m x_{ij}=W_i, \sum_{i=1}^n x_{ij}=M_j</m>, we have that
      <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij} = \sum_{i=1}^n a_iW_i+\sum_{j=1}^m b_jM_j</m>, so shifting the shipping to an entry where <m>c_{ij}&lt; a_i+b_j</m> would
      lower the total shipping cost.  We then outline a cycle consisting of new basis elements and shifting the shipping around to preserve the 
-     warehouse and market constraints, addting the negative entry to the basis and removing an entry with no shipping from the basis.  Note that it is possible for this
+     warehouse and market constraints, adding the negative entry to the basis and removing an entry with no shipping from the basis.  Note that it is possible for this
      shift to be zero, yet changing the basis, equivalent to a degenerate piviot from <xref ref="sec-cycling"/>.  We repeat this process until
      there are no longer negative entries.
   </p>

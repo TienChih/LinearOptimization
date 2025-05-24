@@ -989,7 +989,7 @@
     <task>
       <statement>
         <p>
-          Perform steps 2-5.  How much was shiftted along the cycle in step 5?
+          Perform steps 2-5.  How much was shifted along the cycle in step 5?
         </p>
       </statement>
     </task>
@@ -1022,7 +1022,7 @@
 
     <activity xml:id="activity-unbalanced">
       <idx>transportation problem, unbalanced</idx>
-      <idx>unbalanced transportion problem</idx>
+      <idx>unbalanced transportation problem</idx>
       <introduction>
         <p>
           We now consider the case of <term>unbalanced</term> transportation problems,
@@ -1130,7 +1130,7 @@
       <task>
         <statement>
           <p>
-            Suppose we <q>ship</q> the excess supply to a phatom market:
+            Suppose we <q>ship</q> the excess supply to a phantom <q>market</q>:
           </p>
           <p>
             <tabular halign="center">
@@ -1234,8 +1234,8 @@
             </tabular>
           </p>
           <p>
-            How much is shipped to the <q>Market</q>?  How much does it cost
-            to <q>ship</q> from each warehouse to <q>Market</q>?
+            How much is shipped to the <q>market</q>?  How much does it cost
+            to <q>ship</q> from each warehouse to <q>market</q>?
           </p>
         </statement>
       </task>
@@ -1341,7 +1341,7 @@
       <task>
         <statement>
           <p>
-            Suppose we have a phantom <q>Warehouse</q> that <q>filled</q> the
+            Suppose we have a phantom <q>warehouse</q> that <q>filled</q> the
             outstanding demand.
           </p>
           <p>
@@ -1449,7 +1449,7 @@
           </p>
           <p>
             How much additional <q>supply</q> is needed?  How much would it cost
-            to ship this <q>supply</q> from <q>Warehouse</q> to the markets?
+            to ship this <q>supply</q> from <q>warehouse</q> to the markets?
           </p>
         </statement>
       </task>

@@ -13,7 +13,7 @@
     <p>
       In this chapter, we explore noncanonical optimization problems.  In <xref ref="sec-unconstrained"/> we consider 
       the possibility of potentially negative decision variables, and explore the algebraic and geometric interpretations of
-      this phonomena.  In <xref ref="sec-superconstrained"/> we do the same for bounds defined by equality conditions, rather than 
+      this phenomena.  In <xref ref="sec-superconstrained"/> we do the same for bounds defined by equality conditions, rather than 
       inequalities.  In <xref ref="sec-noncanonsage"/> we show how to encode and solve non-canonical linear optimization using Sage.
     </p>
   </introduction>

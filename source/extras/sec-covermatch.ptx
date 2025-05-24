@@ -310,7 +310,7 @@
       <p>
         <idx>vertex cover, vertex covering</idx>
         <idx>cover, covering</idx>
-        Given a graph <m>G</m>, a <term>vertex cover</term> or <m>cover</m> is a colection of vertices <m>U</m>
+        Given a graph <m>G</m>, a <term>vertex cover</term> or <m>cover</m> is a collection of vertices <m>U</m>
         such that for any edge <m>v_iv_j</m> either <m>v_i</m> or <m>v_j</m> (possibly both)
         are in <m>U</m>.
       </p>
@@ -368,7 +368,7 @@
     <task>
       <statement>
         <p>
-          We <q>solved</q> the matching maximixation problem for <m>H</m> in <xref ref="exploration-matching"/>, use
+          We <q>solved</q> the matching maximization problem for <m>H</m> in <xref ref="exploration-matching"/>, use
           Sage to solve the dual problem
         </p>
         <sage>
@@ -587,7 +587,7 @@
     <activity>
       <p>
         Prove that if a graph is bipartite, then it must <em>not</em>
-        contain an odd length cycle <fn>The coverse is also true, but we will leave that alone.</fn>.
+        contain an odd length cycle <fn>The converse is also true, but we will leave that alone.</fn>.
       </p>
     </activity>
 

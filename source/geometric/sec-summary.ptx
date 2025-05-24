@@ -14,7 +14,7 @@
   <p>
     To show that such a result may generalize, we introduce the notion of
     <em>convexity</em> <xref ref="def-convex"/>.  A convex set is a set which contains every
-    line segement between points in the set.  We then show that a half-space was convex,
+    line segment between points in the set.  We then show that a half-space was convex,
     that an intersection of halfspaces was convex, and thus the feasible region of a linear optimization 
     problem is always convex.
   </p>

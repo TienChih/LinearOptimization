@@ -464,7 +464,7 @@
 
   <p>
     We note that since the above tableau satisfies the conditions for an optimal basic solution,
-    each <m>y_i, s_j\geq0</m>.  Since the above equality is an equlity of functions of <m>x_1,\ldots, x_m</m>, by comparing coefficients of <m>x_j</m>,
+    each <m>y_i, s_j\geq0</m>.  Since the above equality is an equality of functions of <m>x_1,\ldots, x_m</m>, by comparing coefficients of <m>x_j</m>,
     we have <m>\displaystyle \sum_{i=1}^n y_ia_{ij}\geq c_j</m> and <m>\y</m> is a feasible solution.  Then we also have that
     <m>-d^*=\displaystyle \sum_{i=1}^ny_ib_i-d</m>.  The left hand side is the optimal value for <m>f</m>, and the right hand side is the 
     current value of <m>g</m> for this choice of <m>\y</m>.  So by <xref ref="prop-weakduality"/>, we prove the Strong Duality
@@ -602,7 +602,7 @@
         <m>a_{ij}\leq 0</m> for that problem, then the problem is infeasible, since this inequality can never be satisfied.
         If the basic dual is feasible then it is also optimal if and only if <m>b_i\geq 0</m>.  However, if the basic dual
         is feasible but there is a row <m>i</m> where <m>a_{ij} \geq0</m>, then the dual region is unbounded, and if additionally
-        <m>b_i&lt;0</m>, then the dual problem is unbounded below.  These boundedness conditions are sufficient but not neccesary, the reader is 
+        <m>b_i&lt;0</m>, then the dual problem is unbounded below.  These boundedness conditions are sufficient but not necessary, the reader is 
         encouraged to come up with their own counterexamples to necessity.
   </p>
 

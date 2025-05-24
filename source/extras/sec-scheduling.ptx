@@ -13,7 +13,7 @@
     <statement>
       <p>
         Consider the last time you had to pick classes to fit a schedule.  What were some things you had to consider in doing so?
-        What sort of constraints did you consider neccesary, and which were considered preferences?  How does your answers compare to your classmates?
+        What sort of constraints did you consider necessary, and which were considered preferences?  How does your answers compare to your classmates?
       </p>
     </statement>
     
@@ -452,7 +452,7 @@
         </li>
         <li>
           <p>
-            Yafa wishes to get a headstart on her general education, so she wants to take at least one of either
+            Yafa wishes to get a head start on her general education, so she wants to take at least one of either
             Literature (Lit) or Art (Art).  Similarly, she wishes to take at least one of Economics (Econ) or History (Hist).
           </p>
         </li>
@@ -479,7 +479,7 @@
     <task>
       <statement>
         <p>
-          Write out the constraints which restrict students to at most 1 course in a given timeslot. 
+          Write out the constraints which restrict students to at most 1 course in a given time slot. 
         </p>
       </statement>
     </task>
@@ -1372,7 +1372,7 @@
   <project>
     <p>
       For the truly ambitious, model a scheduling problem for the <em>offering of courses</em>,
-      factoring in preferred times, preferred courses, preffered classrooms, changes in staffing,
+      factoring in preferred times, preferred courses, preferred classrooms, changes in staffing,
       fluctuating student demand and flow of courses in the future etc.<fn>This is as open a problem as there can be.  
         Someone who solves this problem will gain more recognition than if they solved all the Millennium Problems.</fn>.
     </p>

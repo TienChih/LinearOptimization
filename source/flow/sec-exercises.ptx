@@ -349,7 +349,7 @@
           <p>
             Record this problem in a Tucker tableau, then record the 
             dual variable using <m>\ec{\mu_i}</m> to denote dual variables associated with
-            vertex equality constraints and <m>y_{ij}</m> to denote the dual vairables for 
+            vertex equality constraints and <m>y_{ij}</m> to denote the dual variables for 
             edge inequality constraint.  
           </p>
         </statement>
@@ -414,7 +414,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            If not all patients were able to recieve blood, explain the financial backers and hospital administrators, who may not have taken
+            If not all patients were able to receive blood, explain the financial backers and hospital administrators, who may not have taken
             any math in awhile, why this was the case.
           </p>
         </statement>
@@ -469,7 +469,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            Let <m>x_{ij}</m> denote any max-flow for <m>N</m> with value <m>f</m> and  <m>(V_1, V_2)</m> denote any min-cut (not neccesarily produced by <m>x_{ij}</m> and <xref ref="def-mincutalgorithm"/>).  Let
+            Let <m>x_{ij}</m> denote any max-flow for <m>N</m> with value <m>f</m> and  <m>(V_1, V_2)</m> denote any min-cut (not necessarily produced by <m>x_{ij}</m> and <xref ref="def-mincutalgorithm"/>).  Let
             <m>(V_1', V_2')</m> be the cut generated <m>x_{ij}</m> via <xref ref="def-mincutalgorithm"/>.
           </p>
           <p>

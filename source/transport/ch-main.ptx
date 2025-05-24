@@ -19,7 +19,7 @@
       in <xref ref="sec-transportalgorithm"/> we explore an algorithm which improves
       a feasible solution and produces an optimal solution.  Then in <xref ref="sec-assignment"/>,
       we examine a specific type of transportation problem, the assignment problem,
-      and study an algorithm partiular to this class of problem.
+      and study an algorithm particular to this class of problem.
     </p>
   </introduction>
 

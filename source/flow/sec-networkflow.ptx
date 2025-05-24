@@ -13,7 +13,7 @@
     <introduction>
       <p>
         Consider a series of islands with bridges between them.  A group of people are trying to move from island <m>v_0</m> to island <m>v_5</m>.  Due to the length/width
-        of the bridges, only but so many people can move between a pair of islands in a minute, and these are labled.  The bridges also only allow movement in one direction.
+        of the bridges, only but so many people can move between a pair of islands in a minute, and these are labeled.  The bridges also only allow movement in one direction.
       </p>
       <image xml:id="island">
         <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
@@ -163,7 +163,7 @@
     <title>Conservation of Flow</title>
     <statement>
       <p>
-        For a capacited network <m>N</m>, <m>\displaystyle\sum_{i} \varphi(v_i)=0</m>.
+        For a capacitated network <m>N</m>, <m>\displaystyle\sum_{i} \varphi(v_i)=0</m>.
       </p>
     </statement>
   </theorem>
