@@ -5,16 +5,23 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Coverings and Matchings of Graphs</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Linear Optimization">
-<meta property="book:author" content="Tien Chih">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,30 +93,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Linear Optimization">
+<meta property="book:author" content="Tien Chih">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -131,15 +120,29 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.11';
+eBookConfig.runestone_version = '7.7.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.ee5a0b116b7d0991.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
+<script src="_static/prefix-runtime.5eb70769dc5e56d7.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
@@ -171,7 +174,7 @@ var ggbApp = new GGBApplet({"appName": "classic",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="ch-extras.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-extras.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-sudoku.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-extras.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-extras.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-sudoku.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
    
    \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
@@ -423,7 +426,7 @@ print(P.optimal_value())
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.5</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="sec-covermatch-7-1">
-<div class="para" id="sec-covermatch-7-1-1"> Given a graph <span class="process-math">\(G\text{,}\)</span> a <dfn class="terminology">vertex cover</dfn> or <span class="process-math">\(cover\)</span> is a colection of vertices <span class="process-math">\(U\)</span> such that for any edge <span class="process-math">\(v_iv_j\)</span> either <span class="process-math">\(v_i\)</span> or <span class="process-math">\(v_j\)</span> (possibly both) are in <span class="process-math">\(U\text{.}\)</span>
+<div class="para" id="sec-covermatch-7-1-1"> Given a graph <span class="process-math">\(G\text{,}\)</span> a <dfn class="terminology">vertex cover</dfn> or <span class="process-math">\(cover\)</span> is a collection of vertices <span class="process-math">\(U\)</span> such that for any edge <span class="process-math">\(v_iv_j\)</span> either <span class="process-math">\(v_i\)</span> or <span class="process-math">\(v_j\)</span> (possibly both) are in <span class="process-math">\(U\text{.}\)</span>
 </div>
 <div class="para" id="sec-covermatch-7-1-2">Let <span class="process-math">\(\tau(G)\)</span> denote the size of the smallest vertex cover <details class="ptx-footnote" aria-live="polite" id="sec-covermatch-7-1-2-2"><summary class="ptx-footnote__number" title="Footnote 9.1.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-covermatch-7-1-2-2">This is fairly standard.</div></details>.</div>
 </div>
@@ -437,7 +440,7 @@ D
 </script></div> <div id="sec-covermatch-7-5-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(D.optimal_solution())
 print(D.optimal_value())
 </script></div> <div class="para" id="sec-covermatch-7-5-1-4">What do we notice?</div></article><article class="task exercise-like" id="sec-covermatch-7-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="sec-covermatch-7-6-1-1">We “solved” the matching maximixation problem for <span class="process-math">\(H\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <div id="sec-covermatch-7-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
+<div class="para" id="sec-covermatch-7-6-1-1">We “solved” the matching maximization problem for <span class="process-math">\(H\)</span> in <a href="sec-covermatch.html#exploration-matching" class="xref" data-knowl="./knowl/xref/exploration-matching.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.1.1">Exploration 9.1.1</a>, use Sage to solve the dual problem</div> <div id="sec-covermatch-7-6-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 DH = PH.dual()
 DH
 </script></div> <div id="sec-covermatch-7-6-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(DH.optimal_solution())
@@ -484,7 +487,7 @@ print(DH.optimal_value())
 </ol></article></article><article class="activity project-like" id="subsec-Konigs-5"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="subsec-Konigs-5-1">Prove that if a graph is bipartite, then it must <em class="emphasis">not</em> contain an odd length cycle <details class="ptx-footnote" aria-live="polite" id="subsec-Konigs-5-1-2"><summary class="ptx-footnote__number" title="Footnote 9.1.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="subsec-Konigs-5-1-2">The coverse is also true, but we will leave that alone.</div></details>.</div></article><div class="para" id="subsec-Konigs-6">We now consider coverings and matchings on only bipartite graphs.</div>
+<div class="para" id="subsec-Konigs-5-1">Prove that if a graph is bipartite, then it must <em class="emphasis">not</em> contain an odd length cycle <details class="ptx-footnote" aria-live="polite" id="subsec-Konigs-5-1-2"><summary class="ptx-footnote__number" title="Footnote 9.1.3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="subsec-Konigs-5-1-2">The converse is also true, but we will leave that alone.</div></details>.</div></article><div class="para" id="subsec-Konigs-6">We now consider coverings and matchings on only bipartite graphs.</div>
 <article class="activity project-like" id="subsec-Konigs-7"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.10</span><span class="period">.</span>
 </h4>
@@ -620,7 +623,7 @@ print(DH.optimal_value())
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.1.16</span><span class="period">.</span>
 </h4>
 <div class="para" id="subsec-Konigs-16-1-1">Use <a href="sec-covermatch.html#activity-covermatcheq" class="xref" data-knowl="./knowl/xref/activity-covermatcheq.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.11">Activity 9.1.11</a>, <a href="sec-covermatch.html#activity-cyclefrac" class="xref" data-knowl="./knowl/xref/activity-cyclefrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.12">Activity 9.1.12</a>, <a href="sec-covermatch.html#activity-pathfrac" class="xref" data-knowl="./knowl/xref/activity-pathfrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.13">Activity 9.1.13</a>, and <a href="sec-covermatch.html#activity-coverfrac" class="xref" data-knowl="./knowl/xref/activity-coverfrac.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.1.14">Activity 9.1.14</a> to prove <a href="sec-covermatch.html#thm-Konigs" class="xref" data-knowl="./knowl/xref/thm-Konigs.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.1.15: König’s Theorem">Theorem 9.1.15</a>.</div></article></section></section></div>
-<div class="ptx-content-footer">
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-extras.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-sudoku.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
