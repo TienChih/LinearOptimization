@@ -25,8 +25,8 @@
 
 <p> 
   The presentation of linear optimization can be computation or theory focused, and both approaches would generally
-  be an extention of a linear algebra course which also generally has those two flavors.
-  Either way, the material is often presented in a way that is very technical from a linear algebraiac stand-point.
+  be an extension of a linear algebra course which also generally has those two flavors.
+  Either way, the material is often presented in a way that is very technical from a linear algebraic stand-point.
   For a student, learning the algorithms, techniques, theorems and proofs can be
   overwhelming.  There are numerous, technically intricate arguments, and
   the complexity of the associated algebra can subsume the intuition behind this
@@ -69,7 +69,7 @@
   this course in an inquiry based manner.  Numerous studies have been done 
   showing the efficacy of inquiry learning, and the longer term understanding
   students develop from learning this way.  I have taught numerous courses in an
-  inquiry based manner, and have authored inquiry learning materials, and the key to succesful course is appropriate scafolding.
+  inquiry based manner, and have authored inquiry learning materials, and the key to successful course is appropriate scaffolding.
   Presenting the right mixture of intuitive exploration, rigorous argumentation, and text
   or instructor intervention.
 </p>
@@ -77,7 +77,7 @@
 <p>
   As of the writing of this text, there is a
   renaissance of open source technology tools aimed at visualizing, computing or
-  demonstrating mathematical ideas in accesible, interactive ways. Use of this technology can
+  demonstrating mathematical ideas in accessible, interactive ways. Use of this technology can
   greatly enhance the ability for students to visualize and intuit the ideas being presented in a class,
   or side-step tedious computations, so that students can focus their attention and time on the conceptual
   principles of a course.
@@ -107,7 +107,7 @@
   presentations.  For anyone requiring a quick review of linear algebra or an
   approach to linear algebra is that this geometry forward, I highly recommend Dr. David
   Austin's <em>Understanding Linear Algebra</em> <url href="https://understandinglinearalgebra.org/home.html" />.
-  This book was motivated by very similar thoughts to the one's I had, and are thereby goverened by
+  This book was motivated by very similar thoughts to the one's I had, and are thereby governed by
   similar philosophies.
    </p>
 
@@ -116,16 +116,16 @@
   <li>
     <p> <em> This book is presented as a collection of explorations and activities meant to be
     done by the students in class.</em> The initial explorations and activities are generally more motivational, followed by 
-    activities meant to rigorously crytsalize the intuition students develop throughout a lesson.  Later activities reinforce these ideas or place them
+    activities meant to rigorously crystalize the intuition students develop throughout a lesson.  Later activities reinforce these ideas or place them
     in the broader context of the course.
     </p> 
     <p>
       These activities are meant to be done in
-      groups by the students, giving them the oppourtunity to discuss their ideas, let their intuition guide them, and develop their own reasoning skills.
+      groups by the students, giving them the opportunity to discuss their ideas, let their intuition guide them, and develop their own reasoning skills.
       I recommend groups of about 4-6, but this is not set in stone, and it should be possible for someone to work on their own, or even self-study with this text.
       After discussing within their groups, the class comes together to discuss as a single entity.
       I recommend eavesdropping on group conversations to ensure active participation and equitable practices within groups.  It may be
-      neccesary to nudge students torward or away from a direction, or to highlight specific things they, or another group said, but as much as
+      necessary to nudge students toward or away from a direction, or to highlight specific things they, or another group said, but as much as
       possible, try to place agency with the students' hands.  Students are far better motivated when they take ownership of their own learning.
     </p>
     <p>
@@ -149,8 +149,8 @@
   <li>
     <p>
       <em>Interactive technological tools are deployed throughout the text.</em>  In the html version of this book, there will be numerous Doenet activities and Sage cells embedded throughout, there is also embedded
-      desmos for 3d visualizations.  Print and pdf versions of this text will contain QR codes linking to these activities.  The use of technology
-      can greatly enhance geomtric intuition, or eliminate tedium from computations.  Hand computations are a part of the class, and students will
+      Desmos for 3d visualizations.  Print and pdf versions of this text will contain QR codes linking to these activities.  The use of technology
+      can greatly enhance geometric intuition, or eliminate tedium from computations.  Hand computations are a part of the class, and students will
       be expected to be able to explain and perform them.  However, the focus of this text is ever on the concepts of this course, and modeling a problem
       is almost always a more important skill than computing a solution.  
 
@@ -189,7 +189,7 @@
   <em>Linear Optimization: A Geometric Inquiry Course</em> was a labor of love.
   I hope that this book serves your needs as an instructor, student, or curious scholar.
   This book can be used as a stand-alone text or supplement another text, with some adjustment.
-  The content of this course is liscenced by Creative Commons, and so please feel free to 
+  The content of this course is licensed by Creative Commons, and so please feel free to 
   create variations for this material that best suits your needs.
 </p>
 

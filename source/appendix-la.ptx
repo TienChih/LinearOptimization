@@ -500,7 +500,7 @@
         </definition>
         <p>
             There are a wide variety of interesting vector spaces
-            spanning across all subfields of math.  However, for our puposes,
+            spanning across all subfields of math.  However, for our purposes,
             we will stick to boring ol' <m>\mathbb{R}^n</m>.
         </p>
 
@@ -619,7 +619,7 @@
                 <ol>
                     <li>
                         <p>
-                            Any superset of a spanning set of <m>V</m> is also a spaning set.
+                            Any superset of a spanning set of <m>V</m> is also a spanning set.
                         </p>
                     </li>
                     <li>
@@ -648,7 +648,7 @@
         <theorem xml:id="thm-basisindyspan">
             <statement>
                 <p>
-                    Let <m>V</m> be a vector space.  A spaning, linearly indendent subset of <m>V</m>
+                    Let <m>V</m> be a vector space.  A spanning, linearly independent subset of <m>V</m>
                      is a basis of <m>V</m>.
                 </p>
             </statement>
