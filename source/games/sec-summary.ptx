@@ -392,6 +392,9 @@
               <cell bottom="medium">
                 <m>-1</m>
               </cell>
+              <cell>
+                
+              </cell>
              
             </row>
             
@@ -544,7 +547,7 @@
 
   <figure xml:id="figure-videochapter5vonNeumann">
     <caption>Proof of the von Neumann minimax Theorem.</caption>
-    <video playat = "select" source = "images/Chapter5-ZeroSum.mp4"/>
+    <video playat = "select" source = "images/Chapter5-vonNeumann.mp4"/>
   </figure>
 
   <p>

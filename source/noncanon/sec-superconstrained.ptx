@@ -49,7 +49,7 @@
         <hint>
           <p>
             <interactive iframe="https://www.desmos.com/3d/a56a9ca6e5" width="100%"  />
-            <figure xml:id="figure-equalityconstraint1">
+            <!--<figure xml:id="figure-equalityconstraint1">
               <caption>The feasible region of a three dimensional linear optimization problem with an equality constraint</caption>
               <image xml:id="sageplot-implicit-surface" width="80%" margins="15% 5%">
                 <sageplot variant="3d" aspect="1.0">
@@ -69,7 +69,7 @@
                 S
                 </sageplot>
               </image>
-            </figure>
+            </figure>-->
 
           </p>
           

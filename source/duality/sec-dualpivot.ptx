@@ -412,7 +412,8 @@
           equality constraint increases or decreases the objective function?  See interactive below.)
           
           </p>
-          <figure xml:id="figure-equalityconstraint2">
+          <interactive iframe="https://www.desmos.com/3d/a56a9ca6e5" width="100%"  />
+          <!--<figure xml:id="figure-equalityconstraint2">
               <caption>The feasible region of a three dimensional linear optimization problem with an equality constraint</caption>
               <image xml:id="sageplot-equalityconstraint2" width="80%" margins="15% 5%">
                 <sageplot variant="3d" aspect="1.0">
@@ -432,7 +433,7 @@
                 S
                 </sageplot>
               </image>
-            </figure>
+            </figure>-->
           <ol marker="A." cols="2">
             <li>
               <p>
