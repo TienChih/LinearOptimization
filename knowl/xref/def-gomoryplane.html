@@ -21,7 +21,7 @@
 <article class="definition definition-like"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Gomory Cutting-Plane Algorithm.</span>
 </h3>
-<div class="para">The <em class="emphasis">Gomory Cutting-Plane</em> Algorithm for an optimization problem is as follows:</div> <ol class="decimal" id="def-gomoryplane-2-2">
+<div class="para">The <em class="emphasis">Gomory Cutting-Plane</em> Algorithm for an integer optimization problem is as follows:</div> <ol class="decimal" id="def-gomoryplane-2-2">
 <li><div class="para">INITIALIZE: Begin with a canonical maximization integer optimization problem.</div></li>
 <li><div class="para">Solve the relaxation of the integer problem.  If all the resulting <span class="process-math">\(b_i\)</span> are integral STOP: you have found an optimal integral solution.</div></li>
 <li><div class="para">Select a <span class="process-math">\(b_i\)</span> that is non-integral and for that row, construct the additional bound: <span class="process-math">\(\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)\text{.}\)</span>

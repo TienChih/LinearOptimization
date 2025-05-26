@@ -2707,7 +2707,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.3",
   "title": "Weighted Graphs",
-  "body": " Weighted Graphs   We now pivot to weighted networks and consider some natural optimization problems to pose about them.     Dr. Ayad is driving from her home to Fantasi College. The town is connected by a series of one way streets, each labeled with the time it would take to traverse the road.   A Network Flow depicting several nodes and edges with weights.       What is the shortest amount of time needed for her to arrive at Fantasi College?      Is there a unique route she could take that minimizes this time?      weighted network  network, weighted   A network is weighted if for each edge we assign (potentially negative!) weight .     path  length  distance   Give a network , a path  from , is a sequence of consecutive edges where . We say that the length of is . We say that the distance from to , , is the length of a shortest path from to .      Consider the weighted network:   A network with negative weights.      What is the shortest path from to ? (You may repeat edges.)    What if we change ?     What is a reasonable condition for the shortest path to be well defined?      cycle  negative cycle  cycle, negative   We define a cycle in a weighted network to be a path from a vertex to itself. If the length of a cycle is negative, we call it a negative cycle .      In this activity, we model the shortest path problem as a linear optimization problem. Assume is a weighted network with no negative cycles. Let where if is in a shortest path from to .    What is the objective problem?    Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .       What inequality ensures that exactly one edge of the chosen edges is incident to ?     .     .     .     .     .     .        What inequality ensures that the chosen edges form a path?    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .        Why do we not need a constraint for ?      Model the shortest path problem in as a linear optimization problem and solve it:         As was the case in previous examples, we introduce a less cumbersome method for finding these shortest paths.   Dijkstra's Shortest Path Algorithm  Dijkstra's shortest path algorithm  algorithm, Dijkstra's shortest path   Let be a weighted network with only non-negative weights. Then Dijkstra's Shortest Path Algorithm is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let be a vertex where .    Let .    If : STOP.    For each , let .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      We revisit the shortest path problem from .     Apply to the network in this problem and label each vertex by .      What do each represent in terms of travel time?      Consider and . Which vertex could be on a shortest path from to ?      Take your previous choice of vertex and repeat: look at the of it's potential predecessors and . Recursively repeat until we reach .      What is the shortest path from to ?       We prove that in , for each via induction on .     Verify that the statement is true when .      Prove that in step 3, if we select then is adjacent to a vertex in .      Let and consider as chosen in step 3. Show that is the shortest distance from to traversing only vertices in .      Suppose (by way of contradiction) that there was a shortest path from to where the length of . Show that there must be an edge in , ) so that .      Show that in this case that . (Invoke the induction hypothesis).      Show that the last statement produces a contradiction (why wasn't already chosen?)      Conclude that .     We present an alternative algorithm for when weights can be negative.   Shortest Path Algorithm  shortest path algorithm  algorithm, shortest path   Let be a weighted network with no negative cycles. Then an algorithm to find shortest paths is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let be a vertex where .    Let .    If : STOP.    For each , let , if has a value changed by this process, remove from and add it to .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      Suppose a shipping company is moving goods through a series of transportation hubs via rail. The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair:  A Network Flow depicting several hubs with rails showing capacity and cost.   The pairs are (capacity, cost) pairs (denoted ), and we are trying to ship 10 tons of goods from to .     Let's find a single path from to along which we could ship goods at the lowest possible cost. What criteria should we use to identitfy this path?    Maximize along this path.    Minimize along this path.    Maximize along this path.    Minimize along this path.        Find a shortest path from to .      Use this as an -path as in .      Decrease capacities of any used edges by .      Repeat (a)-(c) until we have a flow of 10.      Argue that this is not the lowest cost flow.      Which of the following was an issue with how this problem was approached?    The original path chosen was too expensive.    The original path forced us into poor choices of future paths.    There was no mechanism to backtrack or adjust previous choices.         We model the shipping problem in as a linear optimization problem. Let denote the quantity in tons of goods shipped from to .     What is the objective function of this problem?     .     .     .     .     .     .        For each edge, there is a constraint for the shipping capacity of that edge. What (in)equality represents that capacity?     .     .     .     .     .     .        For each vertex excluding the source and sink, what (in)equality represents the conservation of flow?     .     .     .        Let be the total amount of goods to be shipped, in this case . What equality represents this constraint?     .     .     .     .     .     .        Write out the linear optimization problem modeling and solve it.         We return to with an adjustment to the procedure there to enable adjusting previously chosen paths.     Once again, find the shortest path from to , and use this as an -path as in .      Now in addition to decreasing the capacities of used edges by , add a backwards edge with capacity and negative weight .  Pick any path from to that traverses a backwards negative edge. What does shipping along this path represent in terms of determining a new shipping procedure.  Test your ideas out on a few different paths traversing negative edges.      Find the shortest path along this adjusted graph and treat it as an -path.      What does this second chosen shortest path represent in terms of shipping goods?      Have you now achieved a minimal cost flow shipping 10 tons of goods?     We now formalize this idea of adjusting previous choices to an algorithm:   Minimum Cost Flow Algorithm  minimum cost flow algorithm  algorithm, minimum cost flow   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply the Shortest Path Algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.      "
+  "body": " Weighted Graphs   We now pivot to weighted networks and consider some natural optimization problems to pose about them.     Dr. Ayad is driving from her home to Fantasi College. The town is connected by a series of one way streets, each labeled with the time it would take to traverse the road.   A Network Flow depicting several nodes and edges with weights.       What is the shortest amount of time needed for her to arrive at Fantasi College?      Is there a unique route she could take that minimizes this time?      weighted network  network, weighted   A network is weighted if for each edge we assign (potentially negative!) weight .     path  length  distance   Give a network , a path  from , is a sequence of consecutive edges where . We say that the length of is . We say that the distance from to , , is the length of a shortest path from to .      Consider the weighted network:   A network with negative weights.      What is the shortest path from to ? (You may repeat edges.)    What if we change ?     What is a reasonable condition for the shortest path to be well defined?      cycle  negative cycle  cycle, negative   We define a cycle in a weighted network to be a path from a vertex to itself. If the length of a cycle is negative, we call it a negative cycle .      In this activity, we model the shortest path problem as a linear optimization problem. Assume is a weighted network with no negative cycles. Let where if is in a shortest path from to .    What is the objective problem?    Maximize .    Maximize .    Maximize .    Minimize .    Minimize .    Minimize .       What inequality ensures that exactly one edge of the chosen edges is incident to ?     .     .     .     .     .     .        What inequality ensures that the chosen edges form a path?    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .    For each vertex , .        Why do we not need a constraint for ?      Model the shortest path problem in as a linear optimization problem and solve it:         As was the case in previous examples, we introduce a less cumbersome method for finding these shortest paths.   Dijkstra's Shortest Path Algorithm  Dijkstra's shortest path algorithm  algorithm, Dijkstra's shortest path   Let be a weighted network with only non-negative weights. Then Dijkstra's Shortest Path Algorithm is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let be a vertex where .    Let .    If : STOP.    For each , let .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      We revisit the shortest path problem from .     Apply to the network in this problem and label each vertex by .      What do each represent in terms of travel time?      Consider and . Which vertex could be on a shortest path from to ?      Take your previous choice of vertex and repeat: look at the of it's potential predecessors and . Recursively repeat until we reach .      What is the shortest path from to ?       We prove that in , for each via induction on .     Verify that the statement is true when .      Prove that in step 3, if we select then is adjacent to a vertex in .      Let and consider as chosen in step 3. Show that is the shortest distance from to traversing only vertices in .      Suppose (by way of contradiction) that there was a shortest path from to where the length of . Show that there must be an edge in , ) so that .      Show that in this case that . (Invoke the induction hypothesis).      Show that the last statement produces a contradiction (why wasn't already chosen?)      Conclude that .     We present an alternative algorithm for when weights can be negative.   Shortest Path Algorithm  shortest path algorithm  algorithm, shortest path   Let be a weighted network with no negative cycles. Then an algorithm to find shortest paths is as follows:    INITIALIZE: Let and let . Label , if exists, otherwise.    Let be a vertex where .    Let .    If : STOP.    For each , let , if has a value changed by this process, remove from and add it to .    GOTO 2.    When the algorithm terminates, , the length of the shortest path from to .      Suppose a shipping company is moving goods through a series of transportation hubs via rail. The maximum capcity in tons and the cost in thousands of dollars per ton are listed as an ordered pair:  A Network Flow depicting several hubs with rails showing capacity and cost.   The pairs are (capacity, cost) pairs (denoted ), and we are trying to ship 10 tons of goods from to .     Let's find a single path from to along which we could ship goods at the lowest possible cost. What criteria should we use to identitfy this path?    Maximize along this path.    Minimize along this path.    Maximize along this path.    Minimize along this path.        Find a shortest path from to .      Use this as an -path as in .      Decrease capacities of any used edges by .      Repeat (a)-(c) until we have a flow of 10.      Argue that this is not the lowest cost flow.      Which of the following was an issue with how this problem was approached?    The original path chosen was too expensive.    The original path forced us into poor choices of future paths.    There was no mechanism to backtrack or adjust previous choices.         We model the shipping problem in as a linear optimization problem. Let denote the quantity in tons of goods shipped from to .     What is the objective function of this problem?     .     .     .     .     .     .        For each edge, there is a constraint for the shipping capacity of that edge. What (in)equality represents that capacity?     .     .     .     .     .     .        For each vertex excluding the source and sink, what (in)equality represents the conservation of flow?     .     .     .        Let be the total amount of goods to be shipped, in this case . What equality represents this constraint?     .     .     .     .     .     .        Write out the linear optimization problem modeling and solve it.         We return to with an adjustment to the procedure there to enable adjusting previously chosen paths.     Once again, find the shortest path from to , and use this as an -path as in .      Now in addition to decreasing the capacities of used edges by , add a backwards edge with capacity and negative weight .  Pick any path from to that traverses a backwards negative edge. What does shipping along this path represent in terms of determining a new shipping procedure.  Test your ideas out on a few different paths traversing negative edges.      Find the shortest path along this adjusted graph and treat it as an -path.      What does this second chosen shortest path represent in terms of shipping goods?      Have you now achieved a minimal cost flow shipping 10 tons of goods?     We now formalize this idea of adjusting previous choices to an algorithm:   Minimum Cost Flow Algorithm  minimum cost flow algorithm  algorithm, minimum cost flow   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply Dijkstra's Shortest Path Algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.      "
 },
 {
   "id": "exploration-path",
@@ -2833,14 +2833,95 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "7.3.14",
   "title": "Minimum Cost Flow Algorithm.",
-  "body": " Minimum Cost Flow Algorithm  minimum cost flow algorithm  algorithm, minimum cost flow   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply the Shortest Path Algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.     "
+  "body": " Minimum Cost Flow Algorithm  minimum cost flow algorithm  algorithm, minimum cost flow   The steps for the Minimum Cost Flow Algorithm are as follows:    INITIALIZE: Let be a weighted capacitated network with a unique source and sink , with no edges going into the source and no edges coming out of the sink. We start with the zero flow for each edge . Let be the desired total flow.    If , STOP, we have reached a total flow of .    Form a weighted network as follows:   Let     Let if and only if . Let .    Let if and only if . Let .       Apply Dijkstra's Shortest Path Algorithm on to find the shortest path from to . If no path exists STOP, there is no flow with total value .    Find the -path corresponding to the shortest path found in (4). Let     Add to each forward in , and subtract from each backwards in .    GOTO 2.     "
+},
+{
+  "id": "sec-summaryflow",
+  "level": "1",
+  "url": "sec-summaryflow.html",
+  "type": "Section",
+  "number": "7.4",
+  "title": "Summary of Chapter 7",
+  "body": " Summary of  We use introduce the notion of networks , a pair where is a set of vertices and is a set of ordered pairs of vertices called edges . We also discuss capacitated networks where each edge has a capacity  . For capacitated networks with designated sources and sinks , we can define a flow , an assignment to each edge so that for any non source\/sink vertex we have that We focus on capacitated networks with a unique source and sink, with no edges going into the source or out of the sink.  Finding a maximum flow on such a network may be solved as a linear optimization problem: Another problem on such a network is the minimum cut , a cut is a pair so the is the disjoint union on , and . The capacity of a cut is the sum . Careful analysis of the dual problem to the maximum flow problem shows that the capacity of any cut is an upper bound for the value of any flow.   A linear optimization formulation of maximum flow and minimum cut.    The Ford-Fulkerson Algorithm  which identifies a maximum flow. Then, starting with , we recursively add vertices to if there is an edge from to which is not at maximum capacity, or a backwards edge from to . When this is done, we let and this forms a cut who by construction, has the same capacity as the maximum flow. So by the Weak Duality Theorem, both are optimal.   The Ford-Fulkerson algorithm and finding max flows\/min cuts.    Another type of network is a weighted network, where each edge has a potentially negative weight . Dijkstra's Shortest Path Algorithm  describes an algorithm which identifies the distance (sum of weights) from a starting source to any other vertex in the network, by labeling each vertex with the current shortest distance from to and relabeling and readjusting as shorter distances are found.   Dijkstra's Shortest Path algorithm and finding the shortest path between vertices.    The shortest path algorithm has a useful application in the Minimum Cost Flow Algorithm . In this problem, we try to find a flow of value from to on a weighted capacitated network that minimizes the cost to do so. One can identify shortest paths from to and increase flows along this path, and repeat recursively. However, doing so greedily may result in non-optimal solutions. We construct a second network where backwards edges with negative weight are added for flows on to represent the ability to reduce flow along edges, and the shortest paths are found on . Doing so repeatedly results in the actual minimum cost flow.   Minimum Cost Flow algorithm and finding the minimum cost flow of a given value.    "
+},
+{
+  "id": "sec-summaryflow-2",
+  "level": "2",
+  "url": "sec-summaryflow.html#sec-summaryflow-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "networks vertices edges capacitated networks capacity sources sinks flow "
+},
+{
+  "id": "sec-summaryflow-3",
+  "level": "2",
+  "url": "sec-summaryflow.html#sec-summaryflow-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "maximum flow minimum cut cut capacity "
+},
+{
+  "id": "figure-videochapter7LOFormulation",
+  "level": "2",
+  "url": "sec-summaryflow.html#figure-videochapter7LOFormulation",
+  "type": "Figure",
+  "number": "7.4.1",
+  "title": "",
+  "body": " A linear optimization formulation of maximum flow and minimum cut.   "
+},
+{
+  "id": "sec-summaryflow-5",
+  "level": "2",
+  "url": "sec-summaryflow.html#sec-summaryflow-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Ford-Fulkerson Algorithm "
+},
+{
+  "id": "figure-videochapter7FordFulkerson",
+  "level": "2",
+  "url": "sec-summaryflow.html#figure-videochapter7FordFulkerson",
+  "type": "Figure",
+  "number": "7.4.2",
+  "title": "",
+  "body": " The Ford-Fulkerson algorithm and finding max flows\/min cuts.   "
+},
+{
+  "id": "sec-summaryflow-7",
+  "level": "2",
+  "url": "sec-summaryflow.html#sec-summaryflow-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "weighted Dijkstra's Shortest Path Algorithm "
+},
+{
+  "id": "figure-videochapter7shortestpath",
+  "level": "2",
+  "url": "sec-summaryflow.html#figure-videochapter7shortestpath",
+  "type": "Figure",
+  "number": "7.4.3",
+  "title": "",
+  "body": " Dijkstra's Shortest Path algorithm and finding the shortest path between vertices.   "
+},
+{
+  "id": "figure-videochapter7mincostflow",
+  "level": "2",
+  "url": "sec-summaryflow.html#figure-videochapter7mincostflow",
+  "type": "Figure",
+  "number": "7.4.4",
+  "title": "",
+  "body": " Minimum Cost Flow algorithm and finding the minimum cost flow of a given value.   "
 },
 {
   "id": "sec-exercisesflow",
   "level": "1",
   "url": "sec-exercisesflow.html",
   "type": "Section",
-  "number": "7.4",
+  "number": "7.5",
   "title": "Problems for Chapter 7",
   "body": " Problems for   The simplex pivoter may be found here:          Consider the following capacitated network:  A Network Flow depicting several islands with bridges and carrying capacity.        Find for each vertex, and compute .      Classify each vertex as a source, sink and intermediate vertex.      Add two vertices and as few edges as possible to extend this flow to a flow with a unique source and unique sink       For each of the following capacitated networks, find the max-flow and min-cut on these networks as shown in .       A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.          Consider the max-flow min-cut problem (a).     Write out the non-canonical maximization problem which would compute the max-flow.      Record this problem in a Tucker tableau, then record the dual variable using to denote dual variables associated with vertex equality constraints and to denote the dual variables for edge inequality constraint.     Verify that the max-flow and min-cut you found are feasible solutions to these problems (using the convention that if , if and if and otherwise.)     Argue that any cut corresponds to a feasible solution to this dual problem.      How can we tell both the flow and cut found in (a) are optimal? (Think duality.)       Over a month at a hospital many patients are need of blood transfusions. They had available blood from 47 donors with type A blood, 33 donors with type B blood, 46 donors with type AB and 44 donors with type O. There were 38 patients with type A blood, 39 patients with type B blood, 49 patients with type AB and 43 patients with type O. Type A patients can only receive type A or O, type B patients can receive only type B or O, type O patients can receive only type O, and type AB patients can receive any of the four types.     Construct a capacitated network which models the distributions of blood type from donors to patients with a unique source and sink, with no edges into the source or out of the sink.      Find a max-flow for this network.      Find a min-cut for this network.      If not all patients were able to receive blood, explain the financial backers and hospital administrators, who may not have taken any math in awhile, why this was the case.      There's little a hospital can do about the blood types of incoming patients. If reaching out to potential donors, what blood types should be prioritized?      Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink. Let be a flow on this network with value , and be a cut of this network. Then prove that    What is the sum ? How can rewriting this as a double sum help?      Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink.     Given an example for such that has non-unique max-flows.      Given an example for such that has non-unique min-cuts.      Let denote any max-flow for with value and denote any min-cut (not necessarily produced by and ). Let be the cut generated via .  Prove that for any .    Use .      Let be two distinct max-flows on , and be the cuts produced by on with these flows respectively. Prove that .    Use previous part.       For each of the following, find the shortest path from to using .       A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.         Consider (a). Model this problem as a linear optimization problem and solve.     Let be a weighted network with positive weights. For the following, prove or find a counterexample:     Let . Prove that the value of the shortest path from to is the sum of the value of the shortest path from to plus the value of the shortest path from to .      Suppose there was an edge going into , then fails.       For each of the following, find the minimum cost-flows for and . Interpret each ordered pair as (capacity,cost).       A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.         Model (a) as a linear optimization problem.    For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem.    For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem.    "
 },
@@ -2849,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-1",
   "type": "Exercise",
-  "number": "7.4.1",
+  "number": "7.5.1",
   "title": "",
   "body": "  Consider the following capacitated network:  A Network Flow depicting several islands with bridges and carrying capacity.        Find for each vertex, and compute .      Classify each vertex as a source, sink and intermediate vertex.      Add two vertices and as few edges as possible to extend this flow to a flow with a unique source and unique sink    "
 },
@@ -2858,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#ex-maxflowmincut",
   "type": "Exercise",
-  "number": "7.4.2",
+  "number": "7.5.2",
   "title": "",
   "body": "  For each of the following capacitated networks, find the max-flow and min-cut on these networks as shown in .       A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.       "
 },
@@ -2867,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-3",
   "type": "Exercise",
-  "number": "7.4.3",
+  "number": "7.5.3",
   "title": "",
   "body": "  Consider the max-flow min-cut problem (a).     Write out the non-canonical maximization problem which would compute the max-flow.      Record this problem in a Tucker tableau, then record the dual variable using to denote dual variables associated with vertex equality constraints and to denote the dual variables for edge inequality constraint.     Verify that the max-flow and min-cut you found are feasible solutions to these problems (using the convention that if , if and if and otherwise.)     Argue that any cut corresponds to a feasible solution to this dual problem.      How can we tell both the flow and cut found in (a) are optimal? (Think duality.)    "
 },
@@ -2876,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-4",
   "type": "Exercise",
-  "number": "7.4.4",
+  "number": "7.5.4",
   "title": "",
   "body": "  Over a month at a hospital many patients are need of blood transfusions. They had available blood from 47 donors with type A blood, 33 donors with type B blood, 46 donors with type AB and 44 donors with type O. There were 38 patients with type A blood, 39 patients with type B blood, 49 patients with type AB and 43 patients with type O. Type A patients can only receive type A or O, type B patients can receive only type B or O, type O patients can receive only type O, and type AB patients can receive any of the four types.     Construct a capacitated network which models the distributions of blood type from donors to patients with a unique source and sink, with no edges into the source or out of the sink.      Find a max-flow for this network.      Find a min-cut for this network.      If not all patients were able to receive blood, explain the financial backers and hospital administrators, who may not have taken any math in awhile, why this was the case.      There's little a hospital can do about the blood types of incoming patients. If reaching out to potential donors, what blood types should be prioritized?    "
 },
@@ -2885,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercise-outflow",
   "type": "Exercise",
-  "number": "7.4.5",
+  "number": "7.5.5",
   "title": "",
   "body": " Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink. Let be a flow on this network with value , and be a cut of this network. Then prove that    What is the sum ? How can rewriting this as a double sum help?   "
 },
@@ -2894,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-6",
   "type": "Exercise",
-  "number": "7.4.6",
+  "number": "7.5.6",
   "title": "",
   "body": "  Let be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink.     Given an example for such that has non-unique max-flows.      Given an example for such that has non-unique min-cuts.      Let denote any max-flow for with value and denote any min-cut (not necessarily produced by and ). Let be the cut generated via .  Prove that for any .    Use .      Let be two distinct max-flows on , and be the cuts produced by on with these flows respectively. Prove that .    Use previous part.    "
 },
@@ -2903,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#ex-shortestpath",
   "type": "Exercise",
-  "number": "7.4.7",
+  "number": "7.5.7",
   "title": "",
   "body": "  For each of the following, find the shortest path from to using .       A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.       "
 },
@@ -2912,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-8",
   "type": "Exercise",
-  "number": "7.4.8",
+  "number": "7.5.8",
   "title": "",
   "body": " Consider (a). Model this problem as a linear optimization problem and solve.  "
 },
@@ -2921,7 +3002,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-9",
   "type": "Exercise",
-  "number": "7.4.9",
+  "number": "7.5.9",
   "title": "",
   "body": "  Let be a weighted network with positive weights. For the following, prove or find a counterexample:     Let . Prove that the value of the shortest path from to is the sum of the value of the shortest path from to plus the value of the shortest path from to .      Suppose there was an edge going into , then fails.    "
 },
@@ -2930,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#ex-minflow",
   "type": "Exercise",
-  "number": "7.4.10",
+  "number": "7.5.10",
   "title": "",
   "body": "  For each of the following, find the minimum cost-flows for and . Interpret each ordered pair as (capacity,cost).       A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.           A Network Flow depicting several islands with bridges and carrying capacity.       "
 },
@@ -2939,7 +3020,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-11",
   "type": "Exercise",
-  "number": "7.4.11",
+  "number": "7.5.11",
   "title": "",
   "body": " Model (a) as a linear optimization problem.  "
 },
@@ -2948,7 +3029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-12",
   "type": "Exercise",
-  "number": "7.4.12",
+  "number": "7.5.12",
   "title": "",
   "body": " For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem.  "
 },
@@ -2957,7 +3038,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesflow.html#exercises-flow-13",
   "type": "Exercise",
-  "number": "7.4.13",
+  "number": "7.5.13",
   "title": "",
   "body": " For each problem in , draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem. State what the value of the flow should be. Do not solve the problem.  "
 },
@@ -3040,7 +3121,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "8.2",
   "title": "Cutting-Plane Method",
-  "body": " Cutting-Plane Method   We continue our journey through integer optimization, and examine a second method to solve these problems which is geometrically oriented.    Recall , and the question of making sandwiches and pies.  Define two additional inequalities such that the following are true:    No inequality eliminates any feasible integer solution of the original problem.    No boundary hyperplane is parallel to the objective function plane.    With the additional inequalities, the optimal solution to the linear relaxation is the optimal integer solution previously found to .     The boundary for these additional inequalities are reffered to as cutting hyperplanes . We wish to determine how to find such cutting hyperplanes.    In this activity, we motivate the math behind the cutting-plane method.  Let be a feasible solution of the relaxation of a canonical integer maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                      Explain why the above equality is equivalent to       Show that for any feasible integral solution, that the left hand side of the equality in (2) is an integer.      Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.      For any integral solution, what is a non-negative integer upper bound for ?      Show that for any feasible integral solution to the relaxation of the integer optimization problem.  We call the hyperplane a cutting-plane .      Show that if is non-integral, then by adding this constraint, the solution is no longer feasible.        We now apply this idea to an integer problem.  Consider the integer optimization problem:      Solve the relaxation of this integer problem, and verify that this solution is not integral.                                                                       Take the second row and follow the procedure in to generate a new constraint :                                                                                       Using the fact that , describe this cutting-plane in terms of .      Pivot of the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                       There is only one valid choice of row to generate a new constraint. Follow the procedure in to generate a new constraint                                                                                                        Using the fact that , express this new cutting-plane in terms of .      Pivot on the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                                       Use either the or row to generate a new constraint .                                                                                                                       Using the fact that , express this new cutting-plane in terms of .      Pivot on the entry and verify that the resulting basic solution is optimal and integral!                                                                                                                       Enter the coefficients for the objective function and the three cutting-planes in order that you found them, and drag the objective plane onto the optimal solution to the integer problem.       Gomory Cutting-Plane Algorithm   The Gomory Cutting-Plane Algorithm for an optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer optimization problem.    Solve the relaxation of the integer problem. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non-integral and for that row, construct the additional bound: .    GOTO 2.      "
+  "body": " Cutting-Plane Method   We continue our journey through integer optimization, and examine a second method to solve these problems which is geometrically oriented.    Recall , and the question of making sandwiches and pies.  Define two additional inequalities such that the following are true:    No inequality eliminates any feasible integer solution of the original problem.    No boundary hyperplane is parallel to the objective function plane.    With the additional inequalities, the optimal solution to the linear relaxation is the optimal integer solution previously found to .     The boundary for these additional inequalities are reffered to as cutting hyperplanes . We wish to determine how to find such cutting hyperplanes.    In this activity, we motivate the math behind the cutting-plane method.  Let be a feasible solution of the relaxation of a canonical integer maximization problem, where the are basic (slack) variables and the are non-basic variables.  We consider the constraint                                                                                                      Explain why the above equality is equivalent to       Show that for any feasible integral solution, that the left hand side of the equality in (2) is an integer.      Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.      For any integral solution, what is a non-negative integer upper bound for ?      Show that for any feasible integral solution to the relaxation of the integer optimization problem.  We call the hyperplane a cutting-plane .      Show that if is non-integral, then by adding this constraint, the solution is no longer feasible.        We now apply this idea to an integer problem.  Consider the integer optimization problem:      Solve the relaxation of this integer problem, and verify that this solution is not integral.                                                                       Take the second row and follow the procedure in to generate a new constraint :                                                                                       Using the fact that , describe this cutting-plane in terms of .      Pivot of the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                       There is only one valid choice of row to generate a new constraint. Follow the procedure in to generate a new constraint                                                                                                        Using the fact that , express this new cutting-plane in terms of .      Pivot on the entry and verify that the resulting basic solution is optimal and non-integral.                                                                                                       Use either the or row to generate a new constraint .                                                                                                                       Using the fact that , express this new cutting-plane in terms of .      Pivot on the entry and verify that the resulting basic solution is optimal and integral!                                                                                                                       Enter the coefficients for the objective function and the three cutting-planes in order that you found them, and drag the objective plane onto the optimal solution to the integer problem.       Gomory Cutting-Plane Algorithm   The Gomory Cutting-Plane Algorithm for an integer optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer optimization problem.    Solve the relaxation of the integer problem. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non-integral and for that row, construct the additional bound: .    GOTO 2.      "
 },
 {
   "id": "sec-cuttingplane-3",
@@ -3076,7 +3157,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "8.2.4",
   "title": "Gomory Cutting-Plane Algorithm.",
-  "body": " Gomory Cutting-Plane Algorithm   The Gomory Cutting-Plane Algorithm for an optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer optimization problem.    Solve the relaxation of the integer problem. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non-integral and for that row, construct the additional bound: .    GOTO 2.     "
+  "body": " Gomory Cutting-Plane Algorithm   The Gomory Cutting-Plane Algorithm for an integer optimization problem is as follows:    INITIALIZE: Begin with a canonical maximization integer optimization problem.    Solve the relaxation of the integer problem. If all the resulting are integral STOP: you have found an optimal integral solution.    Select a that is non-integral and for that row, construct the additional bound: .    GOTO 2.     "
 },
 {
   "id": "sec-intsage",
@@ -3106,11 +3187,65 @@ var ptx_lunr_docs = [
   "body": "  Solve:          "
 },
 {
+  "id": "sec-summaryinteger",
+  "level": "1",
+  "url": "sec-summaryinteger.html",
+  "type": "Section",
+  "number": "8.4",
+  "title": "Summary of Chapter 8",
+  "body": " Summary of  An integer optimization problem is an optimization problem where all solutions must only have integer values. We generally begin by solving the relaxation of an integer problem, where there is no such restriction. If the optimal solution is integral, then no additional work is needed. Otherwise, there are techniques which allow us to find the integral solutions.  The Branch and Bound method works by recursively adding additional constraints to the problem. If for some optimal solution is non-integral, then we may force it to be integral with the additional constraint that or . Each choice results in a new branch of a search tree. If the additional constraint results in an integral optimal solution or an infeasible solution, no additional constraints are needed and we may return to the parent node. We terminate when all branches are explored in this way. Then amongst the integer solutions, we select the optimal choice.   A demonstration of the Branch and Bound method.    The other more tableau centric approach is the Gomory Cutting Plane method . We pivot to the optimal relaxed solution, and if this is non-integral, we select a non-integral and for that row, add the additional constraint which excises the non-integral optimal solution but preserves all integral solutions of the original problem. We repeat until an optimal solution is achieved.   A demonstration of the Gomory Cutting Plane method.    "
+},
+{
+  "id": "sec-summaryinteger-2",
+  "level": "2",
+  "url": "sec-summaryinteger.html#sec-summaryinteger-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "integer optimization problem relaxation "
+},
+{
+  "id": "sec-summaryinteger-3",
+  "level": "2",
+  "url": "sec-summaryinteger.html#sec-summaryinteger-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Branch and Bound "
+},
+{
+  "id": "figure-videochapter8branchbound",
+  "level": "2",
+  "url": "sec-summaryinteger.html#figure-videochapter8branchbound",
+  "type": "Figure",
+  "number": "8.4.1",
+  "title": "",
+  "body": " A demonstration of the Branch and Bound method.   "
+},
+{
+  "id": "sec-summaryinteger-5",
+  "level": "2",
+  "url": "sec-summaryinteger.html#sec-summaryinteger-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Gomory Cutting Plane "
+},
+{
+  "id": "figure-videochapter8cuttingplane",
+  "level": "2",
+  "url": "sec-summaryinteger.html#figure-videochapter8cuttingplane",
+  "type": "Figure",
+  "number": "8.4.2",
+  "title": "",
+  "body": " A demonstration of the Gomory Cutting Plane method.   "
+},
+{
   "id": "sec-exercisesinteger",
   "level": "1",
   "url": "sec-exercisesinteger.html",
   "type": "Section",
-  "number": "8.4",
+  "number": "8.5",
   "title": "Problems for Chapter 8",
   "body": " Problems for   The simplex pivoter may be found here:          For each of the linear optimization problems, solve the linear relaxation problem, then use the graphical method to find a solution if we restrict to integer values.                          Prove or find a counterexample: Let be the solution to the linear relaxation to an integer optimization problem, such that has only integer coordinates. Then is a solution to the original integral problem.    Come up with 2 maximization problems, one two dimensional and one three dimensional, where only integer solutions are sensible, and explain why these problems should be integral problems. Then do the same for two minimization problems.     For each of the following integer optimization problems, find an integral solution using the branch and bound method, and using the cutting plane method.                                                       Solve the following integer optimization problems.     A potter makes sculptures and bowls out of clay. It takes hours and pounds of clay to make a sculpture, hours and pounds of clay for a bowl. She has hours a week and pounds of clay with which to make things. She can sell sculptures for $ and bowl for $ . How much of each should she make to maximize revenue?      A man is preparing food for a party at his house, and is making sure there is enough. A chicken pot pie takes g of flour and g of chicken. He air and land wellington takes g of flour, of chicken and g of beef. Evidently he knows no other recipes. He has g of flour, g of chicken and g of beef. The pot pies feed 2 people, the wellington 8. How many of each should he make?      A family of 12 gnomes have three mines and from which to dig gems. A gnome digging in mine can dig up gems a week, gems a week in mine and gems a week in mine . They have a budget of 75 gold pieces a month for operating expenses. A gnome digging in mine has expenses of gp a month, gp a month in mine , and gp a month in mine . Due to size limitations, at most 5 gnomes can dig in mine . How should this family distribute the gnomes amongst the mines to maximize gem production?        What do you think would happen if the Gomory Plane Cutting algorithm was applied to a linear optimization problem where the relaxed problem achieved optimality, but the integral restriction had no solutions?      Test your conjecture on the following problem:          Consider a primal integral linear maximization problem with objective function such that the integral problem has an optimal solution . Then for each of the following find a counterexample.     The linear relaxation of this primal problem also achieves optimality. (Think irrational numbers.)      Suppose that the linear relaxation also achieves optimality at , then the integral dual to the original integral max problem must also achieve an optimal solution.      Suppose that the linear relaxation also achieves optimality at such that . Suppose the dual to the integral maximization problem achieved optimality at , and let denote the dual to the relaxation. Then where is the objective function of the dual.      "
 },
@@ -3119,7 +3254,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesinteger.html#exercises-integer-1",
   "type": "Exercise",
-  "number": "8.4.1",
+  "number": "8.5.1",
   "title": "",
   "body": "  For each of the linear optimization problems, solve the linear relaxation problem, then use the graphical method to find a solution if we restrict to integer values.                        "
 },
@@ -3128,7 +3263,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesinteger.html#exercises-integer-2",
   "type": "Exercise",
-  "number": "8.4.2",
+  "number": "8.5.2",
   "title": "",
   "body": " Prove or find a counterexample: Let be the solution to the linear relaxation to an integer optimization problem, such that has only integer coordinates. Then is a solution to the original integral problem.  "
 },
@@ -3137,7 +3272,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesinteger.html#exercises-integer-3",
   "type": "Exercise",
-  "number": "8.4.3",
+  "number": "8.5.3",
   "title": "",
   "body": " Come up with 2 maximization problems, one two dimensional and one three dimensional, where only integer solutions are sensible, and explain why these problems should be integral problems. Then do the same for two minimization problems.  "
 },
@@ -3146,7 +3281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesinteger.html#exercises-integer-4",
   "type": "Exercise",
-  "number": "8.4.4",
+  "number": "8.5.4",
   "title": "",
   "body": "  For each of the following integer optimization problems, find an integral solution using the branch and bound method, and using the cutting plane method.                                                    "
 },
@@ -3155,7 +3290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesinteger.html#exercises-integer-5",
   "type": "Exercise",
-  "number": "8.4.5",
+  "number": "8.5.5",
   "title": "",
   "body": "  Solve the following integer optimization problems.     A potter makes sculptures and bowls out of clay. It takes hours and pounds of clay to make a sculpture, hours and pounds of clay for a bowl. She has hours a week and pounds of clay with which to make things. She can sell sculptures for $ and bowl for $ . How much of each should she make to maximize revenue?      A man is preparing food for a party at his house, and is making sure there is enough. A chicken pot pie takes g of flour and g of chicken. He air and land wellington takes g of flour, of chicken and g of beef. Evidently he knows no other recipes. He has g of flour, g of chicken and g of beef. The pot pies feed 2 people, the wellington 8. How many of each should he make?      A family of 12 gnomes have three mines and from which to dig gems. A gnome digging in mine can dig up gems a week, gems a week in mine and gems a week in mine . They have a budget of 75 gold pieces a month for operating expenses. A gnome digging in mine has expenses of gp a month, gp a month in mine , and gp a month in mine . Due to size limitations, at most 5 gnomes can dig in mine . How should this family distribute the gnomes amongst the mines to maximize gem production?    "
 },
@@ -3164,7 +3299,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesinteger.html#exercises-integer-6",
   "type": "Exercise",
-  "number": "8.4.6",
+  "number": "8.5.6",
   "title": "",
   "body": "   What do you think would happen if the Gomory Plane Cutting algorithm was applied to a linear optimization problem where the relaxed problem achieved optimality, but the integral restriction had no solutions?      Test your conjecture on the following problem:       "
 },
@@ -3173,7 +3308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-exercisesinteger.html#exercises-integer-7",
   "type": "Exercise",
-  "number": "8.4.7",
+  "number": "8.5.7",
   "title": "",
   "body": "  Consider a primal integral linear maximization problem with objective function such that the integral problem has an optimal solution . Then for each of the following find a counterexample.     The linear relaxation of this primal problem also achieves optimality. (Think irrational numbers.)      Suppose that the linear relaxation also achieves optimality at , then the integral dual to the original integral max problem must also achieve an optimal solution.      Suppose that the linear relaxation also achieves optimality at such that . Suppose the dual to the integral maximization problem achieved optimality at , and let denote the dual to the relaxation. Then where is the objective function of the dual.    "
 },
