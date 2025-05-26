@@ -12,7 +12,7 @@
   </p>
   <figure xml:id="figure-videochapter8branchbound">
     <caption>A demonstration of the Branch and Bound method.</caption>
-    <video playat = "select" source = "images/Chapter8-BranchBound.mp4"/>
+    <video playat = "select" source = "images/Chapter8-BranchBound.mp4" preview="images/Chapter8-BranchBound.png"/>
   </figure>
 
   <p>
@@ -22,7 +22,7 @@
   </p>
   <figure xml:id="figure-videochapter8cuttingplane">
     <caption>A demonstration of the Gomory Cutting Plane method.</caption>
-    <video playat = "select" source = "images/Chapter8-CuttingPlane.mp4"/>
+    <video playat = "select" source = "images/Chapter8-CuttingPlane.mp4" preview="images/Chapter8-CuttingPlane.png"/>
   </figure>
   
 

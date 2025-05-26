@@ -30,7 +30,7 @@
   <p>
     <figure xml:id="figure-videochapter2slack">
     <caption>An introduction to slack variables.</caption>
-    <video playat = "select" source = "images/Chapter2-Slack.mp4"/>
+    <video playat = "select" source = "images/Chapter2-Slack.mp4" preview="images/Chapter2-Slack.png"/>
   </figure>
   </p>
   <p>
@@ -189,7 +189,7 @@
   <p>
     <figure xml:id="figure-videochapter2Tableau">
     <caption>Pivot transformations and the simplex algorithm.</caption>
-    <video playat = "select" source = "images/Chapter2-Tableau.mp4"/>
+    <video playat = "select" source = "images/Chapter2-Tableau.mp4" preview="images/Chapter2-Tableau.png"/>
     </figure>
   </p>
 
@@ -203,7 +203,7 @@
   <p>
     <figure xml:id="figure-videochapter2Unbounded">
     <caption>Unbounded regions and objective functions.</caption>
-    <video playat = "select" source = "images/Chapter2-Unbounded.mp4"/>
+    <video playat = "select" source = "images/Chapter2-Unbounded.mp4" preview="images/Chapter2-Unbounded.png"/>
     </figure>
   </p>
 
@@ -216,7 +216,7 @@
   <p>
     <figure xml:id="figure-videochapter2Infeasibility">
     <caption>Infeasible basic solutions and feasible regions.</caption>
-    <video playat = "select" source = "images/Chapter2-Infeasibility.mp4"/>
+    <video playat = "select" source = "images/Chapter2-Infeasibility.mp4" preview="images/Chapter2-Infeasibility.png"/>
     </figure>
   </p>
 

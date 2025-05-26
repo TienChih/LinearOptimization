@@ -148,7 +148,7 @@
 
   <figure xml:id="figure-videochapter6VAM">
     <caption>The Vogel Advanced Start Method.</caption>
-    <video playat = "select" source = "images/Chapter6-VAM.mp4"/>
+    <video playat = "select" source = "images/Chapter6-VAM.mp4" preview="images/Chapter6-VAM.png"/>
   </figure>
 
   <p>
@@ -168,7 +168,7 @@
 
   <figure xml:id="figure-videochapter6Transportation">
     <caption>The Transportation Algorithm.</caption>
-    <video playat = "select" source = "images/Chapter6-Transportation.mp4"/>
+    <video playat = "select" source = "images/Chapter6-Transportation.mp4" preview="images/Chapter6-Transportation.png"/>
   </figure>
   
   <p>
@@ -190,7 +190,7 @@
 
   <figure xml:id="figure-videochapter6Assignment">
     <caption>The Assignment Problem.</caption>
-    <video playat = "select" source = "images/Chapter6-Assignment.mp4"/>
+    <video playat = "select" source = "images/Chapter6-Assignment.mp4" preview="images/Chapter6-Assignment.png"/>
   </figure>
 
         

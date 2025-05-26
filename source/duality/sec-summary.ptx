@@ -306,7 +306,7 @@
 
   <figure xml:id="figure-videochapter4normal">
     <caption>Normal Vectors and Sensitivity Analysis.</caption>
-    <video playat = "select" source = "images/Chapter4-NormalVectors.mp4"/>
+    <video playat = "select" source = "images/Chapter4-NormalVectors.mp4" preview="images/Chapter4-NormalVectors.png"/>
   </figure>
 
   <p>
@@ -473,7 +473,7 @@
 
   <figure xml:id="figure-videochapter4duality">
     <caption>Proofs of the duality theorems.</caption>
-    <video playat = "select" source = "images/Chapter4-Duality.mp4"/>
+    <video playat = "select" source = "images/Chapter4-Duality.mp4" preview="images/Chapter4-Duality.png"/>
   </figure>
 
   <p>
@@ -615,7 +615,7 @@
 
   <figure xml:id="figure-videochapter4tableaus">
     <caption>The dual problem as recorded in tableaus.</caption>
-    <video playat = "select" source = "images/Chapter4-Tableaus.mp4"/>
+    <video playat = "select" source = "images/Chapter4-Tableaus.mp4" preview="images/Chapter4-Tableaus.png"/>
   </figure>
   
   

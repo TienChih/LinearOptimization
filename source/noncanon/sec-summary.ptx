@@ -768,7 +768,7 @@
   <p>
     <figure xml:id="figure-videochapter3negativity">
     <caption>A summary of unconstrained variables.</caption>
-    <video playat = "select" source = "images/Chapter3-Negativity.mp4"/>
+    <video playat = "select" source = "images/Chapter3-Negativity.mp4" preview="images/Chapter3-Negativity.png"/>
     </figure>
   </p>
 
@@ -1590,7 +1590,7 @@
   <p>
     <figure xml:id="figure-videochapter3Equality">
     <caption>A summary of equality constraints.</caption>
-    <video playat = "select" source = "images/Chapter3-Equality.mp4"/>
+    <video playat = "select" source = "images/Chapter3-Equality.mp4" preview="images/Chapter3-Equality.png"/>
     </figure>
   </p>
 

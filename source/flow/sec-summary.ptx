@@ -20,7 +20,7 @@
   </p>
   <figure xml:id="figure-videochapter7LOFormulation">
     <caption>A linear optimization formulation of maximum flow and minimum cut.</caption>
-    <video playat = "select" source = "images/Chapter7-LOFormulation.mp4"/>
+    <video playat = "select" source = "images/Chapter7-LOFormulation.mp4" preview="images/Chapter7-LOFormulation.png"/>
   </figure>
 
   <p>
@@ -28,14 +28,14 @@
   </p>
   <figure xml:id="figure-videochapter7FordFulkerson">
     <caption>The Ford-Fulkerson algorithm and finding max flows/min cuts.</caption>
-    <video playat = "select" source = "images/Chapter7-FordFulkerson.mp4"/>
+    <video playat = "select" source = "images/Chapter7-FordFulkerson.mp4" preview="images/Chapter7-FordFulkerson.png"/>
   </figure>
   <p>
     Another type of network is a <term>weighted</term> network, where each edge <m>(v_i, v_j)</m> has a potentially negative weight <m>w_{ij}</m>.   <term>Dijkstra's Shortest Path Algorithm</term> <xref ref="def-DijkstrasAlgorithm"/> describes an algorithm which identifies the distance (sum of weights) from a starting source <m>v_s</m> to any other vertex <m>v_i</m> in the network, by labeling each vertex with the current shortest distance from <m>v_s</m> to <m>v_i</m> and relabeling and readjusting as shorter distances are found.
   </p>
   <figure xml:id="figure-videochapter7shortestpath">
     <caption>Dijkstra's Shortest Path algorithm and finding the shortest path between vertices.</caption>
-    <video playat = "select" source = "images/Chapter7-ShortestPath.mp4"/>
+    <video playat = "select" source = "images/Chapter7-ShortestPath.mp4" preview="images/Chapter7-ShortestPath.png"/>
   </figure>
 
   <p>
@@ -44,7 +44,7 @@
 
   <figure xml:id="figure-videochapter7mincostflow">
     <caption>Minimum Cost Flow algorithm and finding the minimum cost flow of a given value.</caption>
-    <video playat = "select" source = "images/Chapter7-MinCostFlow.mp4"/>
+    <video playat = "select" source = "images/Chapter7-MinCostFlow.mp4" preview="images/Chapter7-MinCostFlow.png"/>
   </figure>
   
 
