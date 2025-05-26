@@ -971,7 +971,7 @@
         </li>
         <li>
           <p>
-            Apply the Shortest Path Algorithm on <m>N'</m> to find the shortest path from <m>v_s</m> to <m>v_d</m>.
+            Apply Dijkstra's Shortest Path Algorithm on <m>N'</m> to find the shortest path from <m>v_s</m> to <m>v_d</m>.
             If no path exists STOP, there is no flow with total value <m>F</m>.
           </p>
         </li>

@@ -4,10 +4,10 @@
   <title>Summary of <xref ref="ch-flow"/></title>
 
   <p>
-    We use introduce the notion of   <term>networks</term>, a pair <m>(V, E)</m> where <m>V</m> is a set of <term>vertices</term> and <m>E</m> is a set of ordered pairs of vertices called <term>edges</term>.  We also discuss <term>capacitated networks</term> where each edge <m>(v_i, v_j)</m> has a <term>capacity</term> <m>c_{ij}\geq 0</m>.  For capacitated networks with designated <term>sources</term> and <term>sinks</term>, we can define a <term>flow</term>, an assignment  <m>0\leq x_{ij}\leq c_{ij}</m> to each edge <m>(v_i, v_j)</m> so that for any non source/sink vertex <m>v_i</m> we have that <me>\sum_{v_j\in V} x_{ji} - \sum {xij} =0.</me> We focus on capacitated networks with a unique source and sink, with no edges going into the source or out of the sink.
+    We use introduce the notion of   <term>networks</term>, a pair <m>N=(V, E)</m> where <m>V</m> is a set of <term>vertices</term> and <m>E</m> is a set of ordered pairs of vertices called <term>edges</term>.  We also discuss <term>capacitated networks</term> where each edge <m>(v_i, v_j)</m> has a <term>capacity</term> <m>c_{ij}\geq 0</m>.  For capacitated networks with designated <term>sources</term> and <term>sinks</term>, we can define a <term>flow</term>, an assignment  <m>0\leq x_{ij}\leq c_{ij}</m> to each edge <m>(v_i, v_j)</m> so that for any non source/sink vertex <m>v_i</m> we have that <me>\sum_{v_j\in V} x_{ji} - \sum {xij} =0.</me> We focus on capacitated networks with a unique source and sink, with no edges going into the source or out of the sink.
   </p>
   <p>
-    We then focused on finding a <term>maximum flow</term> on such a network, which may be modeled as a linear optimization problem:
+    Finding a  <term>maximum flow</term> on such a network may be solved as a linear optimization problem:
     <md>
           <mrow>\textbf{Maximize: }  \displaystyle \sum_{i} x_{id}</mrow>
           <mrow>\textbf{subject to: }  \sum_{v_i\in V}x_{ij} - \sum_{v_i\in V} x_{ji} \amp =  0, \text{for each non source/sink vertex }v_j</mrow>
@@ -15,7 +15,7 @@
           <mrow> x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).</mrow>
     </md>
 
-    Another problem we discuss is the <term>minimum cut</term>, a <term>cut</term> is a pair <m>(V_1, V_2)</m> so the <m>V</m> is the disjoint union on <m>V_1, V_2</m>, <m>v_s\in V_1</m> and <m>v_d\in V_2</m>.  The <term>capacity</term> of a cut is the sum <me>\sum_{v_i\in V_1, v_j\in V_2}x_{ij}.</me>. Careful analysis of the dual problem to the maximum flow problem shows that the capacity of any cut is an upper bound for the value of any flow.
+    Another problem on such a network is the <term>minimum cut</term>, a <term>cut</term> is a pair <m>(V_1, V_2)</m> so the <m>V</m> is the disjoint union on <m>V_1, V_2</m>, <m>v_s\in V_1</m> and <m>v_d\in V_2</m>.  The <term>capacity</term> of a cut is the sum <me>\sum_{v_i\in V_1, v_j\in V_2}x_{ij}.</me>. Careful analysis of the dual problem to the maximum flow problem shows that the capacity of any cut is an upper bound for the value of any flow.
         
   </p>
   <figure xml:id="figure-videochapter7LOFormulation">
@@ -24,194 +24,29 @@
   </figure>
 
   <p>
-    We then describe the <term>Ford-Fulkerson Algorithm</term> <xref ref="def-maxflowalgorithm"/> which identifies a maximum flow.  Then, starting with <m>V_1=\{v_s\}</m>, we recursively add vertices <m>v_i</m> to <m>V_1</m> if there is an edge from <m>V_1</m> to <m>v_i</m> which is not at maximum capacity, or a backwards edge from <m>v_i</m> to <m>V_1</m>.  When this is done, we let <m>V_2=V\backslash V_1</m> and this forms a cut who by construction, has the same capacity as the maximum flow.  So by the Weak Duality Theorem, both are optimal. 
+    The <term>Ford-Fulkerson Algorithm</term> <xref ref="def-maxflowalgorithm"/> which identifies a maximum flow.  Then, starting with <m>V_1=\{v_s\}</m>, we recursively add vertices <m>v_i</m> to <m>V_1</m> if there is an edge from <m>V_1</m> to <m>v_i</m> which is not at maximum capacity, or a backwards edge from <m>v_i</m> to <m>V_1</m>.  When this is done, we let <m>V_2=V\backslash V_1</m> and this forms a cut who by construction, has the same capacity as the maximum flow.  So by the Weak Duality Theorem, both are optimal. 
   </p>
   <figure xml:id="figure-videochapter7FordFulkerson">
     <caption>The Ford-Fulkerson algorithm and finding max flows/min cuts.</caption>
     <video playat = "select" source = "images/Chapter7-FordFulkerson.mp4"/>
   </figure>
-  <!--<p>
-    This can be captured with a transportation tableau:
-    <tabular halign="center">
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell bottom="medium">
-              </cell>
-              <cell bottom="medium">
-              </cell>
-              <cell bottom="medium">
-              </cell>
-              <cell bottom="medium">
-              </cell>
-              <cell>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-              </cell>
-              <cell>
-                <m>c_{11}</m>
-              </cell>
-              <cell>
-                <m>c_{12}</m>
-              </cell>
-              <cell>
-                <m>\cdots</m>
-              </cell>
-              <cell right="medium">
-                <m>c_{1m}</m>
-              </cell>
-              <cell halign="left">
-                <m>W_1 </m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-              </cell>
-              <cell>
-                <m>c_{21}</m>
-              </cell>
-              <cell>
-                <m>c_{22}</m>
-              </cell>
-              <cell>
-                <m>\cdots</m>
-              </cell>
-              <cell right="medium">
-                <m>c_{2m}</m>
-              </cell>
-              <cell halign="left">
-                <m>W_2 </m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-              </cell>
-              <cell>
-                <m>\vdots</m>
-              </cell>
-              <cell>
-                <m>\vdots</m>
-              </cell>
-              <cell>
-                <m>\ddots</m>
-              </cell>
-              <cell right="medium">
-                <m>\cdots</m>
-              </cell>
-              <cell halign="left">
-                <m>\cdots </m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right" right="medium">
-              </cell>
-              <cell bottom="medium">
-                <m>c_{n1}</m>
-              </cell>
-              <cell bottom="medium">
-                <m>c_{n2}</m>
-              </cell>
-              <cell bottom="medium">
-                <m>\cdots</m>
-              </cell>
-              <cell right="medium" bottom="medium">
-                <m>c_{nm}</m>
-              </cell>
-              <cell halign="left" bottom="medium">
-                <m>W_n </m>
-              </cell>
-            </row>
-            <row>
-              <cell halign="right">
-              </cell>
-              <cell>
-                <m>M_1 </m>
-              </cell>
-              <cell>
-                <m>M_2 </m>
-              </cell>
-              <cell>
-                <m>\cdots </m>
-              </cell>
-              <cell right="medium">
-                <m>M_m</m>
-              </cell>
-              <cell halign="left">
-              <m>\displaystyle \sum_{i=1}^n W_i = \sum_{j=1}^m M_j</m>
-              </cell>
-            </row>
-          </tabular>
-        </p>
-
-        <p>
-          Note that if we we to consider the inherent system of equations:
-          <md>
-            <mrow>\sum_{j=1}^m x_{ij} \amp = W_i </mrow>
-            <mrow>\sum_{i=1}^n x_{ij} \amp = M_j </mrow>
-          </md>
-          and the fact that <m>\displaystyle \sum_{i=1}^n W_i=\sum_{j=1}^m M_j</m>, that the associated
-          augmented matrix would have rank <m>n+m-1</m> and thus at most <m>n+m-1</m> of the <m>x_{ij}</m>
-          need be non-zero for a feasible or optimal solution.  A selection of these variables will be considered the <term>basis</term>
-          of a solution, and is equivalent to the basis variables from <xref ref="ch-simplex"/>.
-        </p>
-
-        <p>
-          We then introduce the Vogel Advanced Start Method (VAM) <xref ref="def-vam"/> to heuristically
-          pick a <q>good</q> feasible solution.  The essential premise is that, we take each warehouse and market,
-          and consider the difference between the cheapest and second cheapest options for that row/column.
-          Since we want to minimize cost, we prioritize warehouses/markets where making the second best choice would incur
-          a larger cost penalty than the best choice, and choose the cheapest option for those row/columns.  We then readjust and repeat until we
-          obtain a feasible solution.
-        </p>
-
-  <figure xml:id="figure-videochapter6VAM">
-    <caption>The Vogel Advanced Start Method.</caption>
-    <video playat = "select" source = "images/Chapter6-VAM.mp4"/>
+  <p>
+    Another type of network is a <term>weighted</term> network, where each edge <m>(v_i, v_j)</m> has a potentially negative weight <m>w_{ij}</m>.   <term>Dijkstra's Shortest Path Algorithm</term> <xref ref="def-DijkstrasAlgorithm"/> describes an algorithm which identifies the distance (sum of weights) from a starting source <m>v_s</m> to any other vertex <m>v_i</m> in the network, by labeling each vertex with the current shortest distance from <m>v_s</m> to <m>v_i</m> and relabeling and readjusting as shorter distances are found.
+  </p>
+  <figure xml:id="figure-videochapter7shortestpath">
+    <caption>Dijkstra's Shortest Path algorithm and finding the shortest path between vertices.</caption>
+    <video playat = "select" source = "images/Chapter7-ShortestPath.mp4"/>
   </figure>
 
   <p>
-    We then proceed with the <term>Transportation Algorithm</term> <xref ref="def-transportationalg"/>.
-    The general idea is that we assign an <m>a_i</m> to each row and <m>b_j</m> for each column so that <m>c_{ij}=a_i+b_j</m> for each
-    <m>x_{ij}</m> in the basis.  Then, we reduce each <m>c_{ij}</m> by <m>a_i+b_j</m>.  We then see if any entries are negative.
-  </p>
-  <p>
-    Note that for the current basis, the cost of shipping is <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij}</m>, but since
-     <m>c_{ij}=0</m> for <m>x_{ij}</m> not in the basis, and since <m>\displaystyle \sum_{j=1}^m x_{ij}=W_i, \sum_{i=1}^n x_{ij}=M_j</m>, we have that
-     <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij} = \sum_{i=1}^n a_iW_i+\sum_{j=1}^m b_jM_j</m>, so shifting the shipping to an entry where <m>c_{ij}&lt; a_i+b_j</m> would
-     lower the total shipping cost.  We then outline a cycle consisting of new basis elements and shifting the shipping around to preserve the 
-     warehouse and market constraints, adding the negative entry to the basis and removing an entry with no shipping from the basis.  Note that it is possible for this
-     shift to be zero, yet changing the basis, equivalent to a degenerate piviot from <xref ref="sec-cycling"/>.  We repeat this process until
-     there are no longer negative entries.
+    The shortest path algorithm has a useful application in the Minimum Cost Flow Algorithm <xref ref="def-mincostflowalgorithm"/>.  In this problem, we try to find a flow of value <m>F</m> from <m>v_s</m> to <m>v_d</m> on a weighted capacitated network that minimizes the cost to do so.  One can identify shortest paths from <m>v_s</m> to <m>v_d</m> and increase flows along this path, and repeat recursively.  However, doing so greedily may result in non-optimal solutions.  We construct a second network <m>N'</m> where backwards edges with negative weight are added for flows on <m>N</m> to represent the ability to reduce flow along edges, and the shortest paths are found on <m>N'</m>.  Doing so repeatedly results in the actual minimum cost flow.
   </p>
 
-  <figure xml:id="figure-videochapter6Transportation">
-    <caption>The Transportation Algorithm.</caption>
-    <video playat = "select" source = "images/Chapter6-Transportation.mp4"/>
+  <figure xml:id="figure-videochapter7mincostflow">
+    <caption>Minimum Cost Flow algorithm and finding the minimum cost flow of a given value.</caption>
+    <video playat = "select" source = "images/Chapter7-MinCostFlow.mp4"/>
   </figure>
   
-  <p>
-    Finally, we consider the <term>Assignment Problem</term> and the <term>Hungarian Algorithm</term> <xref ref="def-hungarian"/>.
-    The assignment problem can be thought of as a transportation problem where each warehouse and market have supply and demand 1.
-    But since this is greatly simplified, we should expect a simpler algorithm.  We note that we may add and subtract
-    <m>k</m> from any row or column without changing the optimal assignment, since this is equivalent to picking originally and then giving/taking 
-    <m>k</m> back afterwards. We may also multiply all entries by the same value and preserve the optimal assignment by a similar argument.
-    So we may adjust the tableau to only have non-negative integer entries, and then subtract the smallest value from each row, then each column.
-
-  </p>
-
-  <p>
-    If there is a <term>permutation set of zeroes</term>, a collection of <m>n</m> zeroes no two of which share a row or column, then
-    these clearly represent an optimal assignment.  If non exist, we may rearrange the tableau by drawing a minimum number of lines through each zero.  We then take the smallest 
-    uncovered entry and subtract that from each uncovered row and add it to each covered column.  Equivalently we subtract this value from each uncovered entry and add it to each intersection.
-    We then repeat until we find a permutation set of zeroes.
-  </p>
-
-  <figure xml:id="figure-videochapter6Assignment">
-    <caption>The Assignment Problem.</caption>
-    <video playat = "select" source = "images/Chapter6-Assignment.mp4"/>
-  </figure>-->
 
         
         
