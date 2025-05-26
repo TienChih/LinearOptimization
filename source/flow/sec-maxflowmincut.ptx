@@ -73,7 +73,7 @@
       <p>
         <md>
           <mrow>\textbf{Maximize: }  \displaystyle \sum_{i} x_{id}</mrow>
-          <mrow>\textbf{subject to: }  \sum_{i}x_{ij} - \sum_{i} x_{ji} \amp =  0, \text{for each vertex }v_j</mrow>
+          <mrow>\textbf{subject to: }  \sum_{v_i\in V}x_{ij} - \sum_{v_i\in V} x_{ji} \amp =  0, \text{for each non source/sink vertex }v_j</mrow>
           <mrow> x_{ij}\amp \leq  c_{ij}, \text{for each edge} (v_i, v_j)</mrow>
           <mrow> x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).</mrow>
         </md>
