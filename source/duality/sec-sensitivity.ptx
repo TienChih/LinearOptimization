@@ -490,7 +490,7 @@
         <p>
           Drag sliders for <m>y_1, y_2</m> so that <me>\begin{bmatrix} 3 \\ 2 \end{bmatrix} = y_1\begin{bmatrix} -1 \\ 0 \end{bmatrix}+y_2 \begin{bmatrix} 1 \\ 1 \end{bmatrix}.</me>
         </p>
-        <interactive  platform="doenetml" width="100%" aspect="3:4">
+        <interactive  platform="doenetml" width="100%" >
           <slate surface="doenetml">
             <xi:include parse="text" href="doenet/duality-coefficients.xml"/>
           </slate>
@@ -507,7 +507,7 @@
           each tableau?
         </p>
         <p>
-          <interactive  platform="doenetml" width="100%" aspect="3:4">
+          <interactive  platform="doenetml" width="100%">
             <slate surface="doenetml">
               <xi:include parse="text" href="doenet/duality-morecoefficients.xml"/>
             </slate>

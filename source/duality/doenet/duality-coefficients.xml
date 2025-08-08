@@ -10,5 +10,11 @@
 </graph>
 <slider from="-5" to="5" initialValue="0" name="c1" width="300" step="0.2" showValue="true" showTicks="true"/> <slider from="-5" to="5" initialValue="0" name="c2" width="300" step="0.2" showValue="true" showTicks="true"/>
 <p>
-  <m>\begin{bmatrix} 3 \\ 2\end{bmatrix} =$c1 \begin{bmatrix} -1 \\ 0\end{bmatrix}+$c2 \begin{bmatrix} 1 \\ 1\end{bmatrix}</m>.
+  <p>
+          Drag sliders for <m>y_1, y_2</m>.
+          How does adjusting the sliders correspond to the visualization above?
+        
+</p>
+<p>
+  <m>\begin{bmatrix} <number>$c2-$c1</number> \\ $c2\end{bmatrix} =$c1 \begin{bmatrix} -1 \\ 0\end{bmatrix}+$c2 \begin{bmatrix} 1 \\ 1\end{bmatrix}</m>.
 </p>

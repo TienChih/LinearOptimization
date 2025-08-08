@@ -156,13 +156,13 @@ decision variables. Determine if the following are TRUE or FALSE:
           <li>
             <p>
               If we increase <m>x_i, 1\leq i\leq m</m>, the value
-              of the objective function is still <m>f(\x')</m>.
+              of the objective function is still <m>f(\x^*)</m>.
             </p>
           </li>
           <li>
             <p>
               If we increase <m>x_i, m+1\leq i\leq m+n</m>, the value
-              of the objective function is still <m>f(\x')</m>.
+              of the objective function is still <m>f(\x^*)</m>.
             </p>
           </li>
         </ol>
@@ -220,7 +220,7 @@ decision variables. Determine if the following are TRUE or FALSE:
         </p>
         <p>
           <md>
-            <mrow>\textbf{Maximize: }  f(x,y) = \amp x+y</mrow>
+            <mrow>\textbf{Maximize: }  f(x,y) \amp =  x+y</mrow>
             <mrow>\textbf{subject to: } x+2y\amp \leq  4</mrow>
             <mrow> 3x+y\amp \leq  6</mrow>
             <mrow> x,y\amp \geq  0.</mrow>
@@ -264,7 +264,7 @@ solutions of successive tableaus.
       <statement>
         <p>
           For each problem in <xref ref="ex-solvesimplex"/>, state the dual problem
-          and find it's solution.
+          and find its solution.
         </p>
       </statement>
     </exercise>
