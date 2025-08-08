@@ -43,7 +43,7 @@
       <task>
         <statement>
           <p>
-            The same as (A) but reverse the payoff conditions for Rowan and Colleen.
+            The same as <m>\textbf{(a)}</m> but reverse the payoff conditions for Rowan and Colleen.
           </p>
         </statement>
       </task>
@@ -96,7 +96,7 @@
           <p>
             Rowan and Colleen each simultaneously hold up one or two fingers and 
             shouts a guess for the total number of fingers held.  If either Rowan or Colleen
-            guess correctly, then they collect $ from their opponent equal to this number of fingers.
+            guess correctly, then they collect dollars from their opponent equal to this number of fingers.
             If they both guess correctly or both guess incorrectly, then no money changes hands.
           </p>
         </statement>
@@ -142,35 +142,35 @@
       <task>
         <statement>
           <p>
-            <m>\begin{bmatrix} 3 &amp; x \\ x &amp; 1 \end{bmatrix}</m>.
+            <m>\begin{bmatrix} 3 &amp; x \\ x &amp; 1 \end{bmatrix}</m>
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>\begin{bmatrix} 2 &amp; 1 \\ 3 &amp; x \end{bmatrix}</m>.
+            <m>\begin{bmatrix} 2 &amp; 1 \\ 3 &amp; x \end{bmatrix}</m>
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>\begin{bmatrix} 2 &amp; 3 \\ 1 &amp; x \end{bmatrix}</m>.
+            <m>\begin{bmatrix} 2 &amp; 3 \\ 1 &amp; x \end{bmatrix}</m>
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>\begin{bmatrix} x &amp; 1 \\ 2 &amp; 3 \end{bmatrix}</m>.
+            <m>\begin{bmatrix} x &amp; 1 \\ 2 &amp; 3 \end{bmatrix}</m>
           </p>
         </statement>
       </task>
       <task>
         <statement>
           <p>
-            <m>\begin{bmatrix} x &amp; 2 \\ 1 &amp; 3 \end{bmatrix}</m>.
+            <m>\begin{bmatrix} x &amp; 2 \\ 1 &amp; 3 \end{bmatrix}</m>
           </p>
         </statement>
       </task>
@@ -276,7 +276,7 @@
       <task>
         <statement>
           <p>
-            Each player adds $2 to the pot.  Then they roll a 4 sided dice in secret.
+            Each player adds $2 to the pot.  Then they roll a 4-sided dice in secret.
             Each player knows their own results, but not the other's.
           </p>
           <p>
@@ -298,7 +298,7 @@
           <p>
             There are 6 cards, 2 Jacks, 2 Queens and 2 Kings with Jack &lt; Queen &lt; King.
             The players each place $1 in the pot.
-            Then, one card each is dealt to each player face down.  They may see their own card but not their opponents.
+            Then, one card each is dealt to each player face down.  They may see their own card but not their opponent's.
           </p>
           <p>
             Rowan now has three choices.  He may <em>FOLD</em>:  the pot goes to Colleen.
@@ -408,7 +408,7 @@
       <task>
         <statement>
           <p>
-            Prove that in a game with a two by two payoff matrix where the 
+            Prove that in a game with a two-by-two payoff matrix where the 
             optimal solution for each player is a <em>pure strategy</em>, then
             the matrix has a saddle point.
           </p>

@@ -1047,7 +1047,7 @@ solutions of successive tableaus.
           
           <p>  Recall 
           Weak Duality <xref ref="prop-weakduality"/>, and Complementary Slackness, <xref ref="def-complementaryslackness"/>.  Suppose we found a pair of primal-dual solutions which satisfied main constraints,
-          but failed one or more non-negativity constraints.
+          but failed one or more nonnegativity constraints.
         </p>
       </introduction>
       
@@ -1086,7 +1086,7 @@ solutions of successive tableaus.
     <exercise>
       <introduction>
         <p>
-          Solve the following non-canonical primal-dual problems:
+          Solve the following noncanonical primal-dual problems:
         </p>
       </introduction>
       <task>

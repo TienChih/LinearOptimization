@@ -66,11 +66,11 @@
       <statement>
         <p>
           Let's say Rowan raises on a Jack, folds on a Queen, and raises on a
-          King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen of King,
+          King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen or King,
           denoted FCC.
         </p>
         <p>
-          If both players are committed to these strategies, what are Rowans expected net winnings?  (Note that all
+          If both players are committed to these strategies, what are Rowan's expected net winnings?  (Note that all
           the above hand pairs are equally likely, what are Rowan's net winnings in each case?)
         </p>
       </statement>
@@ -78,7 +78,7 @@
     <task>
       <statement>
         <p>
-          If Rowan's strategy is (for some reason) FFF, what are Rowans net winnings?
+          If Rowan's strategy is (for some reason) FFF, what are Rowan's net winnings?
         </p>
       </statement>
     </task>
@@ -86,7 +86,7 @@
     <task>
       <statement>
         <p>
-          If Colleen's strategy is  FFF, what are Rowans net winnings?  (These may be different for each of Rowan's choice of strategy.)
+          If Colleen's strategy is  FFF, what are Rowan's net winnings?  (These may be different for each of Rowan's choice of strategy.)
         </p>
       </statement>
     </task>

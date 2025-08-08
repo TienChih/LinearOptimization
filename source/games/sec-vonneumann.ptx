@@ -419,7 +419,7 @@
     <task>
       <statement>
         <p>
-          For each row and column strategy, we have expected row winnings, <m>\ec{u}, \ec{v}</m> respectively.
+          For each row and column strategy, we have expected row winnings <m>\ec{u}</m> and <m> \ec{v}</m> respectively.
           Why are these always positive?
         </p>
       </statement>
@@ -471,7 +471,7 @@
     <task>
       <statement>
         <p>
-          Repeat tasks (b)-(c) for Rowan's strategy, where <m>\tilde{p}_i = \frac{p_i}{\ec{u}}</m>.
+          Repeat tasks <m>\textbf{(b)-(c)}</m> for Rowan's strategy, where <m>\tilde{p}_i = \frac{p_i}{\ec{u}}</m>.
         </p>
       </statement>
     </task>
@@ -489,7 +489,7 @@
       <statement>
         <p>
           What does the Strong Duality Theorem <xref ref="thm-strongduality"/> say about the optimal solutions to
-          both problems?  What in turn, does that say about <m>\ec{u}, \ec{v}</m>?
+          both problems?  What, in turn, does that say about <m>\ec{u}</m> and <m> \ec{v}</m>?
         </p>
       </statement>
     </task>
@@ -535,7 +535,7 @@
     <statement>
       <p>
         Let <m>A</m> be a payoff matrix and <m>\p, \q</m> represent
-        the strategies of the row and column players respectively, with feasible regions <m>F_\p, F_\q</m>. Also let <m>A_{(i)}</m> denote the <m>i</m>th row of a matrix <m>A</m> and let <m>A^{(j)}</m>
+        the strategies of the row and column players respectively, with feasible regions <m>F_\p</m> and <m> F_\q</m>. Also let <m>A_{(i)}</m> denote the <m>i</m>th row of a matrix <m>A</m> and let <m>A^{(j)}</m>
         denote the <m>j</m>th column of <m>A</m>.
       </p>
       <p>
@@ -543,14 +543,14 @@
         <me>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q = \displaystyle \min_{1\leq i\leq n}A_{(i)}\q = \p'^\top A\q' = \max_{1\leq j\leq m}\p^\top A^{(j)} = \max_{\p \in F_{\p}} \p^\top A\q'.</me>
       </p>
       <p>
-        We call this value described the <em>von Neumann Value</em> of the game.
+        We call the described value the <term>von Neumann Value</term> of the game.
       </p>
     </statement>
   </theorem>
 
   <activity>
     <p>
-      Revist <xref ref="exploration-vonneuman"/>.  Has your answer adjusted at all?
+      Revisit <xref ref="exploration-vonneuman"/>.  Has your answer adjusted at all?
     </p>
   </activity>
 
@@ -588,7 +588,7 @@
   <activity>
     <introduction>
       <p>
-        In a simplified game of battleship played on a two <m>2\times 3</m> board,
+        In a simplified game of battleship played on a  <m>2\times 3</m> board,
         Colleen selects two consecutive squares on the board to place her ship.  Rowan then
         picks one of six squares to fire at.  If he hits, he gets a point, otherwise
         Colleen gets a point.
@@ -635,7 +635,7 @@
     <task>
       <statement>
         <p>
-          Use sage to find the optimal solution for Rowan:
+          Use Sage to find the optimal solution for Rowan:
         </p>
         <sage>
           <input>

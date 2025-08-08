@@ -1343,7 +1343,7 @@
       <me>
         f = \displaystyle\sum_{x_j\not\in B_\ell} c_{j}^*x_j -d
       </me>
-      So note that the solution space to the system of equations for both these dictionaries are the same.  So we have a solution for <m>D_i</m> (not neccessarily feasible ie non-negativity may fail) that must also be a solution to <m>D_\ell</m>:
+      So note that the solution space to the system of equations for both these dictionaries are the same.  So we have a solution for <m>D_i</m> (not neccessarily feasible ie nonnegativity may fail) that must also be a solution to <m>D_\ell</m>:
       <md>
         <mrow>x_s \amp = Z </mrow>
         <mrow>x_j \amp = 0\text{ for }x_j\not\in B_i, x_j\neq x_s </mrow>
@@ -1494,7 +1494,7 @@
     <statement>
       <p>
         If we follow <xref ref="thm-BlandAnticycling"/>, then no basis is visited twice during the Simplex
-        Algorithm.  Note that <m>f</m> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?
+        Algorithm.  Note that <m>f</m> is nondecreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?
       </p>
     </statement>
   </activity>

@@ -2430,7 +2430,7 @@
     <activity>
       <introduction>
         <p>
-          We now want to concoct a scheme to turn all the <m>b_i</m> non-negative, if possible.
+          We now want to concoct a scheme to turn all the <m>b_i</m> nonnegative, if possible.
   
         </p>
         <p>
@@ -2632,7 +2632,7 @@
       </task>
     </activity>
   
-    <p>With this, we may define our algorithm for potential non-feasible tableau</p>
+    <p>With this, we may define our algorithm for potential nonfeasible tableau</p>
   
     <definition xml:id="def-simplexmax">
       <idx>simplex algorithm: maximum</idx>

@@ -125,7 +125,7 @@
         <task>
         <statement>
           <p>
-            Write out the new canonical maximization problem in terms of the non-basic variables and
+            Write out the new canonical maximization problem in terms of the nonbasic variables and
             the new basic solution in terms of <m>x_1, x_2</m>.
           </p>
         </statement>
@@ -255,7 +255,7 @@
         <task>
         <statement>
           <p>
-            Write out the new canonical minimization problem in terms of the non-basic variables and
+            Write out the new canonical minimization problem in terms of the nonbasic variables and
             the new basic solution in terms of <m>y_1, y_2</m>.
           </p>
         </statement>

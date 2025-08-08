@@ -13,7 +13,7 @@
   <exploration xml:id="exploration-evenodd">
     <introduction>
       <p>
-        Suppose we have two players, then <q>Even</q> player and the <q>Odd</q> player.  Each player picks an integer from 1-3.
+        Suppose we have two players, an <q>Even</q> player and an <q>Odd</q> player.  Each player picks an integer from 1-3.
       </p>
       <ul>
         <li>
@@ -188,7 +188,7 @@
     <task>
       <statement>
         <p>
-          Do either player gain any advantage by picking a single choice and sticking to it?
+          Does either player gain any advantage by picking a single choice and sticking to it?
         </p>
       </statement>
     </task>
@@ -228,7 +228,7 @@
       </p>
       <p>
         If a row <m>i</m> has entries that are strictly greater than or equal to the entries of another row <m>j</m>, 
-        then we say that row <m>i</m> <term>dominates</term> row <m>j</m>.  We then may delete row <m>j</m> since there is now reason the row player would
+        then we say that row <m>i</m> <term>dominates</term> row <m>j</m>.  We then may delete row <m>j</m> since there is no reason the row player would
         choose <m>j</m>.  Similarly, if column <m>i</m> is less than or equal to column <m>j</m>, column <m>i</m> 
         <term>dominates</term> column <m>j</m> and we may delete column <m>j</m>.
       </p>
@@ -767,7 +767,7 @@
     <task>
       <statement>
         <p>
-          Repeat (h)-(j) for the columns, and with regards to Rowan's strategy.
+          Repeat <m>\textbf{(h)-(j)}</m> for the columns, and with regards to Rowan's strategy.
         </p>
       </statement>
     </task>
@@ -785,8 +785,8 @@
     <statement>
       <p>
         Suppose that the reduced payoff matrix had an entry <m>a_{ij}</m>
-        that is the largest value in it's column and the smallest value in 
-        it's row.
+        that is the largest value in its column and the smallest value in 
+        its row.
       </p>
       <p>
         <tabular halign="center">
@@ -1489,7 +1489,7 @@
     <task>
       <statement>
         <p>
-          What is <m>D</m>?  What are <m>\ec{u}, \ec{v}</m>?
+          What is <m>D</m>?  What are <m>\ec{u}</m> and <m> \ec{v}</m>?
         </p>
       </statement>
     </task>
@@ -1549,13 +1549,13 @@
       </p>
       <p>
         Then run the cell and see the distributions of winnings and the average winnings.
-        How does this value compare to what you found.
+        How does this value compare to what you found?
       </p>
     </task>
     <task>
       <statement>
         <p>
-          Take turns, one student pick a new strategy for Even, and another student then modify the strategy for Odd in light of the new strategy.
+          Taking turns, have one student pick a new strategy for Even, and another student then modify the strategy for Odd in light of the new strategy.
           Can we do better than Odd's current best strategy?
         </p>
       </statement>
@@ -1563,7 +1563,7 @@
     <task>
       <statement>
         <p>
-          Conversely, take turns, one student pick a new strategy for Odd, and another student then modify the strategy for Even in light of the new strategy.
+          Conversely, taking turns, one student pick a new strategy for Odd, and another student then modify the strategy for Even in light of the new strategy.
           Can we do better than Even's current best strategy?
         </p>
       </statement>

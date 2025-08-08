@@ -1015,7 +1015,7 @@
       <ol>
         <li>
           <p>
-            Pick a non-zero entry <m>p</m> in the tableau but not in the objective row or constraint column.
+            Pick a nonzero entry <m>p</m> in the tableau but not in the objective row or constraint column.
           </p>
         </li>
         <li>
