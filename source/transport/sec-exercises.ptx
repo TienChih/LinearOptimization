@@ -22,7 +22,7 @@
     <exercise xml:id="ex-transport">
       <introduction>
         <p>
-          Solve each of the following transportation problems
+          Solve each of the following transportation problems.
         </p>
       </introduction>
       <task>
@@ -1970,7 +1970,7 @@
       <task>
         <statement>
           <p>
-            Write out a non-canonical minimization problem which models this problem (there should be some equality constraints).
+            Write out a noncanonical minimization problem which models this problem (there should be some equality constraints).
           </p>
         </statement>
       </task>
@@ -1985,7 +1985,8 @@
         <statement>
           <p>
             Prove that in <xref ref="def-transportationalg"/>, for a valid choice of <m>a_i, b_j</m> in
-            step 2 that <me>f(\x) = \displaystyle \sum_{i} a_iw_i+\sum_{j} b_jm_j</me> How does this relate to the dual problem to the
+            step 2 that <me>f(\x) = \displaystyle \sum_{i} a_iw_i+\sum_{j} b_jm_j</me> How does this relate 
+             the dual problem to the
             transportation problem?
           </p>
         </statement>
@@ -1996,7 +1997,7 @@
       <task>
         <statement>
           <p>
-            Consider the non-negativity condition in step 4 of <xref ref="def-transportationalg"/>.  How does
+            Consider the nonnegativity condition in step 4 of <xref ref="def-transportationalg"/>.  How does
             this relate to the constraints of the dual problem to the transportation problem?
           </p>
         </statement>
@@ -2090,7 +2091,7 @@ data rational.
           <statement>
             <p>
               For your optimal solution, if  <m>v_i</m> <q>ships</q> to
-              <m>v_j</m>, highlight the corresponding edge on network above.
+              <m>v_j</m>, highlight the corresponding edge on the network above.
               If a vertex <m>v_k</m> ships to itself, highlight that vertex.  Disregard the case when <m>v_5</m> ships to <m>v_1</m>.
               What can you say about the highlighted edges?  What may be reasonable conjectures about these edges?
             </p>

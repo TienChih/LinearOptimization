@@ -6,7 +6,7 @@
 
   <introduction>
     <p>
-      We introduce the transportation problem, consider it's connection to linear optimization, and show an algorithm
+      We introduce the transportation problem, consider its connection to linear optimization, and show an algorithm
       that produces a (maybe not optimal) solution.
     </p>
   </introduction>
@@ -185,7 +185,7 @@
           <me>\sum x_{i\ell} = w_i, \sum x_{kj} = m_j.</me>
 
           Set up an augmented matrix representing this system and solve it.  What is the rank of this matrix?
-          Describe the set of solutions to this system?
+          Describe the set of solutions to this system.
         </p>
       </statement>
     </task>
@@ -201,9 +201,9 @@
       <hint>
         <p>
           Imagine an augmented matrix with the coefficients of the <m>x_{ij}</m> on
-          one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix.
+          one side and the supplies/demand of the other.  What is an upper bound of the rank of this matrix?
           Then consider that <m>\displaystyle \sum w_i = \sum m_j</m>.  What does this say about the (in)dependence of the rows?
-          What then must the rank be?  What happened in part (a)?
+          What then must the rank be?  What happened in part <m>\textbf{(a)}</m>?
         </p>
       </hint>
     </task>
@@ -495,7 +495,8 @@
     <task>
       <statement>
         <p>
-          Now that Warehouse 2 has all their supply exhausted, and shipping from there is no longer an option, what are the differences between the lowest costs and second lowest costs in each row/column?
+          Note that Warehouse 2 has all their supply exhausted, and shipping from there is no longer an option. 
+          What are the differences between the lowest costs and second lowest costs in each row/column?
         </p>
         
         <p>

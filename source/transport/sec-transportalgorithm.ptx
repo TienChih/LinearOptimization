@@ -466,7 +466,7 @@
           Select  row values <m>a_i</m> and column values <m>b_j</m>  so that each <em>circled</em> value <m>c_{ij}</m> is the sum of row and column values <m>a_i+b_j</m>.
         </p>
         <p>
-          (We can think of these as analogous to the shadow costs associated with the warehouse/market bounds)
+          (We can think of these as analogous to the shadow costs associated with the warehouse/market bounds.)
         </p>
         <p>
           <tabular halign="center">
@@ -538,7 +538,7 @@
       <statement>
         <p>
           Replace each entry of the tableau <m>c_{ij}</m> with
-          <m>c_{ij}-a_i-b_j</m>.  What does this measure?  What does it mean if each entry is non-negative?
+          <m>c_{ij}-a_i-b_j</m>.  What does this measure?  What does it mean if each entry is nonnegative?
         </p>
       </statement>
     </task>
@@ -546,7 +546,7 @@
     <task>
       <statement>
         <p>
-          Pick a <m>c_{ij}\lt 0</m> 
+          Pick a <m>c_{ij}\lt 0</m>. 
         </p>
         <p>
           <tabular halign="center">
@@ -626,7 +626,7 @@
     <task>
       <statement>
         <p>
-          Based on the discussion in (a), which entry should transfer their 
+          Based on the discussion in <m>\textbf{(a)}</m>, which entry should transfer their 
           shipments to <m>c_{23}</m>?
 
         </p>
@@ -762,7 +762,7 @@
           Verify that none of the entries are non negative.  Why do we now terminate?
         </p>
         <p>
-          We then replace the entries with the original entries
+          We then replace the entries with the original entries:
         </p>
         <p>
           <tabular halign="center">
@@ -894,12 +894,12 @@
             along with the boxed entry, form a cycle.
           </p>
           <p>
-            If each entry is non-negative, GOTO 6.
+            If each entry is nonnegative, GOTO 6.
           </p>
         </li>
         <li>
           <p>
-            Shift shipments appropriately along the cycle so that <m>c_{k\ell}</m> has a non-negative shipping quantity, and
+            Shift shipments appropriately along the cycle so that <m>c_{k\ell}</m> has a nonnegative shipping quantity, and
             one of the selected basis entries has a zero shipping quantity.  Remove this entry from the basis and add the
             entry in step 4 to the basis.
           </p>

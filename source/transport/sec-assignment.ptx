@@ -13,10 +13,10 @@
   <exploration xml:id="exploration-assignment">
     <introduction>
       <p>
-        Supose we have 3 jobs and 3 contractors, and we wish to assign jobs
+        Suppose we have 3 jobs and 3 contractors, and we wish to assign jobs
         to contractors at the minimum price.
         How can we distribute the jobs amongst the contractors?  
-        (Costs are in thousands of dollars)
+        (Costs are in thousands of dollars.)
       </p>
       <p>
         <tabular halign="center">
@@ -302,7 +302,7 @@
       <statement>
         <p>
           If we had a tableau with all integer values, how could we change this
-          to a tableau of all non-negative integer values with the same optimal solution?
+          to a tableau of all nonnegative integer values with the same optimal solution?
         </p>
       </statement>
     </task>
@@ -329,7 +329,7 @@
         </li>
         <li>
           <p>
-            IF the entries of <m>T</m> are not all non-negative: 
+            IF the entries of <m>T</m> are not all nonnegative: 
           </p>
           <p>
             THEN add to every entry of <m>T</m> the smallest value of <m>T</m>, 
@@ -348,7 +348,7 @@
         </li>
         <li>
           <p>
-            IF <m>T</m> has a permutation set of zeroes: STOP
+            IF <m>T</m> has a permutation set of zeroes: STOP.
           </p>
           
         </li>
