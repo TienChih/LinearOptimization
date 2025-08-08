@@ -60,7 +60,8 @@
     <task>
       <statement>
         <p>
-          What is the shortest amount of time needed for her to arrive at Fantasi College?
+          Suppose home for Dr. Ayad is <m>v_0</m>. 
+          What is the shortest amount of time needed for her to arrive at Fantasi College on <m>v_5</m>?
 
         
       </p>
@@ -148,7 +149,7 @@
     </task>
     <task>
       <p>
-        What if we change <m>w_{23}=-1</m>?
+        What if we change <m>w_{23}</m> to <m>-1</m>?
       </p>
     </task>
     <task>
@@ -345,7 +346,7 @@
     
     <statement>
       <p>
-        Let <m>N</m> be a weighted network with only non-negative weights.  Then <em>Dijkstra's Shortest Path Algorithm</em> is as follows:
+        Let <m>N</m> be a weighted network with only nonnegative weights.  Then <em>Dijkstra's Shortest Path Algorithm</em> is as follows:
       </p>
       <ol>
         <li>
@@ -381,7 +382,7 @@
         </li>
       </ol>
       <p>
-        When the algorithm terminates, <m>\ell_j = d(v_s, v_j)</m>, the length of the shortest path from <m>v_s</m> to <m>v_j</m>.
+        When the algorithm terminates, each <m>\ell_j</m> takes on the value <m>d(v_s, v_j)</m>, the length of the shortest path from <m>v_s</m> to <m>v_j</m>.
       </p>
     </statement>
   </definition>
@@ -403,7 +404,7 @@
     <task>
       <statement>
         <p>
-          What do each <m>\ell_i</m> represent in terms of travel time?
+          What does each <m>\ell_i</m> represent in terms of travel time?
         </p>
       </statement>
     </task>
@@ -419,7 +420,7 @@
       <statement>
         <p>
           Take your previous choice of vertex <m>v_k</m> and repeat: look at the <m>\ell_i</m>
-          of it's potential predecessors and <m>w_{ik}</m>.  Recursively repeat until we reach <m>v_0</m>.
+          of its potential predecessors and <m>w_{ik}</m>.  Recursively repeat until we reach <m>v_0</m>.
         </p>
       </statement>
     </task>
@@ -473,7 +474,7 @@
     <task>
       <statement>
         <p>
-          Show that in this case that <m>\ell_x+w_{xy}\leq \ell_k</m>.  (Invoke the induction hypothesis).
+          Show that in this case that <m>\ell_x+w_{xy}\leq \ell_k</m>.  (Invoke the induction hypothesis.)
         </p>
       </statement>
     </task>
@@ -953,7 +954,7 @@
             <ul>
               <li>
                 <p>
-                  Let <m>V'=V</m>
+                  Let <m>V'=V</m>.
                 </p>
               </li>
               <li>
@@ -977,7 +978,8 @@
         </li>
         <li>
           <p>
-            Find the <m>\alpha</m>-path corresponding to the shortest path found in (4).  Let <me>q = \displaystyle \min_{(v_i, v_j) \in \alpha}\left\{ \min_{(v_i, v_j)\text{ forward }}\{c_{ij}-x_{ij}\}, \min_{(v_i, v_j)\text{ backwards }}\{F-\varphi(v_d) \}\right\}</me> 
+            Find the <m>\alpha</m>-path corresponding to the shortest path found in (4).  
+            Let <me>q = \displaystyle \min_{(v_i, v_j) \in \alpha}\left\{ \min_{(v_i, v_j)\text{ forward }}\{c_{ij}-x_{ij}\}, \min_{(v_i, v_j)\text{ backwards }}\{F-\varphi(v_d) \}\right\}.</me> 
           </p>
         </li>
         <li>

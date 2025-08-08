@@ -13,7 +13,8 @@
     <introduction>
       <p>
         Consider a series of islands with bridges between them.  A group of people are trying to move from island <m>v_0</m> to island <m>v_5</m>.  Due to the length/width
-        of the bridges, only but so many people can move between a pair of islands in a minute, and these are labeled.  The bridges also only allow movement in one direction.
+        of the bridges, only but so many people can move between a pair of islands in a minute, and these are labeled.  
+        The bridges, represented by arrows below, also only allow movement in one direction.
       </p>
       <image xml:id="island">
         <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
@@ -87,16 +88,16 @@
     <statement>
       <p>
         A <term>directed graph</term> or <term>network</term> is a pair <m>D=(V, E)</m> where <m>V</m> is a set of
-        vertices and <m>E</m> is a set of ordered pairs of distinct elements of <m>V</m>.
+        <term>vertices</term> and <m>E</m> is a set of ordered pairs of distinct elements of <m>V</m> called <term>edges</term>.
       </p>
       <p>
         A network is <term>capacitated</term> if for each edge <m>(v_i, v_j)\in E</m>
-        we assign a non negative capacity <m>c_{ij}</m>.  (If there is no edge from <m>v_i</m> to 
+        we assign a nonnegative capacity <m>c_{ij}</m>.  (If there is no edge from <m>v_i</m> to 
         <m>v_j</m>, we may equivalently say that <m>c_{ij}=0</m>.)
       </p>
       <p>
         A <term>flow</term> assigned to a capacitated network is an assignment to each edge
-        <m>(v_i, v_j)\in E</m>, a value <m>x_{ij}</m> such that <m>0\leq x_{ij}\leq c_{ij}</m>.
+        <m>(v_i, v_j)\in E</m> a value <m>x_{ij}</m> such that <m>0\leq x_{ij}\leq c_{ij}</m>.
         (If there is no edge from <m>v_i</m> to <m>v_j</m>, what must <m>x_{ij}</m> be?)
       </p>
     </statement>
@@ -144,7 +145,7 @@
     </introduction>
     <task>
       <p>
-        For each flow you found: identify the sources, sinks,
+        For each flow you found, identify the sources, sinks,
         and intermediary vertices.
       </p>
     </task>
@@ -353,7 +354,7 @@
         <statement>
           <p>
             Write out the primal max problem for <xref ref="exploration-flow"/>
-            as a non-canonical Tucker Tableau.
+            as a noncanonical Tucker Tableau.
           </p>
         </statement>
       </task>

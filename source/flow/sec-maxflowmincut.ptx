@@ -12,20 +12,15 @@
 
 
   <exploration>
-    <introduction>
-      <p>
-        Recall <xref ref="exploration-flow"/>.  Suppose that we wish to install a toll
-        booth on these bridges so that each person going to <m>v_5</m> pays a toll at least once.
-        The cost of installing a toll booth on a bridge is proportional to it's capacity.
-      </p>
-    </introduction>
-    <task>
       <statement>
         <p>
-          Find three different ways to install these booths, and find what you believe is the cheapest way to do so.
+        Recall <xref ref="exploration-flow"/>.  Suppose that we wish to install a toll
+        booth on these bridges so that each person going to <m>v_5</m> pays a toll at least once.
+        The cost of installing a toll booth on a bridge is proportional to it's capacity. 
+        Find three different ways to install these booths, and find what you believe is the cheapest way to do so.
         </p>
       </statement>
-    </task>
+      
   </exploration>
 
   <definition xml:id="def-cut">
@@ -73,9 +68,9 @@
       <p>
         <md>
           <mrow>\textbf{Maximize: }  \displaystyle \sum_{i} x_{id}</mrow>
-          <mrow>\textbf{subject to: }  \sum_{v_i\in V}x_{ij} - \sum_{v_i\in V} x_{ji} \amp =  0, \text{for each non source/sink vertex }v_j</mrow>
-          <mrow> x_{ij}\amp \leq  c_{ij}, \text{for each edge} (v_i, v_j)</mrow>
-          <mrow> x_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).</mrow>
+          <mrow>\textbf{subject to: }  \sum_{v_i\in V}x_{ij} - \sum_{v_i\in V} x_{ji} \amp =  0, \text{ for each non source/sink vertex }v_j</mrow>
+          <mrow> x_{ij}\amp \leq  c_{ij}, \text{ for each edge} (v_i, v_j)</mrow>
+          <mrow> x_{ij}\amp \geq  0, \text{ for each edge} (v_i, v_j).</mrow>
         </md>
         
       </p>
@@ -90,10 +85,10 @@
         <p>
           <md>
             <mrow>\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}</mrow>
-            <mrow>\textbf{subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{for each edge }(v_s, v_j)</mrow>
-            <mrow> -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j), i\neq s, j\neq d</mrow>
-            <mrow> - \mu_i +y_{id} \amp \geq  1, \text{for each edge }(v_i, v_d)</mrow>
-            <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+            <mrow>\textbf{subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{ for each edge }(v_s, v_j)</mrow>
+            <mrow> -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{ for each edge} (v_i, v_j), i\neq s, j\neq d</mrow>
+            <mrow> - \mu_i +y_{id} \amp \geq  1, \text{ for each edge }(v_i, v_d)</mrow>
+            <mrow> y_{ij}\amp \geq  0, \text{ for each edge} (v_i, v_j)</mrow>
           </md>
         
           where <m>\mu_s=0, \mu_d=-1 </m>.
@@ -108,10 +103,10 @@
         <p>
           <md>
             <mrow>\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}</mrow>
-            <mrow>\textbf{subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{for each edge} (v_i, v_j)</mrow>
+            <mrow>\textbf{subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{ for each edge} (v_i, v_j)</mrow>
             <mrow>\mu_s \amp =0 </mrow>
             <mrow> \mu_d \amp =-1</mrow>
-            <mrow> y_{ij}\amp \geq  0, \text{for each edge} (v_i, v_j).</mrow>
+            <mrow> y_{ij}\amp \geq  0, \text{ for each edge} (v_i, v_j).</mrow>
           </md>
         </p>
       </statement>
@@ -251,7 +246,7 @@
         <p>
           Show that for any <m>v_k</m> in <m>V'_1</m>, there is an
           <term><m>\alpha</m>-path</term> <m>P</m>: a sequence of vertices starting <m>v_s</m> to <m>v_k</m>, where
-          between <m>v_{i}, v_j</m> either <m>(v_i, v_j), (v_j, v_i)\in E</m>.
+          between <m>v_{i}</m> and <m> v_j</m> either <m>(v_i, v_j)</m> or <m> (v_j, v_i)\in E</m>.
         </p>
         <p>
           <image xml:id="alpha-path">
@@ -489,7 +484,8 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
           </image>
         </p>
         <p>
-          Consider the <m>\alpha</m>-path <m>v_0v_2v_4v_5</m>.  Apply <xref ref="activity-maxflowmincutproof"/> (d)
+          Consider the <m>\alpha</m>-path <m>v_0v_2v_4v_5</m>.  Apply <xref ref="activity-maxflowmincutproof"/>
+           <m>\textbf{(d)}</m>
           to this path.  What is <m>q</m>?
         </p>
         
@@ -578,7 +574,7 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
       <ol>
         <li>
           <p>
-            INITIALIZE: We begin with any feasible flow <m>f</m> (including the zero flow.)
+            INITIALIZE: We begin with any feasible flow <m>f</m> (including the zero flow).
           </p>
         </li>
         <li>
@@ -597,7 +593,7 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
                 
               </li>
             </ul>
-            (If no such <m>\alpha</m>-path <m>P</m> exists, GOTO 5)
+            (If no such <m>\alpha</m>-path <m>P</m> exists, GOTO 5.)
           </p>
         </li>
         <li>
@@ -611,7 +607,7 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
           add <m>x_{ij}'=q+x_{ij}</m>.  For each backwards edge <m>(v_j, v_i)</m> we subtract <m>x_{ji}' = x_{ji}-q</m>.
           </p>
           <p>
-            Let <m>f:=f'</m> and GOTO 2
+            Let <m>f:=f'</m> and GOTO 2.
           </p>
         </li>
         <li>
@@ -662,12 +658,12 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
             </li>
           </ul>
           <p>
-            If there is no such <m>v_i</m>, GOTO 4
+            If there is no such <m>v_i</m>, GOTO 4.
           </p>
         </li>
         <li>
           <p>
-            GOTO 2
+            GOTO 2.
           </p>
         </li>
         <li>

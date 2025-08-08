@@ -83,7 +83,7 @@
       <task>
         <statement>
           <p>
-            Classify each vertex as a source, sink and intermediate vertex.
+            Classify each vertex as a source, sink or intermediate vertex.
           </p>
         </statement>
       </task>
@@ -333,7 +333,7 @@
     <exercise>
       <introduction>
         <p>
-          Consider the max-flow min-cut problem <xref ref="ex-maxflowmincut"/> (a).
+          Consider the max-flow min-cut problem <xref ref="ex-maxflowmincut"/> <m>\textbf{(a)}</m>.
         </p>
       </introduction>
       <task>
@@ -371,7 +371,7 @@
       <task>
         <statement>
           <p>
-            How can we tell both the flow and cut found in <xref ref="ex-maxflowmincut"/> (a)
+            How can we tell both the flow and cut found in <xref ref="ex-maxflowmincut"/> <m>\textbf{a}</m>
             are optimal? (Think duality.)
           </p>
         </statement>
@@ -382,7 +382,7 @@
     <exercise>
       <introduction>
         <p>
-          Over a month at a hospital many patients are need of blood transfusions.  They had available
+          Over a month at a hospital many patients are in need of blood transfusions.  They had available
           blood from 47 donors with type A blood, 33 donors with type B blood, 46 donors with type AB and 44 donors with type O.
           There were 38 patients with type A blood, 39 patients with type B blood, 49 patients with type AB and 43 patients with type O.
           Type A patients can only receive type A or O, type B patients can receive only type B or O, type
@@ -414,7 +414,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            If not all patients were able to receive blood, explain the financial backers and hospital administrators, who may not have taken
+            If not all patients were able to receive blood, explain to the financial backers and hospital administrators, who may not have taken
             any math in awhile, why this was the case.
           </p>
         </statement>
@@ -678,7 +678,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
 
     <exercise>
         <p>
-          Consider <xref ref="ex-shortestpath"/> (a).  Model this problem as a linear optimization problem and solve.
+          Consider <xref ref="ex-shortestpath"/> <m>\textbf{(a)}</m>.  Model this problem as a linear optimization problem and solve.
         </p>
       
     </exercise>
@@ -841,7 +841,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
 
     <exercise>
       <p>
-        Model <xref ref="ex-minflow"/> (a) as a linear optimization problem.
+        Model <xref ref="ex-minflow"/> <m>\textbf{a}</m> as a linear optimization problem.
       </p>
     </exercise>
 

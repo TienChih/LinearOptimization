@@ -24,7 +24,7 @@
   </figure>
 
   <p>
-    The <term>Ford-Fulkerson Algorithm</term> <xref ref="def-maxflowalgorithm"/> which identifies a maximum flow.  Then, starting with <m>V_1=\{v_s\}</m>, we recursively add vertices <m>v_i</m> to <m>V_1</m> if there is an edge from <m>V_1</m> to <m>v_i</m> which is not at maximum capacity, or a backwards edge from <m>v_i</m> to <m>V_1</m>.  When this is done, we let <m>V_2=V\backslash V_1</m> and this forms a cut who by construction, has the same capacity as the maximum flow.  So by the Weak Duality Theorem, both are optimal. 
+    The <term>Ford-Fulkerson Algorithm</term> <xref ref="def-maxflowalgorithm"/>  identifies a maximum flow.  Then, starting with <m>V_1=\{v_s\}</m>, we recursively add vertices <m>v_i</m> to <m>V_1</m> if there is an edge from <m>V_1</m> to <m>v_i</m> which is not at maximum capacity, or a backwards edge from <m>v_i</m> to <m>V_1</m>.  When this is done, we let <m>V_2=V\backslash V_1</m> and this forms a cut who by construction, has the same capacity as the maximum flow.  So by the Weak Duality Theorem, both are optimal. 
   </p>
   <figure xml:id="figure-videochapter7FordFulkerson">
     <caption>The Ford-Fulkerson algorithm and finding max flows/min cuts.</caption>
@@ -39,7 +39,8 @@
   </figure>
 
   <p>
-    The shortest path algorithm has a useful application in the Minimum Cost Flow Algorithm <xref ref="def-mincostflowalgorithm"/>.  In this problem, we try to find a flow of value <m>F</m> from <m>v_s</m> to <m>v_d</m> on a weighted capacitated network that minimizes the cost to do so.  One can identify shortest paths from <m>v_s</m> to <m>v_d</m> and increase flows along this path, and repeat recursively.  However, doing so greedily may result in non-optimal solutions.  We construct a second network <m>N'</m> where backwards edges with negative weight are added for flows on <m>N</m> to represent the ability to reduce flow along edges, and the shortest paths are found on <m>N'</m>.  Doing so repeatedly results in the actual minimum cost flow.
+    The shortest path algorithm has a useful application in the Minimum Cost Flow Algorithm <xref ref="def-mincostflowalgorithm"/>.  In this problem, we try to find a flow of value <m>F</m> from <m>v_s</m> to <m>v_d</m> on a weighted capacitated network that minimizes the cost to do so.  One can identify shortest paths from <m>v_s</m> to <m>v_d</m> and increase flows along this path, and repeat recursively.  However, doing so greedily may result in nonoptimal solutions.  
+    We construct a second network <m>N'</m> where backwards edges with negative weight are added for flows on <m>N</m> to represent the ability to reduce flow along edges, and the shortest paths are found on <m>N'</m>.  Doing so repeatedly results in the actual minimum cost flow.
   </p>
 
   <figure xml:id="figure-videochapter7mincostflow">
