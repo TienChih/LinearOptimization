@@ -401,7 +401,7 @@
       <activity>
         <introduction>
           <p>
-            So have found a reasonable condition for a canonical
+            So we have found a reasonable condition for a canonical
             maximization problem to have unbounded feasible region.
             We now consider objective functions.
           </p>
@@ -509,7 +509,7 @@
       <task>
         <statement>
           <p>
-            Find a sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
+            Which of the following is a reasonable sufficient condition for a feasible tableau for a canonical maximization problem to have an unbounded objective function.
           </p>
           <ol marker="A." cols="2">
             <li>
@@ -691,7 +691,7 @@
       <task>
         <statement>
           <p>
-            For a canonical linear problem and basic solution encoded by a Tucker tableau:
+            For a canonical linear problem and basic solution encoded by a Tucker Tableau:
             
           </p>
           <p>
@@ -1765,13 +1765,13 @@
       <idx>algorithm, simplex: maximum basic feasible</idx>
       <statement>
         <p>
-          The Simplex Algorithm for Maximum Basic Feasible Tableaus
+          <term>The Simplex Algorithm for Maximum Basic Feasible Tableaus</term>
         </p>
         <ol>
             <li>Ensure that each <m>b_i\geq 0</m>, that is that the solution is feasible. </li>
-            <li>IF every <m>c_j\leq 0</m>: STOP the current solution is optimal.  </li>
+            <li>IF every <m>c_j\leq 0</m>: STOP since the current solution is optimal.  </li>
             <li>PICK a column <m>j</m> such that <m>c_j > 0</m>.  </li>
-            <li>IF each <m>a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 </m>: STOP the objective function is unbounded. </li>
+            <li>IF each <m>a_{1j}, a_{2j}, \ldots, a_{mj}\leq 0 </m>: STOP since the objective function is unbounded. </li>
             <li>PICK a row <m>i</m>  that minimizes <m>\left\{ b_i/a_{ij}: a_{ij} > 0 \right\}</m>.</li>
             <li>PIVOT on <m>a_{ij}</m>. </li>
             <li>GOTO 1.</li>
@@ -1922,7 +1922,7 @@
           </tabular>
         </p>
         <p>
-          Suppose that the basic solution encoded by the tableau were feasible, and that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m> 
+          Suppose that the basic solution encoded by the tableau were feasible, and that after pivoting on <m>a_{ij}</m> according to <xref ref="def-simplexcanonmaxbf"/> we had that <m>d\to d'</m>.  Show that <m>d'\leq d</m>. 
         </p>
       </statement>
     </activity>
@@ -2639,17 +2639,17 @@
       <idx>algorithm, simplex: maximum</idx>
       <statement>
         <p>
-          The Simplex Algorithm for Maximum Tableaus
+          <term>The Simplex Algorithm for Maximum Tableaus</term>
         </p>
         <ol>
           <li>IF each <m>b_i\geq 0</m>, GOTO 8. </li>
           <li>PICK the largest <m>i</m> such that <m>b_i\lt 0</m>.  </li>
-          <li>IF  <m>a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 </m>: STOP the problem in infeasible. </li>
+          <li>IF  <m>a_{i1}, a_{i2}, \ldots, a_{in}\geq 0 </m>: STOP since the problem in infeasible. </li>
           <li>PICK a column <m>j</m>  such that <m>a_{ij} \lt 0</m> .</li>
           <li>PICK a row <m>p\geq i</m> so that <m>\displaystyle \min_{k>i}\left(\{b_i/a_{ij}\} \cup \{b_k/a_{kj}:a_{kj}>0\} \right)=b_p/a_{pj}</m>.</li>
           <li>PIVOT on <m>a_{pj}</m>. </li>
           <li>GOTO 1.</li>
-          <li>APPLY <xref ref="def-simplexcanonmaxbf"/> .</li>
+          <li>APPLY <xref ref="def-simplexcanonmaxbf"/>.</li>
   
       </ol>
       </statement>
@@ -2839,15 +2839,15 @@
       <idx>negative transpose</idx>
       <statement>
         <p>
-          Recall that the canonical minimization problem: 
+          Consider a  canonical minimization problem: 
         </p>
         <p>
           <md>
             <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-            <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
-            <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
+            <mrow>\textbf{subject to: }  a_{11}x_1 + a_{12}x_2 +\cdots a_{1n}x_n\amp \geq  b_1</mrow>
+            <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2n}x_n\amp \geq  b_2</mrow>
             <mrow> \vdots \amp   \vdots</mrow>
-            <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
+            <mrow> a_{m1}x_1 + a_{m2}x_2 +\cdots a_{mn}x_n\amp \geq  b_m</mrow>
             <mrow> x_1, x_2, \ldots, x_n\amp \geq  0</mrow>
           </md>
           where <m>a_{ij}, b_i, c_j, d\in \mathbb{R}</m>.

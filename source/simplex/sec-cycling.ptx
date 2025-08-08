@@ -686,7 +686,7 @@
   <activity>
     <introduction>
       <p>
-        Consider the canonical linear optimization problem: Maximzie <m>f(x,y)=x+y</m>, subject to
+        Consider the canonical linear optimization problem: Maximize <m>f(x,y)=x+y</m>, subject to
         <md>
           <mrow>-2x +y \amp\leq0 </mrow>
           <mrow>x -2y \amp\leq0 </mrow>
@@ -732,7 +732,8 @@
     <idx>cycling</idx>
     <statement>
       <p>
-        If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, we call this phenomena <term>cycling</term>.
+        If a series of pivots in accordance to <xref ref="def-simplexcanonmaxbf"/> allows one to return to a set of basic variables achieved earlier in the algorithm, 
+        we call this phenomenon <term>cycling</term>.
       </p>
     </statement>
   </definition>
@@ -1129,20 +1130,19 @@
     </p>
     <p>
       We call the <term>dictionary</term> for a basis the system of equations corresponding to that basis.  So the dictionary for <m>B_i</m> is <m>D_i</m>
-      which we can write as:
+      which we can write with constraint equalities:
       
 
-      <md>
-        <mrow>x_k \amp = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_i.</mrow>
-        <mrow>f \amp = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d.</mrow>
-      </md>
+        <me>x_k  = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_i</me>
+        and objective function equality:
+        <me>f  = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d.</me>
 
       Note that since the above pivot was valid, we must have that <m>c_s>0, a_{ts}>0</m> 
       and since the pivot was degenerate, we have <m>b_t=0</m>.
     </p>
 
     <p>
-      Now, because we have cycling, we must have that <m>x_t</m> reenters the basis at some point
+      Now, because we have cycling, we must have that <m>x_t</m> reenters the basis at some point:
     </p>
     <p>
       <sidebyside widths="50% 50%" valign="middle" margins="0% 0%">
@@ -1338,7 +1338,7 @@
       </sidebyside>
     </p>
     <p>
-      Note that for this pivot to be valid, we have that <m>c_t^*>0</m>.
+      Note that for this pivot to be valid, we must have that <m>c_t^*>0</m>.
       If we let <m>D_\ell</m> denote the dictionary before <m>x_t</m> re-enters the basis, we have:
       <me>
         f = \displaystyle\sum_{x_j\not\in B_\ell} c_{j}^*x_j -d
@@ -1493,7 +1493,7 @@
   <activity>
     <statement>
       <p>
-        If we follow <xref ref="thm-BlandAnticycling"/> then no basis is visited twice during the Simplex
+        If we follow <xref ref="thm-BlandAnticycling"/>, then no basis is visited twice during the Simplex
         Algorithm.  Note that <m>f</m> is non-decreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?
       </p>
     </statement>

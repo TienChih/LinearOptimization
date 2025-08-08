@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      In this section, we use our geometric intuition to develop an algebraic operation, a <term>simplex pivot</term>
+      In this section, we use our geometric intuition to develop an algebraic operation called a <term>simplex pivot</term>,
       which will be the key operation in solving linear optimization problems.  We give both a geometric and algebraic understanding
       of this operation.
     </p>
@@ -19,12 +19,12 @@
       </p>
       <p>
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2</mrow>
+          <mrow>\textbf{Maximize: }f(\mathbf{x})  = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{subject to: }   a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m\amp \leq  b_1</mrow>
+          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n</mrow>
-          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0.</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m\amp \leq  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
       </p>
       <p>
@@ -39,10 +39,10 @@
       <p>
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m+t_2\amp =  b_2</mrow>
+          <mrow>\textbf{subject to: }  a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m + t_1 \amp =  b_1</mrow>
+          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m +t_n \amp =  b_n</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m +t_n \amp =  b_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m\amp \geq  0.</mrow>
         </md>
         
@@ -121,27 +121,27 @@
   <observation>
     <statement>
       <p>
-        Similarly the canonical minimization problem:
+        Similarly the canonical minimization problem is:
       </p>
       <p>
         <md>
-          <mrow>\textbf{Minimize: }  g(\mathbf{y}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \geq  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \geq  b_2</mrow>
+          <mrow>\textbf{Minimize: }g(\mathbf{x})  = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{subject to: }   a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m\amp \leq  b_1</mrow>
+          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \geq  b_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0.</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m\amp \leq  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
-        Where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>, may be rewritten as:
+        where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>.  This problem may be rewritten as:
       </p>
       <p>
         <md>
-          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{j=1}^n c_jx_j \right)-d</mrow>
-          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n -s_1\amp =  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n -s_2 \amp =  b_2</mrow>
+          <mrow>\textbf{Minimize: }  g(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
+          <mrow>\textbf{subject to: }  a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m -s_1\amp =  b_1</mrow>
+          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m -s_2 \amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n -s_m \amp =  b_m</mrow>
-          <mrow> x_1, x_2, \ldots, x_n\amp \geq  0.</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m -s_n \amp =  b_n</mrow>
+          <mrow> x_1, x_2, \ldots, x_m\amp \geq  0.</mrow>
         </md>
       </p>
       <p>
@@ -175,18 +175,18 @@
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
           <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_n+t_2\amp =  b_2</mrow>
+          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n +t_m \amp =  b_n</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m +t_m \amp =  b_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
         as 
         <md>
           <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m  -b_1\amp =  -t_1</mrow>
-          <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n-b_2\amp =  -t_2</mrow>
+          <mrow>\textbf{subject to: }  a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m  -b_1\amp =  -t_1</mrow>
+          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2n}x_m-b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_n -b_n \amp =  -t_n</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m -b_n \amp =  -t_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0</mrow>
         </md>
         Which may be recorded by the <term>Tucker Tableau</term>:
@@ -343,10 +343,10 @@
         Note that this tableau records a basic solution <m>x_1, x_2, \ldots, x_m=0</m>.  We will further explore what this means in a bit.  
         But for now, if <m>x_1, x_2, \ldots, x_m =0</m>, then:
         <md>
-          <mrow>a_{1,1}0 + a_{1,2}0 +\cdots a_{1,m}0-b_1  \amp =  -t_1</mrow>
-          <mrow> a_{2,1}0 + a_{2,2}0 +\cdots a_{2,m}0 -b_2\amp =  -t_2</mrow>
+          <mrow>a_{11}0 + a_{12}0 +\cdots a_{1m}0-b_1  \amp =  -t_1</mrow>
+          <mrow> a_{21}0 + a_{22}0 +\cdots a_{2m}0 -b_2\amp =  -t_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{n,1}0 + a_{n,2}0 +\cdots a_{n,m}0-b_n  \amp =  -t_n</mrow>
+          <mrow> a_{n1}0 + a_{n2}0 +\cdots a_{nm}0-b_n  \amp =  -t_n</mrow>
           <mrow> c_10 + c_20 +\cdots c_m0-d  \amp =  f.</mrow>
         </md>
       </p>
@@ -421,7 +421,7 @@
           Consider the interactive below.  Drag around the point <m>(x,y)</m>. For each variable <m>x, y, t_1, t_2</m>, when are they 
           positive? Negative? Equal to zero?
         </p>
-           <interactive  platform="doenetml" width="100%" aspect="4:4.1">
+           <interactive  platform="doenetml" width="100%" >
             <slate surface="doenetml">
               <xi:include parse="text" href="doenet/simplex-slack.xml"/>
             </slate>
@@ -533,14 +533,14 @@
     <task>
       <statement>
         <p>
-          Recall that this tableau has a basic solution where  <m>x_1, x_2=0</m>.  If we slightly increase <m>x_1, x_2</m>, do we increase <m>f</m>?
+          Recall that this tableau has a basic solution where  <m>x_1</m> and <m> x_2=0</m>.  If we slightly increase <m>x_1</m> and <m>x_2</m>, do we increase <m>f</m>?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Let's increase <m>x_1</m>.  Consider the row corresponding to <m>t_C</m>.  Take the associated equality and solve for <m>x_1</m> in terms of <m>x_2, t_C</m>.
+          Let's increase <m>x_1</m>.  Consider the row corresponding to <m>t_C</m>.  Take the associated equality and solve for <m>x_1</m> in terms of <m>x_2</m> and <m> t_C</m>.
         </p>
       </statement>
       <statement>
@@ -644,7 +644,7 @@
     <task>
       <statement>
         <p>
-          Recall that this new tableau has a basic solution where <m>t_C, x_2=0</m>.  What is <m>x_1</m>?  Where in <m>\R^2</m> is this solution?
+          Recall that this new tableau has a basic solution where <m>t_C</m> and <m> x_2=0</m>.  What is <m>x_1</m>?  Where in <m>\R^2</m> is this solution?
         </p>
       </statement>
     </task>
@@ -658,7 +658,7 @@
     <task>
       <statement>
         <p>
-          Let's increase <m>x_2</m>.  Take the row corresponding to <m>t_B</m> and repeat Tasks (c) and (d) to obtain a tableau of the form:
+          Let's increase <m>x_2</m>.  Take the row corresponding to <m>t_B</m> and repeat Tasks <m>\textbf{(c)}</m> and <m>\textbf{(d)}</m> to obtain a tableau of the form:
           
         </p>
         <p>
@@ -767,7 +767,7 @@
           Consider the plot of the feasible region for this problem.  What exactly, geometrically, did we end up doing in this activity?
         </p>
         <p>
-          <interactive  platform="doenetml" width="100%" aspect="4:4.1">
+          <interactive  platform="doenetml" width="100%" >
             <slate surface="doenetml">
               <xi:include parse="text" href="doenet/simplex-bounds.xml"/>
             </slate>
@@ -917,7 +917,7 @@
     <task>
       <statement>
         <p>
-          Solve for <m>x_1</m> in terms of <m>t_1, x_2</m>.
+          Solve for <m>x_1</m> in terms of <m>t_1</m> and <m> x_2</m>.
         </p>
       </statement>
     </task>
@@ -1517,7 +1517,7 @@
       <statement>
         <p>
           Confirm your solution geometrically:
-          <interactive  platform="doenetml" width="100%" aspect="4:4.1">
+          <interactive  platform="doenetml" width="100%" >
             <slate surface="doenetml">
               <xi:include parse="text" href="doenet/simplex-multipleintersections.xml"/>
             </slate>
@@ -1556,7 +1556,7 @@
           The company has 20 units of ingredient A, 30 units of B and 25 units of C.
         </p>
         <p>
-          Now, the company wants to assign values <m>y_A, y_B, y_C</m> to the three ingredients.  The values for each should be enough so that in a disaster, the potential revenue is recovered, ie:
+          Now, the company wants to assign values <m>y_A, y_B, y_C</m> to the three ingredients.  The values for each should be enough so that in a disaster, the potential revenue is recovered, i.e.:
           <md>
             <mrow>y_A +2y_B+2y_C \amp \geq 200 </mrow>
             <mrow>2y_A +2y_B+y_C \amp \geq 150 </mrow>
@@ -1875,7 +1875,7 @@
           <p>
             Compare this basic solution and tableau to the final solution in <xref ref="activity-widget"/>. What do you notice?
           </p>
-          <interactive iframe="https://www.desmos.com/3d/z4fjuixofk" width="100%" aspect="1:1"/>
+          <interactive iframe="https://www.desmos.com/3d/z4fjuixofk" width="100%" />
         </statement>
          
       </task>

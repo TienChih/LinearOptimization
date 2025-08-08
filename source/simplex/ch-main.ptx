@@ -14,7 +14,7 @@
     </p>
     <p>
       In this chapter, we develop an algorithm, the Simplex Algorithm, which allows us to
-      solve linear optimization problems in <xref ref="sec-pivot"/> we determine
+      solve linear optimization problems. In <xref ref="sec-pivot"/> we determine
        the rules for a simplex pivot
       and interpret this operation computationally, algebraiacally and
       geometrically.  In <xref ref="sec-simplexmax"/> we discover the conditions for

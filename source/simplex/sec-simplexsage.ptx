@@ -463,7 +463,7 @@
 
   <p>
     Given that we have a developed an algorithm, guaranteed to terminate,
-    using only arithmetic in it's steps, it seems reasonable to think this can be done
+    using only arithmetic in its steps, it seems reasonable to think this can be done
     via a computer.
   </p>
 
@@ -908,7 +908,7 @@
               D.possible_leaving()
             </input>
           </sage>   
-          Then select one to leave
+          Then select one to leave:
           <sage>
             <input>
               D.leave(FIXME)

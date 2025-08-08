@@ -22,6 +22,10 @@
   
 </graph>
 <p>
+  Enter the coefficients for the objective function, and then consider the plot above.  How does selecting different simplex pivots
+   relate to the lines drawn here?
+</p>
+<p>
   <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
 </p>
 <p>

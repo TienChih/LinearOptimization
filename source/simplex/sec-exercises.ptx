@@ -267,7 +267,7 @@
       <introduction>
         <p>
           For each of the following canonical maximization tableaus:
-          <ul>
+          <ol>
             <li>
           <statement>
               <p>
@@ -330,7 +330,7 @@
               </p>
             </statement>
           </li>
-          </ul>
+          </ol>
         </p>
       </introduction>
 
@@ -2236,7 +2236,7 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
                 </cell>
               </row>
             </tabular>
-            to encode feasible basic solutions for both it's maximization
+            to encode feasible basic solutions for both its maximization
             and minimization problems.
           </p>
         </statement>
@@ -2250,7 +2250,9 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
         by first showing that the default starting basic solution is unique,
         and then proving that each pivot preserves the uniqueness of the basic solution.
       </p>
-      <hint>
+      
+    </exercise>
+    <!--<hint>
         <statement>
           <p>
           Note that each basic solution is the intersection of <m>m</m>
@@ -2259,8 +2261,7 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
         </p>
         </statement>
         
-      </hint>
-    </exercise>
+      </hint>-->
 
 
 
