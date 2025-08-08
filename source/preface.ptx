@@ -47,7 +47,7 @@
   
 <p>
   What helped me then was recontextualizing all of the key ideas of linear optimization
-  in geometric terms.  By centering the geometry underlying each scenario, the 
+  in geometric terms.  By centering the geometry underlying each scenario,  
   we can allow our intuition to guide things forward, and the flow of the material proceeds
   naturally.  So this book begins with geometric realizations, translating that
   geometry into linear algebra, and proceeding from there to computations, but each theorem, formula
@@ -107,7 +107,7 @@
   presentations.  For anyone requiring a quick review of linear algebra or an
   approach to linear algebra is that this geometry forward, I highly recommend Dr. David
   Austin's <em>Understanding Linear Algebra</em> <url href="https://understandinglinearalgebra.org/home.html" />.
-  This book was motivated by very similar thoughts to the one's I had, and are thereby governed by
+  This book was motivated by very similar thoughts to the ones I had, and are thereby governed by
   similar philosophies.
    </p>
 
@@ -130,7 +130,7 @@
     </p>
     <p>
       It is highly recommended that between classes, students review the activities done in class, and rewrite them to be more cohesive.
-      Frequently, activities will be broken down into a sequence of parts or tasks, each of which represents grabbing a new hand hold on the
+      Frequently, activities will be broken down into a sequence of parts or tasks, each of which represents grabbing a new handhold on the
       cliff or adjusting the harness to prevent falling (hopefully I am using this metaphor correctly, I am not a rock climber).
     </p>
     <p>

@@ -18,6 +18,13 @@
   <circle name="circle1" radius="$r" center="$u"/>
 </graph>
 <p>
+  Enter the coefficients for the objective function. 
+  Then use the slider to adjust the radius of the open ball surrounding the draggable point.
+  If the entire open ball is contained in the feasible region for a given point, 
+  why can't this point be an optimizer?  Can we move the point to a different feasible point with higher
+  objective value?
+</p>
+<p>
   <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
 </p>
 <slider from="0.1" to="1" initialValue="1" name="r" width="300" step="0.05" showValue="true" showTicks="true"/> 

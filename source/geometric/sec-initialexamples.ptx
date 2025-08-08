@@ -16,7 +16,7 @@
     <introduction>
       <p>
         A sculptor and a painter work together to produce pieces of art, vases and figurines.  The vases takes the sculptor 1 hour to make and the painter 2 hours to paint.  
-        The figurine takes the sculptor two hours to make and the painter 1 hour to paint.  
+        The figurine takes the sculptor 2 hours to make and the painter 1 hour to paint.  
         The sculptor has 35 hours a week to work and the painter has 40 hours a week to work.
       </p>
       <p> 
@@ -27,7 +27,7 @@
     <task >
       <statement>
         <p>
-          Write an in terms of <m>x_1, x_2</m> that represent the constraints on the time of the sculptor.
+          Write an inequality terms of <m>x_1</m> and <m>x_2</m> that represent the constraints on the time of the sculptor.
         </p>
       </statement>
     </task>
@@ -35,7 +35,7 @@
     <task >
       <statement>
         <p>
-          Write an in terms of <m>x_1, x_2</m> that represent the constraints on the time of the painter.
+          Write an inequality terms of <m>x_1</m> and <m>x_2</m> that represent the constraints on the time of the painter.
         </p>
       </statement>
     </task>
@@ -43,7 +43,7 @@
     <task >
       <statement>
         <p>
-          What other inequalities involving <m>x_1, x_2</m> would be sensible to impose?
+          What other inequalities involving <m>x_1</m> and <m>x_2</m> would be sensible to impose?
         </p>
       </statement>
     </task>
@@ -51,7 +51,7 @@
     <task >
       <statement>
         <p>
-          Treating <m>x_1</m> as <m>x</m> and <m>x_2</m> as <m>y</m>, sketch the region on the cartesian plane satisfying all the above inequalities.
+          Treating <m>x_1</m> as <m>x</m> and <m>x_2</m> as <m>y</m>, sketch the region on the Cartesian plane satisfying all the above inequalities.
           We will refer to this as the <term>feasible region</term>.
         </p>
         
@@ -82,7 +82,7 @@
         </p>
         <p> 
           
-          <interactive label="geometric-feasibleregion1" platform="doenetml"  width="100%" aspect="4:4.25">
+          <interactive label="geometric-feasibleregion1" platform="doenetml"  width="100%" >
             <slate surface="doenetml">
               <xi:include parse="text" href="doenet/geometric-feasibleregion1.xml"/>
             </slate>
@@ -104,7 +104,7 @@
   <activity xml:id="activity-examplediet">
     <introduction>
       <p>
-        Suppose Carlos planning on shopping for a meal.  Mini bell peppers are $1.00 (simplified) a pound, Chicken is $1.25 a pound and Spaghetti with sauce is $0.80 a cup.
+        Carlos is planning to shop for a meal.  Mini bell peppers are $1.00 (simplified) a pound, Chicken is $1.25 a pound and Spaghetti with sauce is $0.80 a cup.
       </p>
       <p>
         A pound of Bell Peppers has 500 units of vitamin A, 30 calories and 10 units of calcium.   A pound of Chicken has 75 units of vitamin A, 280 calories and 22 units of calcium.  A cup of Spaghetti with sauce has 2000 units of Vitamin A, 240 Calories and 52 units of Calcium.
@@ -143,11 +143,11 @@
     <statement>
       <p>
         <idx>linear optimization problem, canonical maximization</idx>
-        The <term>Canonical Maximazation Linear Optimization Problem</term> is the problem:
+        The <term>Canonical Maximization Linear Optimization Problem</term> is the problem:
         
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
-          <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
+          <mrow>\textbf{Maximize: }f(\mathbf{x}) \amp = c_1x_1 + c_2x_2 +\cdots c_nx_n-d \amp= \left(\displaystyle\sum_{i=1}^n c_ix_i \right)-d</mrow>
+          <mrow>\textbf{subject to: }   a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,n}x_n\amp \leq  b_1</mrow>
           <mrow> a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,n}x_n\amp \leq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
           <mrow> a_{m,1}x_1 + a_{m,2}x_2 +\cdots a_{m,n}x_n\amp \leq  b_m</mrow>

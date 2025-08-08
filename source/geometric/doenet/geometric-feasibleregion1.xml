@@ -17,6 +17,11 @@
     <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
 </graph>
   <p>
+    Enter in the coefficients for the objective function, then drag the point around to see
+    what the objective value is for each point.  Where (if at all) is the objective function optimized?
+    What happens if you drag the point along the line passing through it?
+  </p>
+  <p>
     <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
   </p>
   <p>

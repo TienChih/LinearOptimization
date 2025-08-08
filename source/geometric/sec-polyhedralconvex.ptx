@@ -206,7 +206,7 @@
       <statement>
         <p>
           Let <m>S\subseteq \mathbb{R}^m</m> be defined by <m>S:=\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m\leq b\}</m> for some 
-          <m>a_i, b\in \mathbb{R}</m> (ie <m>S</m> is a half-space of <m>\mathbb{R}^m</m>).
+          <m>a_i, b\in \mathbb{R}</m> (i.e. <m>S</m> is a half-space of <m>\mathbb{R}^m</m>).
         </p>
       </statement>
     </introduction>
@@ -305,7 +305,7 @@
         <p>
     
     
-            <interactive  platform="doenetml" width="100%" aspect="4:4.25">
+            <interactive  platform="doenetml" width="100%">
     <slate surface="doenetml">
       <xi:include parse="text" href="doenet/geometric-feasibleregion1.xml"/> 
     </slate>
@@ -321,7 +321,7 @@
         
       </p>
         <p>
-          <interactive iframe="https://www.desmos.com/3d/15yyp0qdym" width="100%" aspect="1:1"/>
+          <interactive iframe="https://www.desmos.com/3d/15yyp0qdym" width="100%" />
         </p>
     </statement>
   </example>
@@ -330,7 +330,7 @@
     <statement>
       <p>
         <idx>norm</idx>
-        Given <m>\mathbf{x}</m> in we define the <term>norm</term> of <m>\mathbf{x}</m> to be <me>\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+\cdots x_n^2}.</me>
+        Given <m>\mathbf{x}\in \mathbb{R}^n</m> we define the <term>norm</term> of <m>\mathbf{x}</m> to be <me>\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+\cdots x_n^2}.</me>
       </p>
     </statement>
   </definition>
@@ -339,7 +339,7 @@
     <statement>
       <p>
         <idx>ball</idx>
-        Given <m>\mathbf{x}</m> in we define the <term>closed ball</term> of radius <m>r</m> centered at <m>\mathbf{x}</m> to be <me>\bar{B}(\mathbf{x}, r):=\{\mathbf{y}:\|\mathbf{x}-\mathbf{y}\|\leq r\}.</me>
+        Given <m>\mathbf{x}\in \mathbb{R}^n</m> we define the <term>closed ball</term> of radius <m>r</m> centered at <m>\mathbf{x}</m> to be <me>\bar{B}(\mathbf{x}, r):=\{\mathbf{y}:\|\mathbf{x}-\mathbf{y}\|\leq r\}.</me>
       </p>
       <p>
         The <term>open ball</term> centered at <m>\mathbf{x}</m> with radius <m>r</m> is similarly defined.  What do you think it is?
@@ -359,7 +359,7 @@
     <statement>
       <p>
         <idx>bounded</idx>
-        A set <m>S</m> is bounded if there is a <m>r\geq 0</m> such that  <m>S\subseteq \bar{B}(\mathbf{0}, r)</m>.
+        A set <m>S</m> is bounded if there is  <m>r\geq 0</m> such that  <m>S\subseteq \bar{B}(\mathbf{0}, r)</m>.
       </p>
     </statement>
   </definition>
@@ -367,7 +367,7 @@
   <activity>
     <statement>
       <p>
-        Which of the problems described in <xref ref="activity-exampleart"/>,  <xref ref="activity-examplediet"/> have bounded feasible regions?
+        Which of the problems described in <xref ref="activity-exampleart"/> and  <xref ref="activity-examplediet"/> have bounded feasible regions?
       </p>
     </statement>
   </activity>
@@ -381,10 +381,10 @@
     <task>
       <statement>
         <p>
-          Consider the point <m>(1,1)</m>, which direction would increase the value of <m>f</m> the most?  The least?  Keep <m>f</m> the same?
+          Consider the point <m>(1,1)</m>.  Which direction would increase the value of <m>f</m> the most?  The least?  Keep <m>f</m> the same?
         </p>
         <p>
-          (Recall the properties of the the dot product)
+          (Recall the properties of the  dot product.)
         </p>
       </statement>
     </task>
@@ -408,7 +408,7 @@
           Consider the canonical maximization linear programming problem:
         </p>
         <p>
-          Maximzie <m>f(x,y)=3x+2y</m>  subject to:
+          Maximize <m>f(x,y)=3x+2y</m>  subject to:
           <md>
             <mrow> x+y\amp \leq 8</mrow>
             <mrow> 2x+y\amp \leq 10</mrow>
@@ -418,7 +418,7 @@
         <p>
           How do the statements you've made above apply here?  Where <em>is</em> <m>f</m> maximized?  Is it consistent with what you said before?
         </p>
-        <interactive platform="doenetml" width="100%" aspect="4:4.3">
+        <interactive platform="doenetml" width="100%">
           <slate surface="doenetml">
             <xi:include parse="text" href="doenet/geometric-ball.xml"/> 
           </slate>
@@ -451,7 +451,7 @@
   <activity>
     <introduction>
       <p>
-        For each of the following convex sets, find it's extreme points (if any).
+        For each of the following convex sets, find its extreme points (if any).
       </p>
     </introduction>
     <task>
@@ -515,12 +515,12 @@
       <ol>
         <li>
           <p>
-            If the problem is a maximization problem and if there is a <m>M</m> so that <m>f(s)\leq M</m> for all <m>s\in S</m>, then <m>S</m> contains an optimal solution which is an extreme point of <m>S</m>.
+            If the problem is a maximization problem and if there is an <m>M</m> so that <m>f(s)\leq M</m> for all <m>s\in S</m>, then <m>S</m> contains an optimal solution which is an extreme point of <m>S</m>.
           </p>
         </li>
         <li>
           <p>
-            If the problem is a minimization problem and if there is a <m>M</m> so that <m>g(s)\geq M</m> for all <m>s\in S</m>, then <m>S</m> contains an optimal solution which is an extreme point of <m>S</m>.
+            If the problem is a minimization problem and if there is an <m>M</m> so that <m>g(s)\geq M</m> for all <m>s\in S</m>, then <m>S</m> contains an optimal solution which is an extreme point of <m>S</m>.
           </p>
         </li>
       </ol>
@@ -539,7 +539,7 @@
             <mrow>x, y \amp\geq 0. </mrow>
           </md>
           
-          <interactive platform="doenetml" width="100%" aspect="4:4.25">
+          <interactive platform="doenetml" width="100%" >
             <slate surface="doenetml">
               <xi:include parse="text" href="doenet/geometric-multiplesolutions.xml"/> 
             </slate>
@@ -577,21 +577,21 @@
     <task>
       <statement>
         <p>
-          In <m>\mathbb{R}^2</m> How many lines are needed to intersect so their intersection is a unique point?
+          In <m>\mathbb{R}^2</m>, how many lines are needed to intersect so their intersection is a unique point?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          In <m>\mathbb{R}^3</m> How many planes are needed to intersect so their intersection is a unique point?
+          In <m>\mathbb{R}^3</m>, how many planes are needed to intersect so their intersection is a unique point?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          In <m>\mathbb{R}^m</m> How many <m>m-1</m> dimensional hyperplanes are needed to intersect so their intersection is a unique point?
+          In <m>\mathbb{R}^m</m>, how many <m>m-1</m> dimensional hyperplanes are needed to intersect so their intersection is a unique point?
         </p>
       </statement>
     </task>
@@ -604,27 +604,27 @@
         <ol marker="A." cols="2">
           <li>
             <p>
-              <m>n.</m>
+              <m>n</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{m\choose k}.</m>
+              <m>{m\choose k}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{m+k\choose k}.</m>
+              <m>{m+k\choose k}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{k\choose m}.</m>
+              <m>{k\choose m}</m>
             </p>
           </li>
           <li>
             <p>
-              <m>{m+k\choose n}.</m>
+              <m>{m+k\choose n}</m>
             </p>
           </li>
         </ol>

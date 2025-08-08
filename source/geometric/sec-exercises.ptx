@@ -169,7 +169,7 @@
         <task>
         <statement>
           <p>
-            A rancher has a herd to feed who requires 54, 48, and 72 units of the nutritional
+            A rancher has a herd to feed which requires 54, 48, and 72 units of the nutritional
         elements A, B, and C, respectively, per day.  Feed 1 costs 10 cents a pound and contains 8, 4 and 3 units of
         elements A, B, C respectively.  Feed 2 costs 8 cents a pound and contains 2, 4 and 6 units of
         elements A, B, C respectively.  How much of each feed should the rancher purchase to cover the herds nutritional
@@ -196,7 +196,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Maximize: }  f(x,y) = \amp 5x+6y</mrow>
+              <mrow>\textbf{Maximize: }  f(x,y)  \amp = 5x+6y</mrow>
               <mrow>\textbf{subject to: } 2x+3y\amp \geq  12</mrow>
               <mrow> -3x+2y\amp \leq  14</mrow>
               <mrow> x+y\amp \leq  12</mrow>
@@ -223,7 +223,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Maximize: }  f(x,y) = \amp 2x+y</mrow>
+              <mrow>\textbf{Maximize: }  f(x,y) \amp =  2x+y</mrow>
               <mrow>\textbf{subject to: } x+4y\amp \leq  11</mrow>
               <mrow> 6x+2y\amp \leq  22</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
@@ -235,7 +235,7 @@
         <statement>
           <p>
             <md>
-              <mrow>\textbf{Minimize: }  f(x,y) = \amp 2x+y</mrow>
+              <mrow>\textbf{Minimize: }  f(x,y) \amp =  2x+y</mrow>
               <mrow>\textbf{subject to: } x+4y\amp \geq  11</mrow>
               <mrow> 6x+2y\amp \geq  22</mrow>
               <mrow> x,y\amp \geq  0.</mrow>
@@ -246,49 +246,49 @@
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (A).
+            <xref ref="ex-convertcanon"/> (a).
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (B).
+            <xref ref="ex-convertcanon"/> (b).
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (D).
+            <xref ref="ex-convertcanon"/> (d).
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (E).
+            <xref ref="ex-convertcanon"/> (e).
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (F).
+            <xref ref="ex-convertcanon"/> (f).
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (G).
+            <xref ref="ex-convertcanon"/> (g).
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (H).
+            <xref ref="ex-convertcanon"/> (h).
           </p>
         </statement>
       </task>
@@ -299,7 +299,7 @@
 
     <exercise>
       <p>
-        Prove that <xref ref="ex-geosolve"/> (H) has infinitely many optimal solutions, two of which lie on extreme points.  Identify
+        Prove that <xref ref="ex-geosolve"/> (h) has infinitely many optimal solutions, two of which lie on extreme points.  Identify
         these points on the plot of the feasible region done in <xref ref="ex-geosolve"/>.
       </p>
     </exercise>
@@ -320,7 +320,7 @@
       <p>
         Consider the canonical linear optimization problem
         <md>
-          <mrow>\textbf{Maximize: }  f(x,y,z,w) = 3x-2y+5z-w</mrow>
+          <mrow>\textbf{Maximize: }  f(x,y,z,w) \amp = 3x-2y+5z-w</mrow>
           <mrow>\textbf{subject to: } -x+2y-3z+6w\amp \leq  12</mrow>
           <mrow> x,y, z, w\amp \geq  0.</mrow>
         </md>
@@ -335,7 +335,7 @@
       <p>
         Consider the canonical linear optimization problem
         <md>
-          <mrow>\textbf{Minimize: }  g(x,y,z,w) = 2x-y-3z+4w</mrow>
+          <mrow>\textbf{Minimize: }  g(x,y,z,w) \amp = 2x-y-3z+4w</mrow>
           <mrow>\textbf{subject to: } x+2y+2z+4y\amp \geq  8</mrow>
           <mrow>4x-y\amp \geq 6</mrow>
           <mrow> x,y, z, w\amp \geq  0.</mrow>
@@ -362,7 +362,7 @@
     <exercise>
       <p>
         Express <m>{k+4\choose 4}</m> as a polynomial in terms
-        of <m>k</m>.  How does this relate to <xref ref="ex-5planes"/>,
+        of <m>k</m>.  How does this relate to <xref ref="ex-5planes"/> and
         <xref ref="ex-6planes"/>?
       </p>
     </exercise>
@@ -371,7 +371,7 @@
       <p>
         Show that 
         <md>
-          <mrow>\textbf{Maximize: }  f(x,y) = \amp x-y</mrow>
+          <mrow>\textbf{Maximize: }  f(x,y)  \amp = x-y</mrow>
           <mrow>\textbf{subject to: } x+y\amp \geq  5</mrow>
           <mrow> x-5y\amp \leq  0</mrow>
           <mrow> y-2x\amp \leq  1</mrow>
@@ -386,7 +386,7 @@
     <p>
       Show that 
       <md>
-        <mrow>\textbf{Minimize: }  g(x,y) = \amp 5x+3y</mrow>
+        <mrow>\textbf{Minimize: }  g(x,y)  \amp = 5x+3y</mrow>
         <mrow>\textbf{subject to: } y-5x\amp \geq  1</mrow>
         <mrow> x-5y\amp \geq  0</mrow>
         <mrow> x,y\amp \geq  0.</mrow>
@@ -406,7 +406,7 @@
       <task>
         <statement>
         <p>
-          If a canonical feasible linear optimization problem is unbounded, then it's feasible region is unbounded.
+          If a canonical feasible linear optimization problem is unbounded, then its feasible region is unbounded.
         </p>
       </statement>
       </task>

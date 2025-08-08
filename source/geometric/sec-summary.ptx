@@ -22,8 +22,8 @@
   <p>
     Note then that for a linear function <m>f(x_1, x_2, \ldots x_n)=\displaystyle \sum_{j=1}^m c_j x_j</m>,
     that for any output of <m>f</m>, <m>k</m>, the equation <me> \displaystyle \sum_{j=1}^m c_j x_j =k</me>
-    form a plane in <m>\mathbb{R}^n</m>, and that for any <m>\x'</m> lying on this plane, <m>f(\x')=k</m> as well.
-    We may increase the value of <m>k</m> by moving in one of two direction orthogonal to this
+    forms a plane in <m>\mathbb{R}^n</m>, and that for any <m>\x'</m> lying on this plane, <m>f(\x')=k</m> as well.
+    We may increase the value of <m>k</m> by moving in one of two directions orthogonal to this
     plane, until we reach the boundary.  But even then, we can still increase the value of <m>k</m> by moving along the boundary until
     we either fall on a subset of the boundary on which <m>f</m> is constant, or a corner point also called
     an <em>extreme point</em> <xref ref="def-extremepoint"/>.
