@@ -95,7 +95,7 @@
       <ol marker="A." cols="2">
         <li>
           <p>
-            The value of each material is non-negative.
+            The value of each material is nonnegative.
           </p>
         </li>
         <li>
@@ -670,6 +670,7 @@
                 <m>d</m>
               </cell>
               <cell halign="left">
+                <m>==f</m>
               </cell>
             </row>
           </tabular>
@@ -689,7 +690,7 @@
       <task>
         <statement>
           <p>
-            Is there anything special about a tableau where <m>f</m> is a non-negative linear combination of normal vectors?
+            Is there anything special about a tableau where <m>f</m> is a nonnegative linear combination of normal vectors?
           </p>
         </statement>
       </task>
@@ -725,7 +726,7 @@
     </p>
 
     <p>
-      The <term>dual minimization problem</term>  is aritculated as follows: 
+      The <term>dual minimization problem</term>  is articulated as follows: 
     </p>
 
     <p>

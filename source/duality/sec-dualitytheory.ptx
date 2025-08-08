@@ -40,7 +40,7 @@
       <statement>
         <p>
           In this activity, we explore a foundational relationship between the primal max 
-          problem and it's dual, called <em>weak duality</em>.
+          problem and its dual, called <em>weak duality</em>.
         </p>
       </statement>
     </introduction>
@@ -118,7 +118,7 @@
     <idx>theorem, strong duality</idx>
     <statement>
       <p>
-        Given a pair of primal max-dual min problems, the primal max problem as an optimal solution 
+        Given a pair of primal max-dual min problems, the primal max problem has an optimal solution 
         <m>\x^*</m> if and only if the dual min problem has an optimal solution <m>\y^*</m>.  Moreover,
         <m>f(\x^*)=g(\y^*)</m>.
       </p>
@@ -426,7 +426,7 @@
       <statement>
         <p>
           Why is each <m>y_i^*, s_j^*\geq 0</m>?  Why does this show that <m>\displaystyle \sum_{i=1}^4 y_i^*a_{ij} \geq c_j</m>?
-          This shows that <m>s_j</m>'s are non-negative slack variables for the <m>y_i</m> and
+          This shows that <m>s_j</m>'s are nonnegative slack variables for the <m>y_i</m> and
           that the <m>y_i^*</m>'s are a feasible solution.
         </p>
       </statement>
@@ -616,20 +616,27 @@
     <task>
       <statement>
         <p>
-          Suppose <m>\x</m> is a  feasible extreme point, and <m>\y, \vs</m> are the corresponding coefficients for the normal vectors.   If <m>x_j\neq 0</m>, what does that
+          Suppose <m>\x</m> is a feasible extreme point, and <m>\y</m> and <m> \vs</m> are the corresponding coefficients for the normal vectors.   If <m>x_j\neq 0</m>, what does that
           say about <m>s_j</m>?
         </p>
-        <hint>
-          <statement>
+        
+        
+      </statement>
+      <hint>
           <p>
             <m>s_j</m> is the coefficient of the normal vector for the plane <m>-x_j=0</m>.  If
             the feasible solution does not lie on <m>-x_j=0</m>, what can we say about <m>s_j</m>?
           </p>
-          </statement>
         </hint>
+        
+    </task>
+    <task>
+      <statement>
+        <statement>
         <p>
-          What about <m>s_j\neq 0</m>?, <m>y_i\neq0</m>? <m>t_i\neq0</m>?
+          The repeat the above for <m>s_j\neq 0</m>, <m>y_i\neq0</m>, and <m>t_i\neq0</m>.
         </p>
+      </statement>
       </statement>
     </task>
 

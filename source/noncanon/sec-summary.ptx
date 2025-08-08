@@ -281,7 +281,7 @@
         </p>
 
         <p>
-         Note that should we pivot on <m>a_{ij}^*</m>
+         Note that should we pivot on <m>a_{ij}</m>
 
          <tabular halign="center">
           <row>
@@ -1050,7 +1050,7 @@
         </p>
 
         <p>
-         Now in this case, if we pivot on <m>a_{ij}^*</m> entry, we obtain:
+         Now in this case, if we pivot on <m>a_{ij}</m> entry, we obtain:
 
          <tabular halign="center">
           <row>

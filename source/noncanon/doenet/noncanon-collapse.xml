@@ -17,6 +17,9 @@
   <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
 </graph>
 <p>
+  Enter the coefficients for the objective function.  Drag the point on the graph to correspond with the pivot operations you performed.
+</p>
+<p>
   <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
 </p>
 <p>

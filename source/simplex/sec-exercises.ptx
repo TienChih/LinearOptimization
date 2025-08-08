@@ -2245,23 +2245,25 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
     </exercise>
 
     <exercise>
-      <p>
+      <statement>
+        <p>
         Prove that each tableau always encodes a <em>unique</em> basic solution
         by first showing that the default starting basic solution is unique,
         and then proving that each pivot preserves the uniqueness of the basic solution.
       </p>
+      </statement>
       
-    </exercise>
-    <!--<hint>
-        <statement>
+      <hint>
           <p>
           Note that each basic solution is the intersection of <m>m</m>
           hyperplanes.  What would it take for this to be empty or contain multiple points?
           Think in terms of linear (in)dependence and solving linear systems.
         </p>
-        </statement>
         
-      </hint>-->
+      </hint>
+      
+    </exercise>
+    
 
 
 

@@ -30,6 +30,10 @@
   </line>
 </graph>
 <p>
+  Enter the coefficients for the objective function below.  Drag the point to the optimal solution for the original problem, 
+  then to the points corresponding to an extra frog, and an extra newt eye.
+</p>
+<p>
   <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
 </p>
 <p>

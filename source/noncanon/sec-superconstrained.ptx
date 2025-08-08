@@ -82,7 +82,7 @@
         <p>
           Consider the inequality <m>3x+2y-z\leq 8</m> captured by the equality
           <m>3x+2y-z - 8=-t_4</m>.  What value must <m>t_4</m> so that <m>3x+2y-z\leq 8</m> 
-          is always an equality?  Call this value <m>\xi</m> .
+          is always an equality?  Call this value <m>\xi</m>.
         </p>
       </statement>
     </task>
@@ -352,7 +352,7 @@
           <p>
            Ignoring the specific values of the entries of this tableau, using 
            the value for <m>\xi</m> computed earlier, rewrite each of the above equations in terms of <m>x, z</m>.  
-           What information did the ? column provide?
+           What information did the <m>\xi</m> column provide?
 
 
         </p>

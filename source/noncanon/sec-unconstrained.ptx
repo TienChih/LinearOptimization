@@ -6,7 +6,7 @@
   <idx>variable, unconstrained</idx>
   <introduction>
     <p>
-      Recall that canonical problems have non-negative variables and inequality bounds.
+      Recall that canonical problems have nonnegative variables and inequality bounds.
       In this section, we consider linear optimization problems with potentially negative variables.
     </p>
   </introduction>
@@ -472,7 +472,7 @@
           </tabular>
         </p>
         <p>
-          Out of <m>x, y, t_1, t_2</m>, which are non-negative?
+          Out of <m>x, y, t_1, t_2</m>, which are nonnegative?
         </p>
       </statement>
     </task>
@@ -482,7 +482,7 @@
         <p>
           
          
-           Perform a pivot on the given entry:
+           Perform a pivot on the entry with the <m>*</m>:
            
         </p>
         <p>
@@ -641,7 +641,7 @@
       <statement>
         <p>
           Consider the row with the <m>\ec{x}</m>, and recall that <m>\ec{x}</m> is allowed to be negative.
-          Consider only this row and the non-negativity constraints of <m>t_i</m>.  Which of the following is <m>t_1</m> allowed to be?
+          Consider only this row and the nonnegativity constraints of <m>t_i</m>.  Which of the following is <m>t_1</m> allowed to be?
         </p>
         <ol marker="A." cols="3">
           <li>
@@ -960,7 +960,7 @@
         </li>
         <li>
           <p>
-            GOTO 1
+            GOTO 1.
           </p>
         </li>
         

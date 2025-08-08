@@ -3,7 +3,7 @@
 <section xml:id="sec-dualpivot" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Tucker Tableau's, Pivots and Duality</title>
   <introduction>
-    <p> In this section, we examine pivoting with primal-dual tableau's. We will compare (in a good way!) to what we did in
+    <p> In this section, we examine pivoting with primal-dual tableaus. We will compare (in a good way!) to what we did in
       <xref ref="sec-pivot"/>.
     </p>
   </introduction>
@@ -12,7 +12,7 @@
   <activity>
     <introduction>
       <p>
-        Noting that the dual variables <m>y_i</m> are non-negative weights attached
+        Noting that the dual variables <m>y_i</m> are nonnegative weights attached
         to the hyperplanes defined by <m>t_i=0</m>, and the slack variables for the dual problem
         <m>s_j</m> are the weights associated with the planes <m>-x_j=0</m>, we can encode all this information in the
         <em>Primal-Dual Tucker Tableau</em>:
@@ -363,7 +363,7 @@
       <statement>
         <p>
           Suppose for a pair of primal-dual solutions if <m>x_j</m> were allowed to be be any value including negative values, 
-          What must be true about <m>s_j</m>?  (If <m>x_j</m> is unconstrained, what can we say about the hyperplane <m>-x_j=0</m> as a bounding hyperplane? 
+          what must be true about <m>s_j</m>?  (If <m>x_j</m> is unconstrained, what can we say about the hyperplane <m>-x_j=0</m> as a bounding hyperplane? 
           Would there ever be an extreme point solution lying on this plane? 
           See interactive below.)
         </p>
@@ -470,7 +470,7 @@
   <activity>
     <task>
       <p>
-        Solve the following non-canonical primal-dual problem:
+        Solve the following noncanonical primal-dual problem:
       </p>
       <p>
         <tabular halign="center">

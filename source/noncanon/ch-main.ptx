@@ -7,14 +7,14 @@
     <idx>noncanonical</idx>
     <idx>linear optimization problem, noncanonical</idx>
     <p>
-      Thus far, we have focused on <em>canonical</em> optimization problems where each decision variable is non-negative,
+      Thus far, we have focused on <em>canonical</em> optimization problems where each decision variable is nonnegative,
       and all bounds are inequalities.  However, what would happen if we relaxed, or strengthened these conditions?
     </p>
     <p>
       In this chapter, we explore noncanonical optimization problems.  In <xref ref="sec-unconstrained"/> we consider 
       the possibility of potentially negative decision variables, and explore the algebraic and geometric interpretations of
       this phenomena.  In <xref ref="sec-superconstrained"/> we do the same for bounds defined by equality conditions, rather than 
-      inequalities.  In <xref ref="sec-noncanonsage"/> we show how to encode and solve non-canonical linear optimization using Sage.
+      inequalities.  In <xref ref="sec-noncanonsage"/> we show how to encode and solve noncanonical linear optimization using Sage.
     </p>
   </introduction>
 
