@@ -31,7 +31,7 @@
           <li>
             <p>
               With the additional inequalities, the optimal solution to the linear relaxation
-              is the optimal integer solution previously found to <xref ref="exploration-meat"/>.
+              is the optimal integer solution previously found for <xref ref="exploration-meat"/>.
             </p>
           </li>
         </ol>
@@ -170,21 +170,21 @@
     <task>
       <statement>
         <p>
-          Show that for any feasible  integral solution,  that the left hand side of the equality in (2) is an integer.
+          Show that for any feasible  integral solution,  that the left hand side of the equality in <m>\textbf{(a)}</m> is an integer.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Show that the right hand side of the equation in (2) is strictly less than 1 for any feasible solution.
+          Show that the right hand side of the equation in <m>\textbf{(a)}</m> is strictly less than 1 for any feasible solution.
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          For any integral solution, what is a non-negative integer upper bound for 
+          For any integral solution, what is a nonnegative integer upper bound for 
           <m>(b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j</m>?
         </p>
       </statement>
@@ -432,7 +432,7 @@
     <task>
       <statement>
         <p>
-          Pivot of the entry <m>a_{31}</m> and verify that the resulting basic solution is optimal and non-integral.
+          Pivot on the entry <m>a_{31}</m> and verify that the resulting basic solution is optimal and non-integral.
           <tabular halign="center">
             <row>
               <cell halign="left">

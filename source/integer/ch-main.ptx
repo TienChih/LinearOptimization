@@ -13,7 +13,7 @@
       more classical production-type problems where only integral units would be possible.
     </p>
     <p>
-      In the cases where real valued and integer valued optimal solutions may differ, some care
+      In the cases where real-valued and integer-valued optimal solutions may differ, some care
       must be taken to solve for the optimal integer valued solution.  In 
       <xref ref="sec-branchbound"/>, we explore one potential algorithm which is algebraically
       driven, and in <xref ref="sec-cuttingplane"/>, we discuss an alternative algorithm which is

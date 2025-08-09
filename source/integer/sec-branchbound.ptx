@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      We begin motivating integer optimization problem, and explore an algebraiacally centered method for solving them.
+      We begin motivating integer optimization problem, and explore an algebraically centered method for solving them.
     </p>
   </introduction>
 
@@ -366,7 +366,7 @@
     <task>
       <statement>
         <p>
-          Come up with three realistic optimization problems who are best modeled
+          Come up with three realistic optimization problems which are best modeled
           by an integer optimization problem.  You do not need to work out all the details
           or solve the problems.
         </p>
@@ -426,7 +426,7 @@
     <task>
       <statement>
         <p>
-          Consider <m>x_1</m> the number of sandwiches sold, the current optimal <m>x_1</m>.
+          Let <m>x_1</m> be the number of sandwiches sold, and consider the current optimal <m>x_1</m> from the relaxation.
           Which two of the following potential additional constraints would force the 
           value of <m>x_1</m> to be an integer, while remaining as close to the optimal solution of the relaxation
            as possible.
@@ -763,14 +763,14 @@
         <li>
           <p>
             Solve the relaxation of the linear optimization problem.  If the solution is
-            integral STOP.
+            integral: STOP.
           </p>
         </li>
         <li>
           <p>
             For some <m>x_i^*</m> in the optimal solution found in the previous step,
             define two sub problems, one with additional constraint <m>x_i\leq \lfloor x_i^*\rfloor</m>
-            and <m>x_i\geq \lceil x_i^*\rceil</m>
+            and <m>x_i\geq \lceil x_i^*\rceil</m>.
           </p>
         </li>
         <li>
@@ -818,7 +818,7 @@
   <example>
     <statement>
       <p>
-        The complete search tree for <xref ref="activity-meat1"/> is as follows
+        The complete search tree for <xref ref="activity-meat1"/> is as follows:
       </p>
       <image xml:id="treecomplete">
         <description>A Tree Diagram describing additional constraints.</description>
@@ -858,15 +858,15 @@
         </latex-image>
       </image> 
       <p>
-        We start at Node 0, and identify the two subproblems.  We explore the subproblem where
-        <m>x_1\leq 4</m> in Node 1, and again identify two subproblems.  We stop and return at
-        Node 2 because the solution was integral.  We stop and return from Node 3,
-        even though the solution is not integral, because the optimal solution for that subproblem
+        We start at Node 0, and identify the two subproblems.  Next, we examine the subproblem where
+        <m>x_1\leq 4</m> in Node 1, and again identify two subproblems.  Examining
+        Node 2 causes us to stop and return because the solution was integral.  When examining Node 3, we also stop and return
+        even though the solution is not integral, since the optimal solution for that subproblem
         was already less than the solution found in Node 1, and any further exploration would lead to a lower value still.
       </p>
       <p>
-        We then return to the starting node and to the other initial subproblem in Node 4, were
-        <m>x\geq 5</m>.  When we split into the the two subproblems, <m>x_2\leq 3</m> gives
+        Next, we return to the starting node and to the other initial subproblem in Node 4, were
+        <m>x\geq 5</m>.  When we split into the  two subproblems, <m>x_2\leq 3</m> gives
         an integral solution in Node 5, and the constraint <m>x_2\geq 6</m> gives an infeasible problem.
       </p>
       <p>

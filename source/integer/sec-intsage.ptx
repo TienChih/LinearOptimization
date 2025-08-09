@@ -8,7 +8,7 @@
       In <xref ref="sec-simplexsage"/> and <xref ref="sec-noncanonsage"/>, we solved canonical
       and non-canonical linear optimization problems.  Solving such problems by hand could be tedious,
       and the techniques to solve integer optimization problems are even more involved. In this section, we solve integer
-      optimization problems using sage.
+      optimization problems using Sage.
     </p>
     <p>
       Since integer optimization is more difficult computationally than
