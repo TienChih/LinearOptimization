@@ -1,13 +1,13 @@
 :root:not(.dark-mode) {
     --documenttitle: hsl(240, 28%, 31%);
-    --bodytitle: hsl(51, 100%, 50%);
+    --bodytitle: hsl(192, 98%, 24%);
     --bodysubtitle: hsl(240, 50%, 34%);
     --bodytitlehighlight: hsl(240, 100%, 94%);
-    --bodysubtitlehighlight: hsl(51, 100%, 50%);
+    --bodysubtitlehighlight: hsl(192, 98%, 24%);
   
     --chaptertoc: hsl(240, 28%, 31%);
     --chaptertoctext: white;
-    --chaptertocactive: hsl(51, 100%, 50%);
+    --chaptertocactive: hsl(192, 98%, 24%);
     --chaptertoctextactive: hsl(240, 28%, 31%);
     --sectiontoc: hsl(0, 0%, 94%);
     --sectiontoctext: hsl(240, 28%, 31%);
@@ -15,7 +15,7 @@
     --sectiontoctextactive: var(--chaptertoctextactive);
     --tocborder: hsl(240, 50%, 90%);
   
-    --highlighttoc: hsl(51, 100%, 50%);
+    --highlighttoc: hsl(192, 98%, 24%);
     --highlighttoctext: hsl(240, 28%, 31%);
     --highlighttocborder: white;
   
