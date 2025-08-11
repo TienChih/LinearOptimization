@@ -11,7 +11,7 @@
        A related task is assigning entities to tasks in a way that minimizes
        cost or maximizes utility.  While these may be modeled as linear
        optimization problems, we also discuss some algorithms which computes
-       these solutions in a less unweildy manner.
+       these solutions in a less unwieldy manner.
     </p>
     <p>
       In <xref ref="sec-vam"/>, we discuss the general transportation problem

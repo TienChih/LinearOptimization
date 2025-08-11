@@ -39,7 +39,7 @@
   </exploration>
 
   <p>
-    The boundary for these additional inequalities are reffered to as
+    The boundary for these additional inequalities are referred to as
     <em>cutting hyperplanes</em>.  We wish to determine how to find such cutting
     hyperplanes.
   </p>
@@ -52,7 +52,7 @@
       <p>
         Let <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> be a feasible solution of the relaxation
         of a canonical integer maximization problem, where the <m>x_i</m> are basic (slack) variables
-        and the <m>x_j</m> are non-basic variables.
+        and the <m>x_j</m> are nonbasic variables.
       </p>
       <p>
         We consider the constraint <me>x_i+\sum_j a_{ij}x_j=b_i.</me>
@@ -205,14 +205,14 @@
     <task>
       <statement>
         <p>
-          Show that if <m>b_i</m> is non-integral, then by adding this constraint, the solution <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> is no longer feasible.
+          Show that if <m>b_i</m> is nonintegral, then by adding this constraint, the solution <m>x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*</m> is no longer feasible.
         </p>
       </statement>
     </task>
     <!--<task>
       <statement>
         <p>
-          Given that adding these constraints are meant to elimate as many non-integral
+          Given that adding these constraints are meant to elimate as many nonintegral
           solutions as possible, how should index <m>i</m> be chosen?
         </p>
         <ol marker="A." cols="2">
@@ -432,7 +432,7 @@
     <task>
       <statement>
         <p>
-          Pivot on the entry <m>a_{31}</m> and verify that the resulting basic solution is optimal and non-integral.
+          Pivot on the entry <m>a_{31}</m> and verify that the resulting basic solution is optimal and nonintegral.
           <tabular halign="center">
             <row>
               <cell halign="left">
@@ -633,7 +633,7 @@
     <task>
       <statement>
         <p>
-          Pivot on the entry <m>a_{42}</m> and verify that the resulting basic solution is optimal and non-integral.
+          Pivot on the entry <m>a_{42}</m> and verify that the resulting basic solution is optimal and nonintegral.
           <tabular halign="center">
             <row>
               <cell halign="left">
@@ -1107,7 +1107,7 @@
         </li>
         <li>
           <p>
-            Select a <m>b_i</m> that is non-integral and for that row, construct the additional bound:
+            Select a <m>b_i</m> that is nonintegral and for that row, construct the additional bound:
             <m>\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)</m>.
           </p>
         </li>

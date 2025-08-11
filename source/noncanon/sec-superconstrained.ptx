@@ -32,13 +32,14 @@
         <p>
           Plot the feasible region, what dimension is it?
         </p>
-        <hint>
+        
+      </statement>
+      <hint>
           <p>
             <interactive iframe="https://www.desmos.com/3d/463e6bec28" width="100%"  />
           </p>
           
         </hint>
-      </statement>
     </task>
 
     <task>
@@ -46,7 +47,19 @@
         <p>
           Suppose we added in the constraint <m>x+y-2z=1</m> Plot the feasible region, what dimension is it?
         </p>
-        <hint>
+        
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Consider the inequality <m>3x+2y-z\leq 8</m> captured by the equality
+          <m>3x+2y-z - 8=-t_4</m>.  What value must <m>t_4</m> so that <m>3x+2y-z\leq 8</m> 
+          is always an equality?  Call this value <m>\xi</m>.
+        </p>
+      </statement>
+      <hint>
           <p>
             <interactive iframe="https://www.desmos.com/3d/a56a9ca6e5" width="100%"  />
             <!--<figure xml:id="figure-equalityconstraint1">
@@ -74,17 +87,6 @@
           </p>
           
         </hint>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          Consider the inequality <m>3x+2y-z\leq 8</m> captured by the equality
-          <m>3x+2y-z - 8=-t_4</m>.  What value must <m>t_4</m> so that <m>3x+2y-z\leq 8</m> 
-          is always an equality?  Call this value <m>\xi</m>.
-        </p>
-      </statement>
     </task>
 
     <task>
@@ -1488,12 +1490,13 @@
           Delete the 0 column and solve the remaining system.
         </p>
       </statement>
-    </task>
-    <hint>
+      <hint>
       <p>
         <interactive iframe="https://www.desmos.com/3d/65160bc478" width="100%"  />
       </p>
     </hint>
+    </task>
+    
   </activity>
 
   <activity>

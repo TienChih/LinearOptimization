@@ -251,13 +251,13 @@
   </activity>
 
   <p>
-    This provides an oppourtunity for an enteprising student
+    This provides an opportunity for an enterprising student
     to engage in some further exploration.
   </p>
 
   <project>
     <p>
-      Write  <em>effecient</em> code in Sage where one
+      Write  <em>efficient</em> code in Sage where one
       inputs a <m>9\times 9</m> matrix representing a sudoku puzzle
       (with maybe 0's for blank entries), and the code produces the
       appropriate linear optimization problem and solves it.

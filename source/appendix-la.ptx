@@ -13,8 +13,12 @@
         </p>
         <p>
             If a more thorough treatment is needed, then there are numerous linear algebra texts, and many that are OERs
-            like this text.   <url href="https://understandinglinearalgebra.org/home.html"> <q>Understanding Linear Algebra</q></url> by David Austin is an excellent text with a focus on developing geometric
-            intuition, and less so on formal proofs.  For a more theory oriented text, <url href="https://hefferon.net/linearalgebra/"> <q>Linear Algebra</q></url> by Jim Hefferon is an excellent choice.
+            like this text.   <url href="https://understandinglinearalgebra.org/home.html"> 
+                <q>Understanding Linear Algebra</q></url> by David Austin is an excellent text 
+                with a focus on developing geometric
+            intuition, and less so on formal proofs.  
+            For a more theory oriented text, <url href="https://hefferon.net/linearalgebra/"> 
+                <q>Linear Algebra</q></url> by Jim Hefferon is an excellent choice.
         </p>
     </introduction>
         <definition xml:id="def-matrix">
@@ -39,7 +43,7 @@
         <definition xml:id="def-vector">
             <statement>
                 <p>
-                    <m>n\times 1</m> matrices are also reffered to as <em>vectors</em>:
+                    <m>n\times 1</m> matrices are also referred to as <em>vectors</em>:
                         <me>\x = \begin{bmatrix}x_1 \\ x_2 \\ \vdots \\ x_n\end{bmatrix}.</me>
                         This is the convention we use, with vectors being column matrices.
                         Some texts default to row vectors.
@@ -387,7 +391,7 @@
             <statement>
                 <p>
                     The <em>identity matrix</em> <m>I_n</m> is the <m>n\times n</m> diagonal
-                    square matrix where the diagonal entriies are all <m>1</m>.
+                    square matrix where the diagonal entries are all <m>1</m>.
                 </p>
             </statement>
         </definition>
@@ -524,9 +528,11 @@
         </theorem>
 
         <example>
+            <p>
             In <m>\mathbb{R}^4</m>, the set <me>W = \left\{ \begin{bmatrix}
                 u \\ 0 \\ w \\ 0 \end{bmatrix}: u,w\in \mathbb{R}\right\}</me>
                 forms a subspace of  <m>\mathbb{R}^4</m>.
+            </p>    
         </example>
         
         <definition xml:id="def-linearcombination">

@@ -8,7 +8,7 @@
       of graph theory with numerous applications.  A full exploration would be
       more appropriate for a graph theory or combinatorics course.  However,
       to highlight some of the ways that linear optimization can be applied here,
-      examine the relationship between primal and dual problems, observe some limitations,
+      we examine the relationship between primal and dual problems, observe some limitations,
       and consider a case where we can employ linear optimization to
       solve problems without concern.
     </p>
@@ -52,7 +52,7 @@
           denote the size of the largest possible matching(s)
           <fn>There is, too my knowledge, no standard notation for the size of a maximum matching for 
             <m>G</m>.  This is the proposed notation from Dr. Mark Kayll of the University of Montana,
-          since the <m>\Xi</m> looks like a matching.</fn>.
+          since the <m>\Xi</m>, the capital greek letter Xi, looks like a matching.</fn>.
         </p>
         <p>
           What is <m>\Xi(G)</m>?  How can we be sure this is true?
@@ -266,7 +266,7 @@
     <introduction>
       <p>
         Consider the general maximization problem constructed in <xref ref="activity-maxmatch"/>.
-        We now consider it's dual problem.
+        We now consider its dual problem.
       </p>
     </introduction>
     <task>
@@ -900,7 +900,7 @@
           from <xref ref="activity-mincover"/>.
         </p>
         <p>
-          Let <m>F\subseteq V</m> be the set of vertices where <m>x^*_i</m>
+          Let <m>F\subseteq V</m> be the set of vertices where <m>y^*_i</m>
           has a fractional value for all <m>v_i\in F</m>.  Without loss of generality,
           suppose <m>V_1\cap F\geq V_2\cap F</m>.
         </p>
@@ -987,8 +987,8 @@
           </image>
           <p>
             Recall that each vertex <m>v_i</m> in <m>F</m> is assigned a fractional value
-            <m>y_i</m> less than 1.  For any edge <m>v_iv_j</m> in <m>G</m>,
-            where <m>v_j\not\in F</m>, what can we say about <m>y_j</m>?
+            <m>y_i^*</m> less than 1.  For any edge <m>v_iv_j</m> in <m>G</m>,
+            where <m>v_j\not\in F</m>, what can we say about <m>y_j^*</m>?
           </p>
         </statement>
       </task>
@@ -996,14 +996,6 @@
         <statement>
           <p>
             Recall that without loss of generality, <m>|F\cap V_1|\geq |F\cap V_2|</m>.
-            Suppose we generate
-          </p>
-        </statement>
-      </task>
-
-      <task>
-        <statement>
-          <p>
             Suppose we construct a new solution <m>\y'</m> by replacing
             <m>y_i^*</m> with <m>y_i^*-\epsilon</m> when <m>v_i\in F\cap V_1</m>,
             with <m>y_{i}^*+\epsilon</m> when <m>v_i\in F\cap V_2</m>, and leaving every

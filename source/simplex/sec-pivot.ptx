@@ -1660,7 +1660,7 @@
         <statement>
           <p>
             For each column <m>i</m>, consider the equality recorded by this tableau: <m>a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C + (-1)c_i=s_i</m>.
-            What must be true about <m>s_i</m> in ordder for <m>a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C \geq c_i</m>?
+            What must be true about <m>s_i</m> in order for <m>a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C \geq c_i</m>?
             <ol  marker="A." cols="2">
               <li>
                 <p>

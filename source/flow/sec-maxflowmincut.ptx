@@ -504,6 +504,7 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
         <p>
           Pick another <m>\alpha</m>-path where <m>q>0</m> and repeat until we achieve a maximum flow.
         </p>
+      </statement>  
         <hint>
           <image xml:id="exploration-alphapathfilled">
             <shortdescription>A network with multiple sources and sinks.</shortdescription>
@@ -550,7 +551,7 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
             
           </image>
         </hint>
-      </statement>
+      
     </task>
     <task>
       <statement>
@@ -588,7 +589,7 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
                 </li>
                 <li>
                   <p>
-                    Eack backwards edge satisfies <m>x_{ij} >0</m>.
+                    Each backwards edge satisfies <m>x_{ij} >0</m>.
                   </p>
                 
               </li>

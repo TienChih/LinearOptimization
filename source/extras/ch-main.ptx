@@ -17,8 +17,9 @@
     <p>
       In <xref ref="sec-covermatch"/>, we discuss
       graph matchings and coverings using linear optimization.  In <xref ref="sec-sudoku"/> linear optimization
-      is used to solve sudoku and sudoku like puzzles.  In <xref ref="sec-scheduling"/> scheduling problems are modled as and solved as 
-      linear optimization problems.  Finally, <xref ref="sec-altduality"/> provides al alternative
+      is used to solve sudoku and sudoku like puzzles.  
+      In <xref ref="sec-scheduling"/> scheduling problems are modeled as and solved as 
+      linear optimization problems.  Finally, <xref ref="sec-altduality"/> provides an alternative
       approach to the proof of the Strong Duality Theorem <xref ref="thm-strongduality"/>.
     </p>
   </introduction>

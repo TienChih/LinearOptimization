@@ -551,7 +551,7 @@
     <introduction>
       <p>
         Suppose a shipping company is moving goods through a series of
-        transportation hubs via rail.  The maximum capcity in tons and the cost in
+        transportation hubs via rail.  The maximum capacity in tons and the cost in
         thousands of dollars per ton are listed as an ordered pair:
 
         <image xml:id="train">
@@ -599,7 +599,7 @@
       <statement>
         <p>
           Let's find a single path from <m>v_0</m> to <m>v_5</m> along which we could ship goods at the
-          lowest possible cost.  What criteria should we use to identitfy this path?
+          lowest possible cost.  What criteria should we use to identify this path?
         </p>
         <ol cols="2" marker="A.">
           <li>

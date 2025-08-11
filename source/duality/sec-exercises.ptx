@@ -192,7 +192,7 @@ decision variables. Determine if the following are TRUE or FALSE:
         <statement>
           <p>
             Prove that if the dual problem is infeasible, and the primal problem
-            is feasible, then the primal problem is unbounded above.  (Use (a).)
+            is feasible, then the primal problem is unbounded above.  (Use <m>\textbf{(a)}</m>.)
           </p>
         </statement>
       </task>

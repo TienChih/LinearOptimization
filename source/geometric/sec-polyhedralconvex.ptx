@@ -258,9 +258,14 @@
     <task>
       <statement>
         <p>
-          Show that <m>S_1\cap S_2</m> is convex.  Hint: Let <m>P, Q\in S_1\cap S_2</m>.  Why is the line segment between them contained in <m>S_1</m>?  <m>S_2</m>?
+          Show that <m>S_1\cap S_2</m> is convex.  
         </p>
       </statement>
+      <hint>
+        <p>
+          Let <m>P, Q\in S_1\cap S_2</m>.  Why is the line segment between them contained in <m>S_1</m>?  <m>S_2</m>?
+        </p>
+      </hint>
     </task>
     <task>
       <statement>

@@ -320,7 +320,7 @@
     <task>
       <statement>
         <p>
-          Consider the plot of the feasible region.  What did our two pivots do?
+          Consider the plot of the feasible region.  What geometrically did our two pivots do?
         </p>
         <p>
           <interactive  platform="doenetml" width="100%" >

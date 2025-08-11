@@ -82,8 +82,8 @@
     <task>
       <statement>
         <p>
-          Let <m>\mathbf{d} = u'-u_0</m> decribe geometrically what <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m> represents.  (Think dot product, projections and for <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m>
-          to start at <m>u</m>).
+          Let <m>\mathbf{d} = u'-u_0</m> describe geometrically what <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m> represents.  (Think dot product, projections and for <m>\frac{-u_0^\top \mathbf{d}}{\mathbf{d}^\top \mathbf{d}}\cdot \mathbf{d}+u</m>
+          to start at <m>u</m>.)
         </p>
       </statement>
     </task>
@@ -204,7 +204,7 @@
     <task>
       <statement>
         <p>
-          Recall <xref ref="activity-cone"/> (c).  How do the cases (A) and (B)
+          Recall <xref ref="activity-cone"/> <m>\textbf{(c)}</m>.  How do the cases (A) and (B)
           of <xref ref="thm-farkas"/> relate to the cone <m>P</m>?
         </p>
       </statement>
@@ -229,7 +229,7 @@
       <statement>
         <p>
           Suppose <xref ref="thm-farkas"/> (A) were false.  We want to prove that (B) is true.  What does 
-          <xref ref="activity-cone"/> (c) tell us?
+          <xref ref="activity-cone"/> <m>\textbf{(c)}</m> tell us?
         </p>
       </statement>
     </task>
@@ -427,7 +427,9 @@
     <task>
       <statement>
         <p>
-          Suppose that optimal dual solution <m>\y^*</m> exists.  Explain why by <xref ref="activity-weakduality"/> it suffices to show that <m>f(\x^*)\geq g(\y^*)</m> for some feasible <m>\x^*</m>.
+          Suppose that optimal dual solution <m>\y^*</m> exists.  
+          Explain why by <xref ref="activity-weakduality"/> it suffices to show 
+          that <m>f(\x^*)\geq g(\y^*)</m> for some feasible <m>\x^*</m>.
         </p>
       </statement>
     </task>
@@ -445,8 +447,10 @@
     <task>
       <statement>
         <p>
-          If <xref ref="cor-farkasv2"/> (A) holds for <m>M, \mathbf{d}</m>, then it holds for the pair <m>-\vc^\top, \begin{bmatrix} -g^*\end{bmatrix} </m>, 
-          as well as the pair <m>A, \vb </m> for the same <m>\x\in \R^m</m>.  Why does this show that a feasible optimal solution <m>\x^*</m> exists and that <m>f(\x^*)=g(\y^*)</m>?
+          If <xref ref="cor-farkasv2"/> (A) holds for <m>M, \mathbf{d}</m>, 
+          then it holds for the pair <m>-\vc^\top, \begin{bmatrix} -g^*\end{bmatrix} </m>, 
+          as well as the pair <m>A, \vb </m> for the same <m>\x\in \R^m</m>.  
+          Why does this show that a feasible optimal solution <m>\x^*</m> exists and that <m>f(\x^*)=g(\y^*)</m>?
 
         </p>
       </statement>
@@ -491,7 +495,7 @@
     <task>
       <statement>
         <p>
-          Explain why (f) and (g) produce a contradiction.
+          Explain why <m>\textbf{(f)}</m> and <m>\textbf{(g)}</m> produce a contradiction.
         </p>
       </statement>
     </task>

@@ -18,7 +18,7 @@
             there are good options available.  For someone looking to explore
             some elementary probability theory, the introductory statistics textbook
               <url href="https://www.openintro.org/book/os/"> <q>OpenIntro Statistics</q></url> by David Diez, Christopher Barr, and Mine Çetinkaya-Rundel
-            does a good job presenting this material.  It also is an excellent introducotry statistics
+            does a good job presenting this material.  It also is an excellent introductory statistics
             text with labs and data available.  For a calculus-based, theory heavy treatment
             of this text, I recommend <url href="https://www.markhuberdatascience.org/probability-textbook"> <q>Probability: Lecture and Labs</q></url>.
         </p>
@@ -39,7 +39,7 @@
             Given an experiment with sample space <m>S</m>:
             <ul>
               <li> An <term>event</term> <m>A</m> is a subset of <m>S</m>.</li>
-              <li> <em>If</em> each outcome in the sample space is equally likely, then the <term>probability</term> of <m>A</m>, denoted <m>P(A)</m> is <me>P(A)=\frac{|A|}{|S|}.</me>
+              <li> Supposing each outcome in the sample space is equally likely, then the <term>probability</term> of <m>A</m>, denoted <m>P(A)</m> is <me>P(A)=\frac{|A|}{|S|}.</me>
             </li>
           </ul>
         </p>
@@ -176,7 +176,7 @@ hist(numpoison)
 
       <definition xml:id="def-expectation">
         <p>
-      Given a finite random variable  <m>X</m>, it's <term>expected value</term> is the predicted average outcome of experiments, and is computed: <me>E(X)=\sum P(X=x)\cdot x.</me>
+      Given a finite random variable  <m>X</m>, its <term>expected value</term> is the predicted average outcome of experiments, and is computed: <me>E(X)=\sum P(X=x)\cdot x.</me>
     </p>
     
    

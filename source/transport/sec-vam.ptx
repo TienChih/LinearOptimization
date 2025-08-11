@@ -195,7 +195,7 @@
           We now generalize to a balanced transportation problem with <m>n</m> warehouses and <m>m</m> markets with supplies <m>w_i</m>
           and demands <m>m_j</m>.  Note that we have linear equations <me>\sum x_{i\ell} = w_i, \sum x_{kj} = m_j.</me>
           Since <m>\displaystyle \sum w_i = \sum m_j</m>, how many of the <m>x_{ij}</m>
-          are needed to be non-zero for a basic solution?  
+          are needed to be nonzero for a basic solution?  
         </p>
       </statement>
       <hint>

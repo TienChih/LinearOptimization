@@ -133,7 +133,7 @@
           </md>
           and the fact that <m>\displaystyle \sum_{i=1}^n W_i=\sum_{j=1}^m M_j</m>, that the associated
           augmented matrix would have rank <m>n+m-1</m> and thus at most <m>n+m-1</m> of the <m>x_{ij}</m>
-          need be non-zero for a feasible or optimal solution.  A selection of these variables will be considered the <term>basis</term>
+          need be nonzero for a feasible or optimal solution.  A selection of these variables will be considered the <term>basis</term>
           of a solution, and is equivalent to the basis variables from <xref ref="ch-simplex"/>.
         </p>
 
@@ -162,7 +162,7 @@
      <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij} = \sum_{i=1}^n a_iW_i+\sum_{j=1}^m b_jM_j</m>, so shifting the shipping to an entry where <m>c_{ij}&lt; a_i+b_j</m> would
      lower the total shipping cost.  We then outline a cycle consisting of new basis elements and shifting the shipping around to preserve the 
      warehouse and market constraints, adding the negative entry to the basis and removing an entry with no shipping from the basis.  Note that it is possible for this
-     shift to be zero, yet changing the basis, equivalent to a degenerate piviot from <xref ref="sec-cycling"/>.  We repeat this process until
+     shift to be zero, yet changing the basis, equivalent to a degenerate pivot from <xref ref="sec-cycling"/>.  We repeat this process until
      there are no longer negative entries.
   </p>
 

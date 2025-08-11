@@ -556,7 +556,7 @@
           </row>
         </tabular>
     that having a slack variable that can be negative serves no purpose, since the point
-    of the non-negativity constraint is to reinforce the inequality.  Also note that the hyperplane
+    of the nonnegativity constraint is to reinforce the inequality.  Also note that the hyperplane
     <m>x_j=0</m> also plays no role in this problem, since it does not serve as a bounding hyperplane.
     Thus, we may simply delete this row (after recording the equality) as this equality
     will have no bearing on future steps or the final solution.

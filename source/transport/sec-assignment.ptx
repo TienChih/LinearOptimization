@@ -319,7 +319,7 @@
       <ol>
         <li>
           <p>
-            IF the entries of <m>T</m> are rational but not all integeral, <m>a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}>0 </m>: 
+            IF the entries of <m>T</m> are rational but not all integral, <m>a_{ij} =\frac{p_{ij}}{q_{ij}}, q_{ij}>0 </m>: 
           </p>
           <p>
             THEN multiply each entry of <m>T</m> by the

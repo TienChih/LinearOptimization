@@ -427,7 +427,7 @@
         
         <li>
           <p>
-            No student can enroll in more than 1 course in the same timeslot.
+            No student can enroll in more than 1 course in the same time-slot.
           </p>
         </li>
         <li>
@@ -479,7 +479,7 @@
     <task>
       <statement>
         <p>
-          Write out the constraints which restrict students to at most 1 course in a given time slot. 
+          Write out the constraints which restrict students to at most 1 course in a given time-slot. 
         </p>
       </statement>
     </task>
@@ -496,7 +496,7 @@
     <task>
       <statement>
         <p>
-          Write out the constraints which ensure each student 
+          Write out the constraints which ensures each student 
           is enrolled in at least 4 and at most 6 courses.
         </p>
       </statement>
@@ -505,7 +505,7 @@
     <task>
       <statement>
         <p>
-          Write out the constraint which ensure each student enrolls in one seminar.
+          Write out the constraint which ensures each student enrolls in one seminar.
         </p>
       </statement>
     </task>

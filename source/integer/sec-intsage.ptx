@@ -6,7 +6,7 @@
   <introduction>
     <p>
       In <xref ref="sec-simplexsage"/> and <xref ref="sec-noncanonsage"/>, we solved canonical
-      and non-canonical linear optimization problems.  Solving such problems by hand could be tedious,
+      and noncanonical linear optimization problems.  Solving such problems by hand could be tedious,
       and the techniques to solve integer optimization problems are even more involved. In this section, we solve integer
       optimization problems using Sage.
     </p>
@@ -35,7 +35,7 @@
       <task>
         <statement>
           <p>
-            Record this non-canonical problem using Sage:
+            Record this noncanonical problem using Sage:
           </p>
           <p>
             <sage>
