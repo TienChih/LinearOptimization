@@ -120,15 +120,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.7.1';
+eBookConfig.runestone_version = '7.9.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cf591bce111c14c1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.472f5a2f0bfe3571.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
@@ -158,7 +158,7 @@ sagecell.makeSagecell({
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -229,10 +229,7 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
 <ul class="structural toc-item-list">
@@ -366,16 +363,18 @@ true);
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-games"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">5</span><span class="space"> </span><span class="title">Zero-Sum Games</span>
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Zero-Sum Games</span>
 </h2>
-<section class="introduction" id="ch-games-5"><div class="para" id="ch-games-5-1">We begin the first of several chapters on applications of linear optimization beyond the more straight forward examples we’ve seen so far, further highlighting the power and versatility of this theory.  This particular chapter is about competitive <em class="emphasis">zero-sum</em> games.  Two players playing against each other in some game with finite choices may find that the efficacy of a choice depends on their opponents choice.  A good choice in one scenario may be a poor choice in another.  Moreover, if one always makes the same choices, your opponent may be able to anticipate this move, so it makes sense to vary your choices.  How should one vary them, and how might your opponent vary theirs?  Questions like this are part of an area of mathematics called <em class="emphasis">game theory</em>.</div>
-<div class="para" id="ch-games-5-2">In <a href="sec-minmaxgames.html" class="internal" title="Section 5.1: Min-Max Games">Section 5.1</a> we describe these games and propose a scheme to solve for the optimal strategy for both players.  In <a href="sec-vonneumann.html" class="internal" title="Section 5.2: von Neumann Minimax Theorem">Section 5.2</a> we prove that this strategy is valid and that optimal strategies exist.  Then in <a href="sec-chance.html" class="internal" title="Section 5.3: Games of Chance">Section 5.3</a> we see how to apply these principles to games with random components.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-games-5"><div class="para" id="ch-games-5-1">We begin the first of several chapters on applications of linear optimization beyond the more straight forward examples we’ve seen so far, further highlighting the power and versatility of this theory.  This particular chapter is about competitive <em class="emphasis">zero-sum</em> games.  Two players playing against each other in some game with finite choices may find that the efficacy of a choice depends on their opponents choice.  A good choice in one scenario may be a poor choice in another.  Moreover, if one always makes the same choices, your opponent may be able to anticipate this move, so it makes sense to vary your choices.  How should one vary them, and how might your opponent vary theirs?  Questions like this are part of an area of mathematics called <em class="emphasis">game theory</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ch-games-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-games-5-2">In <a href="sec-minmaxgames.html" class="internal" title="Section 5.1: Min-Max Games">Section 5.1</a> we describe these games and propose a scheme to solve for the optimal strategy for both players.  In <a href="sec-vonneumann.html" class="internal" title="Section 5.2: von Neumann Minimax Theorem">Section 5.2</a> we prove that this strategy is valid and that optimal strategies exist.  Then in <a href="sec-chance.html" class="internal" title="Section 5.3: Games of Chance">Section 5.3</a> we see how to apply these principles to games with random components.<div class="autopermalink" data-description="Paragraph"><a href="#ch-games-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><nav class="summary-links"><ul>
 <li><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></li>
 <li><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">von Neumann Minimax Theorem</span></a></li>
 <li><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></li>
 <li><a href="sec-summarygames.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Summary of Chapter 5</span></a></li>
 <li><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Problems for Chapter 5</span></a></li>
-</ul></nav></section></div>
+</ul></nav><div class="autopermalink" data-description="Chapter 5: Zero-Sum Games"><a href="#ch-games" title="Copy heading and permalink for Chapter 5: Zero-Sum Games" aria-label="Copy heading and permalink for Chapter 5: Zero-Sum Games">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-exercisesduality.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-minmaxgames.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -86,8 +86,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/doenet-standalone-test@0.6.0/dist/style.css">
-<script onload="onLoad()" type="module" src="https://cdn.jsdelivr.net/npm/doenet-standalone-test@0.6.0/dist/doenet-standalone.min.js"></script><script>function onLoad() {window.renderDoenetToContainer(document.querySelector(".doenetml-applet"))}</script>
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@doenet/standalone@latest/style.css">
+<script onload="onLoad()" type="module" src="https://cdn.jsdelivr.net/npm/@doenet/standalone@latest/doenet-standalone.js"></script><script>function onLoad() {window.renderDoenetViewerToContainer(document.querySelector(".doenetml-applet"))}</script>
 </head>
 <body class="ptx-content ignore-math" id="changeme">
 <div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
@@ -103,7 +103,7 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<div style="width:600px; height:600px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div class="doenetml-applet">
+<div style="width:600px; height:600px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"><div class="doenetml-applet" data-doenet-add-virtual-keyboard="false" data-doenet-send-resize-events="true">
 <div class="doenetml-loading" style="text-align:center">
 <p><img src="https://www.doenet.org/Doenet_Logo_Frontpage.png"></p>
 <p>Waiting on the page to load...</p>
@@ -128,6 +128,9 @@ window.MathJax = {
 
   <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
 </graph>
+<p>
+  Enter the coefficients for the objective function.  Drag the point on the graph to correspond with the pivot operations you performed.
+</p>
 <p>
   <m>f(x_1, x_2) =</m> <mathInput name="c1"/> <m>x_1+</m><mathInput name="c2"/> <m>x_2</m>.
 </p>

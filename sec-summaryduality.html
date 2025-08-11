@@ -120,21 +120,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.7.1';
+eBookConfig.runestone_version = '7.9.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cf591bce111c14c1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.472f5a2f0bfe3571.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -205,10 +205,7 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
 <ul class="structural toc-item-list">
@@ -342,7 +339,7 @@ true);
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-summaryduality"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.4</span><span class="space"> </span><span class="title">Summary of Chapter 4</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summary of Chapter 4</span>
 </h2>
 <div class="para" id="sec-summaryduality-2">We recall that at each corner or extreme point solution, this solution lies on the intersection of <span class="process-math">\(n\)</span> bounding hyperplanes of the feasible region.  We also note that the orthogonal vector for the objective plane may be written as a linear combination of the orthogonal vectors for these bounding hyperplanes, and in particular, the coefficients of the linear combination are exactly the negative of the <span class="process-math">\(c_j's\)</span> in the corresponding tableau. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -400,8 +397,9 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-summaryduality-3">In some sense what <span class="process-math">\(-c_j\)</span> tells us is how much <span class="process-math">\(f\)</span> increases if the corresponding <span class="process-math">\(x_j\)</span> decreases by one, i.e. the bound associated with <span class="process-math">\(x_j\)</span> were relaxed by one.  This gives us a way of determining how relaxing each of the constraints compare to each other, and their relative  value to each other.  So in the case of <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>, We have <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="sec-summaryduality-3">In some sense what <span class="process-math">\(-c_j\)</span> tells us is how much <span class="process-math">\(f\)</span> increases if the corresponding <span class="process-math">\(x_j\)</span> decreases by one, i.e. the bound associated with <span class="process-math">\(x_j\)</span> were relaxed by one.  This gives us a way of determining how relaxing each of the constraints compare to each other, and their relative  value to each other.  So in the case of <a href="sec-sensitivity.html#exploration-witch" class="xref" data-knowl="./knowl/xref/exploration-witch.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 4.1.1">Exploration 4.1.1</a>, we have: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -430,8 +428,9 @@ true);
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
-</table></div> We have that the normal vector for the objective plane, <span class="process-math">\(\begin{bmatrix} 3\\2\end{bmatrix}\)</span> may be written as <span class="process-math">\(\begin{bmatrix} 3\\2\end{bmatrix} = -3\begin{bmatrix} -1\\0\end{bmatrix}+(-2)\begin{bmatrix} 0\\-1\end{bmatrix}\text{,}\)</span> and lowering <span class="process-math">\(x_1\)</span> by 1 decreases the objective by 3, and lowering <span class="process-math">\(x_2\)</span> by 1. decreases it by 2.</div>
-<div class="para" id="sec-summaryduality-4">But should we pivot to <div class="tabular-box natural-width"><table class="tabular">
+</table></div> We have that the normal vector for the objective plane, <span class="process-math">\(\begin{bmatrix} 3\\2\end{bmatrix}\)</span> may be written as <span class="process-math">\(\begin{bmatrix} 3\\2\end{bmatrix} = -3\begin{bmatrix} -1\\0\end{bmatrix}+(-2)\begin{bmatrix} 0\\-1\end{bmatrix}\text{,}\)</span> and lowering <span class="process-math">\(x_1\)</span> by 1 decreases the objective by 3, and lowering <span class="process-math">\(x_2\)</span> by 1 decreases the objective by 2.<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-summaryduality-4">But should we pivot to: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(t_1\)</span></td>
@@ -461,8 +460,10 @@ true);
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-summaryduality-5">Then <span class="process-math">\(\begin{bmatrix} 3\\2\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 3\\1\end{bmatrix}+\frac{3}{2}\begin{bmatrix} 1\\1\end{bmatrix}\)</span> and decreasing <span class="process-math">\(t_1\)</span> by 1 increases the objective by <span class="process-math">\(\frac{1}{2}\)</span> and decreasing <span class="process-math">\(t_2\)</span> by 1 increases the objective by <span class="process-math">\(\frac{3}{2}\text{.}\)</span> Note that this is equivalent to saying how much value would be gained should there by one more newt eye or frog respectively.</div>
+<div class="para" id="sec-summaryduality-5">Then <span class="process-math">\(\begin{bmatrix} 3\\2\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 3\\1\end{bmatrix}+\frac{3}{2}\begin{bmatrix} 1\\1\end{bmatrix}\)</span> and decreasing <span class="process-math">\(t_1\)</span> by 1 increases the objective by <span class="process-math">\(\frac{1}{2}\)</span> and decreasing <span class="process-math">\(t_2\)</span> by 1 increases the objective by <span class="process-math">\(\frac{3}{2}\text{.}\)</span> Note that this is equivalent to saying how much value would be gained should there by one more newt eye or frog respectively.<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="sec-summaryduality-6">
 <div class="para">This inspires us to define the <dfn class="terminology">dual problem</dfn> of a primal maximization problem in <a href="sec-sensitivity.html#definition-dual" class="xref" data-knowl="./knowl/xref/definition-dual.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1.5">Definition 4.1.5</a>, where the <span class="process-math">\(y_i\)</span> are the weights or coefficients of the normal vectors for bounding hyperplanes of the feasible region. We may define the <span class="process-math">\(s_j\)</span> to be the slack variable for each dual constraint so that <span class="process-math">\(\displaystyle \left( \sum_{i=1}^n a_{ij}y_i\right)+s_j=c_jx\text{,}\)</span> or equivalently:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/definition-dual.html" id="sec-summaryduality-6-6">
@@ -473,16 +474,18 @@ true);
 </div>
 <div class="para">and we have feasibility if and only if each <span class="process-math">\(y_i, s_j\geq 0\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="figure-videochapter4normal"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="figure-videochapter4normal-2" class="video" controls="" poster="external/images/Chapter4-NormalVectors.png"><source src="external/images/Chapter4-NormalVectors.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.1<span class="period">.</span></span><span class="space"> </span>Normal Vectors and Sensitivity Analysis.</figcaption></figure><div class="para logical" id="sec-summaryduality-8">
-<div class="para">We then note that by reformulating the primal and dual problem using matrix algebra, then for feasible <span class="process-math">\(\x, \y\text{,}\)</span> we have that</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Normal Vectors and Sensitivity Analysis.<div class="autopermalink" data-description="Figure 4.4.1"><a href="#figure-videochapter4normal" title="Copy heading and permalink for Figure 4.4.1" aria-label="Copy heading and permalink for Figure 4.4.1">🔗</a></div></figcaption></figure><div class="para logical" id="sec-summaryduality-8">
+<div class="para">We  note that by reformulating the primal and dual problem using matrix algebra, then for feasible <span class="process-math">\(\x\)</span> and  <span class="process-math">\(\y\text{,}\)</span> we have that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-weakduality.html">
 \begin{equation*}
 f=\vc^\top\x \leq \vc^\top A\vb\leq \y^\top \vb=g
 \end{equation*}
 </div>
 <div class="para">which is the statement of the Weak Duality Theorem <a href="sec-dualitytheory.html#prop-weakduality" class="xref" data-knowl="./knowl/xref/prop-weakduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.2.3">Proposition 4.2.3</a>.  In particular, if <span class="process-math">\(f=g\)</span> for feasible <span class="process-math">\(\x, \y\text{,}\)</span> then both <span class="process-math">\(f, g\)</span> are optimal.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-summaryduality-9">It turns out the converse to this statement is true as well.  To show this, we suppose that <span class="process-math">\(f\)</span> achieves optimality at <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -540,6 +543,7 @@ f=\vc^\top\x \leq \vc^\top A\vb\leq \y^\top \vb=g
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="sec-summaryduality-10">
 <div class="para">We let <span class="process-math">\(-c_j = t_i, s_j\)</span> depending on which variable <span class="process-math">\(c_j\)</span> is the coefficient for, and by letting each other <span class="process-math">\(y_i, s_j=0\text{,}\)</span> we have that</div>
@@ -550,10 +554,12 @@ f = \sum_{i=1}c_jx_j -d \amp = \sum_{i=1}^n (-y_i)t_i + \sum_{j=1}^m (-s_j)x_j  
 \amp = \sum_{j=1}^m\left(\left(\sum_{i=1}^n y_ia_{ij}\right)-s_j\right)x_j -\left(d^*+\sum_{i=1}^n y_ib_i\right)  
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-summaryduality-11">We note that since the above tableau satisfies the conditions for an optimal basic solution, each <span class="process-math">\(y_i, s_j\geq0\text{.}\)</span>  Since the above equality is an equality of functions of <span class="process-math">\(x_1,\ldots, x_m\text{,}\)</span> by comparing coefficients of <span class="process-math">\(x_j\text{,}\)</span> we have <span class="process-math">\(\displaystyle \sum_{i=1}^n y_ia_{ij}\geq c_j\)</span> and <span class="process-math">\(\y\)</span> is a feasible solution.  Then we also have that <span class="process-math">\(-d^*=\displaystyle \sum_{i=1}^ny_ib_i-d\text{.}\)</span>  The left hand side is the optimal value for <span class="process-math">\(f\text{,}\)</span> and the right hand side is the current value of <span class="process-math">\(g\)</span> for this choice of <span class="process-math">\(\y\text{.}\)</span>  So by <a href="sec-dualitytheory.html#prop-weakduality" class="xref" data-knowl="./knowl/xref/prop-weakduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.2.3">Proposition 4.2.3</a>, we prove the Strong Duality Theorem <a href="sec-dualitytheory.html#thm-strongduality" class="xref" data-knowl="./knowl/xref/thm-strongduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.4: The Strong Duality Theorem">Theorem 4.2.4</a>.</div>
+<div class="para" id="sec-summaryduality-11">We note that since the above tableau satisfies the conditions for an optimal basic solution, each <span class="process-math">\(y_i, s_j\geq0\text{.}\)</span>  Since the above equality is an equality of functions of <span class="process-math">\(x_1,\ldots, x_m\text{,}\)</span> by comparing coefficients of <span class="process-math">\(x_j\text{,}\)</span> we have <span class="process-math">\(\displaystyle \sum_{i=1}^n y_ia_{ij}\geq c_j\)</span> and <span class="process-math">\(\y\)</span> is a feasible solution.  Then we also have that <span class="process-math">\(-d^*=\displaystyle \sum_{i=1}^ny_ib_i-d\text{.}\)</span>  The left hand side is the optimal value for <span class="process-math">\(f\text{,}\)</span> and the right hand side is the current value of <span class="process-math">\(g\)</span> for this choice of <span class="process-math">\(\y\text{.}\)</span>  So by <a href="sec-dualitytheory.html#prop-weakduality" class="xref" data-knowl="./knowl/xref/prop-weakduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.2.3">Proposition 4.2.3</a>, we prove the Strong Duality Theorem <a href="sec-dualitytheory.html#thm-strongduality" class="xref" data-knowl="./knowl/xref/thm-strongduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.4: The Strong Duality Theorem">Theorem 4.2.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="figure-videochapter4duality"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="figure-videochapter4duality-2" class="video" controls="" poster="external/images/Chapter4-Duality.png"><source src="external/images/Chapter4-Duality.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.2<span class="period">.</span></span><span class="space"> </span>Proofs of the duality theorems.</figcaption></figure><div class="para" id="sec-summaryduality-13">We then note that the dual problem may be recorded simultaneously as the primal problem within the same tableau <div class="tabular-box natural-width"><table class="tabular">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Proofs of the duality theorems.<div class="autopermalink" data-description="Figure 4.4.2"><a href="#figure-videochapter4duality" title="Copy heading and permalink for Figure 4.4.2" aria-label="Copy heading and permalink for Figure 4.4.2">🔗</a></div></figcaption></figure><div class="para" id="sec-summaryduality-13">We then note that the dual problem may be recorded simultaneously as the primal problem within the same tableau <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="r m b2 r2 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -602,10 +608,12 @@ f = \sum_{i=1}c_jx_j -d \amp = \sum_{i=1}^n (-y_i)t_i + \sum_{j=1}^m (-s_j)x_j  
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(=g\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div> and that by using similar arguments as we did in <a href="ch-simplex.html" class="internal" title="Chapter 2: The Simplex Algorithm">Chapter 2</a>, we may establish conditions for determining the feasibility, optimality, and boundedness if the dual problem.  A basic dual variable is feasible if and only if each <span class="process-math">\(c_j\leq0\text{,}\)</span> and if we had a <span class="process-math">\(c_j &gt; \)</span> but each <span class="process-math">\(a_{ij}\leq 0\)</span> for that problem, then the problem is infeasible, since this inequality can never be satisfied. If the basic dual is feasible then it is also optimal if and only if <span class="process-math">\(b_i\geq 0\text{.}\)</span>  However, if the basic dual is feasible but there is a row <span class="process-math">\(i\)</span> where <span class="process-math">\(a_{ij} \geq0\text{,}\)</span> then the dual region is unbounded, and if additionally <span class="process-math">\(b_i&lt;0\text{,}\)</span> then the dual problem is unbounded below.  These boundedness conditions are sufficient but not necessary, the reader is encouraged to come up with their own counterexamples to necessity.</div>
-<div class="para" id="sec-summaryduality-14">We conclude by observing that if a primal problem has an unconstrained variable, the corresponding dual variable must be zero, since the associated hyperplane is not a bounding hyperplane.  Similarly, if we had an equality constraint in the primal with corresponding slack set to zero, the corresponding dual is allowed to be unconstrained, since it is no longer relevant whether pivoting away from this plane improves the primal objective.</div>
+</table></div> and that by using similar arguments as we did in <a href="ch-simplex.html" class="internal" title="Chapter 2: The Simplex Algorithm">Chapter 2</a>, we may establish conditions for determining the feasibility, optimality, and boundedness if the dual problem.  A basic dual variable is feasible if and only if each <span class="process-math">\(c_j\leq0\text{,}\)</span> and if we had a <span class="process-math">\(c_j &gt; 0\)</span> but each <span class="process-math">\(a_{ij}\leq 0\)</span> for that problem, then the problem is infeasible, since this inequality can never be satisfied. If the basic dual is feasible then it is also optimal if and only if <span class="process-math">\(b_i\geq 0\text{.}\)</span>  However, if the basic dual is feasible but there is a row <span class="process-math">\(i\)</span> where <span class="process-math">\(a_{ij} \geq0\text{,}\)</span> then the dual region is unbounded, and if additionally <span class="process-math">\(b_i&lt;0\text{,}\)</span> then the dual problem is unbounded below.  These boundedness conditions are sufficient but not necessary, the reader is encouraged to come up with their own counterexamples to necessity.<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-summaryduality-14">We conclude by observing that if a primal problem has an unconstrained variable, the corresponding dual variable must be zero, since the associated hyperplane is not a bounding hyperplane.  Similarly, if we had an equality constraint in the primal with corresponding slack set to zero, the corresponding dual is allowed to be unconstrained, since it is no longer relevant whether pivoting away from this plane improves the primal objective.<div class="autopermalink" data-description="Paragraph"><a href="#sec-summaryduality-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="figure-videochapter4tableaus"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="figure-videochapter4tableaus-2" class="video" controls="" poster="external/images/Chapter4-Tableaus.png"><source src="external/images/Chapter4-Tableaus.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.4.3<span class="period">.</span></span><span class="space"> </span>The dual problem as recorded in tableaus.</figcaption></figure></section></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The dual problem as recorded in tableaus.<div class="autopermalink" data-description="Figure 4.4.3"><a href="#figure-videochapter4tableaus" title="Copy heading and permalink for Figure 4.4.3" aria-label="Copy heading and permalink for Figure 4.4.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.4: Summary of Chapter 4"><a href="#sec-summaryduality" title="Copy heading and permalink for Section 4.4: Summary of Chapter 4" aria-label="Copy heading and permalink for Section 4.4: Summary of Chapter 4">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-dualpivot.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesduality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

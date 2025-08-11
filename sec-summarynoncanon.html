@@ -120,21 +120,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.7.1';
+eBookConfig.runestone_version = '7.9.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cf591bce111c14c1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.472f5a2f0bfe3571.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -205,10 +205,7 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
 <ul class="structural toc-item-list">
@@ -342,7 +339,7 @@ true);
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-summarynoncanon"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Summary of Chapter 3</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summary of Chapter 3</span>
 </h2>
 <div class="para" id="sec-summarynoncanon-2">We first consider the case where some <span class="process-math">\(x_j\)</span> is allowed to be negative, which we denote as <span class="process-math">\(\ec{x_j}\text{.}\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -450,8 +447,9 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summarynoncanon-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-summarynoncanon-3">Note that should we pivot on <span class="process-math">\(a_{ij}^*\)</span> <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="sec-summarynoncanon-3">Note that should we pivot on <span class="process-math">\(a_{ij}\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -556,7 +554,7 @@ true);
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(d\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
-</table></div> that having a slack variable that can be negative serves no purpose, since the point of the non-negativity constraint is to reinforce the inequality.  Also note that the hyperplane <span class="process-math">\(x_j=0\)</span> also plays no role in this problem, since it does not serve as a bounding hyperplane. Thus, we may simply delete this row (after recording the equality) as this equality will have no bearing on future steps or the final solution. <div class="tabular-box natural-width"><table class="tabular">
+</table></div> that having a slack variable that can be negative serves no purpose, since the point of the nonnegativity constraint is to reinforce the inequality.  Also note that the hyperplane <span class="process-math">\(x_j=0\)</span> also plays no role in this problem, since it does not serve as a bounding hyperplane. Thus, we may simply delete this row (after recording the equality) as this equality will have no bearing on future steps or the final solution. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -636,9 +634,12 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summarynoncanon-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-summarynoncanon-4"><figure class="figure figure-like" id="figure-videochapter3negativity"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="figure-videochapter3negativity-2" class="video" controls="" poster="external/images/Chapter3-Negativity.png"><source src="external/images/Chapter3-Negativity.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span>A summary of unconstrained variables.</figcaption></figure></div>
+<div class="para" id="sec-summarynoncanon-4">
+<figure class="figure figure-like" id="figure-videochapter3negativity"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="figure-videochapter3negativity-2" class="video" controls="" poster="external/images/Chapter3-Negativity.png"><source src="external/images/Chapter3-Negativity.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A summary of unconstrained variables.<div class="autopermalink" data-description="Figure 3.4.1"><a href="#figure-videochapter3negativity" title="Copy heading and permalink for Figure 3.4.1" aria-label="Copy heading and permalink for Figure 3.4.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#sec-summarynoncanon-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="sec-summarynoncanon-5">Next we consider the case where the feasible region is bound by an equality, rather than an inequality.  In such a case, the slack variable <span class="process-math">\(t_i\)</span> must be zero. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -745,8 +746,9 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summarynoncanon-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-summarynoncanon-6">Now in this case, if we pivot on <span class="process-math">\(a_{ij}^*\)</span> entry, we obtain: <div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="sec-summarynoncanon-6">Now in this case, if we pivot on <span class="process-math">\(a_{ij}\)</span> entry, we obtain: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_1\)</span></td>
@@ -852,6 +854,7 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summarynoncanon-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-summarynoncanon-7">Note that what the coefficients <span class="process-math">\(a_{ij}, c_j\)</span> are, they are coefficients of the “variable” <span class="process-math">\(0\)</span> and are thus irrelevant.  Moreover, we cannot pivot away from this plane, since our feasible region is contained completely within the plane. Thus we may delete this column. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
@@ -951,9 +954,13 @@ true);
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-summarynoncanon-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-summarynoncanon-8"><figure class="figure figure-like" id="figure-videochapter3Equality"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="figure-videochapter3Equality-2" class="video" controls="" poster="external/images/Chapter3-Equality.png"><source src="external/images/Chapter3-Equality.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.2<span class="period">.</span></span><span class="space"> </span>A summary of equality constraints.</figcaption></figure></div></section></div>
+<div class="para" id="sec-summarynoncanon-8">
+<figure class="figure figure-like" id="figure-videochapter3Equality"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><video id="figure-videochapter3Equality-2" class="video" controls="" poster="external/images/Chapter3-Equality.png"><source src="external/images/Chapter3-Equality.mp4" type="video/mp4"></source>Your browser does not support the &lt;video&gt; tag.</video></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A summary of equality constraints.<div class="autopermalink" data-description="Figure 3.4.2"><a href="#figure-videochapter3Equality" title="Copy heading and permalink for Figure 3.4.2" aria-label="Copy heading and permalink for Figure 3.4.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#sec-summarynoncanon-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 3.4: Summary of Chapter 3"><a href="#sec-summarynoncanon" title="Copy heading and permalink for Section 3.4: Summary of Chapter 3" aria-label="Copy heading and permalink for Section 3.4: Summary of Chapter 3">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-noncanonsage.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-exercisesnoncanon.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

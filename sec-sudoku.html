@@ -120,15 +120,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.7.1';
+eBookConfig.runestone_version = '7.9.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cf591bce111c14c1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.472f5a2f0bfe3571.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
@@ -146,7 +146,7 @@ sagecell.makeSagecell({
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -217,10 +217,7 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
 <ul class="structural toc-item-list">
@@ -354,50 +351,88 @@ true);
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-sudoku"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">9.2</span><span class="space"> </span><span class="title">Sudoku</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sudoku</span>
 </h2>
-<section class="introduction" id="sec-sudoku-3"><div class="para" id="sec-sudoku-3-1">In this section, we explore a curious application of linear programming.  Solving sudokus!</div></section><article class="exploration project-like" id="exploration-sudoku"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span>
+<section class="introduction" id="sec-sudoku-3"><div class="para" id="sec-sudoku-3-1">In this section, we explore a curious application of linear programming.  Solving sudokus!<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exploration project-like" id="exploration-sudoku"><h3 class="heading">
+<span class="type">Exploration</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="exploration-sudoku-1">
-<div class="para" id="exploration-sudoku-1-1">Consider the following sudoku puzzle:</div>
+<div class="para" id="exploration-sudoku-1-1">Consider the following sudoku puzzle:<div class="autopermalink" data-description="Paragraph"><a href="#exploration-sudoku-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/sudoku.svg" role="img" class="contained" alt="A sudoku puzzle."></div>
 <div class="para logical" id="exploration-sudoku-1-3">
 <div class="para">Note that the rules for sudoku are that we fill in each entry with an integer <span class="process-math">\(1, \ldots,9\)</span> so that:</div>
 <ul class="disc" id="exploration-sudoku-1-3-2">
-<li id="exploration-sudoku-1-3-2-1"><div class="para" id="exploration-sudoku-1-3-2-1-1">Each row contains exactly one of each number.</div></li>
-<li id="exploration-sudoku-1-3-2-2"><div class="para" id="exploration-sudoku-1-3-2-2-1">Each column contains exactly one of each number.</div></li>
-<li id="exploration-sudoku-1-3-2-3"><div class="para" id="exploration-sudoku-1-3-2-3-1">Each <span class="process-math">\(3\times 3\)</span> “block” contains exactly one of each number.</div></li>
+<li id="exploration-sudoku-1-3-2-1">
+<div class="para" id="exploration-sudoku-1-3-2-1-1">Each row contains exactly one of each number.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-sudoku-1-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#exploration-sudoku-1-3-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="exploration-sudoku-1-3-2-2">
+<div class="para" id="exploration-sudoku-1-3-2-2-1">Each column contains exactly one of each number.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-sudoku-1-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#exploration-sudoku-1-3-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="exploration-sudoku-1-3-2-3">
+<div class="para" id="exploration-sudoku-1-3-2-3-1">Each <span class="process-math">\(3\times 3\)</span> “block” contains exactly one of each number.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-sudoku-1-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#exploration-sudoku-1-3-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#exploration-sudoku-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
 <article class="task exercise-like" id="exploration-sudoku-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="exploration-sudoku-2-1-1">Solve the above sudoku if you feel like it.</div></article></article><article class="remark remark-like" id="sec-sudoku-5"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="period">.</span>
+<div class="para" id="exploration-sudoku-2-1-1">Solve the above sudoku if you feel like it.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-sudoku-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.1.a"><a href="#exploration-sudoku-2" title="Copy heading and permalink for Task 9.2.1.a" aria-label="Copy heading and permalink for Task 9.2.1.a">🔗</a></div></article><div class="autopermalink" data-description="Exploration 9.2.1"><a href="#exploration-sudoku" title="Copy heading and permalink for Exploration 9.2.1" aria-label="Copy heading and permalink for Exploration 9.2.1">🔗</a></div></article><article class="remark remark-like" id="sec-sudoku-5"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="sec-sudoku-5-1">We consider the standard sudokus like the one above an <dfn class="terminology">order</dfn> sudoku: we have <span class="process-math">\(3\times 3\)</span>  “blocks”, each with <span class="process-math">\(3\times 3\)</span> entries.  Potential values range from <span class="process-math">\(1\)</span> through <span class="process-math">\(3^2\text{.}\)</span>  Other orders are also possible.</div></article><div class="para" id="sec-sudoku-6">More sudokus may be found at <a class="external" href="https://www.websudoku.com/" target="_blank">https://www.websudoku.com/</a><details class="ptx-footnote" aria-live="polite" id="sec-sudoku-6-2"><summary class="ptx-footnote__number" title="Footnote 9.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-sudoku-6-2"><code class="code-inline tex2jax_ignore">www.websudoku.com/</code></div></details>
+<div class="para" id="sec-sudoku-5-1">We consider the standard sudokus like the one above an <dfn class="terminology">order</dfn> sudoku: we have <span class="process-math">\(3\times 3\)</span>  “blocks”, each with <span class="process-math">\(3\times 3\)</span> entries.  Potential values range from <span class="process-math">\(1\)</span> through <span class="process-math">\(3^2\text{.}\)</span>  Other orders are also possible.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 9.2.2"><a href="#sec-sudoku-5" title="Copy heading and permalink for Remark 9.2.2" aria-label="Copy heading and permalink for Remark 9.2.2">🔗</a></div></article><div class="para" id="sec-sudoku-6">More sudokus may be found at <a class="external" href="https://www.websudoku.com/" target="_blank">https://www.websudoku.com/</a><div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="activity project-like" id="activity-order3sudoku"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="activity-order3sudoku-1"><div class="para" id="activity-order3sudoku-1-1">Consider a general order <span class="process-math">\(3\)</span> sudoku puzzle.  We want to define a linear maximization problem that solves a given puzzle.  Let <span class="process-math">\(x_{ijk}=1\)</span> is a solution has value <span class="process-math">\(k\)</span> in entry <span class="process-math">\(i, j\)</span> (measured from the bottom left), and <span class="process-math">\(x_{ijk}=0\)</span> otherwise.</div></div>
+<div class="introduction" id="activity-order3sudoku-1"><div class="para" id="activity-order3sudoku-1-1">Consider a general order <span class="process-math">\(3\)</span> sudoku puzzle.  We want to define a linear maximization problem that solves a given puzzle.  Let <span class="process-math">\(x_{ijk}=1\)</span> is a solution has value <span class="process-math">\(k\)</span> in entry <span class="process-math">\(i, j\)</span> (measured from the bottom left), and <span class="process-math">\(x_{ijk}=0\)</span> otherwise.<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="activity-order3sudoku-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="activity-order3sudoku-2-1-1">For the <span class="process-math">\(i,j\)</span>th entry, write a linear equality constraint which ensures a value is chosen.</div></article><article class="task exercise-like" id="activity-order3sudoku-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="activity-order3sudoku-3-1-1">For row <span class="process-math">\(i\text{,}\)</span> write 9 equality conditions so that this row contains one of each entry.</div></article><article class="task exercise-like" id="activity-order3sudoku-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="activity-order3sudoku-4-1-1">For column <span class="process-math">\(j\text{,}\)</span> write 9 equality conditions so that this column contains one of each entry.</div></article><article class="task exercise-like" id="activity-order3sudoku-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="activity-order3sudoku-5-1-1">For an arbitrary block, write 9 equality conditions so that this block contains one of each entry.</div></article><article class="task exercise-like" id="activity-order3sudoku-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="activity-order3sudoku-6-1-1">Now consider the sudoku puzzle from <a href="sec-sudoku.html#exploration-sudoku" class="xref" data-knowl="./knowl/xref/exploration-sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.2.1">Exploration 9.2.1</a>. How could we write out appropriate equality conditions fixing each entry?</div></article><article class="task exercise-like" id="activity-order3sudoku-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="activity-order3sudoku-7-1-1">Are there any other constraints we need?</div></article><article class="task exercise-like" id="activity-order3sudoku-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="activity-order3sudoku-8-1-1">What should the objective function be?  (Does it matter?)</div></article></article><div class="para" id="sec-sudoku-8">Obviously, this would be an absolutely absurdly large problem to even fully write out, much less solve.  We consider something simpler.</div>
+<div class="para" id="activity-order3sudoku-2-1-1">For the <span class="process-math">\(i,j\)</span>th entry, write a linear equality constraint which ensures a value is chosen.<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.a"><a href="#activity-order3sudoku-2" title="Copy heading and permalink for Task 9.2.3.a" aria-label="Copy heading and permalink for Task 9.2.3.a">🔗</a></div></article><article class="task exercise-like" id="activity-order3sudoku-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-order3sudoku-3-1-1">For row <span class="process-math">\(i\text{,}\)</span> write 9 equality conditions so that this row contains one of each entry.<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.b"><a href="#activity-order3sudoku-3" title="Copy heading and permalink for Task 9.2.3.b" aria-label="Copy heading and permalink for Task 9.2.3.b">🔗</a></div></article><article class="task exercise-like" id="activity-order3sudoku-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="activity-order3sudoku-4-1-1">For column <span class="process-math">\(j\text{,}\)</span> write 9 equality conditions so that this column contains one of each entry.<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.c"><a href="#activity-order3sudoku-4" title="Copy heading and permalink for Task 9.2.3.c" aria-label="Copy heading and permalink for Task 9.2.3.c">🔗</a></div></article><article class="task exercise-like" id="activity-order3sudoku-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="activity-order3sudoku-5-1-1">For an arbitrary block, write 9 equality conditions so that this block contains one of each entry.<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.d"><a href="#activity-order3sudoku-5" title="Copy heading and permalink for Task 9.2.3.d" aria-label="Copy heading and permalink for Task 9.2.3.d">🔗</a></div></article><article class="task exercise-like" id="activity-order3sudoku-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="activity-order3sudoku-6-1-1">Now consider the sudoku puzzle from <a href="sec-sudoku.html#exploration-sudoku" class="xref" data-knowl="./knowl/xref/exploration-sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 9.2.1">Exploration 9.2.1</a>. How could we write out appropriate equality conditions fixing each entry?<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.e"><a href="#activity-order3sudoku-6" title="Copy heading and permalink for Task 9.2.3.e" aria-label="Copy heading and permalink for Task 9.2.3.e">🔗</a></div></article><article class="task exercise-like" id="activity-order3sudoku-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="activity-order3sudoku-7-1-1">Are there any other constraints we need?<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.f"><a href="#activity-order3sudoku-7" title="Copy heading and permalink for Task 9.2.3.f" aria-label="Copy heading and permalink for Task 9.2.3.f">🔗</a></div></article><article class="task exercise-like" id="activity-order3sudoku-8"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="activity-order3sudoku-8-1-1">What should the objective function be?  (Does it matter?)<div class="autopermalink" data-description="Paragraph"><a href="#activity-order3sudoku-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.3.g"><a href="#activity-order3sudoku-8" title="Copy heading and permalink for Task 9.2.3.g" aria-label="Copy heading and permalink for Task 9.2.3.g">🔗</a></div></article><div class="autopermalink" data-description="Activity 9.2.3"><a href="#activity-order3sudoku" title="Copy heading and permalink for Activity 9.2.3" aria-label="Copy heading and permalink for Activity 9.2.3">🔗</a></div></article><div class="para" id="sec-sudoku-8">Obviously, this would be an absolutely absurdly large problem to even fully write out, much less solve.  We consider something simpler.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="sec-sudoku-9"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9.2.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="introduction" id="sec-sudoku-9-1">
-<div class="para" id="sec-sudoku-9-1-1">Consider the following order 2 sudoku puzzle:</div>
+<div class="para" id="sec-sudoku-9-1-1">Consider the following order 2 sudoku puzzle:<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sudokusmall.svg" role="img" class="contained" alt="An order 2 sudoku puzzle."></div>
 </div>
 <article class="task exercise-like" id="sec-sudoku-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-sudoku-9-2-1-1">Following <a href="sec-sudoku.html#activity-order3sudoku" class="xref" data-knowl="./knowl/xref/activity-order3sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.2.3">Activity 9.2.3</a>, write out the linear optimization problem which would compute the solved puzzle.</div></article><article class="task exercise-like" id="sec-sudoku-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-sudoku-9-2-1-1">Following <a href="sec-sudoku.html#activity-order3sudoku" class="xref" data-knowl="./knowl/xref/activity-order3sudoku.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.2.3">Activity 9.2.3</a>, write out the linear optimization problem which would compute the solved puzzle.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-9-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.4.a"><a href="#sec-sudoku-9-2" title="Copy heading and permalink for Task 9.2.4.a" aria-label="Copy heading and permalink for Task 9.2.4.a">🔗</a></div></article><article class="task exercise-like" id="sec-sudoku-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-sudoku-9-3-1-1">If you <em class="emphasis">really</em> want to, solve this problem (there are 64 decision variables so...): <div id="sec-sudoku-9-3-1-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">%display typeset
 A = (FIXME)
 b = (FIXME)
@@ -411,12 +446,18 @@ P
 </script></div> <div id="sec-sudoku-9-3-1-1-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">print(P.optimal_solution())
 print(P.optimal_value())
 </script></div>
-</div></article></article><div class="para" id="sec-sudoku-10">This provides an oppourtunity for an enteprising student to engage in some further exploration.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-9-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.2.4.b"><a href="#sec-sudoku-9-3" title="Copy heading and permalink for Task 9.2.4.b" aria-label="Copy heading and permalink for Task 9.2.4.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 9.2.4"><a href="#sec-sudoku-9" title="Copy heading and permalink for Activity 9.2.4" aria-label="Copy heading and permalink for Activity 9.2.4">🔗</a></div></article><div class="para" id="sec-sudoku-10">This provides an opportunity for an enterprising student to engage in some further exploration.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="project project-like" id="sec-sudoku-11"><h3 class="heading">
-<span class="type">Project</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span>
+<span class="type">Project</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="sec-sudoku-11-1">Write  <em class="emphasis">effecient</em> code in Sage where one inputs a <span class="process-math">\(9\times 9\)</span> matrix representing a sudoku puzzle (with maybe 0’s for blank entries), and the code produces the appropriate linear optimization problem and solves it.</div>
-<div class="para" id="sec-sudoku-11-2">For more advanced or experienced coders, generalize this to allow the <code class="code-inline tex2jax_ignore">order</code> of the sudoku puzzle to be a parameter.</div></article></section></div>
+<div class="para" id="sec-sudoku-11-1">Write  <em class="emphasis">efficient</em> code in Sage where one inputs a <span class="process-math">\(9\times 9\)</span> matrix representing a sudoku puzzle (with maybe 0’s for blank entries), and the code produces the appropriate linear optimization problem and solves it.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-sudoku-11-2">For more advanced or experienced coders, generalize this to allow the <code class="code-inline tex2jax_ignore">order</code> of the sudoku puzzle to be a parameter.<div class="autopermalink" data-description="Paragraph"><a href="#sec-sudoku-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Project 9.2.5"><a href="#sec-sudoku-11" title="Copy heading and permalink for Project 9.2.5" aria-label="Copy heading and permalink for Project 9.2.5">🔗</a></div></article><div class="autopermalink" data-description="Section 9.2: Sudoku"><a href="#sec-sudoku" title="Copy heading and permalink for Section 9.2: Sudoku" aria-label="Copy heading and permalink for Section 9.2: Sudoku">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-covermatch.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-scheduling.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

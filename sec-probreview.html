@@ -120,15 +120,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.7.1';
+eBookConfig.runestone_version = '7.9.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cf591bce111c14c1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.472f5a2f0bfe3571.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-r' an executable Sage cell
 // Their results will be linked, only within language type
@@ -146,7 +146,7 @@ sagecell.makeSagecell({
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization:</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
@@ -217,10 +217,7 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pivot.html#sec-curious" class="internal"><span class="codenumber">2.1.1</span> <span class="title">A Curious Situation</span></a></div></li></ul>
-</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
 <ul class="structural toc-item-list">
@@ -354,35 +351,47 @@ true);
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-probreview"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">A.2</span><span class="space"> </span><span class="title">Probability Theory Review</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Probability Theory Review</span>
 </h2>
-<section class="introduction" id="sec-probreview-2"><div class="para" id="sec-probreview-2-1">This is an extremely brief “review” of the limited probability theory we utilize in <a href="ch-games.html" class="internal" title="Chapter 5: Zero-Sum Games">Chapter 5</a>.  It’s not even particularly fair to call this a review, since probability is not a prerequisite to this course.  However, the limited amount we use is fairly straightforward and intuitive.</div>
-<div class="para" id="sec-probreview-2-2">If a more thorough treatment is needed, then depending on your goals, there are good options available.  For someone looking to explore some elementary probability theory, the introductory statistics textbook <a class="external" href="https://www.openintro.org/book/os/" target="_blank">“OpenIntro Statistics”</a><details class="ptx-footnote" aria-live="polite" id="sec-probreview-2-2-2"><summary class="ptx-footnote__number" title="Footnote A.2.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-probreview-2-2-2"><code class="code-inline tex2jax_ignore">www.openintro.org/book/os/</code></div></details> by David Diez, Christopher Barr, and Mine Çetinkaya-Rundel does a good job presenting this material.  It also is an excellent introducotry statistics text with labs and data available.  For a calculus-based, theory heavy treatment of this text, I recommend <a class="external" href="https://www.markhuberdatascience.org/probability-textbook" target="_blank">“Probability: Lecture and Labs”</a><details class="ptx-footnote" aria-live="polite" id="sec-probreview-2-2-4"><summary class="ptx-footnote__number" title="Footnote A.2.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-probreview-2-2-4"><code class="code-inline tex2jax_ignore">www.markhuberdatascience.org/probability-textbook</code></div></details>.</div></section><article class="definition definition-like" id="def-basicprob"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.2.1</span><span class="period">.</span>
+<section class="introduction" id="sec-probreview-2"><div class="para" id="sec-probreview-2-1">This is an extremely brief “review” of the limited probability theory we utilize in <a href="ch-games.html" class="internal" title="Chapter 5: Zero-Sum Games">Chapter 5</a>.  It’s not even particularly fair to call this a review, since probability is not a prerequisite to this course.  However, the limited amount we use is fairly straightforward and intuitive.<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-probreview-2-2">If a more thorough treatment is needed, then depending on your goals, there are good options available.  For someone looking to explore some elementary probability theory, the introductory statistics textbook <a class="external" href="https://www.openintro.org/book/os/" target="_blank">“OpenIntro Statistics”</a> by David Diez, Christopher Barr, and Mine Çetinkaya-Rundel does a good job presenting this material.  It also is an excellent introductory statistics text with labs and data available.  For a calculus-based, theory heavy treatment of this text, I recommend <a class="external" href="https://www.markhuberdatascience.org/probability-textbook" target="_blank">“Probability: Lecture and Labs”</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="definition definition-like" id="def-basicprob"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="def-basicprob-1-1">In probability, an <dfn class="terminology">experiment</dfn> is an  occurrence with a measurable result. Each instance of an experiment is  a <dfn class="terminology">trial</dfn>. The possible results of each trial are called <dfn class="terminology">outcomes</dfn>. The set of all possible outcomes for an experiment is the <dfn class="terminology">sample space</dfn> for that experiment.</div></article><article class="definition definition-like" id="def-prob"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.2.2</span><span class="period">.</span>
+<div class="para" id="def-basicprob-1-1">In probability, an <dfn class="terminology">experiment</dfn> is an  occurrence with a measurable result. Each instance of an experiment is  a <dfn class="terminology">trial</dfn>. The possible results of each trial are called <dfn class="terminology">outcomes</dfn>. The set of all possible outcomes for an experiment is the <dfn class="terminology">sample space</dfn> for that experiment.<div class="autopermalink" data-description="Paragraph"><a href="#def-basicprob-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition A.2.1"><a href="#def-basicprob" title="Copy heading and permalink for Definition A.2.1" aria-label="Copy heading and permalink for Definition A.2.1">🔗</a></div></article><article class="definition definition-like" id="def-prob"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-prob-1-1">
 <div class="para">Given an experiment with sample space <span class="process-math">\(S\text{:}\)</span>
 </div>
 <ul class="disc" id="def-prob-1-1-2">
-<li id="def-prob-1-1-2-1"><div class="para" id="p-derived-def-prob-1-1-2-1">An <dfn class="terminology">event</dfn> <span class="process-math">\(A\)</span> is a subset of <span class="process-math">\(S\text{.}\)</span>
-</div></li>
-<li id="def-prob-1-1-2-2"><div class="para" id="p-derived-def-prob-1-1-2-2">
-<em class="emphasis">If</em> each outcome in the sample space is equally likely, then the <dfn class="terminology">probability</dfn> of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(P(A)\)</span> is<div class="displaymath process-math">
+<li id="def-prob-1-1-2-1">
+<div class="para" id="p-derived-def-prob-1-1-2-1">An <dfn class="terminology">event</dfn> <span class="process-math">\(A\)</span> is a subset of <span class="process-math">\(S\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#def-prob-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-prob-1-1-2-2">
+<div class="para" id="p-derived-def-prob-1-1-2-2">Supposing each outcome in the sample space is equally likely, then the <dfn class="terminology">probability</dfn> of <span class="process-math">\(A\text{,}\)</span> denoted <span class="process-math">\(P(A)\)</span> is<div class="displaymath process-math">
 \begin{equation*}
 P(A)=\frac{|A|}{|S|}.
 \end{equation*}
 </div>
-</div></li>
-</ul>
-</div></article><article class="remark remark-like" id="sec-probreview-5"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">A.2.3</span><span class="period">.</span>
-</h3>
-<div class="para" id="sec-probreview-5-1">But what does it mean for an event <span class="process-math">\(A\)</span> to have probability <span class="process-math">\(P(A)\text{?}\)</span>  It means that if I repeat the experiment over and over, the proportion of them where <span class="process-math">\(A\)</span> is true should be <span class="process-math">\(P(A)\text{.}\)</span>
 </div>
-<div class="para" id="sec-probreview-5-2">So if I roll a die over and over, the proportion of them that give me a 6 over time should be <span class="process-math">\(\frac{1}{6}\text{.}\)</span>  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:</div>
+<div class="autopermalink" data-description="Item"><a href="#def-prob-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-prob-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition A.2.2"><a href="#def-prob" title="Copy heading and permalink for Definition A.2.2" aria-label="Copy heading and permalink for Definition A.2.2">🔗</a></div></article><article class="remark remark-like" id="sec-probreview-5"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-probreview-5-1">But what does it mean for an event <span class="process-math">\(A\)</span> to have probability <span class="process-math">\(P(A)\text{?}\)</span>  It means that if I repeat the experiment over and over, the proportion of them where <span class="process-math">\(A\)</span> is true should be <span class="process-math">\(P(A)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-probreview-5-2">So if I roll a die over and over, the proportion of them that give me a 6 over time should be <span class="process-math">\(\frac{1}{6}\text{.}\)</span>  So if we roll a dice 10000 times, we would expect one sixth of them to come up heads:<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div id="sec-probreview-5-3" class="ptx-sagecell sagecell-r"><script type="text/x-sage">          n=10000
 
 sixes=0
@@ -398,26 +407,38 @@ Sixvec<-c(Sixvec, sixes/i)
 
 plot(Sixvec, type="l", ylim=c(0,1))
 abline(h=1/6, col="red", lty=2)
-</script></div></article><article class="definition definition-like" id="def-rv"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.2.4</span><span class="period">.</span>
+</script></div>
+<div class="autopermalink" data-description="Remark A.2.3"><a href="#sec-probreview-5" title="Copy heading and permalink for Remark A.2.3" aria-label="Copy heading and permalink for Remark A.2.3">🔗</a></div></article><article class="definition definition-like" id="def-rv"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="def-rv-1-1">A <dfn class="terminology">random variable</dfn> is a function from sample space to an outcome set. For our purposes, this set of outcomes will always be <span class="process-math">\(\mathbb{R}\text{.}\)</span>
-</div></article><div class="para" id="sec-probreview-7">A <dfn class="terminology">probability distribution</dfn> is, roughly speaking, a complete description of a random variable and the likelihood of each output.  In the case of random variables with a finite number of possible outputs a <dfn class="terminology">probability distribution table</dfn> is a convenient way of presenting this information.</div>
+<div class="para" id="def-rv-1-1">A <dfn class="terminology">random variable</dfn> is a function from sample space to an outcome set. For our purposes, this set of outcomes will always be <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-rv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition A.2.4"><a href="#def-rv" title="Copy heading and permalink for Definition A.2.4" aria-label="Copy heading and permalink for Definition A.2.4">🔗</a></div></article><div class="para" id="sec-probreview-7">A <dfn class="terminology">probability distribution</dfn> is, roughly speaking, a complete description of a random variable and the likelihood of each output.  In the case of random variables with a finite number of possible outputs a <dfn class="terminology">probability distribution table</dfn> is a convenient way of presenting this information.<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="remark remark-like" id="sec-probreview-8"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">A.2.5</span><span class="period">.</span>
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-probreview-8-1-1">
 <div class="para">To check if something is a valid probability distribution, for any possible outcome <span class="process-math">\(x\)</span> of <span class="process-math">\(X\)</span> we must have:</div>
 <ul class="disc" id="sec-probreview-8-1-1-3">
-<li id="sec-probreview-8-1-1-3-1"><div class="para" id="p-derived-sec-probreview-8-1-1-3-1">
-<span class="process-math">\(0\leq P(X=x)\leq1\text{.}\)</span>  This ensures all outcomes are valid probabilities.</div></li>
-<li id="sec-probreview-8-1-1-3-2"><div class="para" id="p-derived-sec-probreview-8-1-1-3-2">
-<span class="process-math">\(\sum P(X=x)=1\text{.}\)</span>  The sum of the probabilities of all outcomes should be 100% of the outcomes</div></li>
+<li id="sec-probreview-8-1-1-3-1">
+<div class="para" id="p-derived-sec-probreview-8-1-1-3-1">
+<span class="process-math">\(0\leq P(X=x)\leq1\text{.}\)</span>  This ensures all outcomes are valid probabilities.</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-probreview-8-1-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-probreview-8-1-1-3-2">
+<div class="para" id="p-derived-sec-probreview-8-1-1-3-2">
+<span class="process-math">\(\sum P(X=x)=1\text{.}\)</span>  The sum of the probabilities of all outcomes should be 100% of the outcomes</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-probreview-8-1-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article><article class="example example-like" id="ex-apple"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Poisoned apples.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark A.2.5"><a href="#sec-probreview-8" title="Copy heading and permalink for Remark A.2.5" aria-label="Copy heading and permalink for Remark A.2.5">🔗</a></div></article><article class="example example-like" id="ex-apple"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Poisoned apples.</span>
 </h3>
-<div class="para" id="ex-apple-2-1">Snow White has a basket of 10 apples, 3 are poisoned.  She is going to pick 4 apples at random to eat for some reason.  Let <span class="process-math">\(X\)</span> denote the number of poisoned apples she eats.</div> <div class="para logical" id="ex-apple-2-2">
+<div class="para" id="ex-apple-2-1">Snow White has a basket of 10 apples, 3 are poisoned.  She is going to pick 4 apples at random to eat for some reason.  Let <span class="process-math">\(X\)</span> denote the number of poisoned apples she eats.<div class="autopermalink" data-description="Paragraph"><a href="#ex-apple-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-apple-2-2">
 <div class="para">The probability distribution for <span class="process-math">\(X\)</span> would be:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -454,6 +475,7 @@ P(X=x) \amp \approx 0.1667\amp 0.5 \amp 0.3 \amp \approx 0.0333\\
 \end{array}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-apple-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-apple-2-3">This can be seen by the following R simulation: <div id="ex-apple-2-3-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            n=1000
 poison = 3
 notpoison = 7
@@ -469,19 +491,24 @@ for(i in 1:n){
 }
 hist(numpoison)
 </script></div>
-</div></article><article class="definition definition-like" id="def-expectation"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.2.7</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-apple-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example A.2.6: Poisoned apples"><a href="#ex-apple" title="Copy heading and permalink for Example A.2.6: Poisoned apples" aria-label="Copy heading and permalink for Example A.2.6: Poisoned apples">🔗</a></div></article><article class="definition definition-like" id="def-expectation"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-expectation-1">
-<div class="para">Given a finite random variable  <span class="process-math">\(X\text{,}\)</span> it’s <dfn class="terminology">expected value</dfn> is the predicted average outcome of experiments, and is computed:</div>
+<div class="para">Given a finite random variable  <span class="process-math">\(X\text{,}\)</span> its <dfn class="terminology">expected value</dfn> is the predicted average outcome of experiments, and is computed:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 E(X)=\sum P(X=x)\cdot x.
 \end{equation*}
 </div>
-</div></article><div class="para" id="sec-probreview-11">Note that the “Expected Value” may not be a value we actually expect, that is, may not be one of the outcomes, just an average outcome. We think of this as the outcomes of <span class="process-math">\(X\text{,}\)</span> weighted by their likelihood, so the more likely outcomes contribute more than the less likely ones.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-expectation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition A.2.7"><a href="#def-expectation" title="Copy heading and permalink for Definition A.2.7" aria-label="Copy heading and permalink for Definition A.2.7">🔗</a></div></article><div class="para" id="sec-probreview-11">Note that the “Expected Value” may not be a value we actually expect, that is, may not be one of the outcomes, just an average outcome. We think of this as the outcomes of <span class="process-math">\(X\text{,}\)</span> weighted by their likelihood, so the more likely outcomes contribute more than the less likely ones.<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="sec-probreview-12"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">A.2.8</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-probreview-12-1-1">
 <div class="para">Recall <a href="sec-probreview.html#ex-apple" class="xref" data-knowl="./knowl/xref/ex-apple.html" data-reveal-label="Reveal" data-close-label="Close" title="Example A.2.6: Poisoned apples">Example A.2.6</a>.  The expected value of poisoned apples would be</div>
@@ -490,12 +517,16 @@ E(X)=\sum P(X=x)\cdot x.
 E(X)=0\cdot\frac{35}{210}+1\cdot\frac{105}{210}+2\cdot\frac{63}{210}+3\cdot\frac{7}{210}=1.2.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="sec-probreview-12-1-2">We can compute the mean of the previously simulated number of poisoned apples and visualize it: <div id="sec-probreview-12-1-2-1" class="ptx-sagecell sagecell-r"><script type="text/x-sage">            hist(numpoison)
 avgpoison = mean(numpoison)
 abline(v = avgpoison, lwd = 2, lty = 2, col = "red")
 print(avgpoison)
 </script></div>
-</div> <div class="para" id="sec-probreview-12-1-3">Be sure to run the simulation in <a href="sec-probreview.html#ex-apple" class="xref" data-knowl="./knowl/xref/ex-apple.html" data-reveal-label="Reveal" data-close-label="Close" title="Example A.2.6: Poisoned apples">Example A.2.6</a> first!</div></article></section></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-12-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-probreview-12-1-3">Be sure to run the simulation in <a href="sec-probreview.html#ex-apple" class="xref" data-knowl="./knowl/xref/ex-apple.html" data-reveal-label="Reveal" data-close-label="Close" title="Example A.2.6: Poisoned apples">Example A.2.6</a> first!<div class="autopermalink" data-description="Paragraph"><a href="#sec-probreview-12-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example A.2.8"><a href="#sec-probreview-12" title="Copy heading and permalink for Example A.2.8" aria-label="Copy heading and permalink for Example A.2.8">🔗</a></div></article><div class="autopermalink" data-description="Section A.2: Probability Theory Review"><a href="#sec-probreview" title="Copy heading and permalink for Section A.2: Probability Theory Review" aria-label="Copy heading and permalink for Section A.2: Probability Theory Review">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-lareview.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="simplexpivoter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
