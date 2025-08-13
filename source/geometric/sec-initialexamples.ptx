@@ -177,7 +177,7 @@
     <idx>canonical</idx>
     <p>
       The term <term>canonical</term> in this context refers to the fact that
-      for both of the above problems, the <m>x_i</m> are non-negative,
+      for both of the above problems, the <m>x_i</m> are nonnegative,
       and each bound is an inequality.
     </p>
     <p>

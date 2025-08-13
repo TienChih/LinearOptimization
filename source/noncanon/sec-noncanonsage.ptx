@@ -14,7 +14,7 @@
   <activity>
     <introduction>
       <p>
-        Say we want to solve the non-canonical linear optimization problem:
+        Say we want to solve the noncanonical linear optimization problem:
         <p>
           <md>
             <mrow>\textbf{Minimize: }  f(\mathbf{x}) &amp; = 3x+y+2z</mrow>
@@ -28,7 +28,7 @@
     <task>
       <statement>
         <p>
-          Record this non-canonical problem using Sage:
+          Record this noncanonical problem using Sage:
         </p>
         <p>
           <sage>
@@ -67,7 +67,7 @@
 
   <p>
     Note that we use the command <c>InteractiveLPProblem</c> rather than
-    <c>InteractiveLPProblemStandardForm</c> for general (potentially non-canonical) linear optimization problems.
+    <c>InteractiveLPProblemStandardForm</c> for general (potentially noncanonical) linear optimization problems.
     Sage does not have a command for the Simplex Algorithm for <c>InteractiveLPProblem</c>.
   </p>
 

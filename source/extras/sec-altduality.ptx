@@ -30,14 +30,14 @@
     <task>
       <statement>
         <p>
-          Sketch two non-empty convex sets <m>U, V</m>, what does <m>H</m> look like here?
+          Sketch two nonempty convex sets <m>U, V</m>, what does <m>H</m> look like here?
         </p>
       </statement>
     </task>
     <task>
       <statement>
         <p>
-          Sketch two non-convex sets where <xref ref="thm-hyperplaneseperation"/> fails.
+          Sketch two nonconvex sets where <xref ref="thm-hyperplaneseperation"/> fails.
         </p>
       </statement>
     </task>

@@ -28,7 +28,7 @@
     <statement>
       <p>
         Given a capacitated network <m>N</m>, a <term>cut</term> of <m>N</m> is
-        a partition of the vertex set into non-empty subsets <m>C=(V_1, V_2)</m>, where <m>V=V_1\sqcup V_2, v_s\in V_1, v_d\in V_2</m>.
+        a partition of the vertex set into nonempty subsets <m>C=(V_1, V_2)</m>, where <m>V=V_1\sqcup V_2, v_s\in V_1, v_d\in V_2</m>.
       </p>
       <p>
         The <term>capacity</term> of a cut <m>C</m> is the sum <m>\displaystyle \sum_{v_i\in V_1, v_j\in V_2} c_{ij}</m>.
@@ -368,7 +368,7 @@ source, and no edges out of the sink. Then the value of the maximal flow from <m
   <activity>
     <statement>
       <p>
-        Suppose we had a non-optimal flow <m>f</m>, how could we adopt the procedure
+        Suppose we had a nonoptimal flow <m>f</m>, how could we adopt the procedure
         in <xref ref="activity-maxflowmincutproof"/> to obtain a better flow?
       </p>
     </statement>

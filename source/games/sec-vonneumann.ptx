@@ -410,7 +410,7 @@
           </tabular>
         </p>
         <p>
-          Write out the non-canonical primal problem including the objective function and constraint equalities and 
+          Write out the noncanonical primal problem including the objective function and constraint equalities and 
           inequalities involving the <m>q_i</m> and <m>\ec{v}</m> where appropriate. (There should be no slack variables here.)
         </p>
       </statement>
@@ -462,7 +462,7 @@
     <task>
       <statement>
         <p>
-          Why is the feasible region for Colleen's new problem non-empty but bounded?  What does the Extreme Value Theorem
+          Why is the feasible region for Colleen's new problem nonempty but bounded?  What does the Extreme Value Theorem
           then say about this?
         </p>
       </statement>

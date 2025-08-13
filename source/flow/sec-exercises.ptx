@@ -339,7 +339,7 @@
       <task>
         <statement>
           <p>
-            Write out the non-canonical maximization problem which would
+            Write out the noncanonical maximization problem which would
             compute the max-flow.
           </p>
         </statement>
@@ -456,7 +456,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            Given an example for <m>N</m> such that <m>N</m> has non-unique
+            Given an example for <m>N</m> such that <m>N</m> has nonunique
             max-flows.
           </p>
         </statement>
@@ -464,7 +464,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       <task>
         <statement>
           <p>
-            Given an example for <m>N</m> such that <m>N</m> has non-unique
+            Given an example for <m>N</m> such that <m>N</m> has nonunique
             min-cuts.
           </p>
         </statement>

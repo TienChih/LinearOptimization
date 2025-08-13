@@ -521,7 +521,7 @@
             <statement>
                 <p>
                     Let <m>V</m> be a vector space, then <m>W\subseteq V</m> is a 
-                   subspace of <m>V</m>, if <m>W</m> is non-empty, and if for any
+                   subspace of <m>V</m>, if <m>W</m> is nonempty, and if for any
                    <m>\p, \q\in W</m> and scalars <m>a,b</m>, we have that <m>a\p+b\q\in W</m>.
                 </p>
             </statement>

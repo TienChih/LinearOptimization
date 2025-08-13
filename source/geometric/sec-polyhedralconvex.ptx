@@ -296,7 +296,7 @@
       <p>
         <idx>convex, polyhedral</idx>
         A convex set <m>S</m> that is equal to a finite intersection
-        of half-spaces (defined by either strict or non-strict inequalities) is <term>polyhedral convex</term>.
+        of half-spaces (defined by either strict or nonstrict inequalities) is <term>polyhedral convex</term>.
       </p>
     </statement>
   </definition>
@@ -448,7 +448,7 @@
         -->
       </p>
       <p>
-        In other words, <m>\mathbf{e}</m> does not lie on any non-trivial line segment contained in <m>S</m>.
+        In other words, <m>\mathbf{e}</m> does not lie on any nontrivial line segment contained in <m>S</m>.
       </p>
     </statement>
   </definition>
