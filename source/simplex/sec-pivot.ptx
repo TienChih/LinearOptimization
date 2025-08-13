@@ -177,7 +177,7 @@
           <mrow>\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1</mrow>
           <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m+t_2\amp =  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m +t_m \amp =  b_n</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m +t_n \amp =  b_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
         as 
@@ -1659,8 +1659,8 @@
       <task>
         <statement>
           <p>
-            For each column <m>i</m>, consider the equality recorded by this tableau: <m>a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C + (-1)c_i=s_i</m>.
-            What must be true about <m>s_i</m> in order for <m>a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C \geq c_i</m>?
+            For each column <m>i</m>, consider the equality recorded by this tableau: <m>a_{1i}y_A + a_{2i}y_B+a_{3i}y_C + (-1)c_i=s_i</m>.
+            What must be true about <m>s_i</m> in order for <m>a_{1i}y_A + a_{2i}y_B+a_{3i}y_C \geq c_i</m>?
             <ol  marker="A." cols="2">
               <li>
                 <p>
