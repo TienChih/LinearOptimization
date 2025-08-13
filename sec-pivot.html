@@ -96,6 +96,7 @@ window.MathJax = {
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta property="og:image" content="https://tienchih.github.io/LinearOptimization/external/images/LO-cover.png">
 <meta property="book:title" content="Linear Optimization">
 <meta property="book:author" content="Tien Chih">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
@@ -133,10 +134,12 @@ eBookConfig.enable_chatcodes =  false;
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<img src="external/images/LO-cover.png" alt="Logo image"><div class="title-container">
 <h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
 <p class="byline">Tien Chih</p>
-</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -471,7 +474,7 @@ x_1, x_2, \ldots, x_m\amp \geq  0.
 \textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m + t_1 \amp =  b_1\\
 a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m+t_2\amp =  b_2\\
 \vdots \amp   \vdots\\
-a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m +t_m \amp =  b_n\\
+a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m +t_n \amp =  b_n\\
 x_1, x_2, \ldots, x_m\amp \geq  0
 \end{align*}
 </div>
@@ -1205,7 +1208,7 @@ y_A +2y_B+2y_C \amp \geq 200 \\
 </div>
 <article class="task exercise-like" id="activity-insurance-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="activity-insurance-2-1-1">
-<div class="para">For each column <span class="process-math">\(i\text{,}\)</span> consider the equality recorded by this tableau: <span class="process-math">\(a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C + (-1)c_i=s_i\text{.}\)</span> What must be true about <span class="process-math">\(s_i\)</span> in order for <span class="process-math">\(a_{1i}Y_A + a_{2i}Y_B+a_{3i}Y_C \geq c_i\text{?}\)</span>
+<div class="para">For each column <span class="process-math">\(i\text{,}\)</span> consider the equality recorded by this tableau: <span class="process-math">\(a_{1i}y_A + a_{2i}y_B+a_{3i}y_C + (-1)c_i=s_i\text{.}\)</span> What must be true about <span class="process-math">\(s_i\)</span> in order for <span class="process-math">\(a_{1i}y_A + a_{2i}y_B+a_{3i}y_C \geq c_i\text{?}\)</span>
 </div>
 <ol class="upper-alpha ol-marker-1 cols2" id="activity-insurance-2-1-1-5">
 <li id="activity-insurance-2-1-1-5-1">
