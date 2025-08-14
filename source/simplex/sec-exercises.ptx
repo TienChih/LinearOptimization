@@ -17,7 +17,7 @@
       </p>
     </hint>
   </p>
-
+ 
   <exercises xml:id="exercises-simplex">
     <exercise>
       <introduction>
@@ -108,7 +108,7 @@
           </p>
         </statement>
       </task>
-        <task>
+       <task>
         <statement>
           <p>
             Determine if the basic solution is feasible.

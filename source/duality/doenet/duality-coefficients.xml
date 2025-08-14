@@ -10,7 +10,6 @@
 </graph>
 <slider from="-5" to="5" initialValue="0" name="c1" width="300" step="0.2" showValue="true" showTicks="true"/> <slider from="-5" to="5" initialValue="0" name="c2" width="300" step="0.2" showValue="true" showTicks="true"/>
 <p>
-  <p>
           Drag sliders for <m>y_1, y_2</m>.
           How does adjusting the sliders correspond to the visualization above?
         

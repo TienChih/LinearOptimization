@@ -6,10 +6,10 @@
       <stringparams html.css.extra="external/custom-styles.css"  debug.project.number="the-way-it-should-be"/> 
     </target>
     <target name="print" format="pdf"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" >
-    <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext" latex.preamble.late="\setlength\extrarowheight{5pt}"/> 
+    <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext" latex.preamble.late="\setlength\extrarowheight{5pt} &#xa; \newcommand{\sectionbreak}{\ifnum\value{section}>1\clearpage\thispagestyle{plain}\fi\phantomsection}"/> 
     </target>
     <target name="tex" format="latex"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" >
-    <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext"/> 
+    <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext"  latex.preamble.late="\setlength\extrarowheight{5pt} &#xa; \newcommand{\sectionbreak}{\ifnum\value{section}>1\clearpage\thispagestyle{plain}\fi\phantomsection}"/> 
     </target>
   </targets>
 </project>

@@ -197,19 +197,19 @@
               node distance=0.6cm and 1.2cm
               ]
 
-              \node[mycircle] (v1) at (0,1*0.8) {$v_1$};  
-              \node[mycircle] (v2) at (0,-1*0.8) {$v_2$};  
+              \node[mycircle] (v1) at (0,1*0.6) {$v_1$};  
+              \node[mycircle] (v2) at (0,-1*0.6) {$v_2$};  
 
-              \node[mycircle] (v3) at (2,-2*0.8) {$v_3$};  
-              \node[mycircle] (v4) at (2,0*0.8) {$v_4$};  
-              \node[mycircle] (v5) at (2,2*0.8) {$v_5$};  
+              \node[mycircle] (v3) at (2,-2*0.6) {$v_3$};  
+              \node[mycircle] (v4) at (2,0*0.6) {$v_4$};  
+              \node[mycircle] (v5) at (2,2*0.6) {$v_5$};  
 
-              \node[mycircle] (v6) at (4,-2*0.8) {$v_6$};  
-              \node[mycircle] (v7) at (4,0*0.8) {$v_7$};  
-              \node[mycircle] (v8) at (4,2*0.8) {$v_8$};  
+              \node[mycircle] (v6) at (4,-2*0.6) {$v_6$};  
+              \node[mycircle] (v7) at (4,0*0.6) {$v_7$};  
+              \node[mycircle] (v8) at (4,2*0.6) {$v_8$};  
 
-              \node[mycircle] (v9) at (6,-1*0.8) {$v_9$};  
-              \node[mycircle] (v10) at (6,1*0.8) {$v_{10}$};  
+              \node[mycircle] (v9) at (6,-1*0.6) {$v_9$};  
+              \node[mycircle] (v10) at (6,1*0.6) {$v_{10}$};  
 
               \draw[->] (v1) --node[above , sloped, pos= 0.35]{\tiny$11$} (v5);
               \draw[->] (v1) --node[above, sloped, pos= 0.8 ]{\tiny$10$} (v4);
@@ -219,7 +219,7 @@
               \draw[->] (v2) --node[below left, sloped, pos= 0.5]{\tiny$9$} (v3);
 
               \draw[->] (v5) --node[above, sloped, pos= 0.7]{\tiny$8$} (v8);
-              \draw[->] (v5) --node[above, sloped, pos= 0.8 ]{\tiny$12$} (v7);
+              \draw[->] (v5) --node[above, sloped, pos= 0.2 ]{\tiny$12$} (v7);
               \draw[->] (v5) --node[above right, sloped, pos= 0.8]{\tiny$3$} (v6);
 
               \draw[->] (v4) --node[above left, sloped, pos= 0.8]{\tiny$10$} (v8);
