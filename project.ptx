@@ -6,6 +6,9 @@
       <stringparams html.css.extra="external/custom-styles.css"  debug.project.number="the-way-it-should-be"/> 
     </target>
     <target name="print" format="pdf"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" >
+    <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext" latex.preamble.late="\setlength\extrarowheight{5pt}"/> 
+    </target>
+    <target name="tex" format="latex"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" >
     <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext"/> 
     </target>
   </targets>

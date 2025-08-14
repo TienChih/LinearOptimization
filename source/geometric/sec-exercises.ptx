@@ -107,7 +107,7 @@
         </p>
       </introduction>
       
-        <task>
+        <task xml:id="ex-convertcanona">
         <statement>
           <p>
             <md>
@@ -119,7 +119,7 @@
           </p>
         </statement>
       </task>
-        <task>
+        <task xml:id="ex-convertcanonb">
         <statement>
           <p>
             <md>
@@ -131,7 +131,7 @@
           </p>
         </statement>
       </task>
-        <task>
+        <task xml:id="ex-convertcanonc">
         <statement>
           <p>
             <md>
@@ -144,7 +144,7 @@
           </p>
         </statement>
       </task>
-        <task>
+        <task xml:id="ex-convertcanond">
         <statement>
           <p>
             <md>
@@ -156,7 +156,7 @@
           </p>
         </statement>
       </task>
-        <task>
+        <task xml:id="ex-convertcanone">
         <statement>
           <p>
             A drive-in sells homemade hot dogs and hamburgers.  The hot dogs take <m>3/8</m> cup of flour and <m>2.5</m> oz of beef to make.
@@ -166,7 +166,7 @@
           </p>
         </statement>
       </task>
-        <task>
+        <task xml:id="ex-convertcanonf">
         <statement>
           <p>
             A rancher has a herd to feed which requires 54, 48, and 72 units of the nutritional
@@ -178,7 +178,7 @@
         </statement>
       </task>
         
-        <task>
+        <task xml:id="ex-convertcanong">
         <statement>
           <p>
             A drug company sells three different formulations of vitamin complex and
@@ -192,7 +192,7 @@
           </p>
         </statement>
       </task>
-        <task>
+        <task xml:id="ex-convertcanonh">
         <statement>
           <p>
             <md>
@@ -246,49 +246,49 @@
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (a).
+            <xref ref="ex-convertcanon"/> <m>\textbf{(a)}</m>.
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (b).
+            <xref ref="ex-convertcanon"/> <m>\textbf{(b)}</m>.
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (d).
+            <xref ref="ex-convertcanon"/> <m>\textbf{(d)}</m>.
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (e).
+            <xref ref="ex-convertcanon"/> <m>\textbf{(e)}</m>.
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (f).
+            <xref ref="ex-convertcanon"/> <m>\textbf{(f)}</m>.
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (g).
+            <xref ref="ex-convertcanon"/> <m>\textbf{(g)}</m>.
           </p>
         </statement>
       </task>
         <task>
         <statement>
           <p>
-            <xref ref="ex-convertcanon"/> (h).
+            <xref ref="ex-convertcanon"/> <m>\textbf{(h)}</m>.
           </p>
         </statement>
       </task>
@@ -299,7 +299,7 @@
 
     <exercise>
       <p>
-        Prove that <xref ref="ex-geosolve"/> (h) has infinitely many optimal solutions, two of which lie on extreme points.  Identify
+        Prove that <xref ref="ex-geosolve"/> <m>\textbf{(h)}</m> has infinitely many optimal solutions, two of which lie on extreme points.  Identify
         these points on the plot of the feasible region done in <xref ref="ex-geosolve"/>.
       </p>
     </exercise>
