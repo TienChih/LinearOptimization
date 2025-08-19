@@ -16,20 +16,28 @@
   </titlepage>
   <dedication>
     <p>
-      For Tara, Byron and Max
+      For Tara, Byron, Max and Mya
     </p>
   </dedication>
 
   <acknowledgement>
     <p>
-      There are so many people to thank, coming soon.
+      This book is the product of multiple influences and is the by product of many threads in my life.  I want to thank Steven Clontz and Drew Lewis for including me in the inaugural Team Based Inquiry Learning group.  What I learned about authoring inquiry learning materials from that experience is the biggest contributor to the structure of this text.  I wanted to thank the OER and PreTeXt communities, but in particular David Austin, Steven Clontz, Sean Fitzpatrick, Mitch Keller, Oscar Levin and Chrissy Safranski for their contributions not only to PreTeXt which I used to author this text, but directly help with numerous technical issues throughout the writing process.
+    </p>
+    <p>
+      I would like to thank Jennifer Nordstrom and John Rock for their helpful suggestions and feedback.  I would like to thank Candice Price, Miloš Savić, and everyone at <url
+      href="https://www.619wreath.com/">619 Wreath Publishing</url> for their support, encouragement, and genuine partnership.  Their support of scholars, open access, and unique contributions is truly commendable.
+
+    </p>
+    <p>
+      Finally, I would like to thank the students, faculty and staff of Oxford College of Emory University for fostering an environment of inquiry and creativity.  An especial heartfelt thank you goes to Jane Brennan, Lance Ding, Will Farthing and Ari Gurovich, the wonderful students in my first Math 346 Linear Optimization course who were taught with an embryonic version of this text, and provided valuable feedback and encouraged me to develop those notes into this text.
     </p>
   </acknowledgement>
 
   <colophon>
 
     <edition>
-      2024 
+      2025 
     </edition>
 
     <website>
@@ -37,7 +45,7 @@
     </website>
 
     <copyright>
-      <year>2024</year>
+      <year>2025</year>
       <holder>Tien Chih</holder>
       <minilicense>CC BY-NC-SA 4.0 License</minilicense>
       <shortlicense>  This work is licensed under the Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="https://creativecommons.org/licenses/by-nc-sa/4.0/" visual="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CreativeCommons.org</url>

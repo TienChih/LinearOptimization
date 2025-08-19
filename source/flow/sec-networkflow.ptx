@@ -272,9 +272,6 @@
     </statement>
   </observation>
 
-  <subsection xml:id="subsec-maxflow">
-    <idx>maximum flow problem</idx>
-    <title>Max Flow</title>
     <activity>
       <introduction>
         <p>
@@ -405,7 +402,6 @@
 
     
     
-  </subsection>
   
 
 
