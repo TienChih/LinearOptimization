@@ -74,6 +74,10 @@
         </md>
         
       </p>
+      <p>
+        Go through this activity twice.  First for the network and max flow <m>f'</m> found for <xref ref="exploration-flow"/>, then for a general
+        capacitated network.
+      </p>
     </introduction>
     <task>
       <statement>
@@ -118,7 +122,7 @@
           is huge?  How would the resulting <m>\mu_i</m>   that affect the inequality <m>-\mu_k+\mu_i+y_{ki}\geq 0</m>?
         </p>
         <p>
-          Repeat for <m>\mu_i=0, \mu_j=-1, 0</m>.
+          Repeat for <m>\mu_j=0</m>, and if <m>\mu_i</m> were either <m>0</m> or <m>-1</m>.
         </p>
       </statement>
     </task>
@@ -168,10 +172,8 @@
   <activity>
     <introduction>
       <p>
-        We explore a way of generating potential minimum cuts using a maximum flow.
-      </p>
-      <p>
-        Recall <xref ref="exploration-flow"/> and your proposed maximum flow <m>f'</m>.
+        We explore a way of generating potential minimum cuts using a maximum flow.  
+        Again recall <xref ref="exploration-flow"/> and your proposed maximum flow <m>f'</m>.
       </p>
     </introduction>
     <task>

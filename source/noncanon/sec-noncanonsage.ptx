@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-noncanonsage" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Solving NonCanonical Problems with Sage</title>
+  <title>Solving Noncanonical Problems with Sage</title>
 
   <introduction>
     <p>

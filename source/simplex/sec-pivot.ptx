@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-pivot" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Canonical Programs and the Simplex Pivot</title>
+  <title>Canonical Problems and the Simplex Pivot</title>
 
   <introduction>
     <p>

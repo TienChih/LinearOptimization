@@ -544,7 +544,7 @@
   
     </activity>
   
-    <activity>
+    <activity xml:id="activity-chooserowpivot">
       <introduction>
         <p>
           Consider the canonical maximization problem and basic solution encoded by the following tableau:

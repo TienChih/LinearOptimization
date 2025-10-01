@@ -14,7 +14,8 @@
       <p>
         Consider a series of islands with bridges between them.  A group of people are trying to move from island <m>v_0</m> to island <m>v_5</m>.  Due to the length/width
         of the bridges, only but so many people can move between a pair of islands in a minute, and these are labeled.  
-        The bridges, represented by arrows below, also only allow movement in one direction.
+        The bridges, represented by arrows below, also only allow movement in one direction.  Some pairs of islands have two bridges between them, one going 
+        in each direction.
       </p>
       <image xml:id="island">
         <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
@@ -351,7 +352,7 @@
         <statement>
           <p>
             Write out the primal max problem for <xref ref="exploration-flow"/>
-            as a noncanonical Tucker Tableau.
+            as a noncanonical Tucker tableau.
           </p>
         </statement>
       </task>

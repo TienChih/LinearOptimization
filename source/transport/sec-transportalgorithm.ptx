@@ -433,7 +433,7 @@
     <task>
       <statement>
         <p>
-          If this solution is not optimal, what should the next step be?
+          If this solution is not optimal, what should the next step be? (Recall how we chose pivots in <xref ref="activity-chooserowpivot"/>.)
         </p>
         <ol  marker="A.">
           <li>

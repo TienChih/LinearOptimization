@@ -920,7 +920,7 @@
       </tabular>
        and order the variables in the associated way.  Suppose we follow Bland's rules and still have cycling.
        That is, there is a sequence of pivots and bases (set of basic variables) <m>B_1\to B_2\to \cdots B_\ell \to B_1</m>.
-       We call a variable <m>x_j</m> <term>fickle</term> if <m>x_j</m> is in one, but not all of the bases.  That is, it leaves a basis, and reenters it later during the cycle.
+       We call a variable <m>x_j</m> <term>fickle</term> if <m>x_j</m> is in one, but not all of the bases.  That is, it leaves a basis, and re-enters it later during the cycle.
 
     </p>
     <p>
@@ -1142,7 +1142,7 @@
     </p>
 
     <p>
-      Now, because we have cycling, we must have that <m>x_t</m> reenters the basis at some point:
+      Now, because we have cycling, we must have that <m>x_t</m> re-enters the basis at some point:
     </p>
     <p>
       <sidebyside widths="50% 50%" valign="middle" margins="0% 0%">
@@ -1493,7 +1493,7 @@
   <activity>
     <statement>
       <p>
-        If we follow <xref ref="thm-BlandAnticycling"/>, then no basis is visited twice during the Simplex
+        If we follow <xref ref="thm-BlandAnticycling"/>, then no basis is visited twice during the execution of the Simplex
         Algorithm.  Note that <m>f</m> is nondecreasing with each pivot.  Must the Simplex Algorithm terminate?  Why?
       </p>
     </statement>

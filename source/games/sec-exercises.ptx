@@ -63,9 +63,9 @@
         <statement>
           <p>
             Rowan picks an integer from 1-3.  Colleen picks two guesses
-            which may be the same.  Colleen reveals their guesses one at a time.
-            If they guess correctly, they win $ equal to the value of their other guess.  
-            If they do not guess correctly, Rowan wins $ equal to the sum of both
+            which may be the same.  Colleen reveals her guesses one at a time.
+            If she guesses correctly, she wins a number of dollars equal to the value of their other guess.  
+            If she does not guess correctly, Rowan wins a number of dollars equal to the sum of both
             guesses.
           </p>
         </statement>
@@ -347,7 +347,7 @@
       <task>
         <statement>
           <p>
-            Find the von Neumann value and optimal strategies for each player for the game
+            Find the von Neumann value in terms of <m>x</m> and <m>y</m> and optimal strategies for each player for the game
             above.  There may be multiple cases. 
           </p>
         </statement>

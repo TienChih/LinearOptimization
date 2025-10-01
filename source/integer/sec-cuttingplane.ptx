@@ -985,8 +985,8 @@
     <task>
       <statement>
         <p>
-          Enter the coefficients for the objective function and the three cutting-planes in order that you found them, and drag
-          the objective plane onto the optimal solution to the integer problem.
+          Enter the coefficients for the objective function and the three cutting-planes in order that you found them, and then drag
+          the point to the optimal solution to the integer problem.
         </p>
         <interactive platform="doenetml" width="100%" aspect="4:5">
           <slate surface="doenetml">

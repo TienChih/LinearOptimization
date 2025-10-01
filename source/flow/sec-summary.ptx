@@ -4,7 +4,14 @@
   <title>Summary of <xref ref="ch-flow"/></title>
 
   <p>
-    We use introduce the notion of   <term>networks</term>, a pair <m>N=(V, E)</m> where <m>V</m> is a set of <term>vertices</term> and <m>E</m> is a set of ordered pairs of vertices called <term>edges</term>.  We also discuss <term>capacitated networks</term> where each edge <m>(v_i, v_j)</m> has a <term>capacity</term> <m>c_{ij}\geq 0</m>.  For capacitated networks with designated <term>sources</term> and <term>sinks</term>, we can define a <term>flow</term>, an assignment  <m>0\leq x_{ij}\leq c_{ij}</m> to each edge <m>(v_i, v_j)</m> so that for any non source/sink vertex <m>v_i</m> we have that <me>\sum_{v_j\in V} x_{ji} - \sum x_{ij} =0.</me> We focus on capacitated networks with a unique source and sink, with no edges going into the source or out of the sink.
+    We use introduce the notion of   <term>networks</term>, a pair <m>N=(V, E)</m> where <m>V</m> is a set of <term>vertices</term> 
+    and <m>E</m> is a set of ordered pairs of vertices called <term>edges</term>.  
+    We also discuss <term>capacitated networks</term> where each edge <m>(v_i, v_j)</m> has a <term>capacity</term> 
+    <m>c_{ij}\geq 0</m>.  For capacitated networks with designated <term>sources</term> and <term>sinks</term>, we can define a 
+    <term>flow</term>, an assignment 
+     <m>0\leq x_{ij}\leq c_{ij}</m> to each edge <m>(v_i, v_j)</m> so that for any non source/sink vertex <m>v_i</m> we have that 
+     <me>\sum_{j} x_{ji} - \sum_{j} x_{ij} =0.</me> 
+     We focus on capacitated networks with a unique source and sink, with no edges going into the source or out of the sink.
   </p>
   <p>
     Finding a  <term>maximum flow</term> on such a network may be solved as a linear optimization problem:
