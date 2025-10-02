@@ -121,14 +121,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.8';
+eBookConfig.runestone_version = '7.9.11';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b215b0da62d655bd.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.59de9dca80a62a76.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
@@ -220,7 +220,7 @@ true);
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Programs and the Simplex Pivot</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Problems and the Simplex Pivot</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
 <ul class="structural toc-item-list">
@@ -243,7 +243,7 @@ true);
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-superconstrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Bounds</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving NonCanonical Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving Noncanonical Problems with Sage</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summarynoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Summary of Chapter 3</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Problems for Chapter 3</span></a></div>
@@ -394,7 +394,7 @@ true);
 </div>
 <article class="task exercise-like" id="sec-vonneumann-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="sec-vonneumann-7-2-1-1">Given a fixed column strategy <span class="process-math">\(\q'\)</span> which of these describes the role for the row player?<div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-vonneumann-7-2-1-2">
+</div> <ol class="upper-alpha ol-marker-1 cols2 multicolumn" id="sec-vonneumann-7-2-1-2">
 <li id="sec-vonneumann-7-2-1-2-1">
 <div class="para" id="sec-vonneumann-7-2-1-2-1-1">
 <span class="process-math">\(\displaystyle \min_{\p \in F_{\p}} \p^\top A\q'\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-7-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -422,7 +422,7 @@ true);
 </ol>
 <div class="autopermalink" data-description="Task 5.2.2.a"><a href="#sec-vonneumann-7-2" title="Copy heading and permalink for Task 5.2.2.a" aria-label="Copy heading and permalink for Task 5.2.2.a">🔗</a></div></article><article class="task exercise-like" id="sec-vonneumann-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="sec-vonneumann-7-3-1-1">Given a fixed row strategy <span class="process-math">\(\p'\)</span> which of these describes the role for the column player?<div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-vonneumann-7-3-1-2">
+</div> <ol class="upper-alpha ol-marker-1 cols2 multicolumn" id="sec-vonneumann-7-3-1-2">
 <li id="sec-vonneumann-7-3-1-2-1">
 <div class="para" id="sec-vonneumann-7-3-1-2-1-1">
 <span class="process-math">\(\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-7-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -597,8 +597,7 @@ true);
 <div class="para" id="sec-vonneumann-9-10-1-1">What does the Strong Duality Theorem <a href="sec-dualitytheory.html#thm-strongduality" class="xref" data-knowl="./knowl/xref/thm-strongduality.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.4: The Strong Duality Theorem">Theorem 4.2.4</a> say about the optimal solutions to both problems?  What, in turn, does that say about <span class="process-math">\(\ec{u}\)</span> and <span class="process-math">\(\ec{v}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-9-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Task 5.2.4.i"><a href="#sec-vonneumann-9-10" title="Copy heading and permalink for Task 5.2.4.i" aria-label="Copy heading and permalink for Task 5.2.4.i">🔗</a></div></article><article class="task exercise-like" id="sec-vonneumann-9-11"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="sec-vonneumann-9-11-1-1">We’re still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at Rowan.  To balance things out, Rowan has to pay Colleen $5 after each round.  Would this fact change anything about Rowan and Colleen’s strategies?<div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-9-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="sec-vonneumann-9-11-1-2">Say it was $<span class="process-math">\(r\text{,}\)</span> would that make any difference?<div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-9-11-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-vonneumann-9-11-1-1">We’re still in this pretty ridiculous situation where Colleen is for some reason willing to throw money away at Rowan.  To balance things out, Rowan has to pay Colleen $5 after each round.  Would this fact change anything about Rowan and Colleen’s strategies? Say Rowan paid Colleen $<span class="process-math">\(r\text{,}\)</span> would that make any difference?<div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-9-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Task 5.2.4.j"><a href="#sec-vonneumann-9-11" title="Copy heading and permalink for Task 5.2.4.j" aria-label="Copy heading and permalink for Task 5.2.4.j">🔗</a></div></article><article class="task exercise-like" id="sec-vonneumann-9-12"><h4 class="heading"><span class="codenumber">(k)</span></h4>
 <div class="para" id="sec-vonneumann-9-12-1-1">Let <span class="process-math">\(\p, \q\)</span> denote any strategy for Rowan and Colleen.  Let <span class="process-math">\(E\)</span> denote a <span class="process-math">\(n\times m\)</span> matrix with all 1’s. Show that <span class="process-math">\(\p^\top(rE)\q=r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-vonneumann-9-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
