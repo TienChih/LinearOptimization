@@ -252,7 +252,7 @@
         <md>
           <mrow>\textbf{Maximize: }  f(x_1, x_2) \amp = -x_1+5x_2</mrow>
           <mrow>\textbf{Subject to: }  3x_1+2x_2 \amp \leq 12</mrow>
-          <mrow> -3x_1+2x_2 \amp \leq 70</mrow>
+          <mrow> -3x_1+2x_2 \amp \leq 7</mrow>
           <mrow> x_1, x_2 \amp \geq  0</mrow>
           <mrow> x_1, x_2 \text{ are integers.} \amp </mrow>
         </md>
@@ -335,7 +335,7 @@
     <task>
       <statement>
         <p>
-          Take the second row <m>x_2=b_2-a_{21}x_1-a_{22}x_2</m> and follow the procedure
+          Take the second row <m>x_2=b_2-a_{21}t_1-a_{22}t_2</m> and follow the procedure
           in <xref ref="activity-cut"/> to generate a new constraint <m>a_{31}t_1+a_{32}t_2\leq b_3</m>:
           <tabular halign="center">
             <row>
@@ -857,7 +857,7 @@
     <task>
       <statement>
         <p>
-          Using the fact that <m>t_4=-\frac{1}{3}+\frac{2}{3}s_3+\frac{2}{3}t_2</m>, express this new cutting-plane
+          Using the fact that <m>t_4=-\frac{1}{3}+\frac{2}{3}t_3+\frac{2}{3}t_2</m>, express this new cutting-plane
           <m>a_{51}t_3+a_{52}t_4=b_5</m> in terms of <m>x_1, x_2</m>.
         </p>
       </statement>
