@@ -521,7 +521,7 @@
       <statement>
         <p>
           There is only one valid choice of row to generate a new constraint.  Follow the procedure in <xref ref="activity-cut"/>
-          to generate a new constraint <m>a_{41}t_3+a_{42}t_2=b_4</m>
+          to generate a new constraint <m>a_{41}t_3+a_{42}t_2=b_4</m>.
           <tabular halign="center">
             <row>
               <cell halign="left">

@@ -844,7 +844,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
 
     <exercise>
       <p>
-        Model <xref ref="ex-minflow"/> <m>\textbf{a}</m> as a linear optimization problem.
+        Model <xref ref="ex-minflow"/> <m>\textbf{(a)}</m> as a linear optimization problem.
       </p>
     </exercise>
 

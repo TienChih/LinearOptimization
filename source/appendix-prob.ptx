@@ -20,7 +20,9 @@
               <url href="https://www.openintro.org/book/os/"> <q>OpenIntro Statistics</q></url> by David Diez, Christopher Barr, and Mine Çetinkaya-Rundel
             does a good job presenting this material.  It also is an excellent introductory statistics
             text with labs and data available.  For a calculus-based, theory heavy treatment
-            of this text, I recommend <url href="https://www.markhuberdatascience.org/probability-textbook"> <q>Probability: Lecture and Labs</q></url>.
+            of this subject, I recommend 
+            <url href="https://www.markhuberdatascience.org/probability-textbook"> <q>Probability: Lecture and Labs</q></url>
+            by Mark Huber.
         </p>
     </introduction>
 
@@ -151,7 +153,7 @@
         This can be seen by the following R simulation:
         <sage language="r">
           <input>
-            n=1000
+n=1000
 poison = 3
 notpoison = 7
 eat = 4
@@ -197,7 +199,7 @@ hist(numpoison)
         and visualize it:
         <sage language="r">
           <input>
-            hist(numpoison)
+hist(numpoison)
 avgpoison = mean(numpoison)
 abline(v = avgpoison, lwd = 2, lty = 2, col = "red")
 print(avgpoison)

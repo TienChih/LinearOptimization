@@ -174,7 +174,7 @@
     <task>
       <statement>
         <p>
-          Consider <m>H</m> from <xref ref="exploration-matching"/>.  Label each vertex and write out a Tucker Tableau
+          Consider <m>H</m> from <xref ref="exploration-matching"/>.  Label each vertex and write out a Tucker tableau
           for the linear optimization problem for computing the maximum matching.
         </p>
       </statement>
@@ -281,7 +281,7 @@
       <statement>
         <p>
           For each edge <m>v_{i}v_j</m>, there is a dual constraint, state this dual constraint. (Hint: in the original
-          Tucker Tableau, when would an entry in the <m>x_{ij}</m> column be a zero, and when would it be a one?)
+          Tucker tableau, when would an entry in the <m>x_{ij}</m> column be a zero, and when would it be a one?)
         </p>
       </statement>
     </task>
@@ -587,7 +587,7 @@
     <activity>
       <p>
         Prove that if a graph is bipartite, then it must <em>not</em>
-        contain an odd length cycle <fn>The converse is also true, but we will leave that alone.</fn>.
+        contain an odd length cycle <fn>The converse is also true, but we will leave that alone here.</fn>.
       </p>
     </activity>
 
@@ -776,8 +776,6 @@
           fractional edges formed a cycle.  Let <m>v_1, v_2, \ldots v_k</m>
           form a maximal path <m>P</m> where <m>x^*_{i,i+1}, 1\leq i\leq k-1</m> has fractional
           value.
-        </p>
-        <p>
           Note that <m>v_1, v_k</m> are the endpoints of <m>P</m>.
         </p>
       </introduction>
@@ -974,8 +972,8 @@
                 \node at (0, -1.25){\tiny $F^c\cap V_1$};
                 \node at (2, 1.25){\tiny $F\cap V_2$};
                 \node at (2, -1.25){\tiny $F^c\cap V_2$};
-                \node at (0, -1.6){\small $V_1$};
-                \node at (2, -1.6){\small $V_2$};
+                \node at (0, -1.6){\tiny $V_1$};
+                \node at (2, -1.6){\tiny $V_2$};
 
                 \draw[dashed] (A)--node[above]{\tiny$E_2$}(C);
                 \draw[dashed] (A)--node[above, sloped, pos=0.8]{\tiny$E_4$}(D);

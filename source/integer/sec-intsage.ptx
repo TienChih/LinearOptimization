@@ -100,7 +100,7 @@
       <task>
         <statement>
           <p>
-            We could also have solved the linear relaxation of the original problem <m>f</m> if we chose:
+            We could also have solved the linear relaxation of the original problem if we chose:
             <sage>
               <input>
                 P = MixedIntegerLinearProgram(solver="GLPK")
