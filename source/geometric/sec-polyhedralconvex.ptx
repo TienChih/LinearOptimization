@@ -139,6 +139,16 @@
     </statement>
   </definition>
 
+  <definition xml:id="def-hyperplane">
+    <statement>
+      <p>
+        <idx>hyperplane, plane</idx>
+        Given constants <m>a_1, \ldots, a_m, b</m> <term>hyperplane</term> in <m>\mathbb{R}^m</m> is a set of the form 
+        <m>\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m= b\}</m>.
+      </p>
+    </statement>
+  </definition>
+
   <definition xml:id="def-convex">
     <statement>
       <p>
@@ -205,6 +215,7 @@
     <introduction>
       <statement>
         <p>
+          <idx>half-plane</idx>
           Let <m>S\subseteq \mathbb{R}^m</m> be defined by <m>S:=\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m\leq b\}</m> for some 
           <m>a_i, b\in \mathbb{R}</m> (i.e. <m>S</m> is a half-space of <m>\mathbb{R}^m</m>).
         </p>
@@ -286,7 +297,7 @@
   <activity>
     <statement>
       <p>
-        Prove that the feasible region of a canonical linear programming problem is convex.
+        Prove that the feasible region of a canonical linear optimization problem is convex.
       </p>
     </statement>
   </activity>
@@ -380,7 +391,7 @@
   <activity xml:id="activity-ball">
     <introduction>
       <p>
-        Let <m>S\subseteq \mathbb{R}^2</m> be the feasible region of of a canonical maximization linear programming problem, let <m>f(x_1, x_2) = 2x_2+3x_2</m> be the objective function.
+        Let <m>S\subseteq \mathbb{R}^2</m> be the feasible region of of a canonical maximization linear optimization problem, let <m>f(x_1, x_2) = 2x_2+3x_2</m> be the objective function.
       </p>
     </introduction>
     <task>
@@ -410,7 +421,7 @@
     <task>
       <statement>
         <p>
-          Consider the canonical maximization linear programming problem:
+          Consider the canonical maximization linear optimization problem:
         </p>
         <p>
           Maximize <m>f(x,y)=3x+2y</m>  subject to:
@@ -557,7 +568,7 @@
     <task>
       <statement>
         <p>
-          Let <m>\mathbf{x}_1, \mathbf{x}_2 \in S</m> be optimal solutions of a canonical linear programming problem, giving optimal solution
+          Let <m>\mathbf{x}_1, \mathbf{x}_2 \in S</m> be optimal solutions of a canonical linear optimization problem, giving optimal solution
           <m>f(\mathbf{x}_1) = f^* =f(\mathbf{x}_2)</m>. Show that for any <m>t\in [0,1]</m>, <m>f(t\mathbf{x}_1+(1-t)\mathbf{x}_2)=f^*</m> and that
           <m>t\mathbf{x}_1+(1-t)\mathbf{x}_2\in S</m>.
         </p>
@@ -603,7 +614,7 @@
     <task>
       <statement>
         <p>
-          Suppose a canonical linear programming problem in <m>\mathbb{R}^m</m> is bounded by the usual <m>m</m> hyperplanes corresponding to <m>x_i\geq 0</m>
+          Suppose a canonical linear optimization problem in <m>\mathbb{R}^m</m> is bounded by the usual <m>m</m> hyperplanes corresponding to <m>x_i\geq 0</m>
           as well as <m>k</m> additional hyperplanes.  How many potential points of intersection could there be?
         </p>
         <ol marker="A." cols="2">
@@ -638,7 +649,7 @@
     <task>
       <statement>
         <p>
-          So for a canonical linear programming problem in <m>\mathbb{R}^{10}</m> bounded by an additional 15 hyperplanes, how many potential extreme points are there?
+          So for a canonical linear optimization problem in <m>\mathbb{R}^{10}</m> bounded by an additional 15 hyperplanes, how many potential extreme points are there?
         </p>
       </statement>
     </task>

@@ -7,6 +7,7 @@
     <p>
       In this introductory section, we do not begin linear optimization.  Instead, we recall a few concepts from
       Linear Algebra, and examine them through a geometric lense, setting the stage for our mindset going forward.
+      The activities in this section are not strictly necessary to work through the rest of this text.
     </p>
   </introduction>
   
@@ -100,6 +101,28 @@
     
   </activity>
 
+  <p>
+    Here, we recall the geometric interpretation of the determinant.
+  </p>
+
+  <observation>
+    <statement>
+      <p>
+        Recall that each <m>n\times m</m> matrix may be thought of as a linear transformation from <m>\mathbb{R}^m\to \mathbb{R}^n</m>.  When <m>m=n</m>
+        we may define the <term>determinant</term> of the transformation.  The determinant has numerous algebraic properties one learns about in a linear algebra course,
+        but it also has a geometric interpretation.  Roughly speaking, the determinant measures how the transformation changes the unit <m>n</m> dimensional cube, with the magnitude
+        of the determinant measuring the <m>n</m>-dimensional volume of the cube after transformation, and the sign measuring whether or not the orientation of the
+        cube is preserved or reversed.
+      </p>
+
+       <p>
+        Some resources for linear algebra define the determinant algebraically, then prove that it has special geometric properties.  
+        In many ways this is a natural approach to introduce the subject to students whose background is primarily algebraic.  However, in my opinion,
+        this is backwards.  It makes far more sense to approach the determinant geometrically first: there is a property of transformations we want to measure, we call this 
+        quantity the determinant, it happens to have cool algebraic properties.
+      </p>
+    </statement>
+  </observation>
   
 
   <activity>
@@ -176,22 +199,12 @@
     
   </activity>
 
-  <observation>
-    <statement>
-      <p>
-        Some resources for linear algebra define the determinant algebraically, then prove that it has these special geometric properties.  
-        In many ways this is a natural approach to introduce the subject to students whose background is primarily algebraic.  However, in my opinion,
-        this is backwards.  It makes far more sense to approach the determinant geometrically first: there is a property of transformations we want to measure, we call this 
-        quantity the determinant, it happens to have cool algebraic properties.
-      </p>
-      
-    </statement>
-  </observation>
+  
 
   <activity>
     <statement>
       <p>
-        Michael Atiyah (1929 - 2019),  mathematician and Field's medalist (1966), once said </p> 
+        Michael Atiyah (1929 - 2019),  mathematician and Field's medalist (1966), once said: </p> 
         
         <p><q>Algebra is the offer made by the devil to the mathematician. 
           The devil says: `I will give you this powerful machine, it will answer any question you like. 
