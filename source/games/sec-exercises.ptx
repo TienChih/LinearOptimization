@@ -190,7 +190,7 @@
     <exercise>
       <introduction>
         <p>
-          For each of the following, find the von Neumann value and optimal strategy for the
+          For each of the following payoff matrices, find the von Neumann value and optimal strategy for the
           payoff matrix.
         </p>
       </introduction>
@@ -201,7 +201,7 @@
               3\amp 1 \amp 1 \amp -2 \amp 2\\
               1\amp 1 \amp 0 \amp -2 \amp 0\\
               5\amp -3 \amp -2 \amp 4 \amp 0\\
-              2\amp 1 \amp 0 \amp -3 \amp 0\\\end{bmatrix}</m>.
+              2\amp 1 \amp 0 \amp -3 \amp 0\\\end{bmatrix}</m>
           </p>
         </statement>
       </task>
@@ -212,7 +212,7 @@
               -7\amp -6 \amp 5 \amp 5 \amp -6\amp -2\\
               1\amp 1 \amp 0 \amp -1 \amp 2 \amp 2\\
               2\amp 2 \amp 0 \amp -1 \amp 2\amp 2\\
-              6\amp -7 \amp 5 \amp 4 \amp -6 \amp -2\\\end{bmatrix}</m>.
+              6\amp -7 \amp 5 \amp 4 \amp -6 \amp -2\\\end{bmatrix}</m>
           </p>
         </statement>
       </task>
@@ -222,7 +222,7 @@
             <m>\begin{bmatrix} 4\amp -5 \amp -7 \amp 4\\
               -1\amp 4 \amp 4 \amp 0\\
               -2\amp 3 \amp 4 \amp 0\\
-              -2\amp 4 \amp 4 \amp -1\end{bmatrix}</m>.
+              -2\amp 4 \amp 4 \amp -1\end{bmatrix}</m>
           </p>
         </statement>
       </task>
@@ -234,7 +234,7 @@
               2\amp 2 \amp 0 \amp 0 \amp 1 \amp 0\\
               2\amp 1 \amp 0 \amp 1 \amp 1\amp 0\\
               2\amp 1 \amp 0 \amp -1 \amp 2\amp 1\\
-              1\amp 1 \amp 0 \amp 1 \amp 1 \amp 2\\\end{bmatrix}</m>.
+              1\amp 1 \amp 0 \amp 1 \amp 1 \amp 2\\\end{bmatrix}</m>
           </p>
         </statement>
       </task>

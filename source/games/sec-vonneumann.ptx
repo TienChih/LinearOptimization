@@ -453,7 +453,7 @@
     <task>
       <statement>
         <p>
-          Rewrite the new <em>canonical</em> linear programming problem with variables <m>\tilde{q}_j</m> that optimizes
+          Rewrite the new <em>canonical</em> linear optimization problem with variables <m>\tilde{q}_j</m> that optimizes
           Colleen's strategy.
         </p>
       </statement>

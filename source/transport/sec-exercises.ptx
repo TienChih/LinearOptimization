@@ -1058,7 +1058,7 @@
     <exercise >
       <introduction>
         <p>
-          Solve the following transportation problems:
+          Solve the following transportation problems.
         </p>
         <task>
           <statement>
@@ -1412,7 +1412,7 @@
     <exercise xml:id="ex-assignment">
       <introduction>
         <p>
-          Solve the following assignment problems
+          Solve the following assignment problems.
         </p>
       </introduction>
       <task>
@@ -2008,7 +2008,7 @@
     <exercise>
       <p>
         Consider an <m>n\times n</m> assignment problem treated as a transportation problem.
-        Apply VAM <xref ref="def-vam"/> to this initial tableau.  Show that the resulting basis generated has <m>n-1</m> selected entries where
+        Apply VAM (<xref ref="def-vam"/>) to this initial tableau.  Show that the resulting basis generated has <m>n-1</m> selected entries where
         the shipment along those entries (<m>x_{ij}</m>) is zero.
       </p>
     </exercise>

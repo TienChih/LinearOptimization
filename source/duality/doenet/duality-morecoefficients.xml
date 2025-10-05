@@ -45,6 +45,10 @@
               
 </graph>
 <p>
+  Enter in different coefficients, what do you notice when the coefficients are incorrect
+  as opposed to when they are?  
+</p>
+<p>
   <m>\begin{bmatrix} 3 \\ 2\end{bmatrix} =</m> <mathInput name="c11"/> <m>\begin{bmatrix} -1 \\ 0\end{bmatrix}+</m><mathInput name="c12"/> <m>\begin{bmatrix} 0 \\ -1\end{bmatrix}</m>,
 </p>
 <p>  

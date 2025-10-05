@@ -15,7 +15,7 @@
         Noting that the dual variables <m>y_i</m> are nonnegative weights attached
         to the hyperplanes defined by <m>t_i=0</m>, and the slack variables for the dual problem
         <m>s_j</m> are the weights associated with the planes <m>-x_j=0</m>, we can encode all this information in the
-        <em>Primal-Dual Tucker Tableau</em>:
+        <em>Primal-Dual Tucker tableau</em>:
       </p>
       <p>
         <tabular halign="center">
@@ -209,7 +209,7 @@
     <task>
       <statement>
         <p>
-          Record this information in a primal-dual tucker tableau.
+          Record this information in a primal-dual Tucker tableau.
         </p>
       </statement>
     </task>

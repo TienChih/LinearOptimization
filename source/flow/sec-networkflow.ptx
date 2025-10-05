@@ -165,7 +165,9 @@
     <title>Conservation of Flow</title>
     <statement>
       <p>
-        For a capacitated network <m>N</m>, <m>\displaystyle\sum_{i} \varphi(v_i)=0</m>.
+        For a capacitated network <m>N</m>, 
+        <m>\displaystyle\sum_{i} \varphi(v_i)=0</m>
+        for any flow on <m>N</m>.
       </p>
     </statement>
   </theorem>
@@ -278,8 +280,6 @@
         <p>
           Suppose we have a capacitated network with a unique fixed source <m>v_s</m>
           and sink <m>v_d</m>.
-        </p>
-        <p>
           We wish to define a maximization linear optimization problem with decision variables <m>x_{ij}, v_i, v_j\in V</m>.
         </p>
       </introduction>

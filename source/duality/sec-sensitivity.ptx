@@ -496,7 +496,7 @@
           </slate>
         </interactive>
         <p>
-          As you adjust \(y_1, y_2\), what do you notice about the resulting linear combination?
+          As you adjust <m>y_1, y_2</m>, what do you notice about the resulting linear combination?
         </p>
       </statement>
     </task>
@@ -686,7 +686,7 @@
       <task>
         <statement>
           <p>
-            Prove that  the normal vector for <m>f</m> is <m> \sum_{j=1}^m (-c_j)\mathbf{v}_j</m>.
+            Prove that  the normal vector for <m>f</m> is <m> \displaystyle \sum_{j=1}^m (-c_j)\mathbf{v}_j</m>.
           </p>
         </statement>
       </task>

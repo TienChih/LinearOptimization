@@ -896,7 +896,9 @@
       <ol>
         <li>
           <p>
-            We begin with <m>m</m> sources and <m>n</m> sinks, each with a supply or demand respectively.
+            We begin with <m>m</m> <term>sources</term> (warehouses in the above activities) 
+            and <m>n</m> <term>sinks</term> (markets in the above activities), 
+            each with a supply or demand respectively.
             We associate each row of the transportation tableau with a source, each column with a sink, and each entry <m>c_{ij}</m> with 
             the cost of shipping from source <m>i</m> to sink <m>j</m>.
           </p>

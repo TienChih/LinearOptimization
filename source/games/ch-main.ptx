@@ -28,6 +28,12 @@
       optimal strategies exist.  Then in <xref ref="sec-chance"/> we see how to apply
       these principles to games with random components.
     </p>
+    <p>
+      We note that in this chapter, we deal quite a bit with randomness and probability.
+      One is encouraged to review basic probability theory in <xref ref="sec-probreview"/>
+      and in particular, the definition of the <term>expected value</term>
+      <xref ref="def-expectation"/>. 
+    </p>
   </introduction>
 
   <!-- include sections -->
