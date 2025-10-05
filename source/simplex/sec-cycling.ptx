@@ -684,7 +684,7 @@
 
 
   <activity>
-    <introduction>
+    <statement>
       <p>
         Consider the canonical linear optimization problem: Maximize <m>f(x,y)=x+y</m>, subject to
         <md>
@@ -694,9 +694,7 @@
           <mrow>x,y \amp\geq0. </mrow>
         </md>
       </p>
-    </introduction>
-    <task>
-      <statement>
+    
         <p>
           Consider a sequence of pivots swapping <m>x\leftrightarrow t_2</m>, <m>y \leftrightarrow  t_1</m> <m>t_1 \leftrightarrow y</m>, <m>t_2 \leftrightarrow x</m>.  In each of these cases, what is the basic solution
           recorded by the tableau?
@@ -725,7 +723,6 @@
         </p>
       </statement>
        
-    </task>
   </activity>
 
   <definition xml:id="def-Cycling">
@@ -779,6 +776,26 @@
       </p>
     </statement>
   </theorem>
+
+  <p>
+    Before we proceed with the proof, we require a technical definition.
+  </p>
+
+  <definition>
+    <idx>dictionary</idx>
+    <statement>
+      <p>
+        We call the <term>dictionary</term> for a basis the system of equations corresponding to that basis.  
+        So the dictionary for a basis <m>B_i</m> is <m>D_i</m>
+      which we can write with constraint equalities:
+      
+
+        <me>x_k  = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_i</me>
+        and objective function equality:
+        <me>f  = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d.</me>
+      </p>
+    </statement>
+  </definition>
 
   <proof>
     <p>
@@ -1129,13 +1146,7 @@
        Note that <m>x_s</m> must also be fickle (why?) and so <m>s\lt t</m>.
     </p>
     <p>
-      We call the <term>dictionary</term> for a basis the system of equations corresponding to that basis.  So the dictionary for <m>B_i</m> is <m>D_i</m>
-      which we can write with constraint equalities:
       
-
-        <me>x_k  = b_k - \displaystyle\sum_{x_j\not\in B_i} a_{kj}x_j\text{ for }k\in B_i</me>
-        and objective function equality:
-        <me>f  = \displaystyle\sum_{x_j\not\in B_i} c_{j}x_j -d.</me>
 
       Note that since the above pivot was valid, we must have that <m>c_s>0, a_{ts}>0</m> 
       and since the pivot was degenerate, we have <m>b_t=0</m>.
@@ -1341,7 +1352,7 @@
       Note that for this pivot to be valid, we must have that <m>c_t^*>0</m>.
       If we let <m>D_\ell</m> denote the dictionary before <m>x_t</m> re-enters the basis, we have:
       <me>
-        f = \displaystyle\sum_{x_j\not\in B_\ell} c_{j}^*x_j -d
+        f = \displaystyle\sum_{x_j\not\in B_\ell} c_{j}^*x_j -d.
       </me>
       So note that the solution space to the system of equations for both these dictionaries are the same.  So we have a solution for <m>D_i</m> (not necessarily feasible ie nonnegativity may fail) that must also be a solution to <m>D_\ell</m>:
       <md>

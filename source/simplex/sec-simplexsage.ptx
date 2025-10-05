@@ -715,7 +715,8 @@
     <task>
       <statement>
         <p>
-          What pivot should we do next?  Encode it below:
+          What pivot should we do next?  
+          Encode it below by editing the <c>FIX_ME</c> values:
           <sage>
             <input>
               D.enter("FIX_ME")
@@ -911,7 +912,7 @@
           Then select one to leave:
           <sage>
             <input>
-              D.leave(FIXME)
+              D.leave(FIX_ME)
               D.update()
               D
             </input>

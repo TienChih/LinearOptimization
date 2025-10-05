@@ -84,7 +84,7 @@
     <task>
       <statement>
         <p>
-          Which of these <em>must</em> be an upper bound for <m>t_i</m>  ?
+          Which of these <em>must</em> be an upper bound for <m>t_i</m>?
         </p>
         <ol style="A">
           <li>
@@ -189,7 +189,7 @@
           <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m -b_n \amp =  -t_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0</mrow>
         </md>
-        Which may be recorded by the <term>Tucker Tableau</term>:
+        Which may be recorded by the <term>Tucker tableau</term>:
         
       </p>
       <p>
@@ -541,11 +541,7 @@
       <statement>
         <p>
           Let's increase <m>x_1</m>.  Consider the row corresponding to <m>t_C</m>.  Take the associated equality and solve for <m>x_1</m> in terms of <m>x_2</m> and <m> t_C</m>.
-        </p>
-      </statement>
-      <statement>
-        <p>
-          For each equality associated with the rows corresponding to <m>t_A, t_B, f</m>, replace <m>x_1</m> with the value you found above and rewrite the left hand sides.
+          Then, for each equality associated with the rows corresponding to <m>t_A, t_B, f</m>, replace <m>x_1</m> with the value you found above and rewrite the left hand sides.
         </p>
       </statement>
     </task>

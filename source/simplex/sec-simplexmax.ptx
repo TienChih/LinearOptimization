@@ -2632,7 +2632,7 @@
       </task>
     </activity>
   
-    <p>With this, we may define our algorithm for potential nonfeasible tableau</p>
+    <p>With this, we may define our algorithm for potential nonfeasible tableau.</p>
   
     <definition xml:id="def-simplexmax">
       <idx>simplex algorithm: maximum</idx>
