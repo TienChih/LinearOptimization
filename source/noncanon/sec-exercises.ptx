@@ -197,7 +197,7 @@
         <statement>
           <p>
             A noncanonical linear optimization problem with more unconstrained independent
-variables than constraints has unbounded objective function.  (As in  <xref ref="ex-nc"/> (j).)
+variables than constraints has unbounded objective function  (as in  <xref ref="ex-nc"/> (j)).
           </p>
         </statement>
       </task>
@@ -205,7 +205,7 @@ variables than constraints has unbounded objective function.  (As in  <xref ref=
         <statement>
           <p>
             A noncanonical linear optimization problem with more equations of constraint
-than independent variables is infeasible.  (As in  <xref ref="ex-nc"/> (k).)
+than independent variables is infeasible  (as in  <xref ref="ex-nc"/> (k)).
           </p>
         </statement>
       </task>

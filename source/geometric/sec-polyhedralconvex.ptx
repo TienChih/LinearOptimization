@@ -144,10 +144,31 @@
       <p>
         <idx>hyperplane, plane</idx>
         Given constants <m>a_1, \ldots, a_m, b</m> <term>hyperplane</term> in <m>\mathbb{R}^m</m> is a set of the form 
-        <m>\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m= b\}</m>.
+        <m>H=\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m= b\}</m>.
+      </p> 
+      <p>
+        <idx>normal vector</idx>
+        We call the vector <m>\begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix}</m> the 
+        <term>normal vector</term> to <m>H</m>.
       </p>
     </statement>
   </definition>
+
+  <activity xml:id="activity-normalplane">
+    <statement>
+      <p>
+        Consider the  desmos interactive:
+      </p>
+      <p>
+        <interactive iframe="https://www.desmos.com/3d/shofhpc1au" width="100%" />
+      </p>
+      <p>
+        Adjust the different <m>a_i</m> sliders to different values.
+        What do we notice about the plane <m>a_1x+a_2y+a_3z=0</m> and the 
+        vector <m>\begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix}</m>?
+      </p>
+    </statement>
+  </activity>
 
   <definition xml:id="def-convex">
     <statement>
