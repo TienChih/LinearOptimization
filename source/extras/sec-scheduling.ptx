@@ -609,7 +609,6 @@
         be 1 if student <m>i</m> enrolls in course <m>j</m> and 0 otherwise.
       </p>
 
-      <sidebyside >
     <tabular halign="center">
         <row>
           <cell halign="right">
@@ -966,75 +965,30 @@
         <row>
           <cell right="medium">
           </cell>
-          <cell right="medium" bottom="medium">
+          <cell right="medium">
              13
           </cell>
-          <cell right="medium" bottom="medium">
+          <cell right="medium" >
             Lit MWF 10:00-11:00
           </cell>
-          <cell  right="medium" bottom="medium">
+          <cell  right="medium">
             7
           </cell>
-          <cell  right="medium" bottom="medium">
+          <cell  right="medium" >
             8
           </cell>
-          <cell  right="medium" bottom="medium">
+          <cell  right="medium">
             6
           </cell>
-          <cell  right="medium" bottom="medium">
+          <cell  right="medium" >
             5
           </cell>
-          <cell  right="medium" bottom="medium">
+          <cell  right="medium" >
             5
           </cell>
         </row>
-      </tabular>
-
-    <tabular halign="center">
-      <row>
-          <cell halign="right">
-          </cell>
-          <cell bottom="medium">
-          </cell>
-          <cell bottom="medium">
-          </cell>
-          <cell bottom="medium">
-          </cell>
-          <cell bottom="medium">
-          </cell>
-          <cell bottom="medium">
-          </cell>
-          <cell bottom="medium">
-          </cell>
-          <cell bottom="medium">
-          </cell>
-          
-        </row>
-        <row>
-          <cell right="medium">
-          </cell>
-          <cell bottom="medium" right="medium">
-             <m>j</m>
-          </cell>
-          <cell bottom="medium" right="medium">
-            Course Name and Time
-          </cell>
-          <cell bottom="medium" right="medium">
-            <m>c_{1j}</m>
-          </cell>
-          <cell bottom="medium" right="medium">
-            <m>c_{2j}</m>
-          </cell>
-          <cell bottom="medium" right="medium">
-            <m>c_{3j}</m>
-          </cell>
-          <cell bottom="medium" right="medium">
-            <m>c_{4j}</m>
-          </cell>
-          <cell bottom="medium" right="medium">
-            <m>c_{5j}</m>
-          </cell>
-        </row>
+      
+      
       <row>
           <cell right="medium">
           </cell>
@@ -1368,7 +1322,6 @@
         
       </tabular>
 
-  </sidebyside>
       
         
       <p>
