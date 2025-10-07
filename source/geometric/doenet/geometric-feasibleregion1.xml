@@ -17,8 +17,8 @@
     <line name="line" through="$u $u+(-1*$c2, $c1)" styleNumber="2"/> 
 </graph>
   <p>
-    Enter in the coefficients for the objective function, then drag the point around to see
-    what the objective value is for each point.  Where (if at all) is the objective function optimized?
+    Enter in the coefficients for the revenue function, then drag the point around to see
+    what the revenue value is for each point.  Where (if at all) is the revenue function optimized?
     What happens if you drag the point along the line passing through it?
   </p>
   <p>

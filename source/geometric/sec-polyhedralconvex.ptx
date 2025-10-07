@@ -142,9 +142,11 @@
   <definition xml:id="def-hyperplane">
     <statement>
       <p>
-        <idx>hyperplane, plane</idx>
+        <idx>hyperplane</idx>
+        <idx>plane</idx>
         Given constants <m>a_1, \ldots, a_m, b</m> <term>hyperplane</term> in <m>\mathbb{R}^m</m> is a set of the form 
-        <m>H=\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m= b\}</m>.
+        <m>H=\{\mathbf{x}\in \mathbb{R}^m: a_1x_1+a_2x_2+\cdots a_mx_m= b\}</m>.  If <m>m=3</m>
+        we usually call this a <term>plane</term>.
       </p> 
       <p>
         <idx>normal vector</idx>
