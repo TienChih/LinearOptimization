@@ -1,4 +1,4 @@
-<graph xmin="-2" ymin="4" xmax="12" ymax="18">
+<graph xmin="-2" ymin="-2" xmax="20" ymax="20">
   <polygon vertices="(0,0) (0, 14) (10,4) (34/3,0)" filled draggable="false" styleNumber="4"/>
   <point name="u" styleNumber="5" draggable="false">
   (0,14)
