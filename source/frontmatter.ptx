@@ -14,6 +14,7 @@
       <today />
     </date>
   </titlepage>
+  <xi:include href="./studentstatements.ptx" />
   <dedication>
     <p>
       For Tara, Byron, Max and Mya
