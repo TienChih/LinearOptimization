@@ -562,7 +562,7 @@
     <task>
       <statement>
         <p>
-          We can enter the above problem into sage via:
+          We can enter the above problem into Sage via:
           <sage>
           <input>
             %display typeset

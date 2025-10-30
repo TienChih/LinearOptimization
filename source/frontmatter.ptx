@@ -10,9 +10,9 @@
       <department>Mathematics</department>
       <institution>Oxford College of Emory University</institution>
     </author>
-    <date>
+    <!--<date>
       <today />
-    </date>
+    </date>-->
   </titlepage>
   <xi:include href="./studentstatements.ptx" />
   <dedication>

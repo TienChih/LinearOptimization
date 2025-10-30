@@ -580,8 +580,6 @@
                     Let <m>V</m> be a vector space and <m>S\subseteq V</m>.
                     Then <m>S</m> is <em>linearly independent</em> if the equation
                     <me>\sum_{\vs\in S}a_i\vs_i=\mathbf{0}</me> if and only if each <m>a_i</m>=0.
-                </p>
-                <p>
                     Otherwise, <m>S</m> is dependent.
                 </p>
             </statement>

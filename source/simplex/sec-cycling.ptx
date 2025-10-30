@@ -1143,12 +1143,8 @@
       </sidebyside>
       
        
-       Note that <m>x_s</m> must also be fickle (why?) and so <m>s\lt t</m>.
-    </p>
-    <p>
-      
-
-      Note that since the above pivot was valid, we must have that <m>c_s>0, a_{ts}>0</m> 
+      Note that <m>x_s</m> must also be fickle (why?) and so <m>s\lt t</m>.
+      We also see that since the above pivot was valid, we must have that <m>c_s>0, a_{ts}>0</m> 
       and since the pivot was degenerate, we have <m>b_t=0</m>.
     </p>
 

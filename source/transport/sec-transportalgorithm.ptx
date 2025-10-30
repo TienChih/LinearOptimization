@@ -1007,7 +1007,7 @@
       <p>
         Consider the Transportation Algorithm <xref ref="def-transportationalg"/>. Recall that
         the objective function for the transportation problem is <m>f(\x)=\displaystyle \sum x_{ij}c_{ij}</m>,
-        and that the entries of the tableau produced in Step 3 are <m>c_{ij}-a_i-b_j</m>. 
+        and that the entries of the tableau produced in step 3 are <m>c_{ij}-a_i-b_j</m>. 
       </p>
 
       <p>

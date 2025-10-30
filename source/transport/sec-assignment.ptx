@@ -324,7 +324,7 @@
           <p>
             THEN multiply each entry of <m>T</m> by the
             lowest common multiple of the denominators, 
-            <m>\displaystyle \underset{ i, j}{\lcm} q_{ij}</m>. 
+            <m>\displaystyle \underset{ i, j}{\lcm}\ q_{ij}</m>. 
           </p>
         </li>
         <li>

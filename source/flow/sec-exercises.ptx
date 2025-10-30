@@ -371,7 +371,7 @@
       <task>
         <statement>
           <p>
-            How can we tell both the flow and cut found in <xref ref="ex-maxflowmincut"/> <m>\textbf{a}</m>
+            How can we tell both the flow and cut found in <xref ref="ex-maxflowmincut"/> <m>\textbf{(a)}</m>
             are optimal? (Think duality.)
           </p>
         </statement>

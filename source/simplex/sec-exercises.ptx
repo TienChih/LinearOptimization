@@ -319,7 +319,7 @@
             <li>
           <statement>
               <p>
-                Pivot on the entry corresponding to Bland's Anti-cycling rules.
+                Pivot on the entry corresponding to <xref ref="thm-BlandAnticycling"/> Bland's anticycling rules.
               </p>
             </statement>
           </li>

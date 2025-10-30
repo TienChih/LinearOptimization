@@ -126,7 +126,7 @@
         </p>
 
         <p>
-          Note that if we we to consider the inherent system of equations:
+          Note that if we were to consider the inherent system of equations:
           <md>
             <mrow>\sum_{j=1}^m x_{ij} \amp = W_i </mrow>
             <mrow>\sum_{i=1}^n x_{ij} \amp = M_j </mrow>
@@ -158,8 +158,8 @@
   </p>
   <p>
     Note that for the current basis, the cost of shipping is <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij}</m>, but since
-     <m>c_{ij}=0</m> for <m>x_{ij}</m> not in the basis, and since <m>\displaystyle \sum_{j=1}^m x_{ij}=W_i</m> and <m> \sum_{i=1}^n x_{ij}=M_j</m>, we have that
-     <m>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij} = \sum_{i=1}^n a_iW_i+\sum_{j=1}^m b_jM_j</m>, so shifting the shipping to an entry where <m>c_{ij}&lt; a_i+b_j</m> would
+     <m>c_{ij}=0</m> for <m>x_{ij}</m> not in the basis, and since <me>\displaystyle \sum_{j=1}^m x_{ij}=W_i \text{ and } \sum_{i=1}^n x_{ij}=M_j,</me> we have that
+     <me>\displaystyle \sum_{i=1}^n\sum_{j=1}^m c_{ij}x_{ij} = \sum_{i=1}^n a_iW_i+\sum_{j=1}^m b_jM_j,</me> so shifting the shipping to an entry where <m>c_{ij}&lt; a_i+b_j</m> would
      lower the total shipping cost.  We then outline a cycle consisting of new basis elements and shifting the shipping around to preserve the 
      warehouse and market constraints, adding the negative entry to the basis and removing an entry with no shipping from the basis.  Note that it is possible for this
      shift to be zero, yet changing the basis, equivalent to a degenerate pivot from <xref ref="sec-cycling"/>.  We repeat this process until

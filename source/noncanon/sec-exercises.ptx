@@ -197,7 +197,7 @@
         <statement>
           <p>
             A noncanonical linear optimization problem with more unconstrained independent
-variables than constraints has unbounded objective function  (as in  <xref ref="ex-nc"/> (j)).
+variables than constraints has unbounded objective function  (as in  <xref ref="ex-nc"/> <m>\textbf{(j)}</m>).
           </p>
         </statement>
       </task>
@@ -205,7 +205,7 @@ variables than constraints has unbounded objective function  (as in  <xref ref="
         <statement>
           <p>
             A noncanonical linear optimization problem with more equations of constraint
-than independent variables is infeasible  (as in  <xref ref="ex-nc"/> (k)).
+than independent variables is infeasible  (as in  <xref ref="ex-nc"/> <m>\textbf{(k)}</m>).
           </p>
         </statement>
       </task>
@@ -296,7 +296,7 @@ than independent variables is infeasible  (as in  <xref ref="ex-nc"/> (k)).
           unconstrained independent variables into canonical form is to replace every
           unconstrained independent variable by the difference of two independent variables
           constrained to be nonnegative. This produces an equivalent canonical linear
-          optimization problem which is solved by using the simplex algorithm.
+          optimization problem which is solved by using the Simplex Algorithm.
         </p>
         <p>
           For example:
@@ -355,7 +355,7 @@ than independent variables is infeasible  (as in  <xref ref="ex-nc"/> (k)).
           Another method method for transforming a linear optimization problem with
           equations of constraint into canonical form is to replace every equation of
           constraint by two inequality constraints. This produces an equivalent canonical
-          linear optimization problem which is solved by using the simplex algorithm.
+          linear optimization problem which is solved by using the Simplex Algorithm.
         </p>
         <p>
           For example:

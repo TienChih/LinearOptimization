@@ -300,7 +300,7 @@
         <p>
           <idx>transportation tableau</idx>
           <idx>tableau, transportation</idx>
-          A table like this is called a <term>transportation tableau</term>.
+          A table like this is called a <term>transportation tableau</term> <idx><h>transportation tableau</h></idx>.
         </p>
         <p>
           Ideally we would always want to move everything with the cheapest available option.
