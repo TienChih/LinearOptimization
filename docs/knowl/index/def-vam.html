@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="definition definition-like"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para">To summarize the <em class="emphasis">Vogel Advanced-Start Method</em> or <em class="emphasis">VAM</em> method of producing a feasible solution to the transportation problem is outlined as follows.<div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="def-vam-4-2">
+<li>
+<div class="para">We begin with <span class="process-math">\(m\)</span> <dfn class="terminology">sources</dfn> (warehouses in the above activities) and <span class="process-math">\(n\)</span> <dfn class="terminology">sinks</dfn> (markets in the above activities), each with a supply or demand respectively. We associate each row of the transportation tableau with a source, each column with a sink, and each entry <span class="process-math">\(c_{ij}\)</span> with the cost of shipping from source <span class="process-math">\(i\)</span> to sink <span class="process-math">\(j\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-vam-4-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">For each row and column, we record the difference between the lowest two values.<div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-vam-4-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">We pick the row/column with the largest difference (so long as the associated supply/demand is positive), and the smallest entry in the row/column, <span class="process-math">\(c_{ij}\text{.}\)</span> By convention we circle this entry.<div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#def-vam-4-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li>
+<div class="para">We “ship” quantity from source <span class="process-math">\(i\)</span> to sink <span class="process-math">\(j\text{,}\)</span> recording this quantity as a superscript in the numerator and adjusting the supply for source <span class="process-math">\(i\)</span> and demand for sink <span class="process-math">\(j\)</span> appropriately.<div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#def-vam-4-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li>
+<div class="para">We ignore any source/sink with 0 supply/demand and repeat 2-4.<div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#def-vam-4-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li>
+<div class="para">If all source/sinks are exhausted and we have not yet circled <span class="process-math">\(m+n-1\)</span> entries, we circle any entries in the last row/column we’ve examined, noting that the quantities “shipped” for these entries is zero.<div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#def-vam-4-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li>
+<div class="para">Once <span class="process-math">\(m+n-1\)</span> entries are circled and all supply/demand is exhausted, we terminate.  The circled entries are called the <dfn class="terminology">basis</dfn> of the tableau.<div class="autopermalink" data-description="Paragraph"><a href="#def-vam-4-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#def-vam-4-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Definition 6.1.4"><a href="#def-vam" title="Copy heading and permalink for Definition 6.1.4" aria-label="Copy heading and permalink for Definition 6.1.4">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-vam.html#def-vam">in-context</a></span>
+</body>
+</html>

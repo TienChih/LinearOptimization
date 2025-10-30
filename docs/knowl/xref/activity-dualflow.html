@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction">
+<div class="para">Consider the primal maximization problem for a max flow problem for a capacitated network with unique source <span class="process-math">\(v_s\)</span> and unique sink <span class="process-math">\(v_d\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\textbf{Maximize: }  \displaystyle \sum_{i} x_{id}\\
+\textbf{subject to: }  \sum_{v_i\in V}x_{ij} - \sum_{v_i\in V} x_{ji} \amp =  0, \text{ for each non source/sink vertex }v_j\\
+x_{ij}\amp \leq  c_{ij}, \text{ for each edge} (v_i, v_j)\\
+x_{ij}\amp \geq  0, \text{ for each edge} (v_i, v_j).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Go through this activity twice.  First for the network and max flow <span class="process-math">\(f'\)</span> found for <a href="sec-networkflow.html#exploration-flow" class="xref" data-knowl="./knowl/xref/exploration-flow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exploration 7.1.1">Exploration 7.1.1</a>, then for a general capacitated network.<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Consider the dual problem for this maximization problem where <span class="process-math">\(\mu_{j}\)</span> is the unconstrained dual variable for the vertex equality constraint and the <span class="process-math">\(y_{ij}\)</span> is the dual variable for the capacity constraint.  Verify that this problem may be written as<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}\\
+\textbf{subject to: }  \mu_j +y_{sj} \amp \geq  0, \text{ for each edge }(v_s, v_j)\\
+-\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{ for each edge} (v_i, v_j), i\neq s, j\neq d\\
+- \mu_i +y_{id} \amp \geq  1, \text{ for each edge }(v_i, v_d)\\
+y_{ij}\amp \geq  0, \text{ for each edge} (v_i, v_j)
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(\mu_s=0, \mu_d=-1 \text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.a"><a href="#activity-dualflow-2" title="Copy heading and permalink for Task 7.2.4.a" aria-label="Copy heading and permalink for Task 7.2.4.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Verify that we may simplify the dual solution as:<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\textbf{Minimize: }  \displaystyle \sum_{(v_i, v_j)\in E} c_{ij}y_{ij}\\
+\textbf{subject to: }   -\mu_i + \mu_j +y_{ij} \amp \geq  0, \text{ for each edge} (v_i, v_j)\\
+\mu_s \amp =0 \\
+\mu_d \amp =-1\\
+y_{ij}\amp \geq  0, \text{ for each edge} (v_i, v_j).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.b"><a href="#activity-dualflow-3" title="Copy heading and permalink for Task 7.2.4.b" aria-label="Copy heading and permalink for Task 7.2.4.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Suppose <span class="process-math">\(\mu_j=-1\text{.}\)</span>  What could <span class="process-math">\(\mu_i, y_{ij}\)</span> be?  What value for <span class="process-math">\(\mu_i\)</span> would minimize the dual objective function?  What happens if <span class="process-math">\(\mu_i\)</span> is huge?  How would the resulting <span class="process-math">\(\mu_i\)</span>   that affect the inequality <span class="process-math">\(-\mu_k+\mu_i+y_{ki}\geq 0\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">Repeat for <span class="process-math">\(\mu_j=0\text{,}\)</span> and if <span class="process-math">\(\mu_i\)</span> were either <span class="process-math">\(0\)</span> or <span class="process-math">\(-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.c"><a href="#activity-dualflow-4" title="Copy heading and permalink for Task 7.2.4.c" aria-label="Copy heading and permalink for Task 7.2.4.c">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Suppose each <span class="process-math">\(\mu_k\in \{0, -1\}\text{,}\)</span> Note that <span class="process-math">\(V_1:=\{v_i:\mu_i=0\}, V_2:=\{v_j:\mu_j=-1\}\)</span> forms a cut of <span class="process-math">\(N\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">For <span class="process-math">\(v_i, v_j\in V_1\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">For <span class="process-math">\(v_i, v_j\in V_2\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-5-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">For <span class="process-math">\(v_i\in V_1, v_j\in V_2\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-5-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">For <span class="process-math">\(v_i\in V_2, v_j\in V_1\text{,}\)</span> what is the <span class="process-math">\(y_{ij}\)</span> that minimizes the objective function?<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-5-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">Can any cut of <span class="process-math">\(N\)</span> be modeled this way?<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-5-1-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.d"><a href="#activity-dualflow-5" title="Copy heading and permalink for Task 7.2.4.d" aria-label="Copy heading and permalink for Task 7.2.4.d">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">What is the capacity of the above cut?  How does that relate to the dual problem?<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.e"><a href="#activity-dualflow-6" title="Copy heading and permalink for Task 7.2.4.e" aria-label="Copy heading and permalink for Task 7.2.4.e">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Prove that the maximum flow through a network is bounded above by the minimum cut capacity.<div class="autopermalink" data-description="Paragraph"><a href="#activity-dualflow-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.4.f"><a href="#activity-dualflow-7" title="Copy heading and permalink for Task 7.2.4.f" aria-label="Copy heading and permalink for Task 7.2.4.f">🔗</a></div></article><div class="autopermalink" data-description="Activity 7.2.4"><a href="#activity-dualflow" title="Copy heading and permalink for Activity 7.2.4" aria-label="Copy heading and permalink for Activity 7.2.4">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-maxflowmincut.html#activity-dualflow">in-context</a></span>
+</body>
+</html>
