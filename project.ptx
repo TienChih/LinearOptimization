@@ -2,7 +2,7 @@
 <!-- This file, the project manifest, provides the overall configuration for your PreTeXt project. To edit the content of your document, open `source/main.ptx`. See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest. -->
 <project ptx-version="2">
   <targets>
-    <target name="web" format="html" publication="../publication/publication.ptx"  >
+    <target name="web" format="html" publication="../publication/publication.ptx" deploy-dir="docs" >
       <stringparams html.css.extra="external/custom-styles.css"  debug.project.number="the-way-it-should-be"/> 
     </target>
     <target name="print" format="pdf"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" >
