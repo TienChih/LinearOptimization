@@ -80,14 +80,12 @@
         <p>
           (For those of you who had Calculus and especially Multivariable Calculus, what ideas from those course might you employ?  What are some limitations of these ideas?)
         </p>
-        <p> 
           
-          <interactive label="geometric-feasibleregion1" platform="doenetml"  width="100%" >
+          <interactive label="geometric-feasibleregion1" platform="doenetml"   >
             <slate surface="doenetml">
               <xi:include parse="text" href="doenet/geometric-feasibleregion1.xml"/>
             </slate>
           </interactive>
-        </p>
       </statement>
     </task>
     <task >
