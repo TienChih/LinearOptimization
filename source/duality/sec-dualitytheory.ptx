@@ -584,7 +584,7 @@
         which also achieves optimality for some general tableau.
       </p>
       <p>
-        Use the facts that <me>\displaystyle \sum_{j=1}^m c_jx_j =  \sum_{i=1}^ny_i^*(-t_i) + \sum_{j=1}^m s_i^*(-x_i)-d^*,</me>
+        Use the fact that <me>\displaystyle \sum_{j=1}^m c_jx_j =  \sum_{i=1}^ny_i^*(-t_i) + \sum_{j=1}^m s_i^*(-x_i)-d^*,</me>
         that <m>t_i = b_i-\left(\displaystyle \sum_{j=1}^n a_{ij}x_j\right)</m>, and  by construction
         each <m>y_i^*, s_j^*\geq0</m>.
       </p>

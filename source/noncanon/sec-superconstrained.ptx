@@ -16,7 +16,7 @@
         Suppose we wanted to solve the linear optimization problem:
 
           <md>
-            <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+y+z  &amp;   </mrow>
+            <mrow>\textbf{Maximize: }  f(\mathbf{x}) &amp;= x+y+z    </mrow>
             <mrow>\textbf{subject to: }  2x+3z&amp;  \leq  2</mrow>
             <mrow> 4x-y&amp; \leq  1</mrow>
             <mrow> 5y-2z&amp; \leq  5</mrow>

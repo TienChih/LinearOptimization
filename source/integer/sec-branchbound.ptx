@@ -160,7 +160,7 @@
   <activity xml:id="activity-meat1">
     <introduction>
       <p>
-        The <em>branch and bound</em> method is a way to systematically add bounds to a
+        The <term>branch and bound</term> method is a way to systematically add bounds to a
         linear optimization problem to ensure the solution is integral.
       </p>
       <p>
@@ -495,7 +495,7 @@
   <definition xml:id="def-branchbound">
     <statement>
       <p>
-        The <em>Branch and Bound Algorithm</em> for solving an integer optimization maximization problem
+        The <term>Branch and Bound Algorithm</term> for solving an integer optimization maximization problem
         is as follows:
       </p>
       <ol>

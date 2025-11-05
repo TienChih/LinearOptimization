@@ -289,7 +289,7 @@
   <p>
     Then <m>\begin{bmatrix} 3\\2\end{bmatrix} = \frac{1}{2}\begin{bmatrix} 3\\1\end{bmatrix}+\frac{3}{2}\begin{bmatrix} 1\\1\end{bmatrix}</m>
     and decreasing <m>t_1</m> by 1 increases the objective by <m>\frac{1}{2}</m> and decreasing <m>t_2</m> by 1 increases the objective by <m>\frac{3}{2}</m>.
-    Note that this is equivalent to saying how much value would be gained should there by one more newt eye or frog respectively.
+    Note that this is equivalent to stating how much value would be gained should there by one more newt eye or frog respectively.
   </p>
   <p>
     This inspires us to define the <term>dual problem</term>

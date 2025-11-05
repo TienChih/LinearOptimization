@@ -40,7 +40,7 @@
 
   <p>
     The boundary for these additional inequalities are referred to as
-    <em>cutting hyperplanes</em>.  We wish to determine how to find such cutting
+    <term>cutting hyperplanes</term>.  We wish to determine how to find such cutting
     hyperplanes.
   </p>
 
@@ -198,7 +198,7 @@
         </p>
         <p>
           We call the hyperplane <m>\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j = (\lfloor b_i \rfloor - b_i)</m>
-          a <em>cutting-plane</em>.
+          a <term>cutting-plane</term>.
         </p>
       </statement>
     </task>
@@ -1001,7 +1001,7 @@
     <title>Gomory Cutting-Plane Algorithm</title>
     <statement>
       <p>
-        The <em>Gomory Cutting-Plane</em> Algorithm for an integer optimization problem is as follows:
+        The <term>Gomory Cutting-Plane</term> Algorithm for an integer optimization problem is as follows:
       </p>
       <ol>
         <li>

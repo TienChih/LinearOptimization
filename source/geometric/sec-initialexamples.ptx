@@ -203,8 +203,7 @@
       <p>
         Given the canonical minimization problem:
         <md>
-          <mrow>\textbf{Minimize: }g(x_1, x_2) = 5x_1-3x_2\amp </mrow>
-          <mrow>\amp </mrow>
+          <mrow>\textbf{Minimize: }g(x_1, x_2) \amp = 5x_1-3x_2 </mrow>
           <mrow>\textbf{subject to: }  4x_1 + x_2 \amp \geq  10</mrow>
           <mrow> 3x_1 + 12x_2 \amp \geq  12</mrow>
           <mrow> x_1, x_2, \amp \geq  0.</mrow>

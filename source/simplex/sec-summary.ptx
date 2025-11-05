@@ -22,8 +22,8 @@
           <mrow> a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m +t_n \amp =  b_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0.</mrow>
         </md>
-    where the <m>t_i</m> are called the <em>slack variables</em> for each constraint.  We refer to the original <m>x_j</m> as
-    <em>decision variables</em>.  We noted
+    where the <m>t_i</m> are called the <term>slack variables</term> for each constraint.  We refer to the original <m>x_j</m> as
+    <term>decision variables</term>.  We noted
     that by their construction, for any point <m>\x\in \mathbb{R}^m</m>, <m>t_i</m> is zero if and only if
     <m>\x</m> lies on bounding hyperplane, and is positive if it is on the <q>correct</q> side of the bounding hyperplane.
   </p>
@@ -34,7 +34,7 @@
   </figure>
   </p>
   <p>
-    All of this information may be written in a condensed form, the <em>Tucker tableau</em>.
+    All of this information may be written in a condensed form, the <term>Tucker tableau</term>.
     <tabular halign="center">
           <row>
             <cell halign="left">
@@ -174,16 +174,16 @@
     since we have the equality <me>a_{i1}x_1+\cdots a_{ij}x_j+\cdots a_{im}x_m=b_i-t_i</me> that we could rewrite as:
     <me>x_j=\frac{1}{a_{ij}}\left( b_i-t_i-a_{i1}x_i-\cdots-a_{im}x_m \right)</me>  
     provided <m>x_{ij}\neq0</m> and this would allow us to rewrite all the pertinent equalities and inequalities replacing <m>x_j</m>
-    with <m>t_i</m>.  This process is called a <em>pivot transformation</em> <xref ref="def-pivot"/>, where now
+    with <m>t_i</m>.  This process is called a <term>pivot transformation</term> <xref ref="def-pivot"/>, where now
     <m>t_i</m> is a decision variable and <m>x_j</m> is a slack variable.
 
   </p>
   <p>
     We note that by setting all the decision variables equal to zero, we obtain a potential solution called
-    a <em>basic solution</em> and the pivot transformation is really moving from basic solution to basic solution.
+    a <term>basic solution</term> and the pivot transformation is really moving from basic solution to basic solution.
     Assuming that all <m>b_i\geq0</m>, the basic solutions are feasible, and we establish a rule to identify pivots.  Picking a
     <m>c_j &gt; 0</m>, we choose a positive entry <m>a_{ij}</m> minimizing the ratio <m>\frac{b_i}{a_{ij}}</m>.
-    When each <m>c_j\leq 0</m>, we have obtained an optimal solution.  This is summarized in the <em>Simplex Algorithm</em> <xref ref="def-simplexmax"/>. 
+    When each <m>c_j\leq 0</m>, we have obtained an optimal solution.  This is summarized in the <term>Simplex Algorithm</term> <xref ref="def-simplexmax"/>. 
   </p>
 
   <p>
@@ -222,8 +222,8 @@
 
   <p>
     Finally, it is possible to pivot from basic solution to basic solution, represented as the intersection of
-    different hyperplanes, but without actually changing the point in <m>\mathbb{R}^m</m> in a phenomena called <em>cycling </em>.
-    We introduce and prove <em>Bland's Anticyling Theorem</em> <xref ref="thm-BlandAnticycling"/> which shows that
+    different hyperplanes, but without actually changing the point in <m>\mathbb{R}^m</m> in a phenomena called <term>cycling </term>.
+    We introduce and prove <term>Bland's Anticyling Theorem</term> <xref ref="thm-BlandAnticycling"/> which shows that
     ordering the variables, and always using the first possible variable to break any ties, we may avoid this issue.
   </p>
 

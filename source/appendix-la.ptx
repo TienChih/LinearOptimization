@@ -24,7 +24,7 @@
         <definition xml:id="def-matrix">
             <statement>
                 <p>
-                    A real-valued <em>matrix</em> is a rectangular array of the form
+                    A real-valued <term>matrix</term> is a rectangular array of the form
                     <me>A=\begin{bmatrix}
                         a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1m}\\
                         a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2m}\\
@@ -43,7 +43,7 @@
         <definition xml:id="def-vector">
             <statement>
                 <p>
-                    <m>n\times 1</m> matrices are also referred to as <em>vectors</em>:
+                    <m>n\times 1</m> matrices are also referred to as <term>vectors</term>:
                         <me>\x = \begin{bmatrix}x_1 \\ x_2 \\ \vdots \\ x_n\end{bmatrix}.</me>
                         This is the convention we use, with vectors being column matrices.
                         Some texts default to row vectors.
@@ -54,7 +54,7 @@
         <definition xml:id="def-transpose">
             <statement>
                 <p>
-                    Given a <m>n\times m</m> matrix <m>A</m>, we define the <em>transpose</em>
+                    Given a <m>n\times m</m> matrix <m>A</m>, we define the <term>transpose</term>
                     of <m>A</m> denoted <m>A^\top</m> as <m>A=[a_{ij}]_{n\times m}^\top = [a_{ji}]_{m\times n}</m>
                     or
                     <me>\begin{bmatrix}
@@ -97,7 +97,7 @@
                 <p>
                     Given two matrices of the same dimensions
                     <m>A=[a_{ij}]_{n\times m}, B=[b_{ij}]_{n\times m}</m>,
-                    we define their <em>sum</em> entrywise, that is: <m>A+B=[a_{ij}+b_{ij}]_{n\times m}</m>.
+                    we define their <term>sum</term> entrywise, that is: <m>A+B=[a_{ij}+b_{ij}]_{n\times m}</m>.
                 </p>
             </statement>
         </definition>
@@ -139,7 +139,7 @@
             <statement>
                 <p>
                     Given matrices <m>A=[a_{ij}]_{n\times m}, B=[b_{ij}]_{m\times \ell}</m>,
-                    we define their <em>product</em> to be <m>AB =[c_{ij}]_{n\times \ell}= [\sum_{k=1}^m a_{ik}b_{kj}]_{n\times \ell}</m>.
+                    we define their <term>product</term> to be <m>AB =[c_{ij}]_{n\times \ell}= [\sum_{k=1}^m a_{ik}b_{kj}]_{n\times \ell}</m>.
                 </p>
             </statement>
         </definition>
@@ -226,7 +226,7 @@
             <statement>
                 <p>
                     Given a matrix <m>A=[a_{ij}]_{n\times m}</m> and real number <m>c</m>,
-                    we define the <em>scalar product</em> to be <m>cA = [ca_{ij}]_{n\times m}</m>.
+                    we define the <term>scalar product</term> to be <m>cA = [ca_{ij}]_{n\times m}</m>.
                 </p>
             </statement>
         </definition>
@@ -272,7 +272,7 @@
         <definition xml:id="def-zeromatrix">
             <statement>
                 <p>
-                    We denote the <em>zero matrix</em> as <m>\mathbf{0}_{n\times m}:=[0]_{n\times m}</m>
+                    We denote the <term>zero matrix</term> as <m>\mathbf{0}_{n\times m}:=[0]_{n\times m}</m>
                     or <m>\mathbf{0}</m> if the dimensions are clear from context.
                 </p>
             </statement>
@@ -381,16 +381,16 @@
         <definition xml:id="def-squarematrix">
             <statement>
                 <p>
-                    <m>A=[a_{ij}]_{n\times n}</m> is a <em>square matrix</em>.
-                    The entries where <m>i=j</m> are the <em>diagonal</em> of <m>A</m>.
-                    If <m>a_{ij}=0</m> when <m>i\neq j</m>, then <m>A</m> is a <em>diagonal matrix</em>.
+                    <m>A=[a_{ij}]_{n\times n}</m> is a <term>square matrix</term>.
+                    The entries where <m>i=j</m> are the <term>diagonal</term> of <m>A</m>.
+                    If <m>a_{ij}=0</m> when <m>i\neq j</m>, then <m>A</m> is a <term>diagonal matrix</term>.
                 </p>
             </statement>
         </definition>
         <definition xml:id="def-identitymatrix">
             <statement>
                 <p>
-                    The <em>identity matrix</em> <m>I_n</m> is the <m>n\times n</m> diagonal
+                    The <term>identity matrix</term> <m>I_n</m> is the <m>n\times n</m> diagonal
                     square matrix where the diagonal entries are all <m>1</m>.
                 </p>
             </statement>
@@ -410,7 +410,7 @@
                     For <m>A</m> a <m>n\times n</m> matrix, we say <m>A</m>
                     is invertible if there exists a <m>n\times n</m> matrix
                     <m>B</m> such that <m>AB=BA=I_n</m>.  We usual call <m>B</m>
-                    the <em>inverse</em> of <m>A</m> and denote it <m>A^{-1}</m>.
+                    the <term>inverse</term> of <m>A</m> and denote it <m>A^{-1}</m>.
                 </p>
             </statement>
         </definition>
@@ -441,35 +441,35 @@
                 <p>
                     Let a set <m>V</m> be  equipped with  operations <m>+</m>
                     and a scalar product.  Let <m>\x, \y, \z \in V</m> and  <m>a,b</m> be scalars. Then <m>V</m>
-                     is a <em>vector space</em> if it satisfies the following axioms:
+                     is a <term>vector space</term> if it satisfies the following axioms:
                      
                 </p>
                 <ol> 
                     <li>
                         <p>
-                            <em>Associativity of vector addition</em>:
+                            <term>Associativity of vector addition</term>:
                             <m>(\x + \y)+\z=\x+(\y+\z)</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <em>Commutativity of vector addition</em>:
+                            <term>Commutativity of vector addition</term>:
                             <m>\x + \y = \y+\x</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <em>Identity element of vector addition</em>:
+                            <term>Identity element of vector addition</term>:
                             there exists a vector <m>\mathbf{0}</m> called the
-                            <em>zero vector</em> such that 
+                            <term>zero vector</term> such that 
                             <m>\mathbf{0} + \x = \x + \mathbf{0} = \x</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <em>Inverse elements of vector addition</em>:
+                            <term>Inverse elements of vector addition</term>:
                             for each vector <m>\x</m>, there exists a vector <m>-\x</m> called the
-                            <em>additive inverse</em> of <m>\x</m> such that 
+                            <term>additive inverse</term> of <m>\x</m> such that 
                             <m>-\x + \x = \x + (-\x) = \mathbf{0}</m>.
                         </p>
                     </li>
@@ -482,19 +482,19 @@
                     </li>
                     <li>
                         <p>
-                            <em>Identity element of scalar multiplication</em>:                            
+                            <term>Identity element of scalar multiplication</term>:                            
                             <m>1\x = \x</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <em>Distributivity of scalar multiplication with respect to vector addition</em>:                            
+                            <term>Distributivity of scalar multiplication with respect to vector addition</term>:                            
                             <m>a(\x+\y)=a\x+a\y</m>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <em>Distributivity of scalar multiplication with respect to field addition	</em>:                            
+                            <term>Distributivity of scalar multiplication with respect to field addition	</term>:                            
                             <m>(a+b)\x=a\x+b\x</m>.
                         </p>
                     </li>
@@ -539,7 +539,7 @@
             <statement>
                 <p>
                     Let <m>V</m> be a vector space and <m>S\subseteq V</m>. Then a
-                    <em> linear combination</em> of these vectors is a sum:
+                    <term> linear combination</term> of these vectors is a sum:
                     <me>\sum a_i\vs_i, \text{ where } a_i\in \mathbb{R}, \vs_i\in S  </me>
                 </p>
             </statement>
@@ -549,12 +549,12 @@
             <statement>
                 <p>
                     Let <m>V</m> be a vector space and <m>S\subseteq V</m>.
-                    Then the <em>span</em> of <m>S</m> defined 
+                    Then the <term>span</term> of <m>S</m> defined 
                     <me>\mathrm{span}(S)=\left\{ \sum a_i\vs_i: a_i\in \mathbb{R}, \vs_i\in S \right\}.</me>
                 </p>
                 <p> 
                     If <m>\mathrm{span}(S)=V</m> we say that <m>S</m> 
-                    <em>spans</em> <m>V</m>.
+                    <term>spans</term> <m>V</m>.
                 </p>
             </statement>
         </definition>
@@ -578,7 +578,7 @@
             <statement>
                 <p>
                     Let <m>V</m> be a vector space and <m>S\subseteq V</m>.
-                    Then <m>S</m> is <em>linearly independent</em> if the equation
+                    Then <m>S</m> is <term>linearly independent</term> if the equation
                     <me>\sum_{\vs\in S}a_i\vs_i=\mathbf{0}</me> if and only if each <m>a_i</m>=0.
                     Otherwise, <m>S</m> is dependent.
                 </p>
@@ -640,7 +640,7 @@
             <statement>
                 <p>
                     Let <m>V</m> be a vector space and <m>B\subseteq V</m>. 
-                    Then <m>B</m> is a <em>basis</em> of <m>V</m> if for any
+                    Then <m>B</m> is a <term>basis</term> of <m>V</m> if for any
                     <m>\x\in V</m>, 
                     <me>\sum_{\vb\in B}a_i\vb_i=\mathbf{x}</me>
                     always has a unique solution.

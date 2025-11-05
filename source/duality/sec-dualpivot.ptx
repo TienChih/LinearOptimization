@@ -625,7 +625,7 @@
     <task>
       <statement>
         <p>
-          Use sage to find the dual and solve it:
+          Use Sage to find the dual and solve it:
         </p>
         <sage>
           <input>

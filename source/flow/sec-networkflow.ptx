@@ -303,7 +303,7 @@
         <statement>
           <p>
             For each vertex <m>v_j</m> not our source or sink, there is an equality constraint for the decision variables associated
-            with this vertex.  Which is this equality?
+            with this vertex.  Which of the following represents this equality?
             
           </p>
           <ol  marker="A." cols="2">

@@ -331,7 +331,7 @@
         The variables at the top are called the <term>decision variables</term> or <term>independent variables</term>, the variables on the side are the <term>slack variables</term> or <term>basic variables</term>.
       </p>
       <p>
-        The <term>basic solution</term> recorded by a Tucker Tableau is the solution where each decision variable has
+        The <term>basic solution</term> recorded by a Tucker tableau is the solution where each decision variable has
         the value zero.
       </p>
     </statement>

@@ -1046,7 +1046,7 @@ solutions of successive tableaus.
           </p>
           
           <p>  Recall 
-          Weak Duality <xref ref="prop-weakduality"/>, and Complementary Slackness, <xref ref="def-complementaryslackness"/>.  Suppose we found a pair of primal-dual solutions which satisfied main constraints,
+          Weak Duality <xref ref="prop-weakduality"/>, and Complementary Slackness <xref ref="def-complementaryslackness"/>.  Suppose we found a pair of primal-dual solutions which satisfied main constraints,
           but failed one or more nonnegativity constraints.
         </p>
       </introduction>

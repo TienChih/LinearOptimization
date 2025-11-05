@@ -447,9 +447,9 @@
           Consider the canonical maximization linear optimization problem:
         </p>
         <p>
-          Maximize <m>f(x,y)=3x+2y</m>  subject to:
           <md>
-            <mrow> x+y\amp \leq 8</mrow>
+            <mrow>\textbf{Maximize: }f(x,y) \amp =3x+2y</mrow>
+            <mrow>\textbf{subject to: } x+y\amp \leq 8</mrow>
             <mrow> 2x+y\amp \leq 10</mrow>
             <mrow> x, y\amp \geq 0.</mrow>
           </md>

@@ -17,7 +17,7 @@
         Suppose we wanted to solve the linear optimization problem:
 
           <md>
-            <mrow>\textbf{Maximize: }  f(\mathbf{x})= 3x+2y  &amp;   </mrow>
+            <mrow>\textbf{Maximize: }  f(\mathbf{x})  &amp;  = 3x+2y   </mrow>
             <mrow>\textbf{subject to: }  4x+5y&amp;  \leq  23</mrow>
             <mrow> 2x +y&amp; \leq  7</mrow>
             <mrow> x -y&amp; \leq  5.</mrow>
@@ -386,7 +386,7 @@
         Suppose we wanted to solve the linear optimization problem:
 
           <md>
-            <mrow>\textbf{Maximize: }  f(\mathbf{x})= 5x+4y  &amp;   </mrow>
+            <mrow>\textbf{Maximize: }  f(\mathbf{x})&amp; = 5x+4y     </mrow>
             <mrow>\textbf{subject to: }  2x+3y&amp;  \leq  26</mrow>
             <mrow> -2x -10 y&amp; \leq  2.</mrow>
           </md>
@@ -977,7 +977,7 @@
       <p>
         Solve the linear optimization problem:
         <md>
-          <mrow>\textbf{Maximize: }  f(\mathbf{x})= x+3y  &amp;   </mrow>
+          <mrow>\textbf{Maximize: }  f(\mathbf{x})&amp; = x+3y    </mrow>
           <mrow>\textbf{subject to: }  x+2y&amp;  \leq  10</mrow>
           <mrow> 2x +y&amp; \leq  15</mrow>
           <mrow> x&amp; \geq  0.</mrow>

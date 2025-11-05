@@ -13,9 +13,9 @@
 
   <p>
     To show that such a result may generalize, we introduce the notion of
-    <em>convexity</em> <xref ref="def-convex"/>.  A convex set is a set which contains every
-    line segment between points in the set.  We then show that a half-space was convex,
-    that an intersection of halfspaces was convex, and thus the feasible region of a linear optimization 
+    <term>convexity</term> <xref ref="def-convex"/>.  A convex set is a set which contains every
+    line segment between points in the set.  We then show that a half-space is convex,
+    that an intersection of halfspaces is convex, and thus the feasible region of a linear optimization 
     problem is always convex.
   </p>
 
@@ -26,7 +26,7 @@
     We may increase the value of <m>k</m> by moving in one of two directions orthogonal to this
     plane, until we reach the boundary.  But even then, we can still increase the value of <m>k</m> by moving along the boundary until
     we either fall on a subset of the boundary on which <m>f</m> is constant, or a corner point also called
-    an <em>extreme point</em> <xref ref="def-extremepoint"/>.
+    an <term>extreme point</term> <xref ref="def-extremepoint"/>.
   </p>
 
   <p>

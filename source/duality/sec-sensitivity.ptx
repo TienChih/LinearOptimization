@@ -17,7 +17,7 @@
         1 each of newt eyes and frogs.  She currently has 34 newt eyes and 14 frogs.
       </p>
       <p>
-        Supposing that the healing elixir sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximize her revenue.  Let us suppose that since these are liquids, she is happy making fractional amounts 
+        Supposing that the healing elixir sells for three gold pieces, and the poison sells for two.  Agnesi wishes to maximize her revenue.  Let us also suppose that since these are liquids, she is happy making fractional amounts 
         of elixirs and potions.
       </p>
       
@@ -60,7 +60,7 @@
       <statement>
         <p>
          Recompute this linear optimization problem with 35 newt eyes and 14 frogs, then with 34 newt eyes and 15 frogs.  Which provides the greater increase in revenue?
-         Is this consistent with what you thought earlier?
+         Is this consistent with what you thought earlier? (Use the above interactive.)
         </p>
       </statement>
     </task>

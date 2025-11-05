@@ -989,7 +989,7 @@
     <task>
       <statement>
         <p>
-          Perform steps 2-5.  How much was shifted along the cycle in step 5?
+          Perform steps 2-5 of the Transportation Algorithm <xref ref="def-transportationalg"/>.  How much was shifted along the cycle in step 5?
         </p>
       </statement>
     </task>
