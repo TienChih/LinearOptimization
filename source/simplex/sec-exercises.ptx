@@ -1343,7 +1343,7 @@ and 2700 for cappers, how many of each type of tire should be made each week to 
 
     <exercise>
       <p>
-        The canonical optimization problem below potentially cycles (due to H.W. Kuhn.). 
+        The canonical optimization problem below potentially cycles (due to H.W. Kuhn). 
         Solve the problem by using the Simplex Algorithm with Bland's Anticycling Theorem <xref ref="thm-BlandAnticycling"/>.
       </p>
       <p>

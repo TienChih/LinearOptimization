@@ -541,7 +541,7 @@
         <me>\displaystyle \min_{\q \in F_{\q}} \p'^\top A\q = \displaystyle \min_{1\leq i\leq n}A_{(i)}\q = \p'^\top A\q' = \max_{1\leq j\leq m}\p^\top A^{(j)} = \max_{\p \in F_{\p}} \p^\top A\q'.</me>
       </p>
       <p>
-        We call the described value the <term>von Neumann Value</term> of the game.
+        We call the described value the <term>von Neumann value</term> of the game.
       </p>
     </statement>
   </theorem>

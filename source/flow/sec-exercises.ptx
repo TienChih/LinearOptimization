@@ -441,7 +441,7 @@ O patients can receive only type O, and type AB patients can receive any of the 
       
       <hint>
         <p>
-          What is the sum <m>\displaystyle \sum_{j\in V_2}\varphi(v_j)</m>?  How can rewriting this as a double sum help?
+          What is the sum <m>\displaystyle \sum_{v_j\in V_2}\varphi(v_j)</m>?  How can rewriting this as a double sum help?
         </p>
       </hint>
     </exercise>
