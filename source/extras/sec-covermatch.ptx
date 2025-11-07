@@ -315,7 +315,7 @@
         are in <m>U</m>.
       </p>
       <p>
-        Let <m>\tau(G)</m> denote the size of the smallest vertex cover <fn>This is fairly standard.</fn>.
+        Let <m>\tau(G)</m> denote the size of the smallest vertex cover. 
       </p>
     </introduction>
     <task>
