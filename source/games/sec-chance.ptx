@@ -6,7 +6,7 @@
 
   <introduction>
     <p>
-      For games with random components, such as gambling, we can still apply our techniques.  This requires some work, and we
+      For games with random components, such as gambling, we can still apply our techniques, using the expected winnings.  This requires some work, and we
       explore how to do so.
     </p>
   </introduction>
@@ -19,11 +19,11 @@
 
       </p>
       <p>
-        Rowan has the option of raising by $10 or folding. If he folds, he loses $25.  Otherwise
-        Colleen then can either fold or call.  If they fold, she loses $25, if she calls, she puts $10 into the pot.
+        Rowan has two options.  He may RAISE by $10 or FOLD. If he FOLDs, he loses $25.  Otherwise
+        Colleen then can either FOLD or CALL.  If they FOLD, she loses $25, if she CALLs, she puts $10 into the pot.
       </p>
       <p>
-        Note that if Rowan folds, even if Colleen had planned on folding, she would win the $25.
+        Note that if Rowan FOLDs, even if Colleen had planned on folding, she would win the $25.
       </p>
     </introduction>
     <task>
@@ -39,12 +39,12 @@
           </li>
           <li>
             <p>
-              Whether to Fold/Raise for Rowan, whether to Fold/Call for Colleen.
+              Whether to FOLD/RAISE for Rowan, whether to FOLD/CALL for Colleen.
             </p>
           </li>
           <li>
             <p>
-              Whether to Fold/Raise for Rowan depending on the card he is dealt, whether to Fold/Call for Colleen, depending on the card she is dealt.
+              Whether to FOLD/RAISE for Rowan depending on the card he is dealt, whether to FOLD/CALL for Colleen, depending on the card she is dealt.
             </p>
           </li>
           
@@ -65,8 +65,8 @@
     <task>
       <statement>
         <p>
-          Let's say Rowan raises on a Jack, folds on a Queen, and raises on a
-          King, denoted as RFR. Let's saw Colleen folds on a Jack, and calls on a Queen or King,
+          Let's say Rowan RAISEs on a Jack, FOLDs on a Queen, and RAISEes on a
+          King, denoted as RFR. Let's saw Colleen FOLDs on a Jack, and calls on a Queen or King,
           denoted FCC.
         </p>
         <p>
@@ -485,7 +485,7 @@
     <task>
       <statement>
         <p>
-          If Rowan is dealt a Jack, what is his optimal strategy (as a pair of probabilities to Raise or Fold).  Queen? King?
+          If Rowan is dealt a Jack, what is his optimal strategy (as a pair of probabilities to RAISE or FOLD).  Queen? King?
         </p>
       </statement>
     </task>
@@ -508,13 +508,13 @@
         Then the each secretly flip a coin.  We consider heads <q>greater</q> than tails.
       </p>
       <p>
-        Rowan then has the options of passing or betting.  If he passes, then both players reveal their coin
+        Rowan then has the options of PASS or BET.  If he PASSes, then both players reveal their coin
         and the higher value wins.  If they are the same, players split the pot evenly, and both players net wins/losses are $0.
-        His other option is to bet, in which case he adds $<m>r</m> to the pot.
+        His other option is to BET, in which case he adds $<m>r</m> to the pot.
       </p>
       <p>
-        Then Colleen has a choice as well, to fold or call.  If she folds, then Rowan
-        nets the $<m>b</m>.  Otherwise, she calls, and also adds $<m>r</m> to the pot and both coins are revealed.
+        Then Colleen has a choice as well, to FOLD or CALL.  If she FOLDs, then Rowan
+        nets the $<m>b</m>.  Otherwise, she CALLs, and also adds $<m>r</m> to the pot and both coins are revealed.
       </p>
     </introduction>
     <task>

@@ -965,10 +965,7 @@
         </li>
         
       </ol>
-      <p>
-        What is left should be a maximization tableau with no unconstrained variable.  One should take a moment to ponder: It may well be that
-        the resulting tableau is infeasible.  Why is this either not possible, or possible but ok?
-      </p>
+      
     </statement>
   </observation>
 
