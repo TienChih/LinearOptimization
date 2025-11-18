@@ -7,9 +7,9 @@
     <p> 
       The purpose of this chapter is to establish the geometric intuition that
       undergird the approach we take to this material throughout the course.  In 
-      <xref ref="sec-intro"/> we revisit some ideas from Linear Algebra and explore
+      <xref ref="sec-intro"/> we revisit some ideas from linear algebra and explore
       the connection between algebraic operations and geometric interpretations.  This is
-      <em>not</em> meant to serve as a review of Linear Algebra prerequisites, but as a
+      <em>not</em> meant to serve as a review of linear algebra prerequisites, but as a
       warm up that centers the geometric intuition (A brief review of a few linear algebra topics may be found
       in <xref ref="sec-lareview"/>).  In <xref ref="sec-initial"/> we give
       some examples of problems we wish to address in this course and show how we may interpret
