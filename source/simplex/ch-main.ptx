@@ -5,18 +5,18 @@
 
   <introduction>
     <p>
-      So, we saw that in lower dimensions, one can use geometric reasoning to
+      We saw that in lower dimensions one may use geometric reasoning to
       find and interpret the optimal solution to a linear optimization problem.  However,
       this intuition easily breaks down in higher dimensions.  Moreover, 
       brute force examination of potential corner points proves to be a massive and overwhelming
       approach to finding optimal solutions.  Is there any way we can leverage this intuition built
-      in lower dimensions to develop a systematic way to identify the optimal corner point?
+      in lower dimensions to develop a systematic way to identify the optimal extreme point?
     </p>
     <p>
       In this chapter, we develop an algorithm, the Simplex Algorithm, which allows us to
       solve linear optimization problems. In <xref ref="sec-pivot"/> we determine
        the rules for a simplex pivot
-      and interpret this operation computationally, algebraiacally and
+      and interpret this operation computationally, algebraically and
       geometrically.  In <xref ref="sec-simplexmax"/> we discover the conditions for
       an appropriate pivot which preserves feasibility, as well as how to handle basic solutions
       which are infeasible, and minimization problems.  In <xref ref="sec-cycling"/> we discuss
