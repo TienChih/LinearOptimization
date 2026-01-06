@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exploration project-like"><h3 class="heading">
+<span class="type">Exploration</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction"><div class="para">Suppose a shipping company is moving goods through a series of transportation hubs via rail.  The maximum capacity in tons and the cost in thousands of dollars per ton are listed as an ordered pair: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/train.svg" role="img" class="contained" alt="A Network Flow depicting several hubs with rails showing capacity and cost."></div> The pairs are (capacity, cost) pairs (denoted <span class="process-math">\((c_{ij}, w_{ij})\)</span>), and we are trying to ship 10 tons of goods from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Let’s find a single path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\)</span> along which we could ship goods at the lowest possible cost.  What criteria should we use to identify this path?<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="upper-alpha ol-marker-1 cols2 multicolumn" id="exploration-shipping-2-1-2">
+<li>
+<div class="para">Maximize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item A"><a href="#exploration-shipping-2-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+</li>
+<li>
+<div class="para">Minimize <span class="process-math">\(\displaystyle w_{ij}\)</span> along this path.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item B"><a href="#exploration-shipping-2-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+</li>
+<li>
+<div class="para">Maximize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item C"><a href="#exploration-shipping-2-1-2-3" title="Copy heading and permalink for Item C" aria-label="Copy heading and permalink for Item C">🔗</a></div>
+</li>
+<li>
+<div class="para">Minimize <span class="process-math">\(\displaystyle c_{ij}\)</span> along this path.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item D"><a href="#exploration-shipping-2-1-2-4" title="Copy heading and permalink for Item D" aria-label="Copy heading and permalink for Item D">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Task 7.3.11.a"><a href="#exploration-shipping-2" title="Copy heading and permalink for Task 7.3.11.a" aria-label="Copy heading and permalink for Task 7.3.11.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Find a shortest path from <span class="process-math">\(v_0\)</span> to <span class="process-math">\(v_5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.11.b"><a href="#exploration-shipping-3" title="Copy heading and permalink for Task 7.3.11.b" aria-label="Copy heading and permalink for Task 7.3.11.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Use this as an <span class="process-math">\(\alpha\)</span>-path as in <a href="sec-maxflowmincut.html#def-maxflowalgorithm" class="xref" data-knowl="./knowl/xref/def-maxflowalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.10: Ford-Fulkerson Algorithm">Definition 7.2.10</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.11.c"><a href="#exploration-shipping-4" title="Copy heading and permalink for Task 7.3.11.c" aria-label="Copy heading and permalink for Task 7.3.11.c">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">Decrease capacities of any used edges by <span class="process-math">\(x_{ij}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.11.d"><a href="#exploration-shipping-5" title="Copy heading and permalink for Task 7.3.11.d" aria-label="Copy heading and permalink for Task 7.3.11.d">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para">Repeat <span class="process-math">\(\textbf{(a)}\)</span>-<span class="process-math">\(\textbf{(c)}\)</span> until we have a flow of 10.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.11.e"><a href="#exploration-shipping-6" title="Copy heading and permalink for Task 7.3.11.e" aria-label="Copy heading and permalink for Task 7.3.11.e">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Argue that this is <em class="emphasis">not</em> the lowest cost flow.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.3.11.f"><a href="#exploration-shipping-7" title="Copy heading and permalink for Task 7.3.11.f" aria-label="Copy heading and permalink for Task 7.3.11.f">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para">Which of the following was an issue with how this problem was approached?<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="upper-alpha ol-marker-1" id="exploration-shipping-8-1-2">
+<li>
+<div class="para">The original path chosen was too expensive.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item A"><a href="#exploration-shipping-8-1-2-1" title="Copy heading and permalink for Item A" aria-label="Copy heading and permalink for Item A">🔗</a></div>
+</li>
+<li>
+<div class="para">The original path forced us into poor choices of future paths.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item B"><a href="#exploration-shipping-8-1-2-2" title="Copy heading and permalink for Item B" aria-label="Copy heading and permalink for Item B">🔗</a></div>
+</li>
+<li>
+<div class="para">There was no mechanism to backtrack or adjust previous choices.<div class="autopermalink" data-description="Paragraph"><a href="#exploration-shipping-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item C"><a href="#exploration-shipping-8-1-2-3" title="Copy heading and permalink for Item C" aria-label="Copy heading and permalink for Item C">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Task 7.3.11.g"><a href="#exploration-shipping-8" title="Copy heading and permalink for Task 7.3.11.g" aria-label="Copy heading and permalink for Task 7.3.11.g">🔗</a></div></article><div class="autopermalink" data-description="Exploration 7.3.11"><a href="#exploration-shipping" title="Copy heading and permalink for Exploration 7.3.11" aria-label="Copy heading and permalink for Exploration 7.3.11">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-weighted.html#exploration-shipping">in-context</a></span>
+</body>
+</html>
