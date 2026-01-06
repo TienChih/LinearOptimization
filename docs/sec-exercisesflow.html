@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Problems for Chapter 7</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://tienchih.github.io/LinearOptimization/external/images/LO-C.png">
+<meta property="book:title" content="Linear Optimization">
+<meta property="book:author" content="Tien Chih">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<img src="external/images/LO-C.png" alt="Logo image"><div class="title-container">
+<h1 class="heading"><a href="linear-optimization.html"><span class="title">Linear Optimization</span> <span class="subtitle">A Geometric Inquiry Course</span></a></h1>
+<p class="byline">Tien Chih</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-4.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "classic",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-summaryflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-flow.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-integer.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+   
+   \newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+   \DeclareMathOperator{\cone}{cone} \newcommand{\x}{\mathbf x} \newcommand{\y}{\mathbf y} \newcommand{\z}{\mathbf z}
+    \newcommand{\vc}{\mathbf c} \newcommand{\vb}{\mathbf b}
+    \newcommand{\vs}{\mathbf s} \newcommand{\vt}{\mathbf t} \newcommand{\p}{\mathbf p} \newcommand{\q}{\mathbf q} 
+   \newcommand{\ec}[1]{\enclose{circle}{#1}} \DeclareMathOperator{\lcm}{lcm} \newcommand{\eb}[1]{\enclose{box}{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Student Statements</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-5.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-7.html" class="internal"><span class="title">Our goals</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-8.html" class="internal"><span class="title">A note on the print version</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-9.html" class="internal"><span class="title">A note on inquiry learning</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-geometric.html" class="internal"><span class="codenumber">1</span> <span class="title">Geometric Linear Optimization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Brief Geometric Review of Linear Algebra</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-initial.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Initial Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-polyhedralconvex.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Polyhedral Convextiy</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summarygeometric.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Summary of Chapter 1</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesgeometric.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Problems for Chapter 1</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgeometric.html#exercises-geometric" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-simplex.html" class="internal"><span class="codenumber">2</span> <span class="title">The Simplex Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pivot.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Canonical Problems and the Simplex Pivot</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-simplexmax.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Simplex Algorithm for Canonical Maximization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-basicfeasible" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Basic Feasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-infeasiblemaximization" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Basic Infeasible Maximization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-simplexmax.html#subsec-simplexmin" class="internal"><span class="codenumber">2.2.3</span> <span class="title">The Simplex Algorithm for Canonical Minimization</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cycling.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Cycling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-simplexsage.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Using Sage to Solve Linear Optimization Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summarysimplex.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Summary of Chapter 2</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisessimplex.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Problems for Chapter 2</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisessimplex.html#exercises-simplex" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-noncanon.html" class="internal"><span class="codenumber">3</span> <span class="title">Noncanonical Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-unconstrained.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Unconstrained Variables</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-superconstrained.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Super Constrained Bounds</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-noncanonsage.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Solving Noncanonical Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summarynoncanon.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Summary of Chapter 3</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesnoncanon.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Problems for Chapter 3</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesnoncanon.html#exercises-noncanon" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-duality.html" class="internal"><span class="codenumber">4</span> <span class="title">Duality</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sensitivity.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Sensitivity Analysis</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dualitytheory.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Duality Theory</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dualpivot.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Tucker Tableau’s, Pivots and Duality</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summaryduality.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Summary of Chapter 4</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesduality.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Problems for Chapter 4</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesduality.html#exercises-duality" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-games.html" class="internal"><span class="codenumber">5</span> <span class="title">Zero-Sum Games</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-minmaxgames.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Min-Max Games</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vonneumann.html" class="internal"><span class="codenumber">5.2</span> <span class="title">von Neumann Minimax Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chance.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Games of Chance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summarygames.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Summary of Chapter 5</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesgames.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Problems for Chapter 5</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesgames.html#exercises-games" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-transport.html" class="internal"><span class="codenumber">6</span> <span class="title">The Transportation &amp; Assignment Problems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-vam.html" class="internal"><span class="codenumber">6.1</span> <span class="title">A Transportation problem and VAM</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-transportalgorithm.html" class="internal"><span class="codenumber">6.2</span> <span class="title">The Transportation Algorithm</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-transportalgorithm.html#subsec-unbalanced" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Unbalanced Transportation Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assignment.html" class="internal"><span class="codenumber">6.3</span> <span class="title">The Assignment Problem and Hungarian Algorithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summarytransports.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Summary of Chapter 6</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisestransports.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Problems for Chapter 6</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisestransports.html#exercises-transport" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-flow.html" class="internal"><span class="codenumber">7</span> <span class="title">Network Flows</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-networkflow.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Directed Graphs and Network Flow</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-maxflowmincut.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Max Flow - Min Cut</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-maxflowmincut.html#subsec-flowcutalgorithms" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Algorithms for Max Flow and Min Cut</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-weighted.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Weighted Graphs</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summaryflow.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Summary of Chapter 7</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-exercisesflow.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Problems for Chapter 7</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesflow.html#exercises-flow" class="internal"><span class="codenumber">7.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-integer.html" class="internal"><span class="codenumber">8</span> <span class="title">Integer Optimization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-branchbound.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Branch and Bound Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cuttingplane.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Cutting-Plane Method</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intsage.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Solving Integer Optimization Problems with Sage</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-summaryinteger.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Summary of Chapter 8</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-exercisesinteger.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Problems for Chapter 8</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-exercisesinteger.html#exercises-integer" class="internal"><span class="codenumber">8.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-extras.html" class="internal"><span class="codenumber">9</span> <span class="title">Extra Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-covermatch.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Coverings and Matchings of Graphs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-covermatch.html#subsec-Konigs" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Königs Theorem and Bipartite Graphs</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-sudoku.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sudoku</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scheduling.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Scheduling</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-altduality.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Another Approach to Strong Duality</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appendix.html" class="internal"><span class="codenumber">A</span> <span class="title">Review Material</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lareview.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Linear Algebra Review</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probreview.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Probability Theory Review</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="simplexpivoter.html" class="internal"><span class="codenumber">B</span> <span class="title">Simplex Pivoter</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-exercisesflow"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Problems for Chapter 7</span>
+</h2>
+<div id="sec-exercisesflow-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
+</script></div>
+<div class="para" id="sec-exercisesflow-3">The simplex pivoter may be found here: <details id="sec-exercisesflow-3-1" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec-exercisesflow-3-1-1">
+<iframe src="external/Tienv2.html" id="sec-exercisesflow-3-1-1-1" width="600" height="600"></iframe><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercisesflow-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1"><a href="#sec-exercisesflow-3-1" title="Copy heading and permalink for Hint 1" aria-label="Copy heading and permalink for Hint 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Paragraph"><a href="#sec-exercisesflow-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="exercises" id="exercises-flow"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercises-flow-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="exercises-flow-1-1"><div class="para" id="exercises-flow-1-1-1">Consider the following capacitated network: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/flowexa.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-flow-1-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercises-flow-1-2-1-1">Find <span class="process-math">\(\varphi(v_i)\)</span> for each vertex, and compute <span class="process-math">\(\displaystyle \sum_{i=1}^7\varphi(v_i)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.1.a"><a href="#exercises-flow-1-2" title="Copy heading and permalink for Task 7.5.1.a" aria-label="Copy heading and permalink for Task 7.5.1.a">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-1-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-flow-1-3-1-1">Classify each vertex as a source, sink or intermediate vertex.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.1.b"><a href="#exercises-flow-1-3" title="Copy heading and permalink for Task 7.5.1.b" aria-label="Copy heading and permalink for Task 7.5.1.b">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-1-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercises-flow-1-4-1-1">Add two vertices and as few edges as possible to extend this flow to a flow with a unique source and unique sink<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.1.c"><a href="#exercises-flow-1-4" title="Copy heading and permalink for Task 7.5.1.c" aria-label="Copy heading and permalink for Task 7.5.1.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.1"><a href="#exercises-flow-1" title="Copy heading and permalink for Exercise 7.5.1" aria-label="Copy heading and permalink for Exercise 7.5.1">🔗</a></div></article><article class="exercise exercise-like" id="ex-maxflowmincut"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ex-maxflowmincut-1"><div class="para" id="ex-maxflowmincut-1-1">For each of the following capacitated networks, find the max-flow and min-cut on these networks as shown in <a href="sec-maxflowmincut.html" class="internal" title="Section 7.2: Max Flow - Min Cut">Section 7.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-maxflowmincut-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-maxflowmincut-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-maxflowmincut-2-1-1">
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/flowexb.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-maxflowmincut-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.2.a"><a href="#ex-maxflowmincut-2" title="Copy heading and permalink for Task 7.5.2.a" aria-label="Copy heading and permalink for Task 7.5.2.a">🔗</a></div></article><article class="task exercise-like" id="ex-maxflowmincut-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-maxflowmincut-3-1-1">
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/flowexc.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-maxflowmincut-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.2.b"><a href="#ex-maxflowmincut-3" title="Copy heading and permalink for Task 7.5.2.b" aria-label="Copy heading and permalink for Task 7.5.2.b">🔗</a></div></article><article class="task exercise-like" id="ex-maxflowmincut-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-maxflowmincut-4-1-1">
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/flowexd.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-maxflowmincut-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.2.c"><a href="#ex-maxflowmincut-4" title="Copy heading and permalink for Task 7.5.2.c" aria-label="Copy heading and permalink for Task 7.5.2.c">🔗</a></div></article><article class="task exercise-like" id="ex-maxflowmincut-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ex-maxflowmincut-5-1-1">
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/flowexe.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-maxflowmincut-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.2.d"><a href="#ex-maxflowmincut-5" title="Copy heading and permalink for Task 7.5.2.d" aria-label="Copy heading and permalink for Task 7.5.2.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.2"><a href="#ex-maxflowmincut" title="Copy heading and permalink for Exercise 7.5.2" aria-label="Copy heading and permalink for Exercise 7.5.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-3"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="exercises-flow-3-1"><div class="para" id="exercises-flow-3-1-1">Consider the max-flow min-cut problem <a href="sec-exercisesflow.html#ex-maxflowmincut" class="xref" data-knowl="./knowl/xref/ex-maxflowmincut.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.5.2">Exercise 7.5.2</a> <span class="process-math">\(\textbf{(a)}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-flow-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercises-flow-3-2-1-1">Write out the noncanonical maximization problem which would compute the max-flow.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.3.a"><a href="#exercises-flow-3-2" title="Copy heading and permalink for Task 7.5.3.a" aria-label="Copy heading and permalink for Task 7.5.3.a">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-flow-3-3-1-1">Record this problem in a Tucker tableau, then record the dual variable using <span class="process-math">\(\ec{\mu_i}\)</span> to denote dual variables associated with vertex equality constraints and <span class="process-math">\(y_{ij}\)</span> to denote the dual variables for edge inequality constraint.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.3.b"><a href="#exercises-flow-3-3" title="Copy heading and permalink for Task 7.5.3.b" aria-label="Copy heading and permalink for Task 7.5.3.b">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-3-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercises-flow-3-4-1">Verify that the max-flow and min-cut you found are feasible solutions to these problems (using the convention that <span class="process-math">\(\mu_k=0\)</span> if <span class="process-math">\(v_k\in V_1\text{,}\)</span> <span class="process-math">\(\mu_k=-1\)</span> if <span class="process-math">\(v_k\in V_2\)</span> and <span class="process-math">\(y_{ij}=1\)</span> if <span class="process-math">\(v_i\in V_1, v_j\in V_2\)</span> and <span class="process-math">\(y_{ij}=0\)</span> otherwise.)<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.3.c"><a href="#exercises-flow-3-4" title="Copy heading and permalink for Task 7.5.3.c" aria-label="Copy heading and permalink for Task 7.5.3.c">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-3-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="exercises-flow-3-5-1-1">Argue that any cut corresponds to a feasible solution to this dual problem.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.3.d"><a href="#exercises-flow-3-5" title="Copy heading and permalink for Task 7.5.3.d" aria-label="Copy heading and permalink for Task 7.5.3.d">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-3-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="exercises-flow-3-6-1-1">How can we tell both the flow and cut found in <a href="sec-exercisesflow.html#ex-maxflowmincut" class="xref" data-knowl="./knowl/xref/ex-maxflowmincut.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.5.2">Exercise 7.5.2</a> <span class="process-math">\(\textbf{(a)}\)</span> are optimal? (Think duality.)<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-3-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.3.e"><a href="#exercises-flow-3-6" title="Copy heading and permalink for Task 7.5.3.e" aria-label="Copy heading and permalink for Task 7.5.3.e">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.3"><a href="#exercises-flow-3" title="Copy heading and permalink for Exercise 7.5.3" aria-label="Copy heading and permalink for Exercise 7.5.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-4"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="exercises-flow-4-1"><div class="para" id="exercises-flow-4-1-1">Over a month at a hospital many patients are in need of blood transfusions.  They had available blood from 47 donors with type A blood, 33 donors with type B blood, 46 donors with type AB and 44 donors with type O. There were 38 patients with type A blood, 39 patients with type B blood, 49 patients with type AB and 43 patients with type O. Type A patients can only receive type A or O, type B patients can receive only type B or O, type O patients can receive only type O, and type AB patients can receive any of the four types.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-flow-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercises-flow-4-2-1-1">Construct a capacitated network which models the distributions of blood type from donors to patients with a unique source and sink, with no edges into the source or out of the sink.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.4.a"><a href="#exercises-flow-4-2" title="Copy heading and permalink for Task 7.5.4.a" aria-label="Copy heading and permalink for Task 7.5.4.a">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-flow-4-3-1-1">Find a max-flow for this network.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.4.b"><a href="#exercises-flow-4-3" title="Copy heading and permalink for Task 7.5.4.b" aria-label="Copy heading and permalink for Task 7.5.4.b">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-4-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercises-flow-4-4-1-1">Find a min-cut for this network.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.4.c"><a href="#exercises-flow-4-4" title="Copy heading and permalink for Task 7.5.4.c" aria-label="Copy heading and permalink for Task 7.5.4.c">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-4-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="exercises-flow-4-5-1-1">If not all patients were able to receive blood, explain to the financial backers and hospital administrators, who may not have taken any math in awhile, why this was the case.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-4-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.4.d"><a href="#exercises-flow-4-5" title="Copy heading and permalink for Task 7.5.4.d" aria-label="Copy heading and permalink for Task 7.5.4.d">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-4-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="exercises-flow-4-6-1-1">There’s little a hospital can do about the blood types of incoming patients. If reaching out to potential donors, what blood types should be prioritized?<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-4-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.4.e"><a href="#exercises-flow-4-6" title="Copy heading and permalink for Task 7.5.4.e" aria-label="Copy heading and permalink for Task 7.5.4.e">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.4"><a href="#exercises-flow-4" title="Copy heading and permalink for Exercise 7.5.4" aria-label="Copy heading and permalink for Exercise 7.5.4">🔗</a></div></article><article class="exercise exercise-like" id="exercise-outflow"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para logical" id="exercise-outflow-1-1">
+<div class="para">Let <span class="process-math">\(N\)</span> be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink.  Let <span class="process-math">\(x_{ij}\)</span> be a flow on this network with value <span class="process-math">\(f\text{,}\)</span> and <span class="process-math">\((V_1, V_2)\)</span> be a cut of this network. Then prove that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f=\sum_{v_i\in V_1, v_j\in V_2}x_{ij}-\sum_{v_i\in V_1, v_j\in V_2}x_{ji}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-outflow-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercise-outflow-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercise-outflow-2-1">What is the sum <span class="process-math">\(\displaystyle \sum_{v_j\in V_2}\varphi(v_j)\text{?}\)</span>  How can rewriting this as a double sum help?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-outflow-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.5.1"><a href="#exercise-outflow-2" title="Copy heading and permalink for Hint 7.5.5.1" aria-label="Copy heading and permalink for Hint 7.5.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 7.5.5"><a href="#exercise-outflow" title="Copy heading and permalink for Exercise 7.5.5" aria-label="Copy heading and permalink for Exercise 7.5.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-6"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="exercises-flow-6-1"><div class="para" id="exercises-flow-6-1-1">Let <span class="process-math">\(N\)</span> be a capacitated network with a unique source and sink, with no edges going into the source or out of the sink.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-flow-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercises-flow-6-2-1-1">Given an example for <span class="process-math">\(N\)</span> such that <span class="process-math">\(N\)</span> has nonunique max-flows.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.6.a"><a href="#exercises-flow-6-2" title="Copy heading and permalink for Task 7.5.6.a" aria-label="Copy heading and permalink for Task 7.5.6.a">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-flow-6-3-1-1">Given an example for <span class="process-math">\(N\)</span> such that <span class="process-math">\(N\)</span> has nonunique min-cuts.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.6.b"><a href="#exercises-flow-6-3" title="Copy heading and permalink for Task 7.5.6.b" aria-label="Copy heading and permalink for Task 7.5.6.b">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercises-flow-6-4-1-1">Let <span class="process-math">\(x_{ij}\)</span> denote any max-flow for <span class="process-math">\(N\)</span> with value <span class="process-math">\(f\)</span> and  <span class="process-math">\((V_1, V_2)\)</span> denote any min-cut (not necessarily produced by <span class="process-math">\(x_{ij}\)</span> and <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12: Min Cut Algorithm">Definition 7.2.12</a>).  Let <span class="process-math">\((V_1', V_2')\)</span> be the cut generated <span class="process-math">\(x_{ij}\)</span> via <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12: Min Cut Algorithm">Definition 7.2.12</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="exercises-flow-6-4-1-2">Prove that <span class="process-math">\(x_{ij}=c_{ij}\)</span> for any <span class="process-math">\(v_i\in V_1, v_j=V_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-flow-6-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-flow-6-4-2-1">Use <a href="sec-exercisesflow.html#exercise-outflow" class="xref" data-knowl="./knowl/xref/exercise-outflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.5.5">Exercise 7.5.5</a>.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.6.c.1"><a href="#exercises-flow-6-4-2" title="Copy heading and permalink for Hint 7.5.6.c.1" aria-label="Copy heading and permalink for Hint 7.5.6.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.5.6.c"><a href="#exercises-flow-6-4" title="Copy heading and permalink for Task 7.5.6.c" aria-label="Copy heading and permalink for Task 7.5.6.c">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-6-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="exercises-flow-6-5-1-1">Let <span class="process-math">\(x_{ij}, x'_{ij}\)</span> be two distinct max-flows on <span class="process-math">\(N\text{,}\)</span> and <span class="process-math">\((V_1, V_2), (V'_1, V'_2)\)</span> be the cuts produced by <a href="sec-maxflowmincut.html#def-mincutalgorithm" class="xref" data-knowl="./knowl/xref/def-mincutalgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.2.12: Min Cut Algorithm">Definition 7.2.12</a> on with these flows respectively.  Prove that <span class="process-math">\((V_1, V_2) = (V'_1, V'_2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-flow-6-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="exercises-flow-6-5-2-1">Use previous part.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-6-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 7.5.6.d.1"><a href="#exercises-flow-6-5-2" title="Copy heading and permalink for Hint 7.5.6.d.1" aria-label="Copy heading and permalink for Hint 7.5.6.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 7.5.6.d"><a href="#exercises-flow-6-5" title="Copy heading and permalink for Task 7.5.6.d" aria-label="Copy heading and permalink for Task 7.5.6.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.6"><a href="#exercises-flow-6" title="Copy heading and permalink for Exercise 7.5.6" aria-label="Copy heading and permalink for Exercise 7.5.6">🔗</a></div></article><article class="exercise exercise-like" id="ex-shortestpath"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ex-shortestpath-1"><div class="para" id="ex-shortestpath-1-1">For each of the following, find the shortest path from <span class="process-math">\(v_s\)</span> to <span class="process-math">\(v_d\)</span> using <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.7: Dijkstra’s Shortest Path Algorithm">Definition 7.3.7</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-shortestpath-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-shortestpath-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-shortestpath-2-1-1">
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/shortpatha.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-shortestpath-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.7.a"><a href="#ex-shortestpath-2" title="Copy heading and permalink for Task 7.5.7.a" aria-label="Copy heading and permalink for Task 7.5.7.a">🔗</a></div></article><article class="task exercise-like" id="ex-shortestpath-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-shortestpath-3-1-1">
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/shortpathb.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-shortestpath-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.7.b"><a href="#ex-shortestpath-3" title="Copy heading and permalink for Task 7.5.7.b" aria-label="Copy heading and permalink for Task 7.5.7.b">🔗</a></div></article><article class="task exercise-like" id="ex-shortestpath-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-shortestpath-4-1-1">
+<div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/shortpathc.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-shortestpath-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.7.c"><a href="#ex-shortestpath-4" title="Copy heading and permalink for Task 7.5.7.c" aria-label="Copy heading and permalink for Task 7.5.7.c">🔗</a></div></article><article class="task exercise-like" id="ex-shortestpath-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ex-shortestpath-5-1-1">
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/shortpathd.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-shortestpath-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.7.d"><a href="#ex-shortestpath-5" title="Copy heading and permalink for Task 7.5.7.d" aria-label="Copy heading and permalink for Task 7.5.7.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.7"><a href="#ex-shortestpath" title="Copy heading and permalink for Exercise 7.5.7" aria-label="Copy heading and permalink for Exercise 7.5.7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-8"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-flow-8-1">Consider <a href="sec-exercisesflow.html#ex-shortestpath" class="xref" data-knowl="./knowl/xref/ex-shortestpath.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.5.7">Exercise 7.5.7</a> <span class="process-math">\(\textbf{(a)}\text{.}\)</span>  Model this problem as a linear optimization problem and solve.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 7.5.8"><a href="#exercises-flow-8" title="Copy heading and permalink for Exercise 7.5.8" aria-label="Copy heading and permalink for Exercise 7.5.8">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-9"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="exercises-flow-9-1"><div class="para" id="exercises-flow-9-1-1">Let <span class="process-math">\(N\)</span> be a weighted network with positive weights.  For the following, prove or find a counterexample:<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exercises-flow-9-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercises-flow-9-2-1-1">Let <span class="process-math">\(x,y,z\in V\text{.}\)</span>  Prove that the value of the shortest path from <span class="process-math">\(x\)</span> to <span class="process-math">\(z\)</span> is the sum of the value of the shortest path from <span class="process-math">\(x\)</span> to <span class="process-math">\(y\)</span> plus the value of the shortest path from <span class="process-math">\(y\)</span> to <span class="process-math">\(z\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-9-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.9.a"><a href="#exercises-flow-9-2" title="Copy heading and permalink for Task 7.5.9.a" aria-label="Copy heading and permalink for Task 7.5.9.a">🔗</a></div></article><article class="task exercise-like" id="exercises-flow-9-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-flow-9-3-1-1">Suppose there was an edge going into <span class="process-math">\(v_s\text{,}\)</span> then <a href="sec-weighted.html#def-DijkstrasAlgorithm" class="xref" data-knowl="./knowl/xref/def-DijkstrasAlgorithm.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 7.3.7: Dijkstra’s Shortest Path Algorithm">Definition 7.3.7</a> fails.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-9-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.9.b"><a href="#exercises-flow-9-3" title="Copy heading and permalink for Task 7.5.9.b" aria-label="Copy heading and permalink for Task 7.5.9.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.9"><a href="#exercises-flow-9" title="Copy heading and permalink for Exercise 7.5.9" aria-label="Copy heading and permalink for Exercise 7.5.9">🔗</a></div></article><article class="exercise exercise-like" id="ex-minflow"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ex-minflow-1"><div class="para" id="ex-minflow-1-1">For each of the following, find the minimum cost-flows for <span class="process-math">\(F=8\)</span> and <span class="process-math">\(F=10\text{.}\)</span>  Interpret each ordered pair <span class="process-math">\((c_{ij}, w_{ij})\)</span> as (capacity,cost).<div class="autopermalink" data-description="Paragraph"><a href="#ex-minflow-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-minflow-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-minflow-2-1-1">
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/minflowa.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minflow-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.10.a"><a href="#ex-minflow-2" title="Copy heading and permalink for Task 7.5.10.a" aria-label="Copy heading and permalink for Task 7.5.10.a">🔗</a></div></article><article class="task exercise-like" id="ex-minflow-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-minflow-3-1-1">
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/minflowb.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minflow-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.10.b"><a href="#ex-minflow-3" title="Copy heading and permalink for Task 7.5.10.b" aria-label="Copy heading and permalink for Task 7.5.10.b">🔗</a></div></article><article class="task exercise-like" id="ex-minflow-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-minflow-4-1-1">
+<div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="generated/latex-image/minflowc.svg" role="img" class="contained" alt="A Network Flow depicting several islands with bridges and carrying capacity."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minflow-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.5.10.c"><a href="#ex-minflow-4" title="Copy heading and permalink for Task 7.5.10.c" aria-label="Copy heading and permalink for Task 7.5.10.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 7.5.10"><a href="#ex-minflow" title="Copy heading and permalink for Exercise 7.5.10" aria-label="Copy heading and permalink for Exercise 7.5.10">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-11"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-flow-11-1">Model <a href="sec-exercisesflow.html#ex-minflow" class="xref" data-knowl="./knowl/xref/ex-minflow.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.5.10">Exercise 7.5.10</a> <span class="process-math">\(\textbf{(a)}\)</span> as a linear optimization problem.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 7.5.11"><a href="#exercises-flow-11" title="Copy heading and permalink for Exercise 7.5.11" aria-label="Copy heading and permalink for Exercise 7.5.11">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-12"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-flow-12-1">For each problem in <a href="sec-exercisestransports.html#ex-transport" class="xref" data-knowl="./knowl/xref/ex-transport.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.5.1">Exercise 6.5.1</a>, draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem.  State what the value <span class="process-math">\(F\)</span> of the flow should be.  Do not solve the problem.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 7.5.12"><a href="#exercises-flow-12" title="Copy heading and permalink for Exercise 7.5.12" aria-label="Copy heading and permalink for Exercise 7.5.12">🔗</a></div></article><article class="exercise exercise-like" id="exercises-flow-13"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-flow-13-1">For each problem in <a href="sec-exercisestransports.html#ex-assignment" class="xref" data-knowl="./knowl/xref/ex-assignment.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.5.9">Exercise 6.5.9</a>, draw a weighted capacitated network where the transportation problem may be solved by solving an appropriate min-cost flow problem.  State what the value <span class="process-math">\(F\)</span> of the flow should be. Do not solve the problem.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-flow-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 7.5.13"><a href="#exercises-flow-13" title="Copy heading and permalink for Exercise 7.5.13" aria-label="Copy heading and permalink for Exercise 7.5.13">🔗</a></div></article><div class="autopermalink" data-description="Exercises 7.5"><a href="#exercises-flow" title="Copy heading and permalink for Exercises 7.5" aria-label="Copy heading and permalink for Exercises 7.5">🔗</a></div></section><div class="autopermalink" data-description="Section 7.5: Problems for Chapter 7"><a href="#sec-exercisesflow" title="Copy heading and permalink for Section 7.5: Problems for Chapter 7" aria-label="Copy heading and permalink for Section 7.5: Problems for Chapter 7">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-summaryflow.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-integer.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

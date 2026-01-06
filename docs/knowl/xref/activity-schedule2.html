@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction">
+<div class="para">Let’s call Yafa from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> student <span class="process-math">\(1\text{.}\)</span> In a gross oversimplification suppose there were in total 5 students including Yafa registering, and that each class could sit at most 2 students.<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Each student assigns their own score to each course, <span class="process-math">\(c_{ij}\)</span> being the score that student <span class="process-math">\(i\)</span> gives to course <span class="process-math">\(j\text{.}\)</span>  Let <span class="process-math">\(x_{ij}\)</span> be 1 if student <span class="process-math">\(i\)</span> enrolls in course <span class="process-math">\(j\)</span> and 0 otherwise.<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(j\)</span></td>
+<td class="c m b2 r2 l0 t0 lines">Course Name and Time</td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_{1j}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_{2j}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_{3j}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_{4j}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(c_{5j}\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">Art MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">10</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">Art MWF 2:00-3:00</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r2 l0 t0 lines">Art TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">Art TuTh 1:00-2:30</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">CS MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">CS TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">Econ MWF 8:30-9:30</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">Econ MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">Econ TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">10</td>
+<td class="c m b0 r2 l0 t0 lines">Econ TuTh 1:00-2:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">11</td>
+<td class="c m b0 r2 l0 t0 lines">Hist MWF 8:30-9:30</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">12</td>
+<td class="c m b0 r2 l0 t0 lines">Hist TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">13</td>
+<td class="c m b0 r2 l0 t0 lines">Lit MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">14</td>
+<td class="c m b0 r2 l0 t0 lines">Lit MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">15</td>
+<td class="c m b0 r2 l0 t0 lines">Lit MWF 2:00-3:00</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">16</td>
+<td class="c m b0 r2 l0 t0 lines">Lit TuTh 8:30-10:00</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">17</td>
+<td class="c m b0 r2 l0 t0 lines">MathA MWF 8:30-9:30</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">18</td>
+<td class="c m b0 r2 l0 t0 lines">MathA MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">19</td>
+<td class="c m b0 r2 l0 t0 lines">MathA TuTh 8:30-10:00</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">20</td>
+<td class="c m b0 r2 l0 t0 lines">MathB MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">21</td>
+<td class="c m b0 r2 l0 t0 lines">MathB MWF 12:30-1:30</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">22</td>
+<td class="c m b0 r2 l0 t0 lines">MathB TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">23</td>
+<td class="c m b0 r2 l0 t0 lines">Sem MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">10</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">24</td>
+<td class="c m b0 r2 l0 t0 lines">Sem MWF 10:00-11:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">4</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines">25</td>
+<td class="c m b0 r2 l0 t0 lines">Sem TuTh 10:30-12:00</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">7</td>
+<td class="c m b0 r2 l0 t0 lines">9</td>
+<td class="c m b0 r2 l0 t0 lines">6</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines">26</td>
+<td class="c m b2 r2 l0 t0 lines">Sem TuTh 10:30-12:00</td>
+<td class="c m b2 r2 l0 t0 lines">7</td>
+<td class="c m b2 r2 l0 t0 lines">5</td>
+<td class="c m b2 r2 l0 t0 lines">3</td>
+<td class="c m b2 r2 l0 t0 lines">8</td>
+<td class="c m b2 r2 l0 t0 lines">6</td>
+</tr>
+</table></div>
+<div class="para">In addition to the constraints that all students have to abide by, we have the following constraint for each student:<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="activity-schedule2-1-5">
+<li>
+<div class="para">Yafa (student 1) still has her constraints from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#activity-schedule2-1-5-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">Student 2 has to take at least 1 Art class, either Computer Science (CS) or Math, and either Economics or History.<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#activity-schedule2-1-5-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">Student 3 has to take at least 1 Economics class, 1 Math and 1 Literature class.<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#activity-schedule2-1-5-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">Student 4 has to take a Computer Science class and a History class.<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#activity-schedule2-1-5-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li>
+<div class="para">Student 5 has to take both Math classes.<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-1-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#activity-schedule2-1-5-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">How might the objective function and constraints from <a href="sec-scheduling.html#activity-schedule" class="xref" data-knowl="./knowl/xref/activity-schedule.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 9.3.2">Activity 9.3.2</a> be adapted to this situation?<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.3.3.a"><a href="#activity-schedule2-2" title="Copy heading and permalink for Task 9.3.3.a" aria-label="Copy heading and permalink for Task 9.3.3.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">What additional constraints are required?<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.3.3.b"><a href="#activity-schedule2-3" title="Copy heading and permalink for Task 9.3.3.b" aria-label="Copy heading and permalink for Task 9.3.3.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Depending on how you set up the objective function, a student who rates everything highly will be prioritized over a student who ranks everything more modestly.  To prevent gaming the system, what could be done to ameliorate this effect?<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.3.3.c"><a href="#activity-schedule2-4" title="Copy heading and permalink for Task 9.3.3.c" aria-label="Copy heading and permalink for Task 9.3.3.c">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">The Dean approves one of the classes to be increased in size to a whopping 3 students. How can the dual problem inform how this choice of class should be made?<div class="autopermalink" data-description="Paragraph"><a href="#activity-schedule2-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 9.3.3.d"><a href="#activity-schedule2-5" title="Copy heading and permalink for Task 9.3.3.d" aria-label="Copy heading and permalink for Task 9.3.3.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 9.3.3"><a href="#activity-schedule2" title="Copy heading and permalink for Activity 9.3.3" aria-label="Copy heading and permalink for Activity 9.3.3">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-scheduling.html#activity-schedule2">in-context</a></span>
+</body>
+</html>
