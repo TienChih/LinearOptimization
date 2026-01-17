@@ -473,7 +473,7 @@
         <idx>extreme point</idx>
         <idx>corner point</idx>
         Let <m>S\subseteq \mathbb{R}^m</m>  be a convex set.  We say <m>\mathbf{e}\in S</m> is an <term>extreme point</term> of <m>S</m> if there are no 
-        <m>\mathbf{x}, \mathbf{y}\in S</m> so that <m>\mathbf{e}\in \{t\cdot \mathbf{x}+(1-t)\cdot \mathbf{y} : t\in (0,1)\}</m>.
+        distinct <m>\mathbf{x}, \mathbf{y}\in S</m> so that <m>\mathbf{e}\in \{t\cdot \mathbf{x}+(1-t)\cdot \mathbf{y} : t\in (0,1)\}</m>.
         <!--
         TYPO
         should be (0,1)

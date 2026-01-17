@@ -39,7 +39,7 @@
   <colophon>
 
     <edition>
-      2025 
+      2026 
     </edition>
 
     <website>
@@ -47,16 +47,31 @@
     </website>
 
     <copyright>
-      <year>2025</year>
+      <year>2026</year>
       <holder>Tien Chih</holder>
       <minilicense>CC BY-NC-SA 4.0 License</minilicense>
       <shortlicense>  This work is licensed under the Creative Commons Attribution-Non-Commercial-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="https://creativecommons.org/licenses/by-nc-sa/4.0/" visual="https://creativecommons.org/licenses/by-nc-sa/4.0/"> CreativeCommons.org</url>
         <sidebyside width="25%"> 
           <image source="images/creativecommons.png" />
         </sidebyside>
+      
+        
       </shortlicense>
       
+      
     </copyright>
+
+    <dl>
+        <li>
+          <p>
+            <title>ISBN: </title>
+            978-1-958469-34-7
+          </p>
+        </li>
+      </dl>  
+
+    
+    
   </colophon>
 
   <xi:include href="./preface.ptx" />
