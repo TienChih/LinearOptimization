@@ -11,5 +11,8 @@
     <target name="tex" format="latex"  latex-engine="xelatex" publication="../publication/publicationprint.ptx" >
     <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext"  latex.preamble.late="\setlength\extrarowheight{5pt} &#xa; \newcommand{\sectionbreak}{\ifnum\value{section}>1\clearpage\thispagestyle{plain}\fi\phantomsection}"/> 
     </target>
+    <target name="print6by9" format="pdf"  latex-engine="xelatex" publication="../publication/publicationprint6by9.ptx" >
+    <stringparams debug.project.number="the-way-it-should-be" index-maker="pretext" latex.preamble.late="\setlength\extrarowheight{5pt} &#xa; \newcommand{\sectionbreak}{\ifnum\value{section}>1\clearpage\thispagestyle{plain}\fi\phantomsection}"/> 
+    </target>
   </targets>
 </project>
