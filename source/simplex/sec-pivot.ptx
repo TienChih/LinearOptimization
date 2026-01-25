@@ -126,10 +126,10 @@
       <p>
         <md>
           <mrow>\textbf{Minimize: }g(\mathbf{x})  = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d</mrow>
-          <mrow>\textbf{subject to: }   a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m\amp \leq  b_1</mrow>
-          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m\amp \leq  b_2</mrow>
+          <mrow>\textbf{subject to: }   a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m\amp \geq  b_1</mrow>
+          <mrow> a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m\amp \geq  b_2</mrow>
           <mrow> \vdots \amp   \vdots</mrow>
-          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m\amp \leq  b_n</mrow>
+          <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m\amp \geq  b_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
         where <m>a_{i,j}, b_i, c_j, d\in \mathbb{R}</m>.  This problem may be rewritten as:
@@ -411,7 +411,7 @@
     <task>
       <statement>
         <p>
-          What point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=8, t_2=0</m>?  What about <m>t_1=8, t_2=0</m>?
+          What point(s) in <m>\mathbb{R}^2</m> satisfy both <m>t_1=0, x=0</m>?  What about <m>t_2=0, y=0</m>?
         </p>
       </statement>
     </task>
