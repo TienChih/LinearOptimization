@@ -24,7 +24,7 @@
 
     Another problem on such a network is the <term>minimum cut</term>, a <term>cut</term> is a pair <m>(V_1, V_2)</m> so the <m>V</m> is the disjoint union on <m>V_1, V_2</m>, <m>v_s\in V_1</m> and <m>v_d\in V_2</m>.
       The <term>capacity</term> of a cut is the sum 
-      <me>\sum_{v_i\in V_1, v_j\in V_2}x_{ij}.</me> Careful analysis of the dual problem to the maximum flow problem shows that the capacity of any cut is an upper bound for the value of any flow.
+      <me>\sum_{v_i\in V_1, v_j\in V_2}c_{ij}.</me> Careful analysis of the dual problem to the maximum flow problem shows that the capacity of any cut is an upper bound for the value of any flow.
         
   </p>
   <figure xml:id="figure-videochapter7LOFormulation">

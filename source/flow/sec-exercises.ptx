@@ -22,7 +22,7 @@
     <exercise>
       <introduction>
         <p>
-          Consider the following capacitated network:
+          Consider the following capacitated network and given flow:
           <image xml:id="flowexa">
             <description>A Network Flow depicting several islands with bridges and carrying capacity.</description>
             <latex-image>
