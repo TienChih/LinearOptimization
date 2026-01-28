@@ -179,7 +179,7 @@
     <task>
       <statement>
         <p>
-          Consider the transportation Problem described in <xref ref="exploration-transportation"/>, and consider the linear
+          Consider the transportation problem described in <xref ref="exploration-transportation"/>, and consider the linear
           equations 
 
           <me>\sum x_{i\ell} = w_i, \sum x_{kj} = m_j.</me>

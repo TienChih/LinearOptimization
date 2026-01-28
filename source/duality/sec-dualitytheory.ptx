@@ -17,7 +17,7 @@
           \vdots \amp \vdots \amp \ddots \amp \vdots \\
           a_{n1} \amp a_{n2} \amp \cdots \amp a_{nm} \end{bmatrix}, 
         b = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}, 
-      c^{\top}= \begin{bmatrix}c_1 \amp c_2\amp \cdots \amp c_m \end{bmatrix}, d=d</me>
+      c^{\top}= \begin{bmatrix}c_1 \amp c_2\amp \cdots \amp c_m \end{bmatrix}, d=d.</me>
   
       
 

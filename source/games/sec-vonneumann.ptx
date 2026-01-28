@@ -115,7 +115,7 @@
           </li>
           <li>
             <p>
-              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{ij=1}^m \p^\top A^{(j)}\q_j</m>.
+              <m>\displaystyle \max_{\p \in F_{\p}} \sum_{j=1}^m \p^\top A^{(j)}\q_j</m>.
             </p>
           </li>
         </ol>

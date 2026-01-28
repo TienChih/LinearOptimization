@@ -786,9 +786,9 @@
       <p>
         Suppose that the reduced payoff matrix had an entry <m>a_{ij}</m>
         that is the largest value in its column and the smallest value in 
-        its row.
+        its row.  Such an entry <m>a_{ij}</m> is called a <term>saddle point</term>.
       </p>
-      <p>
+      <!--<p>
         <tabular halign="center">
           <row>
             <cell halign="right" bottom="medium" right="medium" >
@@ -951,7 +951,7 @@
       </p>
       <p>
         Such an entry <m>a_{ij}</m> is called a <term>saddle point</term>.
-      </p>
+      </p>-->
     </statement>
   </definition>
 
@@ -959,7 +959,7 @@
     <introduction>
       <statement>
         <p>
-          Suppose a reduced payoff matrix had a saddle point <m>a_{ij}</m>.
+          Suppose a reduced payoff matrix had a saddle point <m>a_{ij}</m>, and consider the resulting tableau:
         </p>
         <p>
           <tabular halign="center">
