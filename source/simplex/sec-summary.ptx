@@ -171,9 +171,9 @@
   </p>
   <p>
     We also noted that, although our inequalities and objective are written in terms of the <m>x_j</m>,
-    since we have the equality <me>a_{i1}x_1+\cdots a_{ij}x_j+\cdots a_{im}x_m=b_i-t_i</me> that we could rewrite as:
+    since we have the equality <me>a_{i1}x_1+\cdots + a_{ij}x_j+\cdots a_{im}x_m=b_i-t_i</me> that we could rewrite as:
     <me>x_j=\frac{1}{a_{ij}}\left( b_i-t_i-a_{i1}x_i-\cdots-a_{im}x_m \right)</me>  
-    provided <m>x_{ij}\neq0</m> and this would allow us to rewrite all the pertinent equalities and inequalities replacing <m>x_j</m>
+    provided <m>a_{ij}\neq0</m>.   This would allow us to rewrite all the pertinent equalities and inequalities replacing <m>x_j</m>
     with <m>t_i</m>.  This process is called a <term>pivot transformation</term> <xref ref="def-pivot"/>, where now
     <m>t_i</m> is a decision variable and <m>x_j</m> is a slack variable.
 

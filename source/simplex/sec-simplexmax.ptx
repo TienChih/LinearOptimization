@@ -65,7 +65,7 @@
                 <m>3</m>
               </cell>
               <cell halign="left">
-                <m>=-x_4</m>
+                <m>=-x_3</m>
               </cell>
             </row>
             <row>
@@ -660,9 +660,9 @@
                 \draw[very thick,->] (-0.5,0) -- (6,0);
                 \draw[very thick,->] (0,-0.5) -- (0,6);
                 \draw[black, thick] (0,0) -- (0,4) -- (1, 10/3) -- (2,7/3) -- (32/9,0) -- (0,0);   
-                \draw[teal, dashed, thick] (0,13/3) --node[above, sloped, pos= 0.7]{\tiny $3x+3y=13$} (13/3, 0);          
-                \draw[purple, dashed, thick] (0,4) --node[above, sloped, pos= 0.5]{\tiny $2x+3y=12$} (6, 0);
-                \draw[orange, dashed, thick] (0,16/3) --node[above, sloped, pos= 0.3]{\tiny $9x+6y=32$} (32/9, 0);
+                \draw[teal, dashed, thick] (0,13/3) --node[above, sloped, pos= 0.7]{\tiny $3x_1+3x_2=13$} (13/3, 0);          
+                \draw[purple, dashed, thick] (0,4) --node[above, sloped, pos= 0.5]{\tiny $2x_1+3x_2=12$} (6, 0);
+                \draw[orange, dashed, thick] (0,16/3) --node[above, sloped, pos= 0.3]{\tiny $9x_1+6x_2=32$} (32/9, 0);
                 \draw[ fill] (0,0) node[below left]{\tiny $(0,0)$} circle (2pt); 
                 \draw[ fill] (0,4) node[ left]{\tiny $(0,4)$} circle (2pt); 
                 \draw[ fill] (0,13/3) node[ left]{\tiny $(0,13/3)$} circle (2pt); 
@@ -677,7 +677,7 @@
             </image> 
           </p>
           <p>
-            We could choose to pivot <m>x_2</m> (<m>y</m> in the sketch) with either <m>t_1, t_2, t_3</m>.  Only one of these would result in a feasible solution.  Looking graphically, which is it?
+            We could choose to pivot <m>x_2</m>  with either <m>t_1, t_2, t_3</m>.  Only one of these would result in a feasible solution.  Looking graphically, which is it?
           </p>
         </statement>
       </task>

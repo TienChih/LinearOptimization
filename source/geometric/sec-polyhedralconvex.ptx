@@ -176,7 +176,7 @@
     <statement>
       <p>
         <idx>convex</idx>
-        Let <m>S\subseteq \mathbf{R}^m</m>, we say that <m>S</m> is <term>convex</term> if given any <m>\p, \q\in S</m>,
+        Let <m>S\subseteq \mathbb{R}^m</m>, we say that <m>S</m> is <term>convex</term> if given any <m>\p, \q\in S</m>,
         <m>S</m> also contains the line segment between <m>\p, \q</m>.
       </p>
     </statement>
