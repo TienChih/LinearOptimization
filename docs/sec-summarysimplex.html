@@ -434,7 +434,7 @@ x_1, x_2, \ldots, x_m, t_1, \ldots, t_n\amp \geq  0.
 <div class="para">We also noted that, although our inequalities and objective are written in terms of the <span class="process-math">\(x_j\text{,}\)</span> since we have the equality</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-pivot.html">
 \begin{equation*}
-a_{i1}x_1+\cdots a_{ij}x_j+\cdots a_{im}x_m=b_i-t_i
+a_{i1}x_1+\cdots + a_{ij}x_j+\cdots a_{im}x_m=b_i-t_i
 \end{equation*}
 </div>
 <div class="para">that we could rewrite as:</div>
@@ -443,7 +443,7 @@ a_{i1}x_1+\cdots a_{ij}x_j+\cdots a_{im}x_m=b_i-t_i
 x_j=\frac{1}{a_{ij}}\left( b_i-t_i-a_{i1}x_i-\cdots-a_{im}x_m \right)
 \end{equation*}
 </div>
-<div class="para">provided <span class="process-math">\(x_{ij}\neq0\)</span> and this would allow us to rewrite all the pertinent equalities and inequalities replacing <span class="process-math">\(x_j\)</span> with <span class="process-math">\(t_i\text{.}\)</span>  This process is called a <dfn class="terminology">pivot transformation</dfn> <a href="sec-pivot.html#def-pivot" class="xref" data-knowl="./knowl/xref/def-pivot.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.9">Definition 2.1.9</a>, where now <span class="process-math">\(t_i\)</span> is a decision variable and <span class="process-math">\(x_j\)</span> is a slack variable.</div>
+<div class="para">provided <span class="process-math">\(a_{ij}\neq0\text{.}\)</span>   This would allow us to rewrite all the pertinent equalities and inequalities replacing <span class="process-math">\(x_j\)</span> with <span class="process-math">\(t_i\text{.}\)</span>  This process is called a <dfn class="terminology">pivot transformation</dfn> <a href="sec-pivot.html#def-pivot" class="xref" data-knowl="./knowl/xref/def-pivot.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.1.9">Definition 2.1.9</a>, where now <span class="process-math">\(t_i\)</span> is a decision variable and <span class="process-math">\(x_j\)</span> is a slack variable.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-summarysimplex-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-summarysimplex-6">We note that by setting all the decision variables equal to zero, we obtain a potential solution called a <dfn class="terminology">basic solution</dfn> and the pivot transformation is really moving from basic solution to basic solution. Assuming that all <span class="process-math">\(b_i\geq0\text{,}\)</span> the basic solutions are feasible, and we establish a rule to identify pivots.  Picking a <span class="process-math">\(c_j &gt; 0\text{,}\)</span> we choose a positive entry <span class="process-math">\(a_{ij}\)</span> minimizing the ratio <span class="process-math">\(\frac{b_i}{a_{ij}}\text{.}\)</span> When each <span class="process-math">\(c_j\leq 0\text{,}\)</span> we have obtained an optimal solution.  This is summarized in the <dfn class="terminology">Simplex Algorithm</dfn> <a href="sec-simplexmax.html#def-simplexmax" class="xref" data-knowl="./knowl/xref/def-simplexmax.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.2.11">Definition 2.2.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-summarysimplex-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
