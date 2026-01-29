@@ -373,12 +373,12 @@
             </li>
             <li>
               <p>
-                There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row.
+                There is a row <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that row.
               </p>
             </li>
             <li>
               <p>
-                There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column.
+                There is a column <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that column.
               </p>
             </li>
             <li>
@@ -519,22 +519,22 @@
             </li>
             <li>
               <p>
-                There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i>0</m>.
+                There is a row <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i>0</m>.
               </p>
             </li>
             <li>
               <p>
-                There is a row <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i \lt 0</m>.
+                There is a row <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that row and <m>b_i \lt 0</m>.
               </p>
             </li>
             <li>
               <p>
-                There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j>0</m>.
+                There is a column <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j>0</m>.
               </p>
             </li>
             <li>
               <p>
-                There is a column <m>i</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j\lt 0</m>.
+                There is a column <m>j</m> so that all of the <m>a_{ij}\leq 0</m> in that column and <m>c_j\lt 0</m>.
               </p>
             </li>
             

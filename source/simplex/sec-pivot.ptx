@@ -1649,27 +1649,27 @@
       <task>
         <statement>
           <p>
-            For each column <m>i</m>, consider the equality recorded by this tableau: <m>a_{1i}y_A + a_{2i}y_B+a_{3i}y_C + (-1)c_i=s_i</m>.
-            What must be true about <m>s_i</m> in order for <m>a_{1i}y_A + a_{2i}y_B+a_{3i}y_C \geq c_i</m>?
+            For each column <m>j</m>, consider the equality recorded by this tableau: <m>a_{1j}y_A + a_{2j}y_B+a_{3j}y_C + (-1)c_j=s_j</m>.
+            What must be true about <m>s_j</m> in order for <m>a_{1j}y_A + a_{2j}y_B+a_{3j}y_C \geq c_j</m>?
             <ol  marker="A." cols="2">
               <li>
                 <p>
-                  <m>s_i\geq 0 </m>.
+                  <m>s_j\geq 0 </m>.
                 </p>
               </li>
               <li>
                 <p>
-                  <m>s_i\leq 0 </m>.
+                  <m>s_j\leq 0 </m>.
                 </p>
               </li>
               <li>
                 <p>
-                  <m>s_i= 0 </m>.
+                  <m>s_j= 0 </m>.
                 </p>
               </li>
               <li>
                 <p>
-                  Nothing may be determined about <m>s_i</m>.
+                  Nothing may be determined about <m>s_j</m>.
                 </p>
               </li>
             </ol>
