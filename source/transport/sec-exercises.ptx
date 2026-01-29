@@ -943,7 +943,7 @@
 
     <exercise>
       <p>
-        <em>True or False</em> for a valid choice of <m>a_i, b_j</m> in <xref ref="def-transportationalg"/>
+        <em>TRUE or FALSE</em> for a valid choice of <m>a_i, b_j</m> in <xref ref="def-transportationalg"/>
         step 2, then for a fixed real number <m>Z</m>, <m>a_i-Z, b_j+Z</m> is also a valid choice.
       </p>
     </exercise>
@@ -2077,7 +2077,7 @@ data rational.
             <p>
               Consider an <q>assignment</q> problem with <q>sources</q> and <q>sinks</q> 
               <m>v_0,\ldots, v_5</m> such that the <q>cost</q> of from shipping from <m>v_i</m> to <m>v_j</m> is
-              the label on the <m>v_iv_j</m> edge.  Let the cost from shipping from <m>v_5</m> to <m>v_1</m>
+              the label on the <m>v_iv_j</m> edge.  Let the cost from shipping from <m>v_5</m> to <m>v_0</m>
               be 0.  For each <m>i, 1\leq i\leq 4</m>, let the cost of shipping from <m>v_i</m> to itself
               be 0.  Let every other cost be an absurdly high <m>Z</m>.
     
@@ -2092,7 +2092,7 @@ data rational.
             <p>
               For your optimal solution, if  <m>v_i</m> <q>ships</q> to
               <m>v_j</m>, highlight the corresponding edge on the network above.
-              If a vertex <m>v_k</m> ships to itself, highlight that vertex.  Disregard the case when <m>v_5</m> ships to <m>v_1</m>.
+              If a vertex <m>v_k</m> ships to itself, highlight that vertex.  Disregard the case when <m>v_5</m> ships to <m>v_0</m>.
               What can you say about the highlighted edges?  What may be reasonable conjectures about these edges?
             </p>
           </statement>

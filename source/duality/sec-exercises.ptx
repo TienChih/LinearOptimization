@@ -145,7 +145,7 @@
     </exercise>
     
 
-    <exercise>
+    <!--<exercise>
       <statement>
         <p>
           Suppose the maximum value of the objective function <m>f(\x)=c_1x_1+\cdots +c_{m+n}x_{m+n}</m>
@@ -167,7 +167,7 @@ decision variables. Determine if the following are TRUE or FALSE:
           </li>
         </ol>
       </statement>
-    </exercise>
+    </exercise>-->
 
     
 

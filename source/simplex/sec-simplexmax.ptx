@@ -19,11 +19,7 @@
           
         </p>
         <p>
-          <!-- 
-          TYPO
-          Second t_3 should be t_2
-          Fixed
-          -->
+          
           <tabular halign="center">
             <row>
               <cell halign="left">
@@ -137,7 +133,7 @@
           </tabular>
         </p>
         <p>
-          Note that  <m>x_1, t_3, t_1, x_4=0</m> for the basic solution of this tableau.  Write out the corresponding system of canonical inequalities.  Are they all satisfied?
+          Note that  <m>x_1, t_2, t_1, x_4=0</m> for the basic solution of this tableau.  Write out the corresponding system of canonical inequalities.  Are they all satisfied?
         </p>
         
       </task>

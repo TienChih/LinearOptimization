@@ -94,6 +94,7 @@
   <proposition xml:id="prop-weakduality">
     <idx>weak duality theorem</idx>
     <idx>theorem, weak duality</idx>
+    <title>Weak Duality</title>
     <statement>
       <p>
         For a primal maximization problem with objective function <m>f</m> and dual objective <m>g</m>,
