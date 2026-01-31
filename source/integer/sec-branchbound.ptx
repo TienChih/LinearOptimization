@@ -413,7 +413,7 @@
                     child { node [env, left] {$f(?,?)=?$\\ stop} 
                       edge from parent node [below] {$x_2\geq 5$} } 
                     edge from parent node [below] {$x_1\leq 4$} }
-                  child { node [env] {$f(?,?)=???$}
+                  child { node [env] {$f(?,?)=?$}
                     child { node [env, right] {???} 
                       edge from parent node [below] {$x_2\leq 3$} } 
                     child { node [env] {???} 
@@ -439,41 +439,8 @@
       <statement>
         <p>
           Now in addition to the  <m>x_2\leq 3</m>, we have two choices for an additional constraint
-          on <m>x_1</m>, one <m>\leq</m> constraint, and one <m>/geq</m> constraint.  Solve the system with
+          on <m>x_1</m>, one <m>\leq</m> constraint, and one <m>\geq</m> constraint.  Solve the system with
           each of these additional constraints.  If any of the solutions are integral, how do they compare with previous integral solutions that we have found?
-        </p>
-      </statement>
-    </task>
-
-    <task>
-      <statement>
-        <p>
-          One of the <m>x_1</m> constraints in the previous task results in an nonintegral solution.
-          What now are the additional constraints we place on <m>x_2</m>?  Solve the problems
-          with these additional constraints.
-        </p>
-      </statement>
-    </task>
-
-
-
-
-
-
-
-    <task>
-      <statement>
-        <p>
-          Now instead of the <m>x_2\leq 3</m> constraint we had above, we now consider the constraint <m>x_2\geq 4</m>.  Solve this
-          maximization problem.  Why do we no longer need to consider the case where
-          <m>x_2\geq 4</m>?
-        </p>
-      </statement>
-    </task>
-    <task>
-      <statement>
-        <p>
-          How do we know we now have arrived at the optimal solution?
         </p>
         <p>
           <image xml:id="tree5">
@@ -503,10 +470,97 @@
                     child { node [env, left] {$f(?,?)=?$\\ stop} 
                       edge from parent node [below] {$x_2\geq 5$} } 
                     edge from parent node [below] {$x_1\leq 4$} }
-                  child { node [env] {$f(?,?)=???$}
-                    child { node [env, right] {$f(?,?)=?^*$\\ stop}  
-                      edge from parent node [below] {$x_2\leq 3$} } 
-                    child { node [env] {infeasible\\ stop}  
+                  child { node [env] {$f(?,?)=?$}
+                    child { node [env, right] {$f(?,?)=?$} 
+                        child { node [env, right] {$f(?,?)=?$} 
+                          edge from parent node [below] {$x_1\leq ?$}                       
+                        }
+                        child { node [env, left] {$f(?,?)=?$} 
+                          edge from parent node [below] {$x_1\geq ?$}                       
+                        }
+                      edge from parent node [below] {$x_2\leq 3$}                       
+                      } 
+                    child { node [env] {???} 
+                      edge from parent node [below] {$x_2\geq 4$} }   
+                    edge from parent node [below] {$x_1\geq 5$} };
+              \end{tikzpicture}
+  
+            </latex-image>
+          </image> 
+        </p>
+
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          One of the <m>x_1</m> constraints in the previous task results in an nonintegral solution.
+         Nevertheless, we no longer need to continue to add constraints to this problem to obtain an integral solution.
+         Why not?
+        </p>
+      </statement>
+    </task>
+
+
+
+
+
+
+
+    <task>
+      <statement>
+        <p>
+          Now instead of the <m>x_2\leq 3</m> constraint we had above, we now consider the constraint <m>x_2\geq 4</m>.  Solve this
+          maximization problem.  Why do we no longer need to consider the case where
+          <m>x_2\geq 4</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          How do we know we now have arrived at the optimal solution?
+        </p>
+        <p>
+          <image xml:id="tree6">
+            <description>A Tree Diagram describing additional constraints.</description>
+            <latex-image>
+              \tikzset{
+                treenode/.style = {shape=rectangle, rounded corners,
+                                   draw, align=center,
+                                   top color=white, bottom color=blue!20},
+                root/.style     = {treenode, font=\Large, bottom color=red!30},
+                env/.style      = {treenode, font=\ttfamily\normalsize},
+                dummy/.style    = {circle,draw}
+              }
+              \begin{tikzpicture}
+                [
+                  grow                    = down,
+                  sibling distance        = 12em,
+                  level distance          = 8em,
+                  edge from parent/.style = {draw, -latex},
+                  every node/.style       = {font=\footnotesize},
+                  sloped
+                ]
+                \node [root] {$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
+                  child { node [env] {$f(?,?)=?$}
+                    child { node [env] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\leq 4$} } 
+                    child { node [env, left] {$f(?,?)=?$\\ stop} 
+                      edge from parent node [below] {$x_2\geq 5$} } 
+                    edge from parent node [below] {$x_1\leq 4$} }
+                  child { node [env] {$f(?,?)=?$}
+                    child { node [env, right] {$f(?,?)=?$} 
+                        child { node [env, right] {$f(?,?)=?^*$\\stop} 
+                          edge from parent node [below] {$x_1\leq ?$}                       
+                        }
+                        child { node [env, left] {$f(?,?)=?$\\stop} 
+                          edge from parent node [below] {$x_1\geq ?$}                       
+                        }
+                      edge from parent node [below] {$x_2\leq 3$}                       
+                      } 
+                    child { node [env] {infeasible\\stop} 
                       edge from parent node [below] {$x_2\geq 4$} }   
                     edge from parent node [below] {$x_1\geq 5$} };
               \end{tikzpicture}
@@ -602,15 +656,15 @@
             dummy/.style    = {circle,draw}
           }
           \begin{tikzpicture}
-            [
-              grow                    = down,
-              sibling distance        = 12em,
-              level distance          = 8em,
-              edge from parent/.style = {draw, -latex},
-              every node/.style       = {font=\footnotesize},
-              sloped
-            ]
-            \node [root] {Node 0:\\$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
+                [
+                  grow                    = down,
+                  sibling distance        = 12em,
+                  level distance          = 8em,
+                  edge from parent/.style = {draw, -latex},
+                  every node/.style       = {font=\footnotesize},
+                  sloped
+                ]
+                \node [root] {Node 0:\\$f(\frac{80}{17}, \frac{70}{17})\approx f(4.706, 4.118)\approx 75.88$}
               child { node [env] {Node 1:\\ $f(4,4.4)=70.8$}
               child { node [env] {Node 2:\\$f(4,4)=68$\\ stop} 
                 edge from parent node [below] {$x_2\leq 4$} } 
@@ -618,12 +672,16 @@
                 edge from parent node [below] {$x_2\geq 5$} } 
               edge from parent node [below] {$x_1\leq 4$} }
               child { node [env] {Node 4:\\ $f(5,\frac{10}{3})\approx 73.33$}
-                child { node [env, right] {Node 5:\\ $f(5,3)=71^*$\\stop} 
+                child { node [env, right] {Node 5:\\ $f(\frac{41}{8},3)=72.25$}
+                    child { node [env, right] {Node 6:\\ $f(5,3)=71^*$\\stop} 
+                  edge from parent node [below] {$x_1\leq 5$} } 
+                    child { node [env, right] {Node 7:\\ $f(6,\frac{2}{3})\approx 64.67$\\stop} 
+                      edge from parent node [below] {$x_1\geq 6$} } 
                   edge from parent node [below] {$x_2\leq 3$} } 
-                child { node [env] {Node 6:\\ infeasible \\ stop} 
+                child { node [env] {Node 8:\\ infeasible \\ stop} 
                   edge from parent node [below] {$x_2\geq 4$} }   
                 edge from parent node [below] {$x_1\geq 5$} };
-          \end{tikzpicture}
+              \end{tikzpicture}
 
         </latex-image>
       </image> 
@@ -636,8 +694,20 @@
       </p>
       <p>
         Next, we return to the starting node and to the other initial subproblem in Node 4, were
-        <m>x\geq 5</m>.  When we split into the  two subproblems, <m>x_2\leq 3</m> gives
-        an integral solution in Node 5, and the constraint <m>x_2\geq 6</m> gives an infeasible problem.
+        <m>x\geq 5</m>.  When we split into the  two subproblems, <m>x_2\leq 3</m> and <m>x_2\geq 4</m>. 
+        <m>x_2\leq 3</m>gives a nonintegral solution in Node 5, but since it is greater than the integral solution found
+        in Node 2, we continue.
+      </p>
+      <p>
+        The two additional constraints we may not add to Node 5 are <m>x_1\leq 5</m> and <m>x_1\geq 6</m>.
+        In Node 6, <m>x_1\leq 5</m> results in an integral solution greater than the one found in Node 2, and we may return.
+        In Node 7, <m>x_1\geq 6</m> yields a nonintegral solution less than the integral solution found in Node 6,
+        there is no point in continuing and we return.
+      </p>
+      <p>
+        Returning back to Node 4, we proceed to Node 8, with the constraint <m>x_2\geq 4</m>,
+        rather than the constraint <m>x_2\leq 3</m>.  However this yields an infeasible problem and we may return,
+        as there is no point in adding additional constraints.
       </p>
       <p>
         Thus, we return, and of the two integral solutions found, <m>f(5,3)=71</m> has the highest value.
