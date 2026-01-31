@@ -430,15 +430,41 @@
       <statement>
         <p>
           We consider now the constraint <m>x_2\leq 3</m>.  Solve this
-          maximization problem.  How does this solution compare to the previous
-          integral solution we found?
+          maximization problem.  If this solution integral?
         </p>
       </statement>
     </task>
+
     <task>
       <statement>
         <p>
-          Instead we now consider the constraint <m>x_2\geq 4</m>.  Solve this
+          Now in addition to the  <m>x_2\leq 3</m>, we have two choices for an additional constraint
+          on <m>x_1</m>, one <m>\leq</m> constraint, and one <m>/geq</m> constraint.  Solve the system with
+          each of these additional constraints.  If any of the solutions are integral, how do they compare with previous integral solutions that we have found?
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          One of the <m>x_1</m> constraints in the previous task results in an nonintegral solution.
+          What now are the additional constraints we place on <m>x_2</m>?  Solve the problems
+          with these additional constraints.
+        </p>
+      </statement>
+    </task>
+
+
+
+
+
+
+
+    <task>
+      <statement>
+        <p>
+          Now instead of the <m>x_2\leq 3</m> constraint we had above, we now consider the constraint <m>x_2\geq 4</m>.  Solve this
           maximization problem.  Why do we no longer need to consider the case where
           <m>x_2\geq 4</m>?
         </p>
