@@ -411,7 +411,7 @@
     <task>
       <statement>
         <p>
-          Prove that <m>g(\y^*)=\displaystyle \sum_{i=1}^4 y_i^*b_i=-d^*.</m>
+          Recall that <m>g(\y^*)=\displaystyle \sum_{i=1}^4 y_i^*b_i</m>.  Prove that <m>g(\y^*)=-d^*</m>.
         </p>
       </statement>
     </task>

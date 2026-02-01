@@ -151,19 +151,19 @@
         <sage>
           <input>
             %display typeset
-            AH = (FIX_ME)
-            bH = (FIX_ME)
-            cH = (FIX_ME)
-            PH = InteractiveLPProblem(AH, bH, cH,
+            A = (FIX_ME)
+            b = (FIX_ME)
+            c = (FIX_ME)
+            P = InteractiveLPProblem(A, b, c,
              constraint_type = "&lt;=",
              variable_type = ">=")
-            PH
+            P
           </input>         
           </sage>
           <sage>
             <input>
-              print(PH.optimal_solution())
-              print(PH.optimal_value())
+              print(P.optimal_solution())
+              print(P.optimal_value())
             </input>         
           </sage>
           <p>
@@ -187,19 +187,19 @@
         <sage>
           <input>
             %display typeset
-            A = (FIX_ME)
-            b = (FIX_ME)
-            c = (FIX_ME)
-            P = InteractiveLPProblem(A, b, c,
+            AH = (FIX_ME)
+            bH = (FIX_ME)
+            cH = (FIX_ME)
+            PH = InteractiveLPProblem(AH, bH, cH,
              constraint_type = "&lt;=",
              variable_type = ">=")
-            P
+            PH
           </input>         
           </sage>
           <sage>
             <input>
-              print(P.optimal_solution())
-              print(P.optimal_value())
+              print(PH.optimal_solution())
+              print(PH.optimal_value())
             </input>         
           </sage>
           <p>
