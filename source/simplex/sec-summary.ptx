@@ -227,6 +227,13 @@
     ordering the variables, and always using the first possible variable to break any ties, we may avoid this issue.
   </p>
 
+  <p>
+    <figure xml:id="figure-videochapter2Cycling">
+    <caption>Cycling and Bland's Anticycling Theorem.</caption>
+    <video playat = "select" source = "images/Chapter2-Cycling.mp4" preview="images/Chapter2-Cycling.png"/>
+    </figure>
+  </p>
+
     
   
 

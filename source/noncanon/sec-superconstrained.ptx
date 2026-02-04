@@ -54,8 +54,8 @@
     <task>
       <statement>
         <p>
-          Consider the inequality <m>3x+2y-z\leq 8</m> captured by the equality
-          <m>3x+2y-z - 8=-t_4</m>.  What value must <m>t_4</m> so that <m>3x+2y-z\leq 8</m> 
+          Consider the inequality <m>x+y-2z\leq 1</m> captured by the equality
+          <m>x+y-2z - 1=-t_4</m>.  What value must <m>t_4</m> so that <m>x+y-2z\leq 1</m> 
           is always an equality?  Call this value <m>\xi</m>.
         </p>
       </statement>
@@ -176,16 +176,16 @@
                 <cell right="medium">
                 </cell>
                 <cell bottom="medium">
-                  <m>3</m>
+                  <m>1</m>
                 </cell>
                 <cell bottom="medium">
-                  <m>2^*</m>
+                  <m>1^*</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m>-1</m>
+                  <m>-2</m>
                 </cell>
                 <cell right="medium" bottom="medium">
-                  <m>8</m>
+                  <m>1</m>
                 </cell>
                 <cell halign="left">
                   <m>=-\xi</m>
@@ -223,7 +223,7 @@
     <task>
       <statement>
         <p>
-          As we traverse corner points on the way to an optimal solution, would we ever leave the plane <m>3x+2y-z=8</m>?
+          As we traverse corner points on the way to an optimal solution, would we ever leave the plane <m>x+y-2z=1</m>?
         </p>
       </statement>
     </task>
@@ -1191,24 +1191,7 @@
     </statement>
   </observation>
 
-  <activity>
-    <statement>
-      <p>
-        <p>
-          Solve the linear optimization problem:
   
-            <md>
-              <mrow>\textbf{Maximize: }  f(\mathbf{x})\amp = x+4y+2z   </mrow>
-              <mrow>\textbf{subject to: }  x+2y+3z \amp  \leq  6</mrow>
-              <mrow> 4x-7y&amp; =  28</mrow>
-              <mrow> x, y, z&amp; \geq  0.</mrow>
-            </md>
-  
-           
-        </p>  
-      </p>
-    </statement>
-  </activity>
 
   <activity>
     <introduction>
@@ -1505,9 +1488,9 @@
           Solve the linear optimization problem:
   
             <md>
-              <mrow>\textbf{Maximize: }  f(\mathbf{x}) \amp = x+4y+2z    </mrow>
-              <mrow>\textbf{subject to: }  x+2y+3z&amp;  \leq  6</mrow>
-              <mrow> 4x-7y&amp; \leq  28</mrow>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x})\amp = x+4y+2z   </mrow>
+              <mrow>\textbf{subject to: }  x+2y+3z \amp  \leq  6</mrow>
+              <mrow> 4x-7y&amp; =  28</mrow>
               <mrow> x, y, z&amp; \geq  0.</mrow>
             </md>
   
@@ -1517,6 +1500,29 @@
     <hint>
       <p>
         <interactive iframe="https://www.desmos.com/3d/e3583379f9" width="100%"  />
+      </p>
+    </hint>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+          Solve the linear optimization problem:
+  
+            <md>
+              <mrow>\textbf{Maximize: }  f(\mathbf{x}) \amp = -x+y+2z    </mrow>
+              <mrow>\textbf{subject to: }  x+4y-2z&amp;  = 6</mrow>
+              <mrow> 2x-y&amp; \leq  10</mrow>
+              <mrow> y+z&amp; \leq  5</mrow>
+              <mrow> x, y, z&amp; \geq  0.</mrow>
+            </md>
+  
+           
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <interactive iframe="https://www.desmos.com/3d/fzosa77fvw" width="100%"  />
       </p>
     </hint>
   </activity>

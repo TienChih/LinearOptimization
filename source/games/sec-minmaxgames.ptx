@@ -466,17 +466,17 @@
 
           <li>
             <p>
-              <m>F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}</m>.
+              <m>F_i(\q) = \frac{1}{m}\displaystyle \sum_{j=1}^m a_{ij}</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m q_j</m>.
+              <m>F_i(\q) = \frac{1}{m}\displaystyle \sum_{j=1}^m q_j</m>.
             </p>
           </li>
           <li>
             <p>
-              <m>F_i(\q) = \frac{1}{n}\displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
+              <m>F_i(\q) = \frac{1}{m}\displaystyle \sum_{j=1}^m a_{ij}q_j</m>.
             </p>
           </li>
 

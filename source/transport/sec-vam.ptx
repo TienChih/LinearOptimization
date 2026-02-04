@@ -14,7 +14,7 @@
   <exploration xml:id="exploration-transportation">
     <introduction>
       <p>
-        Suppose we have a company moving goods (lets say widgets) from 3 different warehouses to
+        Suppose we have a company moving goods (let's say widgets) from 3 different warehouses to
         3 different markets.  The cost of shipping from warehouses to markets is listed below, along with
         the demand from each market and the supply available at each warehouse:
       </p>

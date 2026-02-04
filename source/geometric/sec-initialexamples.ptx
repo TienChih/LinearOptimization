@@ -151,7 +151,7 @@
           <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m\amp \leq  b_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
-        where <m>a_{ij}, b_j, c_i, d\in \mathbb{R}</m>.
+        where <m>a_{ij}, b_i, c_j, d\in \mathbb{R}</m>.
       </p>
 
       <p>
@@ -166,7 +166,7 @@
           <mrow> a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m\amp \geq  b_n</mrow>
           <mrow> x_1, x_2, \ldots, x_m\amp \geq  0</mrow>
         </md>
-        where <m>a_{ij}, b_j, c_i, d\in \mathbb{R}</m>.
+        where <m>a_{ij}, b_i, c_j, d\in \mathbb{R}</m>.
       </p>
     </statement>
   </definition>

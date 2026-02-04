@@ -15,7 +15,7 @@
   <activity xml:id="activity-null">
     <statement>
       <p>
-        Let <me>A=\begin{bmatrix}1 &amp; a_2 &amp; a_3 &amp; \cdots &amp; a_n \end{bmatrix}.</me>
+        Let <me>A=\begin{bmatrix}1 &amp; a_2 &amp; a_3 &amp; \cdots &amp; a_m \end{bmatrix}.</me>
       </p>
       <p>
         What is <m>\dim(\operatorname{null}(A))</m>?
@@ -28,10 +28,10 @@
     <introduction>
       <p>
         Consider the augmented matrix <me>M=\left[\begin{array}{cccc|c}
-          a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} &amp; b_1 \\
-          a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n}&amp; b_2 \\
+          a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1m} &amp; b_1 \\
+          a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2m}&amp; b_2 \\
           \vdots &amp; \vdots &amp;  \ddots &amp; \vdots &amp; \vdots \\
-          a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn} &amp; b_m \\
+          a_{n1} &amp; a_{n2} &amp;  \cdots &amp; a_{nm} &amp; b_n \\
           \end{array}\right] = (A|b).</me>
       </p>
       
@@ -39,7 +39,7 @@
     <task>
       <statement>
         <p>
-          Given a fixed <m>n</m>, what is a necessary condition for the values of <m>m</m> so that the system of equations encoded by <m>M</m>  has a unique solution?
+          Given a fixed <m>m</m>, what is a necessary condition for the values of <m>n</m> so that the system of equations encoded by <m>M</m>  has a unique solution?
         </p>
       </statement>
     </task>
@@ -55,7 +55,7 @@
     <task>
       <statement>
         <p>
-          If the rows of <m>A</m> are independent, and <m>m\lt n</m>, then what is the dimension of the solution space of <m>M</m>?
+          If the rows of <m>A</m> are independent, and <m>n\lt m</m>, then what is the dimension of the solution space of <m>M</m>?
         </p>
       </statement>
     </task>
@@ -68,10 +68,10 @@
     <introduction>
       <p>
         Consider the  matrix <me>M=\left[\begin{array}{cccc}
-          a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1n} \\
-          a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2n} \\
+          a_{11} &amp; a_{12} &amp;  \cdots &amp; a_{1m} \\
+          a_{21} &amp; a_{22} &amp;  \cdots &amp; a_{2m} \\
           \vdots &amp; \vdots &amp;  \ddots &amp; \vdots\\
-          a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn}  \\
+          a_{n1} &amp; a_{n2} &amp;  \cdots &amp; a_{nm}  \\
           \end{array}\right].</me>
       </p>
     </introduction>
