@@ -372,7 +372,7 @@ x, y, z&amp; \geq  0
 <div class="para" id="super-constrained-geometry-3-1-1">Suppose we added in the constraint <span class="process-math">\(x+y-2z=1\)</span> Plot the feasible region, what dimension is it?<div class="autopermalink" data-description="Paragraph"><a href="#super-constrained-geometry-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Task 3.2.1.b"><a href="#super-constrained-geometry-3" title="Copy heading and permalink for Task 3.2.1.b" aria-label="Copy heading and permalink for Task 3.2.1.b">🔗</a></div></article><article class="task exercise-like" id="super-constrained-geometry-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="super-constrained-geometry-4-1-1">Consider the inequality <span class="process-math">\(3x+2y-z\leq 8\)</span> captured by the equality <span class="process-math">\(3x+2y-z - 8=-t_4\text{.}\)</span>  What value must <span class="process-math">\(t_4\)</span> so that <span class="process-math">\(3x+2y-z\leq 8\)</span> is always an equality?  Call this value <span class="process-math">\(\xi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#super-constrained-geometry-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="super-constrained-geometry-4-1-1">Consider the inequality <span class="process-math">\(x+y-2z\leq 1\)</span> captured by the equality <span class="process-math">\(x+y-2z - 1=-t_4\text{.}\)</span>  What value must <span class="process-math">\(t_4\)</span> so that <span class="process-math">\(x+y-2z\leq 1\)</span> is always an equality?  Call this value <span class="process-math">\(\xi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#super-constrained-geometry-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="super-constrained-geometry-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para" id="super-constrained-geometry-4-2-1">
@@ -416,10 +416,10 @@ x, y, z&amp; \geq  0
 </tr>
 <tr>
 <td class="c m b0 r2 l0 t0 lines"></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
-<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2^*\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1^*\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-\xi\)</span></td>
 </tr>
 <tr>
@@ -435,7 +435,7 @@ x, y, z&amp; \geq  0
 </div> <div class="para" id="super-constrained-geometry-5-1-2">Without computing the tableau, what point does the basic solution move to if we pivot on the entry with a <span class="process-math">\(*\text{?}\)</span> Is it feasible?<div class="autopermalink" data-description="Paragraph"><a href="#super-constrained-geometry-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Task 3.2.1.d"><a href="#super-constrained-geometry-5" title="Copy heading and permalink for Task 3.2.1.d" aria-label="Copy heading and permalink for Task 3.2.1.d">🔗</a></div></article><article class="task exercise-like" id="super-constrained-geometry-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="super-constrained-geometry-6-1-1">As we traverse corner points on the way to an optimal solution, would we ever leave the plane <span class="process-math">\(3x+2y-z=8\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#super-constrained-geometry-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="super-constrained-geometry-6-1-1">As we traverse corner points on the way to an optimal solution, would we ever leave the plane <span class="process-math">\(x+y-2z=1\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#super-constrained-geometry-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Task 3.2.1.e"><a href="#super-constrained-geometry-6" title="Copy heading and permalink for Task 3.2.1.e" aria-label="Copy heading and permalink for Task 3.2.1.e">🔗</a></div></article><article class="task exercise-like" id="super-constrained-geometry-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
 <div class="para" id="super-constrained-geometry-7-1-1">After the last pivot, our tableau has the form: <div class="tabular-box natural-width"><table class="tabular">
@@ -821,27 +821,9 @@ a_{i1}x_1+a_{i2}x_2+\cdots+a_{im}x_m-b_i = 0
 <div class="autopermalink" data-description="Observation 3.2.2"><a href="#sec-superconstrained-5" title="Copy heading and permalink for Observation 3.2.2" aria-label="Copy heading and permalink for Observation 3.2.2">🔗</a></div></article><article class="activity project-like" id="sec-superconstrained-6"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="sec-superconstrained-6-1-1">
-<div class="para logical" id="sec-superconstrained-6-1-1-1">
-<div class="para">Solve the linear optimization problem:</div>
-<div class="displaymath process-math" id="sec-superconstrained-6-1-1-1-1">
-\begin{align*}
-\textbf{Maximize: }  f(\mathbf{x})\amp = x+4y+2z   \\
-\textbf{subject to: }  x+2y+3z \amp  \leq  6\\
-4x-7y&amp; =  28\\
-x, y, z&amp; \geq  0.
-\end{align*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Activity 3.2.3"><a href="#sec-superconstrained-6" title="Copy heading and permalink for Activity 3.2.3" aria-label="Copy heading and permalink for Activity 3.2.3">🔗</a></div></article><article class="activity project-like" id="sec-superconstrained-7"><h3 class="heading">
-<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="introduction" id="sec-superconstrained-7-1"><div class="para logical" id="sec-superconstrained-7-1-1">
+<div class="introduction" id="sec-superconstrained-6-1"><div class="para logical" id="sec-superconstrained-6-1-1">
 <div class="para">Consider the linear optimization problem:</div>
-<div class="displaymath process-math" id="sec-superconstrained-7-1-1-1">
+<div class="displaymath process-math" id="sec-superconstrained-6-1-1-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x}) \amp= 2x+y-2z    \\
 \textbf{subject to: }  x+y+z \amp  \leq  1\\
@@ -849,11 +831,11 @@ y+4z&amp; =  2\\
 x, y, z&amp; \geq  0.
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
-<article class="task exercise-like" id="sec-superconstrained-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-superconstrained-7-2-1-1">Record this problem in a tableau with an equality constraint.<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="sec-superconstrained-7-2-1-2">
+<article class="task exercise-like" id="sec-superconstrained-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-superconstrained-6-2-1-1">Record this problem in a tableau with an equality constraint.<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-superconstrained-6-2-1-2">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -888,11 +870,11 @@ x, y, z&amp; \geq  0.
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.2.4.a"><a href="#sec-superconstrained-7-2" title="Copy heading and permalink for Task 3.2.4.a" aria-label="Copy heading and permalink for Task 3.2.4.a">🔗</a></div></article><article class="task exercise-like" id="sec-superconstrained-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-superconstrained-7-3-1-1">Pivot on the entry with <span class="process-math">\(*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="sec-superconstrained-7-3-1-2">
+<div class="autopermalink" data-description="Task 3.2.3.a"><a href="#sec-superconstrained-6-2" title="Copy heading and permalink for Task 3.2.3.a" aria-label="Copy heading and permalink for Task 3.2.3.a">🔗</a></div></article><article class="task exercise-like" id="sec-superconstrained-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-superconstrained-6-3-1-1">Pivot on the entry with <span class="process-math">\(*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-superconstrained-6-3-1-2">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -927,10 +909,10 @@ x, y, z&amp; \geq  0.
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.2.4.b"><a href="#sec-superconstrained-7-3" title="Copy heading and permalink for Task 3.2.4.b" aria-label="Copy heading and permalink for Task 3.2.4.b">🔗</a></div></article><article class="task exercise-like" id="sec-superconstrained-7-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-superconstrained-7-4-1-1">We obtained a tableau of the form: <div class="tabular-box natural-width"><table class="tabular">
+<div class="autopermalink" data-description="Task 3.2.3.b"><a href="#sec-superconstrained-6-3" title="Copy heading and permalink for Task 3.2.3.b" aria-label="Copy heading and permalink for Task 3.2.3.b">🔗</a></div></article><article class="task exercise-like" id="sec-superconstrained-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-superconstrained-6-4-1-1">We obtained a tableau of the form: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
 <td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x\)</span></td>
@@ -964,28 +946,50 @@ x, y, z&amp; \geq  0.
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="sec-superconstrained-7-4-1-2">Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-superconstrained-6-4-1-2">Rewrite the 3 rows as linear equalities, and verify that the 0 column contributes nothing.<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Task 3.2.4.c"><a href="#sec-superconstrained-7-4" title="Copy heading and permalink for Task 3.2.4.c" aria-label="Copy heading and permalink for Task 3.2.4.c">🔗</a></div></article><article class="task exercise-like" id="sec-superconstrained-7-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-superconstrained-7-5-1-1">Delete the 0 column and solve the remaining system.<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Task 3.2.3.c"><a href="#sec-superconstrained-6-4" title="Copy heading and permalink for Task 3.2.3.c" aria-label="Copy heading and permalink for Task 3.2.3.c">🔗</a></div></article><article class="task exercise-like" id="sec-superconstrained-6-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-superconstrained-6-5-1-1">Delete the 0 column and solve the remaining system.<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="sec-superconstrained-7-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para" id="sec-superconstrained-7-5-2-1">
-<iframe src="https://www.desmos.com/3d/65160bc478" id="sec-superconstrained-7-5-2-1-1" width="600" height="600"></iframe><div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="solutions"><details id="sec-superconstrained-6-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec-superconstrained-6-5-2-1">
+<iframe src="https://www.desmos.com/3d/65160bc478" id="sec-superconstrained-6-5-2-1-1" width="600" height="600"></iframe><div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-6-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 3.2.4.d.1"><a href="#sec-superconstrained-7-5-2" title="Copy heading and permalink for Hint 3.2.4.d.1" aria-label="Copy heading and permalink for Hint 3.2.4.d.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 3.2.3.d.1"><a href="#sec-superconstrained-6-5-2" title="Copy heading and permalink for Hint 3.2.3.d.1" aria-label="Copy heading and permalink for Hint 3.2.3.d.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Task 3.2.4.d"><a href="#sec-superconstrained-7-5" title="Copy heading and permalink for Task 3.2.4.d" aria-label="Copy heading and permalink for Task 3.2.4.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.2.4"><a href="#sec-superconstrained-7" title="Copy heading and permalink for Activity 3.2.4" aria-label="Copy heading and permalink for Activity 3.2.4">🔗</a></div></article><article class="activity project-like" id="sec-superconstrained-8"><h3 class="heading">
+<div class="autopermalink" data-description="Task 3.2.3.d"><a href="#sec-superconstrained-6-5" title="Copy heading and permalink for Task 3.2.3.d" aria-label="Copy heading and permalink for Task 3.2.3.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.2.3"><a href="#sec-superconstrained-6" title="Copy heading and permalink for Activity 3.2.3" aria-label="Copy heading and permalink for Activity 3.2.3">🔗</a></div></article><article class="activity project-like" id="sec-superconstrained-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="sec-superconstrained-7-1-1">
+<div class="para">Solve the linear optimization problem:</div>
+<div class="displaymath process-math" id="sec-superconstrained-7-1-1-1">
+\begin{align*}
+\textbf{Maximize: }  f(\mathbf{x})\amp = x+4y+2z   \\
+\textbf{subject to: }  x+2y+3z \amp  \leq  6\\
+4x-7y&amp; =  28\\
+x, y, z&amp; \geq  0.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-superconstrained-7-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="sec-superconstrained-7-2-1">
+<iframe src="https://www.desmos.com/3d/e3583379f9" id="sec-superconstrained-7-2-1-1" width="600" height="600"></iframe><div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.4.1"><a href="#sec-superconstrained-7-2" title="Copy heading and permalink for Hint 3.2.4.1" aria-label="Copy heading and permalink for Hint 3.2.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 3.2.4"><a href="#sec-superconstrained-7" title="Copy heading and permalink for Activity 3.2.4" aria-label="Copy heading and permalink for Activity 3.2.4">🔗</a></div></article><article class="activity project-like" id="sec-superconstrained-8"><h3 class="heading">
 <span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-superconstrained-8-1-1">
 <div class="para">Solve the linear optimization problem:</div>
 <div class="displaymath process-math" id="sec-superconstrained-8-1-1-1">
 \begin{align*}
-\textbf{Maximize: }  f(\mathbf{x}) \amp = x+4y+2z    \\
-\textbf{subject to: }  x+2y+3z&amp;  \leq  6\\
-4x-7y&amp; \leq  28\\
+\textbf{Maximize: }  f(\mathbf{x}) \amp = -x+y+2z    \\
+\textbf{subject to: }  x+4y-2z&amp;  = 6\\
+2x-y&amp; \leq  10\\
+y+z&amp; \leq  5\\
 x, y, z&amp; \geq  0.
 \end{align*}
 </div>
@@ -993,7 +997,7 @@ x, y, z&amp; \geq  0.
 </div>
 <div class="solutions"><details id="sec-superconstrained-8-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
 <div class="para" id="sec-superconstrained-8-2-1">
-<iframe src="https://www.desmos.com/3d/e3583379f9" id="sec-superconstrained-8-2-1-1" width="600" height="600"></iframe><div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<iframe src="https://www.desmos.com/3d/fzosa77fvw" id="sec-superconstrained-8-2-1-1" width="600" height="600"></iframe><div class="autopermalink" data-description="Paragraph"><a href="#sec-superconstrained-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.2.5.1"><a href="#sec-superconstrained-8-2" title="Copy heading and permalink for Hint 3.2.5.1" aria-label="Copy heading and permalink for Hint 3.2.5.1">🔗</a></div>
 </div></details></div>
