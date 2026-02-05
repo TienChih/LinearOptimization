@@ -676,10 +676,10 @@ x_1+x_2 \amp = 14 \\
 <div class="displaymath process-math" id="definition-dual-6-1">
 \begin{align*}
 \textbf{Maximize: }  f(\mathbf{x}) = c_1x_1 + c_2x_2 +\cdots c_mx_m-d \amp= \left(\displaystyle\sum_{j=1}^m c_jx_j \right)-d\\
-\textbf{subject to: }  a_{1,1}x_1 + a_{1,2}x_2 +\cdots a_{1,m}x_m\amp \leq  b_1\\
-a_{2,1}x_1 + a_{2,2}x_2 +\cdots a_{2,m}x_m\amp \leq  b_2\\
+\textbf{subject to: }  a_{11}x_1 + a_{12}x_2 +\cdots a_{1m}x_m\amp \leq  b_1\\
+a_{21}x_1 + a_{22}x_2 +\cdots a_{2m}x_m\amp \leq  b_2\\
 \vdots \amp   \vdots\\
-a_{n,1}x_1 + a_{n,2}x_2 +\cdots a_{n,m}x_m\amp \leq  b_n\\
+a_{n1}x_1 + a_{n2}x_2 +\cdots a_{nm}x_m\amp \leq  b_n\\
 x_1, x_2, \ldots, x_m\amp \geq  0.
 \end{align*}
 </div>
@@ -691,10 +691,10 @@ x_1, x_2, \ldots, x_m\amp \geq  0.
 <div class="displaymath process-math" id="definition-dual-8-1">
 \begin{align*}
 \textbf{Minimize: }  g(\mathbf{y}) = y_1b_1 + y_2b_2 +\cdots y_nb_n-d \amp= \left(\displaystyle\sum_{i=1}^n y_ib_i \right)-d\\
-\textbf{subject to: }  a_{1,1}y_1 + a_{2,1}y_2 +\cdots a_{n,1}y_n\amp \geq  c_1\\
-a_{1,2}y_1 + a_{2,2}y_2 +\cdots a_{n,2}y_n\amp \geq  c_2\\
+\textbf{subject to: }  a_{11}y_1 + a_{21}y_2 +\cdots a_{n1}y_n\amp \geq  c_1\\
+a_{12}y_1 + a_{22}y_2 +\cdots a_{n2}y_n\amp \geq  c_2\\
 \vdots \amp   \vdots\\
-a_{1,m}y_1 + a_{n,2}y_2 +\cdots a_{n,m}y_n\amp \geq  c_m\\
+a_{1m}y_1 + a_{2m}y_2 +\cdots a_{nm}y_n\amp \geq  c_m\\
 y_1, y_2, \ldots, y_n\amp \geq  0.
 \end{align*}
 </div>
