@@ -3099,10 +3099,10 @@
                 <m>-a_{nm}</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>-b_n</m>
+                <m>-b_m</m>
               </cell>
               <cell halign="left">
-                <m>=-t_n</m>
+                <m>=-t_m</m>
               </cell>
             </row>
             <row>
@@ -3118,7 +3118,7 @@
                 <m>\cdots</m>
               </cell>
               <cell right="medium" bottom="medium">
-                <m>-c_m</m>
+                <m>-c_n</m>
               </cell>
               <cell right="medium" bottom="medium">
                 <m>-d</m>

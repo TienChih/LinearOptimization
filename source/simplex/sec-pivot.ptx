@@ -146,8 +146,8 @@
       </p>
       <p>
         
-       In this case, we refer to the <m>s_j</m> as the  <term>slack variables</term>,
-       and the <m>x_i</m> as <term>decision variables</term>. 
+       In this case, we refer to the <m>s_i</m> as the  <term>slack variables</term>,
+       and the <m>x_j</m> as <term>decision variables</term>. 
       </p>
     </statement>
   </observation>
