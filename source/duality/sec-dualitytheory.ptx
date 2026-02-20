@@ -54,7 +54,7 @@
     <task>
       <statement>
         <p>
-          Suppose there were feasible <m>\mathbf{x_0}, \mathbf{y_0}</m> for which <m>f(\mathbf{x_0},)= g(\mathbf{y_0})</m>.  What 
+          Suppose there were feasible <m>\mathbf{x_0}, \mathbf{y_0}</m> for which <m>f(\mathbf{x_0})= g(\mathbf{y_0})</m>.  What 
           then must be true about these solutions?  Can we prove our assertion?
         </p>
       </statement>
