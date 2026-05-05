@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h3 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="introduction">
+<div class="para">In this activity, we motivate the math behind the cutting-plane method.<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Let <span class="process-math">\(x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*\)</span> be a feasible solution of the relaxation of a canonical integer maximization problem, where the <span class="process-math">\(x_i\)</span> are basic (slack) variables and the <span class="process-math">\(x_j\)</span> are nonbasic variables.<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We consider the constraint</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_i+\sum_j a_{ij}x_j=b_i.
+\end{equation*}
+</div>
+<div class="para"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(x_j\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(a_{ij}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(b_i\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-x_i\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=-?\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\cdots\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(?\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=f\)</span></td>
+</tr>
+</table></div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical">
+<div class="para">Explain why the above equality is equivalent to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_i+\sum_j \lfloor a_{ij} \rfloor x_j - \lfloor b_i\rfloor =(b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 8.2.2.a"><a href="#activity-cut-2" title="Copy heading and permalink for Task 8.2.2.a" aria-label="Copy heading and permalink for Task 8.2.2.a">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Show that for any feasible  integral solution,  that the left hand side of the equality in <span class="process-math">\(\textbf{(a)}\)</span> is an integer.<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 8.2.2.b"><a href="#activity-cut-3" title="Copy heading and permalink for Task 8.2.2.b" aria-label="Copy heading and permalink for Task 8.2.2.b">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para">Show that the right hand side of the equation in <span class="process-math">\(\textbf{(a)}\)</span> is strictly less than 1 for any feasible solution.<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 8.2.2.c"><a href="#activity-cut-4" title="Copy heading and permalink for Task 8.2.2.c" aria-label="Copy heading and permalink for Task 8.2.2.c">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para">For any integral solution, what is a nonnegative integer upper bound for <span class="process-math">\((b_i - \lfloor b_i \rfloor) - \sum_j (a_{ij} - \lfloor a_{ij} \rfloor)x_j\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 8.2.2.d"><a href="#activity-cut-5" title="Copy heading and permalink for Task 8.2.2.d" aria-label="Copy heading and permalink for Task 8.2.2.d">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical">
+<div class="para">Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j \leq (\lfloor b_i \rfloor - b_i)
+\end{equation*}
+</div>
+<div class="para">for any feasible integral solution to the relaxation of the integer optimization problem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para">We call the hyperplane <span class="process-math">\(\sum_j (\lfloor a_{ij} \rfloor - a_{ij})x_j = (\lfloor b_i \rfloor - b_i)\)</span> a <dfn class="terminology">cutting-plane</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 8.2.2.e"><a href="#activity-cut-6" title="Copy heading and permalink for Task 8.2.2.e" aria-label="Copy heading and permalink for Task 8.2.2.e">🔗</a></div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para">Show that if <span class="process-math">\(b_i\)</span> is nonintegral, then by adding this constraint, the solution <span class="process-math">\(x_1^*, \ldots, x_m^*, \ldots, x_{m+n}^*\)</span> is no longer feasible.<div class="autopermalink" data-description="Paragraph"><a href="#activity-cut-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 8.2.2.f"><a href="#activity-cut-7" title="Copy heading and permalink for Task 8.2.2.f" aria-label="Copy heading and permalink for Task 8.2.2.f">🔗</a></div></article><div class="autopermalink" data-description="Activity 8.2.2"><a href="#activity-cut" title="Copy heading and permalink for Activity 8.2.2" aria-label="Copy heading and permalink for Activity 8.2.2">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-cuttingplane.html#activity-cut">in-context</a></span>
+</body>
+</html>
