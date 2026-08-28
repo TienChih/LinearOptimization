@@ -11,35 +11,17 @@
  *******************************************************************************
  */
 
-/*
-console.log("thisbrowser.userAgent", window.navigator.userAgent);
-*/
-
-/* scrollbar width from https://stackoverflow.com/questions/13382516/getting-scroll-bar-width-using-javascript */
-function getScrollbarWidth() {
-    var outer = document.createElement("div");
-    outer.style.visibility = "hidden";
-    outer.style.width = "100px";
-    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-
-    document.body.appendChild(outer);
-
-    var widthNoScroll = outer.offsetWidth;
-    // force scrollbars
-    outer.style.overflow = "scroll";
-
-    // add innerdiv
-    var inner = document.createElement("div");
-    inner.style.width = "100%";
-    outer.appendChild(inner);
-
-    var widthWithScroll = inner.offsetWidth;
-
-    // remove divs
-    outer.parentNode.removeChild(outer);
-
-    return widthNoScroll - widthWithScroll;
-}
+// stub for i18next to future-proof the code. We don't actually use it for
+// anything right now, but it will be needed if we want to localize the
+// accessibility search status messages.
+window.i18next = window.i18next || {
+    t(key, params = {}) {
+        for (const param in params) {
+            key = key.replace(`{{${param}}}`, params[param]);
+        }
+        return key;
+    }
+};
 
 /*
   copy permalink address to clipboard
@@ -122,15 +104,33 @@ window.addEventListener("load",function(event) {
     /* click an image to magnify */
     $('body').on('click','.image-box > img:not(.draw_on_me):not(.mag_popup), .sbspanel > img:not(.draw_on_me):not(.mag_popup), figure > img:not(.draw_on_me):not(.mag_popup), figure > div > img:not(.draw_on_me):not(.mag_popup)', function(){
         var img_big = document.createElement('div');
-        img_big.setAttribute('style', 'background:#fff;');
+        const content_element = document.getElementById('ptx-content');
         img_big.setAttribute('class', 'mag_popup_container');
-        img_big.innerHTML = '<img src="' + $(this).attr("src") + '" style="width:100%" class="mag_popup"/>';
+        img_big.innerHTML = `<img src="${$(this).attr("src")}" style="width:100%;" class="mag_popup"/>`;
  // place_to_put_big_img = $(this).parents(".sbsrow, figure, li").last();
         place_to_put_big_img = $(this).parents(".image-box, .sbsrow, figure, li, .cols2 article:nth-of-type(2n)").last();
   // for .cols2, the even ones have to go inside the previous odd one
         if (place_to_put_big_img.prop("tagName") == "ARTICLE") {
            place_to_put_big_img = place_to_put_big_img.prev().children().first();
         }
+
+        // find ancestor so that place_to_put_big_img's position is relative to that ancestor
+        var img_big_parent = place_to_put_big_img[0].parentElement;
+        while (img_big_parent.id !== "ptx-content") {
+           const computed_position = getComputedStyle(img_big_parent).position;
+           if (computed_position !== "static") {
+              break;
+           }
+           img_big_parent = img_big_parent.parentElement;
+        }
+
+        const content_element_computed_style = getComputedStyle(content_element);
+        const content_padding_left  = parseFloat(content_element_computed_style.paddingLeft );
+        const content_padding_right = parseFloat(content_element_computed_style.paddingRight);
+        const img_big_offset = content_element.getBoundingClientRect().left - img_big_parent.getBoundingClientRect().left + content_padding_left;
+        const doc_width = content_element.offsetWidth - content_padding_left - content_padding_right;
+        img_big.setAttribute('style', `width:${doc_width.toString()}px; left:${img_big_offset.toString()}px;`);
+
         $(img_big).insertBefore(place_to_put_big_img);
     });
 
@@ -286,61 +286,67 @@ function process_workspace() {
     console.log("processing workspace");
     MathJax.typesetPromise();
 }
-/* for the GeoGebra calculator */
 
-function pretext_geogebra_calculator_onload() {
-    $("#calculator-toggle").focus();
-    var inputfield = $("input.gwt-SuggestBox.TextField")[0];
-    console.log("inputfield", inputfield);
-    inputfield.focus();
-}
 window.addEventListener("load",function(event) {
+    const calcDialogElement = document.getElementById('ptx-calculator-container');
+    const calcButtonElement = document.getElementById('ptx-calculator-toggle');
+    if (!calcDialogElement || !calcButtonElement) {
+        return;
+    }
+    const calcDialog = new PTXDialog(calcDialogElement, calcButtonElement, {"kind": "non-modal"});
 
-   /* scrolling on GG plot should scale, not move browser body */
-//     var scrollWidth = 15;  //currently correct for FF, Ch, and Saf, but would be better to calculate
-     var scrollWidth = getScrollbarWidth();
-     if ( (navigator.userAgent.match(/Mozilla/i) != null) ) {
-        // scrollWidth += 0.5
-     }
-     console.log("scrollWidth", scrollWidth);
-     calcoffsetR = 5;
-     calcoffsetB = 5;
-     $('body').on('mouseover','#geogebra-calculator canvas', function(){
-         $('body').css('overflow', 'hidden');
-         $('html').css('margin-right', '15px');
-         $('#calculator-container').css('right', (calcoffsetR+scrollWidth).toString() + 'px');
-         $('#calculator-container').css('bottom', (calcoffsetB+scrollWidth).toString() + 'px');
-     });
+    const focusCalcInput = function() {
+        const inputField = document.querySelector("#ptx-geogebra-calculator input.gwt-SuggestBox.TextField");
+        if (inputField) {
+            inputField.focus();
+        }
+    }
+    function initGeogebra() {
+        // Some paramaters are fixed here, others are set by publisher options in the HTML source
+        // and stored in ggbParams. Merge those here.
+        const fixedParams = {
+            showToolBar: true,
+            showAlgebraInput: true,
+            perspective: "G/A",
+            algebraInputPosition: "bottom",
+            appletOnLoad: focusCalcInput,
+            scaleContainerClass: "ptx-calculator-container",
+            allowUpscale: false,
+            autoHeight: false,
+        }
+        const generatedParams = (typeof ggbParams === "object" && ggbParams) ? ggbParams : {};
+        const params = {...generatedParams, ...fixedParams};
+        let applet = new GGBApplet(params, true);
+        applet.inject('ptx-geogebra-calculator');
+        return applet;
+    }
 
-     $('body').on('mouseout','#geogebra-calculator canvas', function(){
-         $('body').css('overflow', 'scroll')
-         $('html').css('margin-right', '0');
-         $('#calculator-container').css('right', calcoffsetR.toString() + 'px');
-         $('#calculator-container').css('bottom', calcoffsetB.toString() + 'px');
-     });
+    let applet;
+    calcButtonElement.addEventListener('click', function() {
+        if (calcDialog.dialog.open) {
+            let initialized = calcDialogElement.dataset.initialized || false;
+            if (!initialized) {
+                applet = initGeogebra();
+                calcDialogElement.dataset.initialized = true;
+            } else {
+                focusCalcInput();
+            }
+        }
+    });
 
-     $('body').on('click', '#calculator-toggle', function() {
-         if ($('#calculator-container').css('display') == 'none') {
-             $('#calculator-container').css('display', 'block');
-             $('#calculator-toggle').addClass('open');
-             $('#calculator-toggle').attr('title', 'Hide calculator');
-             $('#calculator-toggle').attr('aria-expanded', 'true');
-             create_calc_script = document.getElementById("create_ggb_calc");
-             if (!create_calc_script) {
-                 var ggbscript = document.createElement("script");
-                 ggbscript.id = "create_ggb_calc";
-                 ggbscript.innerHTML = "ggbApp.inject('geogebra-calculator')";
-                 document.body.appendChild(ggbscript);
-             } else {
-                 pretext_geogebra_calculator_onload();
-             }
-         } else {
-             $('#calculator-container').css('display', 'none');
-             $('#calculator-toggle').removeClass('open');
-             $('#calculator-toggle').attr('title', 'Show calculator');
-             $('#calculator-toggle').attr('aria-expanded', 'false');
-         }
-     });
+    //add resize observer for dialog
+    const resizeObserver = new ResizeObserver(entries => {
+        for (let entry of entries) {
+            if (entry.target === calcDialogElement && applet && applet.getAppletObject()) {
+                const width = entry.contentRect.width;
+                const height = entry.contentRect.height;
+                const topBarHeight = calcDialogElement.querySelector('.ptx-dialog-topbar').clientHeight || 0;
+                applet.getAppletObject().setSize(width, height - topBarHeight);
+                applet.getAppletObject().recalculateEnvironments();
+            }
+        }
+    });
+    resizeObserver.observe(calcDialogElement);
 });
 
 
@@ -410,6 +416,387 @@ window.addEventListener("load",function(event) {
 
 // The new method for creating pages and adjusting workspace //
 
+// The element being previewed.  Usually a worksheet or handout section, but a
+// project-like block with workspace that lives outside any worksheet/handout
+// is previewed as a printout in its own right, in which case this is the
+// project's <article>.  loadPrintout() tags whichever it is with "printout",
+// which is also the hook the print stylesheet keys on, so nothing downstream
+// has to care which kind of element it got.
+function getPrintout() {
+    return document.querySelector('.printout');
+}
+
+// Unwrap section.paragraphs containers so their children flow directly
+// into the parent, enabling CSS page breaks between the inner elements.
+function flattenParagraphsSections(printout) {
+    const paragraphsSections = printout.querySelectorAll('section.paragraphs');
+    paragraphsSections.forEach(section => {
+        const parent = section.parentNode;
+        // Move all children out of the section wrapper and into the parent
+        while (section.firstChild) {
+            parent.insertBefore(section.firstChild, section);
+        }
+        // Remove the now-empty section wrapper
+        parent.removeChild(section);
+    });
+}
+
+// Wait for all images inside a container to finish loading.
+// Returns a promise that resolves when every <img> has loaded (or on timeout).
+function waitForImages(container, timeoutMs = 5000) {
+    const images = container.querySelectorAll('img');
+    const promises = [];
+    for (const img of images) {
+        if (!img.complete) {
+            promises.push(new Promise(resolve => {
+                img.addEventListener('load', resolve, { once: true });
+                img.addEventListener('error', resolve, { once: true });
+            }));
+        }
+    }
+    if (promises.length === 0) return Promise.resolve();
+    // Race all image loads against a timeout so broken images don't block forever
+    return Promise.race([
+        Promise.all(promises),
+        new Promise(resolve => setTimeout(resolve, timeoutMs))
+    ]);
+}
+
+// Moving a row between .onepage containers makes any <iframe> inside it
+// (e.g. a YouTube video or GeoGebra applet) reload, even when it lands back
+// in the same parent.  A single settle loop (repagination/spillover-collapse
+// running repeatedly until layout stabilizes) can move a row several times,
+// so detach every iframe -- swapped for a same-sized placeholder, to keep
+// height measurements accurate -- before a batch of repagination work and
+// reattach afterward, capping each toggle at reloading a video once instead
+// of once per move.
+async function withIframesDetached(fn) {
+    const printout = getPrintout();
+    const parked = [];
+    if (printout) {
+        printout.querySelectorAll('iframe').forEach(iframe => {
+            const rect = iframe.getBoundingClientRect();
+            const placeholder = document.createElement('div');
+            placeholder.className = 'iframe-placeholder';
+            placeholder.style.width = rect.width + 'px';
+            placeholder.style.height = rect.height + 'px';
+            placeholder.style.display = getComputedStyle(iframe).display;
+            iframe.parentNode.insertBefore(placeholder, iframe);
+            iframe.remove();
+            parked.push({iframe, placeholder});
+        });
+    }
+    try {
+        return await fn();
+    } finally {
+        parked.forEach(({iframe, placeholder}) => {
+            placeholder.parentNode.insertBefore(iframe, placeholder);
+            placeholder.remove();
+        });
+    }
+}
+
+// The workspace divs in, or at, an element.  In a worksheet a workspace is
+// always nested inside an exercise or task, but a project-like standalone
+// printout can carry @workspace on itself, and then the block *is* the
+// workspace div -- which querySelectorAll, looking only at descendants, misses.
+// Whether a top-level row *is* blank writing space, in either of the two
+// shapes it can take.  The "highlight workspace" overlay wraps every
+// `.workspace` in a `.workspace-container` (see toggleWorkspaceHighlight()),
+// and since flattenSolutionsIn() has by then made the workspace a row in its
+// own right, that wrapper becomes the row.  The wrapper carries neither the
+// `workspace` class nor the group stamp, so testing for `.workspace` alone
+// means every workspace rule below -- never opening a page with writing
+// space, keeping a question with its own workspace, suppressing a stranded
+// one -- silently stops applying the moment the reader ticks that checkbox.
+function isWorkspaceRow(elem) {
+    return elem.classList.contains('workspace') || elem.classList.contains('workspace-container');
+}
+
+// A workspace row that is *actually* blank writing space on the page.  Both
+// pagination paths refuse to open a page with writing space -- findPageBreaks()
+// when it plans from scratch, addSpilloverPages() when it splits at runtime --
+// because a slab of empty space above the question it belongs to reads as a
+// mistake.  A row suppressed by hideWidowedWorkspaces() carries `hidden` and
+// occupies nothing, so there is no slab to protect the reader from, and
+// applying the rule to it only retreats to an earlier break and pushes real
+// content onto a later page to make room for something invisible.
+function isVisibleWorkspaceRow(elem) {
+    return isWorkspaceRow(elem) && !elem.classList.contains('hidden');
+}
+
+function workspaceDivsIn(elem) {
+    if (elem.classList.contains('workspace')) {
+        return [elem];
+    }
+    return [...elem.querySelectorAll('.workspace')];
+}
+
+// Split .task (and .conclusion) elements out of an .exercise -- or out of an
+// enclosing .task, for sub-tasks -- so each becomes its own top-level child
+// of `container`, positioned immediately after the block that used to hold
+// it. This is what lets both pagination paths treat a single task as an
+// independently placeable/movable unit: for computed pagination it lets
+// findPageBreaks() weigh each task on its own, and for authored pagination
+// it lets addSpilloverPages() push just the oversized task (and whatever
+// follows it on that page) onto a spillover page, instead of being stuck
+// with the whole exercise as one atomic block that can't be split when a
+// solution inside it grows too long.
+function flattenTasksIn(container) {
+    for (const child of [...container.children]) {
+        if (child.classList.contains('sidebyside')) {
+            continue; // sidebyside could have tasks, but we don't split into it
+        }
+        // A sidebyside nested deeper than `child` itself (e.g. a diagram next
+        // to a task's text) is excluded the same way: its tasks stay put.
+        const tasks = [...child.querySelectorAll('.task, .conclusion')].filter(el => !el.closest('.sidebyside'));
+        if (tasks.length === 0) continue;
+        // Tag nesting depth so CSS can indent appropriately once an element
+        // is pulled out of its parent .task/.exercise: if its parent (or
+        // grandparent) is itself a .task, it was a sub-(sub-)task.
+        for (const task of tasks) {
+            const parent = task.parentElement;
+            const grandparent = parent.parentElement;
+            if (grandparent && grandparent.classList.contains('task')) {
+                task.classList.add('subsubtask');
+            } else if (parent.classList.contains('task')) {
+                task.classList.add('subtask');
+            }
+        }
+        // Move every task out, including the first one, in reverse order, so
+        // they land in their original order immediately after `child`.
+        for (let i = tasks.length - 1; i >= 0; i--) {
+            container.insertBefore(tasks[i], child.nextSibling);
+        }
+    }
+}
+
+// Split a long `.introduction` block up so its paragraphs/tables/etc. become
+// independent top-level children of `container`, the same way flattenTasksIn
+// splits out `.task`/`.conclusion`. Otherwise an introduction is one atomic
+// row for pagination purposes, and overflows the page whenever it alone is
+// taller than a page, regardless of how the task(s) after it are split.
+//
+// The print stylesheet displays a heading inline with its first paragraph
+// (`article>.heading:first-child+:is(.para,.para.logical,.introduction)`),
+// so the introduction's first child is left in place -- replacing the
+// .introduction wrapper right where it was -- rather than extracted, and
+// only the rest is moved out to become independent top-level rows.
+//
+// Must run after flattenTasksIn(), since the reverse insertion here also
+// targets `child.nextSibling`, and running after keeps reading order correct
+// (introduction paragraphs end up before the task, not after it).
+//
+// A `.introduction` can appear nested inside a top-level child (e.g. an
+// exercise's own introduction) or as a top-level child itself (e.g. a
+// project-like printout's own opening section). Both are handled: for the
+// nested case the wrapper is unwrapped in place and its later children
+// extracted to be `child`'s top-level siblings; for the top-level case the
+// wrapper *is* `child`, so the first paragraph becomes the new top-level row
+// in its place, and later children are extracted as its siblings instead.
+function flattenIntroductionsIn(container) {
+    for (const child of [...container.children]) {
+        if (child.classList.contains('sidebyside')) {
+            continue; // sidebyside could have introductions, but we don't split into it
+        }
+        const isTopLevelIntroduction = child.classList.contains('introduction');
+        // A sidebyside nested deeper than `child` itself (e.g. a project
+        // description next to a figure) is excluded the same way as above:
+        // its introduction stays put.
+        const introductions = isTopLevelIntroduction
+            ? [child]
+            : [...child.querySelectorAll('.introduction')].filter(intro => !intro.closest('.sidebyside'));
+        // Where the next introduction's extracted content gets inserted.
+        // Starts at `child` and advances to the last row placed by each
+        // introduction in turn, so that when `child` contains more than one
+        // (e.g. an exercisegroup whose member exercises each carry their own),
+        // a later introduction's paragraphs land after an earlier one's
+        // instead of before it -- inserting every one of them relative to the
+        // same fixed `child` would put the last-processed introduction first.
+        let insertionAnchor = child;
+        introductions.forEach(intro => {
+            const introParent = intro.parentNode;
+            const introChildren = [...intro.children];
+            if (introChildren.length === 0) {
+                intro.remove();
+                return;
+            }
+            // Leave the first paragraph in place, right where .introduction was,
+            // so it stays adjacent to whatever precedes it (typically the heading).
+            introParent.insertBefore(introChildren[0], intro);
+            // When `intro` was itself the top-level child, `child` no longer
+            // occupies a slot in `container` -- the first paragraph just placed
+            // above does instead -- so anchor off that rather than insertionAnchor.
+            const anchor = intro === child ? introChildren[0] : insertionAnchor;
+            for (let i = introChildren.length - 1; i >= 1; i--) {
+                container.insertBefore(introChildren[i], anchor.nextSibling);
+            }
+            intro.remove();
+            insertionAnchor = introChildren[introChildren.length - 1];
+        });
+    }
+}
+
+// The classes flattenTasksIn() and flattenSolutionsIn() stamp on a row before
+// hoisting it, so the print stylesheet can re-create the indentation the hoist
+// destroys.  Ordered shallowest first.
+const DEPTH_CLASSES = ['subtask', 'subsubtask', 'subsubsubtask'];
+
+// The depth class a row hoisted out of `owner` needs to keep lining up with
+// it.  Read off `owner`'s own classes rather than its ancestry: flattenTasksIn()
+// has already run, so the nesting that would have said how deep `owner` sat is
+// gone, and the class it stamped on the way out is the only record left.
+//
+// The names mean the same thing here as they do there -- "subtask" is "I came
+// out of a task" -- so a row out of a plain task takes `subtask`, one out of a
+// task that was itself a subtask takes `subsubtask`, and so on.  A row belongs
+// at its owner's own level, not one step further in, exactly as a `.conclusion`
+// does; the print stylesheet is what turns that into the matching margin.
+function depthClassForRowOut(owner) {
+    if (owner.classList.contains('subsubtask')) return 'subsubsubtask';
+    if (owner.classList.contains('subtask')) return 'subsubtask';
+    if (owner.classList.contains('task')) return 'subtask';
+    return null;
+}
+
+// Move whichever depth class `from` carries onto `to`.  Used when the
+// "highlight workspace" overlay wraps a workspace, since the wrapper then
+// stands in as the row: the indent has to move with that role.  A margin left
+// on the workspace itself would not do -- it is `width: 100%` of the wrapper,
+// so a margin widens it past the wrapper's right edge instead of shifting it
+// over, and with both elements carrying the class the indent would double.
+function moveDepthClass(from, to) {
+    for (const cls of DEPTH_CLASSES) {
+        if (from.classList.contains(cls)) {
+            from.classList.remove(cls);
+            to.classList.add(cls);
+        }
+    }
+}
+
+// Serial number behind the `data-block-group` stamps below.  Module-level and
+// monotonic, deliberately: an id has to be unique among every row that could
+// ever share a page, and a counter local to the call does not achieve that.
+// adjustPrintoutPages() runs flattenSolutionsIn() once per authored page, so a
+// call-local counter hands every page its own `bg-0` -- and hideWidowedWorkspaces(),
+// which decides whether a workspace still has its question by looking that id
+// up among the page's rows, would accept a completely unrelated group's
+// question as the answer if two such pages were ever merged onto one.  Nothing
+// merges them today (a full recompute only runs when there are no authored
+// pages, and collapseSpilloverPages() folds a spillover page back only into
+// the page it was split from), but nothing declares that they cannot be.
+//
+// Surviving a repagination costs nothing, because the ids are meant to persist
+// anyway: a second createPrintoutPages() finds the `.solutions` wrappers
+// already consumed by the first pass, reissues nothing, and the stamps left
+// behind by that first pass are what keep the groups intact.  It is the
+// stamping *not* being redone that makes the scheme work.
+let blockGroupSeq = 0;
+
+// Split a `.solutions` block up so each hint/answer/solution knowl becomes
+// an independent top-level row, the same way flattenTasksIn splits out
+// `.task` and flattenIntroductionsIn splits out `.introduction`. Otherwise
+// a task or exercise with a large solution is one atomic row that overflows
+// the page whenever its prompt plus its solution content together are
+// taller than a page, even if the prompt alone would fit comfortably.
+//
+// Unlike `.introduction`, `.solutions` has no adjacent-heading display rule
+// to preserve, so every child is extracted -- none needs to stay behind.
+//
+// Must run after flattenTasksIn() so that, when the `.solutions` belongs to
+// a task rather than directly to an exercise, `child` is already that task
+// (a top-level row in its own right) -- keeping the extracted solution
+// content ordered right after its own task instead of after a sibling task.
+//
+// The block's `.workspace` is hoisted out along with the solutions, and
+// lands after them.  The XSL emits an exercise as statement, then
+// `div.solutions`, then `div.workspace` (the workspace is applied after
+// "wrapped-content" and so is the block's last real child).  Extracting only
+// the solutions would leave the workspace behind *inside* the block, which
+// renders it before the rows just hoisted out -- so a revealed hint or
+// solution would appear below a slab of blank writing space instead of
+// directly under its question.  Moving the workspace out too, after the
+// solution rows, restores the authored reading order and makes the blank
+// space an independently placeable row like every other.
+//
+// Rows split out of one block are stamped with a shared `data-block-group`
+// so pagination can try to keep a question with its solutions and workspace
+// (see findPageBreaks(), which will not start a page with a workspace row,
+// and hideWidowedWorkspaces(), which suppresses writing space stranded away
+// from its question).
+function flattenSolutionsIn(container) {
+    for (const child of [...container.children]) {
+        if (child.classList.contains('sidebyside') || child.classList.contains('solutions')) {
+            continue;
+        }
+        // Nested sidebyside excluded, same reasoning as flattenTasksIn/
+        // flattenIntroductionsIn.
+        const solutionsBlocks = [...child.querySelectorAll('.solutions')].filter(solutions => !solutions.closest('.sidebyside'));
+        // Advances after each block, same reasoning as flattenIntroductionsIn:
+        // when `child` has more than one solutions block (e.g. an
+        // exercisegroup whose member exercises each have their own), a later
+        // block's content must land after an earlier block's, not before it.
+        let insertionAnchor = child;
+        solutionsBlocks.forEach(solutions => {
+            // Captured before the block is removed below.  This is the
+            // exercise or task the solutions belong to -- after
+            // flattenTasksIn() that is usually `child` itself, but for an
+            // exercisegroup `child` holds several such owners, each with
+            // its own solutions and its own workspace to keep together.
+            const owner = solutions.parentElement;
+            // Captured for the same reason, and before the rows move for the
+            // same reason: once they are top-level children of `container`
+            // nothing about them says they came out of a task.  See
+            // depthClassForRowOut().
+            const depthClass = depthClassForRowOut(owner);
+            const group = `bg-${blockGroupSeq++}`;
+            const solChildren = [...solutions.children];
+            for (let i = solChildren.length - 1; i >= 0; i--) {
+                container.insertBefore(solChildren[i], insertionAnchor.nextSibling);
+                if (depthClass) {
+                    solChildren[i].classList.add(depthClass);
+                }
+            }
+            solutions.remove();
+            if (solChildren.length > 0) {
+                insertionAnchor = solChildren[solChildren.length - 1];
+            }
+            // Follow the solutions out, so reading order stays
+            // statement -> hint/answer/solution -> blank writing space.
+            const workspace = owner.querySelector(':scope > .workspace');
+            if (workspace) {
+                container.insertBefore(workspace, insertionAnchor.nextSibling);
+                // Indented along with them: a task's writing space is only
+                // hoisted when that task has solutions, so leaving it flush
+                // left would set it apart from the workspace of every sibling
+                // task that has none and so stayed put, indented, inside.
+                if (depthClass) {
+                    workspace.classList.add(depthClass);
+                }
+                insertionAnchor = workspace;
+            }
+            // Tag the whole set, including the question row that stayed put,
+            // so the group can be kept together (or deliberately broken)
+            // later.  When `owner` is nested deeper than `child` (the
+            // exercisegroup case) the question row is the whole group and
+            // is shared by several owners, so it is left untagged rather
+            // than bound to whichever owner happened to be processed last.
+            const questionRow = owner === child ? child : null;
+            const anchors = [questionRow, ...solChildren].filter(el => el && el.parentElement === container);
+            // A group needs at least one row that is not the workspace for it
+            // to be anchored to; otherwise (an empty `.solutions` inside an
+            // exercisegroup, say) hideWidowedWorkspaces() would find no
+            // question on the page and suppress perfectly good writing space.
+            if (anchors.length === 0) return;
+            for (const el of [...anchors, workspace]) {
+                if (el && el.parentElement === container) {
+                    el.dataset.blockGroup = group;
+                }
+            }
+        });
+    }
+}
+
 // This is used multiple places to set height of workspace divs to their author-provided heights
 function setInitialWorkspaceHeights() {
     const workspaces = document.querySelectorAll('.workspace');
@@ -422,7 +809,7 @@ function setInitialWorkspaceHeights() {
 // If a printout (worksheet or handout) includes authored pages, we only need to put content before the first page and after the last page into the first and last pages, respectively.
 function adjustPrintoutPages() {
     console.log("*** Adjusting printout pages.");
-    const printout = document.querySelector('section.worksheet, section.handout');
+    const printout = getPrintout();
     if (!printout) {
         console.warn("No printout found, exiting adjustPrintoutPages.");
         return;
@@ -450,7 +837,17 @@ function adjustPrintoutPages() {
         nextChild = nextChild.nextSibling;
         lastPage.appendChild(tempChild);
     }
-    console.log("Moved all content before the first page and after the last page into the respective pages.");
+    // Split nested tasks out to be top-level children of their page (see
+    // flattenTasksIn), so overflowing solutions inside a single task can be
+    // spilled onto a new page instead of dragging the whole exercise along
+    // as one unsplittable block. Then do the same for introductions (see
+    // flattenIntroductionsIn); must run second so reading order stays correct.
+    pages.forEach(page => {
+        flattenTasksIn(page);
+        flattenIntroductionsIn(page);
+        flattenSolutionsIn(page);
+    });
+    console.log("Moved all content before the first page and after the last page into the respective pages, and split nested tasks, introductions, and solutions for independent repagination.");
 }
 
 // This is the main function we will call then a printout does not come from the XSL with pages already defined (for now, the XSL will keep the <page> behavior as an option).
@@ -464,63 +861,117 @@ function createPrintoutPages(margins) {
     const conservativeContentHeight = 1056 - (margins.top + margins.bottom); // in pixels
     const conservativeContentWidth = 794 - (margins.left + margins.right); // in pixels
 
-    const printout = document.querySelector('section.worksheet, section.handout');
+    const printout = getPrintout();
     if (!printout) {
         console.warn("No printout found, exiting createPrintoutPages.");
         return;
     }
-    printout.style.width = toString(conservativeContentWidth + margins.left + margins.right) + 'px';
+    // Narrow the printout to our conservative width while we measure row
+    // heights below, so text wraps at least as much as it will once placed
+    // in the real, narrower, padded .onepage box -- otherwise rows measure
+    // shorter than their actual rendered height and pagination overflows.
+    printout.style.width = conservativeContentWidth + 'px';
     // Set the height of each workspace based on its data-space attribute
     setInitialWorkspaceHeights(printout);
 
-    // We want to consider each "block" of the printout.  Some of these will be direct children of the printout, some will be nested inside these children.  So first create a list of the elements that we consider blocks.
-    let rows = [];
-    for (const child of printout.children) {
-        if (child.classList.contains('sidebyside')) {
-            // sidebyside could have tasks, but we don't want to dive further into them.
-            rows.push(child);
-        } else if (child.querySelector('.task')) {
-            // Keep the child as a block, but put each task after the first one as its own row:
-            rows.push(child);
-            const tasks = child.querySelectorAll('.task, .conclusion');
-
-            //Determine how many levels of nesting each task has.  If parent is an .exercise, leave alone.  If parent is a .task, add .subtask class.  If grandparent is .task, add .subsubtask to it so it can be indented by css:
-            for (let i = 0; i < tasks.length; i++) {
-                let parent = tasks[i].parentElement;
-                let grandparent = parent.parentElement;
-                if (grandparent.classList.contains('task')) {
-                    tasks[i].classList.add('subsubtask');
-                } else if (parent.classList.contains('task')) {
-                    tasks[i].classList.add('subtask');
-                }
-            }
-            for (let i = tasks.length-1; i > 0; i--) {
-                // Move the task out of the original child and place it directly after it in the printout.  We do this in reverse order so when every task is moved, they return to the original order. They will then be added to the rows list as their own blocks.
-                printout.insertBefore(tasks[i], child.nextSibling);
-            }
-        // Skipping separate treatment of exercisegroups for now.
-        } else {
-            rows.push(child);
-        }
-    }
+    // We want to consider each "block" of the printout.  Some of these will be direct children of the printout, some will be nested inside these children (e.g. tasks inside an exercise).  Split those out into their own top-level blocks first (see flattenTasksIn), then every block we care about is simply a direct child of the printout.
+    // Skipping separate treatment of exercisegroups for now.
+    flattenTasksIn(printout);
+    // Same treatment for introductions (see flattenIntroductionsIn) and for
+    // task solutions (see flattenSolutionsIn); both must run after
+    // flattenTasksIn so reading order comes out right.
+    flattenIntroductionsIn(printout);
+    flattenSolutionsIn(printout);
+    let rows = [...printout.children];
+    // Measure the rows in the context they will actually be rendered in.
+    //
+    // The print stylesheet scopes a good deal to `.onepage` -- most sharply
+    // `.onepage .instructions { display: none }`, which suppresses tool chrome
+    // such as diagcess's "Diagram Exploration Keyboard Controls" panel. Taking
+    // heights while the rows are still children of the printout means none of
+    // those rules are in force, so such a row measures as real content, is
+    // given space in the page-break plan, and then renders as nothing once it
+    // lands in a `.onepage` -- which is how a worksheet ends up with a
+    // completely blank sheet in the middle of it.
+    //
+    // So park the rows in a throwaway `.onepage` for the duration of the
+    // measuring loop. Its width is pinned to the conservative content width
+    // for the same reason the printout's was: so text wraps at least as much
+    // as it will in the real, narrower page box.
+    const measuringPage = document.createElement('section');
+    measuringPage.classList.add('onepage');
+    measuringPage.style.width = conservativeContentWidth + 'px';
+    // The real page box is a fixed height; this one has to grow with whatever
+    // it holds, or every row past the first page's worth would measure clipped.
+    measuringPage.style.height = 'auto';
+    printout.appendChild(measuringPage);
+    rows.forEach(row => measuringPage.appendChild(row));
     // Loop through the blocks and create a list of objects including the block, its height, and its workspace height.  Only include blocks that have height (this will remove autopermalinks, as desired).
     let blockList = [];
     for (const row of rows) {
         let blockHeight = getElementTotalHeight(row);
-        if (blockHeight === 0) {
+        // A currently-hidden hint/answer/solution row also measures zero
+        // height, but unlike an autopermalink it's meaningful content that
+        // may be revealed later -- it still needs a page to call home. Rows
+        // never added to blockList never get moved into a .onepage below,
+        // and then get deleted outright by the "remove old content not in a
+        // page" cleanup at the end of this function, which is correct for a
+        // genuinely-empty row but was silently destroying hidden solution
+        // content (and, since printout.children is a live collection there,
+        // corrupting the position of whatever survived that by accident).
+        // Keeping it in blockList with height 0 costs nothing towards
+        // findPageBreaks()'s page-height budget -- it just rides along onto
+        // whichever page its neighbors land on, ready to be revealed in place.
+        // Tested against the row's own rendered box rather than blockHeight,
+        // which adds the margins on: an autopermalink has no box at all
+        // (offsetHeight 0) but does carry vertical margin, so measured the
+        // margin-inclusive way it looks like a ~22px row and survives this
+        // filter -- defeating the "remove autopermalinks" intent above. It
+        // then goes on to claim a page of its own whenever its neighbour is a
+        // block too tall to share with (findPageBreaks() gives such a block a
+        // page to itself), and the reader gets a completely blank sheet.
+        if (row.offsetHeight === 0 && !row.classList.contains('hidden')) {
             console.log("Skipping row with zero height:", row);
             continue;
         }
         let totalWorkspaceHeight = 0;
-        if (row.querySelector('.workspace')) {
+        if (workspaceDivsIn(row).length > 0) {
             // Workspace height is not just sum of workspace heights; we need to be careful with sidebyside and columns
             totalWorkspaceHeight = getElemWorkspaceHeight(row);
         }
-        blockList.push({elem: row, height: blockHeight, workspaceHeight: totalWorkspaceHeight});
+        blockList.push({
+            elem: row,
+            height: blockHeight,
+            workspaceHeight: totalWorkspaceHeight,
+            // Set by flattenSolutionsIn() on the rows split out of a single
+            // exercise or task, so findPageBreaks() can tell which rows want
+            // to stay together on one page.  Undefined for rows that were
+            // never split out of anything.
+            group: row.dataset.blockGroup,
+            // A row that *is* a hoisted workspace, as opposed to one that
+            // merely contains a workspace nested inside it.  Such a row is
+            // pure blank writing space, so it must never be what a page
+            // opens with -- see findPageBreaks().  Suppressed writing space
+            // does not count; see isVisibleWorkspaceRow().
+            isWorkspace: isVisibleWorkspaceRow(row),
+        });
     }
 
+    // Done measuring: return the rows to the printout and drop the scaffold,
+    // so the page-building loop below distributes them as it always has.
+    rows.forEach(row => printout.appendChild(row));
+    measuringPage.remove();
+
     // Now find pageBreaks so that extra workspace is as uniform as possible.
-    const pageBreaks = findPageBreaks(blockList, conservativeContentHeight);
+    // Squeezing blank writing space below its authored height is only on the
+    // table once something is revealed that needs the room (see pageCost()).
+    const pageBreaks = findPageBreaks(blockList, conservativeContentHeight, {
+        allowSqueeze: anySolutionShown(),
+    });
+
+    // Done measuring; let the printout go back to its normal width so the
+    // .onepage sections built below render at their real page size.
+    printout.style.width = "";
 
     // Create page divs and insert rows into them
     for (let i = 0; i < pageBreaks.length; i++) {
@@ -545,7 +996,13 @@ function createPrintoutPages(margins) {
     }
 
     // remove any old content that is not in a page
-    for (const child of printout.children) {
+    // Snapshot the children first: `printout.children` is a live collection,
+    // so removing through its own iterator shifts every later element down one
+    // and skips the next candidate.  A row that survives this loop by accident
+    // is left outside every page -- and now that rows carry group stamps that
+    // pagination relies on, one going missing takes its group's cohesion with
+    // it.
+    for (const child of [...printout.children]) {
         if (!child.classList.contains('onepage')) {
             console.log("Removing old child not in a page:", child);
             printout.removeChild(child);
@@ -553,25 +1010,279 @@ function createPrintoutPages(margins) {
     }
 }
 
+function getPageContentBottom(page) {
+    // The page element's own bottom edge includes its bottom padding, which
+    // corresponds to the print margin. Content that lands in that padding
+    // area still fits within the page's outer box, but real printing
+    // respects the margin strictly and will push it to the next page.
+    // So overflow must be measured against the content area, not the raw box.
+    const pRect = page.getBoundingClientRect();
+    const paddingBottom = parseFloat(getComputedStyle(page).paddingBottom) || 0;
+    return pRect.bottom - paddingBottom;
+}
+
+function pageOverflows() {
+    const pages = document.querySelectorAll('.onepage');
+    for (const page of pages) {
+        for (const child of page.children) {
+            const r = child.getBoundingClientRect();
+            if (r.bottom > getPageContentBottom(page) + 1) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+// Blank writing space only means something directly beneath the question it
+// was authored for.  findPageBreaks() will not plan a page that opens with a
+// workspace row, but a group can still be pulled apart afterwards -- most
+// often by addSpilloverPages(), which pushes whatever overflows onto a fresh
+// page at runtime.  When that leaves a workspace on a page without the
+// question it belongs to, a slab of blank space with no prompt above it is
+// worse than no writing space at all, so it is suppressed.
+//
+// Hidden rather than removed, and recomputed from scratch on every call, so
+// that a later toggle which brings the group back onto one page brings the
+// writing space back with it.  Suppressing a workspace only ever frees
+// vertical space, so this can never introduce a new overflow.
+// Only applies while something is revealed, for the same reason pageCost()
+// will not squeeze: with nothing shown, the authored writing space is what the
+// reader is meant to get, and suppressing it would quietly take that away.
+//
+// Suppression is the `hidden` class, not an inline `display`, and every pass
+// clears it from every workspace and wrapper in the printout before deciding
+// again.  Clearing everything first is what makes "recomputed from scratch"
+// above actually true: a workspace is the row only until the reader ticks
+// "highlight workspace", after which toggleWorkspaceHighlight() wraps it and
+// the `.workspace-container` is the row instead (see isWorkspaceRow()).
+// Writing only to whichever element holds that role at the time leaves the
+// suppression stranded on the other one -- hide a workspace while unwrapped,
+// tick the box, and un-hiding restores the container while the `.workspace`
+// inside it stays suppressed for the rest of the session.
+//
+// The class rather than an inline style because createPrintoutPages() skips
+// zero-height rows and then deletes whatever never landed in a `.onepage`,
+// exempting only `.hidden`.  A workspace suppressed with `display:none`
+// measures zero, carries no such exemption, and would be destroyed outright
+// by the next full recompute instead of restored by it.  Nothing reaches that
+// today -- every recompute is chained ahead of the first reveal, so nothing is
+// ever suppressed while one runs -- but that is an accident of ordering, not
+// an invariant.  `.hidden` also measures 0 in getElemWorkspaceHeight(), which
+// reads offsetHeight, so pagination correctly stops reserving room for writing
+// space the reader cannot see.
+function hideWidowedWorkspaces() {
+    const printout = getPrintout();
+    if (!printout) return;
+    const stranding = anySolutionShown();
+    // Start from a clean slate, so no earlier pass's decision can survive on an
+    // element that is no longer the row.  Safe to own the class outright here:
+    // nothing else in the printout ever hides a workspace -- solutions and
+    // headers/footers carry `hidden` on their own elements.
+    printout.querySelectorAll('.workspace, .workspace-container').forEach(ws => ws.classList.remove('hidden'));
+    printout.querySelectorAll(':scope > .onepage').forEach(page => {
+        const rows = [...page.children].filter(c => !isHeaderFooterEl(c));
+        const questionGroupsOnPage = new Set(
+            rows.filter(r => !isWorkspaceRow(r))
+                .map(r => r.dataset.blockGroup)
+                .filter(Boolean)
+        );
+        for (const row of rows) {
+            if (!isWorkspaceRow(row) || !row.dataset.blockGroup) continue;
+            if (stranding && !questionGroupsOnPage.has(row.dataset.blockGroup)) {
+                console.log("Hiding workspace stranded from its question:", row);
+                row.classList.add('hidden');
+            }
+        }
+    });
+}
+
+function adjustWorkspaceOrRepaginate({paperSize, margins, fullRecompute = false}) {
+    adjustWorkspaceToFitPage({paperSize, margins});
+    if (pageOverflows()) {
+        if (fullRecompute) {
+            resetPrintoutPagination(margins);
+        } else {
+            addSpilloverPages(margins);
+        }
+        adjustWorkspaceToFitPage({paperSize, margins});
+    }
+    // After the layout has settled, drop writing space that ended up separated
+    // from its question by whichever repagination path ran above.
+    hideWidowedWorkspaces();
+}
+
+function unwrapOnepages() {
+    const printout = getPrintout();
+    if (!printout) return;
+    const pages = [...printout.querySelectorAll(':scope > .onepage')];
+    pages.forEach(page => {
+        page.querySelectorAll(':scope > .first-page-header, :scope > .running-header, :scope > .first-page-footer, :scope > .running-footer').forEach(hf => hf.remove());
+        while (page.firstChild) {
+            printout.insertBefore(page.firstChild, page);
+        }
+        printout.removeChild(page);
+    });
+}
+
+function resetPrintoutPagination(margins) {
+    unwrapOnepages();
+    createPrintoutPages(margins);
+    addHeadersAndFootersToPrintout();
+}
+
+function isHeaderFooterEl(el) {
+  return el.classList.contains('first-page-header') || el.classList.contains('running-header') ||
+         el.classList.contains('first-page-footer') || el.classList.contains('running-footer');
+}
+
+function addSpilloverPages(margins) {
+  const printout = getPrintout();
+  if (!printout) return;
+  let pages = [...printout.querySelectorAll(':scope > .onepage')];
+
+  for (let i = 0; i < pages.length; i++) {
+    const page = pages[i];
+    const contentChildren = [...page.children].filter(c => !isHeaderFooterEl(c));
+
+    let overflowStartIndex = -1;
+    for (let j = 0; j < contentChildren.length; j++) {
+      const r = contentChildren[j].getBoundingClientRect();
+      if (r.bottom > getPageContentBottom(page) + 1) {
+        overflowStartIndex = j;
+        break;
+      }
+    }
+    if (overflowStartIndex === -1) continue; // this page fits fine, leave it completely alone
+    if (overflowStartIndex === 0) {
+      // The very first row alone is already too tall to fit on any page —
+      // nothing we can do about that specific row. But if there are other
+      // rows after it, they shouldn't be trapped here too: move everything
+      // after the oversized first row onto a fresh page.
+      if (contentChildren.length <= 1) continue; // truly nothing else to move
+      overflowStartIndex = 1;
+    }
+    // This is the runtime counterpart of the rules findPageBreaks() applies
+    // when it plans pages from scratch, and it has to enforce them too: a
+    // reveal goes through here (applySolutionVisibility() repaginates with
+    // fullRecompute false), so without this a revealed solution can push its
+    // own workspace onto the next page and open that page with a slab of
+    // blank writing space, or tear a question away from its solutions.
+    // Both are fixed the same way -- retreat to an earlier, legal split.
+    while (overflowStartIndex > 1) {
+      const row = contentChildren[overflowStartIndex];
+      const prev = contentChildren[overflowStartIndex - 1];
+      const opensWithWorkspace = isVisibleWorkspaceRow(row);
+      const splitsGroup = !!(row.dataset.blockGroup &&
+                             row.dataset.blockGroup === prev.dataset.blockGroup);
+      if (!opensWithWorkspace && !splitsGroup) break;
+      overflowStartIndex--;
+    }
+
+    const overflowElems = contentChildren.slice(overflowStartIndex);
+    const newPage = document.createElement('section');
+    newPage.classList.add('onepage', 'spillover');
+    if (page.classList.contains('lastpage')) {
+      page.classList.remove('lastpage');
+      newPage.classList.add('lastpage');
+    }
+    overflowElems.forEach(el => newPage.appendChild(el));
+    page.parentNode.insertBefore(newPage, page.nextSibling);
+
+    [...page.children].filter(isHeaderFooterEl).forEach(hf => hf.remove());
+
+    pages.splice(i + 1, 0, newPage); // let the loop also check the new page for cascading overflow
+  }
+
+  printout.querySelectorAll(':scope > .onepage').forEach(p => {
+    [...p.children].filter(isHeaderFooterEl).forEach(hf => hf.remove());
+  });
+  addHeadersAndFootersToPrintout();
+}
+
+// Append `children` onto the end of a page's *content*, i.e. before its
+// running/first-page footer if one is already attached. Pages being merged
+// in collapseSpilloverPages() still have their old footer in place (footers
+// aren't stripped until after the whole merge pass finishes), so a plain
+// appendChild would land new content after the footer -- corrupting both
+// the reading order and the overflow measurement used to judge the merge.
+function appendPageContent(page, children) {
+    const footer = [...page.children].find(c => c.classList.contains('first-page-footer') || c.classList.contains('running-footer'));
+    children.forEach(c => page.insertBefore(c, footer || null));
+}
+
+// Eagerly fold every spillover page's content back into the page before it,
+// unconditionally -- i.e. without checking whether the merged page fits yet.
+// That check is intentionally left to the caller (via adjustWorkspaceOrRepaginate,
+// which shrinks workspace boxes to fit before measuring overflow, then
+// re-splits with addSpilloverPages() if something still doesn't fit).
+// Deciding here, before workspace has a chance to shrink back down from
+// whatever size it was left at by the previous, more spread-out layout,
+// is unreliable: a page can measure as overflowing purely because its
+// workspace boxes are still sized for the old layout, when shrinking them
+// would actually make room.
+//
+// Processing pages highest-index-first guarantees that a spillover page's
+// merge target (the page right before it) hasn't itself already been
+// removed by an earlier step in this same pass, so chains of cascaded
+// spillover pages collapse correctly in a single pass.
+function collapseSpilloverPages(margins) {
+  const printout = getPrintout();
+  if (!printout) return;
+  const pages = [...printout.querySelectorAll(':scope > .onepage')];
+
+  for (let i = pages.length - 1; i >= 1; i--) {
+    const page = pages[i];
+    if (!page.classList.contains('spillover')) continue;
+    const prevPage = pages[i - 1];
+
+    const contentChildren = [...page.children].filter(c => !isHeaderFooterEl(c));
+    appendPageContent(prevPage, contentChildren);
+    if (page.classList.contains('lastpage')) {
+      prevPage.classList.add('lastpage');
+    }
+    page.remove();
+  }
+
+  printout.querySelectorAll(':scope > .onepage').forEach(p => {
+    [...p.children].filter(isHeaderFooterEl).forEach(hf => hf.remove());
+  });
+  addHeadersAndFootersToPrintout();
+}
+
 // Add headers and footers to all pages in a printout.  Start with this set to be hidden by default; a toggle later will show/hide them.
 function addHeadersAndFootersToPrintout() {
-    const printout = document.querySelector('section.worksheet, section.handout');
+    const printout = getPrintout();
     if (!printout) {
         console.warn("No printout found, exiting addHeadersAndFootersToPrintout.");
         return;
     }
     const pages = printout.querySelectorAll('.onepage');
-    // Loop through pages and add header and footer divs
+    // Loop through pages and add header and footer divs. This function gets
+    // called every time pagination is rebuilt (resetPrintoutPagination(),
+    // addSpilloverPages(), collapseSpilloverPages(), ...), not just once at
+    // initial load, so the hidden/visible state has to be decided here from
+    // localStorage directly -- not left hidden for some later one-time setup
+    // step to correct, which would only ever apply to the *first* build and
+    // leave every rebuild after it hidden regardless of the checkbox state.
     pages.forEach((page, index) => {
         const isFirstPage = index === 0;
+        const headerClass = isFirstPage ? 'first-page-header' : 'running-header';
+        const footerClass = isFirstPage ? 'first-page-footer' : 'running-footer';
         // Add header
         const headerDiv = document.createElement('div');
-        headerDiv.classList.add(isFirstPage ? 'first-page-header' : 'running-header', 'hidden');
+        headerDiv.classList.add(headerClass);
+        if (localStorage.getItem(`print-${headerClass}`) !== "true") {
+            headerDiv.classList.add('hidden');
+        }
         headerDiv.innerHTML = `<div class="header-left" contenteditable="true"></div><div class="header-center" contenteditable="true"></div><div class="header-right" contenteditable="true"></div>`;
         page.insertBefore(headerDiv, page.firstChild);
         // Add footer
         const footerDiv = document.createElement('div');
-        footerDiv.classList.add(isFirstPage ? 'first-page-footer' : 'running-footer', 'hidden');
+        footerDiv.classList.add(footerClass);
+        if (localStorage.getItem(`print-${footerClass}`) !== "true") {
+            footerDiv.classList.add('hidden');
+        }
         footerDiv.innerHTML = `<div class="footer-left" contenteditable="true"></div><div class="footer-center" contenteditable="true"></div><div class="footer-right" contenteditable="true"></div>`;
         page.appendChild(footerDiv);
     });
@@ -737,7 +1448,7 @@ function getElemWorkspaceHeight(elem) {
             }
         }
     }
-    const workspaces = elem.querySelectorAll('.workspace');
+    const workspaces = workspaceDivsIn(elem);
     let totalHeight = 0;
     workspaces.forEach(ws => {
         const workspaceHeight = ws.offsetHeight;
@@ -748,13 +1459,91 @@ function getElemWorkspaceHeight(elem) {
     return totalHeight / columns; // Divide by columns if sidebyside to get average height per column
 }
 
-// Functions for finding the optimal page breaks
-function findPageBreaks(rows, pageHeight) {
+// Cost of one candidate page holding rows [i..j], in the same units as the
+// original objective: (px of wasted space)^2, so that the penalties below
+// trade off directly against blank space -- a penalty of P is "worth" about
+// sqrt(P) px of waste at the foot of a page.
+//
+//   naturalHeight   total height with every workspace at its authored size
+//   workspaceHeight how much of that is blank writing space, i.e. how much
+//                   can be given back by squeezing (adjustWorkspaceToFitPage()
+//                   scales workspaces by a factor below 1 when a page is over
+//                   budget, so a page may legitimately be planned as "fits
+//                   only once squeezed")
+//   splitsGroup     true when the break after row j separates a question from
+//                   its own solutions or workspace
+//
+// Returns Infinity for a page that cannot be made to fit at all.
+//
+// NB the two constants are the tuning knobs for "keep an exercise with its
+// solutions and workspace together, and only spill over if absolutely
+// necessary": raising GROUP_BREAK_PENALTY_PAGES buys cohesion at the price of
+// more blank space, and lowering SQUEEZE_COST_SCALE makes the layout more
+// willing to eat into writing space before it gives up and splits.
+//
+// The group penalty is expressed in whole wasted pages rather than as a raw
+// number so that it scales with paper size instead of being tuned for one:
+// at 1, separating a question from its own solutions or workspace is judged
+// exactly as costly as leaving a whole page blank, which is what makes the
+// optimiser exhaust every other option -- including squeezing away all the
+// writing space, and pushing the whole group to the next page -- first.
+const GROUP_BREAK_PENALTY_PAGES = 1;
+const SQUEEZE_COST_SCALE = 0.25;        // squeezing s px of workspace costs 0.25*s^2
+
+// Whether any hint/answer/solution is currently revealed in the printout.
+// Checks effective visibility -- the element and every ancestor free of
+// "hidden" -- because rewriteSolutions() puts the "hidden" class on the
+// wrapper it builds, while the original `.knowl__content` div inside it never
+// carries the class itself.
+function anySolutionShown() {
+    const printout = getPrintout();
+    if (!printout) return false;
+    return [...printout.querySelectorAll('.hint, .answer, .solution')].some(el => !el.closest('.hidden'));
+}
+
+function pageCost({ pageHeight, naturalHeight, workspaceHeight, splitsGroup, allowSqueeze, squeezeIsForced }) {
+    const groupPenalty = splitsGroup ? GROUP_BREAK_PENALTY_PAGES * pageHeight ** 2 : 0;
+    if (naturalHeight <= pageHeight) {
+        // Fits as authored; the classic objective, minimise wasted space.
+        return (pageHeight - naturalHeight) ** 2 + groupPenalty;
+    }
+    // Over budget at the authored workspace sizes.  Blank writing space is
+    // compressible, but eating into it to merely pack pages tighter is only
+    // acceptable once a hint/answer/solution is on the page taking up the
+    // room -- with nothing revealed, the author asked for that much space to
+    // write in and must get at least that much, even at the cost of extra
+    // pages.
+    //
+    // The exception is a page holding a row that is taller than the page all
+    // by itself.  There, squeezing is not an optimisation, it is the only way
+    // that row is ever going to fit, and refusing it does not preserve any
+    // writing space -- it just strands the row on a page of its own and, worse,
+    // leaves whatever small thing preceded it (a worksheet title, typically)
+    // alone on the page before.  So allow it whenever it is forced.
+    if (!allowSqueeze && !squeezeIsForced) {
+        return Infinity;
+    }
+    const squeeze = naturalHeight - pageHeight;
+    if (squeeze > workspaceHeight) {
+        return Infinity; // no amount of squeezing saves this page
+    }
+    // Nothing is wasted (the page is exactly full), but squeezing writing
+    // space has its own cost, so a merely-tight page still loses to a roomy one.
+    return SQUEEZE_COST_SCALE * squeeze ** 2 + groupPenalty;
+}
+
+// Functions for finding the optimal page breaks.
+//
+// `allowSqueeze` permits planning a page that only fits once its blank
+// writing space is compressed.  It is off unless a hint/answer/solution is
+// actually being shown: a worksheet with nothing revealed must honour the
+// authored workspace heights in full.
+function findPageBreaks(rows, pageHeight, { allowSqueeze = false } = {}) {
     console.log("*** Finding page breaks for", rows.length, "rows with page height:", pageHeight);
-    // An array for the page breaks.  The nth element will be the index of the last row on page n.
+    // An array for the page breaks.  The nth element will be the index of the first row on page n+1.
     let pageBreaks = [];
     // An array for the minimum cost possible for rows i to the end.
-    let minCost = Array(rows.length).fill(Infinity);
+    let minCost = Array(rows.length + 1).fill(Infinity);
     minCost[rows.length] = 0; // No cost for no rows
     // An array to keep track of the next row to start a new page after i in minCost.
     let nextPageBreak = Array(rows.length).fill(-1);
@@ -763,33 +1552,63 @@ function findPageBreaks(rows, pageHeight) {
     for (let i = rows.length - 1; i >= 0; i--) {
         let cumulativeHeight = 0;
         let cumulativeWorkspaceHeight = 0;
+        let tallestRow = 0;
         // Loop through the rows starting from i to find the best page break
         for (let j = i; j < rows.length; j++) {
             cumulativeHeight += rows[j].height;
             cumulativeWorkspaceHeight += rows[j].workspaceHeight;
-            if (cumulativeHeight > pageHeight) {
+            // A row taller than a whole page cannot be placed at its authored
+            // size no matter how the breaks fall, so squeezing is forced for
+            // any page that has to hold it -- see pageCost().
+            tallestRow = Math.max(tallestRow, rows[j].height);
+            const next = rows[j + 1];
+
+            const thisPage = pageCost({
+                pageHeight,
+                naturalHeight: cumulativeHeight,
+                workspaceHeight: cumulativeWorkspaceHeight,
+                splitsGroup: !!(next && rows[j].group && rows[j].group === next.group),
+                allowSqueeze,
+                squeezeIsForced: tallestRow > pageHeight,
+            });
+            if (thisPage === Infinity) {
+                // This page overflows even with all its writing space squeezed
+                // away, and every longer page would too, so stop extending it.
                 if (j === i) {
                     // The page height is too big for a single row.  We make this row its own page and move on.
                     console.log("Row", i, "exceeds page height by itself, setting as its own page.");
                     minCost[i] = 0; // No cost for a single row
                     nextPageBreak[i] = i + 1; // The next page break is after this row
-                    break; // Move to the next row
-                } else {
-                    // We have already set minCost and NextPageBreak at an earlier point in the loop.  This means we have done the best we can for this row so we stop and move to the next earlier row.
-                    break; // Stop if we exceed the page height
                 }
+                break;
             }
+            // A page must never open with blank writing space: a workspace
+            // row belongs under the question it was authored for, so breaking
+            // right before one is simply not a legal break.  (When the group
+            // genuinely cannot be held together, the workspace is suppressed
+            // later instead -- see hideWidowedWorkspaces().)
+            if (next && next.isWorkspace) continue;
 
-            const cost = (pageHeight - cumulativeHeight)**2 + minCost[j+1]; // Cost is how much space is left on the page, plus the cost of the following pages.
+            const cost = thisPage + minCost[j + 1]; // plus the cost of the following pages
             if (cost < minCost[i]) {
                 minCost[i] = cost;
-                nextPageBreak[i] = j+1; // Set the next page break to be after row j
+                nextPageBreak[i] = j + 1; // Set the next page break to be after row j
             }
+        }
+        // Every candidate break was illegal (e.g. the only places to break
+        // were immediately before a workspace row).  Fall back to giving row i
+        // a page of its own so backtracking below always makes progress
+        // rather than looping on nextPageBreak === -1.
+        if (nextPageBreak[i] === -1) {
+            nextPageBreak[i] = i + 1;
+            minCost[i] = minCost[i + 1];
         }
     }
     // Backtrack to find the actual page breaks based on nextPageBreak
-    // Note: the nextPage = 1 is not an indexing mistake; we always assume that row 0 is a title and will go on the same page as row 1.
-    let nextPage = 1;
+    // Note: nextPage used to be set to 1.
+    // This meant the very first page's title height was never counted against that page's budget during optimization, even though it still occupied real space once pages were built.
+    // This caused the first page to sometimes exceed capacity, and the resulting correction to cascade into large wasted-space gaps on later pages.
+    let nextPage = 0;
     while (nextPage < rows.length) {
         pageBreaks.push(nextPageBreak[nextPage]);
         nextPage = nextPageBreak[nextPage];
@@ -840,23 +1659,63 @@ function toggleWorkspaceHighlight(isChecked) {
                 // Create a container div to hold the workspace div and the original div
                 const container = document.createElement('div');
                 container.classList.add('workspace-container');
-                // Set the container height to the current workspace height
-                container.style.height = window.getComputedStyle(workspace).height;
+                // Deliberately no fixed height on the container.
+                //
+                // A height snapshotted here goes stale the moment
+                // adjustWorkspaceToFitPage() resizes the workspace -- and
+                // because flattenSolutionsIn() has already hoisted the
+                // workspace out to be a top-level row, this container *is*
+                // that row, so the stale value is what createPrintoutPages()
+                // measures.  setInitialWorkspaceHeights() resets the
+                // `.workspace` back to its authored height but knows nothing
+                // about the wrapper, so pagination would plan against the
+                // previous, stretched size, hand each page more slack than it
+                // really has, and stretch the workspaces again -- a feedback
+                // loop that made the whole layout depend on whether the
+                // "highlight workspace" box happened to be ticked.
+                //
+                // Letting the container size to its content keeps it exactly
+                // as tall as the workspace at all times, with no value to
+                // synchronise.  The marker below is taken out of flow so that
+                // it cannot contribute height either.
+                container.style.position = 'relative';
                 const original = document.createElement('div');
                 original.classList.add('original-workspace');
                 const originalHeight = workspace.getAttribute('data-space') || '0px';
                 original.setAttribute('title', 'Author-specified workspace height (' + originalHeight + ')');
                 // Use the data-space attribute for height of original workspace
                 original.style.height = originalHeight;
+                // Overlaid rather than laid out beside the workspace: it still
+                // shows the authored height (overflowing visibly when that is
+                // taller than what the workspace was squeezed to, which is the
+                // point of the marker) without affecting the row's own height.
+                original.style.position = 'absolute';
+                original.style.top = '0';
+                original.style.left = '0';
                 // insert original div before the workspace content
                 container.appendChild(original);
-                // Add a warning class if the original height is greater than the current height
-                if (original.offsetHeight > workspace.offsetHeight) {
-                    original.classList.add('warning');
+                // The container stands in for the workspace as a pagination
+                // row while the overlay is on, so it has to carry the group
+                // stamp too -- otherwise the question and its writing space
+                // stop being seen as one unit.  See isWorkspaceRow().
+                if (workspace.dataset.blockGroup) {
+                    container.dataset.blockGroup = workspace.dataset.blockGroup;
                 }
+                // ...and, for the same reason, the indent that keeps a hoisted
+                // workspace lined up with its task.  See moveDepthClass().
+                moveDepthClass(workspace, container);
                 // Move the workspace into the container
                 workspace.parentNode.insertBefore(container, workspace);
                 container.appendChild(workspace);
+                // Flag the marker when the author asked for more room than the
+                // workspace was ultimately given.  Measured only now that both
+                // elements are actually in the document -- offsetHeight on a
+                // detached node is always 0, so checking this before the insert
+                // above (as this did previously) could never be true, and the
+                // warning never appeared.
+                if (original.offsetHeight > workspace.offsetHeight) {
+                    original.classList.add('warning');
+                }
             });
         }
     } else {
@@ -864,6 +1723,9 @@ function toggleWorkspaceHighlight(isChecked) {
         // Remove the original workspace divs.  We don't want to keep these in, as they interfere with changing page sizes and workspace heights.
         document.querySelectorAll('.workspace-container').forEach(container => {
             const workspace = container.querySelector('.workspace');
+            // The workspace is about to be the row again, so it takes the
+            // indent back with the role.
+            moveDepthClass(container, workspace);
             // Move the workspace out of the container
             container.parentNode.insertBefore(workspace, container);
             // Remove the container
@@ -907,6 +1769,45 @@ function getPaperSize() {
     return paperSize || "letter";
 }
 
+// A project-like born hidden as a knowl (the publisher's knowl-project) renders
+// as
+//   <details id="..."><summary><h2 class="heading"/><div class="print-links"/></summary>
+//     <article class="knowl__content">...</article></details>
+// so the id lands on the <details>, the title sits in the <summary>, and the
+// content is a separate article with no title of its own.  Rebuild it as the
+// single block a visible project would have produced, title first, so the rest
+// of the preview needs to know nothing about knowls.  Returns the block to
+// preview, or the <details> unchanged if it is not shaped as expected.
+function flattenKnowledPrintout(details) {
+    const content = details.querySelector(':scope > .knowl__content');
+    if (!content) {
+        console.warn("Born-hidden printout has no knowl content; previewing as-is:", details);
+        return details;
+    }
+    const heading = details.querySelector(':scope > summary > .heading');
+    if (heading) {
+        content.insertBefore(heading, content.firstChild);
+    }
+    // It is the page now, not knowl content.  Carry the id over so the preview
+    // keeps the identity named in the URL.
+    content.classList.remove('knowl__content');
+    content.id = details.id;
+    // Moves content out of details, then drops the details (and its summary).
+    details.replaceWith(content);
+    return content;
+}
+
+// The print icon has to live inside the <summary> of a born-hidden knowl to be
+// visible while the knowl is closed, but a click in a <summary> is the knowl's
+// own open/close toggle.  So follow the link ourselves and swallow the toggle.
+document.addEventListener("click", (ev) => {
+    const link = ev.target.closest("a.print-link");
+    if (!link || !link.closest("summary")) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    window.location.assign(link.href);
+});
+
 // Function to load the printout section and switch to print stylesheet.  This will run whenever a user clicks on a print preview link (which adds ?printpreview=sectionID to the URL).
 async function loadPrintout(printableSectionID) {
 
@@ -925,27 +1826,68 @@ async function loadPrintout(printableSectionID) {
         });
     }
 
-    // Find the section with this ID
-    const printableSection = document.getElementById(printableSectionID);
+    // Find the element with this ID.  For a worksheet or handout this is the
+    // division's section; for a standalone project-like printout it is the
+    // project's article, nested somewhere inside a division section, or a
+    // <details> if the project is born hidden as a knowl.
+    let printableSection = document.getElementById(printableSectionID);
     if (!printableSection) {
-        console.error("No section found with ID:", printableSectionID);
+        console.error("No printable element found with ID:", printableSectionID);
         return;
     }
-    // Remove any existing sections from .ptx-content and add only the printable section
+    if (printableSection.tagName === "DETAILS") {
+        printableSection = flattenKnowledPrintout(printableSection);
+    }
+    // Mark it as the printout so the stylesheet and the pagination code below
+    // can find it without knowing which kind of element it is.
+    printableSection.classList.add("printout");
+    // Remove any existing sections from .ptx-content and add only the printable
+    // section.  Removing a section that contains the printout is harmless: we
+    // still hold a reference to it, and re-attach it on the next line.
     const ptxContent = document.querySelector('.ptx-content');
     const existingSections = ptxContent.querySelectorAll(':scope > section');
     existingSections.forEach(sec => ptxContent.removeChild(sec));
     ptxContent.appendChild(printableSection);
 }
 
+// Whether hint/answer/solution divs of `solutionType` should be hidden: the
+// user's stored choice if there is one, otherwise the default (answers and
+// solutions start hidden, hints don't). Single source of truth for that
+// default so rewriteSolutions() (which needs it immediately, before the
+// checkbox that owns it has even been set up) and the checkbox setup loop
+// below can't drift apart.
+function solutionTypeHidden(solutionType) {
+    const stored = localStorage.getItem(`hide-${solutionType}`);
+    if (stored !== null) {
+        return stored === "true";
+    }
+    return solutionType === "answer" || solutionType === "solution";
+}
+
 // Function to redo solutions details to divs with summary as title
-function rewriteSolutions() {
-    var born_hidden_knowls = document.querySelectorAll('.worksheet details, .handout details');
+async function rewriteSolutions() {
+    var born_hidden_knowls = document.querySelectorAll('.printout details');
     born_hidden_knowls.forEach(function(detail) {
         const summary = detail.querySelector('summary');
         const content = detail.innerHTML.replace(summary.outerHTML, '');
         const div = document.createElement('div');
         div.classList = detail.classList;
+        // Unconditionally hidden here, regardless of the stored/default
+        // preference for this solutionType: the very first pagination pass
+        // needs one single, reproducible "everything hidden" starting point
+        // to lay pages out against (see the DOMContentLoaded handler below,
+        // where whichever types should actually start visible get revealed
+        // afterward, through the same incremental show/hide path a checkbox
+        // toggle uses). Basing initial layout on the *actual* visibility
+        // instead would make that layout as reachable only from that one
+        // specific combination of shown/hidden types, instead of from the
+        // one common base every hide always returns to.
+        for (const solutionType of ["hint", "answer", "solution"]) {
+            if (div.classList.contains(solutionType)) {
+                div.classList.add("hidden");
+                break;
+            }
+        }
         if (summary) {
             const title = document.createElement('h5');
             title.innerHTML = summary.innerHTML;
@@ -956,6 +1898,9 @@ function rewriteSolutions() {
         div.appendChild(body);
         detail.parentNode.replaceChild(div, detail);
     });
+    if (typeof MathJax !== "undefined" && MathJax.typesetPromise) {
+        await MathJax.typesetPromise();
+    }
 }
 
 // Utility to convert various CSS length units to pixels
@@ -979,16 +1924,127 @@ function toPixels(value) {
     }
 }
 
+// A cheap fingerprint of the current page layout: how many pages there are
+// and each one's height. Good enough to tell "still changing" from "settled"
+// without needing to know *why* something might still be resizing (MathJax,
+// an image, a browser reflow after a class toggle, etc).
+function pageLayoutSignature() {
+    return [...document.querySelectorAll('.onepage')]
+        .map(page => Math.round(page.getBoundingClientRect().height))
+        .join(',');
+}
+
+// Repeatedly call `settle` (a synchronous pagination/layout pass) on an
+// interval, stopping as soon as the page layout looks the same for
+// `stableTicks` ticks in a row -- i.e. nothing is left to settle -- rather
+// than always running for the full `timeoutMs` window. `timeoutMs` is a hard
+// cap for content that can never fully converge (e.g. a single block
+// permanently too tall for one page -- see addSpilloverPages()); without it,
+// content still actively resizing (a solution knowl settling into its final
+// size, a late-typesetting equation) could stop being watched too early.
+//
+// Without the early stop, `settle` -- which can call
+// addHeadersAndFootersToPrintout(), destroying and recreating every
+// header/footer contenteditable div -- would otherwise run unconditionally
+// on every tick for the whole window, on every checkbox toggle, even long
+// after nothing is actually still changing: wasted layout work at best, and
+// at worst it yanks the cursor out from under someone mid-edit in a header
+// or footer field.
+async function pollUntilSettled(settle, {timeoutMs = 2000, intervalMs = 100, stableTicks = 3} = {}) {
+    const deadline = Date.now() + timeoutMs;
+    let lastSignature = null;
+    let stableCount = 0;
+    while (Date.now() < deadline) {
+        await new Promise(r => setTimeout(r, intervalMs));
+        settle();
+        const signature = pageLayoutSignature();
+        if (signature === lastSignature) {
+            if (++stableCount >= stableTicks) return;
+        } else {
+            stableCount = 0;
+            lastSignature = signature;
+        }
+    }
+}
+
+// Show or hide every div of `solutionType` and adjust pagination to match.
+// Shared by the checkbox change handler and by the initial application of
+// stored/default visibility right after the base layout is built, so both
+// paths are guaranteed to behave identically.
+//
+// Always incremental -- addSpilloverPages()/collapseSpilloverPages() acting
+// on the existing .onepage structure -- never a full recompute
+// (resetPrintoutPagination()/createPrintoutPages()). The base layout (built
+// with every hint/answer/solution hidden -- see rewriteSolutions()) assigns
+// each row to a page exactly once; a full recompute after that would
+// re-derive page breaks from whatever happens to be visible at the time,
+// which depends on which other types happen to be shown, so a show/hide
+// round trip on one type wasn't guaranteed to land back on the same layout
+// it started from. Collapsing always folds back toward that one base, and
+// showing only ever pushes overflow forward onto a new page, so hiding
+// reliably undoes exactly what showing did.
+//
+// Runs under withIframesDetached() since the repagination and collapse work
+// below can move a row -- and any iframe inside it -- several times over the
+// course of one toggle.
+async function applySolutionVisibility(solutionType, hidden, {paperSize, margins}) {
+    document.querySelectorAll(`div.${solutionType}`).forEach(elem => {
+        if (hidden) { elem.classList.add("hidden"); }
+        else { elem.classList.remove("hidden"); }
+    });
+    await withIframesDetached(async () => {
+        if (hidden) {
+            collapseSpilloverPages(margins);
+            adjustWorkspaceOrRepaginate({paperSize, margins, fullRecompute: false});
+            // Content just hidden (e.g. a long solution) can take a moment to
+            // finish settling into its final, compact size, so an immediate
+            // measurement can miss a page that's actually able to collapse.
+            await pollUntilSettled(() => {
+                collapseSpilloverPages(margins);
+                adjustWorkspaceOrRepaginate({paperSize, margins, fullRecompute: false});
+            });
+        } else {
+            adjustWorkspaceOrRepaginate({paperSize, margins, fullRecompute: false});
+            await pollUntilSettled(() => {
+                if (pageOverflows()) {
+                    addSpilloverPages(margins);
+                    adjustWorkspaceToFitPage({paperSize, margins});
+                }
+            });
+        }
+    });
+}
+
 // Event listener for page load to handle print preview setup
 window.addEventListener("DOMContentLoaded", async function(event) {
     const urlParams = new URLSearchParams(window.location.search);
+    let pendingSettle = Promise.resolve();
     // We condition on the existence of the papersize radio buttons, which only appear in the printout print preview.
     if (urlParams.has("printpreview")) {
         const printableSectionID = urlParams.get("printpreview");
         await loadPrintout(printableSectionID);
 
+        // loadPrintout bails out if the id names nothing printable (a stale or
+        // hand-edited URL), so there may be no printout to lay out.
+        const printout = getPrintout();
+        if (!printout) {
+            console.warn("Nothing to preview for printpreview=" + printableSectionID + "; leaving the page as it is.");
+            return;
+        }
+
+        // If the printout has authored pages, there will be at least one .onepage
+        // element. That's purely a property of the source HTML, so it's safe to
+        // read this early, before anything below has a chance to touch the DOM.
+        // Declared up here (rather than right before its first use, closer to
+        // adjustPrintoutPages()) because the hide/reveal checkbox handlers set
+        // up below close over it too, and a forward reference to a `const`
+        // declared later in this same function only happens to work today
+        // because those handlers can't fire before this function finishes
+        // running -- moving it here removes that fragility outright.
+        const hasAuthoredPages = document.querySelectorAll('.onepage').length > 0;
+
         // First, get the margins for pages to be passed around as needed.
-        const marginList = document.querySelector('section.worksheet, section.handout').getAttribute('data-margins').split(' ');
+        const marginList = (printout.getAttribute('data-margins') || "").split(' ');
         // Convert margin values to pixels if they are not already numbers
         const margins = {
             top: toPixels(marginList[0] || "0.75in"), // Default to 0.75in if not specified
@@ -998,7 +2054,7 @@ window.addEventListener("DOMContentLoaded", async function(event) {
         }
 
         // Transform all solutions details elements to divs with the summary as a title
-        rewriteSolutions();
+        await rewriteSolutions();
 
         // Get the papersize from localStorage or set it based on user's geographic region.  This will always return a value (defaulting to 'letter' if all else fails).
         let paperSize = getPaperSize();
@@ -1012,7 +2068,7 @@ window.addEventListener("DOMContentLoaded", async function(event) {
         document.body.classList.add(paperSize);
         setPageGeometryCSS({paperSize: paperSize, margins: margins});
         } else {
-            console.warning("Bug: paperSize should always have a value here.");
+            console.warn("Bug: paperSize should always have a value here.");
         }
         // Add event listeners to the papersize radio buttons to handle changes
         const papersizeRadios = document.querySelectorAll('input[name="papersize"]');
@@ -1028,53 +2084,88 @@ window.addEventListener("DOMContentLoaded", async function(event) {
             });
         });
 
-        // Add event listeners to the hide hints/answers/solutions checkboxes
+        // Set up (but don't yet apply) the hide hints/answers/solutions
+        // checkboxes. Actually showing whichever types should start visible
+        // happens later, in one place, after the base layout (built with
+        // everything hidden -- see rewriteSolutions()) is fully settled;
+        // see the applySolutionVisibility() call near the end of this handler.
         for (const solutionType of ["hint", "answer", "solution"]) {
             const checkbox = document.getElementById(`hide-${solutionType}-checkbox`);
-            if (checkbox) {
-                const storageKey = `hide-${solutionType}`;
-                // by default, hide answer and solution divs
-                if (solutionType === "answer" || solutionType === "solution") {
-                    if (!localStorage.getItem(storageKey)) {
-                        checkbox.checked = true;
-                        localStorage.setItem(storageKey, "true");
-                    }
-                }
-                // Now adjust based on local storage
-                // set visibility based on current checkbox state
-                checkbox.checked = localStorage.getItem(storageKey) === "true";
-                document.querySelectorAll(`div.${solutionType}`).forEach(elem => {
-                    // add hidden to class list
-                    if (checkbox.checked) {
-                        elem.classList.add("hidden");
-                    } else {
-                        elem.classList.remove("hidden");
-                    }
-                });
-                // Add event listener to toggle visibility
-                checkbox.addEventListener("change", function() {
-                    localStorage.setItem(storageKey, this.checked);
-                    // toggle visibility of solution divs
-                    document.querySelectorAll(`div.${solutionType}`).forEach(elem => {
-                        if (checkbox.checked) {
-                            elem.classList.add("hidden");
-                        } else {
-                            elem.classList.remove("hidden");
-                        }
-                        //adjustPrintoutPages();
-                        adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
-                    });
-                });
+            if (!checkbox) continue;
+            // The XSL only generates this checkbox at all if *some* worksheet
+            // on the page has this type of content, since one print-preview
+            // control panel can be shared by several worksheets (the one
+            // actually shown is picked at runtime via ?printpreview=<id>).
+            // Whether it applies to *this* worksheet specifically can only be
+            // decided here, against the printout that actually got loaded --
+            // if not, hide the whole row rather than leave a checkbox with
+            // nothing for it to toggle.
+            if (!printout.querySelector(`.${solutionType}`)) {
+                const row = checkbox.closest('.hide-option');
+                if (row) row.classList.add('hidden');
+                continue;
             }
+            const storageKey = `hide-${solutionType}`;
+            checkbox.checked = solutionTypeHidden(solutionType);
+            // Persist the default immediately (not just once the user
+            // makes an explicit choice), so it's already on record the
+            // next time anything -- e.g. rewriteSolutions() -- needs it.
+            if (localStorage.getItem(storageKey) === null) {
+                localStorage.setItem(storageKey, checkbox.checked ? "true" : "false");
+            }
+            checkbox.addEventListener("change", async function() {
+                await pendingSettle;
+                localStorage.setItem(storageKey, this.checked);
+                pendingSettle = applySolutionVisibility(solutionType, this.checked, {paperSize, margins});
+            });
+        }
+        // If none of the three applied to this worksheet, every row above
+        // just got hidden -- also hide the now-empty group container so it
+        // doesn't leave a stray gap in the print-options panel.
+        const hideSolutionsOptions = document.querySelector('.hide-solutions-options');
+        if (hideSolutionsOptions && !hideSolutionsOptions.querySelector('.hide-option:not(.hidden)')) {
+            hideSolutionsOptions.classList.add('hidden');
         }
 
         // Finally, with everything set up, we create or adjust the printout pages as needed.
 
-        // If the printout has authored pages, there will be at least one .onepage element.
-        if (document.querySelector('.onepage')) {
+        // Flatten paragraphs sections so page breaks can occur inside them.
+        const printoutSection = getPrintout();
+        if (printoutSection) {
+            flattenParagraphsSections(printoutSection);
+        }
+
+        // Wait for all images to load so height measurements are accurate.
+        if (printoutSection) {
+            await waitForImages(printoutSection);
+        }
+
+        // Add explicit await before initial pagination step so all math is settled before measuring content height.
+        if (typeof MathJax !== "undefined" && MathJax.typesetPromise) {
+            await MathJax.typesetPromise([getPrintout()]);
+        }
+
+        // hasAuthoredPages (computed above) picks the right strategy here:
+        // preserve authored structure vs. safely recompute a computed layout.
+        if (hasAuthoredPages) {
             adjustPrintoutPages();
         } else {
             createPrintoutPages(margins);
+            // Safety net: content heights (e.g. proof knowls, large matrices) can
+            // still be settling into their final size at this point, which can
+            // cause createPrintoutPages to make suboptimal page-break decisions
+            // that don't overflow but leave large amounts of wasted space. Since
+            // that failure mode isn't detectable via pageOverflows(), just
+            // unconditionally re-run pagination once more after a brief settle delay.
+            // Tracked via pendingSettle so any checkbox toggle that happens in the
+            // meantime waits for this to finish first, instead of racing it.
+            pendingSettle = (async () => {
+                await new Promise(r => setTimeout(r, 300));
+                unwrapOnepages();
+                createPrintoutPages(margins);
+                addHeadersAndFootersToPrintout();
+                adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
+            })();
         }
 
         // Add headers and footers to all pages in the printout
@@ -1104,161 +2195,83 @@ window.addEventListener("DOMContentLoaded", async function(event) {
                         } else {
                             elem.classList.add("hidden");
                         }
-                        adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
                     });
+                    // Recompute layout once, after all elements of this type have been toggled
+                    adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
                 });
             }
         }
 
-        // After pages are set up, we adjust the workspace heights to fit the page (based on the paper size).
-        adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
+        // After pages are set up, we adjust the workspace heights to fit the page (based on the paper size),
+        // falling back to a spillover page if content still overflows even with workspace at zero.
+        adjustWorkspaceOrRepaginate({paperSize: paperSize, margins: margins, fullRecompute: !hasAuthoredPages});
+        // Chain onto pendingSettle (rather than overwrite it) so this loop waits
+        // for the non-authored-pages safety net scheduled above, if one was
+        // scheduled, to finish first. Overwriting it would silently orphan that
+        // safety net's promise -- it would still fire on its own timer and mutate
+        // the printout unsynchronized with this loop and with whatever a checkbox
+        // toggled in the meantime is doing, despite the whole point of
+        // pendingSettle being to let a checkbox toggle await "settling in
+        // progress" as a single, serialized thing.
+        pendingSettle = pendingSettle.then(() => pollUntilSettled(() => {
+            if (hasAuthoredPages) {
+                // Content still settling into its final size right after
+                // load (e.g. a solution knowl, an embedded matrix) can make
+                // the very first pass above split content onto a spillover
+                // page it doesn't actually need once things settle down.
+                // Eagerly try collapsing spillover pages back on every tick
+                // and let addSpilloverPages() re-split only what still
+                // doesn't fit -- see collapseSpilloverPages()'s comment for
+                // why collapsing first, unconditionally, is the reliable order.
+                collapseSpilloverPages(margins);
+                adjustWorkspaceOrRepaginate({paperSize: paperSize, margins: margins, fullRecompute: false});
+            } else if (pageOverflows()) {
+                resetPrintoutPagination(margins);
+                adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
+            }
+        }));
+
+        // Now that the base layout (built with every hint/answer/solution
+        // hidden -- see rewriteSolutions()) has fully settled, reveal
+        // whichever types should actually start visible per their stored/
+        // default preference, through the same incremental path a checkbox
+        // toggle uses. Chained onto pendingSettle so this waits for that
+        // settling to finish first -- revealing against a layout that's
+        // still being rebuilt out from under it would be measuring against
+        // a moving target -- and so a checkbox click in the meantime waits
+        // for this in turn, rather than raced against it.
+        pendingSettle = pendingSettle.then(async () => {
+            for (const solutionType of ["hint", "answer", "solution"]) {
+                if (printout.querySelector(`.${solutionType}`) && !solutionTypeHidden(solutionType)) {
+                    await applySolutionVisibility(solutionType, false, {paperSize, margins});
+                }
+            }
+        });
 
         // Get the 'highlight workspace' checkbox state from localStorage or set it to false by default
         // NB we need to do this after the adjustment of workspace heights so that the additional original workspace divs don't throw off the calculations when the page is reloaded.
         const highlightWorkspaceCheckbox = document.getElementById("highlight-workspace-checkbox");
         if (highlightWorkspaceCheckbox) {
-            highlightWorkspaceCheckbox.checked = localStorage.getItem("highlightWorkspace") === "true";
-            highlightWorkspaceCheckbox.addEventListener("change", function() {
-                localStorage.setItem("highlightWorkspace", this.checked);
-                toggleWorkspaceHighlight(this.checked);
-            });
-            // Initial toggle to apply the highlight class if checked
-            toggleWorkspaceHighlight(highlightWorkspaceCheckbox.checked);
+            // Same reasoning as the hide-hint/answer/solution rows above: this
+            // control panel can be shared by several worksheets on the same
+            // page, so whether this worksheet actually has any workspace to
+            // highlight can only be decided here, against the printout that
+            // actually got loaded.
+            if (workspaceDivsIn(printout).length === 0) {
+                const row = highlightWorkspaceCheckbox.closest('.highlight-workspace-option');
+                if (row) row.classList.add('hidden');
+            } else {
+                highlightWorkspaceCheckbox.checked = localStorage.getItem("highlightWorkspace") === "true";
+                highlightWorkspaceCheckbox.addEventListener("change", function() {
+                    localStorage.setItem("highlightWorkspace", this.checked);
+                    toggleWorkspaceHighlight(this.checked);
+                });
+                // Initial toggle to apply the highlight class if checked
+                toggleWorkspaceHighlight(highlightWorkspaceCheckbox.checked);
+            }
         }
 
         console.log("finished adjusting workspace");
-    }
-});
-
-
-
-//-----------------------------------------------------------------
-// Dark/Light mode swiching
-
-function isDarkMode() {
-    if (document.documentElement.dataset.darkmode === 'disabled')
-        return false;
-
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark")
-        return true;
-    else if (currentTheme === "light")
-        return false;
-
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
-
-function setDarkMode(isDark) {
-    if(document.documentElement.dataset.darkmode === 'disabled')
-        return;
-
-    const parentHtml = document.documentElement;
-    const iframes = document.querySelectorAll("iframe[data-dark-mode-enabled]");
-
-    // Update the parent document
-    if (isDark) {
-        parentHtml.classList.add("dark-mode");
-    } else {
-        parentHtml.classList.remove("dark-mode");
-    }
-
-    // Sync each iframe's <html> class with the parent
-    for (const iframe of iframes) {
-        try {
-            const iframeHtml = iframe.contentWindow.document.documentElement;
-            if (isDark) {
-              iframeHtml.classList.add("dark-mode")
-            } else {
-              iframeHtml.classList.remove("dark-mode")
-            }
-        } catch (err) {
-            console.warn("Dark mode sync to iframe failed:", err);
-        }
-    }
-
-    const modeButton = document.getElementById("light-dark-button");
-    if (modeButton) {
-        modeButton.querySelector('.icon').innerText = isDark ? "light_mode" : "dark_mode";
-        modeButton.querySelector('.name').innerText = isDark ? "Light Mode" : "Dark Mode";
-    }
-}
-
-// Run this as soon as possible to avoid flicker
-setDarkMode(isDarkMode());
-
-// Rest of dark mode setup logic waits until after load
-window.addEventListener("DOMContentLoaded", function(event) {
-    // Rerun setDarkMode now that it can update buttons
-    const isDark = isDarkMode();
-    setDarkMode(isDark);
-
-    const modeButton = document.getElementById("light-dark-button");
-    modeButton.addEventListener("click", function() {
-        const wasDark = isDarkMode();
-        setDarkMode(!wasDark);
-        localStorage.setItem("theme", wasDark ? "light" : "dark");
-    });
-});
-
-// Share button and embed in LMS code
-window.addEventListener("DOMContentLoaded", function(event) {
-    const shareButton = document.getElementById("embed-button");
-    if (shareButton) {
-        const sharePopup = document.getElementById("embed-popup");
-        const embedCode = "<iframe src='" + window.location.href + "?embed' width='100%' height='1000px' frameborder='0'></iframe>";
-        const embedTextbox = document.getElementById("embed-code-textbox");
-        if (embedTextbox) {
-            embedTextbox.value = embedCode;
-        }
-        shareButton.addEventListener("click", function() {
-            sharePopup.classList.toggle("hidden");
-        });
-        const copyButton = document.getElementById("copy-embed-button");
-        if (copyButton) {
-            copyButton.addEventListener("click", function() {
-                const embedTextbox = document.getElementById("embed-code-textbox");
-                if (embedTextbox) {
-                    navigator.clipboard.writeText(embedCode).then(() => {
-                        console.log("Embed code copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy embed code: ", err);
-                    });
-                    //copyButton.innerHTML = "✓✓";
-                    // show confirmation for 2 seconds:
-                    copyButton.querySelector('.icon').innerText = "library_add_check";
-                    setTimeout(function() {
-                        copyButton.querySelector('.icon').innerText = "content_copy";
-                        sharePopup.classList.add("hidden");
-                    }, 450);
-                }
-            });
-        }
-    }
-});
-
-// Hide everything except the content when the URL has "embed" in it
-window.addEventListener("DOMContentLoaded", function(event) {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has("embed")) {
-        // Set dark mode based on value of param
-        if (urlParams.get("embed") === "dark") {
-            setDarkMode(true);
-        } else {
-            setDarkMode(false);
-        }
-        const elemsToHide = [
-            "ptx-navbar",
-            "ptx-masthead",
-            "ptx-page-footer",
-            "ptx-sidebar",
-            "ptx-content-footer"
-        ];
-        for (let id of elemsToHide) {
-            const elem = document.getElementById(id);
-            if (elem) {
-                elem.classList.add("hidden");
-            }
-        }
     }
 });
 
@@ -1267,7 +2280,11 @@ document.addEventListener("click", (ev) => {
     const codeBox = ev.target.closest(".clipboardable");
     if (!navigator.clipboard || !codeBox) return;
     const button = ev.target.closest(".code-copy");
-    const preContent = codeBox.querySelector("pre").textContent;
+    // Copy a clone with "unselectable" content removed (e.g. a console prompt),
+    // so the copied text matches what a manual selection would capture.
+    const pre = codeBox.querySelector("pre").cloneNode(true);
+    pre.querySelectorAll(".unselectable").forEach((el) => el.remove());
+    const preContent = pre.textContent;
     navigator.clipboard.writeText(preContent);
     button.classList.toggle("copied")
     setTimeout(() => button.classList.toggle("copied"), 1000);
@@ -1290,3 +2307,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 // END Support for code-copy button functionality
+
+
+window.addEventListener("DOMContentLoaded", () => {
+    const userDropdownButton = document.getElementById("ptx-user-dropdown-button");
+    const userDropdownContent = document.getElementById("ptx-user-dropdown-content");
+    if (userDropdownButton && userDropdownContent) {
+        new PTXDropdown(userDropdownContent, userDropdownButton);
+    }
+});
