@@ -247,7 +247,7 @@
     <task>
       <statement>
         <p>
-          Let <m>f(\mathbf{x}):\mathbb{R}^m\to \mathbb{R},  (x_1, x_2, \ldots, x_m)\mapsto a_1x_1+a_2x_2+\cdots a_mx_m</m>.  Explain why 
+          Let <m>f:\mathbb{R}^m\to \mathbb{R},  (x_1, x_2, \ldots, x_m)\mapsto a_1x_1+a_2x_2+\cdots a_mx_m</m>.  Explain why 
           <m>f(c\mathbf{x})=cf(\mathbf{x})</m> for any <m>c\in \mathbb{R}</m>.
         </p>
       </statement>
@@ -414,7 +414,7 @@
   <activity xml:id="activity-ball">
     <introduction>
       <p>
-        Let <m>S\subseteq \mathbb{R}^2</m> be the feasible region of of a canonical maximization linear optimization problem, let <m>f(x_1, x_2) = 2x_2+3x_2</m> be the objective function.
+        Let <m>S\subseteq \mathbb{R}^2</m> be the feasible region of of a canonical maximization linear optimization problem, let <m>f(x_1, x_2) = 2x_1+3x_2</m> be the objective function.
       </p>
     </introduction>
     <task>
@@ -663,7 +663,7 @@
           </li>
           <li>
             <p>
-              <m>{m+k\choose n}</m>
+              <m>{m+k\choose m}</m>
             </p>
           </li>
         </ol>
