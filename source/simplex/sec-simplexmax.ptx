@@ -2602,17 +2602,17 @@
           <ol marker="A." >
             <li>
               <p>
-                Any <m>a_{2k}</m>, where <m>k\geq 2</m>.
+                Any <m>a_{k2}</m>, where <m>k\geq 2</m>.
               </p>
             </li>
             <li>
               <p>
-                All of the <m>a_{2k}, k\geq 2</m> such that <m>b_k/a_{2k}</m> is minimized.
+                All of the <m>a_{k2}, k\geq 2</m> such that <m>b_k/a_{k2}</m> is minimized.
               </p>
             </li>
             <li>
               <p>
-                All of the <m>a_{2k}, k\geq 2</m> such that if <m>k>2</m> then <m>a_{2k}>0</m> and <m>b_k/a_{2k}</m> is minimized.
+                All of the <m>a_{k2}, k\geq 2</m> such that if <m>k>2</m> then <m>a_{k2}>0</m> and <m>b_k/a_{k2}</m> is minimized.
               </p>
             </li> 
             

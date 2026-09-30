@@ -1049,7 +1049,7 @@
     <introduction>
       <statement>
         <p>
-          Consider the problem: maximize <m>f(x,y)=5x_1-x_2</m> subject to:
+          Consider the problem: maximize <m>f(x_1,x_2)=5x_1-x_2</m> subject to:
           <md>
             <mrow>-7x_1+x_2 \amp \leq 0</mrow>
             <mrow>x_1+2x_2 \amp \leq 30</mrow>
