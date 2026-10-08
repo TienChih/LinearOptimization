@@ -128,7 +128,7 @@
 
   <p>
     To prove this, we recall the idea we explored in <xref ref="sec-sensitivity"/>
-    that dual variables were coefficients or weights of normal variables of the bounding
+    that dual variables were coefficients or weights of normal vectors of the bounding
     hyperplanes.
   </p>
 
