@@ -1469,12 +1469,12 @@
           </li>
           <li>
             <p>
-              The entry is positive.
+              The entry is nonnegative.
             </p>
           </li>
           <li>
             <p>
-              The entry is negative.
+              The entry is nonpositive.
             </p>
           </li>
           <li>
