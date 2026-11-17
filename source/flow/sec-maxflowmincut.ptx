@@ -102,7 +102,7 @@
     <task>
       <statement>
         <p>
-          Verify that we may simplify the dual solution as:
+          Verify that we may simplify the dual problem as:
         </p>
         <p>
           <md>
@@ -248,7 +248,7 @@
         <p>
           Show that for any <m>v_k</m> in <m>V'_1</m>, there is an
           <term><m>\alpha</m>-path</term> <m>P</m>: a sequence of vertices starting <m>v_s</m> to <m>v_k</m>, where
-          between <m>v_{i}</m> and <m> v_j</m> either <m>(v_i, v_j)</m> or <m> (v_j, v_i)\in E</m>.
+          between <m>v_{i}</m> and <m> v_j</m> either <m>(v_i, v_j)\in E, x'_{ij} &lt; c_{ij}</m> or <m> (v_j, v_i)\in E, x'_{ji} &gt; 0</m>.
         </p>
         <p>
           <image xml:id="alpha-path">

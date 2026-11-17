@@ -43,8 +43,7 @@
   </exploration>
 
   <p>
-    It would be very bad if either problem were infeasible or unbounded!
-    It would be good to show that this is not the case.
+    We should see why optimizing with respect to the pure strategy choices of the other player is equivalent to optimizing over all their possible mixed strategies.
   </p>
 
   <activity>
