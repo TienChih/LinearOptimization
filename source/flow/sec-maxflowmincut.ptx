@@ -248,7 +248,7 @@
         <p>
           Show that for any <m>v_k</m> in <m>V'_1</m>, there is an
           <term><m>\alpha</m>-path</term> <m>P</m>: a sequence of vertices starting <m>v_s</m> to <m>v_k</m>, where
-          between <m>v_{i}</m> and <m> v_j</m> either <m>(v_i, v_j)\in E, x'_{ij} &lt; c_{ij}</m> or <m> (v_j, v_i)\in E, x'_{ji} &gt; 0</m>.
+          between <m>v_{i}</m> and <m> v_j</m> either <m>(v_i, v_j)\in E, (v_j, v_i)\in E</m>.
         </p>
         <p>
           <image xml:id="alpha-path">
@@ -301,7 +301,8 @@
           Let <me> q:=\min \left\{\min_{(v_i, v_j)\text{ a forward edge}} \{c_{ij}-x'_{ij}\}, \min_{(v_j, v_i)\text{ a backwards edge}} \{x'_{ji}\} \right\}.</me>
         </p>
         <p>
-          Why is <m>q>0</m>?
+          Why is there an <m>\alpha</m>-path  from
+          <m>v_s</m> to <m>v_d</m> where <m>q &gt; 0</m>?  We use this <m>\alpha</m>-path going forward.
         </p>
       </statement>
     </task>
